@@ -37,8 +37,8 @@
 // Lucky Flags
 #define LUCKY_BIAS_REPLAY    (1 << 0)
 #define LUCKY_BIAS_CHERRY    (1 << 1)
-#define LUCKY_BIAS_LOTAD     (1 << 2)
-#define LUCKY_BIAS_AZURILL   (1 << 3)
+#define LUCKY_BIAS_AHINA     (1 << 2)
+#define LUCKY_BIAS_CSHINGYOKU   (1 << 3)
 #define LUCKY_BIAS_POWER     (1 << 4)
 #define LUCKY_BIAS_REELTIME  (1 << 5)
 #define LUCKY_BIAS_MIXED_777 (1 << 6)
@@ -47,8 +47,8 @@
 enum {
     GFXTAG_7_RED,
     GFXTAG_7_BLUE,
-    GFXTAG_AZURILL,
-    GFXTAG_LOTAD,
+    GFXTAG_CSHINGYOKU,
+    GFXTAG_AHINA,
     GFXTAG_CHERRY,
     GFXTAG_POWER,
     GFXTAG_REPLAY,
@@ -74,7 +74,7 @@ enum {
 
 enum {
     PALTAG_REEL,
-    PALTAG_REEL_TIME_PIKACHU,
+    PALTAG_REEL_TIME_CCIRNO,
     PALTAG_REEL_TIME_MISC,
     PALTAG_REEL_TIME_MACHINE,
     PALTAG_MISC,
@@ -87,8 +87,8 @@ enum {
     MATCHED_1CHERRY,
     MATCHED_2CHERRY,
     MATCHED_REPLAY,
-    MATCHED_LOTAD,
-    MATCHED_AZURILL,
+    MATCHED_AHINA,
+    MATCHED_CSHINGYOKU,
     MATCHED_POWER,
     MATCHED_777_MIXED,
     MATCHED_777_RED,
@@ -264,7 +264,7 @@ struct SlotMachine
     /*0x3A*/ u8 slotReelTasks[NUM_REELS];
     /*0x3D*/ u8 digDisplayTaskId;
     /*0x3E*/ u8 pikaPowerBoltTaskId;
-    /*0x3F*/ u8 reelTimePikachuSpriteId;
+    /*0x3F*/ u8 reelTimeCCirnoSpriteId;
     /*0x40*/ u8 reelTimeNumberGapSpriteId;
     /*0x41*/ u8 reelTimeExplosionSpriteId;
     /*0x42*/ u8 reelTimeBrokenMachineSpriteId;
@@ -274,7 +274,7 @@ struct SlotMachine
     /*0x49*/ u8 reelTimeNumberSpriteIds[3];
     /*0x4E*/ u8 reelTimeShadowSpriteIds[2];
     /*0x50*/ u8 reelTimeBoltSpriteIds[2];
-    /*0x52*/ u8 reelTimePikachuAuraSpriteIds[2];
+    /*0x52*/ u8 reelTimeCCirnoAuraSpriteIds[2];
     /*0x54*/ u8 reelTimeDuckSpriteIds[4];
     /*0x58*/ u16 win0h;
     /*0x5a*/ u16 win0v;
@@ -417,13 +417,13 @@ static bool8 IsReelTimeTaskDone(void);
 static void Task_ReelTime(u8 );
 static void ReelTime_Init(struct Task *);
 static void ReelTime_WindowEnter(struct Task *);
-static void ReelTime_WaitStartPikachu(struct Task *);
-static void ReelTime_PikachuSpeedUp1(struct Task *);
-static void ReelTime_PikachuSpeedUp2(struct Task *);
+static void ReelTime_WaitStartCCirno(struct Task *);
+static void ReelTime_CCirnoSpeedUp1(struct Task *);
+static void ReelTime_CCirnoSpeedUp2(struct Task *);
 static void ReelTime_WaitReel(struct Task *);
 static void ReelTime_CheckExplode(struct Task *);
 static void ReelTime_LandOnOutcome(struct Task *);
-static void ReelTime_PikachuReact(struct Task *);
+static void ReelTime_CCirnoReact(struct Task *);
 static void ReelTime_WaitClearPikaPower(struct Task *);
 static void ReelTime_CloseWindow(struct Task *);
 static void ReelTime_DestroySprites(struct Task *);
@@ -456,8 +456,8 @@ static void CreateReelSymbolSprites(void);
 static void CreateCreditPayoutNumberSprites(void);
 static void CreateCoinNumberSprite(s16, s16, u8, s16);
 static void CreateReelBackgroundSprite(void);
-static void CreateReelTimePikachuSprite(void);
-static void DestroyReelTimePikachuSprite(void);
+static void CreateReelTimeCCirnoSprite(void);
+static void DestroyReelTimeCCirnoSprite(void);
 static void CreateReelTimeMachineSprites(void);
 static void CreateBrokenReelTimeMachineSprite(void);
 static void CreateReelTimeNumberSprites(void);
@@ -469,9 +469,9 @@ static void DestroyBrokenReelTimeMachineSprite(void);
 static void CreateReelTimeBoltSprites(void);
 static void SetReelTimeBoltDelay(s16);
 static void DestroyReelTimeBoltSprites(void);
-static void CreateReelTimePikachuAuraSprites(void);
-static void SetReelTimePikachuAuraFlashDelay(s16);
-static void DestroyReelTimePikachuAuraSprites(void);
+static void CreateReelTimeCCirnoAuraSprites(void);
+static void SetReelTimeCCirnoAuraFlashDelay(s16);
+static void DestroyReelTimeCCirnoAuraSprites(void);
 static void CreateReelTimeExplosionSprite(void);
 static void DestroyReelTimeExplosionSprite(void);
 static void CreateReelTimeDuckSprites(void);
@@ -512,10 +512,10 @@ static void EndDigitalDisplayScene_Win(void);
 static void EndDigitalDisplayScene_Dummy(void);
 static void SpriteCB_ReelSymbol(struct Sprite *);
 static void SpriteCB_CoinNumber(struct Sprite *);
-static void SpriteCB_ReelTimePikachu(struct Sprite *);
+static void SpriteCB_ReelTimeCCirno(struct Sprite *);
 static void SpriteCB_ReelTimeNumbers(struct Sprite *);
 static void SpriteCB_ReelTimeBolt(struct Sprite *);
-static void SpriteCB_ReelTimePikachuAura(struct Sprite *);
+static void SpriteCB_ReelTimeCCirnoAura(struct Sprite *);
 static void SpriteCB_ReelTimeExplosion(struct Sprite *);
 static void SpriteCB_ReelTimeDuck(struct Sprite *);
 static void SpriteCB_ReelTimeSmoke(struct Sprite *);
@@ -529,7 +529,7 @@ static EWRAM_DATA u8 *sDigitalDisplayGfxPtr = NULL;
 static EWRAM_DATA u8 *sReelTimeGfxPtr = NULL;
 static EWRAM_DATA u16 *sReelButtonPress_Tilemap = NULL;
 static EWRAM_DATA u8 *sReelBackground_Gfx = NULL;
-static EWRAM_DATA struct SpriteFrameImage *sImageTable_ReelTimePikachu = NULL;
+static EWRAM_DATA struct SpriteFrameImage *sImageTable_ReelTimeCCirno = NULL;
 static EWRAM_DATA struct SpriteFrameImage *sImageTable_ReelTimeMachineAntennae = NULL;
 static EWRAM_DATA struct SpriteFrameImage *sImageTable_ReelTimeMachine = NULL;
 static EWRAM_DATA struct SpriteFrameImage *sImageTable_BrokenReelTimeMachine = NULL;
@@ -569,7 +569,7 @@ static const struct SpriteTemplate sSpriteTemplate_PikaPowerBolt;
 static const struct SpriteTemplate sSpriteTemplate_ReelTimeSmoke;
 static const struct SpriteTemplate sSpriteTemplate_ReelTimeDuck;
 static const struct SpriteTemplate sSpriteTemplate_ReelTimeExplosion;
-static const struct SpriteTemplate sSpriteTemplate_ReelTimePikachuAura;
+static const struct SpriteTemplate sSpriteTemplate_ReelTimeCCirnoAura;
 static const u16 sReelTimeExplodeProbability[];
 static const u16 *const sPokeballShiningPalTable[];
 static const u16 sReelIncrementTable[][2];
@@ -609,7 +609,7 @@ static const struct SpriteTemplate sSpriteTemplate_ReelTimeMachine;
 static const struct SpriteTemplate sSpriteTemplate_ReelBackground;
 static const struct SpriteTemplate sSpriteTemplate_CoinNumber;
 static const struct SpriteTemplate sSpriteTemplate_ReelSymbol;
-static const struct SpriteTemplate sSpriteTemplate_ReelTimePikachu;
+static const struct SpriteTemplate sSpriteTemplate_ReelTimeCCirno;
 static const struct SubspriteTable sSubspriteTable_ReelTimeNumberGap[];
 static const struct SubspriteTable sSubspriteTable_ReelTimeShadow[];
 static const struct SubspriteTable sSubspriteTable_BrokenReelTimeMachine[];
@@ -814,13 +814,13 @@ static void (*const sReelTimeActions[])(struct Task *task) =
 {
     ReelTime_Init,
     ReelTime_WindowEnter,
-    ReelTime_WaitStartPikachu,
-    ReelTime_PikachuSpeedUp1,
-    ReelTime_PikachuSpeedUp2,
+    ReelTime_WaitStartCCirno,
+    ReelTime_CCirnoSpeedUp1,
+    ReelTime_CCirnoSpeedUp2,
     ReelTime_WaitReel,
     ReelTime_CheckExplode,
     ReelTime_LandOnOutcome,
-    ReelTime_PikachuReact,
+    ReelTime_CCirnoReact,
     ReelTime_WaitClearPikaPower,
     ReelTime_CloseWindow,
     ReelTime_DestroySprites,
@@ -833,9 +833,9 @@ static void (*const sReelTimeActions[])(struct Task *task) =
     ReelTime_EndFailure
 };
 
-static const u8 sReelTimePikachuAnimIds[] = {1, 1, 2, 2};
+static const u8 sReelTimeCCirnoAnimIds[] = {1, 1, 2, 2};
 static const s16 sReelTimeBoltDelays[] = {64, 48, 24, 8};
-static const s16 sPikachuAuraFlashDelays[] = {10, 8, 6, 4};
+static const s16 sCCirnoAuraFlashDelays[] = {10, 8, 6, 4};
 
 static void (*const sInfoBoxActions[])(struct Task *task) =
 {
@@ -1618,8 +1618,8 @@ static bool8 SlotAction_FreeDataStructures(struct Task *task)
         FREE_AND_SET_NULL(sImageTable_DigitalDisplay_Number);
         FREE_AND_SET_NULL(sImageTable_DigitalDisplay_Pokeball);
         FREE_AND_SET_NULL(sImageTable_DigitalDisplay_DPad);
-        if (sImageTable_ReelTimePikachu != NULL)
-            FREE_AND_SET_NULL(sImageTable_ReelTimePikachu);
+        if (sImageTable_ReelTimeCCirno != NULL)
+            FREE_AND_SET_NULL(sImageTable_ReelTimeCCirno);
         if (sImageTable_ReelTimeMachineAntennae != NULL)
             FREE_AND_SET_NULL(sImageTable_ReelTimeMachineAntennae);
         if (sImageTable_ReelTimeMachine != NULL)
@@ -3092,7 +3092,7 @@ static void ReelTime_Init(struct Task *task)
     SetGpuReg(REG_OFFSET_BG1VOFS, 0);
     LoadReelTimeWindowTilemap(REG_OFFSET_BG3VOFS, 0);
     CreateReelTimeMachineSprites();
-    CreateReelTimePikachuSprite();
+    CreateReelTimeCCirnoSprite();
     CreateReelTimeNumberSprites();
     CreateReelTimeShadowSprites();
     CreateReelTimeNumberGapSprite();
@@ -3122,35 +3122,35 @@ static void ReelTime_WindowEnter(struct Task *task)
     AdvanceReeltimeReel(task->data[4] >> 8);
 }
 
-static void ReelTime_WaitStartPikachu(struct Task *task)
+static void ReelTime_WaitStartCCirno(struct Task *task)
 {
     AdvanceReeltimeReel(task->data[4] >> 8);
     if (++task->data[5] >= 60)
     {
         task->tState++;
         CreateReelTimeBoltSprites();
-        CreateReelTimePikachuAuraSprites();
+        CreateReelTimeCCirnoAuraSprites();
     }
 }
 
-static void ReelTime_PikachuSpeedUp1(struct Task *task)
+static void ReelTime_CCirnoSpeedUp1(struct Task *task)
 {
     int i;
-    u8 pikachuAnimIds[ARRAY_COUNT(sReelTimePikachuAnimIds)];
+    u8 ccirnoAnimIds[ARRAY_COUNT(sReelTimeCCirnoAnimIds)];
     s16 reelTimeBoltDelays[ARRAY_COUNT(sReelTimeBoltDelays)];
-    s16 pikachuAuraFlashDelays[ARRAY_COUNT(sPikachuAuraFlashDelays)];
+    s16 ccirnoAuraFlashDelays[ARRAY_COUNT(sCCirnoAuraFlashDelays)];
 
-    memcpy(pikachuAnimIds, sReelTimePikachuAnimIds, sizeof(sReelTimePikachuAnimIds));
+    memcpy(ccirnoAnimIds, sReelTimeCCirnoAnimIds, sizeof(sReelTimeCCirnoAnimIds));
     memcpy(reelTimeBoltDelays, sReelTimeBoltDelays, sizeof(sReelTimeBoltDelays));
-    memcpy(pikachuAuraFlashDelays, sPikachuAuraFlashDelays, sizeof(sPikachuAuraFlashDelays));
+    memcpy(ccirnoAuraFlashDelays, sCCirnoAuraFlashDelays, sizeof(sCCirnoAuraFlashDelays));
 
     AdvanceReeltimeReel(task->data[4] >> 8);
     // gradually slow down the reel
     task->data[4] -= 4;
     i = 4 - (task->data[4] >> 8);
     SetReelTimeBoltDelay(reelTimeBoltDelays[i]);
-    SetReelTimePikachuAuraFlashDelay(pikachuAuraFlashDelays[i]);
-    StartSpriteAnimIfDifferent(&gSprites[sSlotMachine->reelTimePikachuSpriteId], pikachuAnimIds[i]);
+    SetReelTimeCCirnoAuraFlashDelay(ccirnoAuraFlashDelays[i]);
+    StartSpriteAnimIfDifferent(&gSprites[sSlotMachine->reelTimeCCirnoSpriteId], ccirnoAnimIds[i]);
     // once speed goes below 256, go to next ReelTimeAction and keep the speed level
     if (task->data[4] <= 0x100)
     {
@@ -3160,15 +3160,15 @@ static void ReelTime_PikachuSpeedUp1(struct Task *task)
     }
 }
 
-static void ReelTime_PikachuSpeedUp2(struct Task *task)
+static void ReelTime_CCirnoSpeedUp2(struct Task *task)
 {
     AdvanceReeltimeReel(task->data[4] >> 8);
     if (++task->data[5] >= 80)
     {
         task->tState++;
         task->data[5] = 0;
-        SetReelTimePikachuAuraFlashDelay(2);
-        StartSpriteAnimIfDifferent(&gSprites[sSlotMachine->reelTimePikachuSpriteId], 3);
+        SetReelTimeCCirnoAuraFlashDelay(2);
+        StartSpriteAnimIfDifferent(&gSprites[sSlotMachine->reelTimeCCirnoSpriteId], 3);
     }
 }
 
@@ -3228,25 +3228,25 @@ static void ReelTime_LandOnOutcome(struct Task *task)
     }
 }
 
-static void ReelTime_PikachuReact(struct Task *task)
+static void ReelTime_CCirnoReact(struct Task *task)
 {
     if (++task->data[4] >= 60)
     {
         StopMapMusic();
         DestroyReelTimeBoltSprites();
-        DestroyReelTimePikachuAuraSprites();
+        DestroyReelTimeCCirnoAuraSprites();
         task->tState++;
         if(sSlotMachine->reelTimeDraw == 0)
         {
             task->data[4] = 0xa0;
-            StartSpriteAnimIfDifferent(&gSprites[sSlotMachine->reelTimePikachuSpriteId], 5);
+            StartSpriteAnimIfDifferent(&gSprites[sSlotMachine->reelTimeCCirnoSpriteId], 5);
             PlayFanfare(MUS_TOO_BAD);
         }
         else
         {
             task->data[4] = 0xc0;
-            StartSpriteAnimIfDifferent(&gSprites[sSlotMachine->reelTimePikachuSpriteId], 4);
-            gSprites[sSlotMachine->reelTimePikachuSpriteId].animCmdIndex = 0;
+            StartSpriteAnimIfDifferent(&gSprites[sSlotMachine->reelTimeCCirnoSpriteId], 4);
+            gSprites[sSlotMachine->reelTimeCCirnoSpriteId].animCmdIndex = 0;
             if (sSlotMachine->pikaPower)
             {
                 ResetPikaPowerBolts();
@@ -3284,7 +3284,7 @@ static void ReelTime_DestroySprites(struct Task *task)
     gSpriteCoordOffsetX = 0;
     SetGpuReg(REG_OFFSET_BG1HOFS, 0);
     sSlotMachine->reelIncrement = 8;
-    DestroyReelTimePikachuSprite();
+    DestroyReelTimeCCirnoSprite();
     DestroyReelTimeMachineSprites();
     DestroyReelTimeShadowSprites();
     PlayNewMapMusic(sSlotMachine->backupMapMusic);
@@ -3320,10 +3320,10 @@ static void ReelTime_ExplodeMachine(struct Task *task)
 {
     DestroyReelTimeMachineSprites();
     DestroyReelTimeBoltSprites();
-    DestroyReelTimePikachuAuraSprites();
+    DestroyReelTimeCCirnoAuraSprites();
     CreateReelTimeExplosionSprite();
     gSprites[sSlotMachine->reelTimeShadowSpriteIds[0]].invisible = TRUE;
-    StartSpriteAnimIfDifferent(&gSprites[sSlotMachine->reelTimePikachuSpriteId], 5);
+    StartSpriteAnimIfDifferent(&gSprites[sSlotMachine->reelTimeCCirnoSpriteId], 5);
     task->tState++;
     task->data[4] = 4;
     task->data[5] = 0;
@@ -3368,7 +3368,7 @@ static void ReelTime_EndFailure(struct Task *task)
     gSpriteCoordOffsetX = 0;
     SetGpuReg(REG_OFFSET_BG1HOFS, 0);
     PlayNewMapMusic(sSlotMachine->backupMapMusic);
-    DestroyReelTimePikachuSprite();
+    DestroyReelTimeCCirnoSprite();
     DestroyBrokenReelTimeMachineSprite();
     DestroyReelTimeShadowSprites();
     DestroyReelTimeDuckSprites();
@@ -3657,40 +3657,40 @@ static void CreateReelBackgroundSprite(void)
     SetSubspriteTables(&gSprites[spriteId], sSubspriteTable_ReelBackground);
 }
 
-static void CreateReelTimePikachuSprite(void)
+static void CreateReelTimeCCirnoSprite(void)
 {
     struct SpriteTemplate spriteTemplate;
     u8 spriteId;
-    if (sImageTable_ReelTimePikachu == NULL)
-        sImageTable_ReelTimePikachu = AllocZeroed(sizeof(struct SpriteFrameImage) * 5);
+    if (sImageTable_ReelTimeCCirno == NULL)
+        sImageTable_ReelTimeCCirno = AllocZeroed(sizeof(struct SpriteFrameImage) * 5);
 
-    sImageTable_ReelTimePikachu[0].data = sReelTimeGfxPtr + (0 * 0x800);
-    sImageTable_ReelTimePikachu[0].size = 0x800;
-    sImageTable_ReelTimePikachu[1].data = sReelTimeGfxPtr + (1 * 0x800);
-    sImageTable_ReelTimePikachu[1].size = 0x800;
-    sImageTable_ReelTimePikachu[2].data = sReelTimeGfxPtr + (2 * 0x800);
-    sImageTable_ReelTimePikachu[2].size = 0x800;
-    sImageTable_ReelTimePikachu[3].data = sReelTimeGfxPtr + (3 * 0x800);
-    sImageTable_ReelTimePikachu[3].size = 0x800;
-    sImageTable_ReelTimePikachu[4].data = sReelTimeGfxPtr + (4 * 0x800);
-    sImageTable_ReelTimePikachu[4].size = 0x800;
+    sImageTable_ReelTimeCCirno[0].data = sReelTimeGfxPtr + (0 * 0x800);
+    sImageTable_ReelTimeCCirno[0].size = 0x800;
+    sImageTable_ReelTimeCCirno[1].data = sReelTimeGfxPtr + (1 * 0x800);
+    sImageTable_ReelTimeCCirno[1].size = 0x800;
+    sImageTable_ReelTimeCCirno[2].data = sReelTimeGfxPtr + (2 * 0x800);
+    sImageTable_ReelTimeCCirno[2].size = 0x800;
+    sImageTable_ReelTimeCCirno[3].data = sReelTimeGfxPtr + (3 * 0x800);
+    sImageTable_ReelTimeCCirno[3].size = 0x800;
+    sImageTable_ReelTimeCCirno[4].data = sReelTimeGfxPtr + (4 * 0x800);
+    sImageTable_ReelTimeCCirno[4].size = 0x800;
 
-    spriteTemplate = sSpriteTemplate_ReelTimePikachu;
-    spriteTemplate.images = sImageTable_ReelTimePikachu;
+    spriteTemplate = sSpriteTemplate_ReelTimeCCirno;
+    spriteTemplate.images = sImageTable_ReelTimeCCirno;
     spriteId = CreateSprite(&spriteTemplate, 280, 80, 1);
     gSprites[spriteId].oam.priority = 1;
     gSprites[spriteId].coordOffsetEnabled = TRUE;
-    sSlotMachine->reelTimePikachuSpriteId = spriteId;
+    sSlotMachine->reelTimeCCirnoSpriteId = spriteId;
 }
 
-static void DestroyReelTimePikachuSprite(void)
+static void DestroyReelTimeCCirnoSprite(void)
 {
-    DestroySprite(&gSprites[sSlotMachine->reelTimePikachuSpriteId]);
-    if (sImageTable_ReelTimePikachu != NULL)
-        FREE_AND_SET_NULL(sImageTable_ReelTimePikachu);
+    DestroySprite(&gSprites[sSlotMachine->reelTimeCCirnoSpriteId]);
+    if (sImageTable_ReelTimeCCirno != NULL)
+        FREE_AND_SET_NULL(sImageTable_ReelTimeCCirno);
 }
 
-static void SpriteCB_ReelTimePikachu(struct Sprite *sprite)
+static void SpriteCB_ReelTimeCCirno(struct Sprite *sprite)
 {
     sprite->y2 = sprite->x2 = 0;
     if (sprite->animNum == 4)
@@ -3914,25 +3914,25 @@ static void DestroyReelTimeBoltSprites(void)
 #define sDelayTimer data[6]
 #define sDelay      data[7]
 
-static void CreateReelTimePikachuAuraSprites(void)
+static void CreateReelTimeCCirnoAuraSprites(void)
 {
     // Left half of electricity orb
-    u8 spriteId = CreateSprite(&sSpriteTemplate_ReelTimePikachuAura, 72, 80, 3);
+    u8 spriteId = CreateSprite(&sSpriteTemplate_ReelTimeCCirnoAura, 72, 80, 3);
     gSprites[spriteId].oam.priority = 1;
     gSprites[spriteId].sFlashPal = TRUE; // Only one of them needs to do the flashing, they share the palette
     gSprites[spriteId].sColorIdx = 0;
     gSprites[spriteId].sDelayTimer = 16;
     gSprites[spriteId].sDelay = 8;
-    sSlotMachine->reelTimePikachuAuraSpriteIds[0] = spriteId;
+    sSlotMachine->reelTimeCCirnoAuraSpriteIds[0] = spriteId;
 
     // Right half
-    spriteId = CreateSprite(&sSpriteTemplate_ReelTimePikachuAura, 104, 80, 3);
+    spriteId = CreateSprite(&sSpriteTemplate_ReelTimeCCirnoAura, 104, 80, 3);
     gSprites[spriteId].oam.priority = 1;
     gSprites[spriteId].hFlip = TRUE;
-    sSlotMachine->reelTimePikachuAuraSpriteIds[1] = spriteId;
+    sSlotMachine->reelTimeCCirnoAuraSpriteIds[1] = spriteId;
 }
 
-static void SpriteCB_ReelTimePikachuAura(struct Sprite *sprite)
+static void SpriteCB_ReelTimeCCirnoAura(struct Sprite *sprite)
 {
     u8 colors[] = {16, 0};
     if (sprite->sFlashPal && --sprite->sDelayTimer <= 0)
@@ -3944,17 +3944,17 @@ static void SpriteCB_ReelTimePikachuAura(struct Sprite *sprite)
     }
 }
 
-static void SetReelTimePikachuAuraFlashDelay(s16 delay)
+static void SetReelTimeCCirnoAuraFlashDelay(s16 delay)
 {
-    gSprites[sSlotMachine->reelTimePikachuAuraSpriteIds[0]].sDelay = delay;
+    gSprites[sSlotMachine->reelTimeCCirnoAuraSpriteIds[0]].sDelay = delay;
 }
 
-static void DestroyReelTimePikachuAuraSprites(void)
+static void DestroyReelTimeCCirnoAuraSprites(void)
 {
     u8 i;
     MultiplyInvertedPaletteRGBComponents((IndexOfSpritePaletteTag(PALTAG_PIKA_AURA) << 4) + 0x103, 0, 0, 0);
-    for (i = 0; i < ARRAY_COUNT(sSlotMachine->reelTimePikachuAuraSpriteIds); i++)
-        DestroySprite(&gSprites[sSlotMachine->reelTimePikachuAuraSpriteIds[i]]);
+    for (i = 0; i < ARRAY_COUNT(sSlotMachine->reelTimeCCirnoAuraSpriteIds); i++)
+        DestroySprite(&gSprites[sSlotMachine->reelTimeCCirnoAuraSpriteIds[i]]);
 }
 
 #undef sFlashPal
@@ -3979,7 +3979,7 @@ static void DestroyReelTimeExplosionSprite(void)
     DestroySprite(&gSprites[sSlotMachine->reelTimeExplosionSpriteId]);
 }
 
-// The "confusion" ducks that circle Pikachu if the Reel Time machine explodes
+// The "confusion" ducks that circle CCirno if the Reel Time machine explodes
 static void CreateReelTimeDuckSprites(void)
 {
     u8 i;
@@ -4729,46 +4729,46 @@ static const u8 sReelSymbolTileTags[NUM_REELS][SYMBOLS_PER_REEL] =
     [LEFT_REEL] = {
         GFXTAG_7_RED,
         GFXTAG_CHERRY,
-        GFXTAG_AZURILL,
+        GFXTAG_CSHINGYOKU,
         GFXTAG_REPLAY,
         GFXTAG_POWER,
-        GFXTAG_LOTAD,
+        GFXTAG_AHINA,
         GFXTAG_7_BLUE,
-        GFXTAG_LOTAD,
+        GFXTAG_AHINA,
         GFXTAG_CHERRY,
         GFXTAG_POWER,
         GFXTAG_REPLAY,
-        GFXTAG_AZURILL,
+        GFXTAG_CSHINGYOKU,
         GFXTAG_7_RED,
         GFXTAG_POWER,
-        GFXTAG_LOTAD,
+        GFXTAG_AHINA,
         GFXTAG_REPLAY,
-        GFXTAG_AZURILL,
+        GFXTAG_CSHINGYOKU,
         GFXTAG_7_BLUE,
         GFXTAG_POWER,
-        GFXTAG_LOTAD,
+        GFXTAG_AHINA,
         GFXTAG_REPLAY
     },
     [MIDDLE_REEL] = {
         GFXTAG_7_RED,
         GFXTAG_CHERRY,
         GFXTAG_REPLAY,
-        GFXTAG_LOTAD,
-        GFXTAG_AZURILL,
+        GFXTAG_AHINA,
+        GFXTAG_CSHINGYOKU,
         GFXTAG_CHERRY,
         GFXTAG_REPLAY,
         GFXTAG_POWER,
         GFXTAG_POWER,
-        GFXTAG_LOTAD,
+        GFXTAG_AHINA,
         GFXTAG_7_BLUE,
-        GFXTAG_LOTAD,
+        GFXTAG_AHINA,
         GFXTAG_REPLAY,
         GFXTAG_CHERRY,
-        GFXTAG_AZURILL,
-        GFXTAG_LOTAD,
+        GFXTAG_CSHINGYOKU,
+        GFXTAG_AHINA,
         GFXTAG_REPLAY,
         GFXTAG_CHERRY,
-        GFXTAG_LOTAD,
+        GFXTAG_AHINA,
         GFXTAG_REPLAY,
         GFXTAG_CHERRY
     },
@@ -4777,22 +4777,22 @@ static const u8 sReelSymbolTileTags[NUM_REELS][SYMBOLS_PER_REEL] =
         GFXTAG_POWER,
         GFXTAG_7_BLUE,
         GFXTAG_REPLAY,
-        GFXTAG_LOTAD,
-        GFXTAG_AZURILL,
+        GFXTAG_AHINA,
+        GFXTAG_CSHINGYOKU,
         GFXTAG_REPLAY,
-        GFXTAG_LOTAD,
+        GFXTAG_AHINA,
         GFXTAG_POWER,
-        GFXTAG_AZURILL,
+        GFXTAG_CSHINGYOKU,
         GFXTAG_REPLAY,
-        GFXTAG_LOTAD,
-        GFXTAG_AZURILL,
-        GFXTAG_POWER,
-        GFXTAG_REPLAY,
-        GFXTAG_LOTAD,
-        GFXTAG_AZURILL,
+        GFXTAG_AHINA,
+        GFXTAG_CSHINGYOKU,
         GFXTAG_POWER,
         GFXTAG_REPLAY,
-        GFXTAG_LOTAD,
+        GFXTAG_AHINA,
+        GFXTAG_CSHINGYOKU,
+        GFXTAG_POWER,
+        GFXTAG_REPLAY,
+        GFXTAG_AHINA,
         GFXTAG_CHERRY
     },
 };
@@ -4866,7 +4866,7 @@ static const u16 sReelTimeBonusIncrementTable[] = {
 
 // tentative name
 static const u8 sBiasTags[] = {
-  GFXTAG_REPLAY, GFXTAG_CHERRY, GFXTAG_LOTAD, GFXTAG_AZURILL, GFXTAG_POWER, GFXTAG_7_RED, GFXTAG_7_RED, GFXTAG_7_RED
+  GFXTAG_REPLAY, GFXTAG_CHERRY, GFXTAG_AHINA, GFXTAG_CSHINGYOKU, GFXTAG_POWER, GFXTAG_7_RED, GFXTAG_7_RED, GFXTAG_7_RED
 };
 
 static const u16 sLuckyFlagSettings_Top3[] = {
@@ -4874,14 +4874,14 @@ static const u16 sLuckyFlagSettings_Top3[] = {
 };
 
 static const u16 sLuckyFlagSettings_NotTop3[] = {
-    LUCKY_BIAS_POWER, LUCKY_BIAS_AZURILL, LUCKY_BIAS_LOTAD, LUCKY_BIAS_CHERRY, LUCKY_BIAS_REPLAY
+    LUCKY_BIAS_POWER, LUCKY_BIAS_CSHINGYOKU, LUCKY_BIAS_AHINA, LUCKY_BIAS_CHERRY, LUCKY_BIAS_REPLAY
 };
 
 static const u8 sSymToMatch[] = {
     [GFXTAG_7_RED]   = MATCHED_777_RED,
     [GFXTAG_7_BLUE]  = MATCHED_777_BLUE,
-    [GFXTAG_AZURILL] = MATCHED_AZURILL,
-    [GFXTAG_LOTAD]   = MATCHED_LOTAD,
+    [GFXTAG_CSHINGYOKU] = MATCHED_CSHINGYOKU,
+    [GFXTAG_AHINA]   = MATCHED_AHINA,
     [GFXTAG_CHERRY]  = MATCHED_1CHERRY,
     [GFXTAG_POWER]   = MATCHED_POWER,
     [GFXTAG_REPLAY]  = MATCHED_REPLAY
@@ -4891,8 +4891,8 @@ static const u16 sSlotMatchFlags[] = {
     [MATCHED_1CHERRY]   = 1 << MATCHED_1CHERRY,
     [MATCHED_2CHERRY]   = 1 << MATCHED_2CHERRY,
     [MATCHED_REPLAY]    = 1 << MATCHED_REPLAY,
-    [MATCHED_LOTAD]     = 1 << MATCHED_LOTAD,
-    [MATCHED_AZURILL]   = 1 << MATCHED_AZURILL,
+    [MATCHED_AHINA]     = 1 << MATCHED_AHINA,
+    [MATCHED_CSHINGYOKU]   = 1 << MATCHED_CSHINGYOKU,
     [MATCHED_POWER]     = 1 << MATCHED_POWER,
     [MATCHED_777_MIXED] = 1 << MATCHED_777_MIXED,
     [MATCHED_777_RED]   = 1 << MATCHED_777_RED,
@@ -4903,8 +4903,8 @@ static const u16 sSlotPayouts[] = {
     [MATCHED_1CHERRY]   = 2,
     [MATCHED_2CHERRY]   = 4,
     [MATCHED_REPLAY]    = 0,
-    [MATCHED_LOTAD]     = 6,
-    [MATCHED_AZURILL]   = 12,
+    [MATCHED_AHINA]     = 6,
+    [MATCHED_CSHINGYOKU]   = 12,
     [MATCHED_POWER]     = 3,
     [MATCHED_777_MIXED] = 90,
     [MATCHED_777_RED]   = 300,
@@ -5227,7 +5227,7 @@ static const struct SpriteFrameImage sImageTable_ReelTimeBolt[] =
     { gSlotMachineReelTimeBolt1, 0x100 },
 };
 
-static const struct SpriteFrameImage sImageTable_ReelTimePikachuAura[] = { gSlotMachineReelTimePikaAura, 0x400 };
+static const struct SpriteFrameImage sImageTable_ReelTimeCCirnoAura[] = { gSlotMachineReelTimePikaAura, 0x400 };
 
 static const struct SpriteFrameImage sImageTable_ReelTimeExplosion[] =
 {
@@ -5251,41 +5251,41 @@ static const union AnimCmd sAnim_ReelTimeDuck[] =
     ANIMCMD_JUMP(0)
 };
 
-static const union AnimCmd sAnim_ReelTimePikachu_Still[] =
+static const union AnimCmd sAnim_ReelTimeCCirno_Still[] =
 {
     ANIMCMD_FRAME(0, 16),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_ReelTimePikachu_ChargingSlow[] =
+static const union AnimCmd sAnim_ReelTimeCCirno_ChargingSlow[] =
 {
     ANIMCMD_FRAME(1, 16),
     ANIMCMD_FRAME(0, 16),
     ANIMCMD_JUMP(0)
 };
 
-static const union AnimCmd sAnim_ReelTimePikachu_ChargingMedium[] =
+static const union AnimCmd sAnim_ReelTimeCCirno_ChargingMedium[] =
 {
     ANIMCMD_FRAME(1, 8),
     ANIMCMD_FRAME(0, 8),
     ANIMCMD_JUMP(0)
 };
 
-static const union AnimCmd sAnim_ReelTimePikachu_ChargingFast[] =
+static const union AnimCmd sAnim_ReelTimeCCirno_ChargingFast[] =
 {
     ANIMCMD_FRAME(1, 4),
     ANIMCMD_FRAME(0, 4),
     ANIMCMD_JUMP(0)
 };
 
-static const union AnimCmd sAnim_ReelTimePikachu_Cheering[] =
+static const union AnimCmd sAnim_ReelTimeCCirno_Cheering[] =
 {
     ANIMCMD_FRAME(2, 32),
     ANIMCMD_FRAME(3, 32),
     ANIMCMD_JUMP(0)
 };
 
-static const union AnimCmd sAnim_ReelTimePikachu_FellOver[] =
+static const union AnimCmd sAnim_ReelTimeCCirno_FellOver[] =
 {
     ANIMCMD_FRAME(4, 1),
     ANIMCMD_END
@@ -5417,14 +5417,14 @@ static const union AnimCmd *const sAnims_ReelTimeDuck[] =
     sAnim_ReelTimeDuck
 };
 
-static const union AnimCmd *const sAnims_ReelTimePikachu[] =
+static const union AnimCmd *const sAnims_ReelTimeCCirno[] =
 {
-    sAnim_ReelTimePikachu_Still,
-    sAnim_ReelTimePikachu_ChargingSlow,
-    sAnim_ReelTimePikachu_ChargingMedium,
-    sAnim_ReelTimePikachu_ChargingFast,
-    sAnim_ReelTimePikachu_Cheering,
-    sAnim_ReelTimePikachu_FellOver
+    sAnim_ReelTimeCCirno_Still,
+    sAnim_ReelTimeCCirno_ChargingSlow,
+    sAnim_ReelTimeCCirno_ChargingMedium,
+    sAnim_ReelTimeCCirno_ChargingFast,
+    sAnim_ReelTimeCCirno_Cheering,
+    sAnim_ReelTimeCCirno_FellOver
 };
 
 static const union AnimCmd *const sAnims_ReelTimeNumbers[] =
@@ -5541,15 +5541,15 @@ static const struct SpriteTemplate sSpriteTemplate_ReelBackground =
     .callback = SpriteCallbackDummy
 };
 
-static const struct SpriteTemplate sSpriteTemplate_ReelTimePikachu =
+static const struct SpriteTemplate sSpriteTemplate_ReelTimeCCirno =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = PALTAG_REEL_TIME_PIKACHU,
+    .paletteTag = PALTAG_REEL_TIME_CCIRNO,
     .oam = &sOam_64x64,
-    .anims = sAnims_ReelTimePikachu,
+    .anims = sAnims_ReelTimeCCirno,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = SpriteCB_ReelTimePikachu
+    .callback = SpriteCB_ReelTimeCCirno
 };
 
 static const struct SpriteTemplate sSpriteTemplate_ReelTimeMachineAntennae =
@@ -5629,15 +5629,15 @@ static const struct SpriteTemplate sSpriteTemplate_ReelTimeBolt =
     .callback = SpriteCB_ReelTimeBolt
 };
 
-static const struct SpriteTemplate sSpriteTemplate_ReelTimePikachuAura =
+static const struct SpriteTemplate sSpriteTemplate_ReelTimeCCirnoAura =
 {
     .tileTag = TAG_NONE,
     .paletteTag = PALTAG_PIKA_AURA,
     .oam = &sOam_32x64,
     .anims = sAnims_SingleFrame,
-    .images = sImageTable_ReelTimePikachuAura,
+    .images = sImageTable_ReelTimeCCirnoAura,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = SpriteCB_ReelTimePikachuAura
+    .callback = SpriteCB_ReelTimeCCirnoAura
 };
 
 static const struct SpriteTemplate sSpriteTemplate_ReelTimeExplosion =
@@ -7076,8 +7076,8 @@ static const struct SpriteSheet sSlotMachineSpriteSheets[22] =
 {
     { .data = gSlotMachineReelSymbol1Tiles, .size = 0x200, .tag = GFXTAG_7_RED },
     { .data = gSlotMachineReelSymbol2Tiles, .size = 0x200, .tag = GFXTAG_7_BLUE },
-    { .data = gSlotMachineReelSymbol3Tiles, .size = 0x200, .tag = GFXTAG_AZURILL },
-    { .data = gSlotMachineReelSymbol4Tiles, .size = 0x200, .tag = GFXTAG_LOTAD },
+    { .data = gSlotMachineReelSymbol3Tiles, .size = 0x200, .tag = GFXTAG_CSHINGYOKU },
+    { .data = gSlotMachineReelSymbol4Tiles, .size = 0x200, .tag = GFXTAG_AHINA },
     { .data = gSlotMachineReelSymbol5Tiles, .size = 0x200, .tag = GFXTAG_CHERRY },
     { .data = gSlotMachineReelSymbol6Tiles, .size = 0x200, .tag = GFXTAG_POWER },
     { .data = gSlotMachineReelSymbol7Tiles, .size = 0x200, .tag = GFXTAG_REPLAY },
@@ -7187,7 +7187,7 @@ static const u16 sUnkPalette[] = INCBIN_U16("graphics/slot_machine/85A8524.bin")
 static const struct SpritePalette sSlotMachineSpritePalettes[] =
 {
     { .data = gSlotMachineReelSymbols_Pal,       .tag = PALTAG_REEL},
-    { .data = gSlotMachineReelTimePikachu_Pal,   .tag = PALTAG_REEL_TIME_PIKACHU},
+    { .data = gSlotMachineReelTimeCCirno_Pal,   .tag = PALTAG_REEL_TIME_CCIRNO},
     { .data = gSlotMachineReelTimeMisc_Pal,      .tag = PALTAG_REEL_TIME_MISC},
     { .data = gSlotMachineReelTimeMachine_Pal,   .tag = PALTAG_REEL_TIME_MACHINE},
     { .data = gSlotMachineMisc_Pal,              .tag = PALTAG_MISC},
@@ -7197,6 +7197,6 @@ static const struct SpritePalette sSlotMachineSpritePalettes[] =
     {}
 };
 
-static const u32 sReelTimeGfx[] = INCBIN_U32("graphics/slot_machine/reel_time_gfx.4bpp.lz"); // reel_time_machine and reel_time_pikachu
+static const u32 sReelTimeGfx[] = INCBIN_U32("graphics/slot_machine/reel_time_gfx.4bpp.lz"); // reel_time_machine and reel_time_ccirno
 static const u16 sReelTimeWindow_Tilemap[] = INCBIN_U16("graphics/slot_machine/reel_time_window.bin");
 static const u16 sEmptyTilemap[] =  {0};

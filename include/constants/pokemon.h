@@ -37,7 +37,7 @@
 #define EGG_GROUP_MINERAL       10
 #define EGG_GROUP_AMORPHOUS     11
 #define EGG_GROUP_WATER_2       12
-#define EGG_GROUP_DITTO         13
+#define EGG_GROUP_KEDAMA         13
 #define EGG_GROUP_DRAGON        14
 #define EGG_GROUP_UNDISCOVERED  15
 
@@ -322,10 +322,10 @@
 #define EVO_LEVEL_ATK_GT_DEF 8  // Pokémon reaches the specified level with attack > defense
 #define EVO_LEVEL_ATK_EQ_DEF 9  // Pokémon reaches the specified level with attack = defense
 #define EVO_LEVEL_ATK_LT_DEF 10 // Pokémon reaches the specified level with attack < defense
-#define EVO_LEVEL_SILCOON    11 // Pokémon reaches the specified level with a Silcoon personality value
-#define EVO_LEVEL_CASCOON    12 // Pokémon reaches the specified level with a Cascoon personality value
-#define EVO_LEVEL_NINJASK    13 // Pokémon reaches the specified level (special value for Ninjask)
-#define EVO_LEVEL_SHEDINJA   14 // Pokémon reaches the specified level (special value for Shedinja)
+#define EVO_LEVEL_ARAN    11 // Pokémon reaches the specified level with a ARan personality value
+#define EVO_LEVEL_AMEDICINE    12 // Pokémon reaches the specified level with a AMedicine personality value
+#define EVO_LEVEL_ASUWAKO    13 // Pokémon reaches the specified level (special value for ASuwako)
+#define EVO_LEVEL_ASHOU   14 // Pokémon reaches the specified level (special value for AShou)
 #define EVO_BEAUTY           15 // Pokémon levels up with beauty ≥ specified value
 
 #define EVOS_PER_MON 5

@@ -21,9 +21,9 @@ Route105_OnTransition:
 	compare VAR_SHOULD_END_ABNORMAL_WEATHER, 1
 	call_if_eq AbnormalWeather_EventScript_HideMapNamePopup
 	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_105_NORTH
-	call_if_eq AbnormalWeather_StartKyogreWeather
+	call_if_eq AbnormalWeather_StartCMikoWeather
 	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_105_SOUTH
-	call_if_eq AbnormalWeather_StartKyogreWeather
+	call_if_eq AbnormalWeather_StartCMikoWeather
 	end
 
 Route105_OnFrame:

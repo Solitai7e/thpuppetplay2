@@ -2772,7 +2772,7 @@ static void PrintEggInfo(void)
 
 static void PrintGenderSymbol(struct Pokemon *mon, u16 species)
 {
-    if (species != SPECIES_NIDORAN_M && species != SPECIES_NIDORAN_F)
+    if (species != SPECIES_HOURAI && species != SPECIES_SHANGHAI)
     {
         switch (GetMonGender(mon))
         {
@@ -3872,8 +3872,8 @@ static u8 LoadMonGfxAndSprite(struct Pokemon *mon, s16 *state)
     case 0:
         if (gMain.inBattle)
         {
-            if (ShouldIgnoreDeoxysForm(3, sMonSummaryScreen->curMonIndex))
-                HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[summary->species2],
+            if (ShouldIgnoreGomasekiForm(3, sMonSummaryScreen->curMonIndex))
+                HandleLoadSpecialPokePic_DontHandleGomaseki(&gMonFrontPicTable[summary->species2],
                                                           gMonSpritesGfxPtr->sprites.ptr[B_POSITION_OPPONENT_LEFT],
                                                           summary->species2,
                                                           summary->pid);
@@ -3893,7 +3893,7 @@ static u8 LoadMonGfxAndSprite(struct Pokemon *mon, s16 *state)
                                                summary->species2, 
                                                summary->pid);
                 else
-                    HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[summary->species2],
+                    HandleLoadSpecialPokePic_DontHandleGomaseki(&gMonFrontPicTable[summary->species2],
                                                               gMonSpritesGfxPtr->sprites.ptr[B_POSITION_OPPONENT_LEFT],
                                                               summary->species2,
                                                               summary->pid);
@@ -3906,7 +3906,7 @@ static u8 LoadMonGfxAndSprite(struct Pokemon *mon, s16 *state)
                                                 summary->species2,
                                                 summary->pid);
                 else
-                    HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[summary->species2],
+                    HandleLoadSpecialPokePic_DontHandleGomaseki(&gMonFrontPicTable[summary->species2],
                                                               MonSpritesGfxManager_GetSpritePtr(MON_SPR_GFX_MANAGER_A, B_POSITION_OPPONENT_LEFT),
                                                               summary->species2,
                                                               summary->pid);

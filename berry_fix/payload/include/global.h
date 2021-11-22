@@ -720,7 +720,7 @@ struct SaveBlock1 /* 0x02025734 */
         /*0x3123*/ u32 currentPokeCoupons;
         /*0x3127*/ u32 totalEarnedPokeCoupons;
         /*0x312B*/ u8 unknown3[6];
-        /*0x3131*/ u8 receivedWishmakerJirachi;
+        /*0x3131*/ u8 receivedWishmakerKasen;
         /*0x3132*/ u8 unknown4[18];
     } __attribute__((packed)) externalReservedData;
     /*0x3144*/ struct Roamer roamer;
@@ -747,7 +747,7 @@ struct Pokedex
     /*0x02*/ u8 nationalMagic; // must equal 0xDA in order to have National mode
     /*0x03*/ u8 unknown2;
     /*0x04*/ u32 unownPersonality; // set when you first see Unown
-    /*0x08*/ u32 spindaPersonality; // set when you first see Spinda
+    /*0x08*/ u32 skogasaPersonality; // set when you first see SKogasa
     /*0x0C*/ u32 unknown3;
     /*0x10*/ u8 owned[DEX_FLAGS_NO];
     /*0x44*/ u8 seen[DEX_FLAGS_NO];

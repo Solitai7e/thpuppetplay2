@@ -1,97 +1,97 @@
-Route120_EventScript_Kecleon1::
+Route120_EventScript_SWriggle1::
 	lock
 	faceplayer
 	setvar VAR_0x8009, 1
-	goto EventScript_Kecleon
+	goto EventScript_SWriggle
 	end
 
-Route120_EventScript_Kecleon2::
+Route120_EventScript_SWriggle2::
 	lock
 	faceplayer
 	setvar VAR_0x8009, 2
-	goto EventScript_Kecleon
+	goto EventScript_SWriggle
 	end
 
-Route120_EventScript_Kecleon3::
+Route120_EventScript_SWriggle3::
 	lock
 	faceplayer
 	setvar VAR_0x8009, 3
-	goto EventScript_Kecleon
+	goto EventScript_SWriggle
 	end
 
-Route120_EventScript_Kecleon4::
+Route120_EventScript_SWriggle4::
 	lock
 	faceplayer
 	setvar VAR_0x8009, 4
-	goto EventScript_Kecleon
+	goto EventScript_SWriggle
 	end
 
-Route120_EventScript_Kecleon5::
+Route120_EventScript_SWriggle5::
 	lock
 	faceplayer
 	setvar VAR_0x8009, 5
-	goto EventScript_Kecleon
+	goto EventScript_SWriggle
 	end
 
-Route119_EventScript_Kecleon1::
+Route119_EventScript_SWriggle1::
 	lock
 	faceplayer
 	setvar VAR_0x8009, 6
-	goto EventScript_Kecleon
+	goto EventScript_SWriggle
 	end
 
-Route119_EventScript_Kecleon2::
+Route119_EventScript_SWriggle2::
 	lock
 	faceplayer
 	setvar VAR_0x8009, 7
-	goto EventScript_Kecleon
+	goto EventScript_SWriggle
 	end
 
-EventScript_Kecleon::
+EventScript_SWriggle::
 	checkitem ITEM_DEVON_SCOPE, 1
 	compare VAR_RESULT, 1
 	goto_if_eq EventScript_AskUseDevonScope
-	msgbox Kecleon_Text_SomethingUnseeable, MSGBOX_DEFAULT
+	msgbox SWriggle_Text_SomethingUnseeable, MSGBOX_DEFAULT
 	release
 	end
 
 EventScript_AskUseDevonScope::
-	msgbox Kecleon_Text_WantToUseDevonScope, MSGBOX_YESNO
+	msgbox SWriggle_Text_WantToUseDevonScope, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq EventScript_BattleKecleon
+	goto_if_eq EventScript_BattleSWriggle
 	release
 	end
 
-EventScript_BattleKecleon::
-	msgbox Kecleon_Text_UseDevonScopeMonAttacked, MSGBOX_DEFAULT
+EventScript_BattleSWriggle::
+	msgbox SWriggle_Text_UseDevonScopeMonAttacked, MSGBOX_DEFAULT
 	closemessage
 	applymovement VAR_LAST_TALKED, Common_Movement_FacePlayer
 	waitmovement 0
-	applymovement VAR_LAST_TALKED, Movement_KecleonAppears
+	applymovement VAR_LAST_TALKED, Movement_SWriggleAppears
 	waitmovement 0
 	waitse
-	playmoncry SPECIES_KECLEON, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_SWRIGGLE, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_KECLEON, 30, ITEM_NONE
+	setwildbattle SPECIES_SWRIGGLE, 30, ITEM_NONE
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq EventScript_RemoveKecleon
+	goto_if_eq EventScript_RemoveSWriggle
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq EventScript_RemoveKecleon
+	goto_if_eq EventScript_RemoveSWriggle
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq EventScript_RemoveKecleon
+	goto_if_eq EventScript_RemoveSWriggle
 	release
 	end
 
-EventScript_RemoveKecleon::
+EventScript_RemoveSWriggle::
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-Movement_KecleonAppears:
+Movement_SWriggleAppears:
 	set_visible
 	delay_4
 	set_invisible

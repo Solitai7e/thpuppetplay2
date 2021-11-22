@@ -3,9 +3,9 @@ SealedChamber_InnerRoom_MapScripts::
 
 SealedChamber_InnerRoom_EventScript_BrailleBackWall::
 	lockall
-	braillemsgbox SealedChamber_InnerRoom_Braille_FirstWailordLastRelicanth
+	braillemsgbox SealedChamber_InnerRoom_Braille_FirstTensokuLastAdvLetty
 	goto_if_set FLAG_REGI_DOORS_OPENED, SealedChamber_InnerRoom_EventScript_NoEffect
-	specialvar VAR_RESULT, CheckRelicanthWailord
+	specialvar VAR_RESULT, CheckAdvLettyTensoku
 	compare VAR_RESULT, FALSE
 	goto_if_eq SealedChamber_InnerRoom_EventScript_NoEffect
 	fadeoutbgm 0

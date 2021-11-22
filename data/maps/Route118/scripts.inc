@@ -11,9 +11,9 @@ Route118_OnTransition:
 	compare VAR_SHOULD_END_ABNORMAL_WEATHER, 1
 	call_if_eq AbnormalWeather_EventScript_HideMapNamePopup
 	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_118_EAST
-	call_if_eq AbnormalWeather_StartGroudonWeather
+	call_if_eq AbnormalWeather_StartMikoWeather
 	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_118_WEST
-	call_if_eq AbnormalWeather_StartGroudonWeather
+	call_if_eq AbnormalWeather_StartMikoWeather
 	end
 
 Route118_OnLoad:

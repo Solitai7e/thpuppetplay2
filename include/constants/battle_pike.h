@@ -23,8 +23,8 @@
 #define PIKE_HINT_BRAIN      4
 
 // For the room with a status effect.
-#define PIKE_STATUSMON_KIRLIA   0
-#define PIKE_STATUSMON_DUSCLOPS 1
+#define PIKE_STATUSMON_SENDAI   0
+#define PIKE_STATUSMON_ADVCIRNO 1
 
 #define PIKE_STATUS_FREEZE      0
 #define PIKE_STATUS_BURN        1

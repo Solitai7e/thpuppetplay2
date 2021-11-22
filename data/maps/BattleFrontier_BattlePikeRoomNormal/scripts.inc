@@ -290,30 +290,30 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterStatusRoom::
 	waitmovement 0
 	pike_getstatusmon
 	copyvar VAR_0x8004, VAR_RESULT
-	compare VAR_0x8004, PIKE_STATUSMON_KIRLIA
-	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaAttack
-	compare VAR_0x8004, PIKE_STATUSMON_DUSCLOPS
-	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsAttack
+	compare VAR_0x8004, PIKE_STATUSMON_SENDAI
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_SendaiAttack
+	compare VAR_0x8004, PIKE_STATUSMON_ADVCIRNO
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_AdvCirnoAttack
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_AttacksWhenStartled, MSGBOX_DEFAULT
 	closemessage
 	releaseall
 	end
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaAttack::
-	msgbox BattleFrontier_BattlePikeRoomNormal_Text_KirliaStop, MSGBOX_DEFAULT
+BattleFrontier_BattlePikeRoomNormal_EventScript_SendaiAttack::
+	msgbox BattleFrontier_BattlePikeRoomNormal_Text_SendaiStop, MSGBOX_DEFAULT
 	closemessage
 	waitse
-	playmoncry SPECIES_KIRLIA, CRY_MODE_NORMAL
+	playmoncry SPECIES_SENDAI, CRY_MODE_NORMAL
 	waitmoncry
 	pike_getstatus
 	compare VAR_RESULT, PIKE_STATUS_TOXIC
-	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedToxic
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_SendaiUsedToxic
 	compare VAR_RESULT, PIKE_STATUS_BURN
-	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedWillOWisp
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_SendaiUsedWillOWisp
 	compare VAR_RESULT, PIKE_STATUS_PARALYSIS
-	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedThunderWave
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_SendaiUsedThunderWave
 	compare VAR_RESULT, PIKE_STATUS_SLEEP
-	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedHypnosis
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_SendaiUsedHypnosis
 	pike_flashscreen
 	waitstate
 	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_NPCApproachMon
@@ -321,30 +321,30 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaAttack::
 	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonFaceNPC
 	waitmovement 0
 	waitse
-	playmoncry SPECIES_KIRLIA, CRY_MODE_NORMAL
+	playmoncry SPECIES_SENDAI, CRY_MODE_NORMAL
 	waitmoncry
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ThatsEnough, MSGBOX_DEFAULT
 	waitse
-	playmoncry SPECIES_KIRLIA, CRY_MODE_NORMAL
+	playmoncry SPECIES_SENDAI, CRY_MODE_NORMAL
 	waitmoncry
 	closemessage
 	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonMoveAside
 	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_StatusNPCApproachPlayer
 	waitmovement 0
-	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForKirlia, MSGBOX_DEFAULT
+	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForSendai, MSGBOX_DEFAULT
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsAttack::
-	msgbox BattleFrontier_BattlePikeRoomNormal_Text_DusclopsStop, MSGBOX_DEFAULT
+BattleFrontier_BattlePikeRoomNormal_EventScript_AdvCirnoAttack::
+	msgbox BattleFrontier_BattlePikeRoomNormal_Text_AdvCirnoStop, MSGBOX_DEFAULT
 	closemessage
 	waitse
-	playmoncry SPECIES_DUSCLOPS, CRY_MODE_NORMAL
+	playmoncry SPECIES_ADVCIRNO, CRY_MODE_NORMAL
 	waitmoncry
 	pike_getstatus
 	compare VAR_RESULT, PIKE_STATUS_FREEZE
-	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsUsedIceBeam
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_AdvCirnoUsedIceBeam
 	compare VAR_RESULT, PIKE_STATUS_BURN
-	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsUsedWillOWisp
+	call_if_eq BattleFrontier_BattlePikeRoomNormal_EventScript_AdvCirnoUsedWillOWisp
 	pike_flashscreen
 	waitstate
 	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_NPCApproachMon
@@ -352,46 +352,46 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsAttack::
 	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonFaceNPC
 	waitmovement 0
 	waitse
-	playmoncry SPECIES_DUSCLOPS, CRY_MODE_NORMAL
+	playmoncry SPECIES_ADVCIRNO, CRY_MODE_NORMAL
 	waitmoncry
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ThatsEnough, MSGBOX_DEFAULT
 	waitse
-	playmoncry SPECIES_DUSCLOPS, CRY_MODE_NORMAL
+	playmoncry SPECIES_ADVCIRNO, CRY_MODE_NORMAL
 	waitmoncry
 	closemessage
 	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonMoveAside
 	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_StatusNPCApproachPlayer
 	waitmovement 0
-	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForDusclops, MSGBOX_DEFAULT
+	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForAdvCirno, MSGBOX_DEFAULT
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedToxic::
-	message BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedToxic
+BattleFrontier_BattlePikeRoomNormal_EventScript_SendaiUsedToxic::
+	message BattleFrontier_BattlePikeRoomNormal_Text_SendaiUsedToxic
 	waitmessage
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedWillOWisp::
-	message BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedWillOWisp
+BattleFrontier_BattlePikeRoomNormal_EventScript_SendaiUsedWillOWisp::
+	message BattleFrontier_BattlePikeRoomNormal_Text_SendaiUsedWillOWisp
 	waitmessage
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedThunderWave::
-	message BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedThunderWave
+BattleFrontier_BattlePikeRoomNormal_EventScript_SendaiUsedThunderWave::
+	message BattleFrontier_BattlePikeRoomNormal_Text_SendaiUsedThunderWave
 	waitmessage
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_KirliaUsedHypnosis::
-	message BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedHypnosis
+BattleFrontier_BattlePikeRoomNormal_EventScript_SendaiUsedHypnosis::
+	message BattleFrontier_BattlePikeRoomNormal_Text_SendaiUsedHypnosis
 	waitmessage
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsUsedIceBeam::
-	message BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedIceBeam
+BattleFrontier_BattlePikeRoomNormal_EventScript_AdvCirnoUsedIceBeam::
+	message BattleFrontier_BattlePikeRoomNormal_Text_AdvCirnoUsedIceBeam
 	waitmessage
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_DusclopsUsedWillOWisp::
-	message BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedWillOWisp
+BattleFrontier_BattlePikeRoomNormal_EventScript_AdvCirnoUsedWillOWisp::
+	message BattleFrontier_BattlePikeRoomNormal_Text_AdvCirnoUsedWillOWisp
 	waitmessage
 	return
 
@@ -596,7 +596,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_WillRestoreTwoMons::
 	closemessage
 	return
 
-@ Dusclops or Kirlia
+@ AdvCirno or Sendai
 BattleFrontier_BattlePikeRoomNormal_EventScript_StatusMon::
 	lock
 	faceplayer
@@ -715,43 +715,43 @@ BattleFrontier_BattlePikeRoomNormal_Text_WatchOut:
 	.string "Oh, my!\p"
 	.string "Watch out!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_KirliaStop:
+BattleFrontier_BattlePikeRoomNormal_Text_SendaiStop:
 	.string "Now, now!\n"
-	.string "KIRLIA, stop that!$"
+	.string "SENDAI, stop that!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_DusclopsStop:
+BattleFrontier_BattlePikeRoomNormal_Text_AdvCirnoStop:
 	.string "Now, now!\n"
-	.string "DUSCLOPS, stop that!$"
+	.string "ADVCIRNO, stop that!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedToxic:
-	.string "KIRLIA used TOXIC!$"
+BattleFrontier_BattlePikeRoomNormal_Text_SendaiUsedToxic:
+	.string "SENDAI used TOXIC!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedHypnosis:
-	.string "KIRLIA used HYPNOSIS!$"
+BattleFrontier_BattlePikeRoomNormal_Text_SendaiUsedHypnosis:
+	.string "SENDAI used HYPNOSIS!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedThunderWave:
-	.string "KIRLIA used THUNDER WAVE!$"
+BattleFrontier_BattlePikeRoomNormal_Text_SendaiUsedThunderWave:
+	.string "SENDAI used THUNDER WAVE!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedWillOWisp:
-	.string "KIRLIA used WILL-O-WISP!$"
+BattleFrontier_BattlePikeRoomNormal_Text_SendaiUsedWillOWisp:
+	.string "SENDAI used WILL-O-WISP!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedWillOWisp:
-	.string "DUSCLOPS used WILL-O-WISP!$"
+BattleFrontier_BattlePikeRoomNormal_Text_AdvCirnoUsedWillOWisp:
+	.string "ADVCIRNO used WILL-O-WISP!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedIceBeam:
-	.string "DUSCLOPS used ICE BEAM!$"
+BattleFrontier_BattlePikeRoomNormal_Text_AdvCirnoUsedIceBeam:
+	.string "ADVCIRNO used ICE BEAM!$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_ThatsEnough:
 	.string "Look here!\n"
 	.string "That's quite enough!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForKirlia:
+BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForSendai:
 	.string "I must apologize to you…\p"
-	.string "My KIRLIA has a TIMID nature…$"
+	.string "My SENDAI has a TIMID nature…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForDusclops:
+BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForAdvCirno:
 	.string "I must apologize to you…\p"
-	.string "My DUSCLOPS has a TIMID nature…$"
+	.string "My ADVCIRNO has a TIMID nature…$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_AttacksWhenStartled:
 	.string "It attacks without warning if it is\n"

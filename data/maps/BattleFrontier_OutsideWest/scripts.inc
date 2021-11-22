@@ -178,7 +178,7 @@ BattleFrontier_OutsideWest_EventScript_CamperAlreadyFacingFactory::
 BattleFrontier_OutsideWest_EventScript_Girl::
 	lock
 	faceplayer
-	message BattleFrontier_OutsideWest_Text_ScaredOfPikeBecauseSeviper
+	message BattleFrontier_OutsideWest_Text_ScaredOfPikeBecauseTSatori
 	waitmessage
 	compare VAR_FACING, DIR_NORTH
 	call_if_eq BattleFrontier_OutsideWest_EventScript_GirlShudderNorth
@@ -410,9 +410,9 @@ BattleFrontier_OutsideWest_Text_WhosRaisingThoseRentalMons:
 	.string "But it makes me wonder.\n"
 	.string "Who's raising those rental POKéMON?$"
 
-BattleFrontier_OutsideWest_Text_ScaredOfPikeBecauseSeviper:
+BattleFrontier_OutsideWest_Text_ScaredOfPikeBecauseTSatori:
 	.string "I'm scared of going into the BATTLE\n"
-	.string "PIKE because of SEVIPER…\p"
+	.string "PIKE because of TSATORI…\p"
 	.string "B-but I came all the way here, so I will\n"
 	.string "try to conquer everything!\l"
 	.string "…Shudder…$"

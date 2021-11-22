@@ -1,5 +1,5 @@
 #include "global.h"
-#include "rayquaza_scene.h"
+#include "cmamizou_scene.h"
 #include "sprite.h"
 #include "task.h"
 #include "graphics.h"
@@ -18,17 +18,17 @@
 #include "random.h"
 
 /*
-    This file handles the cutscene showing Rayquaza arriving to settle the Groudon/Kyogre fight
+    This file handles the cutscene showing CMamizou arriving to settle the Miko/CMiko fight
     It consists of 5 separate scenes:
-    - Groudon and Kyogre facing one another in a thunderstorm             (RAY_ANIM_DUO_FIGHT)
-    - Over-the-shoulder of Rayquaza flying                                (RAY_ANIM_TAKES_FLIGHT)
-    - Rayquaza emerging from a spotlight down through the clouds          (RAY_ANIM_DESCENDS)
-    - A close-up of Rayquaza flying down                                  (RAY_ANIM_CHARGES)
-    - Rayquaza floating above Groudon/Kyogre as they back away offscreen  (RAY_ANIM_CHASES_AWAY)
+    - Miko and CMiko facing one another in a thunderstorm             (RAY_ANIM_DUO_FIGHT)
+    - Over-the-shoulder of CMamizou flying                                (RAY_ANIM_TAKES_FLIGHT)
+    - CMamizou emerging from a spotlight down through the clouds          (RAY_ANIM_DESCENDS)
+    - A close-up of CMamizou flying down                                  (RAY_ANIM_CHARGES)
+    - CMamizou floating above Miko/CMiko as they back away offscreen  (RAY_ANIM_CHASES_AWAY)
 
     A shortened version of the first scene is used when the player first arrives
-    in Sootopolis during the Groudon/Kyogre conflict, before awakening Rayquaza (RAY_ANIM_DUO_FIGHT_PRE)
-    This is indicated with the first two arguments to DoRayquazaScene
+    in Sootopolis during the Miko/CMiko conflict, before awakening CMamizou (RAY_ANIM_DUO_FIGHT_PRE)
+    This is indicated with the first two arguments to DoCMamizouScene
 */
 
 enum
@@ -42,25 +42,25 @@ enum
     RAY_ANIM_END
 };
 
-#define TAG_DUOFIGHT_GROUDON             30505
-#define TAG_DUOFIGHT_GROUDON_SHOULDER    30506
-#define TAG_DUOFIGHT_GROUDON_CLAW        30507
-#define TAG_DUOFIGHT_KYOGRE              30508
-#define TAG_DUOFIGHT_KYOGRE_PECTORAL_FIN 30509
-#define TAG_DUOFIGHT_KYOGRE_DORSAL_FIN   30510
+#define TAG_DUOFIGHT_MIKO             30505
+#define TAG_DUOFIGHT_MIKO_SHOULDER    30506
+#define TAG_DUOFIGHT_MIKO_CLAW        30507
+#define TAG_DUOFIGHT_CMIKO              30508
+#define TAG_DUOFIGHT_CMIKO_PECTORAL_FIN 30509
+#define TAG_DUOFIGHT_CMIKO_DORSAL_FIN   30510
 #define TAG_FLIGHT_SMOKE                 30555
-#define TAG_DESCENDS_RAYQUAZA            30556
-#define TAG_DESCENDS_RAYQUAZA_TAIL       30557
-#define TAG_CHASE_GROUDON                30565
-#define TAG_CHASE_GROUDON_TAIL           30566
-#define TAG_CHASE_KYOGRE                 30568
-#define TAG_CHASE_RAYQUAZA               30569
-#define TAG_CHASE_RAYQUAZA_TAIL          30570
+#define TAG_DESCENDS_CMAMIZOU            30556
+#define TAG_DESCENDS_CMAMIZOU_TAIL       30557
+#define TAG_CHASE_MIKO                30565
+#define TAG_CHASE_MIKO_TAIL           30566
+#define TAG_CHASE_CMIKO                 30568
+#define TAG_CHASE_CMAMIZOU               30569
+#define TAG_CHASE_CMAMIZOU_TAIL          30570
 #define TAG_CHASE_SPLASH                 30571
 
 #define MAX_SMOKE 10
 
-struct RayquazaScene
+struct CMamizouScene
 {
     MainCallback exitCallback;
     u8 tilemapBuffers[4][BG_SCREEN_SIZE];
@@ -72,10 +72,10 @@ struct RayquazaScene
     u8 unused[12];
 };
 
-static EWRAM_DATA struct RayquazaScene *sRayScene = NULL;
+static EWRAM_DATA struct CMamizouScene *sRayScene = NULL;
 
-static void CB2_InitRayquazaScene(void);
-static void CB2_RayquazaScene(void);
+static void CB2_InitCMamizouScene(void);
+static void CB2_CMamizouScene(void);
 static void Task_EndAfterFadeScreen(u8);
 
 // RAY_ANIM_DUO_FIGHT_PRE / RAY_ANIM_DUO_FIGHT
@@ -89,16 +89,16 @@ static void DuoFight_AnimateRain(void);
 static void DuoFight_Lightning1(void);
 static void DuoFight_Lightning2(void);
 static void DuoFight_LightningLong(void);
-static u8 DuoFightPre_CreateGroudonSprites(void);
-static u8 DuoFightPre_CreateKyogreSprites(void);
-static u8 DuoFight_CreateGroudonSprites(void);
-static u8 DuoFight_CreateKyogreSprites(void);
-static void SpriteCB_DuoFightPre_Groudon(struct Sprite *);
-static void SpriteCB_DuoFightPre_Kyogre(struct Sprite *);
-static void SpriteCB_DuoFight_Groudon(struct Sprite *);
-static void SpriteCB_DuoFight_Kyogre(struct Sprite *);
-static void DuoFight_SlideGroudonDown(struct Sprite *);
-static void DuoFight_SlideKyogreDown(struct Sprite *);
+static u8 DuoFightPre_CreateMikoSprites(void);
+static u8 DuoFightPre_CreateCMikoSprites(void);
+static u8 DuoFight_CreateMikoSprites(void);
+static u8 DuoFight_CreateCMikoSprites(void);
+static void SpriteCB_DuoFightPre_Miko(struct Sprite *);
+static void SpriteCB_DuoFightPre_CMiko(struct Sprite *);
+static void SpriteCB_DuoFight_Miko(struct Sprite *);
+static void SpriteCB_DuoFight_CMiko(struct Sprite *);
+static void DuoFight_SlideMikoDown(struct Sprite *);
+static void DuoFight_SlideCMikoDown(struct Sprite *);
 
 // RAY_ANIM_TAKES_FLIGHT
 static void Task_RayTakesFlightAnim(u8);
@@ -111,14 +111,14 @@ static void SpriteCB_TakesFlight_Smoke(struct Sprite *);
 static void Task_RayDescendsAnim(u8);
 static void Task_HandleRayDescends(u8);
 static void Task_RayDescendsEnd(u8);
-static u8 CreateDescendsRayquazaSprite(void);
-static void SpriteCB_Descends_Rayquaza(struct Sprite *);
+static u8 CreateDescendsCMamizouSprite(void);
+static void SpriteCB_Descends_CMamizou(struct Sprite *);
 
 // RAY_ANIM_CHARGES
 static void Task_RayChargesAnim(u8);
 static void Task_HandleRayCharges(u8);
 static void Task_RayChargesEnd(u8);
-static void Task_RayCharges_ShakeRayquaza(u8);
+static void Task_RayCharges_ShakeCMamizou(u8);
 static void Task_RayCharges_FlyOffscreen(u8);
 static void RayCharges_AnimateBg(void);
 
@@ -127,16 +127,16 @@ static void Task_RayChasesAwayAnim(u8);
 static void Task_HandleRayChasesAway(u8);
 static void Task_RayChasesAwayEnd(u8);
 static void Task_ChasesAway_AnimateBg(u8);
-static void ChasesAway_KyogreStartLeave(u8);
-static void ChasesAway_GroudonStartLeave(u8);
+static void ChasesAway_CMikoStartLeave(u8);
+static void ChasesAway_MikoStartLeave(u8);
 static void ChasesAway_CreateTrioSprites(u8);
 static void Task_ChasesAway_AnimateRing(u8);
-static void SpriteCB_ChasesAway_GroudonLeave(struct Sprite *);
-static void SpriteCB_ChasesAway_KyogreLeave(struct Sprite *);
-static void SpriteCB_ChasesAway_RayquazaFloat(struct Sprite *);
-static void SpriteCB_ChasesAway_Rayquaza(struct Sprite *);
+static void SpriteCB_ChasesAway_MikoLeave(struct Sprite *);
+static void SpriteCB_ChasesAway_CMikoLeave(struct Sprite *);
+static void SpriteCB_ChasesAway_CMamizouFloat(struct Sprite *);
+static void SpriteCB_ChasesAway_CMamizou(struct Sprite *);
 static void SpriteCB_ChasesAway_DuoRingPush(struct Sprite *);
-static void ChasesAway_SetRayquazaAnim(struct Sprite *, u8, s16, s16);
+static void ChasesAway_SetCMamizouAnim(struct Sprite *, u8, s16, s16);
 
 static const TaskFunc sTasksForAnimations[] =
 {
@@ -285,7 +285,7 @@ static const struct OamData sOam_32x8 =
     .affineParam = 0
 };
 
-static const union AnimCmd sAnim_DuoFightPre_Groudon_Head[] =
+static const union AnimCmd sAnim_DuoFightPre_Miko_Head[] =
 {
     ANIMCMD_FRAME(0, 30),
     ANIMCMD_FRAME(64, 30),
@@ -294,7 +294,7 @@ static const union AnimCmd sAnim_DuoFightPre_Groudon_Head[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd sAnim_DuoFightPre_Groudon_Body[] =
+static const union AnimCmd sAnim_DuoFightPre_Miko_Body[] =
 {
     ANIMCMD_FRAME(192, 30),
     ANIMCMD_FRAME(256, 30),
@@ -303,104 +303,104 @@ static const union AnimCmd sAnim_DuoFightPre_Groudon_Body[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd *const sAnims_DuoFightPre_Groudon[] =
+static const union AnimCmd *const sAnims_DuoFightPre_Miko[] =
 {
-    sAnim_DuoFightPre_Groudon_Head,
-    sAnim_DuoFightPre_Groudon_Body
+    sAnim_DuoFightPre_Miko_Head,
+    sAnim_DuoFightPre_Miko_Body
 };
 
-static const struct SpriteTemplate sSpriteTemplate_DuoFightPre_Groudon =
+static const struct SpriteTemplate sSpriteTemplate_DuoFightPre_Miko =
 {
-    .tileTag = TAG_DUOFIGHT_GROUDON,
-    .paletteTag = TAG_DUOFIGHT_GROUDON,
+    .tileTag = TAG_DUOFIGHT_MIKO,
+    .paletteTag = TAG_DUOFIGHT_MIKO,
     .oam = &sOam_64x64,
-    .anims = sAnims_DuoFightPre_Groudon,
+    .anims = sAnims_DuoFightPre_Miko,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };
 
-static const union AnimCmd sAnim_DuoFightPre_GroudonShoulderKyogreDorsalFin[] =
+static const union AnimCmd sAnim_DuoFightPre_MikoShoulderCMikoDorsalFin[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd *const sAnims_DuoFightPre_GroudonShoulderKyogreDorsalFin[] =
+static const union AnimCmd *const sAnims_DuoFightPre_MikoShoulderCMikoDorsalFin[] =
 {
-    sAnim_DuoFightPre_GroudonShoulderKyogreDorsalFin
+    sAnim_DuoFightPre_MikoShoulderCMikoDorsalFin
 };
 
-static const struct SpriteTemplate sSpriteTemplate_DuoFightPre_GroudonShoulder =
+static const struct SpriteTemplate sSpriteTemplate_DuoFightPre_MikoShoulder =
 {
-    .tileTag = TAG_DUOFIGHT_GROUDON_SHOULDER,
-    .paletteTag = TAG_DUOFIGHT_GROUDON,
+    .tileTag = TAG_DUOFIGHT_MIKO_SHOULDER,
+    .paletteTag = TAG_DUOFIGHT_MIKO,
     .oam = &sOam_32x32,
-    .anims = sAnims_DuoFightPre_GroudonShoulderKyogreDorsalFin,
+    .anims = sAnims_DuoFightPre_MikoShoulderCMikoDorsalFin,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };
 
-static const union AnimCmd sAnim_DuoFightPre_GroudonClaw[] =
+static const union AnimCmd sAnim_DuoFightPre_MikoClaw[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd *const sAnims_DuoFightPre_GroudonClaw[] =
+static const union AnimCmd *const sAnims_DuoFightPre_MikoClaw[] =
 {
-    sAnim_DuoFightPre_GroudonClaw
+    sAnim_DuoFightPre_MikoClaw
 };
 
-static const struct SpriteTemplate sSpriteTemplate_DuoFightPre_GroudonClaw =
+static const struct SpriteTemplate sSpriteTemplate_DuoFightPre_MikoClaw =
 {
-    .tileTag = TAG_DUOFIGHT_GROUDON_CLAW,
-    .paletteTag = TAG_DUOFIGHT_GROUDON,
+    .tileTag = TAG_DUOFIGHT_MIKO_CLAW,
+    .paletteTag = TAG_DUOFIGHT_MIKO,
     .oam = &sOam_64x32,
-    .anims = sAnims_DuoFightPre_GroudonClaw,
+    .anims = sAnims_DuoFightPre_MikoClaw,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };
 
-static const union AnimCmd sAnim_DuoFightPre_Kyogre_TopLeft[] =
+static const union AnimCmd sAnim_DuoFightPre_CMiko_TopLeft[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_DuoFightPre_Kyogre_TopRight[] =
+static const union AnimCmd sAnim_DuoFightPre_CMiko_TopRight[] =
 {
     ANIMCMD_FRAME(8, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_DuoFightPre_Kyogre_FaceLeft[] =
+static const union AnimCmd sAnim_DuoFightPre_CMiko_FaceLeft[] =
 {
     ANIMCMD_FRAME(16, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_DuoFightPre_Kyogre_FaceRight[] =
+static const union AnimCmd sAnim_DuoFightPre_CMiko_FaceRight[] =
 {
     ANIMCMD_FRAME(24, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_DuoFightPre_Kyogre_ChinLeft[] =
+static const union AnimCmd sAnim_DuoFightPre_CMiko_ChinLeft[] =
 {
     ANIMCMD_FRAME(32, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_DuoFightPre_Kyogre_ChinRight[] =
+static const union AnimCmd sAnim_DuoFightPre_CMiko_ChinRight[] =
 {
     ANIMCMD_FRAME(40, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_DuoFightPre_Kyogre_LeftPectoralFin[] =
+static const union AnimCmd sAnim_DuoFightPre_CMiko_LeftPectoralFin[] =
 {
     ANIMCMD_FRAME(48, 36),
     ANIMCMD_FRAME(64, 36),
@@ -409,7 +409,7 @@ static const union AnimCmd sAnim_DuoFightPre_Kyogre_LeftPectoralFin[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd sAnim_DuoFightPre_Kyogre_LeftShoulder[] =
+static const union AnimCmd sAnim_DuoFightPre_CMiko_LeftShoulder[] =
 {
     ANIMCMD_FRAME(56, 36),
     ANIMCMD_FRAME(72, 36),
@@ -418,7 +418,7 @@ static const union AnimCmd sAnim_DuoFightPre_Kyogre_LeftShoulder[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd sAnim_DuoFightPre_Kyogre_RightShoulder[] =
+static const union AnimCmd sAnim_DuoFightPre_CMiko_RightShoulder[] =
 {
     ANIMCMD_FRAME(96, 36),
     ANIMCMD_FRAME(104, 36),
@@ -427,32 +427,32 @@ static const union AnimCmd sAnim_DuoFightPre_Kyogre_RightShoulder[] =
     ANIMCMD_JUMP(0),
 };
 
-// Edge of the right pectoral fin is its own sprite (see KyogrePectoralFin)
-static const union AnimCmd *const sAnims_DuoFightPre_Kyogre[] =
+// Edge of the right pectoral fin is its own sprite (see CMikoPectoralFin)
+static const union AnimCmd *const sAnims_DuoFightPre_CMiko[] =
 {
-    sAnim_DuoFightPre_Kyogre_TopLeft,
-    sAnim_DuoFightPre_Kyogre_TopRight,
-    sAnim_DuoFightPre_Kyogre_FaceLeft,
-    sAnim_DuoFightPre_Kyogre_FaceRight,
-    sAnim_DuoFightPre_Kyogre_ChinLeft,
-    sAnim_DuoFightPre_Kyogre_ChinRight,
-    sAnim_DuoFightPre_Kyogre_LeftPectoralFin,
-    sAnim_DuoFightPre_Kyogre_LeftShoulder,
-    sAnim_DuoFightPre_Kyogre_RightShoulder
+    sAnim_DuoFightPre_CMiko_TopLeft,
+    sAnim_DuoFightPre_CMiko_TopRight,
+    sAnim_DuoFightPre_CMiko_FaceLeft,
+    sAnim_DuoFightPre_CMiko_FaceRight,
+    sAnim_DuoFightPre_CMiko_ChinLeft,
+    sAnim_DuoFightPre_CMiko_ChinRight,
+    sAnim_DuoFightPre_CMiko_LeftPectoralFin,
+    sAnim_DuoFightPre_CMiko_LeftShoulder,
+    sAnim_DuoFightPre_CMiko_RightShoulder
 };
 
-static const struct SpriteTemplate sSpriteTemplate_DuoFightPre_Kyogre =
+static const struct SpriteTemplate sSpriteTemplate_DuoFightPre_CMiko =
 {
-    .tileTag = TAG_DUOFIGHT_KYOGRE,
-    .paletteTag = TAG_DUOFIGHT_KYOGRE,
+    .tileTag = TAG_DUOFIGHT_CMIKO,
+    .paletteTag = TAG_DUOFIGHT_CMIKO,
     .oam = &sOam_32x16,
-    .anims = sAnims_DuoFightPre_Kyogre,
+    .anims = sAnims_DuoFightPre_CMiko,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };
 
-static const union AnimCmd sAnim_DuoFightPre_KyogrePectoralFin[] =
+static const union AnimCmd sAnim_DuoFightPre_CMikoPectoralFin[] =
 {
     ANIMCMD_FRAME(0, 36),
     ANIMCMD_FRAME(2, 36),
@@ -461,28 +461,28 @@ static const union AnimCmd sAnim_DuoFightPre_KyogrePectoralFin[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd *const sAnims_DuoFightPre_KyogrePectoralFin[] =
+static const union AnimCmd *const sAnims_DuoFightPre_CMikoPectoralFin[] =
 {
-    sAnim_DuoFightPre_KyogrePectoralFin
+    sAnim_DuoFightPre_CMikoPectoralFin
 };
 
-static const struct SpriteTemplate sSpriteTemplate_DuoFightPre_KyogrePectoralFin =
+static const struct SpriteTemplate sSpriteTemplate_DuoFightPre_CMikoPectoralFin =
 {
-    .tileTag = TAG_DUOFIGHT_KYOGRE_PECTORAL_FIN,
-    .paletteTag = TAG_DUOFIGHT_KYOGRE,
+    .tileTag = TAG_DUOFIGHT_CMIKO_PECTORAL_FIN,
+    .paletteTag = TAG_DUOFIGHT_CMIKO,
     .oam = &sOam_16x8,
-    .anims = sAnims_DuoFightPre_KyogrePectoralFin,
+    .anims = sAnims_DuoFightPre_CMikoPectoralFin,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };
 
-static const struct SpriteTemplate sSpriteTemplate_DuoFightPre_KyogreDorsalFin =
+static const struct SpriteTemplate sSpriteTemplate_DuoFightPre_CMikoDorsalFin =
 {
-    .tileTag = TAG_DUOFIGHT_KYOGRE_DORSAL_FIN,
-    .paletteTag = TAG_DUOFIGHT_KYOGRE,
+    .tileTag = TAG_DUOFIGHT_CMIKO_DORSAL_FIN,
+    .paletteTag = TAG_DUOFIGHT_CMIKO,
     .oam = &sOam_32x32,
-    .anims = sAnims_DuoFightPre_GroudonShoulderKyogreDorsalFin,
+    .anims = sAnims_DuoFightPre_MikoShoulderCMikoDorsalFin,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
@@ -526,7 +526,7 @@ static const struct BgTemplate sBgTemplates_DuoFight[] =
     },
 };
 
-static const union AnimCmd sAnim_DuoFight_Groudon_Head[] =
+static const union AnimCmd sAnim_DuoFight_Miko_Head[] =
 {
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_FRAME(64, 20),
@@ -535,7 +535,7 @@ static const union AnimCmd sAnim_DuoFight_Groudon_Head[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd sAnim_DuoFight_Groudon_Body[] =
+static const union AnimCmd sAnim_DuoFight_Miko_Body[] =
 {
     ANIMCMD_FRAME(192, 20),
     ANIMCMD_FRAME(256, 20),
@@ -544,124 +544,124 @@ static const union AnimCmd sAnim_DuoFight_Groudon_Body[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd *const sAnims_DuoFight_Groudon[] =
+static const union AnimCmd *const sAnims_DuoFight_Miko[] =
 {
-    sAnim_DuoFight_Groudon_Head,
-    sAnim_DuoFight_Groudon_Body
+    sAnim_DuoFight_Miko_Head,
+    sAnim_DuoFight_Miko_Body
 };
 
-static const struct CompressedSpriteSheet sSpriteSheet_DuoFight_Groudon =
+static const struct CompressedSpriteSheet sSpriteSheet_DuoFight_Miko =
 {
-    gRaySceneDuoFight_Groudon_Gfx, 0x3000, TAG_DUOFIGHT_GROUDON
+    gRaySceneDuoFight_Miko_Gfx, 0x3000, TAG_DUOFIGHT_MIKO
 };
 
-static const struct CompressedSpritePalette sSpritePal_DuoFight_Groudon =
+static const struct CompressedSpritePalette sSpritePal_DuoFight_Miko =
 {
-    gRaySceneDuoFight_Groudon_Pal, TAG_DUOFIGHT_GROUDON
+    gRaySceneDuoFight_Miko_Pal, TAG_DUOFIGHT_MIKO
 };
 
-static const struct SpriteTemplate sSpriteTemplate_DuoFight_Groudon =
+static const struct SpriteTemplate sSpriteTemplate_DuoFight_Miko =
 {
-    .tileTag = TAG_DUOFIGHT_GROUDON,
-    .paletteTag = TAG_DUOFIGHT_GROUDON,
+    .tileTag = TAG_DUOFIGHT_MIKO,
+    .paletteTag = TAG_DUOFIGHT_MIKO,
     .oam = &sOam_64x64,
-    .anims = sAnims_DuoFight_Groudon,
+    .anims = sAnims_DuoFight_Miko,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };
 
-static const union AnimCmd sAnim_DuoFight_GroudonShoulderKyogreDorsalFin[] =
+static const union AnimCmd sAnim_DuoFight_MikoShoulderCMikoDorsalFin[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd *const sAnims_DuoFight_GroudonShoulderKyogreDorsalFin[] =
+static const union AnimCmd *const sAnims_DuoFight_MikoShoulderCMikoDorsalFin[] =
 {
-    sAnim_DuoFight_GroudonShoulderKyogreDorsalFin
+    sAnim_DuoFight_MikoShoulderCMikoDorsalFin
 };
 
-static const struct CompressedSpriteSheet sSpriteSheet_DuoFight_GroudonShoulder =
+static const struct CompressedSpriteSheet sSpriteSheet_DuoFight_MikoShoulder =
 {
-    gRaySceneDuoFight_GroudonShoulder_Gfx, 0x200, TAG_DUOFIGHT_GROUDON_SHOULDER
+    gRaySceneDuoFight_MikoShoulder_Gfx, 0x200, TAG_DUOFIGHT_MIKO_SHOULDER
 };
 
-static const struct SpriteTemplate sSpriteTemplate_DuoFight_GroudonShoulder =
+static const struct SpriteTemplate sSpriteTemplate_DuoFight_MikoShoulder =
 {
-    .tileTag = TAG_DUOFIGHT_GROUDON_SHOULDER,
-    .paletteTag = TAG_DUOFIGHT_GROUDON,
+    .tileTag = TAG_DUOFIGHT_MIKO_SHOULDER,
+    .paletteTag = TAG_DUOFIGHT_MIKO,
     .oam = &sOam_32x32,
-    .anims = sAnims_DuoFight_GroudonShoulderKyogreDorsalFin,
+    .anims = sAnims_DuoFight_MikoShoulderCMikoDorsalFin,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };
 
-static const union AnimCmd sAnim_DuoFight_GroudonClaw[] =
+static const union AnimCmd sAnim_DuoFight_MikoClaw[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd *const sAnims_DuoFight_GroudonClaw[] =
+static const union AnimCmd *const sAnims_DuoFight_MikoClaw[] =
 {
-    sAnim_DuoFight_GroudonClaw
+    sAnim_DuoFight_MikoClaw
 };
 
-static const struct CompressedSpriteSheet sSpriteSheet_DuoFight_GroudonClaw =
+static const struct CompressedSpriteSheet sSpriteSheet_DuoFight_MikoClaw =
 {
-    gRaySceneDuoFight_GroudonClaw_Gfx, 0x400, TAG_DUOFIGHT_GROUDON_CLAW
+    gRaySceneDuoFight_MikoClaw_Gfx, 0x400, TAG_DUOFIGHT_MIKO_CLAW
 };
 
-static const struct SpriteTemplate sSpriteTemplate_DuoFight_GroudonClaw =
+static const struct SpriteTemplate sSpriteTemplate_DuoFight_MikoClaw =
 {
-    .tileTag = TAG_DUOFIGHT_GROUDON_CLAW,
-    .paletteTag = TAG_DUOFIGHT_GROUDON,
+    .tileTag = TAG_DUOFIGHT_MIKO_CLAW,
+    .paletteTag = TAG_DUOFIGHT_MIKO,
     .oam = &sOam_64x32,
-    .anims = sAnims_DuoFight_GroudonClaw,
+    .anims = sAnims_DuoFight_MikoClaw,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };
 
-static const union AnimCmd sAnim_DuoFight_Kyogre_TopLeft[] =
+static const union AnimCmd sAnim_DuoFight_CMiko_TopLeft[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_DuoFight_Kyogre_TopRight[] =
+static const union AnimCmd sAnim_DuoFight_CMiko_TopRight[] =
 {
     ANIMCMD_FRAME(8, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_DuoFight_Kyogre_FaceLeft[] =
+static const union AnimCmd sAnim_DuoFight_CMiko_FaceLeft[] =
 {
     ANIMCMD_FRAME(16, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_DuoFight_Kyogre_FaceRight[] =
+static const union AnimCmd sAnim_DuoFight_CMiko_FaceRight[] =
 {
     ANIMCMD_FRAME(24, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_DuoFight_Kyogre_ChinLeft[] =
+static const union AnimCmd sAnim_DuoFight_CMiko_ChinLeft[] =
 {
     ANIMCMD_FRAME(32, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_DuoFight_Kyogre_ChinRight[] =
+static const union AnimCmd sAnim_DuoFight_CMiko_ChinRight[] =
 {
     ANIMCMD_FRAME(40, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_DuoFight_Kyogre_LeftPectoralFin[] =
+static const union AnimCmd sAnim_DuoFight_CMiko_LeftPectoralFin[] =
 {
     ANIMCMD_FRAME(48, 24),
     ANIMCMD_FRAME(64, 24),
@@ -670,7 +670,7 @@ static const union AnimCmd sAnim_DuoFight_Kyogre_LeftPectoralFin[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd sAnim_DuoFight_Kyogre_LeftShoulder[] =
+static const union AnimCmd sAnim_DuoFight_CMiko_LeftShoulder[] =
 {
     ANIMCMD_FRAME(56, 24),
     ANIMCMD_FRAME(72, 24),
@@ -679,7 +679,7 @@ static const union AnimCmd sAnim_DuoFight_Kyogre_LeftShoulder[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd sAnim_DuoFight_Kyogre_RightShoulder[] =
+static const union AnimCmd sAnim_DuoFight_CMiko_RightShoulder[] =
 {
     ANIMCMD_FRAME(96, 24),
     ANIMCMD_FRAME(104, 24),
@@ -688,41 +688,41 @@ static const union AnimCmd sAnim_DuoFight_Kyogre_RightShoulder[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd *const sAnims_DuoFight_Kyogre[] =
+static const union AnimCmd *const sAnims_DuoFight_CMiko[] =
 {
-    sAnim_DuoFight_Kyogre_TopLeft,
-    sAnim_DuoFight_Kyogre_TopRight,
-    sAnim_DuoFight_Kyogre_FaceLeft,
-    sAnim_DuoFight_Kyogre_FaceRight,
-    sAnim_DuoFight_Kyogre_ChinLeft,
-    sAnim_DuoFight_Kyogre_ChinRight,
-    sAnim_DuoFight_Kyogre_LeftPectoralFin,
-    sAnim_DuoFight_Kyogre_LeftShoulder,
-    sAnim_DuoFight_Kyogre_RightShoulder
+    sAnim_DuoFight_CMiko_TopLeft,
+    sAnim_DuoFight_CMiko_TopRight,
+    sAnim_DuoFight_CMiko_FaceLeft,
+    sAnim_DuoFight_CMiko_FaceRight,
+    sAnim_DuoFight_CMiko_ChinLeft,
+    sAnim_DuoFight_CMiko_ChinRight,
+    sAnim_DuoFight_CMiko_LeftPectoralFin,
+    sAnim_DuoFight_CMiko_LeftShoulder,
+    sAnim_DuoFight_CMiko_RightShoulder
 };
 
-static const struct CompressedSpriteSheet sSpriteSheet_DuoFight_Kyogre =
+static const struct CompressedSpriteSheet sSpriteSheet_DuoFight_CMiko =
 {
-    gRaySceneDuoFight_Kyogre_Gfx, 0xF00, TAG_DUOFIGHT_KYOGRE
+    gRaySceneDuoFight_CMiko_Gfx, 0xF00, TAG_DUOFIGHT_CMIKO
 };
 
-static const struct CompressedSpritePalette sSpritePal_DuoFight_Kyogre =
+static const struct CompressedSpritePalette sSpritePal_DuoFight_CMiko =
 {
-    gRaySceneDuoFight_Kyogre_Pal, TAG_DUOFIGHT_KYOGRE
+    gRaySceneDuoFight_CMiko_Pal, TAG_DUOFIGHT_CMIKO
 };
 
-static const struct SpriteTemplate sSpriteTemplate_DuoFight_Kyogre =
+static const struct SpriteTemplate sSpriteTemplate_DuoFight_CMiko =
 {
-    .tileTag = TAG_DUOFIGHT_KYOGRE,
-    .paletteTag = TAG_DUOFIGHT_KYOGRE,
+    .tileTag = TAG_DUOFIGHT_CMIKO,
+    .paletteTag = TAG_DUOFIGHT_CMIKO,
     .oam = &sOam_32x16,
-    .anims = sAnims_DuoFight_Kyogre,
+    .anims = sAnims_DuoFight_CMiko,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };
 
-static const union AnimCmd sAnim_DuoFight_KyogrePectoralFin[] =
+static const union AnimCmd sAnim_DuoFight_CMikoPectoralFin[] =
 {
     ANIMCMD_FRAME(0, 24),
     ANIMCMD_FRAME(2, 24),
@@ -731,38 +731,38 @@ static const union AnimCmd sAnim_DuoFight_KyogrePectoralFin[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd *const sAnims_DuoFight_KyogrePectoralFin[] =
+static const union AnimCmd *const sAnims_DuoFight_CMikoPectoralFin[] =
 {
-    sAnim_DuoFight_KyogrePectoralFin
+    sAnim_DuoFight_CMikoPectoralFin
 };
 
-static const struct CompressedSpriteSheet sSpriteSheet_DuoFight_KyogrePectoralFin =
+static const struct CompressedSpriteSheet sSpriteSheet_DuoFight_CMikoPectoralFin =
 {
-    gRaySceneDuoFight_KyogrePectoralFin_Gfx, 0xC0, TAG_DUOFIGHT_KYOGRE_PECTORAL_FIN
+    gRaySceneDuoFight_CMikoPectoralFin_Gfx, 0xC0, TAG_DUOFIGHT_CMIKO_PECTORAL_FIN
 };
 
-static const struct SpriteTemplate sSpriteTemplate_DuoFight_KyogrePectoralFin =
+static const struct SpriteTemplate sSpriteTemplate_DuoFight_CMikoPectoralFin =
 {
-    .tileTag = TAG_DUOFIGHT_KYOGRE_PECTORAL_FIN,
-    .paletteTag = TAG_DUOFIGHT_KYOGRE,
+    .tileTag = TAG_DUOFIGHT_CMIKO_PECTORAL_FIN,
+    .paletteTag = TAG_DUOFIGHT_CMIKO,
     .oam = &sOam_16x8,
-    .anims = sAnims_DuoFight_KyogrePectoralFin,
+    .anims = sAnims_DuoFight_CMikoPectoralFin,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };
 
-static const struct CompressedSpriteSheet sSpriteSheet_DuoFight_KyogreDorsalFin =
+static const struct CompressedSpriteSheet sSpriteSheet_DuoFight_CMikoDorsalFin =
 {
-    gRaySceneDuoFight_KyogreDorsalFin_Gfx, 0x200, TAG_DUOFIGHT_KYOGRE_DORSAL_FIN
+    gRaySceneDuoFight_CMikoDorsalFin_Gfx, 0x200, TAG_DUOFIGHT_CMIKO_DORSAL_FIN
 };
 
-static const struct SpriteTemplate sSpriteTemplate_DuoFight_KyogreDorsalFin =
+static const struct SpriteTemplate sSpriteTemplate_DuoFight_CMikoDorsalFin =
 {
-    .tileTag = TAG_DUOFIGHT_KYOGRE_DORSAL_FIN,
-    .paletteTag = TAG_DUOFIGHT_KYOGRE,
+    .tileTag = TAG_DUOFIGHT_CMIKO_DORSAL_FIN,
+    .paletteTag = TAG_DUOFIGHT_CMIKO,
     .oam = &sOam_32x32,
-    .anims = sAnims_DuoFight_GroudonShoulderKyogreDorsalFin,
+    .anims = sAnims_DuoFight_MikoShoulderCMikoDorsalFin,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
@@ -898,62 +898,62 @@ static const struct BgTemplate sBgTemplates_Descends[] =
     }
 };
 
-static const union AnimCmd sAnim_Descends_Rayquaza[] =
+static const union AnimCmd sAnim_Descends_CMamizou[] =
 {
     ANIMCMD_FRAME(0, 32),
     ANIMCMD_FRAME(64, 32),
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd *const sAnims_Descends_Rayquaza[] =
+static const union AnimCmd *const sAnims_Descends_CMamizou[] =
 {
-    sAnim_Descends_Rayquaza
+    sAnim_Descends_CMamizou
 };
 
-static const union AnimCmd sAnim_Descends_RayquazaTail[] =
+static const union AnimCmd sAnim_Descends_CMamizouTail[] =
 {
     ANIMCMD_FRAME(0, 32),
     ANIMCMD_FRAME(8, 32),
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd *const sAnims_Descends_RayquazaTail[] =
+static const union AnimCmd *const sAnims_Descends_CMamizouTail[] =
 {
-    sAnim_Descends_RayquazaTail
+    sAnim_Descends_CMamizouTail
 };
 
-static const struct CompressedSpriteSheet sSpriteSheet_Descends_Rayquaza =
+static const struct CompressedSpriteSheet sSpriteSheet_Descends_CMamizou =
 {
-    gRaySceneDescends_Rayquaza_Gfx, 0x1000, TAG_DESCENDS_RAYQUAZA
+    gRaySceneDescends_CMamizou_Gfx, 0x1000, TAG_DESCENDS_CMAMIZOU
 };
 
-static const struct CompressedSpriteSheet sSpriteSheet_Descends_RayquazaTail =
+static const struct CompressedSpriteSheet sSpriteSheet_Descends_CMamizouTail =
 {
-    gRaySceneDescends_RayquazaTail_Gfx, 0x200, TAG_DESCENDS_RAYQUAZA_TAIL
+    gRaySceneDescends_CMamizouTail_Gfx, 0x200, TAG_DESCENDS_CMAMIZOU_TAIL
 };
 
-static const struct CompressedSpritePalette sSpritePal_Descends_Rayquaza =
+static const struct CompressedSpritePalette sSpritePal_Descends_CMamizou =
 {
-    gRaySceneTakesFlight_Rayquaza_Pal, TAG_DESCENDS_RAYQUAZA // "Takes flight" palette re-used here
+    gRaySceneTakesFlight_CMamizou_Pal, TAG_DESCENDS_CMAMIZOU // "Takes flight" palette re-used here
 };
 
-static const struct SpriteTemplate sSpriteTemplate_Descends_Rayquaza =
+static const struct SpriteTemplate sSpriteTemplate_Descends_CMamizou =
 {
-    .tileTag = TAG_DESCENDS_RAYQUAZA,
-    .paletteTag = TAG_DESCENDS_RAYQUAZA,
+    .tileTag = TAG_DESCENDS_CMAMIZOU,
+    .paletteTag = TAG_DESCENDS_CMAMIZOU,
     .oam = &sOam_64x64,
-    .anims = sAnims_Descends_Rayquaza,
+    .anims = sAnims_Descends_CMamizou,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };
 
-static const struct SpriteTemplate sSpriteTemplate_Descends_RayquazaTail =
+static const struct SpriteTemplate sSpriteTemplate_Descends_CMamizouTail =
 {
-    .tileTag = TAG_DESCENDS_RAYQUAZA_TAIL,
-    .paletteTag = TAG_DESCENDS_RAYQUAZA,
+    .tileTag = TAG_DESCENDS_CMAMIZOU_TAIL,
+    .paletteTag = TAG_DESCENDS_CMAMIZOU,
     .oam = &sOam_16x32,
-    .anims = sAnims_Descends_RayquazaTail,
+    .anims = sAnims_Descends_CMamizouTail,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
@@ -999,13 +999,13 @@ static const struct BgTemplate sBgTemplates_Charges[] =
     }
 };
 
-static const union AnimCmd sAnim_ChasesAway_Groudon_Still[] =
+static const union AnimCmd sAnim_ChasesAway_Miko_Still[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_ChasesAway_Groudon_Moving[] =
+static const union AnimCmd sAnim_ChasesAway_Miko_Moving[] =
 {
     ANIMCMD_FRAME(0, 48),
     ANIMCMD_FRAME(64, 32),
@@ -1014,113 +1014,113 @@ static const union AnimCmd sAnim_ChasesAway_Groudon_Moving[] =
     ANIMCMD_JUMP(0)
 };
 
-static const union AnimCmd *const sAnims_ChasesAway_Groudon[] =
+static const union AnimCmd *const sAnims_ChasesAway_Miko[] =
 {
-    sAnim_ChasesAway_Groudon_Still,
-    sAnim_ChasesAway_Groudon_Moving
+    sAnim_ChasesAway_Miko_Still,
+    sAnim_ChasesAway_Miko_Moving
 };
 
-static const union AnimCmd sAnim_ChasesAway_GroudonTail[] =
-{
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END
-};
-
-static const union AnimCmd *const sAnims_ChasesAway_GroudonTail[] =
-{
-    sAnim_ChasesAway_GroudonTail,
-};
-
-static const union AnimCmd sAnim_ChasesAway_Kyogre_Front[] =
+static const union AnimCmd sAnim_ChasesAway_MikoTail[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_ChasesAway_Kyogre_Back[] =
+static const union AnimCmd *const sAnims_ChasesAway_MikoTail[] =
+{
+    sAnim_ChasesAway_MikoTail,
+};
+
+static const union AnimCmd sAnim_ChasesAway_CMiko_Front[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sAnim_ChasesAway_CMiko_Back[] =
 {
     ANIMCMD_FRAME(16, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_ChasesAway_Kyogre_Tail[] =
+static const union AnimCmd sAnim_ChasesAway_CMiko_Tail[] =
 {
     ANIMCMD_FRAME(32, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd *const sAnims_ChasesAway_Kyogre[] =
+static const union AnimCmd *const sAnims_ChasesAway_CMiko[] =
 {
-    sAnim_ChasesAway_Kyogre_Front,
-    sAnim_ChasesAway_Kyogre_Back,
-    sAnim_ChasesAway_Kyogre_Tail
+    sAnim_ChasesAway_CMiko_Front,
+    sAnim_ChasesAway_CMiko_Back,
+    sAnim_ChasesAway_CMiko_Tail
 };
 
-static const union AnimCmd sAnim_ChasesAway_Rayquaza_FlyingDown[] =
+static const union AnimCmd sAnim_ChasesAway_CMamizou_FlyingDown[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_ChasesAway_Rayquaza_Arriving[] =
+static const union AnimCmd sAnim_ChasesAway_CMamizou_Arriving[] =
 {
     ANIMCMD_FRAME(64, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_ChasesAway_Rayquaza_Floating[] =
+static const union AnimCmd sAnim_ChasesAway_CMamizou_Floating[] =
 {
     ANIMCMD_FRAME(128, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_ChasesAway_Rayquaza_Shouting[] =
+static const union AnimCmd sAnim_ChasesAway_CMamizou_Shouting[] =
 {
     ANIMCMD_FRAME(192, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd *const sAnims_ChasesAway_Rayquaza[] =
+static const union AnimCmd *const sAnims_ChasesAway_CMamizou[] =
 {
-    sAnim_ChasesAway_Rayquaza_FlyingDown,
-    sAnim_ChasesAway_Rayquaza_Arriving,
-    sAnim_ChasesAway_Rayquaza_Floating,
-    sAnim_ChasesAway_Rayquaza_Shouting
+    sAnim_ChasesAway_CMamizou_FlyingDown,
+    sAnim_ChasesAway_CMamizou_Arriving,
+    sAnim_ChasesAway_CMamizou_Floating,
+    sAnim_ChasesAway_CMamizou_Shouting
 };
 
-static const union AnimCmd sAnim_ChasesAway_RayquazaTail_FlyingDown[] =
+static const union AnimCmd sAnim_ChasesAway_CMamizouTail_FlyingDown[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_ChasesAway_RayquazaTail_Arriving[] =
+static const union AnimCmd sAnim_ChasesAway_CMamizouTail_Arriving[] =
 {
     ANIMCMD_FRAME(16, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_ChasesAway_RayquazaTail_Floating[] =
+static const union AnimCmd sAnim_ChasesAway_CMamizouTail_Floating[] =
 {
     ANIMCMD_FRAME(32, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_ChasesAway_RayquazaTail_Shouting[] =
+static const union AnimCmd sAnim_ChasesAway_CMamizouTail_Shouting[] =
 {
     ANIMCMD_FRAME(48, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd *const sAnims_ChasesAway_RayquazaTail[] =
+static const union AnimCmd *const sAnims_ChasesAway_CMamizouTail[] =
 {
-    sAnim_ChasesAway_RayquazaTail_FlyingDown,
-    sAnim_ChasesAway_RayquazaTail_Arriving,
-    sAnim_ChasesAway_RayquazaTail_Floating,
-    sAnim_ChasesAway_RayquazaTail_Shouting
+    sAnim_ChasesAway_CMamizouTail_FlyingDown,
+    sAnim_ChasesAway_CMamizouTail_Arriving,
+    sAnim_ChasesAway_CMamizouTail_Floating,
+    sAnim_ChasesAway_CMamizouTail_Shouting
 };
 
-static const union AnimCmd sAnim_ChasesAway_KyogreSplash[] =
+static const union AnimCmd sAnim_ChasesAway_CMikoSplash[] =
 {
     ANIMCMD_FRAME(0, 8),
     ANIMCMD_FRAME(4, 8),
@@ -1131,122 +1131,122 @@ static const union AnimCmd sAnim_ChasesAway_KyogreSplash[] =
     ANIMCMD_JUMP(0)
 };
 
-static const union AnimCmd *const sAnims_ChasesAway_KyogreSplash[] =
+static const union AnimCmd *const sAnims_ChasesAway_CMikoSplash[] =
 {
-    sAnim_ChasesAway_KyogreSplash
+    sAnim_ChasesAway_CMikoSplash
 };
 
-static const struct CompressedSpriteSheet sSpriteSheet_ChasesAway_Groudon =
+static const struct CompressedSpriteSheet sSpriteSheet_ChasesAway_Miko =
 {
-    gRaySceneChasesAway_Groudon_Gfx, 0x1800, TAG_CHASE_GROUDON
+    gRaySceneChasesAway_Miko_Gfx, 0x1800, TAG_CHASE_MIKO
 };
 
-static const struct CompressedSpriteSheet sSpriteSheet_ChasesAway_GroudonTail =
+static const struct CompressedSpriteSheet sSpriteSheet_ChasesAway_MikoTail =
 {
-    gRaySceneChasesAway_GroudonTail_Gfx, 0x80, TAG_CHASE_GROUDON_TAIL
+    gRaySceneChasesAway_MikoTail_Gfx, 0x80, TAG_CHASE_MIKO_TAIL
 };
 
-static const struct CompressedSpriteSheet sSpriteSheet_ChasesAway_Kyogre =
+static const struct CompressedSpriteSheet sSpriteSheet_ChasesAway_CMiko =
 {
-    gRaySceneChasesAway_Kyogre_Gfx, 0x600, TAG_CHASE_KYOGRE
+    gRaySceneChasesAway_CMiko_Gfx, 0x600, TAG_CHASE_CMIKO
 };
 
-static const struct CompressedSpriteSheet sSpriteSheet_ChasesAway_Rayquaza =
+static const struct CompressedSpriteSheet sSpriteSheet_ChasesAway_CMamizou =
 {
-    gRaySceneChasesAway_Rayquaza_Gfx, 0x2000, TAG_CHASE_RAYQUAZA
+    gRaySceneChasesAway_CMamizou_Gfx, 0x2000, TAG_CHASE_CMAMIZOU
 };
 
-static const struct CompressedSpriteSheet sSpriteSheet_ChasesAway_RayquazaTail =
+static const struct CompressedSpriteSheet sSpriteSheet_ChasesAway_CMamizouTail =
 {
-    gRaySceneChasesAway_RayquazaTail_Gfx, 0x800, TAG_CHASE_RAYQUAZA_TAIL
+    gRaySceneChasesAway_CMamizouTail_Gfx, 0x800, TAG_CHASE_CMAMIZOU_TAIL
 };
 
-static const struct CompressedSpriteSheet sSpriteSheet_ChasesAway_KyogreSplash =
+static const struct CompressedSpriteSheet sSpriteSheet_ChasesAway_CMikoSplash =
 {
-    gRaySceneChasesAway_KyogreSplash_Gfx, 0x300, TAG_CHASE_SPLASH
+    gRaySceneChasesAway_CMikoSplash_Gfx, 0x300, TAG_CHASE_SPLASH
 };
 
-static const struct CompressedSpritePalette sSpritePal_ChasesAway_Groudon =
+static const struct CompressedSpritePalette sSpritePal_ChasesAway_Miko =
 {
-    gRaySceneChasesAway_Groudon_Pal, TAG_CHASE_GROUDON
+    gRaySceneChasesAway_Miko_Pal, TAG_CHASE_MIKO
 };
 
-static const struct CompressedSpritePalette sSpritePal_ChasesAway_Kyogre =
+static const struct CompressedSpritePalette sSpritePal_ChasesAway_CMiko =
 {
-    gRaySceneChasesAway_Kyogre_Pal, TAG_CHASE_KYOGRE
+    gRaySceneChasesAway_CMiko_Pal, TAG_CHASE_CMIKO
 };
 
-static const struct CompressedSpritePalette sSpritePal_ChasesAway_Rayquaza =
+static const struct CompressedSpritePalette sSpritePal_ChasesAway_CMamizou =
 {
-    gRaySceneChasesAway_Rayquaza_Pal, TAG_CHASE_RAYQUAZA
+    gRaySceneChasesAway_CMamizou_Pal, TAG_CHASE_CMAMIZOU
 };
 
-static const struct CompressedSpritePalette sSpritePal_ChasesAway_KyogreSplash =
+static const struct CompressedSpritePalette sSpritePal_ChasesAway_CMikoSplash =
 {
-    gRaySceneChasesAway_KyogreSplash_Pal, TAG_CHASE_SPLASH
+    gRaySceneChasesAway_CMikoSplash_Pal, TAG_CHASE_SPLASH
 };
 
-static const struct SpriteTemplate sSpriteTemplate_ChasesAway_Groudon =
+static const struct SpriteTemplate sSpriteTemplate_ChasesAway_Miko =
 {
-    .tileTag = TAG_CHASE_GROUDON,
-    .paletteTag = TAG_CHASE_GROUDON,
+    .tileTag = TAG_CHASE_MIKO,
+    .paletteTag = TAG_CHASE_MIKO,
     .oam = &sOam_64x64,
-    .anims = sAnims_ChasesAway_Groudon,
+    .anims = sAnims_ChasesAway_Miko,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };
 
-static const struct SpriteTemplate sSpriteTemplate_ChasesAway_GroudonTail =
+static const struct SpriteTemplate sSpriteTemplate_ChasesAway_MikoTail =
 {
-    .tileTag = TAG_CHASE_GROUDON_TAIL,
-    .paletteTag = TAG_CHASE_GROUDON,
+    .tileTag = TAG_CHASE_MIKO_TAIL,
+    .paletteTag = TAG_CHASE_MIKO,
     .oam = &sOam_16x16,
-    .anims = sAnims_ChasesAway_GroudonTail,
+    .anims = sAnims_ChasesAway_MikoTail,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };
 
-static const struct SpriteTemplate sSpriteTemplate_ChasesAway_Kyogre =
+static const struct SpriteTemplate sSpriteTemplate_ChasesAway_CMiko =
 {
-    .tileTag = TAG_CHASE_KYOGRE,
-    .paletteTag = TAG_CHASE_KYOGRE,
+    .tileTag = TAG_CHASE_CMIKO,
+    .paletteTag = TAG_CHASE_CMIKO,
     .oam = &sOam_32x32,
-    .anims = sAnims_ChasesAway_Kyogre,
+    .anims = sAnims_ChasesAway_CMiko,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };
 
-static const struct SpriteTemplate sSpriteTemplate_ChasesAway_Rayquaza =
+static const struct SpriteTemplate sSpriteTemplate_ChasesAway_CMamizou =
 {
-    .tileTag = TAG_CHASE_RAYQUAZA,
-    .paletteTag = TAG_CHASE_RAYQUAZA,
+    .tileTag = TAG_CHASE_CMAMIZOU,
+    .paletteTag = TAG_CHASE_CMAMIZOU,
     .oam = &sOam_64x64,
-    .anims = sAnims_ChasesAway_Rayquaza,
+    .anims = sAnims_ChasesAway_CMamizou,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = SpriteCB_ChasesAway_Rayquaza,
+    .callback = SpriteCB_ChasesAway_CMamizou,
 };
 
-static const struct SpriteTemplate sSpriteTemplate_ChasesAway_RayquazaTail =
+static const struct SpriteTemplate sSpriteTemplate_ChasesAway_CMamizouTail =
 {
-    .tileTag = TAG_CHASE_RAYQUAZA_TAIL,
-    .paletteTag = TAG_CHASE_RAYQUAZA,
+    .tileTag = TAG_CHASE_CMAMIZOU_TAIL,
+    .paletteTag = TAG_CHASE_CMAMIZOU,
     .oam = &sOam_32x32,
-    .anims = sAnims_ChasesAway_RayquazaTail,
+    .anims = sAnims_ChasesAway_CMamizouTail,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
 };
 
-static const struct SpriteTemplate sSpriteTemplate_ChasesAway_KyogreSplash =
+static const struct SpriteTemplate sSpriteTemplate_ChasesAway_CMikoSplash =
 {
     .tileTag = TAG_CHASE_SPLASH,
     .paletteTag = TAG_CHASE_SPLASH,
     .oam = &sOam_32x8,
-    .anims = sAnims_ChasesAway_KyogreSplash,
+    .anims = sAnims_ChasesAway_CMikoSplash,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy,
@@ -1283,16 +1283,16 @@ static const struct BgTemplate sBgTemplates_ChasesAway[] =
     }
 };
 
-void DoRayquazaScene(u8 animId, bool8 endEarly, void (*exitCallback)(void))
+void DoCMamizouScene(u8 animId, bool8 endEarly, void (*exitCallback)(void))
 {
     sRayScene = AllocZeroed(sizeof(*sRayScene));
     sRayScene->animId = animId;
     sRayScene->exitCallback = exitCallback;
     sRayScene->endEarly = endEarly;
-    SetMainCallback2(CB2_InitRayquazaScene);
+    SetMainCallback2(CB2_InitCMamizouScene);
 }
 
-static void CB2_InitRayquazaScene(void)
+static void CB2_InitCMamizouScene(void)
 {
     SetVBlankHBlankCallbacksToNull();
     ClearScheduledBgCopiesToVram();
@@ -1303,10 +1303,10 @@ static void CB2_InitRayquazaScene(void)
     ResetTasks();
     FillPalette(RGB_BLACK, 0xF0, 32);
     CreateTask(sTasksForAnimations[sRayScene->animId], 0);
-    SetMainCallback2(CB2_RayquazaScene);
+    SetMainCallback2(CB2_CMamizouScene);
 }
 
-static void CB2_RayquazaScene(void)
+static void CB2_CMamizouScene(void)
 {
     RunTasks();
     AnimateSprites();
@@ -1315,7 +1315,7 @@ static void CB2_RayquazaScene(void)
     UpdatePaletteFade();
 }
 
-static void VBlankCB_RayquazaScene(void)
+static void VBlankCB_CMamizouScene(void)
 {
     LoadOam();
     ProcessSpriteCopyRequests();
@@ -1374,12 +1374,12 @@ static void ResetWindowDimensions(void)
 
 #define tTimer           data[0]
 #define tHelperTaskId    data[1]
-#define tGroudonSpriteId data[2]
-#define tKyogreSpriteId  data[3]
+#define tMikoSpriteId data[2]
+#define tCMikoSpriteId  data[3]
 
-#define sGroudonBodySpriteId     data[0]
-#define sGroudonShoulderSpriteId data[1]
-#define sGroudonClawSpriteId     data[2]
+#define sMikoBodySpriteId     data[0]
+#define sMikoShoulderSpriteId data[1]
+#define sMikoClawSpriteId     data[2]
 
 static void Task_HandleDuoFightPre(u8 taskId)
 {
@@ -1413,22 +1413,22 @@ static void Task_HandleDuoFightPre(u8 taskId)
     }
 }
 
-static u8 DuoFightPre_CreateGroudonSprites(void)
+static u8 DuoFightPre_CreateMikoSprites(void)
 {
     u8 spriteId;
     s16 *data;
 
-    spriteId = CreateSprite(&sSpriteTemplate_DuoFightPre_Groudon, 88, 72, 3);
-    gSprites[spriteId].callback = SpriteCB_DuoFightPre_Groudon;
+    spriteId = CreateSprite(&sSpriteTemplate_DuoFightPre_Miko, 88, 72, 3);
+    gSprites[spriteId].callback = SpriteCB_DuoFightPre_Miko;
     data = gSprites[spriteId].data;
-    sGroudonBodySpriteId = CreateSprite(&sSpriteTemplate_DuoFightPre_Groudon, 56, 104, 3);
-    sGroudonShoulderSpriteId = CreateSprite(&sSpriteTemplate_DuoFightPre_GroudonShoulder, 75, 101, 0);
-    sGroudonClawSpriteId = CreateSprite(&sSpriteTemplate_DuoFightPre_GroudonClaw, 109, 114, 1);
-    StartSpriteAnim(&gSprites[sGroudonBodySpriteId], 1);
+    sMikoBodySpriteId = CreateSprite(&sSpriteTemplate_DuoFightPre_Miko, 56, 104, 3);
+    sMikoShoulderSpriteId = CreateSprite(&sSpriteTemplate_DuoFightPre_MikoShoulder, 75, 101, 0);
+    sMikoClawSpriteId = CreateSprite(&sSpriteTemplate_DuoFightPre_MikoClaw, 109, 114, 1);
+    StartSpriteAnim(&gSprites[sMikoBodySpriteId], 1);
     return spriteId;
 }
 
-static void SpriteCB_DuoFightPre_Groudon(struct Sprite *sprite)
+static void SpriteCB_DuoFightPre_Miko(struct Sprite *sprite)
 {
     s16 *data = sprite->data;
     data[5]++;
@@ -1436,54 +1436,54 @@ static void SpriteCB_DuoFightPre_Groudon(struct Sprite *sprite)
     if (data[5] == 0 && sprite->x != 72)
     {
         sprite->x--;
-        gSprites[sprite->sGroudonBodySpriteId].x--;
-        gSprites[sGroudonShoulderSpriteId].x--;
-        gSprites[sGroudonClawSpriteId].x--;
+        gSprites[sprite->sMikoBodySpriteId].x--;
+        gSprites[sMikoShoulderSpriteId].x--;
+        gSprites[sMikoClawSpriteId].x--;
     }
 
     switch (sprite->animCmdIndex)
     {
     case 0:
-        gSprites[sGroudonShoulderSpriteId].x2 = 0;
-        gSprites[sGroudonShoulderSpriteId].y2 = 0;
-        gSprites[sGroudonClawSpriteId].x2 = 0;
-        gSprites[sGroudonClawSpriteId].y2 = 0;
+        gSprites[sMikoShoulderSpriteId].x2 = 0;
+        gSprites[sMikoShoulderSpriteId].y2 = 0;
+        gSprites[sMikoClawSpriteId].x2 = 0;
+        gSprites[sMikoClawSpriteId].y2 = 0;
         break;
     case 1:
     case 3:
-        gSprites[sGroudonShoulderSpriteId].x2 = -1;
-        gSprites[sGroudonShoulderSpriteId].y2 = 0;
-        gSprites[sGroudonClawSpriteId].x2 = -1;
-        gSprites[sGroudonClawSpriteId].y2 = 0;
+        gSprites[sMikoShoulderSpriteId].x2 = -1;
+        gSprites[sMikoShoulderSpriteId].y2 = 0;
+        gSprites[sMikoClawSpriteId].x2 = -1;
+        gSprites[sMikoClawSpriteId].y2 = 0;
         break;
     case 2:
-        gSprites[sGroudonShoulderSpriteId].x2 = -1;
-        gSprites[sGroudonShoulderSpriteId].y2 = 1;
-        gSprites[sGroudonClawSpriteId].x2 = -2;
-        gSprites[sGroudonClawSpriteId].y2 = 1;
+        gSprites[sMikoShoulderSpriteId].x2 = -1;
+        gSprites[sMikoShoulderSpriteId].y2 = 1;
+        gSprites[sMikoClawSpriteId].x2 = -2;
+        gSprites[sMikoClawSpriteId].y2 = 1;
         break;
     }
 }
 
-static u8 DuoFightPre_CreateKyogreSprites(void)
+static u8 DuoFightPre_CreateCMikoSprites(void)
 {
     u8 spriteId;
     s16 *data;
 
-    spriteId = CreateSprite(&sSpriteTemplate_DuoFightPre_Kyogre, 136, 96, 1);
-    gSprites[spriteId].callback = SpriteCB_DuoFightPre_Kyogre;
+    spriteId = CreateSprite(&sSpriteTemplate_DuoFightPre_CMiko, 136, 96, 1);
+    gSprites[spriteId].callback = SpriteCB_DuoFightPre_CMiko;
     data = gSprites[spriteId].data;
 
-    data[0]  = CreateSprite(&sSpriteTemplate_DuoFightPre_Kyogre, 168,  96, 1) << 8;
-    data[0] |= CreateSprite(&sSpriteTemplate_DuoFightPre_Kyogre, 136, 112, 1);
-    data[1]  = CreateSprite(&sSpriteTemplate_DuoFightPre_Kyogre, 168, 112, 1) << 8;
-    data[1] |= CreateSprite(&sSpriteTemplate_DuoFightPre_Kyogre, 136, 128, 1);
-    data[2]  = CreateSprite(&sSpriteTemplate_DuoFightPre_Kyogre, 168, 128, 1) << 8;
-    data[2] |= CreateSprite(&sSpriteTemplate_DuoFightPre_Kyogre, 104, 128, 2);
-    data[3]  = CreateSprite(&sSpriteTemplate_DuoFightPre_Kyogre, 136, 128, 2) << 8;
-    data[3] |= CreateSprite(&sSpriteTemplate_DuoFightPre_Kyogre, 184, 128, 0);
-    data[4]  = CreateSprite(&sSpriteTemplate_DuoFightPre_KyogrePectoralFin, 208, 132, 0) << 8;
-    data[4] |= CreateSprite(&sSpriteTemplate_DuoFightPre_KyogreDorsalFin, 200, 120, 1);
+    data[0]  = CreateSprite(&sSpriteTemplate_DuoFightPre_CMiko, 168,  96, 1) << 8;
+    data[0] |= CreateSprite(&sSpriteTemplate_DuoFightPre_CMiko, 136, 112, 1);
+    data[1]  = CreateSprite(&sSpriteTemplate_DuoFightPre_CMiko, 168, 112, 1) << 8;
+    data[1] |= CreateSprite(&sSpriteTemplate_DuoFightPre_CMiko, 136, 128, 1);
+    data[2]  = CreateSprite(&sSpriteTemplate_DuoFightPre_CMiko, 168, 128, 1) << 8;
+    data[2] |= CreateSprite(&sSpriteTemplate_DuoFightPre_CMiko, 104, 128, 2);
+    data[3]  = CreateSprite(&sSpriteTemplate_DuoFightPre_CMiko, 136, 128, 2) << 8;
+    data[3] |= CreateSprite(&sSpriteTemplate_DuoFightPre_CMiko, 184, 128, 0);
+    data[4]  = CreateSprite(&sSpriteTemplate_DuoFightPre_CMikoPectoralFin, 208, 132, 0) << 8;
+    data[4] |= CreateSprite(&sSpriteTemplate_DuoFightPre_CMikoDorsalFin, 200, 120, 1);
 
     StartSpriteAnim(&gSprites[data[0] >> 8], 1);
     StartSpriteAnim(&gSprites[data[0] & 0xFF], 2);
@@ -1497,7 +1497,7 @@ static u8 DuoFightPre_CreateKyogreSprites(void)
     return spriteId;
 }
 
-static void SpriteCB_DuoFightPre_Kyogre(struct Sprite *sprite)
+static void SpriteCB_DuoFightPre_CMiko(struct Sprite *sprite)
 {
     s16 *data = sprite->data;
     data[5]++;
@@ -1560,7 +1560,7 @@ static void SpriteCB_DuoFightPre_Kyogre(struct Sprite *sprite)
 
 static void VBlankCB_DuoFight(void)
 {
-    VBlankCB_RayquazaScene();
+    VBlankCB_CMamizouScene();
     ScanlineEffect_InitHBlankDmaTransfer();
 }
 
@@ -1593,14 +1593,14 @@ static void LoadDuoFightSceneGfx(void)
     LZDecompressWram(gRaySceneDuoFight_Clouds1_Tilemap, sRayScene->tilemapBuffers[1]);
     LZDecompressWram(gRaySceneDuoFight_Clouds3_Tilemap, sRayScene->tilemapBuffers[2]);
     LoadCompressedPalette(gRaySceneDuoFight_Clouds_Pal, 0, 0x40);
-    LoadCompressedSpriteSheet(&sSpriteSheet_DuoFight_Groudon);
-    LoadCompressedSpriteSheet(&sSpriteSheet_DuoFight_GroudonShoulder);
-    LoadCompressedSpriteSheet(&sSpriteSheet_DuoFight_GroudonClaw);
-    LoadCompressedSpriteSheet(&sSpriteSheet_DuoFight_Kyogre);
-    LoadCompressedSpriteSheet(&sSpriteSheet_DuoFight_KyogrePectoralFin);
-    LoadCompressedSpriteSheet(&sSpriteSheet_DuoFight_KyogreDorsalFin);
-    LoadCompressedSpritePalette(&sSpritePal_DuoFight_Groudon);
-    LoadCompressedSpritePalette(&sSpritePal_DuoFight_Kyogre);
+    LoadCompressedSpriteSheet(&sSpriteSheet_DuoFight_Miko);
+    LoadCompressedSpriteSheet(&sSpriteSheet_DuoFight_MikoShoulder);
+    LoadCompressedSpriteSheet(&sSpriteSheet_DuoFight_MikoClaw);
+    LoadCompressedSpriteSheet(&sSpriteSheet_DuoFight_CMiko);
+    LoadCompressedSpriteSheet(&sSpriteSheet_DuoFight_CMikoPectoralFin);
+    LoadCompressedSpriteSheet(&sSpriteSheet_DuoFight_CMikoDorsalFin);
+    LoadCompressedSpritePalette(&sSpritePal_DuoFight_Miko);
+    LoadCompressedSpritePalette(&sSpritePal_DuoFight_CMiko);
 }
 
 static void Task_DuoFightAnim(u8 taskId)
@@ -1615,14 +1615,14 @@ static void Task_DuoFightAnim(u8 taskId)
     tHelperTaskId = CreateTask(Task_DuoFight_AnimateClouds, 0);
     if (sRayScene->animId == RAY_ANIM_DUO_FIGHT_PRE)
     {
-        tGroudonSpriteId = DuoFightPre_CreateGroudonSprites();
-        tKyogreSpriteId = DuoFightPre_CreateKyogreSprites();
+        tMikoSpriteId = DuoFightPre_CreateMikoSprites();
+        tCMikoSpriteId = DuoFightPre_CreateCMikoSprites();
         gTasks[taskId].func = Task_HandleDuoFightPre;
     }
     else
     {
-        tGroudonSpriteId = DuoFight_CreateGroudonSprites();
-        tKyogreSpriteId = DuoFight_CreateKyogreSprites();
+        tMikoSpriteId = DuoFight_CreateMikoSprites();
+        tCMikoSpriteId = DuoFight_CreateCMikoSprites();
         gTasks[taskId].func = Task_HandleDuoFight;
         StopMapMusic();
     }
@@ -1767,8 +1767,8 @@ static void DuoFight_PanOffScene(u8 taskId)
 {
     u16 bgY;
     s16 *data = gTasks[taskId].data;
-    DuoFight_SlideGroudonDown(&gSprites[tGroudonSpriteId]);
-    DuoFight_SlideKyogreDown(&gSprites[tKyogreSpriteId]);
+    DuoFight_SlideMikoDown(&gSprites[tMikoSpriteId]);
+    DuoFight_SlideCMikoDown(&gSprites[tCMikoSpriteId]);
 
     bgY = GetBgY(1);
     if (GetBgY(1) == 0 || bgY > 0x8000)
@@ -1805,22 +1805,22 @@ static void Task_DuoFightEnd(u8 taskId)
     }
 }
 
-static u8 DuoFight_CreateGroudonSprites(void)
+static u8 DuoFight_CreateMikoSprites(void)
 {
     u8 spriteId;
     s16 *data;
 
-    spriteId = CreateSprite(&sSpriteTemplate_DuoFight_Groudon, 98, 72, 3);
-    gSprites[spriteId].callback = SpriteCB_DuoFight_Groudon;
+    spriteId = CreateSprite(&sSpriteTemplate_DuoFight_Miko, 98, 72, 3);
+    gSprites[spriteId].callback = SpriteCB_DuoFight_Miko;
     data = gSprites[spriteId].data;
-    sGroudonBodySpriteId = CreateSprite(&sSpriteTemplate_DuoFight_Groudon, 66, 104, 3);
-    sGroudonShoulderSpriteId = CreateSprite(&sSpriteTemplate_DuoFight_GroudonShoulder, 85, 101, 0);
-    sGroudonClawSpriteId = CreateSprite(&sSpriteTemplate_DuoFight_GroudonClaw, 119, 114, 1);
-    StartSpriteAnim(&gSprites[sGroudonBodySpriteId], 1);
+    sMikoBodySpriteId = CreateSprite(&sSpriteTemplate_DuoFight_Miko, 66, 104, 3);
+    sMikoShoulderSpriteId = CreateSprite(&sSpriteTemplate_DuoFight_MikoShoulder, 85, 101, 0);
+    sMikoClawSpriteId = CreateSprite(&sSpriteTemplate_DuoFight_MikoClaw, 119, 114, 1);
+    StartSpriteAnim(&gSprites[sMikoBodySpriteId], 1);
     return spriteId;
 }
 
-static void SpriteCB_DuoFight_Groudon(struct Sprite *sprite)
+static void SpriteCB_DuoFight_Miko(struct Sprite *sprite)
 {
     s16 *data = sprite->data;
     data[5]++;
@@ -1828,66 +1828,66 @@ static void SpriteCB_DuoFight_Groudon(struct Sprite *sprite)
     if (!(data[5] & 7) && sprite->x != 72)
     {
         sprite->x--;
-        gSprites[sprite->sGroudonBodySpriteId].x--;
-        gSprites[sGroudonShoulderSpriteId].x--;
-        gSprites[sGroudonClawSpriteId].x--;
+        gSprites[sprite->sMikoBodySpriteId].x--;
+        gSprites[sMikoShoulderSpriteId].x--;
+        gSprites[sMikoClawSpriteId].x--;
     }
 
     switch (sprite->animCmdIndex)
     {
     case 0:
-        gSprites[sGroudonShoulderSpriteId].x2 = 0;
-        gSprites[sGroudonShoulderSpriteId].y2 = 0;
-        gSprites[sGroudonClawSpriteId].x2 = 0;
-        gSprites[sGroudonClawSpriteId].y2 = 0;
+        gSprites[sMikoShoulderSpriteId].x2 = 0;
+        gSprites[sMikoShoulderSpriteId].y2 = 0;
+        gSprites[sMikoClawSpriteId].x2 = 0;
+        gSprites[sMikoClawSpriteId].y2 = 0;
         break;
     case 1:
     case 3:
-        gSprites[sGroudonShoulderSpriteId].x2 = -1;
-        gSprites[sGroudonShoulderSpriteId].y2 = 0;
-        gSprites[sGroudonClawSpriteId].x2 = -1;
-        gSprites[sGroudonClawSpriteId].y2 = 0;
+        gSprites[sMikoShoulderSpriteId].x2 = -1;
+        gSprites[sMikoShoulderSpriteId].y2 = 0;
+        gSprites[sMikoClawSpriteId].x2 = -1;
+        gSprites[sMikoClawSpriteId].y2 = 0;
         break;
     case 2:
-        gSprites[sGroudonShoulderSpriteId].x2 = -1;
-        gSprites[sGroudonShoulderSpriteId].y2 = 1;
-        gSprites[sGroudonClawSpriteId].x2 = -2;
-        gSprites[sGroudonClawSpriteId].y2 = 1;
+        gSprites[sMikoShoulderSpriteId].x2 = -1;
+        gSprites[sMikoShoulderSpriteId].y2 = 1;
+        gSprites[sMikoClawSpriteId].x2 = -2;
+        gSprites[sMikoClawSpriteId].y2 = 1;
         break;
     }
 }
 
-static void DuoFight_SlideGroudonDown(struct Sprite *sprite)
+static void DuoFight_SlideMikoDown(struct Sprite *sprite)
 {
     s16 *data = sprite->data;
     if (sprite->y <= DISPLAY_HEIGHT)
     {
         sprite->y += 8;
-        gSprites[sprite->sGroudonBodySpriteId].y += 8;
-        gSprites[sGroudonShoulderSpriteId].y += 8;
-        gSprites[sGroudonClawSpriteId].y += 8;
+        gSprites[sprite->sMikoBodySpriteId].y += 8;
+        gSprites[sMikoShoulderSpriteId].y += 8;
+        gSprites[sMikoClawSpriteId].y += 8;
     }
 }
 
-static u8 DuoFight_CreateKyogreSprites(void)
+static u8 DuoFight_CreateCMikoSprites(void)
 {
     u8 spriteId;
     s16 *data;
 
-    spriteId = CreateSprite(&sSpriteTemplate_DuoFight_Kyogre, 126, 96, 1);
-    gSprites[spriteId].callback = SpriteCB_DuoFight_Kyogre;
+    spriteId = CreateSprite(&sSpriteTemplate_DuoFight_CMiko, 126, 96, 1);
+    gSprites[spriteId].callback = SpriteCB_DuoFight_CMiko;
     data = gSprites[spriteId].data;
 
-    data[0] = CreateSprite(&sSpriteTemplate_DuoFight_Kyogre, 158, 96, 1) << 8;
-    data[0] |= CreateSprite(&sSpriteTemplate_DuoFight_Kyogre, 126, 112, 1);
-    data[1] = CreateSprite(&sSpriteTemplate_DuoFight_Kyogre, 158, 112, 1) << 8;
-    data[1] |= CreateSprite(&sSpriteTemplate_DuoFight_Kyogre, 126, 128, 1);
-    data[2] = CreateSprite(&sSpriteTemplate_DuoFight_Kyogre, 158, 128, 1) << 8;
-    data[2] |= CreateSprite(&sSpriteTemplate_DuoFight_Kyogre, 94, 128, 2);
-    data[3] = CreateSprite(&sSpriteTemplate_DuoFight_Kyogre, 126, 128, 2) << 8;
-    data[3] |= CreateSprite(&sSpriteTemplate_DuoFight_Kyogre, 174, 128, 0);
-    data[4] = CreateSprite(&sSpriteTemplate_DuoFight_KyogrePectoralFin, 198, 132, 0) << 8;
-    data[4] |= CreateSprite(&sSpriteTemplate_DuoFight_KyogreDorsalFin, 190, 120, 1);
+    data[0] = CreateSprite(&sSpriteTemplate_DuoFight_CMiko, 158, 96, 1) << 8;
+    data[0] |= CreateSprite(&sSpriteTemplate_DuoFight_CMiko, 126, 112, 1);
+    data[1] = CreateSprite(&sSpriteTemplate_DuoFight_CMiko, 158, 112, 1) << 8;
+    data[1] |= CreateSprite(&sSpriteTemplate_DuoFight_CMiko, 126, 128, 1);
+    data[2] = CreateSprite(&sSpriteTemplate_DuoFight_CMiko, 158, 128, 1) << 8;
+    data[2] |= CreateSprite(&sSpriteTemplate_DuoFight_CMiko, 94, 128, 2);
+    data[3] = CreateSprite(&sSpriteTemplate_DuoFight_CMiko, 126, 128, 2) << 8;
+    data[3] |= CreateSprite(&sSpriteTemplate_DuoFight_CMiko, 174, 128, 0);
+    data[4] = CreateSprite(&sSpriteTemplate_DuoFight_CMikoPectoralFin, 198, 132, 0) << 8;
+    data[4] |= CreateSprite(&sSpriteTemplate_DuoFight_CMikoDorsalFin, 190, 120, 1);
 
     StartSpriteAnim(&gSprites[data[0] >> 8], 1);
     StartSpriteAnim(&gSprites[data[0] & 0xFF], 2);
@@ -1901,7 +1901,7 @@ static u8 DuoFight_CreateKyogreSprites(void)
     return spriteId;
 }
 
-static void SpriteCB_DuoFight_Kyogre(struct Sprite *sprite)
+static void SpriteCB_DuoFight_CMiko(struct Sprite *sprite)
 {
     s16 *data = sprite->data;
     data[5]++;
@@ -1962,7 +1962,7 @@ static void SpriteCB_DuoFight_Kyogre(struct Sprite *sprite)
     }
 }
 
-static void DuoFight_SlideKyogreDown(struct Sprite *sprite)
+static void DuoFight_SlideCMikoDown(struct Sprite *sprite)
 {
     s16 *data = sprite->data;
     if (sprite->y <= DISPLAY_HEIGHT)
@@ -1983,12 +1983,12 @@ static void DuoFight_SlideKyogreDown(struct Sprite *sprite)
 
 #undef tTimer
 #undef tHelperTaskId
-#undef tGroudonSpriteId
-#undef tKyogreSpriteId
+#undef tMikoSpriteId
+#undef tCMikoSpriteId
 
-#undef sGroudonBodySpriteId
-#undef sGroudonShoulderSpriteId
-#undef sGroudonClawSpriteId
+#undef sMikoBodySpriteId
+#undef sMikoShoulderSpriteId
+#undef sMikoClawSpriteId
 
 
 // RAY_ANIM_TAKES_FLIGHT
@@ -2026,13 +2026,13 @@ static void LoadTakesFlightSceneGfx(void)
     ResetTempTileDataBuffers();
     DecompressAndCopyTileDataToVram(0, gRaySceneDuoFight_Clouds_Gfx, 0, 0, 0); // Re-uses clouds from previous scene
     DecompressAndCopyTileDataToVram(1, gRaySceneTakesFlight_Bg_Gfx, 0, 0, 0);
-    DecompressAndCopyTileDataToVram(2, gRaySceneTakesFlight_Rayquaza_Gfx, 0, 0, 0);
+    DecompressAndCopyTileDataToVram(2, gRaySceneTakesFlight_CMamizou_Gfx, 0, 0, 0);
     while (FreeTempTileDataBuffersIfPossible())
         ;
     LZDecompressWram(gRaySceneDuoFight_Clouds2_Tilemap, sRayScene->tilemapBuffers[0]);
     LZDecompressWram(gRaySceneTakesFlight_Bg_Tilemap, sRayScene->tilemapBuffers[1]);
-    LZDecompressWram(gRaySceneTakesFlight_Rayquaza_Tilemap, sRayScene->tilemapBuffers[2]);
-    LoadCompressedPalette(gRaySceneTakesFlight_Rayquaza_Pal, 0, 64);
+    LZDecompressWram(gRaySceneTakesFlight_CMamizou_Tilemap, sRayScene->tilemapBuffers[2]);
+    LoadCompressedPalette(gRaySceneTakesFlight_CMamizou_Pal, 0, 64);
     LoadCompressedSpriteSheet(&sSpriteSheet_TakesFlight_Smoke);
     LoadCompressedSpritePalette(&sSpritePal_TakesFlight_Smoke);
 }
@@ -2040,21 +2040,21 @@ static void LoadTakesFlightSceneGfx(void)
 static void Task_RayTakesFlightAnim(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    PlayNewMapMusic(MUS_RAYQUAZA_APPEARS);
+    PlayNewMapMusic(MUS_CMAMIZOU_APPEARS);
     InitTakesFlightSceneBgs();
     LoadTakesFlightSceneGfx();
     SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_OBJ | BLDCNT_TGT2_BG1 | BLDCNT_EFFECT_BLEND);
     SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(8, 8));
     BlendPalettes(PALETTES_ALL, 16, 0);
-    SetVBlankCallback(VBlankCB_RayquazaScene);
+    SetVBlankCallback(VBlankCB_CMamizouScene);
     CreateTask(Task_TakesFlight_CreateSmoke, 0);
     tState = 0;
     tTimer = 0;
     gTasks[taskId].func = Task_HandleRayTakesFlight;
 }
 
-// Animate Rayquaza (flying up and down, and changing size as it gets further from the screen)
-// In this scene Rayquaza is a bg tilemap on bg 2, not a sprite
+// Animate CMamizou (flying up and down, and changing size as it gets further from the screen)
+// In this scene CMamizou is a bg tilemap on bg 2, not a sprite
 static void Task_HandleRayTakesFlight(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -2241,9 +2241,9 @@ static void LoadDescendsSceneGfx(void)
     LoadCompressedPalette(gRaySceneDescends_Bg_Pal, 0, 0x40);
     gPlttBufferUnfaded[0] = RGB_WHITE;
     gPlttBufferFaded[0] = RGB_WHITE;
-    LoadCompressedSpriteSheet(&sSpriteSheet_Descends_Rayquaza);
-    LoadCompressedSpriteSheet(&sSpriteSheet_Descends_RayquazaTail);
-    LoadCompressedSpritePalette(&sSpritePal_Descends_Rayquaza);
+    LoadCompressedSpriteSheet(&sSpriteSheet_Descends_CMamizou);
+    LoadCompressedSpriteSheet(&sSpriteSheet_Descends_CMamizouTail);
+    LoadCompressedSpritePalette(&sSpritePal_Descends_CMamizou);
 }
 
 // Draw ray of light emerging from the clouds
@@ -2285,7 +2285,7 @@ static void Task_RayDescendsAnim(u8 taskId)
     SetGpuRegBits(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG0 | BLDCNT_TGT2_BG1 | BLDCNT_TGT2_BG2 | BLDCNT_TGT2_BG3 | BLDCNT_TGT2_OBJ | BLDCNT_EFFECT_BLEND);
     SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(0, 16));
     BlendPalettes(PALETTES_ALL, 0x10, 0);
-    SetVBlankCallback(VBlankCB_RayquazaScene);
+    SetVBlankCallback(VBlankCB_CMamizouScene);
     sRayScene->revealedLightLine = 0;
     sRayScene->revealedLightTimer = 0;
     tState = 0;
@@ -2332,12 +2332,12 @@ static void Task_HandleRayDescends(u8 taskId)
         }
         break;
     case 2:
-        // Delay, then start Rayquaza emerging from clouds
+        // Delay, then start CMamizou emerging from clouds
         if (tTimer == 80)
         {
             tTimer = 0;
             tState++;
-            CreateDescendsRayquazaSprite();
+            CreateDescendsCMamizouSprite();
         }
         else
         {
@@ -2345,7 +2345,7 @@ static void Task_HandleRayDescends(u8 taskId)
         }
         break;
     case 3:
-        // Wait while Rayquaza descends
+        // Wait while CMamizou descends
         if (++tTimer == 368)
         {
             tTimer = 0;
@@ -2377,23 +2377,23 @@ static void Task_RayDescendsEnd(u8 taskId)
 #define sXMovePeriod  data[3]
 #define sYMovePeriod  data[4]
 
-static u8 CreateDescendsRayquazaSprite(void)
+static u8 CreateDescendsCMamizouSprite(void)
 {
-    u8 spriteId = CreateSprite(&sSpriteTemplate_Descends_Rayquaza, 160, 0, 0);
+    u8 spriteId = CreateSprite(&sSpriteTemplate_Descends_CMamizou, 160, 0, 0);
     s16 *data = gSprites[spriteId].data;
-    sTailSpriteId = CreateSprite(&sSpriteTemplate_Descends_RayquazaTail, 184, -48, 0);
-    gSprites[spriteId].callback = SpriteCB_Descends_Rayquaza;
+    sTailSpriteId = CreateSprite(&sSpriteTemplate_Descends_CMamizouTail, 184, -48, 0);
+    gSprites[spriteId].callback = SpriteCB_Descends_CMamizou;
     gSprites[spriteId].oam.priority = 3;
     gSprites[sTailSpriteId].oam.priority = 3;
     return spriteId;
 }
 
-static void SpriteCB_Descends_Rayquaza(struct Sprite *sprite)
+static void SpriteCB_Descends_CMamizou(struct Sprite *sprite)
 {
     s16 *data = sprite->data;
     s16 frame = sTimer;
 
-    // Updates to Rayquaza's coords occur more frequently
+    // Updates to CMamizou's coords occur more frequently
     // as time goes on (it accelerates as it emerges)
     if (frame == 0)
     {
@@ -2478,13 +2478,13 @@ static void InitChargesSceneBgs(void)
 static void LoadChargesSceneGfx(void)
 {
     ResetTempTileDataBuffers();
-    DecompressAndCopyTileDataToVram(1, gRaySceneCharges_Rayquaza_Gfx, 0, 0, 0);
+    DecompressAndCopyTileDataToVram(1, gRaySceneCharges_CMamizou_Gfx, 0, 0, 0);
     DecompressAndCopyTileDataToVram(2, gRaySceneCharges_Streaks_Gfx, 0, 0, 0);
     DecompressAndCopyTileDataToVram(3, gRaySceneCharges_Bg_Gfx, 0, 0, 0);
     while (FreeTempTileDataBuffersIfPossible())
         ;
     LZDecompressWram(gRaySceneCharges_Orbs_Tilemap, sRayScene->tilemapBuffers[0]);
-    LZDecompressWram(gRaySceneCharges_Rayquaza_Tilemap, sRayScene->tilemapBuffers[1]);
+    LZDecompressWram(gRaySceneCharges_CMamizou_Tilemap, sRayScene->tilemapBuffers[1]);
     LZDecompressWram(gRaySceneCharges_Streaks_Tilemap, sRayScene->tilemapBuffers[2]);
     LZDecompressWram(gRaySceneCharges_Bg_Tilemap, sRayScene->tilemapBuffers[3]);
     LoadCompressedPalette(gRaySceneCharges_Bg_Pal, 0, 0x80);
@@ -2492,7 +2492,7 @@ static void LoadChargesSceneGfx(void)
 
 #define tState          data[0]
 #define tTimer          data[1]
-#define tRayquazaTaskId data[2]
+#define tCMamizouTaskId data[2]
 #define tSoundTimer     data[3]
 
 static void Task_RayChargesAnim(u8 taskId)
@@ -2502,10 +2502,10 @@ static void Task_RayChargesAnim(u8 taskId)
     LoadChargesSceneGfx();
     SetWindowsHideVertBorders();
     BlendPalettes(PALETTES_ALL, 0x10, 0);
-    SetVBlankCallback(VBlankCB_RayquazaScene);
+    SetVBlankCallback(VBlankCB_CMamizouScene);
     tState = 0;
     tTimer = 0;
-    tRayquazaTaskId = CreateTask(Task_RayCharges_ShakeRayquaza, 0);
+    tCMamizouTaskId = CreateTask(Task_RayCharges_ShakeCMamizou, 0);
     gTasks[taskId].func = Task_HandleRayCharges;
 }
 
@@ -2533,12 +2533,12 @@ static void Task_HandleRayCharges(u8 taskId)
         }
         break;
     case 1:
-        // Delay while Rayquaza shakes, then start Rayquaza moving offscreen
+        // Delay while CMamizou shakes, then start CMamizou moving offscreen
         if (tTimer == 127)
         {
             tTimer = 0;
             tState++;
-            gTasks[tRayquazaTaskId].func = Task_RayCharges_FlyOffscreen;
+            gTasks[tCMamizouTaskId].func = Task_RayCharges_FlyOffscreen;
         }
         else
         {
@@ -2546,7 +2546,7 @@ static void Task_HandleRayCharges(u8 taskId)
         }
         break;
     case 2:
-        // Delay for Rayquaza's flying animation
+        // Delay for CMamizou's flying animation
         if (tTimer == 12)
         {
             tTimer = 0;
@@ -2574,7 +2574,7 @@ static void Task_HandleRayCharges(u8 taskId)
 #define tShakeDir data[2]
 #define tTimer    data[15]
 
-static void Task_RayCharges_ShakeRayquaza(u8 taskId)
+static void Task_RayCharges_ShakeCMamizou(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
     if ((tTimer & 3) == 0)
@@ -2586,7 +2586,7 @@ static void Task_RayCharges_ShakeRayquaza(u8 taskId)
     tTimer++;
 }
 
-// Rayquaza backs up then launches forward
+// CMamizou backs up then launches forward
 static void Task_RayCharges_FlyOffscreen(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -2632,12 +2632,12 @@ static void Task_RayChargesEnd(u8 taskId)
     {
         SetVBlankCallback(NULL);
         ResetWindowDimensions();
-        DestroyTask(tRayquazaTaskId);
+        DestroyTask(tCMamizouTaskId);
         gTasks[taskId].func = Task_SetNextAnim;
     }
 }
 
-#undef tRayquazaTaskId
+#undef tCMamizouTaskId
 
 
 // RAY_ANIM_CHASES_AWAY
@@ -2672,16 +2672,16 @@ static void LoadChasesAwaySceneGfx(void)
     LZDecompressWram(gRaySceneChasesAway_Light_Tilemap, sRayScene->tilemapBuffers[0]);
     LZDecompressWram(gRaySceneChasesAway_Ring_Tilemap, sRayScene->tilemapBuffers[2]);
     LoadCompressedPalette(gRaySceneChasesAway_Bg_Pal, 0, 0x60);
-    LoadCompressedSpriteSheet(&sSpriteSheet_ChasesAway_Groudon);
-    LoadCompressedSpriteSheet(&sSpriteSheet_ChasesAway_GroudonTail);
-    LoadCompressedSpriteSheet(&sSpriteSheet_ChasesAway_Kyogre);
-    LoadCompressedSpriteSheet(&sSpriteSheet_ChasesAway_Rayquaza);
-    LoadCompressedSpriteSheet(&sSpriteSheet_ChasesAway_RayquazaTail);
-    LoadCompressedSpriteSheet(&sSpriteSheet_ChasesAway_KyogreSplash);
-    LoadCompressedSpritePalette(&sSpritePal_ChasesAway_Groudon);
-    LoadCompressedSpritePalette(&sSpritePal_ChasesAway_Kyogre);
-    LoadCompressedSpritePalette(&sSpritePal_ChasesAway_Rayquaza);
-    LoadCompressedSpritePalette(&sSpritePal_ChasesAway_KyogreSplash);
+    LoadCompressedSpriteSheet(&sSpriteSheet_ChasesAway_Miko);
+    LoadCompressedSpriteSheet(&sSpriteSheet_ChasesAway_MikoTail);
+    LoadCompressedSpriteSheet(&sSpriteSheet_ChasesAway_CMiko);
+    LoadCompressedSpriteSheet(&sSpriteSheet_ChasesAway_CMamizou);
+    LoadCompressedSpriteSheet(&sSpriteSheet_ChasesAway_CMamizouTail);
+    LoadCompressedSpriteSheet(&sSpriteSheet_ChasesAway_CMikoSplash);
+    LoadCompressedSpritePalette(&sSpritePal_ChasesAway_Miko);
+    LoadCompressedSpritePalette(&sSpritePal_ChasesAway_CMiko);
+    LoadCompressedSpritePalette(&sSpritePal_ChasesAway_CMamizou);
+    LoadCompressedSpritePalette(&sSpritePal_ChasesAway_CMikoSplash);
 }
 
 #define tState    data[0]
@@ -2698,7 +2698,7 @@ static void Task_RayChasesAwayAnim(u8 taskId)
     SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG0 | BLDCNT_TGT2_BG1 | BLDCNT_EFFECT_BLEND);
     SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(9, 14));
     BlendPalettes(PALETTES_ALL, 0x10, 0);
-    SetVBlankCallback(VBlankCB_RayquazaScene);
+    SetVBlankCallback(VBlankCB_CMamizouScene);
     tState = 0;
     tTimer = 0;
     gTasks[taskId].func = Task_HandleRayChasesAway;
@@ -2730,14 +2730,14 @@ static void Task_HandleRayChasesAway(u8 taskId)
         }
         break;
     case 1:
-        // Wait for Rayquaza to enter and finish shout anim
-        if (gSprites[data[5]].callback == SpriteCB_ChasesAway_RayquazaFloat)
+        // Wait for CMamizou to enter and finish shout anim
+        if (gSprites[data[5]].callback == SpriteCB_ChasesAway_CMamizouFloat)
         {
-            // Delay, then start Groudon/Kyogre leaving
+            // Delay, then start Miko/CMiko leaving
             if (tTimer == 64)
             {
-                ChasesAway_KyogreStartLeave(taskId);
-                ChasesAway_GroudonStartLeave(taskId);
+                ChasesAway_CMikoStartLeave(taskId);
+                ChasesAway_MikoStartLeave(taskId);
                 tTimer = 0;
                 tState++;
             }
@@ -2748,7 +2748,7 @@ static void Task_HandleRayChasesAway(u8 taskId)
         }
         break;
     case 2:
-        // Wait for Groudon/Kyogre to leave
+        // Wait for Miko/CMiko to leave
         if (tTimer == 448)
         {
             tTimer = 0;
@@ -2782,7 +2782,7 @@ static void Task_HandleRayChasesAway(u8 taskId)
 #define tBlendHiDir data[3]
 #define tBlendLoDir data[4]
 
-// Flickers the ray of light behind Rayquaza
+// Flickers the ray of light behind CMamizou
 static void Task_ChasesAway_AnimateBg(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -2838,9 +2838,9 @@ static void Task_RayChasesAwayEnd(u8 taskId)
 #undef tTimer
 #undef tBgTaskId
 
-#define tGroudonSpriteId  taskData[3]
-#define tKyogreSpriteId   taskData[4]
-#define tRayquazaSpriteId taskData[5]
+#define tMikoSpriteId  taskData[3]
+#define tCMikoSpriteId   taskData[4]
+#define tCMamizouSpriteId taskData[5]
 
 static void ChasesAway_CreateTrioSprites(u8 taskId)
 {
@@ -2848,26 +2848,26 @@ static void ChasesAway_CreateTrioSprites(u8 taskId)
 
     taskData = gTasks[taskId].data;
 
-    tGroudonSpriteId = CreateSprite(&sSpriteTemplate_ChasesAway_Groudon, 64, 120, 0);
-    spriteData = gSprites[tGroudonSpriteId].data;
-    spriteData[0] = CreateSprite(&sSpriteTemplate_ChasesAway_GroudonTail, 16, 130, 0);
-    gSprites[tGroudonSpriteId].oam.priority = 1;
+    tMikoSpriteId = CreateSprite(&sSpriteTemplate_ChasesAway_Miko, 64, 120, 0);
+    spriteData = gSprites[tMikoSpriteId].data;
+    spriteData[0] = CreateSprite(&sSpriteTemplate_ChasesAway_MikoTail, 16, 130, 0);
+    gSprites[tMikoSpriteId].oam.priority = 1;
     gSprites[spriteData[0]].oam.priority = 1;
 
-    tKyogreSpriteId = CreateSprite(&sSpriteTemplate_ChasesAway_Kyogre, 160, 128, 1);
-    spriteData = gSprites[tKyogreSpriteId].data;
-    spriteData[0] = CreateSprite(&sSpriteTemplate_ChasesAway_Kyogre, 192, 128, 1);
-    spriteData[1] = CreateSprite(&sSpriteTemplate_ChasesAway_Kyogre, 224, 128, 1);
-    gSprites[tKyogreSpriteId].oam.priority = 1;
+    tCMikoSpriteId = CreateSprite(&sSpriteTemplate_ChasesAway_CMiko, 160, 128, 1);
+    spriteData = gSprites[tCMikoSpriteId].data;
+    spriteData[0] = CreateSprite(&sSpriteTemplate_ChasesAway_CMiko, 192, 128, 1);
+    spriteData[1] = CreateSprite(&sSpriteTemplate_ChasesAway_CMiko, 224, 128, 1);
+    gSprites[tCMikoSpriteId].oam.priority = 1;
     gSprites[spriteData[0]].oam.priority = 1;
     gSprites[spriteData[1]].oam.priority = 1;
     StartSpriteAnim(&gSprites[spriteData[0]], 1);
     StartSpriteAnim(&gSprites[spriteData[1]], 2);
 
-    tRayquazaSpriteId = CreateSprite(&sSpriteTemplate_ChasesAway_Rayquaza, 120, -65, 0);
-    spriteData = gSprites[tRayquazaSpriteId].data;
-    spriteData[0] = CreateSprite(&sSpriteTemplate_ChasesAway_RayquazaTail, 120, -113, 0);
-    gSprites[tRayquazaSpriteId].oam.priority = 1;
+    tCMamizouSpriteId = CreateSprite(&sSpriteTemplate_ChasesAway_CMamizou, 120, -65, 0);
+    spriteData = gSprites[tCMamizouSpriteId].data;
+    spriteData[0] = CreateSprite(&sSpriteTemplate_ChasesAway_CMamizouTail, 120, -113, 0);
+    gSprites[tCMamizouSpriteId].oam.priority = 1;
     gSprites[spriteData[0]].oam.priority = 1;
 }
 
@@ -2876,31 +2876,31 @@ static void ChasesAway_CreateTrioSprites(u8 taskId)
 #define sTimer             data[4]
 #define sDecel             data[5]
 #define sSpeed             data[6]
-#define sIsKyogre          data[7]
+#define sIsCMiko          data[7]
 
 static void ChasesAway_PushDuoBack(u8 taskId)
 {
     s16 *taskData = gTasks[taskId].data;
 
-    gSprites[tGroudonSpriteId].callback = SpriteCB_ChasesAway_DuoRingPush;
-    gSprites[tGroudonSpriteId].sTimer = 0;
-    gSprites[tGroudonSpriteId].sDecel = 0;
-    gSprites[tGroudonSpriteId].sSpeed = 4;
-    gSprites[tGroudonSpriteId].sIsKyogre = FALSE;
+    gSprites[tMikoSpriteId].callback = SpriteCB_ChasesAway_DuoRingPush;
+    gSprites[tMikoSpriteId].sTimer = 0;
+    gSprites[tMikoSpriteId].sDecel = 0;
+    gSprites[tMikoSpriteId].sSpeed = 4;
+    gSprites[tMikoSpriteId].sIsCMiko = FALSE;
 
-    gSprites[tKyogreSpriteId].callback = SpriteCB_ChasesAway_DuoRingPush;
-    gSprites[tKyogreSpriteId].sTimer = 0;
-    gSprites[tKyogreSpriteId].sDecel = 0;
-    gSprites[tKyogreSpriteId].sSpeed = 4;
-    gSprites[tKyogreSpriteId].sIsKyogre = TRUE;
+    gSprites[tCMikoSpriteId].callback = SpriteCB_ChasesAway_DuoRingPush;
+    gSprites[tCMikoSpriteId].sTimer = 0;
+    gSprites[tCMikoSpriteId].sDecel = 0;
+    gSprites[tCMikoSpriteId].sSpeed = 4;
+    gSprites[tCMikoSpriteId].sIsCMiko = TRUE;
 }
 
-// Pushes Groudon/Kyogre back slightly, for when Rayquaza's hyper voice ring comes out
+// Pushes Miko/CMiko back slightly, for when CMamizou's hyper voice ring comes out
 static void SpriteCB_ChasesAway_DuoRingPush(struct Sprite *sprite)
 {
     if ((sprite->sTimer & 7) == 0)
     {
-        if (!sprite->sIsKyogre)
+        if (!sprite->sIsCMiko)
         {
             sprite->x -= sprite->sSpeed;
             gSprites[sprite->sBodyPartSpriteId1].x -= sprite->sSpeed;
@@ -2932,16 +2932,16 @@ static void SpriteCB_ChasesAway_DuoRingPush(struct Sprite *sprite)
 #undef sTimer
 #undef sDecel
 #undef sSpeed
-#undef sIsKyogre
+#undef sIsCMiko
 
-static void ChasesAway_GroudonStartLeave(u8 taskId)
+static void ChasesAway_MikoStartLeave(u8 taskId)
 {
     s16 *taskData = gTasks[taskId].data;
-    gSprites[tGroudonSpriteId].callback = SpriteCB_ChasesAway_GroudonLeave;
-    StartSpriteAnim(&gSprites[tGroudonSpriteId], 1);
+    gSprites[tMikoSpriteId].callback = SpriteCB_ChasesAway_MikoLeave;
+    StartSpriteAnim(&gSprites[tMikoSpriteId], 1);
 }
 
-static void SpriteCB_ChasesAway_GroudonLeave(struct Sprite *sprite)
+static void SpriteCB_ChasesAway_MikoLeave(struct Sprite *sprite)
 {
     switch (sprite->animCmdIndex)
     {
@@ -2966,19 +2966,19 @@ static void SpriteCB_ChasesAway_GroudonLeave(struct Sprite *sprite)
     }
 }
 
-static void ChasesAway_KyogreStartLeave(u8 taskId)
+static void ChasesAway_CMikoStartLeave(u8 taskId)
 {
     s16 *taskData, *spriteData;
 
     taskData = gTasks[taskId].data;
-    spriteData = gSprites[tKyogreSpriteId].data;
+    spriteData = gSprites[tCMikoSpriteId].data;
 
-    gSprites[tKyogreSpriteId].callback = SpriteCB_ChasesAway_KyogreLeave;
-    gSprites[spriteData[0]].callback = SpriteCB_ChasesAway_KyogreLeave;
-    gSprites[spriteData[1]].callback = SpriteCB_ChasesAway_KyogreLeave;
+    gSprites[tCMikoSpriteId].callback = SpriteCB_ChasesAway_CMikoLeave;
+    gSprites[spriteData[0]].callback = SpriteCB_ChasesAway_CMikoLeave;
+    gSprites[spriteData[1]].callback = SpriteCB_ChasesAway_CMikoLeave;
 }
 
-static void SpriteCB_ChasesAway_KyogreLeave(struct Sprite *sprite)
+static void SpriteCB_ChasesAway_CMikoLeave(struct Sprite *sprite)
 {
     if ((sprite->data[4] & 3) == 0)
     {
@@ -2989,9 +2989,9 @@ static void SpriteCB_ChasesAway_KyogreLeave(struct Sprite *sprite)
     }
     if (sprite->data[5] == 128)
     {
-        sprite->data[7] = CreateSprite(&sSpriteTemplate_ChasesAway_KyogreSplash, 152, 132, 0);
+        sprite->data[7] = CreateSprite(&sSpriteTemplate_ChasesAway_CMikoSplash, 152, 132, 0);
         gSprites[sprite->data[7]].oam.priority = 1;
-        sprite->data[7] = CreateSprite(&sSpriteTemplate_ChasesAway_KyogreSplash, 224, 132, 0);
+        sprite->data[7] = CreateSprite(&sSpriteTemplate_ChasesAway_CMikoSplash, 224, 132, 0);
         gSprites[sprite->data[7]].oam.priority = 1;
         gSprites[sprite->data[7]].hFlip = 1;
         sprite->data[5]++;
@@ -3024,7 +3024,7 @@ static void SpriteCB_ChasesAway_KyogreLeave(struct Sprite *sprite)
 #define sTailFloatDelay  data[4]
 #define sTailFloatPeak   data[5]
 
-static void SpriteCB_ChasesAway_Rayquaza(struct Sprite *sprite)
+static void SpriteCB_ChasesAway_CMamizou(struct Sprite *sprite)
 {
     s16 frame = sprite->sTimer;
     if (frame <= 64)
@@ -3033,7 +3033,7 @@ static void SpriteCB_ChasesAway_Rayquaza(struct Sprite *sprite)
         gSprites[sprite->sTailSpriteId].y2 += 2;
         if (sprite->sTimer == 64)
         {
-            ChasesAway_SetRayquazaAnim(sprite, 1, 0, -48);
+            ChasesAway_SetCMamizouAnim(sprite, 1, 0, -48);
             sprite->sYOffset = 5;
             sprite->sYOffsetDir = -1;
             gSprites[sprite->sTailSpriteId].sTailFloatDelay = 3;
@@ -3042,29 +3042,29 @@ static void SpriteCB_ChasesAway_Rayquaza(struct Sprite *sprite)
     }
     else if (frame <= 111)
     {
-        SpriteCB_ChasesAway_RayquazaFloat(sprite);
+        SpriteCB_ChasesAway_CMamizouFloat(sprite);
         if (sprite->sYOffset == 0)
             PlaySE(SE_MUGSHOT);
         if (sprite->sYOffset == -3)
-            ChasesAway_SetRayquazaAnim(sprite, 2, 48, 16);
+            ChasesAway_SetCMamizouAnim(sprite, 2, 48, 16);
     }
     else if (frame == 112)
     {
         gSprites[sprite->sTailSpriteId].sTailFloatDelay = 7;
         gSprites[sprite->sTailSpriteId].sTailFloatPeak = 3;
-        SpriteCB_ChasesAway_RayquazaFloat(sprite);
+        SpriteCB_ChasesAway_CMamizouFloat(sprite);
     }
     else if (frame <= 327)
     {
-        SpriteCB_ChasesAway_RayquazaFloat(sprite);
+        SpriteCB_ChasesAway_CMamizouFloat(sprite);
     }
     else if (frame == 328)
     {
-        SpriteCB_ChasesAway_RayquazaFloat(sprite);
-        ChasesAway_SetRayquazaAnim(sprite, 3, 48, 16);
+        SpriteCB_ChasesAway_CMamizouFloat(sprite);
+        ChasesAway_SetCMamizouAnim(sprite, 3, 48, 16);
         sprite->x2 = 1;
         gSprites[sprite->sTailSpriteId].x2 = 1;
-        PlayCry_Normal(SPECIES_RAYQUAZA, 0);
+        PlayCry_Normal(SPECIES_CMAMIZOU, 0);
         CreateTask(Task_ChasesAway_AnimateRing, 0);
     }
     else
@@ -3074,9 +3074,9 @@ static void SpriteCB_ChasesAway_Rayquaza(struct Sprite *sprite)
         case 376:
             sprite->x2 = 0;
             gSprites[sprite->sTailSpriteId].x2 = 0;
-            SpriteCB_ChasesAway_RayquazaFloat(sprite);
-            ChasesAway_SetRayquazaAnim(sprite, 2, 48, 16);
-            sprite->callback = SpriteCB_ChasesAway_RayquazaFloat;
+            SpriteCB_ChasesAway_CMamizouFloat(sprite);
+            ChasesAway_SetCMamizouAnim(sprite, 2, 48, 16);
+            sprite->callback = SpriteCB_ChasesAway_CMamizouFloat;
             return;
         case 352:
             ChasesAway_PushDuoBack(FindTaskIdByFunc(Task_HandleRayChasesAway));
@@ -3093,7 +3093,7 @@ static void SpriteCB_ChasesAway_Rayquaza(struct Sprite *sprite)
     sprite->sTimer++;
 }
 
-static void SpriteCB_ChasesAway_RayquazaFloat(struct Sprite *body)
+static void SpriteCB_ChasesAway_CMamizouFloat(struct Sprite *body)
 {
     struct Sprite *tail = &gSprites[body->sTailSpriteId];
     if (!(body->sFloatTimer & tail->sTailFloatDelay))
@@ -3115,7 +3115,7 @@ static void SpriteCB_ChasesAway_RayquazaFloat(struct Sprite *body)
     body->sFloatTimer++;
 }
 
-static void ChasesAway_SetRayquazaAnim(struct Sprite *body, u8 animNum, s16 x, s16 y)
+static void ChasesAway_SetCMamizouAnim(struct Sprite *body, u8 animNum, s16 x, s16 y)
 {
     struct Sprite *tail = &gSprites[body->sTailSpriteId];
 

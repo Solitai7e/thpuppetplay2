@@ -56,7 +56,7 @@
 #define BATTLE_TYPE_WALLY_TUTORIAL     (1 << 9)
 #define BATTLE_TYPE_ROAMER             (1 << 10)
 #define BATTLE_TYPE_EREADER_TRAINER    (1 << 11)
-#define BATTLE_TYPE_KYOGRE_GROUDON     (1 << 12)
+#define BATTLE_TYPE_CMIKO_MIKO     (1 << 12)
 #define BATTLE_TYPE_LEGENDARY          (1 << 13)
 #define BATTLE_TYPE_REGI               (1 << 14)
 #define BATTLE_TYPE_TWO_OPPONENTS      (1 << 15)
@@ -72,9 +72,9 @@
 #define BATTLE_TYPE_RECORDED_LINK      (1 << 25)
 #define BATTLE_TYPE_TRAINER_HILL       (1 << 26)
 #define BATTLE_TYPE_SECRET_BASE        (1 << 27)
-#define BATTLE_TYPE_GROUDON            (1 << 28)
-#define BATTLE_TYPE_KYOGRE             (1 << 29)
-#define BATTLE_TYPE_RAYQUAZA           (1 << 30)
+#define BATTLE_TYPE_MIKO            (1 << 28)
+#define BATTLE_TYPE_CMIKO             (1 << 29)
+#define BATTLE_TYPE_CMAMIZOU           (1 << 30)
 #define BATTLE_TYPE_RECORDED_IS_MASTER (1 << 31)
 #define BATTLE_TYPE_FRONTIER                (BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_DOME | BATTLE_TYPE_PALACE | BATTLE_TYPE_ARENA | BATTLE_TYPE_FACTORY | BATTLE_TYPE_PIKE | BATTLE_TYPE_PYRAMID)
 #define BATTLE_TYPE_FRONTIER_NO_PYRAMID     (BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_DOME | BATTLE_TYPE_PALACE | BATTLE_TYPE_ARENA | BATTLE_TYPE_FACTORY | BATTLE_TYPE_PIKE)
@@ -306,12 +306,12 @@
 #define B_WAIT_TIME_MED   48
 #define B_WAIT_TIME_SHORT 32
 
-#define CASTFORM_NORMAL     0
-#define CASTFORM_FIRE       1
-#define CASTFORM_WATER      2
-#define CASTFORM_ICE        3
-#define NUM_CASTFORM_FORMS  4
-#define CASTFORM_SUBSTITUTE (1 << 7)
+#define TSANAE_NORMAL     0
+#define TSANAE_FIRE       1
+#define TSANAE_WATER      2
+#define TSANAE_ICE        3
+#define NUM_TSANAE_FORMS  4
+#define TSANAE_SUBSTITUTE (1 << 7)
 
 #define FLEE_ITEM    1
 #define FLEE_ABILITY 2

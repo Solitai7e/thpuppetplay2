@@ -57,7 +57,7 @@ $(MID_SUBDIR)/mus_vs_gym_leader.s: %.s: %.mid
 $(MID_SUBDIR)/mus_vs_champion.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G121 -V080 -P1
 
-$(MID_SUBDIR)/mus_vs_kyogre_groudon.s: %.s: %.mid
+$(MID_SUBDIR)/mus_vs_cmiko_miko.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G123 -V080 -P1
 
 $(MID_SUBDIR)/mus_vs_rival.s: %.s: %.mid
@@ -189,7 +189,7 @@ $(MID_SUBDIR)/mus_route119.s: %.s: %.mid
 $(MID_SUBDIR)/mus_encounter_intense.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G062 -V078
 
-$(MID_SUBDIR)/mus_weather_groudon.s: %.s: %.mid
+$(MID_SUBDIR)/mus_weather_miko.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G090 -V050
 
 $(MID_SUBDIR)/mus_dewford.s: %.s: %.mid
@@ -333,7 +333,7 @@ $(MID_SUBDIR)/mus_b_pyramid_top.s: %.s: %.mid
 $(MID_SUBDIR)/mus_ever_grande.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G068 -V086
 
-$(MID_SUBDIR)/mus_rayquaza_appears.s: %.s: %.mid
+$(MID_SUBDIR)/mus_cmamizou_appears.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G109 -V090
 
 $(MID_SUBDIR)/mus_rg_rocket_hideout.s: %.s: %.mid
@@ -354,7 +354,7 @@ $(MID_SUBDIR)/mus_rg_intro_fight.s: %.s: %.mid
 $(MID_SUBDIR)/mus_rg_hall_of_fame.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G145 -V079
 
-$(MID_SUBDIR)/mus_rg_encounter_deoxys.s: %.s: %.mid
+$(MID_SUBDIR)/mus_rg_encounter_gomaseki.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G184 -V079
 
 $(MID_SUBDIR)/mus_rg_credits.s: %.s: %.mid
@@ -465,7 +465,7 @@ $(MID_SUBDIR)/mus_rg_poke_flute.s: %.s: %.mid
 $(MID_SUBDIR)/mus_rg_poke_mansion.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G148 -V090
 
-$(MID_SUBDIR)/mus_rg_jigglypuff.s: %.s: %.mid
+$(MID_SUBDIR)/mus_rg_cmystia.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G135 -V068 -P5
 
 $(MID_SUBDIR)/mus_rg_encounter_rival.s: %.s: %.mid
@@ -531,7 +531,7 @@ $(MID_SUBDIR)/mus_rg_union_room.s: %.s: %.mid
 $(MID_SUBDIR)/mus_rg_vs_legend.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G157 -V090
 
-$(MID_SUBDIR)/mus_rg_vs_deoxys.s: %.s: %.mid
+$(MID_SUBDIR)/mus_rg_vs_gomaseki.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G185 -V080
 
 $(MID_SUBDIR)/mus_rg_vs_gym_leader.s: %.s: %.mid
@@ -540,7 +540,7 @@ $(MID_SUBDIR)/mus_rg_vs_gym_leader.s: %.s: %.mid
 $(MID_SUBDIR)/mus_rg_vs_champion.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G158 -V090
 
-$(MID_SUBDIR)/mus_rg_vs_mewtwo.s: %.s: %.mid
+$(MID_SUBDIR)/mus_rg_vs_sariel.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G157 -V090
 
 $(MID_SUBDIR)/mus_rg_vs_trainer.s: %.s: %.mid
@@ -624,10 +624,10 @@ $(MID_SUBDIR)/mus_follow_me.s: %.s: %.mid
 $(MID_SUBDIR)/mus_vs_frontier_brain.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G115 -V090 -P1
 
-$(MID_SUBDIR)/mus_vs_mew.s: %.s: %.mid
+$(MID_SUBDIR)/mus_vs_akyuu.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G116 -V090
 
-$(MID_SUBDIR)/mus_vs_rayquaza.s: %.s: %.mid
+$(MID_SUBDIR)/mus_vs_cmamizou.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G114 -V080 -P1
 
 $(MID_SUBDIR)/mus_encounter_hiker.s: %.s: %.mid
@@ -792,7 +792,7 @@ $(MID_SUBDIR)/se_a.s: %.s: %.mid
 $(MID_SUBDIR)/se_bang.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
-$(MID_SUBDIR)/se_taillow_wing_flap.s: %.s: %.mid
+$(MID_SUBDIR)/se_tshou_wing_flap.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V105 -P5
 
 $(MID_SUBDIR)/se_glass_flute.s: %.s: %.mid
@@ -1023,7 +1023,7 @@ $(MID_SUBDIR)/se_rg_card_flipping.s: %.s: %.mid
 $(MID_SUBDIR)/se_rg_card_open.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G129 -V112 -P5
 
-$(MID_SUBDIR)/se_rg_deoxys_move.s: %.s: %.mid
+$(MID_SUBDIR)/se_rg_gomaseki_move.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G129 -V080 -P5
 
 $(MID_SUBDIR)/se_rg_poke_jump_success.s: %.s: %.mid
@@ -1185,7 +1185,7 @@ $(MID_SUBDIR)/se_repel.s: %.s: %.mid
 $(MID_SUBDIR)/se_u.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -P4
 
-$(MID_SUBDIR)/se_sudowoodo_shake.s: %.s: %.mid
+$(MID_SUBDIR)/se_yumeko_shake.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G129 -V077 -P5
 
 $(MID_SUBDIR)/se_m_double_slap.s: %.s: %.mid
