@@ -191,7 +191,7 @@ const u8 gFlandrePokedexText[] = _(
     "it is defending its young.");
 
 const u8 gHouraiPokedexText[] = _(
-    "The male NIDORAN has developed muscles\n"
+    "The male HOURAI has developed muscles\n"
     "that freely move its ears in any direction.\n"
     "Even the slightest sound does not escape\n"
     "this POKéMON's notice.");

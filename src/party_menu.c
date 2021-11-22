@@ -187,7 +187,7 @@ static bool8 DisplayPartyPokemonDataForMoveTutorOrEvolutionItem(u8);
 static void DisplayPartyPokemonData(u8);
 static void DisplayPartyPokemonNickname(struct Pokemon *, struct PartyMenuBox *, u8);
 static void DisplayPartyPokemonLevelCheck(struct Pokemon *, struct PartyMenuBox *, u8);
-static void DisplayPartyPokemonGenderNidoranCheck(struct Pokemon *, struct PartyMenuBox *, u8);
+static void DisplayPartyPokemonGenderHouraiCheck(struct Pokemon *, struct PartyMenuBox *, u8);
 static void DisplayPartyPokemonHPCheck(struct Pokemon *, struct PartyMenuBox *, u8);
 static void DisplayPartyPokemonMaxHPCheck(struct Pokemon *, struct PartyMenuBox *, u8);
 static void DisplayPartyPokemonHPBarCheck(struct Pokemon *, struct PartyMenuBox *);
@@ -805,7 +805,7 @@ static void DisplayPartyPokemonData(u8 slot)
         sPartyMenuBoxes[slot].infoRects->blitFunc(sPartyMenuBoxes[slot].windowId, 0, 0, 0, 0, FALSE);
         DisplayPartyPokemonNickname(&gPlayerParty[slot], &sPartyMenuBoxes[slot], 0);
         DisplayPartyPokemonLevelCheck(&gPlayerParty[slot], &sPartyMenuBoxes[slot], 0);
-        DisplayPartyPokemonGenderNidoranCheck(&gPlayerParty[slot], &sPartyMenuBoxes[slot], 0);
+        DisplayPartyPokemonGenderHouraiCheck(&gPlayerParty[slot], &sPartyMenuBoxes[slot], 0);
         DisplayPartyPokemonHPCheck(&gPlayerParty[slot], &sPartyMenuBoxes[slot], 0);
         DisplayPartyPokemonMaxHPCheck(&gPlayerParty[slot], &sPartyMenuBoxes[slot], 0);
         DisplayPartyPokemonHPBarCheck(&gPlayerParty[slot], &sPartyMenuBoxes[slot]);
@@ -821,7 +821,7 @@ static void DisplayPartyPokemonDescriptionData(u8 slot, u8 stringID)
     if (!GetMonData(mon, MON_DATA_IS_EGG))
     {
         DisplayPartyPokemonLevelCheck(mon, &sPartyMenuBoxes[slot], 0);
-        DisplayPartyPokemonGenderNidoranCheck(mon, &sPartyMenuBoxes[slot], 0);
+        DisplayPartyPokemonGenderHouraiCheck(mon, &sPartyMenuBoxes[slot], 0);
     }
     DisplayPartyPokemonDescriptionText(stringID, &sPartyMenuBoxes[slot], 0);
 }
@@ -2244,7 +2244,7 @@ static void DisplayPartyPokemonLevel(u8 level, struct PartyMenuBox *menuBox)
     DisplayPartyPokemonBarDetail(menuBox->windowId, gStringVar1, 0, &menuBox->infoRects->dimensions[4]);
 }
 
-static void DisplayPartyPokemonGenderNidoranCheck(struct Pokemon *mon, struct PartyMenuBox *menuBox, u8 c)
+static void DisplayPartyPokemonGenderHouraiCheck(struct Pokemon *mon, struct PartyMenuBox *menuBox, u8 c)
 {
     u8 nickname[POKEMON_NAME_LENGTH + 1];
 
