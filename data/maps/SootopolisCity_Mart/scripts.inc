@@ -31,7 +31,7 @@ SootopolisCity_Mart_EventScript_FatMan::
 	faceplayer
 	compare VAR_SKY_PILLAR_STATE, 2
 	goto_if_ge SootopolisCity_Mart_EventScript_FatManNoLegendaries
-	goto_if_unset FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN, SootopolisCity_Mart_EventScript_FatManNoLegendaries
+	goto_if_unset FLAG_CMIKO_ESCAPED_SEAFLOOR_CAVERN, SootopolisCity_Mart_EventScript_FatManNoLegendaries
 	msgbox SootopolisCity_Mart_Text_TooScaryOutside, MSGBOX_DEFAULT
 	release
 	end
@@ -46,7 +46,7 @@ SootopolisCity_Mart_EventScript_Gentleman::
 	faceplayer
 	compare VAR_SKY_PILLAR_STATE, 2
 	goto_if_ge SootopolisCity_Mart_EventScript_GentlemanNoLegendaries
-	goto_if_unset FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN, SootopolisCity_Mart_EventScript_GentlemanNoLegendaries
+	goto_if_unset FLAG_CMIKO_ESCAPED_SEAFLOOR_CAVERN, SootopolisCity_Mart_EventScript_GentlemanNoLegendaries
 	msgbox SootopolisCity_Mart_Text_DidSomethingAwaken, MSGBOX_DEFAULT
 	release
 	end

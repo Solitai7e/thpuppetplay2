@@ -85,55 +85,55 @@ Route119_WeatherInstitute_2F_EventScript_ShellyDefeated::
 	applymovement LOCALID_SCIENTIST, Route119_WeatherInstitute_2F_Movement_ScientistApproachPlayer
 	waitmovement 0
 	copyobjectxytoperm LOCALID_SCIENTIST
-	goto Route119_WeatherInstitute_2F_EventScript_ReceiveCastform
+	goto Route119_WeatherInstitute_2F_EventScript_ReceiveTSanae
 	end
 
-Route119_WeatherInstitute_2F_EventScript_ReceiveCastform::
+Route119_WeatherInstitute_2F_EventScript_ReceiveTSanae::
 	msgbox Route119_WeatherInstitute_2F_Text_ThanksPleaseTakePokemon, MSGBOX_DEFAULT
-	setvar VAR_TEMP_1, SPECIES_CASTFORM
-	givemon SPECIES_CASTFORM, 25, ITEM_MYSTIC_WATER
+	setvar VAR_TEMP_1, SPECIES_TSANAE
+	givemon SPECIES_TSANAE, 25, ITEM_MYSTIC_WATER
 	compare VAR_RESULT, 0
-	goto_if_eq Route119_WeatherInstitute_2F_EventScript_ReceiveCastformParty
+	goto_if_eq Route119_WeatherInstitute_2F_EventScript_ReceiveTSanaeParty
 	compare VAR_RESULT, 1
-	goto_if_eq Route119_WeatherInstitute_2F_EventScript_ReceiveCastformPC
+	goto_if_eq Route119_WeatherInstitute_2F_EventScript_ReceiveTSanaePC
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
-Route119_WeatherInstitute_2F_EventScript_ReceiveCastformParty::
-	call Route119_WeatherInstitute_2F_EventScript_ReceivedCastformFanfare
+Route119_WeatherInstitute_2F_EventScript_ReceiveTSanaeParty::
+	call Route119_WeatherInstitute_2F_EventScript_ReceivedTSanaeFanfare
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq Route119_WeatherInstitute_2F_EventScript_ExplainCastform
+	goto_if_eq Route119_WeatherInstitute_2F_EventScript_ExplainTSanae
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	goto Route119_WeatherInstitute_2F_EventScript_ExplainCastform
+	goto Route119_WeatherInstitute_2F_EventScript_ExplainTSanae
 	end
 
-Route119_WeatherInstitute_2F_EventScript_ReceiveCastformPC::
-	call Route119_WeatherInstitute_2F_EventScript_ReceivedCastformFanfare
+Route119_WeatherInstitute_2F_EventScript_ReceiveTSanaePC::
+	call Route119_WeatherInstitute_2F_EventScript_ReceivedTSanaeFanfare
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, NO
-	goto_if_eq Route119_WeatherInstitute_2F_EventScript_SendCastformToPC
+	goto_if_eq Route119_WeatherInstitute_2F_EventScript_SendTSanaeToPC
 	call Common_EventScript_NameReceivedBoxMon
-	goto Route119_WeatherInstitute_2F_EventScript_SendCastformToPC
+	goto Route119_WeatherInstitute_2F_EventScript_SendTSanaeToPC
 	end
 
-Route119_WeatherInstitute_2F_EventScript_SendCastformToPC::
+Route119_WeatherInstitute_2F_EventScript_SendTSanaeToPC::
 	call Common_EventScript_TransferredToPC
-	goto Route119_WeatherInstitute_2F_EventScript_ExplainCastform
+	goto Route119_WeatherInstitute_2F_EventScript_ExplainTSanae
 	end
 
-Route119_WeatherInstitute_2F_EventScript_ReceivedCastformFanfare::
+Route119_WeatherInstitute_2F_EventScript_ReceivedTSanaeFanfare::
 	playfanfare MUS_OBTAIN_ITEM
-	message Route119_WeatherInstitute_2F_Text_PlayerReceivedCastform
+	message Route119_WeatherInstitute_2F_Text_PlayerReceivedTSanae
 	waitmessage
 	waitfanfare
-	bufferspeciesname 0, SPECIES_CASTFORM
+	bufferspeciesname 0, SPECIES_TSANAE
 	return
 
-Route119_WeatherInstitute_2F_EventScript_ExplainCastform::
+Route119_WeatherInstitute_2F_EventScript_ExplainTSanae::
 	msgbox Route119_WeatherInstitute_2F_Text_PokemonChangesWithWeather, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_CASTFORM
+	setflag FLAG_RECEIVED_TSANAE
 	release
 	end
 
@@ -145,20 +145,20 @@ Route119_WeatherInstitute_2F_EventScript_ScientistMentionWeather::
 
 Route119_WeatherInstitute_2F_EventScript_TryStartAbnormalWeather::
 	setvar VAR_0x8004, 0
-	call_if_set FLAG_DEFEATED_KYOGRE, Route119_WeatherInstitute_2F_EventScript_LegendaryDefeated
-	call_if_set FLAG_DEFEATED_GROUDON, Route119_WeatherInstitute_2F_EventScript_LegendaryDefeated
+	call_if_set FLAG_DEFEATED_CMIKO, Route119_WeatherInstitute_2F_EventScript_LegendaryDefeated
+	call_if_set FLAG_DEFEATED_MIKO, Route119_WeatherInstitute_2F_EventScript_LegendaryDefeated
 	compare VAR_0x8004, 2  @ Both defeated
 	goto_if_eq Route119_WeatherInstitute_2F_EventScript_NoAbnormalWeather
 	call_if_unset FLAG_TEMP_2, Route119_WeatherInstitute_2F_EventScript_CreateAbnormalWeather
 	specialvar VAR_RESULT, GetAbnormalWeatherMapNameAndType
 	compare VAR_RESULT, 1
-	goto_if_eq Route119_WeatherInstitute_2F_EventScript_KyogreWeather
-	msgbox Route119_WeatherInstitute_2F_Text_GroudonWeather, MSGBOX_DEFAULT
+	goto_if_eq Route119_WeatherInstitute_2F_EventScript_CMikoWeather
+	msgbox Route119_WeatherInstitute_2F_Text_MikoWeather, MSGBOX_DEFAULT
 	release
 	end
 
-Route119_WeatherInstitute_2F_EventScript_KyogreWeather::
-	msgbox Route119_WeatherInstitute_2F_Text_KyogreWeather, MSGBOX_DEFAULT
+Route119_WeatherInstitute_2F_EventScript_CMikoWeather::
+	msgbox Route119_WeatherInstitute_2F_Text_CMikoWeather, MSGBOX_DEFAULT
 	release
 	end
 
@@ -214,8 +214,8 @@ Route119_WeatherInstitute_2F_Movement_ScientistApproachPlayer:
 Route119_WeatherInstitute_2F_EventScript_WeatherScientist::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_CASTFORM, Route119_WeatherInstitute_2F_EventScript_ScientistMentionWeather
-	goto Route119_WeatherInstitute_2F_EventScript_ReceiveCastform
+	goto_if_set FLAG_RECEIVED_TSANAE, Route119_WeatherInstitute_2F_EventScript_ScientistMentionWeather
+	goto Route119_WeatherInstitute_2F_EventScript_ReceiveTSanae
 	end
 
 Route119_WeatherInstitute_2F_Text_Grunt2Intro:
@@ -303,8 +303,8 @@ Route119_WeatherInstitute_2F_Text_NoRoomForPokemon:
 	.string "Hm? You don't seem to have any room\n"
 	.string "for this POKéMON.$"
 
-Route119_WeatherInstitute_2F_Text_PlayerReceivedCastform:
-	.string "{PLAYER} received CASTFORM!$"
+Route119_WeatherInstitute_2F_Text_PlayerReceivedTSanae:
+	.string "{PLAYER} received TSANAE!$"
 
 Route119_WeatherInstitute_2F_Text_PokemonChangesWithWeather:
 	.string "That POKéMON changes shape according\n"
@@ -317,7 +317,7 @@ Route119_WeatherInstitute_2F_Text_ChangingWeatherRidiculous:
 	.string "years, but it's ridiculous to think that\l"
 	.string "humans can freely change the weather.$"
 
-Route119_WeatherInstitute_2F_Text_GroudonWeather:
+Route119_WeatherInstitute_2F_Text_MikoWeather:
 	.string "I track weather patterns over\n"
 	.string "the HOENN region.\p"
 	.string "Presently, a drought has been recorded\n"
@@ -325,7 +325,7 @@ Route119_WeatherInstitute_2F_Text_GroudonWeather:
 	.string "Could that mean, somewhere near\n"
 	.string "{STR_VAR_1}…$"
 
-Route119_WeatherInstitute_2F_Text_KyogreWeather:
+Route119_WeatherInstitute_2F_Text_CMikoWeather:
 	.string "I track weather patterns over\n"
 	.string "the HOENN region.\p"
 	.string "Presently, heavy rainfall has been\n"

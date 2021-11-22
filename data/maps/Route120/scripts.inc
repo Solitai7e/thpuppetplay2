@@ -1,6 +1,6 @@
-.set LOCALID_BRIDGE_KECLEON, 30
+.set LOCALID_BRIDGE_SWRIGGLE, 30
 .set LOCALID_STEVEN, 31
-.set LOCALID_BRIDGE_KECLEON_SHADOW, 36  @ They use a second object which is identical to Kecleon but has a reflection palette tag for the bridge shadow
+.set LOCALID_BRIDGE_SWRIGGLE_SHADOW, 36  @ They use a second object which is identical to SWriggle but has a reflection palette tag for the bridge shadow
 
 Route120_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, Route120_OnResume
@@ -9,33 +9,33 @@ Route120_MapScripts::
 	.byte 0
 
 Route120_OnResume:
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, Route120_EventScript_RemoveKecleonObject
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, Route120_EventScript_RemoveSWriggleObject
 	end
 
-Route120_EventScript_RemoveKecleonObject::
+Route120_EventScript_RemoveSWriggleObject::
 	compare VAR_0x8009, 0
-	call_if_eq Route120_EventScript_RemoveBridgeKecleon
+	call_if_eq Route120_EventScript_RemoveBridgeSWriggle
 	compare VAR_0x8009, 1
-	call_if_eq Route120_EventScript_RemoveKecleon
+	call_if_eq Route120_EventScript_RemoveSWriggle
 	compare VAR_0x8009, 2
-	call_if_eq Route120_EventScript_RemoveKecleon
+	call_if_eq Route120_EventScript_RemoveSWriggle
 	compare VAR_0x8009, 3
-	call_if_eq Route120_EventScript_RemoveKecleon
+	call_if_eq Route120_EventScript_RemoveSWriggle
 	compare VAR_0x8009, 4
-	call_if_eq Route120_EventScript_RemoveKecleon
+	call_if_eq Route120_EventScript_RemoveSWriggle
 	compare VAR_0x8009, 5
-	call_if_eq Route120_EventScript_RemoveKecleon
+	call_if_eq Route120_EventScript_RemoveSWriggle
 	return
 
-Route120_EventScript_RemoveBridgeKecleon::
+Route120_EventScript_RemoveBridgeSWriggle::
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne Common_EventScript_NopReturn
-	removeobject LOCALID_BRIDGE_KECLEON
-	removeobject LOCALID_BRIDGE_KECLEON_SHADOW
+	removeobject LOCALID_BRIDGE_SWRIGGLE
+	removeobject LOCALID_BRIDGE_SWRIGGLE_SHADOW
 	return
 
-Route120_EventScript_RemoveKecleon::
+Route120_EventScript_RemoveSWriggle::
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne Common_EventScript_NopReturn
@@ -45,7 +45,7 @@ Route120_EventScript_RemoveKecleon::
 Route120_OnLoad:
 	call_if_unset FLAG_REGI_DOORS_OPENED, Route120_EventScript_CloseAncientTomb
 	call_if_set FLAG_RECEIVED_DEVON_SCOPE, Route120_EventScript_SetBridgeClearMetatiles
-	call_if_unset FLAG_RECEIVED_DEVON_SCOPE, Route120_EventScript_SetBridgeKecleonMovement
+	call_if_unset FLAG_RECEIVED_DEVON_SCOPE, Route120_EventScript_SetBridgeSWriggleMovement
 	end
 
 Route120_EventScript_CloseAncientTomb::
@@ -60,8 +60,8 @@ Route120_EventScript_SetBridgeClearMetatiles::
 	setmetatile 13, 17, METATILE_General_ReflectiveWater, 0
 	return
 
-Route120_EventScript_SetBridgeKecleonMovement::
-	setobjectmovementtype LOCALID_BRIDGE_KECLEON_SHADOW, MOVEMENT_TYPE_FACE_RIGHT
+Route120_EventScript_SetBridgeSWriggleMovement::
+	setobjectmovementtype LOCALID_BRIDGE_SWRIGGLE_SHADOW, MOVEMENT_TYPE_FACE_RIGHT
 	return
 
 Route120_OnTransition:
@@ -177,7 +177,7 @@ Route120_EventScript_Steven::
 	msgbox Route120_Text_StevenGreeting, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Route120_EventScript_StevenNotReady
-	goto Route120_EventScript_StevenBattleKecleon
+	goto Route120_EventScript_StevenBattleSWriggle
 	end
 
 Route120_EventScript_StevenNotReady::
@@ -190,48 +190,48 @@ Route120_EventScript_StevenAskReadyForBattle::
 	msgbox Route120_Text_StevenReadyForBattle, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Route120_EventScript_StevenNotReady
-	goto Route120_EventScript_StevenBattleKecleon
+	goto Route120_EventScript_StevenBattleSWriggle
 	end
 
-Route120_EventScript_StevenBattleKecleon::
+Route120_EventScript_StevenBattleSWriggle::
 	msgbox Route120_Text_StevenShowMeYourPower, MSGBOX_DEFAULT
 	closemessage
 	compare VAR_FACING, DIR_NORTH
-	call_if_eq Route120_EventScript_PlayerApproachKecleonNorth
+	call_if_eq Route120_EventScript_PlayerApproachSWriggleNorth
 	compare VAR_FACING, DIR_WEST
-	call_if_eq Route120_EventScript_PlayerApproachKecleonWest
+	call_if_eq Route120_EventScript_PlayerApproachSWriggleWest
 	applymovement LOCALID_STEVEN, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	delay 20
 	msgbox Route120_Text_StevenUsedDevonScope, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_BRIDGE_KECLEON, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_BRIDGE_SWRIGGLE, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
-	applymovement LOCALID_BRIDGE_KECLEON, Movement_KecleonAppears
+	applymovement LOCALID_BRIDGE_SWRIGGLE, Movement_SWriggleAppears
 	waitmovement 0
 	waitse
-	playmoncry SPECIES_KECLEON, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_SWRIGGLE, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_KECLEON, 30, ITEM_NONE
+	setwildbattle SPECIES_SWRIGGLE, 30, ITEM_NONE
 	setvar VAR_0x8009, 0
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq Route120_EventScript_RemoveBridgeKecleonPostBattle
+	goto_if_eq Route120_EventScript_RemoveBridgeSWrigglePostBattle
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq Route120_EventScript_RemoveBridgeKecleonPostBattle
+	goto_if_eq Route120_EventScript_RemoveBridgeSWrigglePostBattle
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq Route120_EventScript_RemoveBridgeKecleonPostBattle
+	goto_if_eq Route120_EventScript_RemoveBridgeSWrigglePostBattle
 	goto Route120_EventScript_StevenGiveDeconScope
 	end
 
-Route120_EventScript_RemoveBridgeKecleonPostBattle::
+Route120_EventScript_RemoveBridgeSWrigglePostBattle::
 	fadescreenswapbuffers FADE_TO_BLACK
-	removeobject LOCALID_BRIDGE_KECLEON
-	removeobject LOCALID_BRIDGE_KECLEON_SHADOW
+	removeobject LOCALID_BRIDGE_SWRIGGLE
+	removeobject LOCALID_BRIDGE_SWRIGGLE_SHADOW
 	fadescreenswapbuffers FADE_FROM_BLACK
 	goto Route120_EventScript_StevenGiveDeconScope
 	end
@@ -261,23 +261,23 @@ Route120_EventScript_StevenGiveDeconScope::
 	release
 	end
 
-Route120_EventScript_PlayerApproachKecleonNorth::
+Route120_EventScript_PlayerApproachSWriggleNorth::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	return
 
-Route120_EventScript_PlayerApproachKecleonWest::
-	applymovement OBJ_EVENT_ID_PLAYER, Route120_Movement_ApproachKecleonWest
+Route120_EventScript_PlayerApproachSWriggleWest::
+	applymovement OBJ_EVENT_ID_PLAYER, Route120_Movement_ApproachSWriggleWest
 	waitmovement 0
 	return
 
-Route120_Movement_ApproachKecleonWest:
+Route120_Movement_ApproachSWriggleWest:
 	walk_down
 	walk_left
 	step_end
 
-Route120_EventScript_BridgeKecleon::
-	msgbox Kecleon_Text_SomethingUnseeable, MSGBOX_NPC
+Route120_EventScript_BridgeSWriggle::
+	msgbox SWriggle_Text_SomethingUnseeable, MSGBOX_NPC
 	end
 
 Route120_EventScript_RouteSignFortree::
@@ -435,14 +435,14 @@ Route120_Text_StevenGoodbye:
 	.string "I think you're doing great.\p"
 	.string "Well, let's meet again somewhere.$"
 
-Kecleon_Text_SomethingUnseeable:
+SWriggle_Text_SomethingUnseeable:
 	.string "Something unseeable is in the way.$"
 
-Kecleon_Text_WantToUseDevonScope:
+SWriggle_Text_WantToUseDevonScope:
 	.string "Something unseeable is in the way.\p"
 	.string "Want to use the DEVON SCOPE?$"
 
-Kecleon_Text_UseDevonScopeMonAttacked:
+SWriggle_Text_UseDevonScopeMonAttacked:
 	.string "{PLAYER} used the DEVON SCOPE.\p"
 	.string "An invisible POKéMON became completely\n"
 	.string "visible!\p"

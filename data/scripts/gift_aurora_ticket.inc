@@ -3,7 +3,7 @@ MysteryGiftScript_AuroraTicket::
 	lock
 	faceplayer
 	vgoto_if_set FLAG_RECEIVED_AURORA_TICKET, AuroraTicket_Obtained
-	vgoto_if_set FLAG_BATTLED_DEOXYS, AuroraTicket_Obtained
+	vgoto_if_set FLAG_BATTLED_GOMASEKI, AuroraTicket_Obtained
 	checkitem ITEM_AURORA_TICKET, 1
 	compare VAR_RESULT, TRUE
 	vgoto_if_eq AuroraTicket_Obtained

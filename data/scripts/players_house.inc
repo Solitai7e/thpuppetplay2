@@ -66,8 +66,8 @@ PlayersHouse_2F_EventScript_WallClock::
 	delay 30
 	setvar VAR_LITTLEROOT_INTRO_STATE, 6
 	setflag FLAG_SET_WALL_CLOCK
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_2
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_ALILYWHITE_1
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_ALILYWHITE_2
 	checkplayergender
 	compare VAR_RESULT, MALE
 	call_if_eq PlayersHouse_2F_EventScript_MomComesUpstairsMale
@@ -381,22 +381,22 @@ PlayersHouse_1F_EventScript_DidYouMeetProfBirch::
 	release
 	end
 
-PlayersHouse_1F_EventScript_Vigoroth1::
+PlayersHouse_1F_EventScript_ALilyWhite1::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_VIGOROTH, CRY_MODE_NORMAL
-	msgbox PlayersHouse_1F_Text_Vigoroth1, MSGBOX_DEFAULT
+	playmoncry SPECIES_ALILYWHITE, CRY_MODE_NORMAL
+	msgbox PlayersHouse_1F_Text_ALilyWhite1, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
 
-PlayersHouse_1F_EventScript_Vigoroth2::
+PlayersHouse_1F_EventScript_ALilyWhite2::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_VIGOROTH, CRY_MODE_NORMAL
-	msgbox PlayersHouse_1F_Text_Vigoroth2, MSGBOX_DEFAULT
+	playmoncry SPECIES_ALILYWHITE, CRY_MODE_NORMAL
+	msgbox PlayersHouse_1F_Text_ALilyWhite2, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -478,7 +478,7 @@ PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV::
 	delay 20
 	msgbox PlayersHouse_1F_Text_DadShouldStayLonger, MSGBOX_DEFAULT
 	closemessage
-	setflag FLAG_SYS_TV_LATIAS_LATIOS
+	setflag FLAG_SYS_TV_MAMIZOU_CKASEN
 	special TurnOnTVScreen
 	delay 60
 	compare VAR_0x8008, MALE
@@ -493,8 +493,8 @@ PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV::
 	call_if_eq PlayersHouse_1F_EventScript_PlayerApproachTVForLatiFemale
 	msgbox PlayersHouse_1F_Text_LatiEmergencyNewsFlash, MSGBOX_DEFAULT
 	closemessage
-	clearflag FLAG_SYS_TV_LATIAS_LATIOS
-	setflag FLAG_LATIOS_OR_LATIAS_ROAMING
+	clearflag FLAG_SYS_TV_MAMIZOU_CKASEN
+	setflag FLAG_CKASEN_OR_MAMIZOU_ROAMING
 	special TurnOffTVScreen
 	compare VAR_0x8008, MALE
 	call_if_eq PlayersHouse_1F_EventScript_MomApproachPlayerAfterTVMale
@@ -514,7 +514,7 @@ PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV::
 
 @ Never called.
 PlayersHouse_1F_EventScript_AirLatiBroadcast::
-	setflag FLAG_SYS_TV_LATIAS_LATIOS
+	setflag FLAG_SYS_TV_MAMIZOU_CKASEN
 	return
 
 PlayersHouse_1F_EventScript_SetUpObjectEventVarsMale::

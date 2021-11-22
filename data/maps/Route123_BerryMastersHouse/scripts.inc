@@ -64,9 +64,9 @@ Route123_BerryMastersHouse_EventScript_GavePhrase::
 	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveSpelonBerry
 	compare VAR_0x8004, PHRASE_CHALLENGE_CONTEST
 	goto_if_eq Route123_BerryMastersHouse_EventScript_GivePamtreBerry
-	compare VAR_0x8004, PHRASE_OVERWHELMING_LATIAS
+	compare VAR_0x8004, PHRASE_OVERWHELMING_MAMIZOU
 	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveWatmelBerry
-	compare VAR_0x8004, PHRASE_COOL_LATIOS
+	compare VAR_0x8004, PHRASE_COOL_CKASEN
 	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveDurinBerry
 	compare VAR_0x8004, PHRASE_SUPER_HUSTLE
 	goto_if_eq Route123_BerryMastersHouse_EventScript_GiveBelueBerry

@@ -5,11 +5,11 @@
 
 static const u16 sContestLadyMonGfxId[] =
 {
-    OBJ_EVENT_GFX_ZIGZAGOON_1,
-    OBJ_EVENT_GFX_SKITTY,
-    OBJ_EVENT_GFX_POOCHYENA,
-    OBJ_EVENT_GFX_KECLEON,
-    OBJ_EVENT_GFX_PIKACHU
+    OBJ_EVENT_GFX_HLUNASA_1,
+    OBJ_EVENT_GFX_ASUNNYMILK,
+    OBJ_EVENT_GFX_DYUYUKO,
+    OBJ_EVENT_GFX_SWRIGGLE,
+    OBJ_EVENT_GFX_CCIRNO
 };
 
 static const u16 sLilycoveLadyGfxId[] =
@@ -461,9 +461,9 @@ static const u8 *const sContestNames[] =
 
 static const u16 sContestLadyMonSpecies[] =
 {
-    SPECIES_ZIGZAGOON,
-    SPECIES_SKITTY,
-    SPECIES_POOCHYENA,
-    SPECIES_KECLEON,
-    SPECIES_PIKACHU
+    SPECIES_HLUNASA,
+    SPECIES_ASUNNYMILK,
+    SPECIES_DYUYUKO,
+    SPECIES_SWRIGGLE,
+    SPECIES_CCIRNO
 };

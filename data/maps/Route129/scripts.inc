@@ -17,9 +17,9 @@ Route129_OnTransition:
 	compare VAR_SOOTOPOLIS_CITY_STATE, 4
 	call_if_ge Route129_EventScript_CheckSetAbnormalWeather
 	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_129_WEST
-	call_if_eq AbnormalWeather_StartKyogreWeather
+	call_if_eq AbnormalWeather_StartCMikoWeather
 	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_129_EAST
-	call_if_eq AbnormalWeather_StartKyogreWeather
+	call_if_eq AbnormalWeather_StartCMikoWeather
 	end
 
 Route129_EventScript_CheckSetAbnormalWeather::

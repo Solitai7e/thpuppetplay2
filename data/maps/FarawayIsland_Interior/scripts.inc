@@ -1,4 +1,4 @@
-@ Note: LOCALID_FARAWAY_ISLAND_MEW is a local id for this map used elsewhere. It's defined in event_objects.h
+@ Note: LOCALID_FARAWAY_ISLAND_AKYUU is a local id for this map used elsewhere. It's defined in event_objects.h
 
 FarawayIsland_Interior_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, FarawayIsland_Interior_OnResume
@@ -8,31 +8,31 @@ FarawayIsland_Interior_MapScripts::
 	.byte 0
 
 FarawayIsland_Interior_OnReturnToField:
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, FarawayIsland_Interior_EventScript_TrySetMewAboveGrass
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, FarawayIsland_Interior_EventScript_TrySetAkyuuAboveGrass
 	end
 
-FarawayIsland_Interior_EventScript_TrySetMewAboveGrass::
+FarawayIsland_Interior_EventScript_TrySetAkyuuAboveGrass::
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq FarawayIsland_Interior_EventScript_SetMewAboveGrass
+	goto_if_eq FarawayIsland_Interior_EventScript_SetAkyuuAboveGrass
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq FarawayIsland_Interior_EventScript_SetMewAboveGrass
+	goto_if_eq FarawayIsland_Interior_EventScript_SetAkyuuAboveGrass
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq FarawayIsland_Interior_EventScript_SetMewAboveGrass
+	goto_if_eq FarawayIsland_Interior_EventScript_SetAkyuuAboveGrass
 	compare VAR_RESULT, B_OUTCOME_MON_TELEPORTED
-	goto_if_eq FarawayIsland_Interior_EventScript_SetMewAboveGrass
+	goto_if_eq FarawayIsland_Interior_EventScript_SetAkyuuAboveGrass
 	return
 
-FarawayIsland_Interior_EventScript_SetMewAboveGrass::
+FarawayIsland_Interior_EventScript_SetAkyuuAboveGrass::
 	setvar VAR_0x8004, 1
-	special SetMewAboveGrass
+	special SetAkyuuAboveGrass
 	return
 
 FarawayIsland_Interior_OnResume:
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, FarawayIsland_Interior_EventScript_TryRemoveMew
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, FarawayIsland_Interior_EventScript_TryRemoveAkyuu
 	end
 
-FarawayIsland_Interior_EventScript_TryRemoveMew::
+FarawayIsland_Interior_EventScript_TryRemoveAkyuu::
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne Common_EventScript_NopReturn
@@ -42,34 +42,34 @@ FarawayIsland_Interior_EventScript_TryRemoveMew::
 FarawayIsland_Interior_OnTransition:
 	setvar VAR_FARAWAY_ISLAND_STEP_COUNTER, 0
 	setvar VAR_TEMP_1, 1
-	call_if_unset FLAG_CAUGHT_MEW, FarawayIsland_Interior_EventScript_TryShowMew
+	call_if_unset FLAG_CAUGHT_AKYUU, FarawayIsland_Interior_EventScript_TryShowAkyuu
 	end
 
-FarawayIsland_Interior_EventScript_TryShowMew::
-	goto_if_set FLAG_DEFEATED_MEW, Common_EventScript_NopReturn
-	clearflag FLAG_HIDE_MEW
+FarawayIsland_Interior_EventScript_TryShowAkyuu::
+	goto_if_set FLAG_DEFEATED_AKYUU, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_AKYUU
 	setvar VAR_TEMP_1, 0
 	return
 
 FarawayIsland_Interior_OnFrame:
-	map_script_2 VAR_TEMP_1, 0, FarawayIsland_Interior_EventScript_FindMew
+	map_script_2 VAR_TEMP_1, 0, FarawayIsland_Interior_EventScript_FindAkyuu
 	.2byte 0
 
-FarawayIsland_Interior_EventScript_FindMew::
+FarawayIsland_Interior_EventScript_FindAkyuu::
 	lockall
 	playse SE_PIN
-	applymovement LOCALID_FARAWAY_ISLAND_MEW, Common_Movement_ExclamationMark
+	applymovement LOCALID_FARAWAY_ISLAND_AKYUU, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_FARAWAY_ISLAND_MEW, Common_Movement_Delay48
+	applymovement LOCALID_FARAWAY_ISLAND_AKYUU, Common_Movement_Delay48
 	waitmovement 0
-	applymovement LOCALID_FARAWAY_ISLAND_MEW, FarawayIsland_Interior_Movement_MewMoveAndHide
+	applymovement LOCALID_FARAWAY_ISLAND_AKYUU, FarawayIsland_Interior_Movement_AkyuuMoveAndHide
 	waitmovement 0
-	copyobjectxytoperm LOCALID_FARAWAY_ISLAND_MEW
+	copyobjectxytoperm LOCALID_FARAWAY_ISLAND_AKYUU
 	setvar VAR_TEMP_1, 1
 	releaseall
 	end
 
-FarawayIsland_Interior_Movement_MewMoveAndHide:
+FarawayIsland_Interior_Movement_AkyuuMoveAndHide:
 	walk_up
 	walk_up
 	walk_up
@@ -77,11 +77,11 @@ FarawayIsland_Interior_Movement_MewMoveAndHide:
 	set_invisible
 	step_end
 
-FarawayIsland_Interior_Movement_MewAppear:
+FarawayIsland_Interior_Movement_AkyuuAppear:
 	set_visible
 	step_end
 
-FarawayIsland_Interior_Movement_MewFloatUpNorth:
+FarawayIsland_Interior_Movement_AkyuuFloatUpNorth:
 	lock_facing_direction
 	walk_fast_up
 	walk_fast_up
@@ -90,7 +90,7 @@ FarawayIsland_Interior_Movement_MewFloatUpNorth:
 	walk_in_place_down
 	step_end
 
-FarawayIsland_Interior_Movement_MewFloatUpSouth:
+FarawayIsland_Interior_Movement_AkyuuFloatUpSouth:
 	lock_facing_direction
 	walk_fast_up
 	walk_fast_up
@@ -99,7 +99,7 @@ FarawayIsland_Interior_Movement_MewFloatUpSouth:
 	walk_in_place_up
 	step_end
 
-FarawayIsland_Interior_Movement_MewFloatUpWest:
+FarawayIsland_Interior_Movement_AkyuuFloatUpWest:
 	lock_facing_direction
 	walk_fast_up
 	walk_fast_up
@@ -108,7 +108,7 @@ FarawayIsland_Interior_Movement_MewFloatUpWest:
 	walk_in_place_right
 	step_end
 
-FarawayIsland_Interior_Movement_MewFloatUpEast:
+FarawayIsland_Interior_Movement_AkyuuFloatUpEast:
 	lock_facing_direction
 	walk_fast_up
 	walk_fast_up
@@ -117,28 +117,28 @@ FarawayIsland_Interior_Movement_MewFloatUpEast:
 	walk_in_place_left
 	step_end
 
-FarawayIsland_Interior_EventScript_Mew::
+FarawayIsland_Interior_EventScript_Akyuu::
 	lock
 	faceplayer
-	applymovement LOCALID_FARAWAY_ISLAND_MEW, FarawayIsland_Interior_Movement_MewAppear
+	applymovement LOCALID_FARAWAY_ISLAND_AKYUU, FarawayIsland_Interior_Movement_AkyuuAppear
 	waitmovement 0
 	setvar VAR_0x8004, 0
-	special SetMewAboveGrass
-	message FarawayIsland_Interior_Text_Mew
+	special SetAkyuuAboveGrass
+	message FarawayIsland_Interior_Text_Akyuu
 	waitse
-	playmoncry SPECIES_MEW, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_AKYUU, CRY_MODE_ENCOUNTER
 	compare VAR_FACING, DIR_NORTH
-	call_if_eq FarawayIsland_Interior_EventScript_FoundMewNorth
+	call_if_eq FarawayIsland_Interior_EventScript_FoundAkyuuNorth
 	compare VAR_FACING, DIR_SOUTH
-	call_if_eq FarawayIsland_Interior_EventScript_FoundMewSouth
+	call_if_eq FarawayIsland_Interior_EventScript_FoundAkyuuSouth
 	compare VAR_FACING, DIR_WEST
-	call_if_eq FarawayIsland_Interior_EventScript_FoundMewWest
+	call_if_eq FarawayIsland_Interior_EventScript_FoundAkyuuWest
 	compare VAR_FACING, DIR_EAST
-	call_if_eq FarawayIsland_Interior_EventScript_FoundMewEast
-	special DestroyMewEmergingGrassSprite
+	call_if_eq FarawayIsland_Interior_EventScript_FoundAkyuuEast
+	special DestroyAkyuuEmergingGrassSprite
 	delay 40
 	waitmoncry
-	setvar VAR_0x8004, SPECIES_MEW
+	setvar VAR_0x8004, SPECIES_AKYUU
 	setvar VAR_0x8005, 30 @ level
 	setvar VAR_0x8006, ITEM_NONE
 	special CreateEventLegalEnemyMon
@@ -148,53 +148,53 @@ FarawayIsland_Interior_EventScript_Mew::
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq FarawayIsland_Interior_EventScript_MewDefeated
+	goto_if_eq FarawayIsland_Interior_EventScript_AkyuuDefeated
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq FarawayIsland_Interior_EventScript_PlayerOrMewRan
+	goto_if_eq FarawayIsland_Interior_EventScript_PlayerOrAkyuuRan
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq FarawayIsland_Interior_EventScript_PlayerOrMewRan
+	goto_if_eq FarawayIsland_Interior_EventScript_PlayerOrAkyuuRan
 	compare VAR_RESULT, B_OUTCOME_MON_TELEPORTED
-	goto_if_eq FarawayIsland_Interior_EventScript_PlayerOrMewRan
-	setflag FLAG_CAUGHT_MEW
+	goto_if_eq FarawayIsland_Interior_EventScript_PlayerOrAkyuuRan
+	setflag FLAG_CAUGHT_AKYUU
 	release
 	end
 
-FarawayIsland_Interior_EventScript_MewDefeated::
-	setflag FLAG_DEFEATED_MEW
-	setvar VAR_0x8004, SPECIES_MEW
+FarawayIsland_Interior_EventScript_AkyuuDefeated::
+	setflag FLAG_DEFEATED_AKYUU
+	setvar VAR_0x8004, SPECIES_AKYUU
 	goto Common_EventScript_LegendaryFlewAway
 	end
 
-FarawayIsland_Interior_EventScript_PlayerOrMewRan::
-	setvar VAR_0x8004, SPECIES_MEW
+FarawayIsland_Interior_EventScript_PlayerOrAkyuuRan::
+	setvar VAR_0x8004, SPECIES_AKYUU
 	goto Common_EventScript_LegendaryFlewAway
 	end
 
-FarawayIsland_Interior_EventScript_FoundMewNorth::
-	applymovement LOCALID_FARAWAY_ISLAND_MEW, FarawayIsland_Interior_Movement_MewFloatUpNorth
+FarawayIsland_Interior_EventScript_FoundAkyuuNorth::
+	applymovement LOCALID_FARAWAY_ISLAND_AKYUU, FarawayIsland_Interior_Movement_AkyuuFloatUpNorth
 	waitmovement 0
 	return
 
-FarawayIsland_Interior_EventScript_FoundMewSouth::
-	applymovement LOCALID_FARAWAY_ISLAND_MEW, FarawayIsland_Interior_Movement_MewFloatUpSouth
+FarawayIsland_Interior_EventScript_FoundAkyuuSouth::
+	applymovement LOCALID_FARAWAY_ISLAND_AKYUU, FarawayIsland_Interior_Movement_AkyuuFloatUpSouth
 	waitmovement 0
 	return
 
-FarawayIsland_Interior_EventScript_FoundMewWest::
-	applymovement LOCALID_FARAWAY_ISLAND_MEW, FarawayIsland_Interior_Movement_MewFloatUpWest
+FarawayIsland_Interior_EventScript_FoundAkyuuWest::
+	applymovement LOCALID_FARAWAY_ISLAND_AKYUU, FarawayIsland_Interior_Movement_AkyuuFloatUpWest
 	waitmovement 0
 	return
 
-FarawayIsland_Interior_EventScript_FoundMewEast::
-	applymovement LOCALID_FARAWAY_ISLAND_MEW, FarawayIsland_Interior_Movement_MewFloatUpEast
+FarawayIsland_Interior_EventScript_FoundAkyuuEast::
+	applymovement LOCALID_FARAWAY_ISLAND_AKYUU, FarawayIsland_Interior_Movement_AkyuuFloatUpEast
 	waitmovement 0
 	return
 
-FarawayIsland_Interior_EventScript_HideMewWhenGrassCut::
+FarawayIsland_Interior_EventScript_HideAkyuuWhenGrassCut::
 	lockall
 	fadescreenswapbuffers FADE_TO_BLACK
-	setflag FLAG_HIDE_MEW
-	removeobject LOCALID_FARAWAY_ISLAND_MEW
+	setflag FLAG_HIDE_AKYUU
+	removeobject LOCALID_FARAWAY_ISLAND_AKYUU
 	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox FarawayIsland_Interior_Text_TheFeelingOfBeingWatchedFaded, MSGBOX_DEFAULT
 	closemessage

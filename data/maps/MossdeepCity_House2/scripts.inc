@@ -1,4 +1,4 @@
-.set LOCALID_WINGULL, 3
+.set LOCALID_TKOGASA, 3
 
 MossdeepCity_House2_MapScripts::
 	.byte 0
@@ -11,35 +11,35 @@ MossdeepCity_House2_EventScript_Twin::
 	msgbox MossdeepCity_House2_Text_PokemonCarriesMailBackAndForth, MSGBOX_NPC
 	end
 
-MossdeepCity_House2_EventScript_Wingull::
+MossdeepCity_House2_EventScript_TKogasa::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_WINGULL, CRY_MODE_NORMAL
-	msgbox MossdeepCity_House2_Text_Wingull, MSGBOX_DEFAULT
+	playmoncry SPECIES_TKOGASA, CRY_MODE_NORMAL
+	msgbox MossdeepCity_House2_Text_TKogasa, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
-	setflag FLAG_WINGULL_DELIVERED_MAIL
-	clearflag FLAG_HIDE_FORTREE_CITY_HOUSE_4_WINGULL
+	setflag FLAG_TKOGASA_DELIVERED_MAIL
+	clearflag FLAG_HIDE_FORTREE_CITY_HOUSE_4_TKOGASA
 	compare VAR_FACING, DIR_NORTH
-	call_if_eq MossdeepCity_House2_EventScript_WingullExitNorth
+	call_if_eq MossdeepCity_House2_EventScript_TKogasaExitNorth
 	compare VAR_FACING, DIR_WEST
-	call_if_eq MossdeepCity_House2_EventScript_WingullExitWest
-	removeobject LOCALID_WINGULL
+	call_if_eq MossdeepCity_House2_EventScript_TKogasaExitWest
+	removeobject LOCALID_TKOGASA
 	release
 	end
 
-MossdeepCity_House2_EventScript_WingullExitNorth::
-	applymovement LOCALID_WINGULL, MossdeepCity_House2_Movement_WingullExitNorth
+MossdeepCity_House2_EventScript_TKogasaExitNorth::
+	applymovement LOCALID_TKOGASA, MossdeepCity_House2_Movement_TKogasaExitNorth
 	waitmovement 0
 	return
 
-MossdeepCity_House2_EventScript_WingullExitWest::
-	applymovement LOCALID_WINGULL, MossdeepCity_House2_Movement_WingullExitEast
+MossdeepCity_House2_EventScript_TKogasaExitWest::
+	applymovement LOCALID_TKOGASA, MossdeepCity_House2_Movement_TKogasaExitEast
 	waitmovement 0
 	return
 
-MossdeepCity_House2_Movement_WingullExitNorth:
+MossdeepCity_House2_Movement_TKogasaExitNorth:
 	walk_fast_right
 	walk_fast_down
 	walk_fast_down
@@ -48,7 +48,7 @@ MossdeepCity_House2_Movement_WingullExitNorth:
 	delay_8
 	step_end
 
-MossdeepCity_House2_Movement_WingullExitEast:
+MossdeepCity_House2_Movement_TKogasaExitEast:
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
@@ -67,6 +67,6 @@ MossdeepCity_House2_Text_PokemonCarriesMailBackAndForth:
 	.string "I'm not lonesome, even though we're\n"
 	.string "apart.$"
 
-MossdeepCity_House2_Text_Wingull:
-	.string "WINGULL: Pihyoh!$"
+MossdeepCity_House2_Text_TKogasa:
+	.string "TKOGASA: Pihyoh!$"
 
