@@ -102,7 +102,7 @@ void FadeInFromBlack(void)
 void WarpFadeOutScreen(void)
 {
     u8 currentMapType = GetCurrentMapType();
-    if (!FlagGet(FLAG_REMOVE_WARP_FADE)) // fadescreen if flag not set
+    if (!FlagGet(FLAG_WARP_FADE)) // fadescreen if flag not set
     {
         switch (GetMapPairFadeToType(currentMapType, GetDestinationWarpMapHeader()->mapType))
         {
@@ -115,7 +115,7 @@ void WarpFadeOutScreen(void)
     }
     else
     {
-        FlagClear(FLAG_REMOVE_WARP_FADE);  // reset flag internally
+        FlagClear(FLAG_WARP_FADE);  // reset flag internally
     }
 }
 
