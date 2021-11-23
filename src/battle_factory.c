@@ -605,7 +605,7 @@ static void GetOpponentMostCommonMonType(void)
     gFacilityTrainerMons = gBattleFrontierMons;
 
     // Count the number of times each type occurs in the opponent's party.
-    for (i = TYPE_NORMAL; i < NUMBER_OF_MON_TYPES; i++)
+    for (i = TYPE_ILLUSION; i < NUMBER_OF_MON_TYPES; i++)
         typeCounts[i] = 0;
     for (i = 0; i < FRONTIER_PARTY_SIZE; i++)
     {
@@ -618,9 +618,9 @@ static void GetOpponentMostCommonMonType(void)
     // Determine which are the two most-common types.
     // The second most-common type is only updated if
     // its count is equal to the most-common type.
-    mostCommonTypes[0] = TYPE_NORMAL;
-    mostCommonTypes[1] = TYPE_NORMAL;
-    for (i = TYPE_FIGHTING; i < NUMBER_OF_MON_TYPES; i++)
+    mostCommonTypes[0] = TYPE_ILLUSION;
+    mostCommonTypes[1] = TYPE_ILLUSION;
+    for (i = TYPE_DREAM; i < NUMBER_OF_MON_TYPES; i++)
     {
         if (typeCounts[mostCommonTypes[0]] < typeCounts[i])
             mostCommonTypes[0] = i;

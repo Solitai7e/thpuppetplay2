@@ -2750,7 +2750,7 @@ static int GetTypeEffectivenessPoints(int move, int targetSpecies, int arg2)
     defAbility = gBaseStats[targetSpecies].abilities[0];
     moveType = gBattleMoves[move].type;
 
-    if (defAbility == ABILITY_LEVITATE && moveType == TYPE_GROUND)
+    if (defAbility == ABILITY_LEVITATE && moveType == TYPE_EARTH)
     {
         if (arg2 == 1)
             typePower = 8;

@@ -824,16 +824,16 @@ static const u8 sPickupProbabilities[] =
 
 static const u8 sTerrainToType[] =
 {
-    [BATTLE_TERRAIN_GRASS]      = TYPE_GRASS,
-    [BATTLE_TERRAIN_LONG_GRASS] = TYPE_GRASS,
-    [BATTLE_TERRAIN_SAND]       = TYPE_GROUND,
+    [BATTLE_TERRAIN_GRASS]      = TYPE_NATURE,
+    [BATTLE_TERRAIN_LONG_GRASS] = TYPE_NATURE,
+    [BATTLE_TERRAIN_SAND]       = TYPE_EARTH,
     [BATTLE_TERRAIN_UNDERWATER] = TYPE_WATER,
     [BATTLE_TERRAIN_WATER]      = TYPE_WATER,
     [BATTLE_TERRAIN_POND]       = TYPE_WATER,
-    [BATTLE_TERRAIN_MOUNTAIN]   = TYPE_ROCK,
-    [BATTLE_TERRAIN_CAVE]       = TYPE_ROCK,
-    [BATTLE_TERRAIN_BUILDING]   = TYPE_NORMAL,
-    [BATTLE_TERRAIN_PLAIN]      = TYPE_NORMAL,
+    [BATTLE_TERRAIN_MOUNTAIN]   = TYPE_BEAST,
+    [BATTLE_TERRAIN_CAVE]       = TYPE_BEAST,
+    [BATTLE_TERRAIN_BUILDING]   = TYPE_ILLUSION,
+    [BATTLE_TERRAIN_PLAIN]      = TYPE_ILLUSION,
 };
 
 // - ITEM_ULTRA_BALL skips Master Ball and ITEM_NONE
@@ -1293,7 +1293,7 @@ static void Cmd_damagecalc(void)
                                             gBattleStruct->dynamicMoveType, gBattlerAttacker, gBattlerTarget);
     gBattleMoveDamage = gBattleMoveDamage * gCritMultiplier * gBattleScripting.dmgMultiplier;
 
-    if (gStatuses3[gBattlerAttacker] & STATUS3_CHARGED_UP && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
+    if (gStatuses3[gBattlerAttacker] & STATUS3_CHARGED_UP && gBattleMoves[gCurrentMove].type == TYPE_WIND)
         gBattleMoveDamage *= 2;
     if (gProtectStructs[gBattlerAttacker].helpingHand)
         gBattleMoveDamage = gBattleMoveDamage * 15 / 10;
@@ -1310,7 +1310,7 @@ void AI_CalcDmg(u8 attacker, u8 defender)
     gDynamicBasePower = 0;
     gBattleMoveDamage = gBattleMoveDamage * gCritMultiplier * gBattleScripting.dmgMultiplier;
 
-    if (gStatuses3[attacker] & STATUS3_CHARGED_UP && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
+    if (gStatuses3[attacker] & STATUS3_CHARGED_UP && gBattleMoves[gCurrentMove].type == TYPE_WIND)
         gBattleMoveDamage *= 2;
     if (gProtectStructs[attacker].helpingHand)
         gBattleMoveDamage = gBattleMoveDamage * 15 / 10;
@@ -1370,7 +1370,7 @@ static void Cmd_typecalc(void)
         gBattleMoveDamage = gBattleMoveDamage / 10;
     }
 
-    if (gBattleMons[gBattlerTarget].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND)
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_LEVITATE && moveType == TYPE_EARTH)
     {
         gLastUsedAbility = gBattleMons[gBattlerTarget].ability;
         gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
@@ -1432,7 +1432,7 @@ static void CheckWonderGuardAndLevitate(void)
 
     GET_MOVE_TYPE(gCurrentMove, moveType);
 
-    if (gBattleMons[gBattlerTarget].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND)
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_LEVITATE && moveType == TYPE_EARTH)
     {
         gLastUsedAbility = ABILITY_LEVITATE;
         gBattleCommunication[MISS_TYPE] = B_MSG_GROUND_MISS;
@@ -1548,7 +1548,7 @@ u8 TypeCalc(u16 move, u8 attacker, u8 defender)
         gBattleMoveDamage = gBattleMoveDamage / 10;
     }
 
-    if (gBattleMons[defender].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND)
+    if (gBattleMons[defender].ability == ABILITY_LEVITATE && moveType == TYPE_EARTH)
     {
         flags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
     }
@@ -1600,7 +1600,7 @@ u8 AI_TypeCalc(u16 move, u16 targetSpecies, u8 targetAbility)
 
     moveType = gBattleMoves[move].type;
 
-    if (targetAbility == ABILITY_LEVITATE && moveType == TYPE_GROUND)
+    if (targetAbility == ABILITY_LEVITATE && moveType == TYPE_EARTH)
     {
         flags = MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE;
     }
@@ -2288,7 +2288,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 }
                 RESET_RETURN
             }
-            if ((IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_POISON) || IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_STEEL))
+            if ((IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_MIASMA) || IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_BLADE))
                 && (gHitMarker & HITMARKER_IGNORE_SAFEGUARD)
                 && (primary == TRUE || certain == MOVE_EFFECT_CERTAIN))
             {
@@ -2298,9 +2298,9 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STATUS_HAD_NO_EFFECT;
                 RESET_RETURN
             }
-            if (IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_POISON))
+            if (IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_MIASMA))
                 break;
-            if (IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_STEEL))
+            if (IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_BLADE))
                 break;
             if (gBattleMons[gEffectBattler].status1)
                 break;
@@ -2413,7 +2413,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 }
                 RESET_RETURN
             }
-            if ((IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_POISON) || IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_STEEL))
+            if ((IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_MIASMA) || IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_BLADE))
                 && (gHitMarker & HITMARKER_IGNORE_SAFEGUARD)
                 && (primary == TRUE || certain == MOVE_EFFECT_CERTAIN))
             {
@@ -2425,7 +2425,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
             }
             if (gBattleMons[gEffectBattler].status1)
                 break;
-            if (!IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_POISON) && !IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_STEEL))
+            if (!IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_MIASMA) && !IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_BLADE))
             {
                 if (gBattleMons[gEffectBattler].ability == ABILITY_IMMUNITY)
                     break;
@@ -4462,7 +4462,7 @@ static void Cmd_typecalc2(void)
     s32 i = 0;
     u8 moveType = gBattleMoves[gCurrentMove].type;
 
-    if (gBattleMons[gBattlerTarget].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND)
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_LEVITATE && moveType == TYPE_EARTH)
     {
         gLastUsedAbility = gBattleMons[gBattlerTarget].ability;
         gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
@@ -6674,7 +6674,7 @@ static void Cmd_setseeded(void)
         gMoveResultFlags |= MOVE_RESULT_MISSED;
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_LEECH_SEED_MISS;
     }
-    else if (IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_GRASS))
+    else if (IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_NATURE))
     {
         gMoveResultFlags |= MOVE_RESULT_MISSED;
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_LEECH_SEED_FAIL;
@@ -7320,7 +7320,7 @@ static void Cmd_tryconversiontypechange(void) // randomly changes user's type to
             if (IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_GHOST))
                 moveType = TYPE_GHOST;
             else
-                moveType = TYPE_NORMAL;
+                moveType = TYPE_ILLUSION;
         }
         if (moveType != gBattleMons[gBattlerAttacker].type1
             && moveType != gBattleMons[gBattlerAttacker].type2)
@@ -7347,7 +7347,7 @@ static void Cmd_tryconversiontypechange(void) // randomly changes user's type to
                 if (IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_GHOST))
                     moveType = TYPE_GHOST;
                 else
-                    moveType = TYPE_NORMAL;
+                    moveType = TYPE_ILLUSION;
             }
         }
         while (moveType == gBattleMons[gBattlerAttacker].type1 || moveType == gBattleMons[gBattlerAttacker].type2);
@@ -7516,12 +7516,12 @@ static void Cmd_weatherdamage(void)
     {
         if (gBattleWeather & B_WEATHER_SANDSTORM)
         {
-            if (gBattleMons[gBattlerAttacker].type1 != TYPE_ROCK
-                && gBattleMons[gBattlerAttacker].type1 != TYPE_STEEL
-                && gBattleMons[gBattlerAttacker].type1 != TYPE_GROUND
-                && gBattleMons[gBattlerAttacker].type2 != TYPE_ROCK
-                && gBattleMons[gBattlerAttacker].type2 != TYPE_STEEL
-                && gBattleMons[gBattlerAttacker].type2 != TYPE_GROUND
+            if (gBattleMons[gBattlerAttacker].type1 != TYPE_BEAST
+                && gBattleMons[gBattlerAttacker].type1 != TYPE_BLADE
+                && gBattleMons[gBattlerAttacker].type1 != TYPE_EARTH
+                && gBattleMons[gBattlerAttacker].type2 != TYPE_BEAST
+                && gBattleMons[gBattlerAttacker].type2 != TYPE_BLADE
+                && gBattleMons[gBattlerAttacker].type2 != TYPE_EARTH
                 && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_VEIL
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERGROUND)
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERWATER))
@@ -8790,7 +8790,7 @@ static void Cmd_hiddenpowercalc(void)
 
     gDynamicBasePower = (40 * powerBits) / 63 + 30;
 
-    // Subtract 3 instead of 1 below because 2 types are excluded (TYPE_NORMAL and TYPE_MYSTERY)
+    // Subtract 3 instead of 1 below because 2 types are excluded (TYPE_ILLUSION and TYPE_MYSTERY)
     // The final + 1 skips past Normal, and the following conditional skips TYPE_MYSTERY
     gBattleStruct->dynamicMoveType = ((NUMBER_OF_MON_TYPES - 3) * typeBits) / 63 + 1;
     if (gBattleStruct->dynamicMoveType >= TYPE_MYSTERY)
@@ -9663,13 +9663,13 @@ static void Cmd_setweatherballtype(void)
         if (gBattleWeather & B_WEATHER_RAIN)
             *(&gBattleStruct->dynamicMoveType) = TYPE_WATER | F_DYNAMIC_TYPE_2;
         else if (gBattleWeather & B_WEATHER_SANDSTORM)
-            *(&gBattleStruct->dynamicMoveType) = TYPE_ROCK | F_DYNAMIC_TYPE_2;
+            *(&gBattleStruct->dynamicMoveType) = TYPE_BEAST | F_DYNAMIC_TYPE_2;
         else if (gBattleWeather & B_WEATHER_SUN)
             *(&gBattleStruct->dynamicMoveType) = TYPE_FIRE | F_DYNAMIC_TYPE_2;
         else if (gBattleWeather & B_WEATHER_HAIL)
             *(&gBattleStruct->dynamicMoveType) = TYPE_ICE | F_DYNAMIC_TYPE_2;
         else
-            *(&gBattleStruct->dynamicMoveType) = TYPE_NORMAL | F_DYNAMIC_TYPE_2;
+            *(&gBattleStruct->dynamicMoveType) = TYPE_ILLUSION | F_DYNAMIC_TYPE_2;
     }
 
     gBattlescriptCurrInstr++;
@@ -9808,7 +9808,7 @@ static void Cmd_handleballthrow(void)
             switch (gLastUsedItem)
             {
             case ITEM_NET_BALL:
-                if (IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_WATER) || IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_BUG))
+                if (IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_WATER) || IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_HEART))
                     ballMultiplier = 30;
                 else
                     ballMultiplier = 10;

@@ -1905,23 +1905,23 @@ const u16 gLinkPlayerFacilityClasses[NUM_MALE_LINK_FACILITY_CLASSES + NUM_FEMALE
 
 static const u8 sHoldEffectToType[][2] =
 {
-    {HOLD_EFFECT_BUG_POWER, TYPE_BUG},
-    {HOLD_EFFECT_STEEL_POWER, TYPE_STEEL},
-    {HOLD_EFFECT_GROUND_POWER, TYPE_GROUND},
-    {HOLD_EFFECT_ROCK_POWER, TYPE_ROCK},
-    {HOLD_EFFECT_GRASS_POWER, TYPE_GRASS},
+    {HOLD_EFFECT_BUG_POWER, TYPE_HEART},
+    {HOLD_EFFECT_STEEL_POWER, TYPE_BLADE},
+    {HOLD_EFFECT_GROUND_POWER, TYPE_EARTH},
+    {HOLD_EFFECT_ROCK_POWER, TYPE_BEAST},
+    {HOLD_EFFECT_GRASS_POWER, TYPE_NATURE},
     {HOLD_EFFECT_DARK_POWER, TYPE_DARK},
-    {HOLD_EFFECT_FIGHTING_POWER, TYPE_FIGHTING},
-    {HOLD_EFFECT_ELECTRIC_POWER, TYPE_ELECTRIC},
+    {HOLD_EFFECT_FIGHTING_POWER, TYPE_DREAM},
+    {HOLD_EFFECT_ELECTRIC_POWER, TYPE_WIND},
     {HOLD_EFFECT_WATER_POWER, TYPE_WATER},
     {HOLD_EFFECT_FLYING_POWER, TYPE_FLYING},
-    {HOLD_EFFECT_POISON_POWER, TYPE_POISON},
+    {HOLD_EFFECT_POISON_POWER, TYPE_MIASMA},
     {HOLD_EFFECT_ICE_POWER, TYPE_ICE},
     {HOLD_EFFECT_GHOST_POWER, TYPE_GHOST},
-    {HOLD_EFFECT_PSYCHIC_POWER, TYPE_PSYCHIC},
+    {HOLD_EFFECT_PSYCHIC_POWER, TYPE_REASON},
     {HOLD_EFFECT_FIRE_POWER, TYPE_FIRE},
-    {HOLD_EFFECT_DRAGON_POWER, TYPE_DRAGON},
-    {HOLD_EFFECT_NORMAL_POWER, TYPE_NORMAL},
+    {HOLD_EFFECT_DRAGON_POWER, TYPE_FAITH},
+    {HOLD_EFFECT_NORMAL_POWER, TYPE_ILLUSION},
 };
 
 const struct SpriteTemplate gBattlerSpriteTemplates[MAX_BATTLERS_COUNT] =
@@ -3192,17 +3192,17 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         attack = (150 * attack) / 100;
     if (defender->ability == ABILITY_MARVEL_SCALE && defender->status1)
         defense = (150 * defense) / 100;
-    if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, ABILITYEFFECT_MUD_SPORT, 0))
+    if (type == TYPE_WIND && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, ABILITYEFFECT_MUD_SPORT, 0))
         gBattleMovePower /= 2;
     if (type == TYPE_FIRE && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, ABILITYEFFECT_WATER_SPORT, 0))
         gBattleMovePower /= 2;
-    if (type == TYPE_GRASS && attacker->ability == ABILITY_OVERGROW && attacker->hp <= (attacker->maxHP / 3))
+    if (type == TYPE_NATURE && attacker->ability == ABILITY_OVERGROW && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (type == TYPE_FIRE && attacker->ability == ABILITY_BLAZE && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (type == TYPE_WATER && attacker->ability == ABILITY_TORRENT && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
-    if (type == TYPE_BUG && attacker->ability == ABILITY_SWARM && attacker->hp <= (attacker->maxHP / 3))
+    if (type == TYPE_HEART && attacker->ability == ABILITY_SWARM && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
 
     // Self-destruct / Explosion cut defense in half
