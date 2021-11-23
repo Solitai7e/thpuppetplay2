@@ -224,9 +224,14 @@ struct BaseStats
             u8 noFlip : 1;
 };
 
+#define MOVE_SPLIT_PHYSICAL	0
+#define MOVE_SPLIT_SPECIAL	1
+#define MOVE_SPLIT_OTHER	2
+
 struct BattleMove
 {
     u8 effect;
+	u8 split;
     u8 power;
     u8 type;
     u8 accuracy;
