@@ -38,6 +38,9 @@ $(MID_SUBDIR)/mus_b_tower_rs.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_b_pike.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G112 -V092
+	
+$(MID_SUBDIR)/mus_maiden.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G117 -V080 -P1
 
 $(MID_SUBDIR)/mus_vs_trainer.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G119 -V080 -P1
