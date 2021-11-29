@@ -434,12 +434,12 @@ bool8 TryHandleLaunchBattleTableAnimation(u8 activeBattler, u8 atkBattler, u8 de
 {
     u8 taskId;
 
-    if (tableId == B_ANIM_TSANAE_CHANGE && (argument & TSANAE_SUBSTITUTE))
-    {
-        // If TSanae is behind substitute, set the new form but skip the animation
-        gBattleMonForms[activeBattler] = (argument & ~TSANAE_SUBSTITUTE);
-        return TRUE;
-    }
+    // if (tableId == B_ANIM_TSANAE_CHANGE && (argument & TSANAE_SUBSTITUTE))
+    // {
+        // // If TSanae is behind substitute, set the new form but skip the animation
+        // gBattleMonForms[activeBattler] = (argument & ~TSANAE_SUBSTITUTE);
+        // return TRUE;
+    // }
     if (gBattleSpritesDataPtr->battlerData[activeBattler].behindSubstitute
         && !ShouldAnimBeDoneRegardlessOfSubstitute(tableId))
     {
@@ -587,12 +587,12 @@ void BattleLoadOpponentMonSpriteGfx(struct Pokemon *mon, u8 battlerId)
     LoadPalette(gDecompressionBuffer, paletteOffset, 0x20);
     LoadPalette(gDecompressionBuffer, 0x80 + battlerId * 16, 0x20);
 
-    if (species == SPECIES_TSANAE)
-    {
-        paletteOffset = 0x100 + battlerId * 16;
-        LZDecompressWram(lzPaletteData, gBattleStruct->tsanaePalette[TSANAE_NORMAL]);
-        LoadPalette(gBattleStruct->tsanaePalette[gBattleMonForms[battlerId]], paletteOffset, 0x20);
-    }
+    // if (species == SPECIES_TSANAE)
+    // {
+        // paletteOffset = 0x100 + battlerId * 16;
+        // LZDecompressWram(lzPaletteData, gBattleStruct->tsanaePalette[TSANAE_NORMAL]);
+        // LoadPalette(gBattleStruct->tsanaePalette[gBattleMonForms[battlerId]], paletteOffset, 0x20);
+    // }
 
     // transform's pink color
     if (gBattleSpritesDataPtr->battlerData[battlerId].transformSpecies != SPECIES_NONE)
@@ -650,12 +650,12 @@ void BattleLoadPlayerMonSpriteGfx(struct Pokemon *mon, u8 battlerId)
     LoadPalette(gDecompressionBuffer, paletteOffset, 0x20);
     LoadPalette(gDecompressionBuffer, 0x80 + battlerId * 16, 0x20);
 
-    if (species == SPECIES_TSANAE)
-    {
-        paletteOffset = 0x100 + battlerId * 16;
-        LZDecompressWram(lzPaletteData, gBattleStruct->tsanaePalette[TSANAE_NORMAL]);
-        LoadPalette(gBattleStruct->tsanaePalette[gBattleMonForms[battlerId]], paletteOffset, 0x20);
-    }
+    // if (species == SPECIES_TSANAE)
+    // {
+        // paletteOffset = 0x100 + battlerId * 16;
+        // LZDecompressWram(lzPaletteData, gBattleStruct->tsanaePalette[TSANAE_NORMAL]);
+        // LoadPalette(gBattleStruct->tsanaePalette[gBattleMonForms[battlerId]], paletteOffset, 0x20);
+    // }
 
     // transform's pink color
     if (gBattleSpritesDataPtr->battlerData[battlerId].transformSpecies != SPECIES_NONE)
@@ -900,21 +900,21 @@ void HandleSpeciesGfxDataChange(u8 battlerAtk, u8 battlerDef, bool8 tsanae)
     u8 position;
     const u32 *lzPaletteData;
 
-    if (tsanae)
-    {
-        StartSpriteAnim(&gSprites[gBattlerSpriteIds[battlerAtk]], gBattleSpritesDataPtr->animationData->animArg);
-        paletteOffset = 0x100 + battlerAtk * 16;
-        LoadPalette(gBattleStruct->tsanaePalette[gBattleSpritesDataPtr->animationData->animArg], paletteOffset, 32);
-        gBattleMonForms[battlerAtk] = gBattleSpritesDataPtr->animationData->animArg;
-        if (gBattleSpritesDataPtr->battlerData[battlerAtk].transformSpecies != SPECIES_NONE)
-        {
-            BlendPalette(paletteOffset, 16, 6, RGB_WHITE);
-            CpuCopy32(gPlttBufferFaded + paletteOffset, gPlttBufferUnfaded + paletteOffset, 32);
-        }
-        gSprites[gBattlerSpriteIds[battlerAtk]].y = GetBattlerSpriteDefault_Y(battlerAtk);
-    }
-    else
-    {
+    // if (tsanae)
+    // {
+        // StartSpriteAnim(&gSprites[gBattlerSpriteIds[battlerAtk]], gBattleSpritesDataPtr->animationData->animArg);
+        // paletteOffset = 0x100 + battlerAtk * 16;
+        // LoadPalette(gBattleStruct->tsanaePalette[gBattleSpritesDataPtr->animationData->animArg], paletteOffset, 32);
+        // gBattleMonForms[battlerAtk] = gBattleSpritesDataPtr->animationData->animArg;
+        // if (gBattleSpritesDataPtr->battlerData[battlerAtk].transformSpecies != SPECIES_NONE)
+        // {
+            // BlendPalette(paletteOffset, 16, 6, RGB_WHITE);
+            // CpuCopy32(gPlttBufferFaded + paletteOffset, gPlttBufferUnfaded + paletteOffset, 32);
+        // }
+        // gSprites[gBattlerSpriteIds[battlerAtk]].y = GetBattlerSpriteDefault_Y(battlerAtk);
+    // }
+    // else
+    // {
         const void *src;
         void *dst;
         u16 targetSpecies;
@@ -970,12 +970,12 @@ void HandleSpeciesGfxDataChange(u8 battlerAtk, u8 battlerDef, bool8 tsanae)
         LZDecompressWram(lzPaletteData, gDecompressionBuffer);
         LoadPalette(gDecompressionBuffer, paletteOffset, 32);
 
-        if (targetSpecies == SPECIES_TSANAE)
-        {
-            gSprites[gBattlerSpriteIds[battlerAtk]].anims = gMonFrontAnimsPtrTable[targetSpecies];
-            LZDecompressWram(lzPaletteData, gBattleStruct->tsanaePalette[TSANAE_NORMAL]);
-            LoadPalette(gBattleStruct->tsanaePalette[gBattleMonForms[battlerDef]], paletteOffset, 32);
-        }
+        // if (targetSpecies == SPECIES_TSANAE)
+        // {
+            // gSprites[gBattlerSpriteIds[battlerAtk]].anims = gMonFrontAnimsPtrTable[targetSpecies];
+            // LZDecompressWram(lzPaletteData, gBattleStruct->tsanaePalette[TSANAE_NORMAL]);
+            // LoadPalette(gBattleStruct->tsanaePalette[gBattleMonForms[battlerDef]], paletteOffset, 32);
+        // }
 
         BlendPalette(paletteOffset, 16, 6, RGB_WHITE);
         CpuCopy32(gPlttBufferFaded + paletteOffset, gPlttBufferUnfaded + paletteOffset, 32);
@@ -988,7 +988,7 @@ void HandleSpeciesGfxDataChange(u8 battlerAtk, u8 battlerDef, bool8 tsanae)
 
         gSprites[gBattlerSpriteIds[battlerAtk]].y = GetBattlerSpriteDefault_Y(battlerAtk);
         StartSpriteAnim(&gSprites[gBattlerSpriteIds[battlerAtk]], gBattleMonForms[battlerAtk]);
-    }
+    // }
 }
 
 void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)

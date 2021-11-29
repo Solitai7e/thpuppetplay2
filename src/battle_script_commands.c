@@ -9601,28 +9601,28 @@ static void Cmd_pickup(void)
 
 static void Cmd_dotsanaechangeanimation(void)
 {
-    gActiveBattler = gBattleScripting.battler;
+    // gActiveBattler = gBattleScripting.battler;
 
-    if (gBattleMons[gActiveBattler].status2 & STATUS2_SUBSTITUTE)
-        *(&gBattleStruct->formToChangeInto) |= TSANAE_SUBSTITUTE;
+    // if (gBattleMons[gActiveBattler].status2 & STATUS2_SUBSTITUTE)
+        // *(&gBattleStruct->formToChangeInto) |= TSANAE_SUBSTITUTE;
 
-    BtlController_EmitBattleAnimation(BUFFER_A, B_ANIM_TSANAE_CHANGE, gBattleStruct->formToChangeInto);
-    MarkBattlerForControllerExec(gActiveBattler);
+    // BtlController_EmitBattleAnimation(BUFFER_A, B_ANIM_TSANAE_CHANGE, gBattleStruct->formToChangeInto);
+    // MarkBattlerForControllerExec(gActiveBattler);
 
     gBattlescriptCurrInstr++;
 }
 
 static void Cmd_trytsanaedatachange(void)
 {
-    u8 form;
+    // u8 form;
 
     gBattlescriptCurrInstr++;
-    form = TSanaeDataTypeChange(gBattleScripting.battler);
-    if (form)
-    {
-        BattleScriptPushCursorAndCallback(BattleScript_TSanaeChange);
-        *(&gBattleStruct->formToChangeInto) = form - 1;
-    }
+    // form = TSanaeDataTypeChange(gBattleScripting.battler);
+    // if (form)
+    // {
+        // BattleScriptPushCursorAndCallback(BattleScript_TSanaeChange);
+        // *(&gBattleStruct->formToChangeInto) = form - 1;
+    // }
 }
 
 static void Cmd_settypebasedhalvers(void) // water and mud sport

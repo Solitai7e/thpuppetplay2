@@ -885,7 +885,7 @@ static const struct SpriteTemplate sSpriteTemplate_MoveTypes =
 static const u8 sMoveTypeToOamPaletteNum[NUMBER_OF_MON_TYPES + CONTEST_CATEGORIES_COUNT] =
 {
     [TYPE_ILLUSION] = 13,
-    [TYPE_DREAM] = 13,
+    [TYPE_DREAM] = 14,
     [TYPE_FLYING] = 14,
     [TYPE_MIASMA] = 14,
     [TYPE_EARTH] = 13,

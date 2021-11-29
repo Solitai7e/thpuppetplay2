@@ -1,4 +1,4 @@
-TSANAEGFXDIR := graphics/pokemon/tsanae
+# TSANAEGFXDIR := graphics/pokemon/tsanae
 TILESETGFXDIR := data/tilesets
 FONTGFXDIR := graphics/fonts
 INTERFACEGFXDIR := graphics/interface
@@ -26,35 +26,35 @@ contest_types := cool beauty cute smart tough
 
 ### TSanae ###
 
-$(TSANAEGFXDIR)/front.4bpp: $(TSANAEGFXDIR)/front_normal_form.4bpp \
-                              $(TSANAEGFXDIR)/front_sunny_form.4bpp \
-                              $(TSANAEGFXDIR)/front_rainy_form.4bpp \
-                              $(TSANAEGFXDIR)/front_snowy_form.4bpp
-	@cat $^ >$@
+# $(TSANAEGFXDIR)/front.4bpp: $(TSANAEGFXDIR)/front_normal_form.4bpp \
+                              # $(TSANAEGFXDIR)/front_sunny_form.4bpp \
+                              # $(TSANAEGFXDIR)/front_rainy_form.4bpp \
+                              # $(TSANAEGFXDIR)/front_snowy_form.4bpp
+	# @cat $^ >$@
 
-$(TSANAEGFXDIR)/back.4bpp: $(TSANAEGFXDIR)/back_normal_form.4bpp \
-                             $(TSANAEGFXDIR)/back_sunny_form.4bpp \
-                             $(TSANAEGFXDIR)/back_rainy_form.4bpp \
-                             $(TSANAEGFXDIR)/back_snowy_form.4bpp
-	@cat $^ >$@
+# $(TSANAEGFXDIR)/back.4bpp: $(TSANAEGFXDIR)/back_normal_form.4bpp \
+                             # $(TSANAEGFXDIR)/back_sunny_form.4bpp \
+                             # $(TSANAEGFXDIR)/back_rainy_form.4bpp \
+                             # $(TSANAEGFXDIR)/back_snowy_form.4bpp
+	# @cat $^ >$@
 
-$(TSANAEGFXDIR)/anim_front.4bpp: $(TSANAEGFXDIR)/anim_front_normal_form.4bpp \
-                                   $(TSANAEGFXDIR)/anim_front_sunny_form.4bpp \
-                                   $(TSANAEGFXDIR)/anim_front_rainy_form.4bpp \
-                                   $(TSANAEGFXDIR)/anim_front_snowy_form.4bpp
-	@cat $^ >$@
+# $(TSANAEGFXDIR)/anim_front.4bpp: $(TSANAEGFXDIR)/anim_front_normal_form.4bpp \
+                                   # $(TSANAEGFXDIR)/anim_front_sunny_form.4bpp \
+                                   # $(TSANAEGFXDIR)/anim_front_rainy_form.4bpp \
+                                   # $(TSANAEGFXDIR)/anim_front_snowy_form.4bpp
+	# @cat $^ >$@
 
-$(TSANAEGFXDIR)/normal.gbapal: $(TSANAEGFXDIR)/normal_normal_form.gbapal \
-                                 $(TSANAEGFXDIR)/normal_sunny_form.gbapal \
-                                 $(TSANAEGFXDIR)/normal_rainy_form.gbapal \
-                                 $(TSANAEGFXDIR)/normal_snowy_form.gbapal
-	@cat $^ >$@
+# $(TSANAEGFXDIR)/normal.gbapal: $(TSANAEGFXDIR)/normal_normal_form.gbapal \
+                                 # $(TSANAEGFXDIR)/normal_sunny_form.gbapal \
+                                 # $(TSANAEGFXDIR)/normal_rainy_form.gbapal \
+                                 # $(TSANAEGFXDIR)/normal_snowy_form.gbapal
+	# @cat $^ >$@
 
-$(TSANAEGFXDIR)/shiny.gbapal: $(TSANAEGFXDIR)/shiny_normal_form.gbapal \
-                                $(TSANAEGFXDIR)/shiny_sunny_form.gbapal \
-                                $(TSANAEGFXDIR)/shiny_rainy_form.gbapal \
-                                $(TSANAEGFXDIR)/shiny_snowy_form.gbapal
-	@cat $^ >$@
+# $(TSANAEGFXDIR)/shiny.gbapal: $(TSANAEGFXDIR)/shiny_normal_form.gbapal \
+                                # $(TSANAEGFXDIR)/shiny_sunny_form.gbapal \
+                                # $(TSANAEGFXDIR)/shiny_rainy_form.gbapal \
+                                # $(TSANAEGFXDIR)/shiny_snowy_form.gbapal
+	# @cat $^ >$@
 
 
 

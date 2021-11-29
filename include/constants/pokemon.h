@@ -89,7 +89,7 @@
 #define MAX_STAT_STAGE    12
 
 // Shiny odds
-#define SHINY_ODDS 8 // Actual probability is SHINY_ODDS/65536
+#define SHINY_ODDS 655 // Actual probability is SHINY_ODDS/65536. Default is 8, but we've upped it to 1% total.
 
 // Flags for Get(Box)MonData / Set(Box)MonData
 #define MON_DATA_PERSONALITY        0
