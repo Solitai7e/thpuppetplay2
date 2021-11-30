@@ -849,24 +849,6 @@ static const union AnimCmd sUnknownAnim_TSANAE_1[] =
     ANIMCMD_END,
 };
 
-// static const union AnimCmd sUnknownAnim_TSANAE_2[] =
-// {
-    // ANIMCMD_FRAME(1, 1),
-    // ANIMCMD_END,
-// };
-
-// static const union AnimCmd sUnknownAnim_TSANAE_3[] =
-// {
-    // ANIMCMD_FRAME(2, 1),
-    // ANIMCMD_END,
-// };
-
-// static const union AnimCmd sUnknownAnim_TSANAE_4[] =
-// {
-    // ANIMCMD_FRAME(3, 1),
-    // ANIMCMD_END,
-// };
-
 static const union AnimCmd sUnknownAnim_YUKI_1[] =
 {
     ANIMCMD_FRAME(0, 63),
@@ -1758,9 +1740,6 @@ static const union AnimCmd *const sUnknownAnims_TSANAE[] =
 {
     sAnim_GeneralFrame0,
     sUnknownAnim_TSANAE_1,
-    // sUnknownAnim_TSANAE_2,
-    // sUnknownAnim_TSANAE_3,
-    // sUnknownAnim_TSANAE_4,
 };
 
 static const union AnimCmd *const sUnknownAnims_YUKI[] =

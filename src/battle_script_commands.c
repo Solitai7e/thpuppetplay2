@@ -306,8 +306,6 @@ static void Cmd_switchoutabilities(void);
 static void Cmd_jumpifhasnohp(void);
 static void Cmd_getsecretpowereffect(void);
 static void Cmd_pickup(void);
-static void Cmd_dotsanaechangeanimation(void);
-static void Cmd_trytsanaedatachange(void);
 static void Cmd_settypebasedhalvers(void);
 static void Cmd_setweatherballtype(void);
 static void Cmd_tryrecycleitem(void);
@@ -558,8 +556,8 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_jumpifhasnohp,                           //0xE3
     Cmd_getsecretpowereffect,                    //0xE4
     Cmd_pickup,                                  //0xE5
-    Cmd_dotsanaechangeanimation,               //0xE6
-    Cmd_trytsanaedatachange,                   //0xE7
+                                                 //0xE6
+                                                 //0xE7
     Cmd_settypebasedhalvers,                     //0xE8
     Cmd_setweatherballtype,                      //0xE9
     Cmd_tryrecycleitem,                          //0xEA
@@ -9597,32 +9595,6 @@ static void Cmd_pickup(void)
     }
 
     gBattlescriptCurrInstr++;
-}
-
-static void Cmd_dotsanaechangeanimation(void)
-{
-    // gActiveBattler = gBattleScripting.battler;
-
-    // if (gBattleMons[gActiveBattler].status2 & STATUS2_SUBSTITUTE)
-        // *(&gBattleStruct->formToChangeInto) |= TSANAE_SUBSTITUTE;
-
-    // BtlController_EmitBattleAnimation(BUFFER_A, B_ANIM_TSANAE_CHANGE, gBattleStruct->formToChangeInto);
-    // MarkBattlerForControllerExec(gActiveBattler);
-
-    gBattlescriptCurrInstr++;
-}
-
-static void Cmd_trytsanaedatachange(void)
-{
-    // u8 form;
-
-    gBattlescriptCurrInstr++;
-    // form = TSanaeDataTypeChange(gBattleScripting.battler);
-    // if (form)
-    // {
-        // BattleScriptPushCursorAndCallback(BattleScript_TSanaeChange);
-        // *(&gBattleStruct->formToChangeInto) = form - 1;
-    // }
 }
 
 static void Cmd_settypebasedhalvers(void) // water and mud sport

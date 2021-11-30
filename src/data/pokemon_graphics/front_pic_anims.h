@@ -4196,29 +4196,11 @@ static const union AnimCmd sAnim_ADVALICE_1[] =
     ANIMCMD_END,
 };
 
-// static const union AnimCmd sAnim_TSANAE_0[] =
-// {
-    // ANIMCMD_FRAME(0, 1),
-    // ANIMCMD_END,
-// };
-
 static const union AnimCmd sAnim_TSANAE_1[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
-
-// static const union AnimCmd sAnim_TSANAE_2[] =
-// {
-    // ANIMCMD_FRAME(2, 1),
-    // ANIMCMD_END,
-// };
-
-// static const union AnimCmd sAnim_TSANAE_3[] =
-// {
-    // ANIMCMD_FRAME(3, 1),
-    // ANIMCMD_END,
-// };
 
 static const union AnimCmd sAnim_YUKI_1[] =
 {
@@ -6660,10 +6642,8 @@ static const union AnimCmd *const sAnims_ADVALICE[] ={
 };
 
 static const union AnimCmd *const sAnims_TSANAE[] ={
-    // sAnim_TSANAE_0,
+    sAnim_GeneralFrame0,
     sAnim_TSANAE_1,
-    // sAnim_TSANAE_2,
-    // sAnim_TSANAE_3,
 };
 
 static const union AnimCmd *const sAnims_YUKI[] ={

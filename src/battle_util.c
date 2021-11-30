@@ -2374,41 +2374,6 @@ bool8 HasNoMonsToSwitch(u8 battler, u8 partyIdBattlerOn1, u8 partyIdBattlerOn2)
     }
 }
 
-// u8 TSanaeDataTypeChange(u8 battler)
-// {
-    // u8 formChange = 0;
-    // if (gBattleMons[battler].species != SPECIES_TSANAE || gBattleMons[battler].ability != ABILITY_FORECAST || gBattleMons[battler].hp == 0)
-        // return 0; // No change
-    // if (!WEATHER_HAS_EFFECT && !IS_BATTLER_OF_TYPE(battler, TYPE_ILLUSION))
-    // {
-        // SET_BATTLER_TYPE(battler, TYPE_ILLUSION);
-        // return TSANAE_NORMAL + 1;
-    // }
-    // if (!WEATHER_HAS_EFFECT)
-        // return 0; // No change
-    // if (!(gBattleWeather & (B_WEATHER_RAIN | B_WEATHER_SUN | B_WEATHER_HAIL)) && !IS_BATTLER_OF_TYPE(battler, TYPE_ILLUSION))
-    // {
-        // SET_BATTLER_TYPE(battler, TYPE_ILLUSION);
-        // formChange = TSANAE_NORMAL + 1;
-    // }
-    // if (gBattleWeather & B_WEATHER_SUN && !IS_BATTLER_OF_TYPE(battler, TYPE_FIRE))
-    // {
-        // SET_BATTLER_TYPE(battler, TYPE_FIRE);
-        // formChange = TSANAE_FIRE + 1;
-    // }
-    // if (gBattleWeather & B_WEATHER_RAIN && !IS_BATTLER_OF_TYPE(battler, TYPE_WATER))
-    // {
-        // SET_BATTLER_TYPE(battler, TYPE_WATER);
-        // formChange = TSANAE_WATER + 1;
-    // }
-    // if (gBattleWeather & B_WEATHER_HAIL && !IS_BATTLER_OF_TYPE(battler, TYPE_ICE))
-    // {
-        // SET_BATTLER_TYPE(battler, TYPE_ICE);
-        // formChange = TSANAE_ICE + 1;
-    // }
-    // return formChange;
-// }
-
 u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveArg)
 {
     u8 effect = 0;
@@ -2554,14 +2519,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 }
                 break;
             case ABILITY_FORECAST:
-                // effect = TSanaeDataTypeChange(battler);
-                // if (effect)
-                // {
-                    // BattleScriptPushCursorAndCallback(BattleScript_TSanaeChange);
-                    // gBattleScripting.battler = battler;
-                    // *(&gBattleStruct->formToChangeInto) = effect - 1;
-                // }
-                // break;
             case ABILITY_TRACE:
                 if (!(gSpecialStatuses[battler].traced))
                 {
@@ -2575,12 +2532,9 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     // that's a weird choice for a variable, why not use i or battler?
                     for (target1 = 0; target1 < gBattlersCount; target1++)
                     {
-                        // effect = TSanaeDataTypeChange(target1);
                         if (effect)
                         {
-                            // BattleScriptPushCursorAndCallback(BattleScript_TSanaeChange);
                             gBattleScripting.battler = target1;
-                            // *(&gBattleStruct->formToChangeInto) = effect - 1;
                             break;
                         }
                     }
@@ -2946,12 +2900,9 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             {
                 if (gBattleMons[battler].ability == ABILITY_FORECAST)
                 {
-                    // effect = TSanaeDataTypeChange(battler);
                     if (effect)
                     {
-                        // BattleScriptPushCursorAndCallback(BattleScript_TSanaeChange);
                         gBattleScripting.battler = battler;
-                        // *(&gBattleStruct->formToChangeInto) = effect - 1;
                         return effect;
                     }
                 }
