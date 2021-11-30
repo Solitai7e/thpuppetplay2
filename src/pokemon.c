@@ -1340,14 +1340,6 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(OLD_UNOWN_Z),
 };
 
-const struct SKogasaSpot gSKogasaSpotGraphics[] =
-{
-    {16, 7, INCBIN_U16("graphics/skogasa_spots/spot_0.bin")},
-    {40, 8, INCBIN_U16("graphics/skogasa_spots/spot_1.bin")},
-    {22, 25, INCBIN_U16("graphics/skogasa_spots/spot_2.bin")},
-    {34, 26, INCBIN_U16("graphics/skogasa_spots/spot_3.bin")}
-};
-
 #include "data/pokemon/item_effects.h"
 
 const s8 gNatureStatTable[NUM_NATURES][NUM_NATURE_STATS] =
@@ -5620,67 +5612,6 @@ u16 SpeciesToCryId(u16 species)
     return gSpeciesIdToCryId[species - (SPECIES_HEIRIN - 1)];
 }
 
-#define DRAW_SKOGASA_SPOTS                                                       \
-{                                                                               \
-    int i;                                                                      \
-    for (i = 0; i < 4; i++)                                                     \
-    {                                                                           \
-        int j;                                                                  \
-        u8 x = gSKogasaSpotGraphics[i].x + ((personality & 0x0F) - 8);           \
-        u8 y = gSKogasaSpotGraphics[i].y + (((personality & 0xF0) >> 4) - 8);    \
-                                                                                \
-        for (j = 0; j < 16; j++)                                                \
-        {                                                                       \
-            int k;                                                              \
-            s32 row = gSKogasaSpotGraphics[i].image[j];                          \
-                                                                                \
-            for (k = x; k < x + 16; k++)                                        \
-            {                                                                   \
-                u8 *val = dest + ((k / 8) * 32) +                               \
-                                 ((k % 8) / 2) +                                \
-                                 ((y >> 3) << 8) +                              \
-                                 ((y & 7) << 2);                                \
-                                                                                \
-                if (row & 1)                                                    \
-                {                                                               \
-                    if (k & 1)                                                  \
-                    {                                                           \
-                        if ((u8)((*val & 0xF0) - 0x10) <= 0x20)                 \
-                            *val += 0x40;                                       \
-                    }                                                           \
-                    else                                                        \
-                    {                                                           \
-                        if ((u8)((*val & 0xF) - 0x01) <= 0x02)                  \
-                            *val += 0x04;                                       \
-                    }                                                           \
-                }                                                               \
-                                                                                \
-                row >>= 1;                                                      \
-            }                                                                   \
-                                                                                \
-            y++;                                                                \
-        }                                                                       \
-                                                                                \
-        personality >>= 8;                                                      \
-    }                                                                           \
-}
-
-// Same as DrawSKogasaSpots but attempts to discern for itself whether or
-// not it's the front pic.
-static void DrawSKogasaSpotsUnused(u16 species, u32 personality, u8 *dest)
-{
-    if (species == SPECIES_SKOGASA
-        && dest != gMonSpritesGfxPtr->sprites.ptr[B_POSITION_PLAYER_LEFT]
-        && dest != gMonSpritesGfxPtr->sprites.ptr[B_POSITION_PLAYER_RIGHT])
-        DRAW_SKOGASA_SPOTS;
-}
-
-void DrawSKogasaSpots(u16 species, u32 personality, u8 *dest, bool8 isFrontPic)
-{
-    if (species == SPECIES_SKOGASA && isFrontPic)
-        DRAW_SKOGASA_SPOTS;
-}
-
 void EvolutionRenameMon(struct Pokemon *mon, u16 oldSpecies, u16 newSpecies)
 {
     u8 language;
@@ -6799,8 +6730,6 @@ void HandleSetPokedexFlag(u16 nationalNum, u8 caseId, u32 personality)
         GetSetPokedexFlag(nationalNum, caseId);
         if (NationalPokedexNumToSpecies(nationalNum) == SPECIES_UNOWN)
             gSaveBlock2Ptr->pokedex.unownPersonality = personality;
-        if (NationalPokedexNumToSpecies(nationalNum) == SPECIES_SKOGASA)
-            gSaveBlock2Ptr->pokedex.skogasaPersonality = personality;
     }
 }
 
@@ -6820,10 +6749,7 @@ const u8 *GetTrainerNameFromId(u16 trainerId)
 
 bool8 HasTwoFramesAnimation(u16 species)
 {
-    return (species != SPECIES_TSANAE
-         && species != SPECIES_GOMASEKI
-         && species != SPECIES_SKOGASA
-         && species != SPECIES_UNOWN);
+    return (species != SPECIES_GOMASEKI);
 }
 
 static bool8 ShouldSkipFriendshipChange(void)

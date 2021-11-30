@@ -105,7 +105,6 @@ void LoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *dest, s32
         LZ77UnCompWram(src->data, dest);
 
     DuplicateGomasekiTiles(dest, species);
-    DrawSKogasaSpots(species, personality, dest, isFrontPic);
 }
 
 void Unused_LZDecompressWramIndirect(const void **src, void *dest)
@@ -327,7 +326,6 @@ void LoadSpecialPokePic_2(const struct CompressedSpriteSheet *src, void *dest, s
         LZ77UnCompWram(src->data, dest);
 
     DuplicateGomasekiTiles(dest, species);
-    DrawSKogasaSpots(species, personality, dest, isFrontPic);
 }
 
 void HandleLoadSpecialPokePic_2(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality) // a copy of HandleLoadSpecialPokePic
@@ -383,8 +381,6 @@ void LoadSpecialPokePic_DontHandleGomaseki(const struct CompressedSpriteSheet *s
         LZ77UnCompWram(gMonFrontPicTable[0].data, dest);
     else
         LZ77UnCompWram(src->data, dest);
-
-    DrawSKogasaSpots(species, personality, dest, isFrontPic);
 }
 
 static void DuplicateGomasekiTiles(void *pointer, s32 species)
