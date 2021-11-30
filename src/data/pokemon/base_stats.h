@@ -30,7 +30,7 @@
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,        \
         .abilities = {ABILITY_NONE, ABILITY_NONE},  \
         .safariZoneFleeRate = 0,                    \
-        .bodyColor = BODY_COLOR_BLACK,              \
+        .sourceGame = SOURCE_HRTP,              \
         .noFlip = FALSE,                            \
     }
 
@@ -66,7 +66,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_OVERGROW, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -98,7 +98,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_OVERGROW, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -130,7 +130,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_OVERGROW, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -162,7 +162,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_BLAZE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -194,7 +194,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_BLAZE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -226,7 +226,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_BLAZE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -258,7 +258,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_TORRENT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -290,7 +290,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_TORRENT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -322,7 +322,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_TORRENT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -354,7 +354,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SHIELD_DUST, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -386,7 +386,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -418,7 +418,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_COMPOUND_EYES, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -450,7 +450,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SHIELD_DUST, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -482,7 +482,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -514,7 +514,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SWARM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -546,7 +546,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_KEEN_EYE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -578,7 +578,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_KEEN_EYE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -610,7 +610,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_KEEN_EYE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -642,7 +642,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_RUN_AWAY, ABILITY_GUTS},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -674,7 +674,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_RUN_AWAY, ABILITY_GUTS},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -706,7 +706,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_KEEN_EYE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -738,7 +738,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_KEEN_EYE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -770,7 +770,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_SHED_SKIN},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -802,7 +802,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_SHED_SKIN},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -834,7 +834,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_STATIC, ABILITY_NONE},
         .safariZoneFleeRate = 6,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -866,7 +866,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_STATIC, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -898,7 +898,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_SAND_VEIL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -930,7 +930,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_SAND_VEIL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -962,7 +962,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_POISON_POINT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -994,7 +994,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_POISON_POINT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1026,7 +1026,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_POISON_POINT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1058,7 +1058,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_POISON_POINT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1090,7 +1090,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_POISON_POINT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1122,7 +1122,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_POISON_POINT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1154,7 +1154,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_CUTE_CHARM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1186,7 +1186,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_CUTE_CHARM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1218,7 +1218,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_FLASH_FIRE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1250,7 +1250,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_FLASH_FIRE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1282,7 +1282,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_CUTE_CHARM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1314,7 +1314,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_CUTE_CHARM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1346,7 +1346,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_INNER_FOCUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1378,7 +1378,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_INNER_FOCUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1410,7 +1410,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 4,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1442,7 +1442,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 6,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1474,7 +1474,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1506,7 +1506,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_EFFECT_SPORE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1538,7 +1538,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_EFFECT_SPORE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1570,7 +1570,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_COMPOUND_EYES, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1602,7 +1602,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SHIELD_DUST, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1634,7 +1634,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_SAND_VEIL, ABILITY_ARENA_TRAP},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1666,7 +1666,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_SAND_VEIL, ABILITY_ARENA_TRAP},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1698,7 +1698,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_PICKUP, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1730,7 +1730,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_LIMBER, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1762,7 +1762,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_DAMP, ABILITY_CLOUD_NINE},
         .safariZoneFleeRate = 6,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1794,7 +1794,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_DAMP, ABILITY_CLOUD_NINE},
         .safariZoneFleeRate = 8,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1826,7 +1826,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_VITAL_SPIRIT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1858,7 +1858,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_VITAL_SPIRIT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1890,7 +1890,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_FLASH_FIRE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1922,7 +1922,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_FLASH_FIRE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -1954,7 +1954,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_WATER_ABSORB, ABILITY_DAMP},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -1986,7 +1986,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_WATER_ABSORB, ABILITY_DAMP},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -2018,7 +2018,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_WATER_ABSORB, ABILITY_DAMP},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -2050,7 +2050,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_SYNCHRONIZE, ABILITY_INNER_FOCUS},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2082,7 +2082,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_SYNCHRONIZE, ABILITY_INNER_FOCUS},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2114,7 +2114,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_SYNCHRONIZE, ABILITY_INNER_FOCUS},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2146,7 +2146,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_GUTS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2178,7 +2178,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_GUTS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2210,7 +2210,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_GUTS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2242,7 +2242,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2274,7 +2274,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2306,7 +2306,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2338,7 +2338,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_CLEAR_BODY, ABILITY_LIQUID_OOZE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2370,7 +2370,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_CLEAR_BODY, ABILITY_LIQUID_OOZE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2402,7 +2402,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_ROCK_HEAD, ABILITY_STURDY},
         .safariZoneFleeRate = 4,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2434,7 +2434,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_ROCK_HEAD, ABILITY_STURDY},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2466,7 +2466,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_ROCK_HEAD, ABILITY_STURDY},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2498,7 +2498,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_RUN_AWAY, ABILITY_FLASH_FIRE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2530,7 +2530,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_RUN_AWAY, ABILITY_FLASH_FIRE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2562,7 +2562,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_OBLIVIOUS, ABILITY_OWN_TEMPO},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2594,7 +2594,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_OBLIVIOUS, ABILITY_OWN_TEMPO},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2626,7 +2626,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_MAGNET_PULL, ABILITY_STURDY},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2658,7 +2658,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_MAGNET_PULL, ABILITY_STURDY},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2690,7 +2690,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_KEEN_EYE, ABILITY_INNER_FOCUS},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2722,7 +2722,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_RUN_AWAY, ABILITY_EARLY_BIRD},
         .safariZoneFleeRate = 8,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2754,7 +2754,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_RUN_AWAY, ABILITY_EARLY_BIRD},
         .safariZoneFleeRate = 10,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2786,7 +2786,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_THICK_FAT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2818,7 +2818,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_THICK_FAT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2850,7 +2850,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_STENCH, ABILITY_STICKY_HOLD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2882,7 +2882,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_STENCH, ABILITY_STICKY_HOLD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2914,7 +2914,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_SHELL_ARMOR, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2946,7 +2946,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_SHELL_ARMOR, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -2978,7 +2978,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3010,7 +3010,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3042,7 +3042,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3074,7 +3074,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_ROCK_HEAD, ABILITY_STURDY},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3106,7 +3106,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_INSOMNIA, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3138,7 +3138,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_INSOMNIA, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3170,7 +3170,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_HYPER_CUTTER, ABILITY_SHELL_ARMOR},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3202,7 +3202,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_HYPER_CUTTER, ABILITY_SHELL_ARMOR},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -3234,7 +3234,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_SOUNDPROOF, ABILITY_STATIC},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3266,7 +3266,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_SOUNDPROOF, ABILITY_STATIC},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3298,7 +3298,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3330,7 +3330,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3362,7 +3362,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_ROCK_HEAD, ABILITY_LIGHTNING_ROD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3394,7 +3394,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_ROCK_HEAD, ABILITY_LIGHTNING_ROD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3426,7 +3426,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_LIMBER, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3458,7 +3458,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_KEEN_EYE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3490,7 +3490,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_OWN_TEMPO, ABILITY_OBLIVIOUS},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3522,7 +3522,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3554,7 +3554,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3586,7 +3586,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_LIGHTNING_ROD, ABILITY_ROCK_HEAD},
         .safariZoneFleeRate = 4,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3618,7 +3618,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_LIGHTNING_ROD, ABILITY_ROCK_HEAD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3650,7 +3650,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_NATURAL_CURE, ABILITY_SERENE_GRACE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3682,7 +3682,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3714,7 +3714,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_EARLY_BIRD, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3746,7 +3746,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3778,7 +3778,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_POISON_POINT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3810,7 +3810,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_WATER_VEIL},
         .safariZoneFleeRate = 4,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3842,7 +3842,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_WATER_VEIL},
         .safariZoneFleeRate = 6,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3874,7 +3874,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_ILLUMINATE, ABILITY_NATURAL_CURE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3906,7 +3906,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_ILLUMINATE, ABILITY_NATURAL_CURE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3938,7 +3938,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_SOUNDPROOF, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -3970,7 +3970,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SWARM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4002,7 +4002,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_OBLIVIOUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4034,7 +4034,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_STATIC, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -4066,7 +4066,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_FLAME_BODY, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4098,7 +4098,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_HYPER_CUTTER, ABILITY_NONE},
         .safariZoneFleeRate = 8,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4130,7 +4130,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4162,7 +4162,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_NONE},
         .safariZoneFleeRate = 4,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4194,7 +4194,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4226,7 +4226,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_WATER_ABSORB, ABILITY_SHELL_ARMOR},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4258,7 +4258,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_KEDAMA,
         .abilities = {ABILITY_LIMBER, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4290,7 +4290,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_RUN_AWAY, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4322,7 +4322,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_WATER_ABSORB, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4354,7 +4354,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_VOLT_ABSORB, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4386,7 +4386,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_FLASH_FIRE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4418,7 +4418,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_TRACE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4450,7 +4450,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_SHELL_ARMOR},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4482,7 +4482,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_SHELL_ARMOR},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4514,7 +4514,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_BATTLE_ARMOR},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4546,7 +4546,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_BATTLE_ARMOR},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4578,7 +4578,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_ROCK_HEAD, ABILITY_PRESSURE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4610,7 +4610,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_IMMUNITY, ABILITY_THICK_FAT},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLACK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4642,7 +4642,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_PRESSURE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4674,7 +4674,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_PRESSURE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4706,7 +4706,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_PRESSURE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4738,7 +4738,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4770,7 +4770,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4802,7 +4802,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_INNER_FOCUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4834,7 +4834,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_PRESSURE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4866,7 +4866,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_SYNCHRONIZE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4898,7 +4898,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_OVERGROW, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4930,7 +4930,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_OVERGROW, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4962,7 +4962,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_OVERGROW, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -4994,7 +4994,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_BLAZE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5026,7 +5026,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_BLAZE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5058,7 +5058,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_BLAZE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5090,7 +5090,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_TORRENT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5122,7 +5122,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_TORRENT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -5154,7 +5154,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_TORRENT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5186,7 +5186,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_RUN_AWAY, ABILITY_KEEN_EYE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5218,7 +5218,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_RUN_AWAY, ABILITY_KEEN_EYE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5250,7 +5250,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_INSOMNIA, ABILITY_KEEN_EYE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5282,7 +5282,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_INSOMNIA, ABILITY_KEEN_EYE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5314,7 +5314,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SWARM, ABILITY_EARLY_BIRD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5346,7 +5346,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SWARM, ABILITY_EARLY_BIRD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5378,7 +5378,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SWARM, ABILITY_INSOMNIA},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5410,7 +5410,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SWARM, ABILITY_INSOMNIA},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5442,7 +5442,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_INNER_FOCUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5474,7 +5474,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_VOLT_ABSORB, ABILITY_ILLUMINATE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5506,7 +5506,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_VOLT_ABSORB, ABILITY_ILLUMINATE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5538,7 +5538,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_STATIC, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5570,7 +5570,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_CUTE_CHARM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5602,7 +5602,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_CUTE_CHARM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -5634,7 +5634,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_HUSTLE, ABILITY_SERENE_GRACE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5666,7 +5666,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_HUSTLE, ABILITY_SERENE_GRACE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5698,7 +5698,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_SYNCHRONIZE, ABILITY_EARLY_BIRD},
         .safariZoneFleeRate = 6,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5730,7 +5730,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_SYNCHRONIZE, ABILITY_EARLY_BIRD},
         .safariZoneFleeRate = 8,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5762,7 +5762,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_STATIC, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5794,7 +5794,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_STATIC, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5826,7 +5826,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_STATIC, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5858,7 +5858,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5890,7 +5890,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_THICK_FAT, ABILITY_HUGE_POWER},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5922,7 +5922,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_THICK_FAT, ABILITY_HUGE_POWER},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5954,7 +5954,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_STURDY, ABILITY_ROCK_HEAD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -5986,7 +5986,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_WATER_ABSORB, ABILITY_DAMP},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -6018,7 +6018,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6050,7 +6050,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6082,7 +6082,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6114,7 +6114,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_RUN_AWAY, ABILITY_PICKUP},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6146,7 +6146,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6178,7 +6178,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6210,7 +6210,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SPEED_BOOST, ABILITY_COMPOUND_EYES},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6242,7 +6242,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_DAMP, ABILITY_WATER_ABSORB},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6274,7 +6274,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_DAMP, ABILITY_WATER_ABSORB},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6306,7 +6306,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_SYNCHRONIZE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6338,7 +6338,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_SYNCHRONIZE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLACK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6370,7 +6370,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_INSOMNIA, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLACK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6402,7 +6402,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_OBLIVIOUS, ABILITY_OWN_TEMPO},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6434,7 +6434,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6466,7 +6466,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLACK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -6498,7 +6498,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_SHADOW_TAG, ABILITY_NONE},
         .safariZoneFleeRate = 4,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6530,7 +6530,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_INNER_FOCUS, ABILITY_EARLY_BIRD},
         .safariZoneFleeRate = 4,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6562,7 +6562,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_STURDY, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6594,7 +6594,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_STURDY, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6626,7 +6626,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_SERENE_GRACE, ABILITY_RUN_AWAY},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6658,7 +6658,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_HYPER_CUTTER, ABILITY_SAND_VEIL},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6690,7 +6690,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_ROCK_HEAD, ABILITY_STURDY},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6722,7 +6722,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_RUN_AWAY},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6754,7 +6754,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_INTIMIDATE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6786,7 +6786,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_POISON_POINT, ABILITY_SWIFT_SWIM},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6818,7 +6818,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SWARM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6850,7 +6850,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_STURDY, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6882,7 +6882,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SWARM, ABILITY_GUTS},
         .safariZoneFleeRate = 8,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -6914,7 +6914,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_INNER_FOCUS, ABILITY_KEEN_EYE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLACK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -6946,7 +6946,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_PICKUP, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -6978,7 +6978,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_GUTS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7010,7 +7010,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_MAGMA_ARMOR, ABILITY_FLAME_BODY},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7042,7 +7042,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_MAGMA_ARMOR, ABILITY_FLAME_BODY},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7074,7 +7074,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_OBLIVIOUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7106,7 +7106,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_OBLIVIOUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7138,7 +7138,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_HUSTLE, ABILITY_NATURAL_CURE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7170,7 +7170,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_HUSTLE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7202,7 +7202,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_SUCTION_CUPS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7234,7 +7234,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_VITAL_SPIRIT, ABILITY_HUSTLE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7266,7 +7266,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_WATER_ABSORB},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7298,7 +7298,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_KEEN_EYE, ABILITY_STURDY},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7330,7 +7330,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_EARLY_BIRD, ABILITY_FLASH_FIRE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLACK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7362,7 +7362,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_EARLY_BIRD, ABILITY_FLASH_FIRE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLACK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7394,7 +7394,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7426,7 +7426,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_PICKUP, ABILITY_NONE},
         .safariZoneFleeRate = 10,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7458,7 +7458,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_STURDY, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7490,7 +7490,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_TRACE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7522,7 +7522,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7554,7 +7554,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_OWN_TEMPO, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7586,7 +7586,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_GUTS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7618,7 +7618,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7650,7 +7650,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_OBLIVIOUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7682,7 +7682,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_STATIC, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -7714,7 +7714,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_FLAME_BODY, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7746,7 +7746,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_THICK_FAT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7778,7 +7778,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_NATURAL_CURE, ABILITY_SERENE_GRACE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7810,7 +7810,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_PRESSURE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7842,7 +7842,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_PRESSURE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7874,7 +7874,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_PRESSURE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7906,7 +7906,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_GUTS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7938,7 +7938,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -7970,7 +7970,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_SAND_STREAM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8002,7 +8002,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_PRESSURE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8034,7 +8034,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_PRESSURE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8066,7 +8066,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_NATURAL_CURE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8148,7 +8148,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_OVERGROW, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8180,7 +8180,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_OVERGROW, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8212,7 +8212,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_OVERGROW, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8244,7 +8244,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_BLAZE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8276,7 +8276,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_BLAZE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8308,7 +8308,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_BLAZE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8340,7 +8340,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_TORRENT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8372,7 +8372,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_TORRENT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8404,7 +8404,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_TORRENT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8436,7 +8436,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_RUN_AWAY, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8468,7 +8468,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8500,7 +8500,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_PICKUP, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8532,7 +8532,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_PICKUP, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8564,7 +8564,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SHIELD_DUST, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8596,7 +8596,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8628,7 +8628,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SWARM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8660,7 +8660,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8692,7 +8692,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SHIELD_DUST, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8724,7 +8724,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_RAIN_DISH},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8756,7 +8756,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_RAIN_DISH},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8788,7 +8788,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_RAIN_DISH},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8820,7 +8820,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_EARLY_BIRD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8852,7 +8852,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_EARLY_BIRD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8884,7 +8884,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_EARLY_BIRD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8916,7 +8916,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_COMPOUND_EYES, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8948,7 +8948,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SPEED_BOOST, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -8980,7 +8980,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_WONDER_GUARD, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9012,7 +9012,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_GUTS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9044,7 +9044,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_GUTS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9076,7 +9076,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_EFFECT_SPORE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9108,7 +9108,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_EFFECT_SPORE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9140,7 +9140,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_OWN_TEMPO, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -9172,7 +9172,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_KEEN_EYE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9204,7 +9204,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_KEEN_EYE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9236,7 +9236,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9268,7 +9268,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9300,7 +9300,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_WATER_VEIL, ABILITY_OBLIVIOUS},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9332,7 +9332,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_WATER_VEIL, ABILITY_OBLIVIOUS},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9364,7 +9364,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_CUTE_CHARM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9396,7 +9396,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_CUTE_CHARM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9428,7 +9428,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_COLOR_CHANGE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9460,7 +9460,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9492,7 +9492,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLACK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9524,7 +9524,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_STURDY, ABILITY_MAGNET_PULL},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9556,7 +9556,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_WHITE_SMOKE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9588,7 +9588,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_KEEN_EYE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9620,7 +9620,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_OBLIVIOUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9652,7 +9652,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_OBLIVIOUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9684,7 +9684,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9716,7 +9716,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_HYPER_CUTTER, ABILITY_SHELL_ARMOR},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9748,7 +9748,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_HYPER_CUTTER, ABILITY_SHELL_ARMOR},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9780,7 +9780,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9812,7 +9812,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_MARVEL_SCALE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9844,7 +9844,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_ROUGH_SKIN, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9876,7 +9876,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_ROUGH_SKIN, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9908,7 +9908,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_HYPER_CUTTER, ABILITY_ARENA_TRAP},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9940,7 +9940,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_LEVITATE, ABILITY_LEVITATE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -9972,7 +9972,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_LEVITATE, ABILITY_LEVITATE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10004,7 +10004,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_THICK_FAT, ABILITY_GUTS},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10036,7 +10036,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_THICK_FAT, ABILITY_GUTS},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10068,7 +10068,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_STATIC, ABILITY_LIGHTNING_ROD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10100,7 +10100,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_STATIC, ABILITY_LIGHTNING_ROD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10132,7 +10132,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_OBLIVIOUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10164,7 +10164,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_MAGMA_ARMOR, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10196,7 +10196,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_THICK_FAT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10228,7 +10228,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_THICK_FAT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10260,7 +10260,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_THICK_FAT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10292,7 +10292,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_SAND_VEIL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10324,7 +10324,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_SAND_VEIL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10356,7 +10356,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_INNER_FOCUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10388,7 +10388,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_INNER_FOCUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10420,7 +10420,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10452,7 +10452,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10484,7 +10484,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_THICK_FAT, ABILITY_HUGE_POWER},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10516,7 +10516,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_THICK_FAT, ABILITY_OWN_TEMPO},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLACK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10548,7 +10548,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_THICK_FAT, ABILITY_OWN_TEMPO},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10580,7 +10580,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_PLUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10612,7 +10612,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_MINUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10644,7 +10644,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_HYPER_CUTTER, ABILITY_INTIMIDATE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLACK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10676,7 +10676,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_PURE_POWER, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10708,7 +10708,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_PURE_POWER, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10740,7 +10740,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_NATURAL_CURE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10772,7 +10772,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_NATURAL_CURE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10804,7 +10804,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_SHADOW_TAG, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10836,7 +10836,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLACK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10868,7 +10868,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_PRESSURE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLACK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10900,7 +10900,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_NATURAL_CURE, ABILITY_POISON_POINT},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -10932,7 +10932,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_TRUANT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10964,7 +10964,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_VITAL_SPIRIT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -10996,7 +10996,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_TRUANT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11028,7 +11028,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LIQUID_OOZE, ABILITY_STICKY_HOLD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11060,7 +11060,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LIQUID_OOZE, ABILITY_STICKY_HOLD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11092,7 +11092,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11124,7 +11124,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_SOUNDPROOF, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11156,7 +11156,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_SOUNDPROOF, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11188,7 +11188,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_SOUNDPROOF, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11220,7 +11220,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_SHELL_ARMOR, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11252,7 +11252,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11284,7 +11284,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PINK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11316,7 +11316,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_PRESSURE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -11348,7 +11348,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_INSOMNIA, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLACK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11380,7 +11380,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_INSOMNIA, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLACK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11412,7 +11412,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLACK,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -11444,7 +11444,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_IMMUNITY, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -11476,7 +11476,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_ROCK_HEAD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11508,7 +11508,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_STURDY, ABILITY_ROCK_HEAD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11540,7 +11540,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_STURDY, ABILITY_ROCK_HEAD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11572,7 +11572,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_STURDY, ABILITY_ROCK_HEAD},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11604,7 +11604,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_FORECAST, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11636,7 +11636,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_ILLUMINATE, ABILITY_SWARM},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11668,7 +11668,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_OBLIVIOUS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11700,7 +11700,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_SUCTION_CUPS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_PURPLE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11732,7 +11732,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_SUCTION_CUPS, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11764,7 +11764,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_BATTLE_ARMOR, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11796,7 +11796,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_BATTLE_ARMOR, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11828,7 +11828,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_SYNCHRONIZE, ABILITY_TRACE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11860,7 +11860,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_SYNCHRONIZE, ABILITY_TRACE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11892,7 +11892,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_SYNCHRONIZE, ABILITY_TRACE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11924,7 +11924,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_ROCK_HEAD, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11956,7 +11956,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_ROCK_HEAD, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_WHITE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -11988,7 +11988,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -12020,7 +12020,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_CLEAR_BODY, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -12052,7 +12052,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_CLEAR_BODY, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -12084,7 +12084,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_CLEAR_BODY, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -12116,7 +12116,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_CLEAR_BODY, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BROWN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -12148,7 +12148,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_CLEAR_BODY, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -12180,7 +12180,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_CLEAR_BODY, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GRAY,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -12212,7 +12212,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_DRIZZLE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -12244,7 +12244,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_DROUGHT, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -12276,7 +12276,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_AIR_LOCK, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_GREEN,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -12308,7 +12308,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -12340,7 +12340,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -12372,7 +12372,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_SERENE_GRACE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_YELLOW,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     },
 
@@ -12404,7 +12404,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_PRESSURE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_RED,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = TRUE,
     },
 
@@ -12436,7 +12436,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .bodyColor = BODY_COLOR_BLUE,
+        .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
     }
 };

@@ -4,24 +4,24 @@
 // Pokemon types
 #define TYPE_NONE             255
 #define TYPE_ILLUSION           0
-#define TYPE_DREAM         1
-#define TYPE_FLYING           2
-#define TYPE_MIASMA           3
-#define TYPE_EARTH           4
-#define TYPE_BEAST             5
+#define TYPE_DREAM              1
+#define TYPE_FLYING             2
+#define TYPE_MIASMA             3
+#define TYPE_EARTH              4
+#define TYPE_BEAST              5
 #define TYPE_HEART              6
-#define TYPE_GHOST            7
-#define TYPE_BLADE            8
-#define TYPE_MYSTERY          9
-#define TYPE_FIRE             10
-#define TYPE_WATER            11
+#define TYPE_GHOST              7
+#define TYPE_BLADE              8
+#define TYPE_MYSTERY            9
+#define TYPE_FIRE              10
+#define TYPE_WATER             11
 #define TYPE_NATURE            12
-#define TYPE_WIND         13
-#define TYPE_REASON          14
-#define TYPE_ICE              15
-#define TYPE_FAITH           16
-#define TYPE_DARK             17
-#define NUMBER_OF_MON_TYPES   18
+#define TYPE_WIND              13
+#define TYPE_REASON            14
+#define TYPE_ICE               15
+#define TYPE_FAITH             16
+#define TYPE_DARK              17
+#define NUMBER_OF_MON_TYPES    18
 
 // Pokemon egg groups
 #define EGG_GROUP_NONE          0
@@ -37,7 +37,7 @@
 #define EGG_GROUP_MINERAL       10
 #define EGG_GROUP_AMORPHOUS     11
 #define EGG_GROUP_WATER_2       12
-#define EGG_GROUP_KEDAMA         13
+#define EGG_GROUP_KEDAMA        13
 #define EGG_GROUP_DRAGON        14
 #define EGG_GROUP_UNDISCOVERED  15
 
@@ -297,17 +297,28 @@
 #define GROWTH_FAST         4
 #define GROWTH_SLOW         5
 
-// Body colors for pokedex search
-#define BODY_COLOR_RED      0
-#define BODY_COLOR_BLUE     1
-#define BODY_COLOR_YELLOW   2
-#define BODY_COLOR_GREEN    3
-#define BODY_COLOR_BLACK    4
-#define BODY_COLOR_BROWN    5
-#define BODY_COLOR_PURPLE   6
-#define BODY_COLOR_GRAY     7
-#define BODY_COLOR_WHITE    8
-#define BODY_COLOR_PINK     9
+// Source game for dex search
+#define SOURCE_HRTP      0
+#define SOURCE_SOEW      1
+#define SOURCE_PODD      2
+#define SOURCE_LLS       3
+#define SOURCE_MS        4
+#define SOURCE_EOSD      5
+#define SOURCE_PCB       6
+#define SOURCE_IN        7
+#define SOURCE_POFV      8
+#define SOURCE_MOF       9
+#define SOURCE_SA       10
+#define SOURCE_UFO      11
+#define SOURCE_TD       12
+#define SOURCE_DDC      13
+#define SOURCE_LOLK     14
+#define SOURCE_HSIFS    15
+#define SOURCE_WBAWC    16
+#define SOURCE_UM       17
+#define SOURCE_SPINOFF  18
+#define SOURCE_PRINT    19
+#define SOURCE_OTHER    20
 
 #define F_SUMMARY_SCREEN_FLIP_SPRITE 0x80
 
