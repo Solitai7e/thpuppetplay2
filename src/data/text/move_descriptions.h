@@ -989,9 +989,9 @@ static const u8 sShadowBallDescription[] = _(
     "Hurls a black blob that may\n"
     "lower the foe's SP. DEF.");
 
-static const u8 sFutureSightDescription[] = _(
-    "Heightens inner power to\n"
-    "strike 2 turns later.");
+static const u8 sPsychoCutDescription[] = _(
+    "Has a high critical ratio\n"
+    "and hits hard.");
 
 static const u8 sRockSmashDescription[] = _(
     "A rock-crushing attack\n"
@@ -1667,7 +1667,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_EXTREME_SPEED - 1] = sExtremeSpeedDescription,
     [MOVE_ANCIENT_POWER - 1] = sAncientPowerDescription,
     [MOVE_SHADOW_BALL - 1] = sShadowBallDescription,
-    [MOVE_FUTURE_SIGHT - 1] = sFutureSightDescription,
+    [MOVE_PSYCHO_CUT - 1] = sPsychoCutDescription,
     [MOVE_ROCK_SMASH - 1] = sRockSmashDescription,
     [MOVE_WHIRLPOOL - 1] = sWhirlpoolDescription,
     [MOVE_BEAT_UP - 1] = sBeatUpDescription,

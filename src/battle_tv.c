@@ -60,7 +60,7 @@ enum {
     FNT_NIGHTMARE,
     FNT_WRAP,
     FNT_SPIKES,
-    FNT_FUTURE_SIGHT,
+    FNT_PSYCHO_CUT,
     FNT_DOOM_DESIRE,
     FNT_PERISH_SONG,
     FNT_DESTINY_BOND,
@@ -234,7 +234,7 @@ static const u16 sPoints_MoveEffect[NUM_BATTLE_MOVE_EFFECTS] =
     [EFFECT_SKULL_BASH] = 3,
     [EFFECT_TWISTER] = 1,
     [EFFECT_EARTHQUAKE] = 1,
-    [EFFECT_FUTURE_SIGHT] = 1,
+    [EFFECT_PSYCHO_CUT] = 1,
     [EFFECT_GUST] = 1,
     [EFFECT_FLINCH_MINIMIZE_HIT] = 1,
     [EFFECT_SOLAR_BEAM] = 1,
@@ -1028,12 +1028,12 @@ void BattleTv_SetDataBasedOnAnimation(u8 animationId)
     atkSide = GetBattlerSide(gBattlerAttacker);
     switch (animationId)
     {
-    case B_ANIM_FUTURE_SIGHT_HIT:
+    case B_ANIM_PSYCHO_CUT_HIT:
         if (tvPtr->side[atkSide].futureSightMonId != 0)
         {
             AddMovePoints(PTS_SET_UP, 0, atkSide,
                         (tvPtr->side[atkSide].futureSightMonId - 1) * 4 + tvPtr->side[atkSide].futureSightMoveSlot);
-            tvPtr->side[atkSide].faintCause = FNT_FUTURE_SIGHT;
+            tvPtr->side[atkSide].faintCause = FNT_PSYCHO_CUT;
         }
         break;
     case B_ANIM_DOOM_DESIRE_HIT:
@@ -1331,7 +1331,7 @@ static void AddPointsOnFainting(bool8 targetFainted)
                 (tvPtr->side[atkSide].spikesMonId - 1) * 4 + tvPtr->side[atkSide].spikesMoveSlot);
             }
             break;
-        case FNT_FUTURE_SIGHT:
+        case FNT_PSYCHO_CUT:
             if (tvPtr->side[atkSide].futureSightMonId != 0)
             {
                 AddMovePoints(PTS_FAINT_SET_UP, 0, atkSide,

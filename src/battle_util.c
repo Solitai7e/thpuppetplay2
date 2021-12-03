@@ -1784,8 +1784,8 @@ bool8 HandleWishPerishSongOnTurnEnd(void)
              && --gWishFutureKnock.futureSightCounter[gActiveBattler] == 0
              && gBattleMons[gActiveBattler].hp != 0)
             {
-                if (gWishFutureKnock.futureSightMove[gActiveBattler] == MOVE_FUTURE_SIGHT)
-                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_FUTURE_SIGHT;
+                if (gWishFutureKnock.futureSightMove[gActiveBattler] == MOVE_PSYCHO_CUT)
+                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PSYCHO_CUT;
                 else
                     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DOOM_DESIRE;
 
