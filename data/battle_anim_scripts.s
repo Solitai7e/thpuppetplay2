@@ -264,7 +264,7 @@ gBattleAnims_Moves::
 	.4byte Move_EXTREME_SPEED
 	.4byte Move_ANCIENT_POWER
 	.4byte Move_SHADOW_BALL
-	.4byte Move_PSYCHO_CUT
+	.4byte Move_FUTURE_SIGHT
 	.4byte Move_ROCK_SMASH
 	.4byte Move_WHIRLPOOL
 	.4byte Move_BEAT_UP
@@ -404,7 +404,7 @@ gBattleAnims_General::
 	.4byte General_MonHit                   @ B_ANIM_MON_HIT
 	.4byte General_ItemSteal                @ B_ANIM_ITEM_STEAL
 	.4byte General_SnatchMove               @ B_ANIM_SNATCH_MOVE
-	.4byte General_PsychoCutHit           @ B_ANIM_PSYCHO_CUT_HIT
+	.4byte General_FutureSightHit           @ B_ANIM_FUTURE_SIGHT_HIT
 	.4byte General_DoomDesireHit            @ B_ANIM_DOOM_DESIRE_HIT
 	.4byte General_FocusPunchSetUp          @ B_ANIM_FOCUS_PUNCH_SETUP
 	.4byte General_IngrainHeal              @ B_ANIM_INGRAIN_HEAL
@@ -4740,14 +4740,14 @@ Move_PSYCHIC:
 	call UnsetPsychicBackground
 	end
 
-Move_PSYCHO_CUT:
-	goto PsychoCut
-PsychoCutContinue:
+Move_FUTURE_SIGHT:
+	goto FutureSight
+FutureSightContinue:
 	waitforvisualfinish
 	delay 1
 	call UnsetPsychicBackground
 	end
-PsychoCut:
+FutureSight:
 	monbg ANIM_ATK_PARTNER
 	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
 	call SetPsychicBackground
@@ -4758,7 +4758,7 @@ PsychoCut:
 	waitforvisualfinish
 	clearmonbg ANIM_ATK_PARTNER
 	blendoff
-	goto PsychoCutContinue
+	goto FutureSightContinue
 
 Move_THUNDER:
 	loadspritegfx ANIM_TAG_LIGHTNING
@@ -10555,7 +10555,7 @@ SnatchPartnerMonMove:
 	createvisualtask AnimTask_SnatchPartnerMove, 2
 	goto SnatchMoveContinue
 
-General_PsychoCutHit:
+General_FutureSightHit:
 	createvisualtask AnimTask_SetAnimTargetToBattlerTarget, 2
 	monbg ANIM_DEF_PARTNER
 	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER

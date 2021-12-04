@@ -3472,7 +3472,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_PSYCHO_CUT] =
+    [MOVE_FUTURE_SIGHT] =
     {
         .effect = EFFECT_HIGH_CRITICAL,
         .split = 0,

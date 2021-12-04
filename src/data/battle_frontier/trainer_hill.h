@@ -346,7 +346,7 @@ static const struct TrHillFloor sDataTagJPDefault_Floors[] = {
                     [4] = {
                         .species = SPECIES_ALILYBLACK,
                         .heldItem = ITEM_PERSIM_BERRY,
-                        .moves = { MOVE_PSYWAVE, MOVE_PSYCHO_CUT, MOVE_CONFUSE_RAY, MOVE_MAGIC_COAT },
+                        .moves = { MOVE_PSYWAVE, MOVE_FUTURE_SIGHT, MOVE_CONFUSE_RAY, MOVE_MAGIC_COAT },
                         .level = 0,
                         .ppBonuses = 0x0,
                         .hpEV = 100,
@@ -1920,7 +1920,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_DYUUGI,
                                             .heldItem = ITEM_SILK_SCARF,
-                                            .moves = {MOVE_PSYBEAM, MOVE_MAGIC_COAT, MOVE_BOUNCE, MOVE_PSYCHO_CUT},
+                                            .moves = {MOVE_PSYBEAM, MOVE_MAGIC_COAT, MOVE_BOUNCE, MOVE_FUTURE_SIGHT},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 255,

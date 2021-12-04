@@ -1239,7 +1239,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_MUD_SPORT,
             MOVE_WATER_SPORT,
             MOVE_EARTHQUAKE,
-            MOVE_PSYCHO_CUT
+            MOVE_FUTURE_SIGHT
         },
         .cool = 45,
         .beauty = 45,
@@ -1405,7 +1405,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_DISABLE,
-            MOVE_PSYCHO_CUT,
+            MOVE_FUTURE_SIGHT,
             MOVE_HIDDEN_POWER,
             MOVE_RETURN
         },
@@ -1937,7 +1937,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_EXPLOSION,
-            MOVE_PSYCHO_CUT,
+            MOVE_FUTURE_SIGHT,
             MOVE_PSYCHIC,
             MOVE_CONFUSION
         },
@@ -2469,7 +2469,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_NIGHT_SHADE,
-            MOVE_PSYCHO_CUT,
+            MOVE_FUTURE_SIGHT,
             MOVE_CONFUSE_RAY,
             MOVE_PSYCHIC
         },

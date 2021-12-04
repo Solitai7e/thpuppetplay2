@@ -514,7 +514,7 @@
 #define B_MSG_SOOTHING_AROMA           4
 
 // gFutureMoveUsedStringIds
-#define B_MSG_PSYCHO_CUT 0
+#define B_MSG_FUTURE_SIGHT 0
 #define B_MSG_DOOM_DESIRE  1
 
 // gItemSwapStringIds

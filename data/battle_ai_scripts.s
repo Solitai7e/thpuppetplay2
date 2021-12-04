@@ -179,7 +179,7 @@ AI_CheckBadMove_CheckEffect:
 	if_effect EFFECT_PSYCH_UP, AI_CBM_Haze
 	if_effect EFFECT_MIRROR_COAT, AI_CBM_HighRiskForDamage
 	if_effect EFFECT_SKULL_BASH, AI_CBM_HighRiskForDamage
-	if_effect EFFECT_PSYCHO_CUT, AI_CBM_PsychoCut
+	if_effect EFFECT_FUTURE_SIGHT, AI_CBM_FutureSight
 	if_effect EFFECT_TELEPORT, Score_Minus10
 	if_effect EFFECT_DEFENSE_CURL, AI_CBM_DefenseUp
 	if_effect EFFECT_FAKE_OUT, AI_CBM_FakeOut
@@ -495,7 +495,7 @@ AI_CBM_SunnyDay:
 	if_equal AI_WEATHER_SUN, Score_Minus8
 	end
 
-AI_CBM_PsychoCut:
+AI_CBM_FutureSight:
 	if_side_affecting AI_TARGET, SIDE_STATUS_FUTUREATTACK, Score_Minus12
 	if_side_affecting AI_USER, SIDE_STATUS_FUTUREATTACK, Score_Minus12
 	score +5
@@ -1723,7 +1723,7 @@ AI_CV_Encore_EncouragedMovesToEncore:
     .byte EFFECT_SUNNY_DAY
     .byte EFFECT_BELLY_DRUM
     .byte EFFECT_PSYCH_UP
-    .byte EFFECT_PSYCHO_CUT
+    .byte EFFECT_FUTURE_SIGHT
     .byte EFFECT_FAKE_OUT
     .byte EFFECT_STOCKPILE
     .byte EFFECT_SPIT_UP
