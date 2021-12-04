@@ -11,8 +11,7 @@ TerraCave_End_OnResume:
 
 TerraCave_End_EventScript_TryRemoveMiko::
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_ne Common_EventScript_NopReturn
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
 	removeobject LOCALID_MIKO
 	return
 
@@ -43,12 +42,9 @@ TerraCave_End_EventScript_Miko::
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	setvar VAR_TEMP_1, 0
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq TerraCave_End_EventScript_DefeatedMiko
-	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq TerraCave_End_EventScript_RanFromMiko
-	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq TerraCave_End_EventScript_RanFromMiko
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, TerraCave_End_EventScript_DefeatedMiko
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, TerraCave_End_EventScript_RanFromMiko
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, TerraCave_End_EventScript_RanFromMiko
 	setvar VAR_SHOULD_END_ABNORMAL_WEATHER, 1
 	setflag FLAG_DEFEATED_MIKO
 	releaseall

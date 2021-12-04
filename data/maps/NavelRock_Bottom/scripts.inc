@@ -25,8 +25,7 @@ NavelRock_Bottom_OnResume:
 
 NavelRock_Bottom_EventScript_TryRemoveSKomachi::
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_ne Common_EventScript_NopReturn
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
 	removeobject LOCALID_SKOMACHI
 	return
 
@@ -63,12 +62,9 @@ NavelRock_Bottom_EventScript_SKomachi::
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq NavelRock_Bottom_EventScript_DefeatedSKomachi
-	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq NavelRock_Bottom_EventScript_RanFromSKomachi
-	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq NavelRock_Bottom_EventScript_RanFromSKomachi
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NavelRock_Bottom_EventScript_DefeatedSKomachi
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NavelRock_Bottom_EventScript_RanFromSKomachi
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NavelRock_Bottom_EventScript_RanFromSKomachi
 	setflag FLAG_CAUGHT_SKOMACHI
 	release
 	end

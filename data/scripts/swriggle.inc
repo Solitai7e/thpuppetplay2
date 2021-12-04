@@ -48,17 +48,14 @@ Route119_EventScript_SWriggle2::
 	end
 
 EventScript_SWriggle::
-	checkitem ITEM_DEVON_SCOPE, 1
-	compare VAR_RESULT, 1
-	goto_if_eq EventScript_AskUseDevonScope
+	checkitem ITEM_DEVON_SCOPE
+	goto_if_eq VAR_RESULT, TRUE, EventScript_AskUseDevonScope
 	msgbox SWriggle_Text_SomethingUnseeable, MSGBOX_DEFAULT
 	release
 	end
 
 EventScript_AskUseDevonScope::
-	msgbox SWriggle_Text_WantToUseDevonScope, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq EventScript_BattleSWriggle
+	goto_if_eq VAR_RESULT, YES, EventScript_BattleSWriggle
 	release
 	end
 
@@ -78,12 +75,9 @@ EventScript_BattleSWriggle::
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq EventScript_RemoveSWriggle
-	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq EventScript_RemoveSWriggle
-	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq EventScript_RemoveSWriggle
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, EventScript_RemoveSWriggle
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, EventScript_RemoveSWriggle
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, EventScript_RemoveSWriggle
 	release
 	end
 

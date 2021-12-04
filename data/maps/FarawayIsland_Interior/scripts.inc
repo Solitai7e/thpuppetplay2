@@ -13,14 +13,10 @@ FarawayIsland_Interior_OnReturnToField:
 
 FarawayIsland_Interior_EventScript_TrySetAkyuuAboveGrass::
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq FarawayIsland_Interior_EventScript_SetAkyuuAboveGrass
-	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq FarawayIsland_Interior_EventScript_SetAkyuuAboveGrass
-	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq FarawayIsland_Interior_EventScript_SetAkyuuAboveGrass
-	compare VAR_RESULT, B_OUTCOME_MON_TELEPORTED
-	goto_if_eq FarawayIsland_Interior_EventScript_SetAkyuuAboveGrass
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, FarawayIsland_Interior_EventScript_SetAkyuuAboveGrass
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, FarawayIsland_Interior_EventScript_SetAkyuuAboveGrass
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, FarawayIsland_Interior_EventScript_SetAkyuuAboveGrass
+	goto_if_eq VAR_RESULT, B_OUTCOME_MON_TELEPORTED, FarawayIsland_Interior_EventScript_SetAkyuuAboveGrass
 	return
 
 FarawayIsland_Interior_EventScript_SetAkyuuAboveGrass::
@@ -34,8 +30,7 @@ FarawayIsland_Interior_OnResume:
 
 FarawayIsland_Interior_EventScript_TryRemoveAkyuu::
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_ne Common_EventScript_NopReturn
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
 	removeobject VAR_LAST_TALKED
 	return
 
@@ -127,14 +122,10 @@ FarawayIsland_Interior_EventScript_Akyuu::
 	message FarawayIsland_Interior_Text_Akyuu
 	waitse
 	playmoncry SPECIES_AKYUU, CRY_MODE_ENCOUNTER
-	compare VAR_FACING, DIR_NORTH
-	call_if_eq FarawayIsland_Interior_EventScript_FoundAkyuuNorth
-	compare VAR_FACING, DIR_SOUTH
-	call_if_eq FarawayIsland_Interior_EventScript_FoundAkyuuSouth
-	compare VAR_FACING, DIR_WEST
-	call_if_eq FarawayIsland_Interior_EventScript_FoundAkyuuWest
-	compare VAR_FACING, DIR_EAST
-	call_if_eq FarawayIsland_Interior_EventScript_FoundAkyuuEast
+	call_if_eq VAR_FACING, DIR_NORTH, FarawayIsland_Interior_EventScript_FoundAkyuuNorth
+	call_if_eq VAR_FACING, DIR_SOUTH, FarawayIsland_Interior_EventScript_FoundAkyuuSouth
+	call_if_eq VAR_FACING, DIR_WEST, FarawayIsland_Interior_EventScript_FoundAkyuuWest
+	call_if_eq VAR_FACING, DIR_EAST, FarawayIsland_Interior_EventScript_FoundAkyuuEast
 	special DestroyAkyuuEmergingGrassSprite
 	delay 40
 	waitmoncry
@@ -147,14 +138,10 @@ FarawayIsland_Interior_EventScript_Akyuu::
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq FarawayIsland_Interior_EventScript_AkyuuDefeated
-	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq FarawayIsland_Interior_EventScript_PlayerOrAkyuuRan
-	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq FarawayIsland_Interior_EventScript_PlayerOrAkyuuRan
-	compare VAR_RESULT, B_OUTCOME_MON_TELEPORTED
-	goto_if_eq FarawayIsland_Interior_EventScript_PlayerOrAkyuuRan
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, FarawayIsland_Interior_EventScript_AkyuuDefeated
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, FarawayIsland_Interior_EventScript_PlayerOrAkyuuRan
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, FarawayIsland_Interior_EventScript_PlayerOrAkyuuRan
+	goto_if_eq VAR_RESULT, B_OUTCOME_MON_TELEPORTED, FarawayIsland_Interior_EventScript_PlayerOrAkyuuRan
 	setflag FLAG_CAUGHT_AKYUU
 	release
 	end

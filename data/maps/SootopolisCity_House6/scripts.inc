@@ -6,12 +6,10 @@ SootopolisCity_House6_EventScript_Woman::
 	faceplayer
 	goto_if_set FLAG_RECEIVED_DMEILING_DOLL, SootopolisCity_House6_EventScript_ReceivedDMeilingDoll
 	msgbox SootopolisCity_House6_Text_FirstGuestInWhileTakeDoll, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	call_if_eq SootopolisCity_House6_EventScript_DeclineDMeilingDoll
+	call_if_eq VAR_RESULT, NO, SootopolisCity_House6_EventScript_DeclineDMeilingDoll
 	msgbox SootopolisCity_House6_Text_TakeGoodCareOfIt, MSGBOX_DEFAULT
 	givedecoration DECOR_DMEILING_DOLL
-	compare VAR_RESULT, FALSE
-	goto_if_eq SootopolisCity_House6_EventScript_NoRoomForDMeilingDoll
+	goto_if_eq VAR_RESULT, FALSE, SootopolisCity_House6_EventScript_NoRoomForDMeilingDoll
 	setflag FLAG_RECEIVED_DMEILING_DOLL
 	release
 	end
@@ -27,7 +25,7 @@ SootopolisCity_House6_EventScript_ReceivedDMeilingDoll::
 	end
 
 SootopolisCity_House6_EventScript_NoRoomForDMeilingDoll::
-	bufferdecorationname 1, DECOR_DMEILING_DOLL
+	bufferdecorationname STR_VAR_2, DECOR_DMEILING_DOLL
 	msgbox gText_NoRoomLeftForAnother, MSGBOX_DEFAULT
 	msgbox SootopolisCity_House6_Text_IllHoldItForYou, MSGBOX_DEFAULT
 	release

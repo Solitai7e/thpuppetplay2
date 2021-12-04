@@ -34,8 +34,7 @@ FortreeCity_House4_EventScript_TKogasaReturned::
 	waitmovement 0
 	msgbox FortreeCity_House4_Text_WelcomeTKogasaTakeMentalHerb, MSGBOX_DEFAULT
 	giveitem ITEM_MENTAL_HERB
-	compare VAR_RESULT, FALSE
-	goto_if_eq Common_EventScript_ShowBagIsFull
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_MENTAL_HERB
 	releaseall
 	end

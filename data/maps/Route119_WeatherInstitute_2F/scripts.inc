@@ -10,10 +10,8 @@ Route119_WeatherInstitute_2F_MapScripts::
 	.byte 0
 
 Route119_WeatherInstitute_2F_OnTransition:
-	compare VAR_WEATHER_INSTITUTE_STATE, 0
-	call_if_eq Route119_WeatherInstitute_2F_EventScript_SetScientistPosAquaHere
-	compare VAR_WEATHER_INSTITUTE_STATE, 1
-	call_if_eq Route119_WeatherInstitute_2F_EventScript_SetScientistPosAquaGone
+	call_if_eq VAR_WEATHER_INSTITUTE_STATE, 0, Route119_WeatherInstitute_2F_EventScript_SetScientistPosAquaHere
+	call_if_eq VAR_WEATHER_INSTITUTE_STATE, 1, Route119_WeatherInstitute_2F_EventScript_SetScientistPosAquaGone
 	call_if_set FLAG_SYS_GAME_CLEAR, Route119_WeatherInstitute_2F_EventScript_SetScientistPosGameClear
 	end
 
@@ -92,18 +90,15 @@ Route119_WeatherInstitute_2F_EventScript_ReceiveTSanae::
 	msgbox Route119_WeatherInstitute_2F_Text_ThanksPleaseTakePokemon, MSGBOX_DEFAULT
 	setvar VAR_TEMP_1, SPECIES_TSANAE
 	givemon SPECIES_TSANAE, 25, ITEM_MYSTIC_WATER
-	compare VAR_RESULT, 0
-	goto_if_eq Route119_WeatherInstitute_2F_EventScript_ReceiveTSanaeParty
-	compare VAR_RESULT, 1
-	goto_if_eq Route119_WeatherInstitute_2F_EventScript_ReceiveTSanaePC
+	goto_if_eq VAR_RESULT, 0, Route119_WeatherInstitute_2F_EventScript_ReceiveTSanaeParty
+	goto_if_eq VAR_RESULT, 1, Route119_WeatherInstitute_2F_EventScript_ReceiveTSanaePC
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 Route119_WeatherInstitute_2F_EventScript_ReceiveTSanaeParty::
 	call Route119_WeatherInstitute_2F_EventScript_ReceivedTSanaeFanfare
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Route119_WeatherInstitute_2F_EventScript_ExplainTSanae
+	goto_if_eq VAR_RESULT, NO, Route119_WeatherInstitute_2F_EventScript_ExplainTSanae
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
 	goto Route119_WeatherInstitute_2F_EventScript_ExplainTSanae
@@ -112,8 +107,7 @@ Route119_WeatherInstitute_2F_EventScript_ReceiveTSanaeParty::
 Route119_WeatherInstitute_2F_EventScript_ReceiveTSanaePC::
 	call Route119_WeatherInstitute_2F_EventScript_ReceivedTSanaeFanfare
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq Route119_WeatherInstitute_2F_EventScript_SendTSanaeToPC
+	goto_if_eq VAR_RESULT, NO, Route119_WeatherInstitute_2F_EventScript_SendTSanaeToPC
 	call Common_EventScript_NameReceivedBoxMon
 	goto Route119_WeatherInstitute_2F_EventScript_SendTSanaeToPC
 	end
@@ -128,7 +122,7 @@ Route119_WeatherInstitute_2F_EventScript_ReceivedTSanaeFanfare::
 	message Route119_WeatherInstitute_2F_Text_PlayerReceivedTSanae
 	waitmessage
 	waitfanfare
-	bufferspeciesname 0, SPECIES_TSANAE
+	bufferspeciesname STR_VAR_1, SPECIES_TSANAE
 	return
 
 Route119_WeatherInstitute_2F_EventScript_ExplainTSanae::
@@ -147,12 +141,10 @@ Route119_WeatherInstitute_2F_EventScript_TryStartAbnormalWeather::
 	setvar VAR_0x8004, 0
 	call_if_set FLAG_DEFEATED_CMIKO, Route119_WeatherInstitute_2F_EventScript_LegendaryDefeated
 	call_if_set FLAG_DEFEATED_MIKO, Route119_WeatherInstitute_2F_EventScript_LegendaryDefeated
-	compare VAR_0x8004, 2  @ Both defeated
-	goto_if_eq Route119_WeatherInstitute_2F_EventScript_NoAbnormalWeather
+	goto_if_eq VAR_0x8004, 2, Route119_WeatherInstitute_2F_EventScript_NoAbnormalWeather  @ Both defeated
 	call_if_unset FLAG_TEMP_2, Route119_WeatherInstitute_2F_EventScript_CreateAbnormalWeather
 	specialvar VAR_RESULT, GetAbnormalWeatherMapNameAndType
-	compare VAR_RESULT, 1
-	goto_if_eq Route119_WeatherInstitute_2F_EventScript_CMikoWeather
+	goto_if_eq VAR_RESULT, 1, Route119_WeatherInstitute_2F_EventScript_CMikoWeather
 	msgbox Route119_WeatherInstitute_2F_Text_MikoWeather, MSGBOX_DEFAULT
 	release
 	end

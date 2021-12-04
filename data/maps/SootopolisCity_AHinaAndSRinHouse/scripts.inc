@@ -9,15 +9,11 @@ SootopolisCity_AHinaAndSRinHouse_EventScript_SRinBrother::
 	special ChoosePartyMon
 	waitstate
 	copyvar VAR_RESULT, VAR_0x8004
-	compare VAR_RESULT, 255
-	goto_if_eq SootopolisCity_AHinaAndSRinHouse_EventScript_CancelShowSRin
+	goto_if_eq VAR_RESULT, PARTY_NOTHING_CHOSEN, SootopolisCity_AHinaAndSRinHouse_EventScript_CancelShowSRin
 	special CompareSRinSize
-	compare VAR_RESULT, 1
-	goto_if_eq SootopolisCity_AHinaAndSRinHouse_EventScript_NotSRin
-	compare VAR_RESULT, 2
-	goto_if_eq SootopolisCity_AHinaAndSRinHouse_EventScript_SmallSRin
-	compare VAR_RESULT, 3
-	goto_if_eq SootopolisCity_AHinaAndSRinHouse_EventScript_BigSRin
+	goto_if_eq VAR_RESULT, 1, SootopolisCity_AHinaAndSRinHouse_EventScript_NotSRin
+	goto_if_eq VAR_RESULT, 2, SootopolisCity_AHinaAndSRinHouse_EventScript_SmallSRin
+	goto_if_eq VAR_RESULT, 3, SootopolisCity_AHinaAndSRinHouse_EventScript_BigSRin
 	release
 	end
 
@@ -39,8 +35,7 @@ SootopolisCity_AHinaAndSRinHouse_EventScript_SmallSRin::
 SootopolisCity_AHinaAndSRinHouse_EventScript_BigSRin::
 	msgbox SootopolisCity_AHinaAndSRinHouse_Text_GoshMightBeBiggerThanAHina, MSGBOX_DEFAULT
 	giveitem ITEM_ELIXIR
-	compare VAR_RESULT, FALSE
-	goto_if_eq SootopolisCity_AHinaAndSRinHouse_EventScript_NoRoomForElixir1
+	goto_if_eq VAR_RESULT, FALSE, SootopolisCity_AHinaAndSRinHouse_EventScript_NoRoomForElixir1
 	closemessage
 	release
 	end
@@ -58,15 +53,11 @@ SootopolisCity_AHinaAndSRinHouse_EventScript_AHinaBrother::
 	special ChoosePartyMon
 	waitstate
 	copyvar VAR_RESULT, VAR_0x8004
-	compare VAR_RESULT, 255
-	goto_if_eq SootopolisCity_AHinaAndSRinHouse_EventScript_CancelShowAHina
+	goto_if_eq VAR_RESULT, PARTY_NOTHING_CHOSEN, SootopolisCity_AHinaAndSRinHouse_EventScript_CancelShowAHina
 	special CompareAHinaSize
-	compare VAR_RESULT, 1
-	goto_if_eq SootopolisCity_AHinaAndSRinHouse_EventScript_NotAHina
-	compare VAR_RESULT, 2
-	goto_if_eq SootopolisCity_AHinaAndSRinHouse_EventScript_SmallAHina
-	compare VAR_RESULT, 3
-	goto_if_eq SootopolisCity_AHinaAndSRinHouse_EventScript_BigAHina
+	goto_if_eq VAR_RESULT, 1, SootopolisCity_AHinaAndSRinHouse_EventScript_NotAHina
+	goto_if_eq VAR_RESULT, 2, SootopolisCity_AHinaAndSRinHouse_EventScript_SmallAHina
+	goto_if_eq VAR_RESULT, 3, SootopolisCity_AHinaAndSRinHouse_EventScript_BigAHina
 	release
 	end
 
@@ -88,8 +79,7 @@ SootopolisCity_AHinaAndSRinHouse_EventScript_SmallAHina::
 SootopolisCity_AHinaAndSRinHouse_EventScript_BigAHina::
 	msgbox SootopolisCity_AHinaAndSRinHouse_Text_WowMightBeBiggerThanSRin, MSGBOX_DEFAULT
 	giveitem ITEM_ELIXIR
-	compare VAR_RESULT, FALSE
-	goto_if_eq SootopolisCity_AHinaAndSRinHouse_EventScript_NoRoomForElixir2
+	goto_if_eq VAR_RESULT, FALSE, SootopolisCity_AHinaAndSRinHouse_EventScript_NoRoomForElixir2
 	closemessage
 	release
 	end
