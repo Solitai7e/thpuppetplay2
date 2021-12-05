@@ -35,9 +35,9 @@ Route125_EventScript_Tanya::
 	msgbox Route125_Text_TanyaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route125_EventScript_Shadvtewi::
-	trainerbattle_single TRAINER_SHADVTEWI, Route125_Text_ShadvtewiIntro, Route125_Text_ShadvtewiDefeat
-	msgbox Route125_Text_ShadvtewiPostBattle, MSGBOX_AUTOCLOSE
+Route125_EventScript_Shadtewi::
+	trainerbattle_single TRAINER_SHADTEWI, Route125_Text_ShadtewiIntro, Route125_Text_ShadtewiDefeat
+	msgbox Route125_Text_ShadtewiPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route125_EventScript_Ernest::

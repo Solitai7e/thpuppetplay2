@@ -414,7 +414,7 @@ $(OBJEVENTGFXDIR)/pokemon/cshingyoku.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/pokemon/gomaseki.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(OBJEVENTGFXDIR)/pokemon/advcirno.4bpp: %.4bpp: %.png
+$(OBJEVENTGFXDIR)/pokemon/adcirno.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/pokemon/enemy_hlunasa.4bpp: %.4bpp: %.png

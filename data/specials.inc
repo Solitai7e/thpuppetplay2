@@ -290,7 +290,7 @@ gSpecials::
 	def_special RemoveCameraObject
 	def_special GetPokeblockNameByMonNature
 	def_special GetSecretBaseNearbyMapName
-	def_special CheckAdvLettyTensoku
+	def_special CheckAdLettyTensoku
 	def_special ShouldDoBrailleTojikoEffectOld
 	def_special DoOrbEffect
 	def_special FadeOutOrbEffect

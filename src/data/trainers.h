@@ -5557,18 +5557,18 @@ const struct Trainer gTrainers[] = {
         .party = {.ItemDefaultMoves = sParty_Nicolas5},
     },
 
-    [TRAINER_AADVTEWI] =
+    [TRAINER_AADTEWI] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_DRAGON_TAMER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_DRAGON_TAMER,
-        .trainerName = _("AADVTEWI"),
+        .trainerName = _("AADTEWI"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Aadvtewi),
-        .party = {.NoItemCustomMoves = sParty_Aadvtewi},
+        .partySize = ARRAY_COUNT(sParty_Aadtewi),
+        .party = {.NoItemCustomMoves = sParty_Aadtewi},
     },
 
     [TRAINER_PERRY] =
@@ -6327,18 +6327,18 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Tanya},
     },
 
-    [TRAINER_SHADVTEWI] =
+    [TRAINER_SHADTEWI] =
     {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_SWIMMER_F,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SWIMMER,
         .trainerPic = TRAINER_PIC_SWIMMER_F,
-        .trainerName = _("SHADVTEWI"),
+        .trainerName = _("SHADTEWI"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Shadvtewi),
-        .party = {.NoItemDefaultMoves = sParty_Shadvtewi},
+        .partySize = ARRAY_COUNT(sParty_Shadtewi),
+        .party = {.NoItemDefaultMoves = sParty_Shadtewi},
     },
 
     [TRAINER_NIKKI] =

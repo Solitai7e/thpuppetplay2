@@ -1631,7 +1631,7 @@ static const union AnimCmd sAnim_SUWAKO_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_REYSEN_1[] =
+static const union AnimCmd sAnim_REISENII_1[] =
 {
     ANIMCMD_FRAME(1, 10),
     ANIMCMD_FRAME(0, 10),
@@ -1796,7 +1796,7 @@ static const union AnimCmd sAnim_AKYUU_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_GENJI_1[] =
+static const union AnimCmd sAnim_GENJII_1[] =
 {
     ANIMCMD_FRAME(0, 15),
     ANIMCMD_FRAME(1, 15),
@@ -2224,7 +2224,7 @@ static const union AnimCmd sAnim_SHINKI_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_MIMI_1[] =
+static const union AnimCmd sAnim_MIMICHAN_1[] =
 {
     ANIMCMD_FRAME(1, 12),
     ANIMCMD_FRAME(0, 12),
@@ -3457,7 +3457,7 @@ static const union AnimCmd sAnim_CSARIEL_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_ADVMYSTIA_1[] =
+static const union AnimCmd sAnim_ADMYSTIA_1[] =
 {
     ANIMCMD_FRAME(0, 10),
     ANIMCMD_FRAME(1, 10),
@@ -3674,7 +3674,7 @@ static const union AnimCmd sAnim_CKONNGARA_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_MAGAN_1[] =
+static const union AnimCmd sAnim_CYUUGENMAGAN_1[] =
 {
     ANIMCMD_FRAME(0, 15),
     ANIMCMD_FRAME(1, 15),
@@ -3955,7 +3955,7 @@ static const union AnimCmd sAnim_RINNOSUKE_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_ADVCIRNO_1[] =
+static const union AnimCmd sAnim_ADCIRNO_1[] =
 {
     ANIMCMD_FRAME(0, 15),
     ANIMCMD_FRAME(1, 15),
@@ -3965,7 +3965,7 @@ static const union AnimCmd sAnim_ADVCIRNO_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_ADVREISEN_1[] =
+static const union AnimCmd sAnim_ADREISEN_1[] =
 {
     ANIMCMD_FRAME(0, 18),
     ANIMCMD_FRAME(1, 44),
@@ -4018,7 +4018,7 @@ static const union AnimCmd sAnim_CKIKURI_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_ADVMEILING_1[] =
+static const union AnimCmd sAnim_ADMEILING_1[] =
 {
     ANIMCMD_FRAME(0, 15),
     ANIMCMD_FRAME(1, 30),
@@ -4158,7 +4158,7 @@ static const union AnimCmd sAnim_DSATORI_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_ADVLETTY_1[] =
+static const union AnimCmd sAnim_ADLETTY_1[] =
 {
     ANIMCMD_FRAME(0, 15),
     ANIMCMD_FRAME(1, 15),
@@ -4168,7 +4168,7 @@ static const union AnimCmd sAnim_ADVLETTY_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_ADVTEWI_1[] =
+static const union AnimCmd sAnim_ADTEWI_1[] =
 {
     ANIMCMD_FRAME(0, 33),
     ANIMCMD_FRAME(1, 44),
@@ -4178,7 +4178,7 @@ static const union AnimCmd sAnim_ADVTEWI_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_ADVMARISA_1[] =
+static const union AnimCmd sAnim_ADMARISA_1[] =
 {
     ANIMCMD_FRAME(0, 12),
     ANIMCMD_FRAME(1, 29),
@@ -4188,7 +4188,7 @@ static const union AnimCmd sAnim_ADVMARISA_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_ADVALICE_1[] =
+static const union AnimCmd sAnim_ADALICE_1[] =
 {
     ANIMCMD_FRAME(0, 10),
     ANIMCMD_FRAME(1, 44),
@@ -4214,7 +4214,7 @@ static const union AnimCmd sAnim_YUKI_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_ADVMOKOU_1[] =
+static const union AnimCmd sAnim_ADMOKOU_1[] =
 {
     ANIMCMD_FRAME(0, 22),
     ANIMCMD_FRAME(1, 22),
@@ -4224,7 +4224,7 @@ static const union AnimCmd sAnim_ADVMOKOU_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_ADVYUKARI_1[] =
+static const union AnimCmd sAnim_ADYUKARI_1[] =
 {
     ANIMCMD_FRAME(0, 15),
     ANIMCMD_FRAME(1, 15),
@@ -4234,7 +4234,7 @@ static const union AnimCmd sAnim_ADVYUKARI_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_ADVRAN_1[] =
+static const union AnimCmd sAnim_ADRAN_1[] =
 {
     ANIMCMD_FRAME(0, 15),
     ANIMCMD_FRAME(1, 15),
@@ -4246,7 +4246,7 @@ static const union AnimCmd sAnim_ADVRAN_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_ADVCHEN_1[] =
+static const union AnimCmd sAnim_ADCHEN_1[] =
 {
     ANIMCMD_FRAME(0, 15),
     ANIMCMD_FRAME(1, 15),
@@ -5493,9 +5493,9 @@ static const union AnimCmd *const sAnims_SUWAKO[] ={
     sAnim_SUWAKO_1,
 };
 
-static const union AnimCmd *const sAnims_REYSEN[] ={
+static const union AnimCmd *const sAnims_REISENII[] ={
     sAnim_GeneralFrame0,
-    sAnim_REYSEN_1,
+    sAnim_REISENII_1,
 };
 
 static const union AnimCmd *const sAnims_CMARISA[] ={
@@ -5568,9 +5568,9 @@ static const union AnimCmd *const sAnims_AKYUU[] ={
     sAnim_AKYUU_1,
 };
 
-static const union AnimCmd *const sAnims_GENJI[] ={
+static const union AnimCmd *const sAnims_GENJII[] ={
     sAnim_GeneralFrame0,
-    sAnim_GENJI_1,
+    sAnim_GENJII_1,
 };
 
 static const union AnimCmd *const sAnims_TORI[] ={
@@ -5754,9 +5754,9 @@ static const union AnimCmd *const sAnims_SHINKI[] ={
     sAnim_SHINKI_1,
 };
 
-static const union AnimCmd *const sAnims_MIMI[] ={
+static const union AnimCmd *const sAnims_MIMICHAN[] ={
     sAnim_GeneralFrame0,
-    sAnim_MIMI_1,
+    sAnim_MIMICHAN_1,
 };
 
 static const union AnimCmd *const sAnims_RUUKOTO[] ={
@@ -6322,9 +6322,9 @@ static const union AnimCmd *const sAnims_CSARIEL[] ={
     sAnim_CSARIEL_1,
 };
 
-static const union AnimCmd *const sAnims_ADVMYSTIA[] ={
+static const union AnimCmd *const sAnims_ADMYSTIA[] ={
     sAnim_GeneralFrame0,
-    sAnim_ADVMYSTIA_1,
+    sAnim_ADMYSTIA_1,
 };
 
 static const union AnimCmd *const sAnims_THATATE[] ={
@@ -6412,9 +6412,9 @@ static const union AnimCmd *const sAnims_CKONNGARA[] ={
     sAnim_CKONNGARA_1,
 };
 
-static const union AnimCmd *const sAnims_MAGAN[] ={
+static const union AnimCmd *const sAnims_CYUUGENMAGAN[] ={
     sAnim_GeneralFrame0,
-    sAnim_MAGAN_1,
+    sAnim_CYUUGENMAGAN_1,
 };
 
 static const union AnimCmd *const sAnims_ASUIKA[] ={
@@ -6526,14 +6526,14 @@ static const union AnimCmd *const sAnims_RINNOSUKE[] ={
     sAnim_RINNOSUKE_1,
 };
 
-static const union AnimCmd *const sAnims_ADVCIRNO[] ={
+static const union AnimCmd *const sAnims_ADCIRNO[] ={
     sAnim_GeneralFrame0,
-    sAnim_ADVCIRNO_1,
+    sAnim_ADCIRNO_1,
 };
 
-static const union AnimCmd *const sAnims_ADVREISEN[] ={
+static const union AnimCmd *const sAnims_ADREISEN[] ={
     sAnim_GeneralFrame0,
-    sAnim_ADVREISEN_1,
+    sAnim_ADREISEN_1,
 };
 
 static const union AnimCmd *const sAnims_SSARIEL[] ={
@@ -6556,9 +6556,9 @@ static const union AnimCmd *const sAnims_CKIKURI[] ={
     sAnim_CKIKURI_1,
 };
 
-static const union AnimCmd *const sAnims_ADVMEILING[] ={
+static const union AnimCmd *const sAnims_ADMEILING[] ={
     sAnim_GeneralFrame0,
-    sAnim_ADVMEILING_1,
+    sAnim_ADMEILING_1,
 };
 
 static const union AnimCmd *const sAnims_APATCHOULI[] ={
@@ -6621,24 +6621,24 @@ static const union AnimCmd *const sAnims_DSATORI[] ={
     sAnim_DSATORI_1,
 };
 
-static const union AnimCmd *const sAnims_ADVLETTY[] ={
+static const union AnimCmd *const sAnims_ADLETTY[] ={
     sAnim_GeneralFrame0,
-    sAnim_ADVLETTY_1,
+    sAnim_ADLETTY_1,
 };
 
-static const union AnimCmd *const sAnims_ADVTEWI[] ={
+static const union AnimCmd *const sAnims_ADTEWI[] ={
     sAnim_GeneralFrame0,
-    sAnim_ADVTEWI_1,
+    sAnim_ADTEWI_1,
 };
 
-static const union AnimCmd *const sAnims_ADVMARISA[] ={
+static const union AnimCmd *const sAnims_ADMARISA[] ={
     sAnim_GeneralFrame0,
-    sAnim_ADVMARISA_1,
+    sAnim_ADMARISA_1,
 };
 
-static const union AnimCmd *const sAnims_ADVALICE[] ={
+static const union AnimCmd *const sAnims_ADALICE[] ={
     sAnim_GeneralFrame0,
-    sAnim_ADVALICE_1,
+    sAnim_ADALICE_1,
 };
 
 static const union AnimCmd *const sAnims_TSANAE[] ={
@@ -6651,24 +6651,24 @@ static const union AnimCmd *const sAnims_YUKI[] ={
     sAnim_YUKI_1,
 };
 
-static const union AnimCmd *const sAnims_ADVMOKOU[] ={
+static const union AnimCmd *const sAnims_ADMOKOU[] ={
     sAnim_GeneralFrame0,
-    sAnim_ADVMOKOU_1,
+    sAnim_ADMOKOU_1,
 };
 
-static const union AnimCmd *const sAnims_ADVYUKARI[] ={
+static const union AnimCmd *const sAnims_ADYUKARI[] ={
     sAnim_GeneralFrame0,
-    sAnim_ADVYUKARI_1,
+    sAnim_ADYUKARI_1,
 };
 
-static const union AnimCmd *const sAnims_ADVRAN[] ={
+static const union AnimCmd *const sAnims_ADRAN[] ={
     sAnim_GeneralFrame0,
-    sAnim_ADVRAN_1,
+    sAnim_ADRAN_1,
 };
 
-static const union AnimCmd *const sAnims_ADVCHEN[] ={
+static const union AnimCmd *const sAnims_ADCHEN[] ={
     sAnim_GeneralFrame0,
-    sAnim_ADVCHEN_1,
+    sAnim_ADCHEN_1,
 };
 
 static const union AnimCmd *const sAnims_DARKALICE[] ={
@@ -7067,7 +7067,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(NUE),
     ANIM_CMD(CSUWAKO),
     ANIM_CMD(SUWAKO),
-    ANIM_CMD(REYSEN),
+    ANIM_CMD(REISENII),
     ANIM_CMD(CMARISA),
     ANIM_CMD(MARISA),
     ANIM_CMD(CREIMU),
@@ -7082,7 +7082,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(GOLIATH),
     ANIM_CMD(SARIEL),
     ANIM_CMD(AKYUU),
-    ANIM_CMD(GENJI),
+    ANIM_CMD(GENJII),
     ANIM_CMD(TORI),
     ANIM_CMD(NAMAZU),
     ANIM_CMD(CELLY),
@@ -7118,7 +7118,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(YUMEKO),
     ANIM_CMD(CSHINKI),
     ANIM_CMD(SHINKI),
-    ANIM_CMD(MIMI),
+    ANIM_CMD(MIMICHAN),
     ANIM_CMD(RUUKOTO),
     ANIM_CMD(CRIKA),
     ANIM_CMD(RIKA),
@@ -7252,7 +7252,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(SMEILING),
     ANIM_CMD(CELIS),
     ANIM_CMD(CSARIEL),
-    ANIM_CMD(ADVMYSTIA),
+    ANIM_CMD(ADMYSTIA),
     ANIM_CMD(THATATE),
     ANIM_CMD(DHATATE),
     ANIM_CMD(AKISISTERS),
@@ -7270,7 +7270,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(ASHIKIEIKI),
     ANIM_CMD(TTOYOHIME),
     ANIM_CMD(CKONNGARA),
-    ANIM_CMD(MAGAN),
+    ANIM_CMD(CYUUGENMAGAN),
     ANIM_CMD(ASUIKA),
     ANIM_CMD(HLILYWHITE),
     ANIM_CMD(SLILYBLACK),
@@ -7292,13 +7292,13 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(TIKU),
     ANIM_CMD(AMINORIKO),
     ANIM_CMD(RINNOSUKE),
-    ANIM_CMD(ADVCIRNO),
-    ANIM_CMD(ADVREISEN),
+    ANIM_CMD(ADCIRNO),
+    ANIM_CMD(ADREISEN),
     ANIM_CMD(SSARIEL),
     ANIM_CMD(ALILYWHITE),
     ANIM_CMD(CMIMA),
     ANIM_CMD(CKIKURI),
-    ANIM_CMD(ADVMEILING),
+    ANIM_CMD(ADMEILING),
     ANIM_CMD(APATCHOULI),
     ANIM_CMD(SMARISA),
     ANIM_CMD(AMARISA),
@@ -7311,16 +7311,16 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(TYAMAME),
     ANIM_CMD(TSATORI),
     ANIM_CMD(DSATORI),
-    ANIM_CMD(ADVLETTY),
-    ANIM_CMD(ADVTEWI),
-    ANIM_CMD(ADVMARISA),
-    ANIM_CMD(ADVALICE),
+    ANIM_CMD(ADLETTY),
+    ANIM_CMD(ADTEWI),
+    ANIM_CMD(ADMARISA),
+    ANIM_CMD(ADALICE),
     ANIM_CMD(TSANAE),
     ANIM_CMD(YUKI),
-    ANIM_CMD(ADVMOKOU),
-    ANIM_CMD(ADVYUKARI),
-    ANIM_CMD(ADVRAN),
-    ANIM_CMD(ADVCHEN),
+    ANIM_CMD(ADMOKOU),
+    ANIM_CMD(ADYUKARI),
+    ANIM_CMD(ADRAN),
+    ANIM_CMD(ADCHEN),
     ANIM_CMD(DARKALICE),
     ANIM_CMD(TENMA),
     ANIM_CMD(SENDAI),

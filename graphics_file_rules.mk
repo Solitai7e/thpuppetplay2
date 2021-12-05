@@ -617,7 +617,7 @@ $(WALLPAPERGFXDIR)/ccirno/tiles.4bpp: $(WALLPAPERGFXDIR)/friends_frame2.4bpp $(W
 $(WALLPAPERGFXDIR)/legendary/tiles.4bpp: $(WALLPAPERGFXDIR)/friends_frame2.4bpp $(WALLPAPERGFXDIR)/legendary/bg.4bpp
 	@cat $^ >$@
 
-$(WALLPAPERGFXDIR)/advcirno/tiles.4bpp: $(WALLPAPERGFXDIR)/friends_frame2.4bpp $(WALLPAPERGFXDIR)/advcirno/bg.4bpp
+$(WALLPAPERGFXDIR)/adcirno/tiles.4bpp: $(WALLPAPERGFXDIR)/friends_frame2.4bpp $(WALLPAPERGFXDIR)/adcirno/bg.4bpp
 	@cat $^ >$@
 
 $(WALLPAPERGFXDIR)/sshizuha/tiles.4bpp: $(WALLPAPERGFXDIR)/friends_frame2.4bpp $(WALLPAPERGFXDIR)/sshizuha/bg.4bpp

@@ -285,7 +285,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_EnterStatusRoom::
 	pike_getstatusmon
 	copyvar VAR_0x8004, VAR_RESULT
 	call_if_eq VAR_0x8004, PIKE_STATUSMON_SENDAI, BattleFrontier_BattlePikeRoomNormal_EventScript_SendaiAttack
-	call_if_eq VAR_0x8004, PIKE_STATUSMON_ADVCIRNO, BattleFrontier_BattlePikeRoomNormal_EventScript_AdvCirnoAttack
+	call_if_eq VAR_0x8004, PIKE_STATUSMON_ADCIRNO, BattleFrontier_BattlePikeRoomNormal_EventScript_AdCirnoAttack
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_AttacksWhenStartled, MSGBOX_DEFAULT
 	closemessage
 	releaseall
@@ -322,15 +322,15 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_SendaiAttack::
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForSendai, MSGBOX_DEFAULT
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_AdvCirnoAttack::
-	msgbox BattleFrontier_BattlePikeRoomNormal_Text_AdvCirnoStop, MSGBOX_DEFAULT
+BattleFrontier_BattlePikeRoomNormal_EventScript_AdCirnoAttack::
+	msgbox BattleFrontier_BattlePikeRoomNormal_Text_AdCirnoStop, MSGBOX_DEFAULT
 	closemessage
 	waitse
-	playmoncry SPECIES_ADVCIRNO, CRY_MODE_NORMAL
+	playmoncry SPECIES_ADCIRNO, CRY_MODE_NORMAL
 	waitmoncry
 	pike_getstatus
-	call_if_eq VAR_RESULT, PIKE_STATUS_FREEZE, BattleFrontier_BattlePikeRoomNormal_EventScript_AdvCirnoUsedIceBeam
-	call_if_eq VAR_RESULT, PIKE_STATUS_BURN, BattleFrontier_BattlePikeRoomNormal_EventScript_AdvCirnoUsedWillOWisp
+	call_if_eq VAR_RESULT, PIKE_STATUS_FREEZE, BattleFrontier_BattlePikeRoomNormal_EventScript_AdCirnoUsedIceBeam
+	call_if_eq VAR_RESULT, PIKE_STATUS_BURN, BattleFrontier_BattlePikeRoomNormal_EventScript_AdCirnoUsedWillOWisp
 	pike_flashscreen
 	waitstate
 	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_NPCApproachMon
@@ -338,17 +338,17 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_AdvCirnoAttack::
 	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonFaceNPC
 	waitmovement 0
 	waitse
-	playmoncry SPECIES_ADVCIRNO, CRY_MODE_NORMAL
+	playmoncry SPECIES_ADCIRNO, CRY_MODE_NORMAL
 	waitmoncry
 	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ThatsEnough, MSGBOX_DEFAULT
 	waitse
-	playmoncry SPECIES_ADVCIRNO, CRY_MODE_NORMAL
+	playmoncry SPECIES_ADCIRNO, CRY_MODE_NORMAL
 	waitmoncry
 	closemessage
 	applymovement LOCALID_OBJ_1, BattleFrontier_BattlePikeRoomNormal_Movement_MonMoveAside
 	applymovement LOCALID_OBJ_0, BattleFrontier_BattlePikeRoomNormal_Movement_StatusNPCApproachPlayer
 	waitmovement 0
-	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForAdvCirno, MSGBOX_DEFAULT
+	msgbox BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForAdCirno, MSGBOX_DEFAULT
 	return
 
 BattleFrontier_BattlePikeRoomNormal_EventScript_SendaiUsedToxic::
@@ -371,13 +371,13 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_SendaiUsedHypnosis::
 	waitmessage
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_AdvCirnoUsedIceBeam::
-	message BattleFrontier_BattlePikeRoomNormal_Text_AdvCirnoUsedIceBeam
+BattleFrontier_BattlePikeRoomNormal_EventScript_AdCirnoUsedIceBeam::
+	message BattleFrontier_BattlePikeRoomNormal_Text_AdCirnoUsedIceBeam
 	waitmessage
 	return
 
-BattleFrontier_BattlePikeRoomNormal_EventScript_AdvCirnoUsedWillOWisp::
-	message BattleFrontier_BattlePikeRoomNormal_Text_AdvCirnoUsedWillOWisp
+BattleFrontier_BattlePikeRoomNormal_EventScript_AdCirnoUsedWillOWisp::
+	message BattleFrontier_BattlePikeRoomNormal_Text_AdCirnoUsedWillOWisp
 	waitmessage
 	return
 
@@ -580,7 +580,7 @@ BattleFrontier_BattlePikeRoomNormal_EventScript_WillRestoreTwoMons::
 	closemessage
 	return
 
-@ AdvCirno or Sendai
+@ AdCirno or Sendai
 BattleFrontier_BattlePikeRoomNormal_EventScript_StatusMon::
 	lock
 	faceplayer
@@ -703,9 +703,9 @@ BattleFrontier_BattlePikeRoomNormal_Text_SendaiStop:
 	.string "Now, now!\n"
 	.string "SENDAI, stop that!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_AdvCirnoStop:
+BattleFrontier_BattlePikeRoomNormal_Text_AdCirnoStop:
 	.string "Now, now!\n"
-	.string "ADVCIRNO, stop that!$"
+	.string "ADCIRNO, stop that!$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_SendaiUsedToxic:
 	.string "SENDAI used TOXIC!$"
@@ -719,11 +719,11 @@ BattleFrontier_BattlePikeRoomNormal_Text_SendaiUsedThunderWave:
 BattleFrontier_BattlePikeRoomNormal_Text_SendaiUsedWillOWisp:
 	.string "SENDAI used WILL-O-WISP!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_AdvCirnoUsedWillOWisp:
-	.string "ADVCIRNO used WILL-O-WISP!$"
+BattleFrontier_BattlePikeRoomNormal_Text_AdCirnoUsedWillOWisp:
+	.string "ADCIRNO used WILL-O-WISP!$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_AdvCirnoUsedIceBeam:
-	.string "ADVCIRNO used ICE BEAM!$"
+BattleFrontier_BattlePikeRoomNormal_Text_AdCirnoUsedIceBeam:
+	.string "ADCIRNO used ICE BEAM!$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_ThatsEnough:
 	.string "Look here!\n"
@@ -733,9 +733,9 @@ BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForSendai:
 	.string "I must apologize to you…\p"
 	.string "My SENDAI has a TIMID nature…$"
 
-BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForAdvCirno:
+BattleFrontier_BattlePikeRoomNormal_Text_ApologizeForAdCirno:
 	.string "I must apologize to you…\p"
-	.string "My ADVCIRNO has a TIMID nature…$"
+	.string "My ADCIRNO has a TIMID nature…$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_AttacksWhenStartled:
 	.string "It attacks without warning if it is\n"

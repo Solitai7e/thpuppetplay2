@@ -2483,7 +2483,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_CYukariDoll48BP,
         gText_KedamaDoll48BP,
         gText_CEllyDoll80BP,
-        gText_GenjiDoll80BP,
+        gText_GenjiiDoll80BP,
         gText_OrangeDoll80BP,
         gText_Exit
     },

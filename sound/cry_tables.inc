@@ -136,7 +136,7 @@ gCryTable::
 	cry Cry_Nue
 	cry Cry_CSuwako
 	cry Cry_Suwako
-	cry Cry_Reysen
+	cry Cry_ReisenII
 	cry Cry_CMarisa
 	cry Cry_Marisa
 	cry Cry_CReimu
@@ -151,7 +151,7 @@ gCryTable::
 	cry Cry_Goliath
 	cry Cry_Sariel
 	cry Cry_Akyuu
-	cry Cry_Genji
+	cry Cry_Genjii
 	cry Cry_Tori
 	cry Cry_Namazu
 	cry Cry_CElly
@@ -187,7 +187,7 @@ gCryTable::
 	cry Cry_Yumeko
 	cry Cry_CShinki
 	cry Cry_Shinki
-	cry Cry_Mimi
+	cry Cry_MimiChan
 	cry Cry_Ruukoto
 	cry Cry_CRika
 	cry Cry_Rika
@@ -252,7 +252,7 @@ gCryTable::
 	cry Cry_AKomachi
 	cry Cry_AEirin
 	cry Cry_SWriggle
-	cry Cry_AdvReisen
+	cry Cry_AdReisen
 	cry Cry_CSariel
 	cry Cry_AShikieiki
 	cry Cry_TToyohime
@@ -315,9 +315,9 @@ gCryTable::
 	cry Cry_ASunnyMilk
 	cry Cry_ALunaChild
 	cry Cry_CKikuri
-	cry Cry_AdvMeiling
+	cry Cry_AdMeiling
 	cry Cry_CKonngara
-	cry Cry_Magan
+	cry Cry_CYuugenMagan
 	cry Cry_THatate
 	cry Cry_DHatate
 	cry Cry_DLayla
@@ -344,9 +344,9 @@ gCryTable::
 	cry Cry_AMurasa
 	cry Cry_AStarSapphire
 	cry Cry_AKazami
-	cry Cry_AdvYukari
-	cry Cry_AdvRan
-	cry Cry_AdvChen
+	cry Cry_AdYukari
+	cry Cry_AdRan
+	cry Cry_AdChen
 	cry Cry_DarkAlice
 	cry Cry_CSeiga
 	cry Cry_Seiga
@@ -358,16 +358,16 @@ gCryTable::
 	cry Cry_Futo
 	cry Cry_TSanae
 	cry Cry_Yuki
-	cry Cry_AdvMokou
+	cry Cry_AdMokou
 	cry Cry_DYuyuko
 	cry Cry_AYuyuko
-	cry Cry_AdvCirno
-	cry Cry_AdvMystia
+	cry Cry_AdCirno
+	cry Cry_AdMystia
 	cry Cry_TKisume
-	cry Cry_AdvTewi
-	cry Cry_AdvMarisa
-	cry Cry_AdvAlice
-	cry Cry_AdvLetty
+	cry Cry_AdTewi
+	cry Cry_AdMarisa
+	cry Cry_AdAlice
+	cry Cry_AdLetty
 	cry Cry_AkiSisters
 	cry Cry_Miko
 	cry Cry_CMiko
@@ -527,7 +527,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Nue
 	cry_reverse Cry_CSuwako
 	cry_reverse Cry_Suwako
-	cry_reverse Cry_Reysen
+	cry_reverse Cry_ReisenII
 	cry_reverse Cry_CMarisa
 	cry_reverse Cry_Marisa
 	cry_reverse Cry_CReimu
@@ -542,7 +542,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Goliath
 	cry_reverse Cry_Sariel
 	cry_reverse Cry_Akyuu
-	cry_reverse Cry_Genji
+	cry_reverse Cry_Genjii
 	cry_reverse Cry_Tori
 	cry_reverse Cry_Namazu
 	cry_reverse Cry_CElly
@@ -578,7 +578,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Yumeko
 	cry_reverse Cry_CShinki
 	cry_reverse Cry_Shinki
-	cry_reverse Cry_Mimi
+	cry_reverse Cry_MimiChan
 	cry_reverse Cry_Ruukoto
 	cry_reverse Cry_CRika
 	cry_reverse Cry_Rika
@@ -643,7 +643,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_AKomachi
 	cry_reverse Cry_AEirin
 	cry_reverse Cry_SWriggle
-	cry_reverse Cry_AdvReisen
+	cry_reverse Cry_AdReisen
 	cry_reverse Cry_CSariel
 	cry_reverse Cry_AShikieiki
 	cry_reverse Cry_TToyohime
@@ -706,9 +706,9 @@ gCryTable_Reverse::
 	cry_reverse Cry_ASunnyMilk
 	cry_reverse Cry_ALunaChild
 	cry_reverse Cry_CKikuri
-	cry_reverse Cry_AdvMeiling
+	cry_reverse Cry_AdMeiling
 	cry_reverse Cry_CKonngara
-	cry_reverse Cry_Magan
+	cry_reverse Cry_CYuugenMagan
 	cry_reverse Cry_THatate
 	cry_reverse Cry_DHatate
 	cry_reverse Cry_DLayla
@@ -735,9 +735,9 @@ gCryTable_Reverse::
 	cry_reverse Cry_AMurasa
 	cry_reverse Cry_AStarSapphire
 	cry_reverse Cry_AKazami
-	cry_reverse Cry_AdvYukari
-	cry_reverse Cry_AdvRan
-	cry_reverse Cry_AdvChen
+	cry_reverse Cry_AdYukari
+	cry_reverse Cry_AdRan
+	cry_reverse Cry_AdChen
 	cry_reverse Cry_DarkAlice
 	cry_reverse Cry_CSeiga
 	cry_reverse Cry_Seiga
@@ -749,16 +749,16 @@ gCryTable_Reverse::
 	cry_reverse Cry_Futo
 	cry_reverse Cry_TSanae
 	cry_reverse Cry_Yuki
-	cry_reverse Cry_AdvMokou
+	cry_reverse Cry_AdMokou
 	cry_reverse Cry_DYuyuko
 	cry_reverse Cry_AYuyuko
-	cry_reverse Cry_AdvCirno
-	cry_reverse Cry_AdvMystia
+	cry_reverse Cry_AdCirno
+	cry_reverse Cry_AdMystia
 	cry_reverse Cry_TKisume
-	cry_reverse Cry_AdvTewi
-	cry_reverse Cry_AdvMarisa
-	cry_reverse Cry_AdvAlice
-	cry_reverse Cry_AdvLetty
+	cry_reverse Cry_AdTewi
+	cry_reverse Cry_AdMarisa
+	cry_reverse Cry_AdAlice
+	cry_reverse Cry_AdLetty
 	cry_reverse Cry_AkiSisters
 	cry_reverse Cry_Miko
 	cry_reverse Cry_CMiko

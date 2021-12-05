@@ -820,10 +820,10 @@ const u8 gSuwakoPokedexText[] = _(
     "excessively hot. Its body temperature can\n"
     "rise to a maximum of 1,650 degrees F.");
 
-const u8 gReysenPokedexText[] = _(
+const u8 gReisenIIPokedexText[] = _(
     "It is capable of reverting itself entirely\n"
     "back to program data in order to enter\n"
-    "cyberspace. A REYSEN is copy-\n"
+    "cyberspace. A REISENII is copy-\n"
     "protected so it cannot be duplicated.");
 
 const u8 gCMarisaPokedexText[] = _(
@@ -910,7 +910,7 @@ const u8 gAkyuuPokedexText[] = _(
     "invisible at will, so it entirely avoids\n"
     "notice even if it approaches people.");
 
-const u8 gGenjiPokedexText[] = _(
+const u8 gGenjiiPokedexText[] = _(
     "It waves its leaf around to keep foes\n"
     "at bay. However, a sweet fragrance also\n"
     "wafts from the leaf, creating a friendly\n"
@@ -1126,7 +1126,7 @@ const u8 gShinkiPokedexText[] = _(
     "winds, a SHINKI links leaves with others\n"
     "to prepare against being blown away.");
 
-const u8 gMimiPokedexText[] = _(
+const u8 gMimiChanPokedexText[] = _(
     "It blossoms when the temperature rises\n"
     "above 64 degrees F. Because its flower's\n"
     "blooming changes with the temperature,\n"
@@ -1810,10 +1810,10 @@ const u8 gALunaChildPokedexText[] = _(
     "sleeps there. It is nocturnal and becomes\n"
     "active at dusk.");
 
-const u8 gAdvMystiaPokedexText[] = _(
+const u8 gAdMystiaPokedexText[] = _(
     "It digs branching holes in caves using its\n"
     "sharp claws in search of food--raw gems.\n"
-    "A ADVMYSTIA lurks in darkness and is seen\n"
+    "A ADMYSTIA lurks in darkness and is seen\n"
     "only rarely.");
 
 const u8 gTKisumePokedexText[] = _(
@@ -1822,22 +1822,22 @@ const u8 gTKisumePokedexText[] = _(
     "complacency with its adorable gestures,\n"
     "then chomps them with its huge jaws.");
 
-const u8 gAdvTewiPokedexText[] = _(
+const u8 gAdTewiPokedexText[] = _(
     "A POKéMON that is clad in steel armor.\n"
     "A new suit of armor is made when it evolves.\n"
     "The old, discarded armor is salvaged as\n"
     "metal for making iron products.");
 
-const u8 gAdvMarisaPokedexText[] = _(
-    "When two ADVMARISA meet in the wild, they\n"
+const u8 gAdMarisaPokedexText[] = _(
+    "When two ADMARISA meet in the wild, they\n"
     "fight for territory by bashing into each\n"
     "other with their steel bodies. The sound\n"
     "of their collision carries for miles.");
 
-const u8 gAdvAlicePokedexText[] = _(
+const u8 gAdAlicePokedexText[] = _(
     "Its iron horns grow longer a little at\n"
     "a time. They are used to determine the\n"
-    "ADVALICE's age. The gouges in its armor are\n"
+    "ADALICE's age. The gouges in its armor are\n"
     "worn with pride as mementos from battles.");
 
 const u8 gAYuugiPokedexText[] = _(
@@ -1882,14 +1882,14 @@ const u8 gYukiPokedexText[] = _(
     "night sky. They move their nests if their\n"
     "pond water becomes dirty.");
 
-const u8 gAdvMokouPokedexText[] = _(
+const u8 gAdMokouPokedexText[] = _(
     "A nocturnal POKéMON that becomes active\n"
     "upon nightfall. It leads a YUKI swarm\n"
     "to draw patterns in the night sky. Over 200\n"
     "different patterns have been confirmed.");
 
-const u8 gAdvReisenPokedexText[] = _(
-    "A ADVREISEN that drinks nutritionally rich\n"
+const u8 gAdReisenPokedexText[] = _(
+    "A ADREISEN that drinks nutritionally rich\n"
     "springwater blooms with lovely flowers.\n"
     "The fragrance of its flowers has the\n"
     "effect of making its foes careless.");
@@ -1900,10 +1900,10 @@ const u8 gCKikuriPokedexText[] = _(
     "swallow something that is as large as\n"
     "itself.");
 
-const u8 gAdvMeilingPokedexText[] = _(
+const u8 gAdMeilingPokedexText[] = _(
     "Its powerful stomach acid is capable of\n"
     "digesting almost anything. The one thing\n"
-    "in the whole world a ADVMEILING can't digest is\n"
+    "in the whole world a ADMEILING can't digest is\n"
     "its own stomach.");
 
 const u8 gATewiPokedexText[] = _(
@@ -1936,7 +1936,7 @@ const u8 gCKonngaraPokedexText[] = _(
     "transport a 220-pound load. It has served\n"
     "humans at work since long ago.");
 
-const u8 gMaganPokedexText[] = _(
+const u8 gCYuugenMaganPokedexText[] = _(
     "A POKéMON that lives in the crater of\n"
     "a volcano. Every 10 years, the volcanoes\n"
     "on its back erupt violently. Research is\n"
@@ -2068,19 +2068,19 @@ const u8 gSMeilingPokedexText[] = _(
     "They are kept floating by the POKéMON's\n"
     "manipulation of psychic power.");
 
-const u8 gAdvYukariPokedexText[] = _(
+const u8 gAdYukariPokedexText[] = _(
     "It disguises itself as seaweed by making\n"
     "its tentacles sway. Unsuspecting prey\n"
     "that come too close are swallowed whole.\n"
     "It became extinct 100 million years ago.");
 
-const u8 gAdvRanPokedexText[] = _(
+const u8 gAdRanPokedexText[] = _(
     "It drags its heavy body along the\n"
     "seafloor. It makes its nest in the shallows\n"
-    "of warm seas. ADVRAN can be seen on\n"
+    "of warm seas. ADRAN can be seen on\n"
     "beaches when the tide goes out.");
 
-const u8 gAdvChenPokedexText[] = _(
+const u8 gAdChenPokedexText[] = _(
     "It was resurrected from a fossil using the\n"
     "power of science. It swims by undulating\n"
     "the eight wings at its sides. They were\n"
@@ -2134,7 +2134,7 @@ const u8 gRinnosukePokedexText[] = _(
     "It is a nocturnal POKéMON that roams\n"
     "about under the cloak of darkness.");
 
-const u8 gAdvCirnoPokedexText[] = _(
+const u8 gAdCirnoPokedexText[] = _(
     "It is thought that its body is hollow with\n"
     "only a spectral ball of fire burning inside.\n"
     "However, no one has been able to\n"
@@ -2212,7 +2212,7 @@ const u8 gAKazamiPokedexText[] = _(
     "pink body color turns vivid when it\n"
     "finishes feeding.");
 
-const u8 gAdvLettyPokedexText[] = _(
+const u8 gAdLettyPokedexText[] = _(
     "A POKéMON that was once believed to have\n"
     "been extinct. The species has not changed\n"
     "its form for 100 million years. It walks on\n"

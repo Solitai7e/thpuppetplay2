@@ -286,13 +286,13 @@ static const u16 sWallpaperPalettes_Legendary[][16] =
 static const u32 sWallpaperTiles_Legendary[]   = INCBIN_U32("graphics/pokemon_storage/wallpapers/legendary/tiles.4bpp.lz");
 static const u32 sWallpaperTilemap_Legendary[] = INCBIN_U32("graphics/pokemon_storage/wallpapers/legendary/tilemap.bin.lz");
 
-static const u16 sWallpaperPalettes_AdvCirno[][16] =
+static const u16 sWallpaperPalettes_AdCirno[][16] =
 {
     INCBIN_U16("graphics/pokemon_storage/wallpapers/friends_frame2.gbapal"),
-    INCBIN_U16("graphics/pokemon_storage/wallpapers/advcirno/bg.gbapal"),
+    INCBIN_U16("graphics/pokemon_storage/wallpapers/adcirno/bg.gbapal"),
 };
-static const u32 sWallpaperTiles_AdvCirno[]   = INCBIN_U32("graphics/pokemon_storage/wallpapers/advcirno/tiles.4bpp.lz");
-static const u32 sWallpaperTilemap_AdvCirno[] = INCBIN_U32("graphics/pokemon_storage/wallpapers/advcirno/tilemap.bin.lz");
+static const u32 sWallpaperTiles_AdCirno[]   = INCBIN_U32("graphics/pokemon_storage/wallpapers/adcirno/tiles.4bpp.lz");
+static const u32 sWallpaperTilemap_AdCirno[] = INCBIN_U32("graphics/pokemon_storage/wallpapers/adcirno/tilemap.bin.lz");
 
 static const u16 sWallpaperPalettes_SShizuha[][16] =
 {
@@ -353,7 +353,7 @@ static const struct Wallpaper sWaldaWallpapers[] =
     WALLPAPER_ENTRY(CYumeko),
     WALLPAPER_ENTRY(CCirno),
     WALLPAPER_ENTRY(Legendary),
-    WALLPAPER_ENTRY(AdvCirno),
+    WALLPAPER_ENTRY(AdCirno),
     WALLPAPER_ENTRY(SShizuha),
     WALLPAPER_ENTRY(DHatate),
 };

@@ -482,8 +482,8 @@ const u16 DecorGfx_CELLY_DOLL[] = {
     OBJ_EVENT_GFX_CELLY_DOLL
 };
 
-const u16 DecorGfx_GENJI_DOLL[] = {
-    OBJ_EVENT_GFX_GENJI_DOLL
+const u16 DecorGfx_GENJII_DOLL[] = {
+    OBJ_EVENT_GFX_GENJII_DOLL
 };
 
 const u16 DecorGfx_ORANGE_DOLL[] = {

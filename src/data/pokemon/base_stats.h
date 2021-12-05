@@ -4390,7 +4390,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_REYSEN] =
+    [SPECIES_REISENII] =
     {
         .baseHP        = 65,
         .baseAttack    = 60,
@@ -4870,7 +4870,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_GENJI] =
+    [SPECIES_GENJII] =
     {
         .baseHP        = 45,
         .baseAttack    = 49,
@@ -6022,7 +6022,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_MIMI] =
+    [SPECIES_MIMICHAN] =
     {
         .baseHP        = 55,
         .baseAttack    = 45,
@@ -9560,7 +9560,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_ADVMYSTIA] =
+    [SPECIES_ADMYSTIA] =
     {
         .baseHP        = 50,
         .baseAttack    = 75,
@@ -10136,7 +10136,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_MAGAN] =
+    [SPECIES_CYUUGENMAGAN] =
     {
         .baseHP        = 70,
         .baseAttack    = 100,
@@ -10840,7 +10840,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_ADVCIRNO] =
+    [SPECIES_ADCIRNO] =
     {
         .baseHP        = 40,
         .baseAttack    = 70,
@@ -10872,7 +10872,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_ADVREISEN] =
+    [SPECIES_ADREISEN] =
     {
         .baseHP        = 50,
         .baseAttack    = 60,
@@ -11032,7 +11032,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_ADVMEILING] =
+    [SPECIES_ADMEILING] =
     {
         .baseHP        = 100,
         .baseAttack    = 73,
@@ -11448,7 +11448,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = TRUE,
     },
 
-    [SPECIES_ADVLETTY] =
+    [SPECIES_ADLETTY] =
     {
         .baseHP        = 100,
         .baseAttack    = 90,
@@ -11480,7 +11480,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_ADVTEWI] =
+    [SPECIES_ADTEWI] =
     {
         .baseHP        = 50,
         .baseAttack    = 70,
@@ -11512,7 +11512,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_ADVMARISA] =
+    [SPECIES_ADMARISA] =
     {
         .baseHP        = 60,
         .baseAttack    = 90,
@@ -11544,7 +11544,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_ADVALICE] =
+    [SPECIES_ADALICE] =
     {
         .baseHP        = 70,
         .baseAttack    = 110,
@@ -11640,7 +11640,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_ADVMOKOU] =
+    [SPECIES_ADMOKOU] =
     {
         .baseHP        = 65,
         .baseAttack    = 47,
@@ -11672,7 +11672,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_ADVYUKARI] =
+    [SPECIES_ADYUKARI] =
     {
         .baseHP        = 66,
         .baseAttack    = 41,
@@ -11704,7 +11704,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_ADVRAN] =
+    [SPECIES_ADRAN] =
     {
         .baseHP        = 86,
         .baseAttack    = 81,
@@ -11736,7 +11736,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_ADVCHEN] =
+    [SPECIES_ADCHEN] =
     {
         .baseHP        = 45,
         .baseAttack    = 95,

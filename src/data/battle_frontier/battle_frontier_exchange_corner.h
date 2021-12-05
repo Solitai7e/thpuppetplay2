@@ -8,7 +8,7 @@ static const u16 sFrontierExchangeCorner_Decor1[] =
     DECOR_CYUKARI_DOLL,
     DECOR_KEDAMA_DOLL,
     DECOR_CELLY_DOLL,
-    DECOR_GENJI_DOLL,
+    DECOR_GENJII_DOLL,
     DECOR_ORANGE_DOLL,
     0xFFFF
 };
@@ -58,7 +58,7 @@ static const u8 *const sFrontierExchangeCorner_Decor1Descriptions[] =
     BattleFrontier_ExchangeServiceCorner_Text_CYukariDollDesc,
     BattleFrontier_ExchangeServiceCorner_Text_KedamaDollDesc,
     BattleFrontier_ExchangeServiceCorner_Text_CEllyDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_GenjiDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_GenjiiDollDesc,
     BattleFrontier_ExchangeServiceCorner_Text_OrangeDollDesc,
     gText_Exit,
 };

@@ -675,7 +675,7 @@ extern const u8 gText_CChenDoll48BP[];
 extern const u8 gText_CYukariDoll48BP[];
 extern const u8 gText_KedamaDoll48BP[];
 extern const u8 gText_CEllyDoll80BP[];
-extern const u8 gText_GenjiDoll80BP[];
+extern const u8 gText_GenjiiDoll80BP[];
 extern const u8 gText_OrangeDoll80BP[];
 
 extern const u8 gText_TewiDoll128BP[];
@@ -848,7 +848,7 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CChenDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CYukariDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_KedamaDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CEllyDollDesc[];
-extern const u8 BattleFrontier_ExchangeServiceCorner_Text_GenjiDollDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_GenjiiDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OrangeDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ProteinDesc[];

@@ -3814,14 +3814,14 @@ Route125_Text_TanyaPostBattle:
 	.string "Whew…\n"
 	.string "Which way is it to MOSSDEEP CITY?$"
 
-Route125_Text_ShadvtewiIntro:
+Route125_Text_ShadtewiIntro:
 	.string "How would you like to take on the\n"
 	.string "WATER-type POKéMON I raised?$"
 
-Route125_Text_ShadvtewiDefeat:
+Route125_Text_ShadtewiDefeat:
 	.string "Lost it…$"
 
-Route125_Text_ShadvtewiPostBattle:
+Route125_Text_ShadtewiPostBattle:
 	.string "Your power… You're the real deal.\n"
 	.string "I'm amazed!$"
 
@@ -4715,14 +4715,14 @@ Route134_Text_HitoshiPostBattle:
 	.string "It was I who challenged you, and yet\n"
 	.string "I lost. I am deeply shamed…$"
 
-Route134_Text_AadvtewiIntro:
+Route134_Text_AadtewiIntro:
 	.string "The savage tide in this area serves to\n"
 	.string "make us stronger than ever.$"
 
-Route134_Text_AadvtewiDefeat:
+Route134_Text_AadtewiDefeat:
 	.string "I willingly concede defeat.$"
 
-Route134_Text_AadvtewiPostBattle:
+Route134_Text_AadtewiPostBattle:
 	.string "We will return for more training at\n"
 	.string "METEOR FALLS.\p"
 	.string "If you'd like, you should go, too.\n"

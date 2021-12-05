@@ -1,7 +1,7 @@
 .set LOCALID_PLAYER, 1
 .set LOCALID_OPPONENT, 2
 .set LOCALID_ATTENDANT, 3
-.set LOCALID_ADVCIRNO, 4
+.set LOCALID_ADCIRNO, 4
 .set LOCALID_CSHINGYOKU, 5
 
 BattleFrontier_BattlePalaceBattleRoom_MapScripts::
@@ -203,7 +203,7 @@ BattleFrontier_BattlePalaceBattleRoom_EventScript_BattleSpenser::
 	hideobjectat LOCALID_OPPONENT, MAP_BATTLE_FRONTIER_BATTLE_PALACE_BATTLE_ROOM
 	setobjectxy LOCALID_OPPONENT, 13, 1
 	setobjectxyperm LOCALID_OPPONENT, 13, 1
-	applymovement LOCALID_ADVCIRNO, BattleFrontier_BattlePalaceBattleRoom_Movement_AdvCirnoEnter
+	applymovement LOCALID_ADCIRNO, BattleFrontier_BattlePalaceBattleRoom_Movement_AdCirnoEnter
 	applymovement LOCALID_CSHINGYOKU, BattleFrontier_BattlePalaceBattleRoom_Movement_CShinGyokuEnter
 	applymovement LOCALID_OPPONENT, BattleFrontier_BattlePalaceBattleRoom_Movement_SpenserEnter
 	waitmovement 0
@@ -298,7 +298,7 @@ BattleFrontier_BattlePalaceBattleRoom_EventScript_SetUpRoomObjects::
 	setvar VAR_TEMP_1, 1
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePalaceBattleRoom_Movement_SetInvisible
 	removeobject LOCALID_OPPONENT
-	applymovement LOCALID_ADVCIRNO, BattleFrontier_BattlePalaceBattleRoom_Movement_SetInvisible
+	applymovement LOCALID_ADCIRNO, BattleFrontier_BattlePalaceBattleRoom_Movement_SetInvisible
 	applymovement LOCALID_CSHINGYOKU, BattleFrontier_BattlePalaceBattleRoom_Movement_SetInvisible
 	end
 
@@ -408,7 +408,7 @@ BattleFrontier_BattlePalaceBattleRoom_EventScript_WarpToLobbyDoubles::
 	waitstate
 	end
 
-BattleFrontier_BattlePalaceBattleRoom_Movement_AdvCirnoEnter:
+BattleFrontier_BattlePalaceBattleRoom_Movement_AdCirnoEnter:
 	delay_16
 	delay_16
 	set_visible
