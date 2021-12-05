@@ -564,7 +564,7 @@ const u16 gEasyChatWordsByLetter_F[] = {
     EC_MOVE2(FURY_ATTACK),
     EC_MOVE2(FURY_CUTTER),
     EC_MOVE2(FURY_SWIPES),
-    EC_MOVE2(FUTURE_SIGHT),
+    EC_MOVE2(PSYCHO_CUT),
 };
 
 const u16 gEasyChatWordsByLetter_G[] = {
@@ -2280,7 +2280,7 @@ const u16 gEasyChatWordsByLetter_UnusedJapaneseMi[] = {
     EC_POKEMON_NATIONAL(AKYUU),
     EC_POKEMON_NATIONAL(SARIEL),
     EC_MOVE2(MIRROR_COAT),
-    EC_MOVE2(FUTURE_SIGHT),
+    EC_MOVE2(PSYCHO_CUT),
     EC_WORD_SEES,
     EC_MOVE2(MILK_DRINK),
     EC_POKEMON_NATIONAL(SHINGYOKUO),
