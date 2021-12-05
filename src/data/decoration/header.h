@@ -972,16 +972,16 @@ const struct Decoration gDecorations[] =
         .tiles = DecorGfx_CELLY_DOLL,
     },
 
-    [DECOR_GENJI_DOLL] =
+    [DECOR_GENJII_DOLL] =
     {
-        .id = DECOR_GENJI_DOLL,
-        .name = _("GENJI DOLL"),
+        .id = DECOR_GENJII_DOLL,
+        .name = _("GENJII DOLL"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
         .price = 3000,
-        .description = DecorDesc_GENJI_DOLL,
-        .tiles = DecorGfx_GENJI_DOLL,
+        .description = DecorDesc_GENJII_DOLL,
+        .tiles = DecorGfx_GENJII_DOLL,
     },
 
     [DECOR_ORANGE_DOLL] =

@@ -62,7 +62,7 @@ static const struct TrainerHillTrainer sTrainerHillTrainerTemplates_JP[] = {
             [1] = NULL_BATTLE_TOWER_POKEMON,
             [2] = NULL_BATTLE_TOWER_POKEMON,
             [3] = {
-                .species = SPECIES_ADVMEILING,
+                .species = SPECIES_ADMEILING,
                 .heldItem = ITEM_SHELL_BELL,
                 .moves = { MOVE_SLUDGE_BOMB, MOVE_SHADOW_BALL, MOVE_PAIN_SPLIT, MOVE_YAWN },
                 .level = 0,
@@ -110,7 +110,7 @@ static const struct TrainerHillTrainer sTrainerHillTrainerTemplates_JP[] = {
                 .friendship = 255
             },
             [5] = {
-                .species = SPECIES_ADVLETTY,
+                .species = SPECIES_ADLETTY,
                 .heldItem = ITEM_QUICK_CLAW,
                 .moves = { MOVE_ANCIENT_POWER, MOVE_SURF, MOVE_EARTHQUAKE, MOVE_AMNESIA },
                 .level = 0,
@@ -258,7 +258,7 @@ static const struct TrainerHillTrainer sTrainerHillTrainerTemplates_JP[] = {
                 .friendship = 255
             },
             [4] = {
-                .species = SPECIES_ADVREISEN,
+                .species = SPECIES_ADREISEN,
                 .heldItem = ITEM_LEFTOVERS,
                 .moves = { MOVE_GIGA_DRAIN, MOVE_GRASS_WHISTLE, MOVE_TOXIC, MOVE_LEECH_SEED },
                 .level = 0,

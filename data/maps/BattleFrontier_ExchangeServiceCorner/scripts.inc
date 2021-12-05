@@ -89,7 +89,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseDecor1::
 	case 5, BattleFrontier_ExchangeServiceCorner_EventScript_CYukariDoll
 	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_KedamaDoll
 	case 7, BattleFrontier_ExchangeServiceCorner_EventScript_CEllyDoll
-	case 8, BattleFrontier_ExchangeServiceCorner_EventScript_GenjiDoll
+	case 8, BattleFrontier_ExchangeServiceCorner_EventScript_GenjiiDoll
 	case 9, BattleFrontier_ExchangeServiceCorner_EventScript_OrangeDoll
 	case 10, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	case MULTI_B_PRESSED, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
@@ -159,11 +159,11 @@ BattleFrontier_ExchangeServiceCorner_EventScript_CEllyDoll::
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
 
-BattleFrontier_ExchangeServiceCorner_EventScript_GenjiDoll::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmGenjiDoll, MSGBOX_YESNO
+BattleFrontier_ExchangeServiceCorner_EventScript_GenjiiDoll::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmGenjiiDoll, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseDecor1
 	setvar VAR_0x8008, 80
-	setvar VAR_0x8009, DECOR_GENJI_DOLL
+	setvar VAR_0x8009, DECOR_GENJII_DOLL
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
 
@@ -477,8 +477,8 @@ BattleFrontier_ExchangeServiceCorner_Text_ConfirmCEllyDoll:
 	.string "You've chosen the CELLY DOLL.\n"
 	.string "Is that correct?$"
 
-BattleFrontier_ExchangeServiceCorner_Text_ConfirmGenjiDoll:
-	.string "You've chosen the GENJI DOLL.\n"
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmGenjiiDoll:
+	.string "You've chosen the GENJII DOLL.\n"
 	.string "Is that correct?$"
 
 BattleFrontier_ExchangeServiceCorner_Text_ConfirmOrangeDoll:
@@ -653,8 +653,8 @@ BattleFrontier_ExchangeServiceCorner_Text_CEllyDollDesc::
 	.string "A CELLY DOLL.\n"
 	.string "Place it on a mat or a desk.$"
 
-BattleFrontier_ExchangeServiceCorner_Text_GenjiDollDesc::
-	.string "A GENJI DOLL.\n"
+BattleFrontier_ExchangeServiceCorner_Text_GenjiiDollDesc::
+	.string "A GENJII DOLL.\n"
 	.string "Place it on a mat or a desk.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_OrangeDollDesc::

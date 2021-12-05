@@ -1887,7 +1887,7 @@ static const u16 sSuwakoLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sReysenLevelUpLearnset[] = {
+static const u16 sReisenIILevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_CONVERSION_2),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_CONVERSION),
@@ -2102,7 +2102,7 @@ static const u16 sAkyuuLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sGenjiLevelUpLearnset[] = {
+static const u16 sGenjiiLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
     LEVEL_UP_MOVE( 8, MOVE_RAZOR_LEAF),
@@ -2582,7 +2582,7 @@ static const u16 sShinkiLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sMimiLevelUpLearnset[] = {
+static const u16 sMimiChanLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SPLASH),
     LEVEL_UP_MOVE( 1, MOVE_SYNTHESIS),
     LEVEL_UP_MOVE( 1, MOVE_TAIL_WHIP),
@@ -4228,7 +4228,7 @@ static const u16 sCSarielLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sAdvMystiaLevelUpLearnset[] = {
+static const u16 sAdMystiaLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
     LEVEL_UP_MOVE( 5, MOVE_FORESIGHT),
@@ -4505,7 +4505,7 @@ static const u16 sCKonngaraLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sMaganLevelUpLearnset[] = {
+static const u16 sCYuugenMaganLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_EMBER),
@@ -4854,7 +4854,7 @@ static const u16 sRinnosukeLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sAdvCirnoLevelUpLearnset[] = {
+static const u16 sAdCirnoLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_BIND),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 1, MOVE_NIGHT_SHADE),
@@ -4872,7 +4872,7 @@ static const u16 sAdvCirnoLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sAdvReisenLevelUpLearnset[] = {
+static const u16 sAdReisenLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_ABSORB),
     LEVEL_UP_MOVE( 5, MOVE_GROWTH),
     LEVEL_UP_MOVE( 9, MOVE_POISON_STING),
@@ -4951,7 +4951,7 @@ static const u16 sCKikuriLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sAdvMeilingLevelUpLearnset[] = {
+static const u16 sAdMeilingLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_MOVE( 1, MOVE_YAWN),
     LEVEL_UP_MOVE( 1, MOVE_POISON_GAS),
@@ -5144,7 +5144,7 @@ static const u16 sDSatoriLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sAdvLettyLevelUpLearnset[] = {
+static const u16 sAdLettyLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_HARDEN),
     LEVEL_UP_MOVE( 8, MOVE_WATER_GUN),
@@ -5159,7 +5159,7 @@ static const u16 sAdvLettyLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sAdvTewiLevelUpLearnset[] = {
+static const u16 sAdTewiLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 4, MOVE_HARDEN),
     LEVEL_UP_MOVE( 7, MOVE_MUD_SLAP),
@@ -5175,7 +5175,7 @@ static const u16 sAdvTewiLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sAdvMarisaLevelUpLearnset[] = {
+static const u16 sAdMarisaLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_HARDEN),
     LEVEL_UP_MOVE( 1, MOVE_MUD_SLAP),
@@ -5194,7 +5194,7 @@ static const u16 sAdvMarisaLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sAdvAliceLevelUpLearnset[] = {
+static const u16 sAdAliceLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_HARDEN),
     LEVEL_UP_MOVE( 1, MOVE_MUD_SLAP),
@@ -5239,7 +5239,7 @@ static const u16 sYukiLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sAdvMokouLevelUpLearnset[] = {
+static const u16 sAdMokouLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 5, MOVE_SWEET_SCENT),
     LEVEL_UP_MOVE( 9, MOVE_CHARM),
@@ -5253,7 +5253,7 @@ static const u16 sAdvMokouLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sAdvYukariLevelUpLearnset[] = {
+static const u16 sAdYukariLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_ASTONISH),
     LEVEL_UP_MOVE( 8, MOVE_CONSTRICT),
     LEVEL_UP_MOVE(15, MOVE_ACID),
@@ -5267,7 +5267,7 @@ static const u16 sAdvYukariLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sAdvRanLevelUpLearnset[] = {
+static const u16 sAdRanLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_ASTONISH),
     LEVEL_UP_MOVE( 1, MOVE_CONSTRICT),
     LEVEL_UP_MOVE( 1, MOVE_ACID),
@@ -5284,7 +5284,7 @@ static const u16 sAdvRanLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sAdvChenLevelUpLearnset[] = {
+static const u16 sAdChenLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
     LEVEL_UP_MOVE( 7, MOVE_HARDEN),
     LEVEL_UP_MOVE(13, MOVE_MUD_SPORT),

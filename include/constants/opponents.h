@@ -398,7 +398,7 @@
 #define TRAINER_NICOLAS_3                   394
 #define TRAINER_NICOLAS_4                   395
 #define TRAINER_NICOLAS_5                   396
-#define TRAINER_AADVTEWI                       397
+#define TRAINER_AADTEWI                       397
 #define TRAINER_PERRY                       398
 #define TRAINER_HUGH                        399
 #define TRAINER_PHIL                        400
@@ -453,7 +453,7 @@
 #define TRAINER_JENNY_1                     449
 #define TRAINER_GRACE                       450
 #define TRAINER_TANYA                       451
-#define TRAINER_SHADVTEWI                      452
+#define TRAINER_SHADTEWI                      452
 #define TRAINER_NIKKI                       453
 #define TRAINER_BRENDA                      454
 #define TRAINER_KATIE                       455

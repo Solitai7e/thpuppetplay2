@@ -148,7 +148,7 @@
 #define OBJ_EVENT_GFX_KOTOHIME_DOLL                144
 #define OBJ_EVENT_GFX_MARGATROID_DOLL                145
 #define OBJ_EVENT_GFX_CELLY_DOLL             146
-#define OBJ_EVENT_GFX_GENJI_DOLL             147
+#define OBJ_EVENT_GFX_GENJII_DOLL             147
 #define OBJ_EVENT_GFX_ORANGE_DOLL              148
 #define OBJ_EVENT_GFX_CMYSTIA_DOLL            149
 #define OBJ_EVENT_GFX_CCHEN_DOLL                150
@@ -227,7 +227,7 @@
 #define OBJ_EVENT_GFX_MYSTERY_GIFT_MAN           223
 #define OBJ_EVENT_GFX_TRICK_HOUSE_STATUE         224
 #define OBJ_EVENT_GFX_SENDAI                     225
-#define OBJ_EVENT_GFX_ADVCIRNO                   226
+#define OBJ_EVENT_GFX_ADCIRNO                   226
 #define OBJ_EVENT_GFX_UNION_ROOM_NURSE           227
 #define OBJ_EVENT_GFX_YUMEKO                  228
 #define OBJ_EVENT_GFX_AKYUU                        229

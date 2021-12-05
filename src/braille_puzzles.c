@@ -89,15 +89,15 @@ void DoBrailleDigEffect(void)
     ScriptContext2_Disable();
 }
 
-bool8 CheckAdvLettyTensoku(void)
+bool8 CheckAdLettyTensoku(void)
 {
     // Emerald change: why did they flip it?
     // First comes Tensoku
     if (GetMonData(&gPlayerParty[0], MON_DATA_SPECIES2, 0) == SPECIES_TENSOKU)
     {
         CalculatePlayerPartyCount();
-        // Last comes AdvLetty
-        if (GetMonData(&gPlayerParty[gPlayerPartyCount - 1], MON_DATA_SPECIES2, 0) == SPECIES_ADVLETTY)
+        // Last comes AdLetty
+        if (GetMonData(&gPlayerParty[gPlayerPartyCount - 1], MON_DATA_SPECIES2, 0) == SPECIES_ADLETTY)
             return TRUE;
     }
     return FALSE;

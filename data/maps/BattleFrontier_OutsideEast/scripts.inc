@@ -269,7 +269,7 @@ BattleFrontier_OutsideEast_Text_ConquerLeagueAndFrontier:
 	.string "the BATTLE FRONTIER and the POKéMON\l"
 	.string "LEAGUE.\p"
 	.string "And if my dream comes true…\p"
-	.string "I… I'm going to ask MIMI next door\n"
+	.string "I… I'm going to ask MIMICHAN next door\n"
 	.string "if she will be friends with me!$"
 
 BattleFrontier_OutsideEast_Text_PyramidTooHarsh:

@@ -3,7 +3,7 @@
 .set LOCALID_RIVAL, 3
 .set LOCALID_BALL_CELLY, 4
 .set LOCALID_BALL_ORANGE, 5
-.set LOCALID_BALL_GENJI, 6
+.set LOCALID_BALL_GENJII, 6
 
 LittlerootTown_ProfessorBirchsLab_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_ProfessorBirchsLab_OnTransition
@@ -88,14 +88,14 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AddRivalObject::
 LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForJohtoStarters::
 	addobject LOCALID_BALL_CELLY
 	addobject LOCALID_BALL_ORANGE
-	addobject LOCALID_BALL_GENJI
+	addobject LOCALID_BALL_GENJII
 	addobject LOCALID_RIVAL
 	turnobject LOCALID_BALL_CELLY, DIR_SOUTH
 	setobjectxy LOCALID_BALL_CELLY, 8, 4
 	turnobject LOCALID_BALL_ORANGE, DIR_SOUTH
 	setobjectxy LOCALID_BALL_ORANGE, 9, 4
-	turnobject LOCALID_BALL_GENJI, DIR_SOUTH
-	setobjectxy LOCALID_BALL_GENJI, 10, 4
+	turnobject LOCALID_BALL_GENJII, DIR_SOUTH
+	setobjectxy LOCALID_BALL_GENJII, 10, 4
 	turnobject LOCALID_BIRCH, DIR_SOUTH
 	setobjectxy LOCALID_BIRCH, 6, 4
 	turnobject LOCALID_RIVAL, DIR_EAST
@@ -315,15 +315,15 @@ LittlerootTown_ProfessorBirchsLab_EventScript_Orange::
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiveOrange
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_Genji::
+LittlerootTown_ProfessorBirchsLab_EventScript_Genjii::
 	release
 	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6, LittlerootTown_ProfessorBirchsLab_EventScript_AlreadyChoseJohtoStarter
 	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
-	showmonpic SPECIES_GENJI, 10, 3
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_YoullTakeGenji, MSGBOX_YESNO
+	showmonpic SPECIES_GENJII, 10, 3
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_YoullTakeGenjii, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_TakeYourTime
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiveGenji
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiveGenjii
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_AlreadyChoseJohtoStarter::
@@ -419,41 +419,41 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedOrange::
 	releaseall
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_GiveGenji::
-	bufferspeciesname STR_VAR_1, SPECIES_GENJI
-	setvar VAR_TEMP_1, SPECIES_GENJI
-	givemon SPECIES_GENJI, 5, ITEM_NONE
-	goto_if_eq VAR_RESULT, 0, LittlerootTown_ProfessorBirchsLab_EventScript_SendGenjiToParty
-	goto_if_eq VAR_RESULT, 1, LittlerootTown_ProfessorBirchsLab_EventScript_SendGenjiToPC
+LittlerootTown_ProfessorBirchsLab_EventScript_GiveGenjii::
+	bufferspeciesname STR_VAR_1, SPECIES_GENJII
+	setvar VAR_TEMP_1, SPECIES_GENJII
+	givemon SPECIES_GENJII, 5, ITEM_NONE
+	goto_if_eq VAR_RESULT, 0, LittlerootTown_ProfessorBirchsLab_EventScript_SendGenjiiToParty
+	goto_if_eq VAR_RESULT, 1, LittlerootTown_ProfessorBirchsLab_EventScript_SendGenjiiToPC
 	hidemonpic
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_SendGenjiToParty::
+LittlerootTown_ProfessorBirchsLab_EventScript_SendGenjiiToParty::
 	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedJohtoStarter
-	removeobject LOCALID_BALL_GENJI
+	removeobject LOCALID_BALL_GENJII
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedGenji
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedGenjii
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedGenji
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedGenjii
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_SendGenjiToPC::
+LittlerootTown_ProfessorBirchsLab_EventScript_SendGenjiiToPC::
 	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedJohtoStarter
-	removeobject LOCALID_BALL_GENJI
+	removeobject LOCALID_BALL_GENJII
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_GenjiTransferredToPC
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_GenjiiTransferredToPC
 	call Common_EventScript_NameReceivedBoxMon
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_GenjiTransferredToPC
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_GenjiiTransferredToPC
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_GenjiTransferredToPC::
+LittlerootTown_ProfessorBirchsLab_EventScript_GenjiiTransferredToPC::
 	call Common_EventScript_TransferredToPC
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedGenji
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedGenjii
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedGenji::
+LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedGenjii::
 	hidemonpic
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting, MSGBOX_DEFAULT
 	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6
@@ -916,11 +916,11 @@ LittlerootTown_ProfessorBirchsLab_Text_YoullTakeOrange:
 	.string "You know how to pick a good one.\p"
 	.string "So, you'll take the ORANGE?$"
 
-LittlerootTown_ProfessorBirchsLab_Text_YoullTakeGenji:
+LittlerootTown_ProfessorBirchsLab_Text_YoullTakeGenjii:
 	.string "PROF. BIRCH: The GRASS POKéMON\n"
-	.string "GENJI is your choice!\p"
+	.string "GENJII is your choice!\p"
 	.string "You sure know what you're doing.\p"
-	.string "So, you'll take the GENJI?$"
+	.string "So, you'll take the GENJII?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_TakeYourTimeAllInvaluable:
 	.string "PROF. BIRCH: Take your time before\n"

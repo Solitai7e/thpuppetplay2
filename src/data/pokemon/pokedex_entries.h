@@ -1644,12 +1644,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_REYSEN] =
+    [NATIONAL_DEX_REISENII] =
     {
         .categoryName = _("VIRTUAL"),
         .height = 8,
         .weight = 365,
-        .description = gReysenPokedexText,
+        .description = gReisenIIPokedexText,
         .pokemonScale = 328,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -1824,12 +1824,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_GENJI] =
+    [NATIONAL_DEX_GENJII] =
     {
         .categoryName = _("LEAF"),
         .height = 9,
         .weight = 64,
-        .description = gGenjiPokedexText,
+        .description = gGenjiiPokedexText,
         .pokemonScale = 512,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -2256,12 +2256,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_MIMI] =
+    [NATIONAL_DEX_MIMICHAN] =
     {
         .categoryName = _("COTTONWEED"),
         .height = 6,
         .weight = 10,
-        .description = gMimiPokedexText,
+        .description = gMimiChanPokedexText,
         .pokemonScale = 387,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -3624,12 +3624,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_ADVMYSTIA] =
+    [NATIONAL_DEX_ADMYSTIA] =
     {
         .categoryName = _("DARKNESS"),
         .height = 5,
         .weight = 110,
-        .description = gAdvMystiaPokedexText,
+        .description = gAdMystiaPokedexText,
         .pokemonScale = 451,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3648,36 +3648,36 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_ADVTEWI] =
+    [NATIONAL_DEX_ADTEWI] =
     {
         .categoryName = _("IRON ARMOR"),
         .height = 4,
         .weight = 600,
-        .description = gAdvTewiPokedexText,
+        .description = gAdTewiPokedexText,
         .pokemonScale = 419,
         .pokemonOffset = 23,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_ADVMARISA] =
+    [NATIONAL_DEX_ADMARISA] =
     {
         .categoryName = _("IRON ARMOR"),
         .height = 9,
         .weight = 1200,
-        .description = gAdvMarisaPokedexText,
+        .description = gAdMarisaPokedexText,
         .pokemonScale = 275,
         .pokemonOffset = 12,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_ADVALICE] =
+    [NATIONAL_DEX_ADALICE] =
     {
         .categoryName = _("IRON ARMOR"),
         .height = 21,
         .weight = 3600,
-        .description = gAdvAlicePokedexText,
+        .description = gAdAlicePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = -1,
         .trainerScale = 350,
@@ -3768,24 +3768,24 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_ADVMOKOU] =
+    [NATIONAL_DEX_ADMOKOU] =
     {
         .categoryName = _("FIREFLY"),
         .height = 6,
         .weight = 177,
-        .description = gAdvMokouPokedexText,
+        .description = gAdMokouPokedexText,
         .pokemonScale = 572,
         .pokemonOffset = 19,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_ADVREISEN] =
+    [NATIONAL_DEX_ADREISEN] =
     {
         .categoryName = _("THORN"),
         .height = 3,
         .weight = 20,
-        .description = gAdvReisenPokedexText,
+        .description = gAdReisenPokedexText,
         .pokemonScale = 677,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -3804,12 +3804,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_ADVMEILING] =
+    [NATIONAL_DEX_ADMEILING] =
     {
         .categoryName = _("POISON BAG"),
         .height = 17,
         .weight = 800,
-        .description = gAdvMeilingPokedexText,
+        .description = gAdMeilingPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 6,
         .trainerScale = 345,
@@ -3876,12 +3876,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_MAGAN] =
+    [NATIONAL_DEX_CYUUGENMAGAN] =
     {
         .categoryName = _("ERUPTION"),
         .height = 19,
         .weight = 2200,
-        .description = gMaganPokedexText,
+        .description = gCYuugenMaganPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 7,
         .trainerScale = 345,
@@ -4140,36 +4140,36 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 1,
     },
 
-    [NATIONAL_DEX_ADVYUKARI] =
+    [NATIONAL_DEX_ADYUKARI] =
     {
         .categoryName = _("SEA LILY"),
         .height = 10,
         .weight = 238,
-        .description = gAdvYukariPokedexText,
+        .description = gAdYukariPokedexText,
         .pokemonScale = 305,
         .pokemonOffset = 8,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_ADVRAN] =
+    [NATIONAL_DEX_ADRAN] =
     {
         .categoryName = _("BARNACLE"),
         .height = 15,
         .weight = 604,
-        .description = gAdvRanPokedexText,
+        .description = gAdRanPokedexText,
         .pokemonScale = 267,
         .pokemonOffset = 0,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_ADVCHEN] =
+    [NATIONAL_DEX_ADCHEN] =
     {
         .categoryName = _("OLD SHRIMP"),
         .height = 7,
         .weight = 125,
-        .description = gAdvChenPokedexText,
+        .description = gAdChenPokedexText,
         .pokemonScale = 296,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -4272,12 +4272,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_ADVCIRNO] =
+    [NATIONAL_DEX_ADCIRNO] =
     {
         .categoryName = _("BECKON"),
         .height = 16,
         .weight = 306,
-        .description = gAdvCirnoPokedexText,
+        .description = gAdCirnoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 299,
@@ -4428,12 +4428,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_ADVLETTY] =
+    [NATIONAL_DEX_ADLETTY] =
     {
         .categoryName = _("LONGEVITY"),
         .height = 10,
         .weight = 234,
-        .description = gAdvLettyPokedexText,
+        .description = gAdLettyPokedexText,
         .pokemonScale = 316,
         .pokemonOffset = 7,
         .trainerScale = 256,

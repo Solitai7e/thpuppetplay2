@@ -496,7 +496,7 @@ const u16 gEggMoves[] = {
               MOVE_DRAGON_BREATH,
               MOVE_DRAGON_DANCE),
 
-    egg_moves(GENJI,
+    egg_moves(GENJII,
               MOVE_VINE_WHIP,
               MOVE_LEECH_SEED,
               MOVE_COUNTER,
@@ -1036,7 +1036,7 @@ const u16 gEggMoves[] = {
               MOVE_SLEEP_TALK,
               MOVE_YAWN),
 
-    egg_moves(ADVMYSTIA,
+    egg_moves(ADMYSTIA,
               MOVE_PSYCH_UP,
               MOVE_RECOVER,
               MOVE_MOONLIGHT),
@@ -1174,7 +1174,7 @@ const u16 gEggMoves[] = {
               MOVE_MEMENTO,
               MOVE_FAINT_ATTACK),
 
-    egg_moves(ADVREISEN,
+    egg_moves(ADREISEN,
               MOVE_SPIKES,
               MOVE_SYNTHESIS,
               MOVE_PIN_MISSILE,
@@ -1246,7 +1246,7 @@ const u16 gEggMoves[] = {
               MOVE_ROAR,
               MOVE_CURSE),
 
-    egg_moves(ADVLETTY,
+    egg_moves(ADLETTY,
               MOVE_MAGNITUDE,
               MOVE_SKULL_BASH,
               MOVE_WATER_SPORT,
@@ -1254,7 +1254,7 @@ const u16 gEggMoves[] = {
               MOVE_SLEEP_TALK,
               MOVE_ROCK_SLIDE),
 
-    egg_moves(ADVTEWI,
+    egg_moves(ADTEWI,
               MOVE_ENDEAVOR,
               MOVE_BODY_SLAM,
               MOVE_STOMP,
@@ -1269,18 +1269,18 @@ const u16 gEggMoves[] = {
               MOVE_SILVER_WIND,
               MOVE_TRICK),
 
-    egg_moves(ADVMOKOU,
+    egg_moves(ADMOKOU,
               MOVE_BATON_PASS,
               MOVE_SILVER_WIND,
               MOVE_GROWTH),
 
-    egg_moves(ADVYUKARI,
+    egg_moves(ADYUKARI,
               MOVE_BARRIER,
               MOVE_RECOVER,
               MOVE_MIRROR_COAT,
               MOVE_ROCK_SLIDE),
 
-    egg_moves(ADVCHEN,
+    egg_moves(ADCHEN,
               MOVE_RAPID_SPIN,
               MOVE_KNOCK_OFF,
               MOVE_SWORDS_DANCE,

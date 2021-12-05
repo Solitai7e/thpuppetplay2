@@ -145,7 +145,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CCirnoDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KotohimeDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MargatroidDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CEllyDoll;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GenjiDoll;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GenjiiDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OrangeDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CMystiaDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CChenDoll;
@@ -224,7 +224,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MikoSide;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MysteryEventDeliveryman;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Statue;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sendai;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AdvCirno;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AdCirno;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnionRoomAttendant;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Yumeko;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Akyuu;
@@ -394,7 +394,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_KOTOHIME_DOLL] =              &gObjectEventGraphicsInfo_KotohimeDoll,
     [OBJ_EVENT_GFX_MARGATROID_DOLL] =              &gObjectEventGraphicsInfo_MargatroidDoll,
     [OBJ_EVENT_GFX_CELLY_DOLL] =           &gObjectEventGraphicsInfo_CEllyDoll,
-    [OBJ_EVENT_GFX_GENJI_DOLL] =           &gObjectEventGraphicsInfo_GenjiDoll,
+    [OBJ_EVENT_GFX_GENJII_DOLL] =           &gObjectEventGraphicsInfo_GenjiiDoll,
     [OBJ_EVENT_GFX_ORANGE_DOLL] =            &gObjectEventGraphicsInfo_OrangeDoll,
     [OBJ_EVENT_GFX_CMYSTIA_DOLL] =          &gObjectEventGraphicsInfo_CMystiaDoll,
     [OBJ_EVENT_GFX_CCHEN_DOLL] =              &gObjectEventGraphicsInfo_CChenDoll,
@@ -473,7 +473,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MYSTERY_GIFT_MAN] =         &gObjectEventGraphicsInfo_MysteryEventDeliveryman,
     [OBJ_EVENT_GFX_TRICK_HOUSE_STATUE] =       &gObjectEventGraphicsInfo_Statue,
     [OBJ_EVENT_GFX_SENDAI] =                   &gObjectEventGraphicsInfo_Sendai,
-    [OBJ_EVENT_GFX_ADVCIRNO] =                 &gObjectEventGraphicsInfo_AdvCirno,
+    [OBJ_EVENT_GFX_ADCIRNO] =                 &gObjectEventGraphicsInfo_AdCirno,
     [OBJ_EVENT_GFX_UNION_ROOM_NURSE] =         &gObjectEventGraphicsInfo_UnionRoomAttendant,
     [OBJ_EVENT_GFX_YUMEKO] =                &gObjectEventGraphicsInfo_Yumeko,
     [OBJ_EVENT_GFX_AKYUU] =                      &gObjectEventGraphicsInfo_Akyuu,
