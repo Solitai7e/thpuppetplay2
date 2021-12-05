@@ -11,16 +11,13 @@ SouthernIsland_Interior_OnResume:
 
 SouthernIsland_Interior_EventScript_TryRemoveLati::
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_ne Common_EventScript_NopReturn
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
 	removeobject LOCALID_LATI
 	return
 
 SouthernIsland_Interior_OnTransition:
-	compare VAR_ROAMER_POKEMON, 0
-	call_if_eq SouthernIsland_Interior_EventScript_SetUpCKasen
-	compare VAR_ROAMER_POKEMON, 0
-	call_if_ne SouthernIsland_Interior_EventScript_SetUpMamizou
+	call_if_eq VAR_ROAMER_POKEMON, 0, SouthernIsland_Interior_EventScript_SetUpCKasen
+	call_if_ne VAR_ROAMER_POKEMON, 0, SouthernIsland_Interior_EventScript_SetUpMamizou
 	call SouthernIsland_Interior_EventScript_SetUpPlayerGfx
 	end
 
@@ -36,10 +33,8 @@ SouthernIsland_Interior_EventScript_SetUpMamizou::
 
 SouthernIsland_Interior_EventScript_SetUpPlayerGfx::
 	checkplayergender
-	compare VAR_RESULT, MALE
-	goto_if_eq SouthernIsland_Interior_EventScript_SetBrendanGfx
-	compare VAR_RESULT, FEMALE
-	goto_if_eq SouthernIsland_Interior_EventScript_SetMayGfx
+	goto_if_eq VAR_RESULT, MALE, SouthernIsland_Interior_EventScript_SetBrendanGfx
+	goto_if_eq VAR_RESULT, FEMALE, SouthernIsland_Interior_EventScript_SetMayGfx
 	end
 
 SouthernIsland_Interior_EventScript_SetBrendanGfx::
@@ -79,21 +74,16 @@ SouthernIsland_Interior_EventScript_Lati::
 	delay 50
 	special RemoveCameraObject
 	setvar VAR_LAST_TALKED, LOCALID_LATI
-	compare VAR_ROAMER_POKEMON, 0
-	call_if_eq SouthernIsland_Interior_EventScript_SetCKasenBattleVars
-	compare VAR_ROAMER_POKEMON, 0
-	call_if_ne SouthernIsland_Interior_EventScript_SetMamizouBattleVars
+	call_if_eq VAR_ROAMER_POKEMON, 0, SouthernIsland_Interior_EventScript_SetCKasenBattleVars
+	call_if_ne VAR_ROAMER_POKEMON, 0, SouthernIsland_Interior_EventScript_SetMamizouBattleVars
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLatiBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq SouthernIsland_Interior_EventScript_LatiDefeated
-	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq SouthernIsland_Interior_EventScript_RanFromLati
-	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq SouthernIsland_Interior_EventScript_RanFromLati
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SouthernIsland_Interior_EventScript_LatiDefeated
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SouthernIsland_Interior_EventScript_RanFromLati
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SouthernIsland_Interior_EventScript_RanFromLati
 	setflag FLAG_CAUGHT_MAMIZOU_OR_CKASEN
 	releaseall
 	end

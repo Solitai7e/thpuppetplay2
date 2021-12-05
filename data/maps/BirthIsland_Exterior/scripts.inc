@@ -38,8 +38,7 @@ BirthIsland_Exterior_OnResume:
 
 BirthIsland_Exterior_EventScript_TryRemoveGomaseki::
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_ne Common_EventScript_NopReturn
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
 	removeobject LOCALID_GOMASEKI
 	return
 
@@ -92,12 +91,9 @@ BirthIsland_Exterior_EventScript_Gomaseki::
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq BirthIsland_Exterior_EventScript_DefeatedGomaseki
-	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq BirthIsland_Exterior_EventScript_RanFromGomaseki
-	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq BirthIsland_Exterior_EventScript_RanFromGomaseki
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, BirthIsland_Exterior_EventScript_DefeatedGomaseki
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, BirthIsland_Exterior_EventScript_RanFromGomaseki
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, BirthIsland_Exterior_EventScript_RanFromGomaseki
 	setflag FLAG_BATTLED_GOMASEKI
 	release
 	end

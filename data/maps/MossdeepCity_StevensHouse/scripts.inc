@@ -12,12 +12,11 @@ MossdeepCity_StevensHouse_OnLoad:
 	end
 
 MossdeepCity_StevensHouse_EventScript_HideStevensNote::
-	setmetatile 6, 4, METATILE_GenericBuilding_TableEdge, 1
+	setmetatile 6, 4, METATILE_GenericBuilding_TableEdge, TRUE
 	return
 
 MossdeepCity_StevensHouse_OnTransition:
-	compare VAR_STEVENS_HOUSE_STATE, 2
-	call_if_eq MossdeepCity_StevensHouse_EventScript_SetStevenPos
+	call_if_eq VAR_STEVENS_HOUSE_STATE, 2, MossdeepCity_StevensHouse_EventScript_SetStevenPos
 	end
 
 MossdeepCity_StevensHouse_EventScript_SetStevenPos::
@@ -76,8 +75,7 @@ MossdeepCity_StevensHouse_Movement_StevenReturn:
 MossdeepCity_StevensHouse_EventScript_CSeigaPokeball::
 	lockall
 	msgbox MossdeepCity_StevensHouse_Text_TakeBallContainingCSeiga, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq MossdeepCity_StevensHouse_EventScript_LeaveCSeiga
+	goto_if_eq VAR_RESULT, NO, MossdeepCity_StevensHouse_EventScript_LeaveCSeiga
 	goto MossdeepCity_StevensHouse_EventScript_GiveCSeiga
 	end
 
@@ -89,18 +87,15 @@ MossdeepCity_StevensHouse_EventScript_LeaveCSeiga::
 MossdeepCity_StevensHouse_EventScript_GiveCSeiga::
 	setvar VAR_TEMP_1, SPECIES_CSEIGA
 	givemon SPECIES_CSEIGA, 5, ITEM_NONE
-	compare VAR_RESULT, 0
-	goto_if_eq MossdeepCity_StevensHouse_EventScript_SendCSeigaParty
-	compare VAR_RESULT, 1
-	goto_if_eq MossdeepCity_StevensHouse_EventScript_SendCSeigaPC
+	goto_if_eq VAR_RESULT, 0, MossdeepCity_StevensHouse_EventScript_SendCSeigaParty
+	goto_if_eq VAR_RESULT, 1, MossdeepCity_StevensHouse_EventScript_SendCSeigaPC
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 MossdeepCity_StevensHouse_EventScript_SendCSeigaParty::
 	call MossdeepCity_StevensHouse_EventScript_ReceivedCSeigaFanfare
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq MossdeepCity_StevensHouse_EventScript_ReceivedCSeiga
+	goto_if_eq VAR_RESULT, NO, MossdeepCity_StevensHouse_EventScript_ReceivedCSeiga
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
 	goto MossdeepCity_StevensHouse_EventScript_ReceivedCSeiga
@@ -109,8 +104,7 @@ MossdeepCity_StevensHouse_EventScript_SendCSeigaParty::
 MossdeepCity_StevensHouse_EventScript_SendCSeigaPC::
 	call MossdeepCity_StevensHouse_EventScript_ReceivedCSeigaFanfare
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	compare VAR_RESULT, NO
-	goto_if_eq MossdeepCity_StevensHouse_EventScript_CSeigaTransferredToPC
+	goto_if_eq VAR_RESULT, NO, MossdeepCity_StevensHouse_EventScript_CSeigaTransferredToPC
 	call Common_EventScript_NameReceivedBoxMon
 	goto MossdeepCity_StevensHouse_EventScript_CSeigaTransferredToPC
 	end
@@ -121,13 +115,13 @@ MossdeepCity_StevensHouse_EventScript_CSeigaTransferredToPC::
 	end
 
 MossdeepCity_StevensHouse_EventScript_ReceivedCSeigaFanfare::
-	bufferspeciesname 1, SPECIES_CSEIGA
+	bufferspeciesname STR_VAR_2, SPECIES_CSEIGA
 	removeobject LOCALID_CSEIGA_BALL
 	playfanfare MUS_OBTAIN_ITEM
 	message MossdeepCity_StevensHouse_Text_ObtainedCSeiga
 	waitmessage
 	waitfanfare
-	bufferspeciesname 0, SPECIES_CSEIGA
+	bufferspeciesname STR_VAR_1, SPECIES_CSEIGA
 	return
 
 MossdeepCity_StevensHouse_EventScript_ReceivedCSeiga::

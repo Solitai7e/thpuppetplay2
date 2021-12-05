@@ -28,8 +28,7 @@ NavelRock_Top_OnResume:
 
 NavelRock_Top_EventScript_TryRemoveAKomachi::
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_ne Common_EventScript_NopReturn
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
 	removeobject LOCALID_AKOMACHI
 	return
 
@@ -68,12 +67,9 @@ NavelRock_Top_EventScript_AKomachi::
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	setvar VAR_LAST_TALKED, LOCALID_AKOMACHI
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq NavelRock_Top_EventScript_DefeatedAKomachi
-	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq NavelRock_Top_EventScript_RanFromAKomachi
-	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq NavelRock_Top_EventScript_RanFromAKomachi
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NavelRock_Top_EventScript_DefeatedAKomachi
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NavelRock_Top_EventScript_RanFromAKomachi
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NavelRock_Top_EventScript_RanFromAKomachi
 	setflag FLAG_CAUGHT_AKOMACHI
 	releaseall
 	end

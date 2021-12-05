@@ -5,8 +5,7 @@ MysteryGiftScript_SurfCLuize::
 
 SurfCLuize_GiveIfPossible:
 	specialvar VAR_GIFT_CLUIZE_SLOT, CalculatePlayerPartyCount
-	compare VAR_GIFT_CLUIZE_SLOT, PARTY_SIZE
-	vgoto_if_eq SurfCLuize_FullParty
+	vgoto_if_eq VAR_GIFT_CLUIZE_SLOT, PARTY_SIZE, SurfCLuize_FullParty
 	setflag FLAG_MYSTERY_GIFT_DONE
 	vcall SurfCLuize_GiveEgg
 	lock
@@ -32,16 +31,11 @@ SurfCLuize_GiveEgg:
 	giveegg SPECIES_CLUIZE
 	setmoneventlegal VAR_GIFT_CLUIZE_SLOT
 	setmonmetlocation VAR_GIFT_CLUIZE_SLOT, METLOC_FATEFUL_ENCOUNTER
-	compare VAR_GIFT_CLUIZE_SLOT, 1
-	vgoto_if_eq SurfCLuize_Slot1
-	compare VAR_GIFT_CLUIZE_SLOT, 2
-	vgoto_if_eq SurfCLuize_Slot2
-	compare VAR_GIFT_CLUIZE_SLOT, 3
-	vgoto_if_eq SurfCLuize_Slot3
-	compare VAR_GIFT_CLUIZE_SLOT, 4
-	vgoto_if_eq SurfCLuize_Slot4
-	compare VAR_GIFT_CLUIZE_SLOT, 5
-	vgoto_if_eq SurfCLuize_Slot5
+	vgoto_if_eq VAR_GIFT_CLUIZE_SLOT, 1, SurfCLuize_Slot1
+	vgoto_if_eq VAR_GIFT_CLUIZE_SLOT, 2, SurfCLuize_Slot2
+	vgoto_if_eq VAR_GIFT_CLUIZE_SLOT, 3, SurfCLuize_Slot3
+	vgoto_if_eq VAR_GIFT_CLUIZE_SLOT, 4, SurfCLuize_Slot4
+	vgoto_if_eq VAR_GIFT_CLUIZE_SLOT, 5, SurfCLuize_Slot5
 	return
 
 SurfCLuize_Slot1:

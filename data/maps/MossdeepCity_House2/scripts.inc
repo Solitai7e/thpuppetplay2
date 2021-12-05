@@ -21,10 +21,8 @@ MossdeepCity_House2_EventScript_TKogasa::
 	closemessage
 	setflag FLAG_TKOGASA_DELIVERED_MAIL
 	clearflag FLAG_HIDE_FORTREE_CITY_HOUSE_4_TKOGASA
-	compare VAR_FACING, DIR_NORTH
-	call_if_eq MossdeepCity_House2_EventScript_TKogasaExitNorth
-	compare VAR_FACING, DIR_WEST
-	call_if_eq MossdeepCity_House2_EventScript_TKogasaExitWest
+	call_if_eq VAR_FACING, DIR_NORTH, MossdeepCity_House2_EventScript_TKogasaExitNorth
+	call_if_eq VAR_FACING, DIR_WEST, MossdeepCity_House2_EventScript_TKogasaExitWest
 	removeobject LOCALID_TKOGASA
 	release
 	end

@@ -12,16 +12,13 @@ SkyPillar_Top_OnResume:
 
 SkyPillar_Top_EventScript_TryRemoveCMamizou::
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_ne Common_EventScript_NopReturn
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
 	removeobject VAR_LAST_TALKED
 	return
 
 SkyPillar_Top_OnTransition:
-	compare VAR_SKY_PILLAR_STATE, 2
-	call_if_lt SkyPillar_Top_EventScript_SetCleanLayout
-	compare VAR_SKY_PILLAR_STATE, 2
-	call_if_ge SkyPillar_Top_EventScript_TryShowCMamizou
+	call_if_lt VAR_SKY_PILLAR_STATE, 2, SkyPillar_Top_EventScript_SetCleanLayout
+	call_if_ge VAR_SKY_PILLAR_STATE, 2, SkyPillar_Top_EventScript_TryShowCMamizou
 	end
 
 SkyPillar_Top_EventScript_SetCleanLayout::
@@ -57,12 +54,9 @@ SkyPillar_Top_EventScript_CMamizou::
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq SkyPillar_Top_EventScript_DefeatedCMamizou
-	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq SkyPillar_Top_EventScript_RanFromCMamizou
-	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq SkyPillar_Top_EventScript_RanFromCMamizou
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SkyPillar_Top_EventScript_DefeatedCMamizou
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SkyPillar_Top_EventScript_RanFromCMamizou
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SkyPillar_Top_EventScript_RanFromCMamizou
 	setflag FLAG_DEFEATED_CMAMIZOU
 	releaseall
 	end
@@ -88,7 +82,7 @@ SkyPillar_Top_EventScript_RanFromCMamizou2::
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject VAR_LAST_TALKED
 	fadescreenswapbuffers FADE_FROM_BLACK
-	bufferspeciesname 0, VAR_0x8004
+	bufferspeciesname STR_VAR_1, VAR_0x8004
 	msgbox gText_LegendaryFlewAway, MSGBOX_DEFAULT
 	releaseall
 	end

@@ -31,18 +31,14 @@ PetalburgCity_PokemonCenter_1F_EventScript_Woman::
 	faceplayer
 	msgbox PetalburgCity_PokemonCenter_1F_Text_ManyTypesOfPokemon, MSGBOX_DEFAULT
 	specialvar VAR_RESULT, IsStarterInParty
-	compare VAR_RESULT, TRUE
-	goto_if_eq PetalburgCity_PokemonCenter_1F_EventScript_SayStarterTypeInfo
+	goto_if_eq VAR_RESULT, TRUE, PetalburgCity_PokemonCenter_1F_EventScript_SayStarterTypeInfo
 	release
 	end
 
 PetalburgCity_PokemonCenter_1F_EventScript_SayStarterTypeInfo::
-	compare VAR_STARTER_MON, 0
-	call_if_eq PetalburgCity_PokemonCenter_1F_EventScript_SayHEirinType
-	compare VAR_STARTER_MON, 1
-	call_if_eq PetalburgCity_PokemonCenter_1F_EventScript_SayAAliceType
-	compare VAR_STARTER_MON, 2
-	call_if_eq PetalburgCity_PokemonCenter_1F_EventScript_SayDReimuType
+	call_if_eq VAR_STARTER_MON, 0, PetalburgCity_PokemonCenter_1F_EventScript_SayHEirinType
+	call_if_eq VAR_STARTER_MON, 1, PetalburgCity_PokemonCenter_1F_EventScript_SayAAliceType
+	call_if_eq VAR_STARTER_MON, 2, PetalburgCity_PokemonCenter_1F_EventScript_SayDReimuType
 	release
 	end
 

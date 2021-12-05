@@ -9,8 +9,7 @@ AquaHideout_B1F_OnResume:
 
 AquaHideout_B1F_EventScript_TryRemoveMerlin::
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_ne Common_EventScript_NopReturn
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
 	removeobject VAR_LAST_TALKED
 	return
 
@@ -39,12 +38,9 @@ AquaHideout_B1F_EventScript_Merlin1::
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq AquaHideout_B1F_EventScript_DefeatedMerlin1
-	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq AquaHideout_B1F_EventScript_DefeatedMerlin1
-	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq AquaHideout_B1F_EventScript_DefeatedMerlin1
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, AquaHideout_B1F_EventScript_DefeatedMerlin1
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, AquaHideout_B1F_EventScript_DefeatedMerlin1
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AquaHideout_B1F_EventScript_DefeatedMerlin1
 	setflag FLAG_DEFEATED_MERLIN_1_AQUA_HIDEOUT
 	release
 	end
@@ -66,12 +62,9 @@ AquaHideout_B1F_EventScript_Merlin2::
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq AquaHideout_B1F_EventScript_DefeatedMerlin2
-	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq AquaHideout_B1F_EventScript_DefeatedMerlin2
-	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq AquaHideout_B1F_EventScript_DefeatedMerlin2
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, AquaHideout_B1F_EventScript_DefeatedMerlin2
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, AquaHideout_B1F_EventScript_DefeatedMerlin2
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AquaHideout_B1F_EventScript_DefeatedMerlin2
 	setflag FLAG_DEFEATED_MERLIN_2_AQUA_HIDEOUT
 	release
 	end

@@ -5,11 +5,11 @@
 
 static const u16 sContestLadyMonGfxId[] =
 {
-    OBJ_EVENT_GFX_HLUNASA_1,
-    OBJ_EVENT_GFX_ASUNNYMILK,
-    OBJ_EVENT_GFX_DYUYUKO,
-    OBJ_EVENT_GFX_SWRIGGLE,
-    OBJ_EVENT_GFX_CCIRNO
+    [CONTEST_CATEGORY_COOL]   = OBJ_EVENT_GFX_HLUNASA_1,
+    [CONTEST_CATEGORY_BEAUTY] = OBJ_EVENT_GFX_ASUNNYMILK,
+    [CONTEST_CATEGORY_CUTE]   = OBJ_EVENT_GFX_DYUYUKO,
+    [CONTEST_CATEGORY_SMART]  = OBJ_EVENT_GFX_SWRIGGLE,
+    [CONTEST_CATEGORY_TOUGH]  = OBJ_EVENT_GFX_CCIRNO
 };
 
 static const u16 sLilycoveLadyGfxId[] =
@@ -434,36 +434,36 @@ static const u16 sFavorLadyPrizes[] =
 
 static const u8 *const sContestLadyMonNames[] =
 {
-    gText_ContestLady_Handsome,
-    gText_ContestLady_Vinny,
-    gText_ContestLady_Moreme,
-    gText_ContestLady_Ironhard,
-    gText_ContestLady_Muscle
+    [CONTEST_CATEGORY_COOL]   = gText_ContestLady_Handsome,
+    [CONTEST_CATEGORY_BEAUTY] = gText_ContestLady_Vinny,
+    [CONTEST_CATEGORY_CUTE]   = gText_ContestLady_Moreme,
+    [CONTEST_CATEGORY_SMART]  = gText_ContestLady_Ironhard,
+    [CONTEST_CATEGORY_TOUGH]  = gText_ContestLady_Muscle
 };
 
 static const u8 *const sContestLadyCategoryNames[] =
 {
-    gText_ContestLady_Coolness,
-    gText_ContestLady_Beauty,
-    gText_ContestLady_Cuteness,
-    gText_ContestLady_Smartness,
-    gText_ContestLady_Toughness
+    [CONTEST_CATEGORY_COOL]   = gText_ContestLady_Coolness,
+    [CONTEST_CATEGORY_BEAUTY] = gText_ContestLady_Beauty,
+    [CONTEST_CATEGORY_CUTE]   = gText_ContestLady_Cuteness,
+    [CONTEST_CATEGORY_SMART]  = gText_ContestLady_Smartness,
+    [CONTEST_CATEGORY_TOUGH]  = gText_ContestLady_Toughness
 };
 
 static const u8 *const sContestNames[] =
 {
-    gText_CoolnessContest,
-    gText_BeautyContest,
-    gText_CutenessContest,
-    gText_SmartnessContest,
-    gText_ToughnessContest
+    [CONTEST_CATEGORY_COOL]   = gText_CoolnessContest,
+    [CONTEST_CATEGORY_BEAUTY] = gText_BeautyContest,
+    [CONTEST_CATEGORY_CUTE]   = gText_CutenessContest,
+    [CONTEST_CATEGORY_SMART]  = gText_SmartnessContest,
+    [CONTEST_CATEGORY_TOUGH]  = gText_ToughnessContest
 };
 
 static const u16 sContestLadyMonSpecies[] =
 {
-    SPECIES_HLUNASA,
-    SPECIES_ASUNNYMILK,
-    SPECIES_DYUYUKO,
-    SPECIES_SWRIGGLE,
-    SPECIES_CCIRNO
+    [CONTEST_CATEGORY_COOL]   = SPECIES_HLUNASA,
+    [CONTEST_CATEGORY_BEAUTY] = SPECIES_ASUNNYMILK,
+    [CONTEST_CATEGORY_CUTE]   = SPECIES_DYUYUKO,
+    [CONTEST_CATEGORY_SMART]  = SPECIES_SWRIGGLE,
+    [CONTEST_CATEGORY_TOUGH]  = SPECIES_CCIRNO
 };
