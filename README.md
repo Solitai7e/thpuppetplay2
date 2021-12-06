@@ -1,5 +1,7 @@
 # Touhou Puppet Play v2.0
 
+![](https://repository-images.githubusercontent.com/430729681/04bd2d85-e736-42c2-bb00-c1c80e7df4c0)
+
 This is a fork of the Pokémon Emerald Decompilation to create a modern, workable base to create Touhou Puppet Play hacks.
 
 Due to the fragmented nature of the scene caused by several unpolished hacks along with a community made obselete by the spiritual successor, Touhou Puppet Dance Performance, much of THPP goes under the radar or is considered kusoge despite effort put into the hack. Recent developments have spiked in recent times, thankfully, and Derxwna Kapsyla's efforts in Essentials is making slow pace, but things are still difficult with projects being completely unrelated from each other along with people losing their drive to work.
@@ -11,7 +13,7 @@ This self-declared v2.0 of Touhou Puppet Play will attempt to do the following:
   * In the same vein, attempt to locate fan-made sprites for newer games and create new puppets
 * Recreate new music files to reach a certain margin of polish that most hacks using said music seem to lack
 * Assimilate quality of life changes that are considered beneficial
-  * Including buffs and nerfs to puppets that will "unban" some and make others more easily usable (though this is something that would be deemed a community effort at low priority)
+  * Including buffs and nerfs to puppets that will "unban" some and make others more easily usable (though this is something that would be deemed a community effort at low priority) 
 
 This edit, at this point in time, will not
 
