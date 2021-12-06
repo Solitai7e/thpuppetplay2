@@ -13,3 +13,4 @@ Seiga
 CTojiko
 Tojiko
 CWakasagi
+Gomaseki

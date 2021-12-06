@@ -1863,16 +1863,6 @@ const u8 gStatStageRatios[MAX_STAT_STAGE + 1][2] =
     {40, 10}, // +6, MAX_STAT_STAGE
 };
 
-static const u16 sGomasekiBaseStats[] =
-{
-    [STAT_HP]    = 50,
-    [STAT_ATK]   = 95,
-    [STAT_DEF]   = 90,
-    [STAT_SPEED] = 180,
-    [STAT_SPATK] = 95,
-    [STAT_SPDEF] = 90,
-};
-
 const u16 gLinkPlayerFacilityClasses[NUM_MALE_LINK_FACILITY_CLASSES + NUM_FEMALE_LINK_FACILITY_CLASSES] =
 {
     // Male classes
@@ -2613,108 +2603,6 @@ void CreateEventLegalMon(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV,
 
     CreateMon(mon, species, level, fixedIV, hasFixedPersonality, fixedPersonality, otIdType, fixedOtId);
     SetMonData(mon, MON_DATA_EVENT_LEGAL, &isEventLegal);
-}
-
-// If FALSE, should load this game's Gomaseki form. If TRUE, should load normal Gomaseki form
-bool8 ShouldIgnoreGomasekiForm(u8 caseId, u8 battlerId)
-{
-    switch (caseId)
-    {
-    case 0:
-    default:
-        return FALSE;
-    case 1: // Player's side in battle
-        if (!(gBattleTypeFlags & BATTLE_TYPE_MULTI))
-            return FALSE;
-        if (!gMain.inBattle)
-            return FALSE;
-        if (gLinkPlayers[GetMultiplayerId()].id == battlerId)
-            return FALSE;
-        break;
-    case 2:
-        break;
-    case 3: // Summary Screen
-        if (!(gBattleTypeFlags & BATTLE_TYPE_MULTI))
-            return FALSE;
-        if (!gMain.inBattle)
-            return FALSE;
-        if (battlerId == 1 || battlerId == 4 || battlerId == 5)
-            return TRUE;
-        return FALSE;
-    case 4:
-        break;
-    case 5: // In move animation, e.g. in Role Play or Snatch
-        if (gBattleTypeFlags & BATTLE_TYPE_LINK)
-        {
-            if (!gMain.inBattle)
-                return FALSE;
-            if (gBattleTypeFlags & BATTLE_TYPE_MULTI)
-            {
-                if (gLinkPlayers[GetMultiplayerId()].id == battlerId)
-                    return FALSE;
-            }
-            else
-            {
-                if (GetBattlerSide(battlerId) == B_SIDE_PLAYER)
-                    return FALSE;
-            }
-        }
-        else
-        {
-            if (!gMain.inBattle)
-                return FALSE;
-            if (GetBattlerSide(battlerId) == B_SIDE_PLAYER)
-                return FALSE;
-        }
-        break;
-    }
-
-    return TRUE;
-}
-
-static u16 GetGomasekiStat(struct Pokemon *mon, s32 statId)
-{
-    s32 ivVal, evVal;
-    u16 statValue = 0;
-    u8 nature;
-
-    if (gBattleTypeFlags & BATTLE_TYPE_LINK_IN_BATTLE || GetMonData(mon, MON_DATA_SPECIES, NULL) != SPECIES_GOMASEKI)
-        return 0;
-
-    ivVal = GetMonData(mon, MON_DATA_HP_IV + statId, NULL);
-    evVal = GetMonData(mon, MON_DATA_HP_EV + statId, NULL);
-    statValue = ((sGomasekiBaseStats[statId] * 2 + ivVal + evVal / 4) * mon->level) / 100 + 5;
-    nature = GetNature(mon);
-    statValue = ModifyStatByNature(nature, statValue, (u8)statId);
-    return statValue;
-}
-
-void SetGomasekiStats(void)
-{
-    s32 i, value;
-
-    for (i = 0; i < PARTY_SIZE; i++)
-    {
-        struct Pokemon *mon = &gPlayerParty[i];
-
-        if (GetMonData(mon, MON_DATA_SPECIES, NULL) != SPECIES_GOMASEKI)
-            continue;
-
-        value = GetMonData(mon, MON_DATA_ATK, NULL);
-        SetMonData(mon, MON_DATA_ATK, &value);
-
-        value = GetMonData(mon, MON_DATA_DEF, NULL);
-        SetMonData(mon, MON_DATA_DEF, &value);
-
-        value = GetMonData(mon, MON_DATA_SPEED, NULL);
-        SetMonData(mon, MON_DATA_SPEED, &value);
-
-        value = GetMonData(mon, MON_DATA_SPATK, NULL);
-        SetMonData(mon, MON_DATA_SPATK, &value);
-
-        value = GetMonData(mon, MON_DATA_SPDEF, NULL);
-        SetMonData(mon, MON_DATA_SPDEF, &value);
-    }
 }
 
 u16 GetUnionRoomTrainerPic(void)
@@ -3596,29 +3484,19 @@ u32 GetMonData(struct Pokemon *mon, s32 field, u8* data)
         ret = mon->maxHP;
         break;
     case MON_DATA_ATK:
-        ret = GetGomasekiStat(mon, STAT_ATK);
-        if (!ret)
-            ret = mon->attack;
+        ret = mon->attack;
         break;
     case MON_DATA_DEF:
-        ret = GetGomasekiStat(mon, STAT_DEF);
-        if (!ret)
-            ret = mon->defense;
+        ret = mon->defense;
         break;
     case MON_DATA_SPEED:
-        ret = GetGomasekiStat(mon, STAT_SPEED);
-        if (!ret)
-            ret = mon->speed;
+        ret = mon->speed;
         break;
     case MON_DATA_SPATK:
-        ret = GetGomasekiStat(mon, STAT_SPATK);
-        if (!ret)
-            ret = mon->spAttack;
+        ret = mon->spAttack;
         break;
     case MON_DATA_SPDEF:
-        ret = GetGomasekiStat(mon, STAT_SPDEF);
-        if (!ret)
-            ret = mon->spDefense;
+        ret = mon->spDefense;
         break;
     case MON_DATA_ATK2:
         ret = mon->attack;
@@ -6599,8 +6477,6 @@ void DoMonFrontSpriteAnimation(struct Sprite* sprite, u16 species, bool8 noCry, 
         if (!noCry)
         {
             PlayCry_Normal(species, pan);
-            if (HasTwoFramesAnimation(species))
-                StartSpriteAnim(sprite, 1);
         }
         if (sMonAnimationDelayTable[species - 1] != 0)
         {
@@ -6621,8 +6497,6 @@ void DoMonFrontSpriteAnimation(struct Sprite* sprite, u16 species, bool8 noCry, 
 
 void PokemonSummaryDoMonAnimation(struct Sprite* sprite, u16 species, bool8 oneFrame)
 {
-    if (!oneFrame && HasTwoFramesAnimation(species))
-        StartSpriteAnim(sprite, 1);
     if (sMonAnimationDelayTable[species - 1] != 0)
     {
         // Animation has delay, start delay task
@@ -6745,11 +6619,6 @@ const u8 *GetTrainerNameFromId(u16 trainerId)
     if (trainerId >= TRAINERS_COUNT)
         trainerId = TRAINER_NONE;
     return gTrainers[trainerId].trainerName;
-}
-
-bool8 HasTwoFramesAnimation(u16 species)
-{
-    return (species != SPECIES_GOMASEKI);
 }
 
 static bool8 ShouldSkipFriendshipChange(void)

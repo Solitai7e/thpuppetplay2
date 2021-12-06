@@ -2048,7 +2048,7 @@ u8 GetBattlerSpriteBGPriorityRank(u8 battlerId)
 }
 
 // Create pokemon sprite to be used for a move animation effect (e.g. Role Play / Snatch)
-u8 CreateAdditionalMonSpriteForMoveAnim(u16 species, bool8 isBackpic, u8 id, s16 x, s16 y, u8 subpriority, u32 personality, u32 trainerId, u32 battlerId, bool32 ignoreGomasekiForm)
+u8 CreateAdditionalMonSpriteForMoveAnim(u16 species, bool8 isBackpic, u8 id, s16 x, s16 y, u8 subpriority, u32 personality, u32 trainerId, u32 battlerId)
 {
     u8 spriteId;
     u16 sheet = LoadSpriteSheet(&sSpriteSheet_MoveEffectMons[id]);
@@ -2059,34 +2059,19 @@ u8 CreateAdditionalMonSpriteForMoveAnim(u16 species, bool8 isBackpic, u8 id, s16
     if (!isBackpic)
     {
         LoadCompressedPalette(GetMonSpritePalFromSpeciesAndPersonality(species, trainerId, personality), (palette * 0x10) + 0x100, 0x20);
-        if (ignoreGomasekiForm == TRUE || ShouldIgnoreGomasekiForm(5, battlerId) == TRUE || gBattleSpritesDataPtr->battlerData[battlerId].transformSpecies != 0)
-            LoadSpecialPokePic_DontHandleGomaseki(&gMonFrontPicTable[species],
-                                                gMonSpritesGfxPtr->buffer,
-                                                species,
-                                                personality,
-                                                TRUE);
-        else
-            LoadSpecialPokePic_2(&gMonFrontPicTable[species],
-                                 gMonSpritesGfxPtr->buffer,
-                                 species,
-                                 personality,
-                                 TRUE);
+        LoadSpecialPokePic(&gMonFrontPicTable[species],
+                             gMonSpritesGfxPtr->buffer,
+                             species,
+                             personality,
+                             TRUE);
     }
     else
     {
-        LoadCompressedPalette(GetMonSpritePalFromSpeciesAndPersonality(species, trainerId, personality), (palette * 0x10) + 0x100, 0x20);
-        if (ignoreGomasekiForm == TRUE || ShouldIgnoreGomasekiForm(5, battlerId) == TRUE || gBattleSpritesDataPtr->battlerData[battlerId].transformSpecies != 0)
-            LoadSpecialPokePic_DontHandleGomaseki(&gMonBackPicTable[species],
-                                                gMonSpritesGfxPtr->buffer,
-                                                species,
-                                                personality,
-                                                FALSE);
-        else
-            LoadSpecialPokePic_2(&gMonBackPicTable[species],
-                                 gMonSpritesGfxPtr->buffer,
-                                 species,
-                                 personality,
-                                 FALSE);
+        LoadSpecialPokePic(&gMonBackPicTable[species],
+                             gMonSpritesGfxPtr->buffer,
+                             species,
+                             personality,
+                             FALSE);
     }
 
     RequestDma3Copy(gMonSpritesGfxPtr->buffer, (void *)(OBJ_VRAM0 + (sheet * 0x20)), MON_PIC_SIZE, 1);
