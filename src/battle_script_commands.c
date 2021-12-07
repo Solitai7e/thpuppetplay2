@@ -556,25 +556,23 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_jumpifhasnohp,                           //0xE3
     Cmd_getsecretpowereffect,                    //0xE4
     Cmd_pickup,                                  //0xE5
-                                                 //0xE6
-                                                 //0xE7
-    Cmd_settypebasedhalvers,                     //0xE8
-    Cmd_setweatherballtype,                      //0xE9
-    Cmd_tryrecycleitem,                          //0xEA
-    Cmd_settypetoterrain,                        //0xEB
-    Cmd_pursuitdoubles,                          //0xEC
-    Cmd_snatchsetbattlers,                       //0xED
-    Cmd_removelightscreenreflect,                //0xEE
-    Cmd_handleballthrow,                         //0xEF
-    Cmd_givecaughtmon,                           //0xF0
-    Cmd_trysetcaughtmondexflags,                 //0xF1
-    Cmd_displaydexinfo,                          //0xF2
-    Cmd_trygivecaughtmonnick,                    //0xF3
-    Cmd_subattackerhpbydmg,                      //0xF4
-    Cmd_removeattackerstatus1,                   //0xF5
-    Cmd_finishaction,                            //0xF6
-    Cmd_finishturn,                              //0xF7
-    Cmd_trainerslideout                          //0xF8
+    Cmd_settypebasedhalvers,                     //0xE6
+    Cmd_setweatherballtype,                      //0xE7
+    Cmd_tryrecycleitem,                          //0xE8
+    Cmd_settypetoterrain,                        //0xE9
+    Cmd_pursuitdoubles,                          //0xEA
+    Cmd_snatchsetbattlers,                       //0xEB
+    Cmd_removelightscreenreflect,                //0xEC
+    Cmd_handleballthrow,                         //0xED
+    Cmd_givecaughtmon,                           //0xEE
+    Cmd_trysetcaughtmondexflags,                 //0xEF
+    Cmd_displaydexinfo,                          //0xF0
+    Cmd_trygivecaughtmonnick,                    //0xF1
+    Cmd_subattackerhpbydmg,                      //0xF2
+    Cmd_removeattackerstatus1,                   //0xF3
+    Cmd_finishaction,                            //0xF4
+    Cmd_finishturn,                              //0xF5
+    Cmd_trainerslideout                          //0xF6
 };
 
 struct StatFractions
