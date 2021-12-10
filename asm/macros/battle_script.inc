@@ -1170,86 +1170,78 @@
 	.byte 0xe5
 	.endm
 
-	.macro dotsanaechangeanimation
-	.byte 0xe6
-	.endm
-
-	.macro trytsanaedatachange
-	.byte 0xe7
-	.endm
-
 	.macro settypebasedhalvers ptr:req
-	.byte 0xe8
+	.byte 0xe6
 	.4byte \ptr
 	.endm
 
 	.macro setweatherballtype
-	.byte 0xe9
+	.byte 0xe7
 	.endm
 
 	.macro tryrecycleitem ptr:req
-	.byte 0xea
+	.byte 0xe8
 	.4byte \ptr
 	.endm
 
 	.macro settypetoterrain ptr:req
-	.byte 0xeb
+	.byte 0xe9
 	.4byte \ptr
 	.endm
 
 	.macro pursuitdoubles ptr:req
-	.byte 0xec
+	.byte 0xea
 	.4byte \ptr
 	.endm
 
 	.macro snatchsetbattlers
-	.byte 0xed
+	.byte 0xeb
 	.endm
 
 	.macro removelightscreenreflect
-	.byte 0xee
+	.byte 0xec
 	.endm
 
 	.macro handleballthrow
-	.byte 0xef
+	.byte 0xed
 	.endm
 
 	.macro givecaughtmon
-	.byte 0xf0
+	.byte 0xee
 	.endm
 
 	.macro trysetcaughtmondexflags ptr:req
-	.byte 0xf1
+	.byte 0xef
 	.4byte \ptr
 	.endm
 
 	.macro displaydexinfo
-	.byte 0xf2
+	.byte 0xf0
 	.endm
 
 	.macro trygivecaughtmonnick ptr:req
-	.byte 0xf3
+	.byte 0xf1
 	.4byte \ptr
 	.endm
 
 	.macro subattackerhpbydmg
-	.byte 0xf4
+	.byte 0xf2
 	.endm
 
 	.macro removeattackerstatus1
-	.byte 0xf5
+	.byte 0xf3
 	.endm
 
 	.macro finishaction
-	.byte 0xf6
+	.byte 0xf4
 	.endm
 
 	.macro finishturn
-	.byte 0xf7
+	.byte 0xf5
 	.endm
 
 	.macro trainerslideout position:req
-	.byte 0xf8
+	.byte 0xf6
 	.byte \position
 	.endm
 	
