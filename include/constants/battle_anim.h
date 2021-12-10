@@ -347,29 +347,28 @@
 #define BG_SOLAR_BEAM_CONTESTS 26
 
 // table ids for general animations (gBattleAnims_General)
-#define B_ANIM_TSANAE_CHANGE            0 //This can be repurposed somehow
-#define B_ANIM_STATS_CHANGE             1
-#define B_ANIM_SUBSTITUTE_FADE          2
-#define B_ANIM_SUBSTITUTE_APPEAR        3
-#define B_ANIM_POKEBLOCK_THROW          4
-#define B_ANIM_ITEM_KNOCKOFF            5
-#define B_ANIM_TURN_TRAP                6
-#define B_ANIM_HELD_ITEM_EFFECT         7
-#define B_ANIM_SMOKEBALL_ESCAPE         8
-#define B_ANIM_FOCUS_BAND               9
-#define B_ANIM_RAIN_CONTINUES           10
-#define B_ANIM_SUN_CONTINUES            11
-#define B_ANIM_SANDSTORM_CONTINUES      12
-#define B_ANIM_HAIL_CONTINUES           13
-#define B_ANIM_LEECH_SEED_DRAIN         14
-#define B_ANIM_MON_HIT                  15
-#define B_ANIM_ITEM_STEAL               16
-#define B_ANIM_SNATCH_MOVE              17
-#define B_ANIM_PSYCHO_CUT_HIT         18
-#define B_ANIM_DOOM_DESIRE_HIT          19
-#define B_ANIM_FOCUS_PUNCH_SETUP        20
-#define B_ANIM_INGRAIN_HEAL             21
-#define B_ANIM_WISH_HEAL                22
+#define B_ANIM_STATS_CHANGE             0
+#define B_ANIM_SUBSTITUTE_FADE          1
+#define B_ANIM_SUBSTITUTE_APPEAR        2
+#define B_ANIM_POKEBLOCK_THROW          3
+#define B_ANIM_ITEM_KNOCKOFF            4
+#define B_ANIM_TURN_TRAP                5
+#define B_ANIM_HELD_ITEM_EFFECT         6
+#define B_ANIM_SMOKEBALL_ESCAPE         7
+#define B_ANIM_FOCUS_BAND               8
+#define B_ANIM_RAIN_CONTINUES           9
+#define B_ANIM_SUN_CONTINUES            10
+#define B_ANIM_SANDSTORM_CONTINUES      11
+#define B_ANIM_HAIL_CONTINUES           12
+#define B_ANIM_LEECH_SEED_DRAIN         13
+#define B_ANIM_MON_HIT                  14
+#define B_ANIM_ITEM_STEAL               15
+#define B_ANIM_SNATCH_MOVE              16
+#define B_ANIM_PSYCHO_CUT_HIT           17
+#define B_ANIM_DOOM_DESIRE_HIT          18
+#define B_ANIM_FOCUS_PUNCH_SETUP        19
+#define B_ANIM_INGRAIN_HEAL             20
+#define B_ANIM_WISH_HEAL                21
 
 // special animations table (gBattleAnims_Special)
 #define B_ANIM_LVL_UP                   0
