@@ -23,7 +23,7 @@ static bool8 ShouldCalculateDamage(u16 moveId, s32 *dmg, u16 *powerOverride);
 enum {
     PTS_MOVE_EFFECT,
     PTS_EFFECTIVENESS,
-    PTS_SET_UP, // Broadly. Used by Wish, Future Sight, Ingrain, etc.
+    PTS_SET_UP, // Broadly. Used by Wish, Psycho Cut, Ingrain, etc.
     PTS_RAIN,
     PTS_SUN,
     PTS_SANDSTORM,
@@ -310,7 +310,7 @@ static const u16 sPoints_Effectiveness[] =
 };
 static const u16 sPoints_SetUp[] =
 {
-    4, // Future Sight
+    4, // Psycho Cut
     4, // Doom Desire
     6,
     6, // Wish
@@ -600,8 +600,8 @@ void BattleTv_SetDataBasedOnString(u16 stringId)
         AddMovePoints(PTS_EFFECTIVENESS, moveSlot, 0, 0);
         break;
     case STRINGID_PKMNFORESAWATTACK:
-        tvPtr->side[atkSide].futureSightMonId = gBattlerPartyIndexes[gBattlerAttacker] + 1;
-        tvPtr->side[atkSide].futureSightMoveSlot = moveSlot;
+        tvPtr->side[atkSide].psychoCutMonId = gBattlerPartyIndexes[gBattlerAttacker] + 1;
+        tvPtr->side[atkSide].psychoCutMoveSlot = moveSlot;
         break;
     case STRINGID_PKMNCHOSEXASDESTINY:
         tvPtr->side[atkSide].doomDesireMonId = gBattlerPartyIndexes[gBattlerAttacker] + 1;
@@ -1029,10 +1029,10 @@ void BattleTv_SetDataBasedOnAnimation(u8 animationId)
     switch (animationId)
     {
     case B_ANIM_PSYCHO_CUT_HIT:
-        if (tvPtr->side[atkSide].futureSightMonId != 0)
+        if (tvPtr->side[atkSide].psychoCutMonId != 0)
         {
             AddMovePoints(PTS_SET_UP, 0, atkSide,
-                        (tvPtr->side[atkSide].futureSightMonId - 1) * 4 + tvPtr->side[atkSide].futureSightMoveSlot);
+                        (tvPtr->side[atkSide].psychoCutMonId - 1) * 4 + tvPtr->side[atkSide].psychoCutMoveSlot);
             tvPtr->side[atkSide].faintCause = FNT_PSYCHO_CUT;
         }
         break;
@@ -1332,10 +1332,10 @@ static void AddPointsOnFainting(bool8 targetFainted)
             }
             break;
         case FNT_PSYCHO_CUT:
-            if (tvPtr->side[atkSide].futureSightMonId != 0)
+            if (tvPtr->side[atkSide].psychoCutMonId != 0)
             {
                 AddMovePoints(PTS_FAINT_SET_UP, 0, atkSide,
-                (tvPtr->side[atkSide].futureSightMonId - 1) * 4 + tvPtr->side[atkSide].futureSightMoveSlot);
+                (tvPtr->side[atkSide].psychoCutMonId - 1) * 4 + tvPtr->side[atkSide].psychoCutMoveSlot);
             }
             break;
         case FNT_DOOM_DESIRE:

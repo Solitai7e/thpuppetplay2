@@ -8810,22 +8810,22 @@ static void Cmd_selectfirstvalidtarget(void)
 
 static void Cmd_trysetfutureattack(void)
 {
-    if (gWishFutureKnock.futureSightCounter[gBattlerTarget] != 0)
+    if (gWishFutureKnock.psychoCutCounter[gBattlerTarget] != 0)
     {
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
     }
     else
     {
         gSideStatuses[GET_BATTLER_SIDE(gBattlerTarget)] |= SIDE_STATUS_FUTUREATTACK;
-        gWishFutureKnock.futureSightMove[gBattlerTarget] = gCurrentMove;
-        gWishFutureKnock.futureSightAttacker[gBattlerTarget] = gBattlerAttacker;
-        gWishFutureKnock.futureSightCounter[gBattlerTarget] = 3;
-        gWishFutureKnock.futureSightDmg[gBattlerTarget] = CalculateBaseDamage(&gBattleMons[gBattlerAttacker], &gBattleMons[gBattlerTarget], gCurrentMove,
+        gWishFutureKnock.psychoCutMove[gBattlerTarget] = gCurrentMove;
+        gWishFutureKnock.psychoCutAttacker[gBattlerTarget] = gBattlerAttacker;
+        gWishFutureKnock.psychoCutCounter[gBattlerTarget] = 3;
+        gWishFutureKnock.psychoCutDmg[gBattlerTarget] = CalculateBaseDamage(&gBattleMons[gBattlerAttacker], &gBattleMons[gBattlerTarget], gCurrentMove,
                                                     gSideStatuses[GET_BATTLER_SIDE(gBattlerTarget)], 0,
                                                     0, gBattlerAttacker, gBattlerTarget);
 
         if (gProtectStructs[gBattlerAttacker].helpingHand)
-            gWishFutureKnock.futureSightDmg[gBattlerTarget] = gWishFutureKnock.futureSightDmg[gBattlerTarget] * 15 / 10;
+            gWishFutureKnock.psychoCutDmg[gBattlerTarget] = gWishFutureKnock.psychoCutDmg[gBattlerTarget] * 15 / 10;
 
         if (gCurrentMove == MOVE_DOOM_DESIRE)
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DOOM_DESIRE;

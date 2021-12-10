@@ -158,10 +158,10 @@ struct SideTimer
 
 struct WishFutureKnock
 {
-    u8 futureSightCounter[MAX_BATTLERS_COUNT];
-    u8 futureSightAttacker[MAX_BATTLERS_COUNT];
-    s32 futureSightDmg[MAX_BATTLERS_COUNT];
-    u16 futureSightMove[MAX_BATTLERS_COUNT];
+    u8 psychoCutCounter[MAX_BATTLERS_COUNT];
+    u8 psychoCutAttacker[MAX_BATTLERS_COUNT];
+    s32 psychoCutDmg[MAX_BATTLERS_COUNT];
+    u16 psychoCutMove[MAX_BATTLERS_COUNT];
     u8 wishCounter[MAX_BATTLERS_COUNT];
     u8 wishMonId[MAX_BATTLERS_COUNT];
     u8 weatherDuration;
@@ -259,7 +259,7 @@ struct BattleTv_Side
     u32 lightScreenMonId:3;
     u32 safeguardMonId:3;
     u32 mistMonId:3;
-    u32 futureSightMonId:3;
+    u32 psychoCutMonId:3;
     u32 doomDesireMonId:3;
     u32 perishSongMonId:3;
     u32 wishMonId:3;
@@ -270,7 +270,7 @@ struct BattleTv_Side
     u32 lightScreenMoveSlot:2;
     u32 safeguardMoveSlot:2;
     u32 mistMoveSlot:2;
-    u32 futureSightMoveSlot:2;
+    u32 psychoCutMoveSlot:2;
     u32 doomDesireMoveSlot:2;
     u32 perishSongMoveSlot:2;
     u32 wishMoveSlot:2;

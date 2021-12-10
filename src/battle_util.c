@@ -1780,25 +1780,25 @@ bool8 HandleWishPerishSongOnTurnEnd(void)
             }
 
             gBattleStruct->wishPerishSongBattlerId++;
-            if (gWishFutureKnock.futureSightCounter[gActiveBattler] != 0
-             && --gWishFutureKnock.futureSightCounter[gActiveBattler] == 0
+            if (gWishFutureKnock.psychoCutCounter[gActiveBattler] != 0
+             && --gWishFutureKnock.psychoCutCounter[gActiveBattler] == 0
              && gBattleMons[gActiveBattler].hp != 0)
             {
-                if (gWishFutureKnock.futureSightMove[gActiveBattler] == MOVE_PSYCHO_CUT)
+                if (gWishFutureKnock.psychoCutMove[gActiveBattler] == MOVE_PSYCHO_CUT)
                     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PSYCHO_CUT;
                 else
                     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DOOM_DESIRE;
 
-                PREPARE_MOVE_BUFFER(gBattleTextBuff1, gWishFutureKnock.futureSightMove[gActiveBattler]);
+                PREPARE_MOVE_BUFFER(gBattleTextBuff1, gWishFutureKnock.psychoCutMove[gActiveBattler]);
 
                 gBattlerTarget = gActiveBattler;
-                gBattlerAttacker = gWishFutureKnock.futureSightAttacker[gActiveBattler];
-                gBattleMoveDamage = gWishFutureKnock.futureSightDmg[gActiveBattler];
+                gBattlerAttacker = gWishFutureKnock.psychoCutAttacker[gActiveBattler];
+                gBattleMoveDamage = gWishFutureKnock.psychoCutDmg[gActiveBattler];
                 gSpecialStatuses[gBattlerTarget].dmg = 0xFFFF;
                 BattleScriptExecute(BattleScript_MonTookFutureAttack);
 
-                if (gWishFutureKnock.futureSightCounter[gActiveBattler] == 0
-                 && gWishFutureKnock.futureSightCounter[gActiveBattler ^ BIT_FLANK] == 0)
+                if (gWishFutureKnock.psychoCutCounter[gActiveBattler] == 0
+                 && gWishFutureKnock.psychoCutCounter[gActiveBattler ^ BIT_FLANK] == 0)
                 {
                     gSideStatuses[GET_BATTLER_SIDE(gBattlerTarget)] &= ~SIDE_STATUS_FUTUREATTACK;
                 }
