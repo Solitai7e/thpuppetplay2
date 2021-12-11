@@ -1576,7 +1576,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_KEINE,
                         .heldItem = ITEM_MIRACLE_SEED,
-                        .moves = {MOVE_PETAL_DANCE, MOVE_SYNTHESIS, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM},
+                        .moves = {MOVE_BATTLE_CHANT, MOVE_SYNTHESIS, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM},
                         .level = 0,
                         .ppBonuses = 0,
                         .speedEV = 255,
@@ -1640,7 +1640,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_CKOTOHIME,
                         .heldItem = ITEM_MENTAL_HERB,
-                        .moves = {MOVE_SWEET_SCENT, MOVE_PETAL_DANCE, MOVE_STUN_SPORE, MOVE_SLUDGE_BOMB},
+                        .moves = {MOVE_SWEET_SCENT, MOVE_BATTLE_CHANT, MOVE_STUN_SPORE, MOVE_SLUDGE_BOMB},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 255,
@@ -3033,7 +3033,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_CMUGETSU,
                                             .heldItem = ITEM_PERSIM_BERRY,
-                                            .moves = {MOVE_PETAL_DANCE, MOVE_GRASS_WHISTLE, MOVE_LIGHT_SCREEN, MOVE_SUNNY_DAY},
+                                            .moves = {MOVE_BATTLE_CHANT, MOVE_GRASS_WHISTLE, MOVE_LIGHT_SCREEN, MOVE_SUNNY_DAY},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 255,

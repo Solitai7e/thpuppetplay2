@@ -206,7 +206,7 @@
 #define SE_M_GIGA_DRAIN             199 // SE_W202
 #define SE_M_PSYBEAM2               200 // SE_W060B
 #define SE_M_SOLAR_BEAM             201 // SE_W076
-#define SE_M_PETAL_DANCE            202 // SE_W080
+#define SE_M_BATTLE_CHANT            202 // SE_W080
 #define SE_M_TELEPORT               203 // SE_W100
 #define SE_M_MINIMIZE               204 // SE_W107
 #define SE_M_SKETCH                 205 // SE_W166

@@ -633,7 +633,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_SWEET_SCENT},
     },
 
-    [MOVE_PETAL_DANCE] =
+    [MOVE_BATTLE_CHANT] =
     {
         .effect = CONTEST_EFFECT_JAMS_OTHERS_BUT_MISS_ONE_TURN,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,

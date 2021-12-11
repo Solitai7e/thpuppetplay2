@@ -317,7 +317,7 @@ static const u8 sSleepPowderDescription[] = _(
     "Scatters a powder that may\n"
     "cause the foe to sleep.");
 
-static const u8 sPetalDanceDescription[] = _(
+static const u8 sBattleChantDescription[] = _(
     "A rampage of 2 to 3 turns\n"
     "that confuses the user.");
 
@@ -1499,7 +1499,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_POISON_POWDER - 1] = sPoisonPowderDescription,
     [MOVE_STUN_SPORE - 1] = sStunSporeDescription,
     [MOVE_SLEEP_POWDER - 1] = sSleepPowderDescription,
-    [MOVE_PETAL_DANCE - 1] = sPetalDanceDescription,
+    [MOVE_BATTLE_CHANT - 1] = sBattleChantDescription,
     [MOVE_STRING_SHOT - 1] = sStringShotDescription,
     [MOVE_DRAGON_RAGE - 1] = sDragonRageDescription,
     [MOVE_FIRE_SPIN - 1] = sFireSpinDescription,

@@ -1120,7 +1120,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGIC_COAT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_PETAL_DANCE] =
+    [MOVE_BATTLE_CHANT] =
     {
         .effect = EFFECT_ATTACK_UP_HIT,
         .split = 0,

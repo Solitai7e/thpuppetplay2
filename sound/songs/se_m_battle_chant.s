@@ -1,25 +1,25 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_petal_dance_grp, voicegroup128
-	.equ	se_m_petal_dance_pri, 4
-	.equ	se_m_petal_dance_rev, reverb_set+50
-	.equ	se_m_petal_dance_mvl, 127
-	.equ	se_m_petal_dance_key, 0
-	.equ	se_m_petal_dance_tbs, 1
-	.equ	se_m_petal_dance_exg, 0
-	.equ	se_m_petal_dance_cmp, 1
+	.equ	se_m_battle_chant_grp, voicegroup128
+	.equ	se_m_battle_chant_pri, 4
+	.equ	se_m_battle_chant_rev, reverb_set+50
+	.equ	se_m_battle_chant_mvl, 127
+	.equ	se_m_battle_chant_key, 0
+	.equ	se_m_battle_chant_tbs, 1
+	.equ	se_m_battle_chant_exg, 0
+	.equ	se_m_battle_chant_cmp, 1
 
 	.section .rodata
-	.global	se_m_petal_dance
+	.global	se_m_battle_chant
 	.align	2
 
 @********************** Track  1 **********************@
 
-se_m_petal_dance_1:
-	.byte	KEYSH , se_m_petal_dance_key+0
-	.byte	TEMPO , 150*se_m_petal_dance_tbs/2
+se_m_battle_chant_1:
+	.byte	KEYSH , se_m_battle_chant_key+0
+	.byte	TEMPO , 150*se_m_battle_chant_tbs/2
 	.byte		VOICE , 46
-	.byte		VOL   , 95*se_m_petal_dance_mvl/mxv
+	.byte		VOL   , 95*se_m_battle_chant_mvl/mxv
 	.byte		BENDR , 2
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_v+15
@@ -112,11 +112,11 @@ se_m_petal_dance_1:
 
 @********************** Track  2 **********************@
 
-se_m_petal_dance_2:
-	.byte	KEYSH , se_m_petal_dance_key+0
+se_m_battle_chant_2:
+	.byte	KEYSH , se_m_battle_chant_key+0
 	.byte		VOICE , 53
 	.byte		BENDR , 2
-	.byte		VOL   , 43*se_m_petal_dance_mvl/mxv
+	.byte		VOL   , 43*se_m_battle_chant_mvl/mxv
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_v+15
 	.byte		N06   , En6 , v108
@@ -191,15 +191,15 @@ se_m_petal_dance_2:
 @******************************************************@
 	.align	2
 
-se_m_petal_dance:
+se_m_battle_chant:
 	.byte	2	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	se_m_petal_dance_pri	@ Priority
-	.byte	se_m_petal_dance_rev	@ Reverb.
+	.byte	se_m_battle_chant_pri	@ Priority
+	.byte	se_m_battle_chant_rev	@ Reverb.
 
-	.word	se_m_petal_dance_grp
+	.word	se_m_battle_chant_grp
 
-	.word	se_m_petal_dance_1
-	.word	se_m_petal_dance_2
+	.word	se_m_battle_chant_1
+	.word	se_m_battle_chant_2
 
 	.end

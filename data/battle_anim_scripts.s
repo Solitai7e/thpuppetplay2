@@ -96,7 +96,7 @@ gBattleAnims_Moves::
 	.4byte Move_POISON_POWDER
 	.4byte Move_STUN_SPORE
 	.4byte Move_SLEEP_POWDER
-	.4byte Move_PETAL_DANCE
+	.4byte Move_BATTLE_CHANT
 	.4byte Move_STRING_SHOT
 	.4byte Move_DRAGON_RAGE
 	.4byte Move_FIRE_SPIN
@@ -3969,7 +3969,7 @@ Move_FEATHER_DANCE:
 	loadspritegfx ANIM_TAG_WHITE_FEATHER
 	monbg ANIM_DEF_PARTNER
 	splitbgprio_all
-	playsewithpan SE_M_PETAL_DANCE, SOUND_PAN_TARGET
+	playsewithpan SE_M_BATTLE_CHANT, SOUND_PAN_TARGET
 	delay 0
 	createsprite gFallingFeatherSpriteTemplate, ANIM_TARGET, 0, 0, -16, 64, 2, 104, 11304, 32, 1
 	delay 6
@@ -4128,7 +4128,7 @@ Move_CRUSH_CLAW:
 	end
 
 Move_AROMATHERAPY:
-	playsewithpan SE_M_PETAL_DANCE, 0
+	playsewithpan SE_M_BATTLE_CHANT, 0
 	loadspritegfx ANIM_TAG_FLOWER
 	loadspritegfx ANIM_TAG_THIN_RING
 	loadspritegfx ANIM_TAG_SPARKLE_2
@@ -6722,7 +6722,7 @@ Move_SUNNY_DAY:
 	setalpha 13, 3
 	createvisualtask AnimTask_BlendBattleAnimPal, 10, 0x781, 1, 0, 6, RGB_WHITE
 	waitforvisualfinish
-	panse_adjustnone SE_M_PETAL_DANCE, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +1, 0
+	panse_adjustnone SE_M_BATTLE_CHANT, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +1, 0
 	call SunnyDayLightRay
 	call SunnyDayLightRay
 	call SunnyDayLightRay
@@ -6784,30 +6784,30 @@ CreateSpore:
 	delay 12
 	return
 
-Move_PETAL_DANCE:
+Move_BATTLE_CHANT:
 	loadspritegfx ANIM_TAG_FLOWER
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
-	playsewithpan SE_M_PETAL_DANCE, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_BATTLE_CHANT, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 12, 6, 6, 3
-	createsprite gPetalDanceBigFlowerSpriteTemplate, ANIM_ATTACKER, 2, 0, -24, 8, 140
-	createsprite gPetalDanceSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, 16, -24, 8, 100
-	createsprite gPetalDanceSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, -16, -24, 8, 100
+	createsprite gBattleChantBigFlowerSpriteTemplate, ANIM_ATTACKER, 2, 0, -24, 8, 140
+	createsprite gBattleChantSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, 16, -24, 8, 100
+	createsprite gBattleChantSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, -16, -24, 8, 100
 	delay 15
-	createsprite gPetalDanceBigFlowerSpriteTemplate, ANIM_ATTACKER, 2, 0, -24, 8, 140
-	createsprite gPetalDanceSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, 32, -24, 8, 100
-	createsprite gPetalDanceSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, -32, -24, 8, 100
+	createsprite gBattleChantBigFlowerSpriteTemplate, ANIM_ATTACKER, 2, 0, -24, 8, 140
+	createsprite gBattleChantSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, 32, -24, 8, 100
+	createsprite gBattleChantSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, -32, -24, 8, 100
 	delay 15
-	createsprite gPetalDanceBigFlowerSpriteTemplate, ANIM_ATTACKER, 2, 0, -24, 8, 140
-	createsprite gPetalDanceSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, 24, -24, 8, 100
-	createsprite gPetalDanceSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, -24, -24, 8, 100
+	createsprite gBattleChantBigFlowerSpriteTemplate, ANIM_ATTACKER, 2, 0, -24, 8, 140
+	createsprite gBattleChantSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, 24, -24, 8, 100
+	createsprite gBattleChantSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, -24, -24, 8, 100
 	delay 30
-	createsprite gPetalDanceSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, 16, -24, 0, 100
-	createsprite gPetalDanceSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, -16, -24, 0, 100
+	createsprite gBattleChantSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, 16, -24, 0, 100
+	createsprite gBattleChantSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, -16, -24, 0, 100
 	delay 30
-	createsprite gPetalDanceSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, 20, -16, 14, 80
-	createsprite gPetalDanceSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, -20, -14, 16, 80
+	createsprite gBattleChantSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, 20, -16, 14, 80
+	createsprite gBattleChantSmallFlowerSpriteTemplate, ANIM_ATTACKER, 2, -20, -14, 16, 80
 	waitforvisualfinish
 	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 0, 24, 0, 0, 5
 	delay 3

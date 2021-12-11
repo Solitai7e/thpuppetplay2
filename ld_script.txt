@@ -898,7 +898,7 @@ SECTIONS {
         sound/songs/se_m_giga_drain.o(.rodata);
         sound/songs/se_m_psybeam2.o(.rodata);
         sound/songs/se_m_solar_beam.o(.rodata);
-        sound/songs/se_m_petal_dance.o(.rodata);
+        sound/songs/se_m_battle_chant.o(.rodata);
         sound/songs/se_m_teleport.o(.rodata);
         sound/songs/se_m_minimize.o(.rodata);
         sound/songs/se_m_sketch.o(.rodata);

@@ -646,7 +646,7 @@ const struct BardSound gBardSounds_Moves[MOVES_COUNT][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND
     },
-    [MOVE_PETAL_DANCE] = {
+    [MOVE_BATTLE_CHANT] = {
         { 0x9, 0x0, 0x0, 0x0, 0x0},
         { 0x2c, 0x0, 0x0, 0x0, 0x0},
         { 0x2, 0x0, 0x0, 0x0, 0x0},

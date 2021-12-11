@@ -35,10 +35,10 @@ static void AnimHyperBeamOrb(struct Sprite *);
 static void AnimHyperBeamOrb_Step(struct Sprite *);
 static void AnimSporeParticle(struct Sprite *);
 static void AnimSporeParticle_Step(struct Sprite *);
-static void AnimPetalDanceBigFlower(struct Sprite *);
-static void AnimPetalDanceBigFlower_Step(struct Sprite *);
-static void AnimPetalDanceSmallFlower(struct Sprite *);
-static void AnimPetalDanceSmallFlower_Step(struct Sprite *);
+static void AnimBattleChantBigFlower(struct Sprite *);
+static void AnimBattleChantBigFlower_Step(struct Sprite *);
+static void AnimBattleChantSmallFlower(struct Sprite *);
+static void AnimBattleChantSmallFlower_Step(struct Sprite *);
 static void AnimRazorLeafParticle(struct Sprite *);
 static void AnimRazorLeafParticle_Step1(struct Sprite *);
 static void AnimRazorLeafParticle_Step2(struct Sprite *);
@@ -436,48 +436,48 @@ const struct SpriteTemplate gSporeParticleSpriteTemplate =
     .callback = AnimSporeParticle,
 };
 
-const union AnimCmd gPetalDanceBigFlowerAnimCmds[] =
+const union AnimCmd gBattleChantBigFlowerAnimCmds[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
 
-const union AnimCmd gPetalDanceSmallFlowerAnimCmds[] =
+const union AnimCmd gBattleChantSmallFlowerAnimCmds[] =
 {
     ANIMCMD_FRAME(4, 1),
     ANIMCMD_END,
 };
 
-const union AnimCmd *const gPetalDanceBigFlowerAnimTable[] =
+const union AnimCmd *const gBattleChantBigFlowerAnimTable[] =
 {
-    gPetalDanceBigFlowerAnimCmds,
+    gBattleChantBigFlowerAnimCmds,
 };
 
-const union AnimCmd *const gPetalDanceSmallFlowerAnimTable[] =
+const union AnimCmd *const gBattleChantSmallFlowerAnimTable[] =
 {
-    gPetalDanceSmallFlowerAnimCmds,
+    gBattleChantSmallFlowerAnimCmds,
 };
 
-const struct SpriteTemplate gPetalDanceBigFlowerSpriteTemplate =
+const struct SpriteTemplate gBattleChantBigFlowerSpriteTemplate =
 {
     .tileTag = ANIM_TAG_FLOWER,
     .paletteTag = ANIM_TAG_FLOWER,
     .oam = &gOamData_AffineOff_ObjNormal_16x16,
-    .anims = gPetalDanceBigFlowerAnimTable,
+    .anims = gBattleChantBigFlowerAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimPetalDanceBigFlower,
+    .callback = AnimBattleChantBigFlower,
 };
 
-const struct SpriteTemplate gPetalDanceSmallFlowerSpriteTemplate =
+const struct SpriteTemplate gBattleChantSmallFlowerSpriteTemplate =
 {
     .tileTag = ANIM_TAG_FLOWER,
     .paletteTag = ANIM_TAG_FLOWER,
     .oam = &gOamData_AffineOff_ObjNormal_8x8,
-    .anims = gPetalDanceSmallFlowerAnimTable,
+    .anims = gBattleChantSmallFlowerAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimPetalDanceSmallFlower,
+    .callback = AnimBattleChantSmallFlower,
 };
 
 const union AnimCmd gRazorLeafParticleAnimCmds1[] =
@@ -963,7 +963,7 @@ const struct SpriteTemplate gAromatherapySmallFlowerSpriteTemplate =
     .tileTag = ANIM_TAG_FLOWER,
     .paletteTag = ANIM_TAG_FLOWER,
     .oam = &gOamData_AffineOff_ObjNormal_8x8,
-    .anims = gPetalDanceSmallFlowerAnimTable,
+    .anims = gBattleChantSmallFlowerAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimFlyingParticle,
@@ -974,7 +974,7 @@ const struct SpriteTemplate gAromatherapyBigFlowerSpriteTemplate =
     .tileTag = ANIM_TAG_FLOWER,
     .paletteTag = ANIM_TAG_FLOWER,
     .oam = &gOamData_AffineNormal_ObjNormal_16x16,
-    .anims = gPetalDanceBigFlowerAnimTable,
+    .anims = gBattleChantBigFlowerAnimTable,
     .images = NULL,
     .affineAnims = gAromatherapyBigFlowerAffineAnimTable,
     .callback = AnimFlyingParticle,
@@ -2503,7 +2503,7 @@ void AnimTask_SporeDoubleBattle(u8 taskId)
 // arg 1: initial y pixel offset
 // arg 2: target y pixel offset
 // arg 3: duration
-static void AnimPetalDanceBigFlower(struct Sprite* sprite)
+static void AnimBattleChantBigFlower(struct Sprite* sprite)
 {
     InitSpritePosToAnimAttacker(sprite, FALSE);
     sprite->data[0] = gBattleAnimArgs[3];
@@ -2513,11 +2513,11 @@ static void AnimPetalDanceBigFlower(struct Sprite* sprite)
     sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET) + gBattleAnimArgs[2];
     InitAnimLinearTranslation(sprite);
     sprite->data[5] = 0x40;
-    sprite->callback = AnimPetalDanceBigFlower_Step;
+    sprite->callback = AnimBattleChantBigFlower_Step;
     sprite->callback(sprite);
 }
 
-static void AnimPetalDanceBigFlower_Step(struct Sprite* sprite)
+static void AnimBattleChantBigFlower_Step(struct Sprite* sprite)
 {
     if (!AnimTranslateLinear(sprite))
     {
@@ -2541,7 +2541,7 @@ static void AnimPetalDanceBigFlower_Step(struct Sprite* sprite)
 // arg 1: initial y pixel offset
 // arg 2: target y pixel offset
 // arg 3: duration
-static void AnimPetalDanceSmallFlower(struct Sprite* sprite)
+static void AnimBattleChantSmallFlower(struct Sprite* sprite)
 {
     InitSpritePosToAnimAttacker(sprite, TRUE);
     sprite->data[0] = gBattleAnimArgs[3];
@@ -2551,11 +2551,11 @@ static void AnimPetalDanceSmallFlower(struct Sprite* sprite)
     sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET) + gBattleAnimArgs[2];
     InitAnimLinearTranslation(sprite);
     sprite->data[5] = 0x40;
-    sprite->callback = AnimPetalDanceSmallFlower_Step;
+    sprite->callback = AnimBattleChantSmallFlower_Step;
     sprite->callback(sprite);
 }
 
-static void AnimPetalDanceSmallFlower_Step(struct Sprite* sprite)
+static void AnimBattleChantSmallFlower_Step(struct Sprite* sprite)
 {
     if (!AnimTranslateLinear(sprite))
     {

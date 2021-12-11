@@ -203,7 +203,7 @@ gSongTable::
 	song se_m_giga_drain, 1, 1
 	song se_m_psybeam2, 1, 1
 	song se_m_solar_beam, 2, 2
-	song se_m_petal_dance, 1, 1
+	song se_m_battle_chant, 1, 1
 	song se_m_teleport, 1, 1
 	song se_m_minimize, 1, 1
 	song se_m_sketch, 1, 1
