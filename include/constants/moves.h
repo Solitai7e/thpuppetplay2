@@ -49,7 +49,7 @@
 #define MOVE_GROWL 45
 #define MOVE_ROAR 46
 #define MOVE_SING 47
-#define MOVE_SUPERSONIC 48
+#define MOVE_JAMMING 48
 #define MOVE_SONIC_BOOM 49
 #define MOVE_DISABLE 50
 #define MOVE_ACID 51

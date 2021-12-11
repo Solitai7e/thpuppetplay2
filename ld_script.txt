@@ -880,7 +880,7 @@ SECTIONS {
         sound/songs/se_m_screech.o(.rodata);
         sound/songs/se_m_bubble_beam.o(.rodata);
         sound/songs/se_m_bubble_beam2.o(.rodata);
-        sound/songs/se_m_supersonic.o(.rodata);
+        sound/songs/se_m_jamming.o(.rodata);
         sound/songs/se_m_belly_drum.o(.rodata);
         sound/songs/se_m_metronome.o(.rodata);
         sound/songs/se_m_bonemerang.o(.rodata);

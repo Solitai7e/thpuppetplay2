@@ -676,7 +676,7 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_SUPERSONIC,
+            MOVE_JAMMING,
             MOVE_WHIRLWIND,
             MOVE_SILVER_WIND,
             MOVE_SAFEGUARD
@@ -1741,7 +1741,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_FLAIL,
-            MOVE_SUPERSONIC,
+            MOVE_JAMMING,
             MOVE_KNIFE_THROW,
             MOVE_MAGIC_KNIFE
         },

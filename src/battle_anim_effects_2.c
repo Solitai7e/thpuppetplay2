@@ -310,7 +310,7 @@ const union AffineAnimCmd *const gWaterPulseRingAffineAnimTable[] =
     gWaterPulseRingAffineAnimCmds,
 };
 
-const struct SpriteTemplate gSupersonicRingSpriteTemplate =
+const struct SpriteTemplate gJammingRingSpriteTemplate =
 {
     .tileTag = ANIM_TAG_GOLD_RING,
     .paletteTag = ANIM_TAG_GOLD_RING,

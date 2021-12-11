@@ -744,7 +744,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round15[] =
         .species = SPECIES_DREMILIA,
         .lvl = 46,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_PROTECT, MOVE_SUPERSONIC, MOVE_SURF, MOVE_NONE}
+        .moves = {MOVE_PROTECT, MOVE_JAMMING, MOVE_SURF, MOVE_NONE}
     },
     {
         .species = SPECIES_GENGETSU,

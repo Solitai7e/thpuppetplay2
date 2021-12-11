@@ -189,7 +189,7 @@ static const u8 sSingDescription[] = _(
     "A soothing song lulls the\n"
     "foe into a deep slumber.");
 
-static const u8 sSupersonicDescription[] = _(
+static const u8 sJammingDescription[] = _(
     "Emits bizarre sound waves\n"
     "that may confuse the foe.");
 
@@ -1467,7 +1467,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_GROWL - 1] = sGrowlDescription,
     [MOVE_ROAR - 1] = sRoarDescription,
     [MOVE_SING - 1] = sSingDescription,
-    [MOVE_SUPERSONIC - 1] = sSupersonicDescription,
+    [MOVE_JAMMING - 1] = sJammingDescription,
     [MOVE_SONIC_BOOM - 1] = sSonicBoomDescription,
     [MOVE_DISABLE - 1] = sDisableDescription,
     [MOVE_ACID - 1] = sAcidDescription,

@@ -188,7 +188,7 @@
 #define SE_M_SCREECH                181 // SE_W103
 #define SE_M_BUBBLE_BEAM            182 // SE_W062
 #define SE_M_BUBBLE_BEAM2           183 // SE_W062B
-#define SE_M_SUPERSONIC             184 // SE_W048
+#define SE_M_JAMMING             184 // SE_W048
 #define SE_M_BELLY_DRUM             185 // SE_W187
 #define SE_M_METRONOME              186 // SE_W118
 #define SE_M_BONEMERANG             187 // SE_W155

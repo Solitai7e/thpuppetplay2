@@ -185,7 +185,7 @@ gSongTable::
 	song se_m_screech, 1, 1
 	song se_m_bubble_beam, 1, 1
 	song se_m_bubble_beam2, 1, 1
-	song se_m_supersonic, 1, 1
+	song se_m_jamming, 1, 1
 	song se_m_belly_drum, 1, 1
 	song se_m_metronome, 1, 1
 	song se_m_bonemerang, 1, 1

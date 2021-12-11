@@ -77,7 +77,7 @@ const u16 gEggMoves[] = {
               MOVE_CRUSH_CLAW),
 
     egg_moves(SHANGHAI,
-              MOVE_SUPERSONIC,
+              MOVE_JAMMING,
               MOVE_DISABLE,
               MOVE_TAKE_DOWN,
               MOVE_FOCUS_ENERGY,
@@ -88,7 +88,7 @@ const u16 gEggMoves[] = {
     egg_moves(HOURAI,
               MOVE_COUNTER,
               MOVE_DISABLE,
-              MOVE_SUPERSONIC,
+              MOVE_JAMMING,
               MOVE_TAKE_DOWN,
               MOVE_AMNESIA,
               MOVE_CONFUSION,
@@ -259,7 +259,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(CDAIYOUSEI,
               MOVE_QUICK_ATTACK,
-              MOVE_SUPERSONIC,
+              MOVE_JAMMING,
               MOVE_HAZE,
               MOVE_FAINT_ATTACK,
               MOVE_FLAIL,
@@ -458,7 +458,7 @@ const u16 gEggMoves[] = {
               MOVE_BUBBLE_BEAM,
               MOVE_AURORA_BEAM,
               MOVE_SLAM,
-              MOVE_SUPERSONIC,
+              MOVE_JAMMING,
               MOVE_HAZE,
               MOVE_ROCK_SLIDE,
               MOVE_SPIKES),
@@ -492,7 +492,7 @@ const u16 gEggMoves[] = {
               MOVE_LIGHT_SCREEN,
               MOVE_MIST,
               MOVE_HAZE,
-              MOVE_SUPERSONIC,
+              MOVE_JAMMING,
               MOVE_DRAGON_BREATH,
               MOVE_DRAGON_DANCE),
 
@@ -538,7 +538,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(YUMEMI,
               MOVE_MIRROR_MOVE,
-              MOVE_SUPERSONIC,
+              MOVE_JAMMING,
               MOVE_FAINT_ATTACK,
               MOVE_WING_ATTACK,
               MOVE_WHIRLWIND,
@@ -624,7 +624,7 @@ const u16 gEggMoves[] = {
               MOVE_PSYCHO_CUT,
               MOVE_BELLY_DRUM,
               MOVE_PERISH_SONG,
-              MOVE_SUPERSONIC,
+              MOVE_JAMMING,
               MOVE_SUBSTITUTE),
 
     egg_moves(YUMEKO,
@@ -738,7 +738,7 @@ const u16 gEggMoves[] = {
               MOVE_FLAIL,
               MOVE_HAZE,
               MOVE_BUBBLE_BEAM,
-              MOVE_SUPERSONIC,
+              MOVE_JAMMING,
               MOVE_ASTONISH),
 
     egg_moves(TSAKUYA,
@@ -796,7 +796,7 @@ const u16 gEggMoves[] = {
     egg_moves(AYUUKA,
               MOVE_AURORA_BEAM,
               MOVE_OCTAZOOKA,
-              MOVE_SUPERSONIC,
+              MOVE_JAMMING,
               MOVE_HAZE,
               MOVE_SCREECH,
               MOVE_THUNDER_WAVE,
@@ -963,7 +963,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(TSHOU,
               MOVE_PURSUIT,
-              MOVE_SUPERSONIC,
+              MOVE_JAMMING,
               MOVE_REFRESH,
               MOVE_MIRROR_MOVE,
               MOVE_RAGE,
@@ -1048,7 +1048,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(AKISISTERS,
               MOVE_SPLASH,
-              MOVE_SUPERSONIC,
+              MOVE_JAMMING,
               MOVE_WATER_SPORT,
               MOVE_MUD_SPORT),
 
@@ -1213,7 +1213,7 @@ const u16 gEggMoves[] = {
               MOVE_REFRESH,
               MOVE_MUD_SPORT,
               MOVE_BODY_SLAM,
-              MOVE_SUPERSONIC,
+              MOVE_JAMMING,
               MOVE_BARRIER,
               MOVE_CONFUSE_RAY),
 
