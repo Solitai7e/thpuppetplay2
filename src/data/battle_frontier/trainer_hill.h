@@ -4096,7 +4096,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_KIKURI,
                                             .heldItem = ITEM_BRIGHT_POWDER,
-                                            .moves = {MOVE_THUNDERBOLT, MOVE_DRILL_PECK, MOVE_THUNDER_WAVE, MOVE_AGILITY},
+                                            .moves = {MOVE_THUNDERBOLT, MOVE_WING_ATTACK, MOVE_THUNDER_WAVE, MOVE_AGILITY},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .speedEV = 255,

@@ -943,7 +943,7 @@ static void AnimWhirlwindLine_Step(struct Sprite *sprite)
         DestroyAnimSprite(sprite);
 }
 
-void AnimTask_DrillPeckHitSplats(u8 task)
+void AnimTask_WingAttackHitSplats(u8 task)
 {
     if (!(gTasks[task].data[0] % 32))
     {

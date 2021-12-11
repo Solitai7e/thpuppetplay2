@@ -600,7 +600,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(KANA,
               MOVE_HAZE,
-              MOVE_DRILL_PECK,
+              MOVE_WING_ATTACK,
               MOVE_QUICK_ATTACK,
               MOVE_FAINT_ATTACK,
               MOVE_STEEL_WING,
@@ -676,7 +676,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(CRIKAKO,
               MOVE_WHIRLWIND,
-              MOVE_DRILL_PECK,
+              MOVE_WING_ATTACK,
               MOVE_MIRROR_MOVE,
               MOVE_GALE,
               MOVE_SKY_ATTACK,
@@ -819,7 +819,7 @@ const u16 gEggMoves[] = {
               MOVE_ROCK_SLIDE),
 
     egg_moves(ATENSHI,
-              MOVE_DRILL_PECK,
+              MOVE_WING_ATTACK,
               MOVE_PURSUIT,
               MOVE_WHIRLWIND,
               MOVE_SKY_ATTACK,

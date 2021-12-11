@@ -81,7 +81,7 @@ gBattleAnims_Moves::
 	.4byte Move_AURORA_BEAM
 	.4byte Move_HYPER_BEAM
 	.4byte Move_PECK
-	.4byte Move_DRILL_PECK
+	.4byte Move_WING_ATTACK
 	.4byte Move_SUBMISSION
 	.4byte Move_LOW_KICK
 	.4byte Move_COUNTER
@@ -1520,7 +1520,7 @@ Move_VINE_WHIP:
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 6, 1
 	end
 
-Move_DRILL_PECK:
+Move_WING_ATTACK:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_WHIRLWIND_LINES
 	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 0
@@ -1530,7 +1530,7 @@ Move_DRILL_PECK:
 	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 1
 	delay 2
 	loopsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET, 4, 8
-	createvisualtask AnimTask_DrillPeckHitSplats, 5
+	createvisualtask AnimTask_WingAttackHitSplats, 5
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 18, 1
 	waitforvisualfinish
 	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 2

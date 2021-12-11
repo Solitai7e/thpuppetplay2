@@ -910,7 +910,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 
-    [MOVE_DRILL_PECK] =
+    [MOVE_WING_ATTACK] =
     {
         .effect = EFFECT_FLINCH_HIT,
         .split = 0,

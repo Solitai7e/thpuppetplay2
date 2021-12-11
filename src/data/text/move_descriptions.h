@@ -257,7 +257,7 @@ static const u8 sPeckDescription[] = _(
     "Attacks the foe with a\n"
     "jabbing beak, etc.");
 
-static const u8 sDrillPeckDescription[] = _(
+static const u8 sWingAttackDescription[] = _(
     "A corkscrewing attack with\n"
     "the beak acting as a drill.");
 
@@ -1484,7 +1484,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_AURORA_BEAM - 1] = sAuroraBeamDescription,
     [MOVE_HYPER_BEAM - 1] = sHyperBeamDescription,
     [MOVE_PECK - 1] = sPeckDescription,
-    [MOVE_DRILL_PECK - 1] = sDrillPeckDescription,
+    [MOVE_WING_ATTACK - 1] = sWingAttackDescription,
     [MOVE_SUBMISSION - 1] = sSubmissionDescription,
     [MOVE_LOW_KICK - 1] = sLowKickDescription,
     [MOVE_COUNTER - 1] = sCounterDescription,
