@@ -2198,7 +2198,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
-    [MOVE_ROCK_SLIDE] =
+    [MOVE_ROCK_WRECKER] =
     {
         .effect = EFFECT_DEFENSE_UP_HIT,
         .split = 0,

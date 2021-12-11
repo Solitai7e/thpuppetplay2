@@ -1878,7 +1878,7 @@ const struct FacilityMon gVerdanturfBattleTentMons[NUM_VERDANTURF_TENT_MONS] =
     },
     [VERDANTURF_TENT_MON_CKONNGARA_1] = {
         .species = SPECIES_CKONNGARA,
-        .moves = {MOVE_EMBER, MOVE_ROCK_SLIDE, MOVE_TREMORS, MOVE_GROWL},
+        .moves = {MOVE_EMBER, MOVE_ROCK_WRECKER, MOVE_TREMORS, MOVE_GROWL},
         .itemTableId = BATTLE_FRONTIER_ITEM_CHARCOAL,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_ATTACK,
         .nature = NATURE_SASSY

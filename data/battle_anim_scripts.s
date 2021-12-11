@@ -173,7 +173,7 @@ gBattleAnims_Moves::
 	.4byte Move_FURY_SWIPES
 	.4byte Move_CHECKMAID
 	.4byte Move_REST
-	.4byte Move_ROCK_SLIDE
+	.4byte Move_ROCK_WRECKER
 	.4byte Move_KILLING_BITE
 	.4byte Move_SHARPEN
 	.4byte Move_CONVERSION
@@ -2115,7 +2115,7 @@ Move_ROCK_THROW:
 	waitforvisualfinish
 	end
 
-Move_ROCK_SLIDE:
+Move_ROCK_WRECKER:
 	loadspritegfx ANIM_TAG_ROCKS
 	monbg ANIM_DEF_PARTNER
 	createsprite gShakeMonOrTerrainSpriteTemplate, ANIM_ATTACKER, 2, 7, 1, 11, 1
@@ -2133,13 +2133,13 @@ Move_ROCK_SLIDE:
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 5, 50, 1
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_DEF_PARTNER, 0, 5, 50, 1
 	delay 2
-	call RockSlideRocks
-	call RockSlideRocks
+	call RockWreckerRocks
+	call RockWreckerRocks
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	end
 
-RockSlideRocks:
+RockWreckerRocks:
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, -20, 0, -10, 1
 	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
 	delay 2

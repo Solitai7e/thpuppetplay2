@@ -474,7 +474,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_SYORIHIME,
                         .heldItem = ITEM_FOCUS_BAND,
-                        .moves = {MOVE_PSYCHIC, MOVE_FLAMETHROWER, MOVE_ROCK_SLIDE, MOVE_CALM_MIND},
+                        .moves = {MOVE_PSYCHIC, MOVE_FLAMETHROWER, MOVE_ROCK_WRECKER, MOVE_CALM_MIND},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 200,
@@ -541,7 +541,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_HLETTY,
                         .heldItem = ITEM_FOCUS_BAND,
-                        .moves = {MOVE_PSYCHIC, MOVE_ICE_BEAM, MOVE_ROCK_SLIDE, MOVE_CALM_MIND},
+                        .moves = {MOVE_PSYCHIC, MOVE_ICE_BEAM, MOVE_ROCK_WRECKER, MOVE_CALM_MIND},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 200,
@@ -1259,7 +1259,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_HKEINE,
                         .heldItem = ITEM_QUICK_CLAW,
-                        .moves = {MOVE_PSYCH_UP, MOVE_HI_JUMP_KICK, MOVE_GIGA_IMPACT, MOVE_ROCK_SLIDE},
+                        .moves = {MOVE_PSYCH_UP, MOVE_HI_JUMP_KICK, MOVE_GIGA_IMPACT, MOVE_ROCK_WRECKER},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 252,
@@ -3240,7 +3240,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_ACHEN,
                                             .heldItem = ITEM_QUICK_CLAW,
-                                            .moves = {MOVE_HEAT_WAVE, MOVE_ROCK_SLIDE, MOVE_PROTECT, MOVE_SUNNY_DAY},
+                                            .moves = {MOVE_HEAT_WAVE, MOVE_ROCK_WRECKER, MOVE_PROTECT, MOVE_SUNNY_DAY},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 255,
@@ -3990,7 +3990,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_YUMEKO,
                                             .heldItem = ITEM_SITRUS_BERRY,
-                                            .moves = {MOVE_ROCK_SLIDE, MOVE_BLOCK, MOVE_TOXIC, MOVE_EXPLOSION},
+                                            .moves = {MOVE_ROCK_WRECKER, MOVE_BLOCK, MOVE_TOXIC, MOVE_EXPLOSION},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 100,
@@ -4656,7 +4656,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_CTENSHI,
                                             .heldItem = ITEM_LEFTOVERS,
-                                            .moves = {MOVE_LOW_KICK, MOVE_ROCK_SLIDE, MOVE_FACADE, MOVE_ATTRACT},
+                                            .moves = {MOVE_LOW_KICK, MOVE_ROCK_WRECKER, MOVE_FACADE, MOVE_ATTRACT},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 252,
@@ -4678,7 +4678,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_HMYSTIA,
                                             .heldItem = ITEM_LEFTOVERS,
-                                            .moves = {MOVE_PROTECT, MOVE_ROCK_SLIDE, MOVE_FACADE, MOVE_ATTRACT},
+                                            .moves = {MOVE_PROTECT, MOVE_ROCK_WRECKER, MOVE_FACADE, MOVE_ATTRACT},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 252,
@@ -4722,7 +4722,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_MIMA,
                                             .heldItem = ITEM_PERSIM_BERRY,
-                                            .moves = {MOVE_ROCK_SLIDE, MOVE_CRUNCH, MOVE_EARTHQUAKE, MOVE_ATTRACT},
+                                            .moves = {MOVE_ROCK_WRECKER, MOVE_CRUNCH, MOVE_EARTHQUAKE, MOVE_ATTRACT},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 252,
@@ -4978,7 +4978,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_DMURASA,
                                             .heldItem = ITEM_CHESTO_BERRY,
-                                            .moves = {MOVE_HYPER_VOICE, MOVE_COUNTER, MOVE_REST, MOVE_ROCK_SLIDE},
+                                            .moves = {MOVE_HYPER_VOICE, MOVE_COUNTER, MOVE_REST, MOVE_ROCK_WRECKER},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 250,
@@ -5419,7 +5419,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_YOSHIKA,
                                             .heldItem = ITEM_SHELL_BELL,
-                                            .moves = {MOVE_ROCK_SLIDE, MOVE_FLAMETHROWER, MOVE_HEART_BREAK, MOVE_BLADE_FLASH},
+                                            .moves = {MOVE_ROCK_WRECKER, MOVE_FLAMETHROWER, MOVE_HEART_BREAK, MOVE_BLADE_FLASH},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .attackEV = 255,

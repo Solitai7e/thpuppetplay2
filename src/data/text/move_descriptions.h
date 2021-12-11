@@ -625,7 +625,7 @@ static const u8 sRestDescription[] = _(
     "The user sleeps for 2 turns,\n"
     "restoring HP and status.");
 
-static const u8 sRockSlideDescription[] = _(
+static const u8 sRockWreckerDescription[] = _(
     "Large boulders are hurled.\n"
     "May cause flinching.");
 
@@ -1576,7 +1576,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_FURY_SWIPES - 1] = sFurySwipesDescription,
     [MOVE_CHECKMAID - 1] = sCheckmaidDescription,
     [MOVE_REST - 1] = sRestDescription,
-    [MOVE_ROCK_SLIDE - 1] = sRockSlideDescription,
+    [MOVE_ROCK_WRECKER - 1] = sRockWreckerDescription,
     [MOVE_KILLING_BITE - 1] = sKillingBiteDescription,
     [MOVE_SHARPEN - 1] = sSharpenDescription,
     [MOVE_CONVERSION - 1] = sConversionDescription,

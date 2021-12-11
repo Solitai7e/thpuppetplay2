@@ -178,7 +178,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][FRONTIER_PARTY_SIZ
                 .fixedIV = 20,
                 .nature = NATURE_QUIET,
                 .evs = {100, 152, 106, 152, 0, 0},
-                .moves = {MOVE_OVERHEAT, MOVE_ROCK_SLIDE, MOVE_BLADE_FLASH, MOVE_EARTHQUAKE},
+                .moves = {MOVE_OVERHEAT, MOVE_ROCK_WRECKER, MOVE_BLADE_FLASH, MOVE_EARTHQUAKE},
             },
         },
         // Gold Symbol.
@@ -425,7 +425,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][FRONTIER_PARTY_SIZ
                 .fixedIV = MAX_PER_STAT_IVS,
                 .nature = NATURE_BRAVE,
                 .evs = {252, 0, 0, 0, 6, 252},
-                .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_EXPLOSION, MOVE_SCREECH},
+                .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_WRECKER, MOVE_EXPLOSION, MOVE_SCREECH},
             },
             {
                 .species = SPECIES_CTEWI,

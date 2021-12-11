@@ -33,7 +33,7 @@ BattleFrontier_Lounge7_EventScript_ChooseLeftTutorMove::
 	case 3, BattleFrontier_Lounge7_EventScript_DrainPunch
 	case 4, BattleFrontier_Lounge7_EventScript_GigaImpact
 	case 5, BattleFrontier_Lounge7_EventScript_BodySlam
-	case 6, BattleFrontier_Lounge7_EventScript_RockSlide
+	case 6, BattleFrontier_Lounge7_EventScript_RockWrecker
 	case 7, BattleFrontier_Lounge7_EventScript_Counter
 	case 8, BattleFrontier_Lounge7_EventScript_ThunderWave
 	case 9, BattleFrontier_Lounge7_EventScript_SwordsDance
@@ -57,7 +57,7 @@ BattleFrontier_Lounge7_EventScript_ChooseNewLeftTutorMove::
 	case 3, BattleFrontier_Lounge7_EventScript_DrainPunch
 	case 4, BattleFrontier_Lounge7_EventScript_GigaImpact
 	case 5, BattleFrontier_Lounge7_EventScript_BodySlam
-	case 6, BattleFrontier_Lounge7_EventScript_RockSlide
+	case 6, BattleFrontier_Lounge7_EventScript_RockWrecker
 	case 7, BattleFrontier_Lounge7_EventScript_Counter
 	case 8, BattleFrontier_Lounge7_EventScript_ThunderWave
 	case 9, BattleFrontier_Lounge7_EventScript_SwordsDance
@@ -95,7 +95,7 @@ BattleFrontier_Lounge7_EventScript_BodySlam::
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
-BattleFrontier_Lounge7_EventScript_RockSlide::
+BattleFrontier_Lounge7_EventScript_RockWrecker::
 	setvar VAR_0x8008, 48
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
@@ -408,7 +408,7 @@ BattleFrontier_Lounge7_Text_BodySlamDesc::
 	.string "that may cause\n"
 	.string "paralysis.$"
 
-BattleFrontier_Lounge7_Text_RockSlideDesc::
+BattleFrontier_Lounge7_Text_RockWreckerDesc::
 	.string "Large boulders\n"
 	.string "are hurled. May\n"
 	.string "cause flinching.$"

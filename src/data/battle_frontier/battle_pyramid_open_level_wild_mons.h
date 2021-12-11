@@ -120,7 +120,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round3[] =
         .species = SPECIES_ACHEN,
         .lvl = 11,
         .abilityNum = 1,
-        .moves = {MOVE_FLAMETHROWER, MOVE_ROCK_SLIDE, MOVE_PROTECT, MOVE_NONE}
+        .moves = {MOVE_FLAMETHROWER, MOVE_ROCK_WRECKER, MOVE_PROTECT, MOVE_NONE}
     },
     {
         .species = SPECIES_SUIKA,
@@ -224,7 +224,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round5[] =
         .species = SPECIES_SYORIHIME,
         .lvl = 8,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_FIRE_BLAST, MOVE_TOXIC}
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_WRECKER, MOVE_FIRE_BLAST, MOVE_TOXIC}
     },
     {
         .species = SPECIES_CYUKI,
@@ -264,13 +264,13 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round6[] =
         .species = SPECIES_CYAMAME,
         .lvl = 10,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_ROCK_SLIDE, MOVE_SLASH, MOVE_DIG, MOVE_NONE}
+        .moves = {MOVE_ROCK_WRECKER, MOVE_SLASH, MOVE_DIG, MOVE_NONE}
     },
     {
         .species = SPECIES_DMINORIKO,
         .lvl = 10,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_GIGA_DRAIN, MOVE_NONE}
+        .moves = {MOVE_ROCK_WRECKER, MOVE_EARTHQUAKE, MOVE_GIGA_DRAIN, MOVE_NONE}
     },
     {
         .species = SPECIES_AMINORIKO,
@@ -282,13 +282,13 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round6[] =
         .species = SPECIES_CYAMAME,
         .lvl = 8,
         .abilityNum = 1,
-        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_MAGNITUDE, MOVE_TOXIC}
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_WRECKER, MOVE_MAGNITUDE, MOVE_TOXIC}
     },
     {
         .species = SPECIES_DMINORIKO,
         .lvl = 6,
         .abilityNum = 1,
-        .moves = {MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_GIGA_DRAIN, MOVE_PROTECT}
+        .moves = {MOVE_ROCK_WRECKER, MOVE_EARTHQUAKE, MOVE_GIGA_DRAIN, MOVE_PROTECT}
     },
     {
         .species = SPECIES_AMINORIKO,
@@ -306,7 +306,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round6[] =
         .species = SPECIES_YAMAME,
         .lvl = 5,
         .abilityNum = 1,
-        .moves = {MOVE_ROCK_SLIDE, MOVE_GUNK_SHOT, MOVE_EARTHQUAKE, MOVE_PROTECT}
+        .moves = {MOVE_ROCK_WRECKER, MOVE_GUNK_SHOT, MOVE_EARTHQUAKE, MOVE_PROTECT}
     }
 };
 
@@ -404,7 +404,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round8[] =
         .species = SPECIES_TLUNACHILD,
         .lvl = 5,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_EXPLOSION, MOVE_TOXIC, MOVE_ROCK_SLIDE, MOVE_NONE}
+        .moves = {MOVE_EXPLOSION, MOVE_TOXIC, MOVE_ROCK_WRECKER, MOVE_NONE}
     },
     {
         .species = SPECIES_ZOMBIEFAIRY,
@@ -514,7 +514,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round10[] =
         .species = SPECIES_CBYAKUREN,
         .lvl = 5,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_HYPER_BEAM, MOVE_ROCK_SLIDE, MOVE_BITE, MOVE_NONE}
+        .moves = {MOVE_HYPER_BEAM, MOVE_ROCK_WRECKER, MOVE_BITE, MOVE_NONE}
     }
 };
 
@@ -560,13 +560,13 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round11[] =
         .species = SPECIES_HSAKUYA,
         .lvl = 5,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_BRAVE_BIRD, MOVE_EARTHQUAKE, MOVE_FOCUS_PUNCH, MOVE_ROCK_SLIDE}
+        .moves = {MOVE_BRAVE_BIRD, MOVE_EARTHQUAKE, MOVE_FOCUS_PUNCH, MOVE_ROCK_WRECKER}
     },
     {
         .species = SPECIES_CTENSHI,
         .lvl = 5,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_FOCUS_PUNCH, MOVE_SEISMIC_TOSS}
+        .moves = {MOVE_ROCK_WRECKER, MOVE_EARTHQUAKE, MOVE_FOCUS_PUNCH, MOVE_SEISMIC_TOSS}
     }
 };
 
@@ -588,7 +588,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round12[] =
         .species = SPECIES_ELIS,
         .lvl = 8,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_SANDSTORM, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_NONE}
+        .moves = {MOVE_SANDSTORM, MOVE_EARTHQUAKE, MOVE_ROCK_WRECKER, MOVE_NONE}
     },
     {
         .species = SPECIES_TEWI,
@@ -652,7 +652,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round13[] =
         .species = SPECIES_HSAKUYA,
         .lvl = 6,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_BRAVE_BIRD, MOVE_BRICK_BREAK, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE}
+        .moves = {MOVE_BRAVE_BIRD, MOVE_BRICK_BREAK, MOVE_EARTHQUAKE, MOVE_ROCK_WRECKER}
     },
     {
         .species = SPECIES_TLUNACHILD,
@@ -664,7 +664,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round13[] =
         .species = SPECIES_DARKALICE,
         .lvl = 5,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_WATER_PULSE, MOVE_PROTECT, MOVE_ROCK_SLIDE, MOVE_NONE}
+        .moves = {MOVE_WATER_PULSE, MOVE_PROTECT, MOVE_ROCK_WRECKER, MOVE_NONE}
     },
     {
         .species = SPECIES_ASHOU,
@@ -912,7 +912,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round18[] =
         .species = SPECIES_CBYAKUREN,
         .lvl = 6,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_HEART_BREAK, MOVE_NONE}
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_WRECKER, MOVE_HEART_BREAK, MOVE_NONE}
     },
     {
         .species = SPECIES_CTEWI,
