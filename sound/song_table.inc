@@ -143,7 +143,7 @@ gSongTable::
 	song se_m_comet_punch, 1, 1
 	song se_m_giga_impact, 1, 1
 	song se_m_giga_impact2, 1, 1
-	song se_m_crabhammer, 1, 1
+	song se_m_aqua_jet, 1, 1
 	song se_m_jump_kick, 1, 1
 	song se_m_flame_wheel, 1, 1
 	song se_m_flame_wheel2, 1, 1

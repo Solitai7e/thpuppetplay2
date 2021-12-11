@@ -257,7 +257,7 @@ static const struct TrHillFloor sDataTagJPDefault_Floors[] = {
                     [1] = {
                         .species = SPECIES_DLAYLA,
                         .heldItem = ITEM_QUICK_CLAW,
-                        .moves = { MOVE_KNOCK_OFF, MOVE_CRABHAMMER, MOVE_TAUNT, MOVE_PROTECT },
+                        .moves = { MOVE_KNOCK_OFF, MOVE_AQUA_JET, MOVE_TAUNT, MOVE_PROTECT },
                         .level = 0,
                         .ppBonuses = 0x0,
                         .hpEV = 100,
@@ -4700,7 +4700,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_LUNASA,
                                             .heldItem = ITEM_PERSIM_BERRY,
-                                            .moves = {MOVE_RETURN, MOVE_PROTECT, MOVE_CRABHAMMER, MOVE_ATTRACT},
+                                            .moves = {MOVE_RETURN, MOVE_PROTECT, MOVE_AQUA_JET, MOVE_ATTRACT},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 252,

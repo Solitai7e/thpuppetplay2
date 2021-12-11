@@ -325,7 +325,7 @@ static const u16 sPoints_RainMoves[] =
     MOVE_OCTAZOOKA, 3,
     MOVE_CLAMP, 3,
     MOVE_WITHDRAW, 3,
-    MOVE_CRABHAMMER, 3,
+    MOVE_AQUA_JET, 3,
     MOVE_WATER_SPOUT, 3,
     MOVE_DIVE, 3,
     MOVE_WATERFALL, 3,

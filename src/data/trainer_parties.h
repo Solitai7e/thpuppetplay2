@@ -1623,7 +1623,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Olivia[] = {
     .iv = 100,
     .lvl = 37,
     .species = SPECIES_DLAYLA,
-    .moves = {MOVE_TAUNT, MOVE_CRABHAMMER, MOVE_WATER_PULSE, MOVE_NONE}
+    .moves = {MOVE_TAUNT, MOVE_AQUA_JET, MOVE_WATER_PULSE, MOVE_NONE}
     },
     {
     .iv = 100,
@@ -3601,7 +3601,7 @@ static const struct TrainerMonItemCustomMoves sParty_Juan1[] = {
     .lvl = 43,
     .species = SPECIES_DKEINE,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_WATER_PULSE, MOVE_CRABHAMMER, MOVE_TAUNT, MOVE_LEER}
+    .moves = {MOVE_WATER_PULSE, MOVE_AQUA_JET, MOVE_TAUNT, MOVE_LEER}
     },
     {
     .iv = 250,
@@ -11431,7 +11431,7 @@ static const struct TrainerMonItemCustomMoves sParty_Juan2[] = {
     .lvl = 48,
     .species = SPECIES_DKEINE,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_REST, MOVE_CRABHAMMER, MOVE_TAUNT, MOVE_DOUBLE_TEAM}
+    .moves = {MOVE_REST, MOVE_AQUA_JET, MOVE_TAUNT, MOVE_DOUBLE_TEAM}
     },
     {
     .iv = 255,

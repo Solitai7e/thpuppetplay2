@@ -146,7 +146,7 @@
 #define SE_M_COMET_PUNCH            139 // SE_W004
 #define SE_M_GIGA_IMPACT              140 // SE_W025
 #define SE_M_GIGA_IMPACT2             141 // SE_W025B
-#define SE_M_CRABHAMMER             142 // SE_W152
+#define SE_M_AQUA_JET             142 // SE_W152
 #define SE_M_JUMP_KICK              143 // SE_W026
 #define SE_M_FLAME_WHEEL            144 // SE_W172
 #define SE_M_FLAME_WHEEL2           145 // SE_W172B

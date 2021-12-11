@@ -2128,7 +2128,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
-    [MOVE_CRABHAMMER] =
+    [MOVE_AQUA_JET] =
     {
         .effect = EFFECT_QUICK_ATTACK,
         .split = 0,

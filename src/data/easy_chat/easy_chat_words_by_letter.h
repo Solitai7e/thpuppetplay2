@@ -306,7 +306,7 @@ const u16 gEasyChatWordsByLetter_C[] = {
     EC_MOVE(COUNTER),
     EC_WORD_COUPLE,
     EC_MOVE2(COVET),
-    EC_MOVE(CRABHAMMER),
+    EC_MOVE(AQUA_JET),
     EC_POKEMON(ADRAN),
     EC_POKEMON(DKEINE),
     EC_WORD_CRIES,

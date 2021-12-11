@@ -168,7 +168,7 @@ gBattleAnims_Moves::
 	.4byte Move_PSYWAVE
 	.4byte Move_SPLASH
 	.4byte Move_DISPERSE
-	.4byte Move_CRABHAMMER
+	.4byte Move_AQUA_JET
 	.4byte Move_EXPLOSION
 	.4byte Move_FURY_SWIPES
 	.4byte Move_BONEMERANG
@@ -1547,28 +1547,28 @@ Move_WATERFALL:
 	setalpha 12, 8
 	createvisualtask AnimTask_ShakeMon, 5, ANIM_ATTACKER, 0, 2, 23, 1
 	delay 5
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_ATTACKER
 	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, 10, 10, 25, ANIM_ATTACKER
 	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_ATTACKER
 	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, -15, 0, 25, ANIM_ATTACKER
 	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_ATTACKER
 	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, 20, 10, 25, ANIM_ATTACKER
 	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_ATTACKER
 	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, 0, -10, 25, ANIM_ATTACKER
 	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_ATTACKER
 	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, -10, 15, 25, ANIM_ATTACKER
 	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_ATTACKER
 	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, 25, 20, 25, ANIM_ATTACKER
 	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_ATTACKER
 	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, -20, 20, 25, ANIM_ATTACKER
 	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_ATTACKER
 	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, 12, 0, 25, ANIM_ATTACKER
 	waitforvisualfinish
 	delay 10
@@ -3300,11 +3300,11 @@ Move_MILK_DRINK:
 	monbg ANIM_TARGET
 	createsprite gMilkBottleSpriteTemplate, ANIM_ATTACKER, 2
 	delay 40
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_ATTACKER
 	delay 12
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_ATTACKER
 	delay 20
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	createsprite gThinRingExpandingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 1, 0
 	playsewithpan SE_M_MILK_DRINK, SOUND_PAN_ATTACKER
@@ -5717,28 +5717,28 @@ Move_ABSORB:
 	end
 
 AbsorbEffect:
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_TARGET
 	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 0, 5, 8, 26
 	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_TARGET
 	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, -5, -8, 26
 	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_TARGET
 	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, -5, 15, 16, 33
 	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_TARGET
 	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 0, -15, -16, 36
 	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_TARGET
 	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 0, 5, 8, 26
 	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_TARGET
 	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, -5, -8, 26
 	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_TARGET
 	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, -10, 20, 20, 39
 	delay 4
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_TARGET
 	createsprite gAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 3, 5, -18, -20, 35
 	delay 4
 	return
@@ -6245,19 +6245,19 @@ Move_WATER_GUN:
 	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 1, 0, 8, 1
 	createsprite gWaterHitSplatSpriteTemplate, ANIM_ATTACKER, 4, 0, 0, ANIM_TARGET, 2
 	createsprite gWaterGunDropletSpriteTemplate, ANIM_ATTACKER, 2, 0, -15, 0, 15, 55
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_TARGET
 	delay 10
 	createsprite gWaterGunDropletSpriteTemplate, ANIM_ATTACKER, 2, 15, -20, 0, 15, 50
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_TARGET
 	delay 10
 	createsprite gWaterGunDropletSpriteTemplate, ANIM_ATTACKER, 2, -15, -10, 0, 10, 45
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_TARGET
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
 	end
 
-Move_CRABHAMMER:
+Move_AQUA_JET:
 	loadspritegfx ANIM_TAG_ICE_CRYSTALS
 	loadspritegfx ANIM_TAG_WATER_IMPACT
 	monbg ANIM_DEF_PARTNER
@@ -6272,7 +6272,7 @@ Move_CRABHAMMER:
 	waitforvisualfinish
 	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_ATTACKER, 2, 1, 0, 4
 	waitforvisualfinish
-	loopsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET, 20, 3
+	loopsewithpan SE_M_AQUA_JET, SOUND_PAN_TARGET, 20, 3
 	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 0, 4, 8, 1
 	createsprite gSmallBubblePairSpriteTemplate, ANIM_ATTACKER, 2, 10, 10, 20, ANIM_TARGET
 	delay 4
@@ -9871,13 +9871,13 @@ WeatherBallFire:
 WeatherBallWater:
 	loadspritegfx ANIM_TAG_SMALL_BUBBLES
 	createsprite gWeatherBallWaterDownSpriteTemplate, ANIM_TARGET, 2, -30, -100, 25, 1, 50, 10
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_TARGET
 	delay 8
 	createsprite gWeatherBallWaterDownSpriteTemplate, ANIM_TARGET, 2, -30, -100, 25, 1, -20, 20
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_TARGET
 	delay 13
 	createsprite gWeatherBallWaterDownSpriteTemplate, ANIM_TARGET, 2, -30, -100, 25, 1, 0, 0
-	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	playsewithpan SE_M_AQUA_JET, SOUND_PAN_TARGET
 	waitforvisualfinish
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 3, 8, 1
 	playsewithpan SE_M_GIGA_DRAIN, SOUND_PAN_TARGET

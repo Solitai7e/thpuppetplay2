@@ -605,7 +605,7 @@ static const u8 sDisperseDescription[] = _(
     "Liquifies the user's body\n"
     "to sharply raise DEFENSE.");
 
-static const u8 sCrabhammerDescription[] = _(
+static const u8 sAquaJetDescription[] = _(
     "Hammers with a pincer. Has a\n"
     "high critical-hit ratio.");
 
@@ -1571,7 +1571,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_PSYWAVE - 1] = sPsywaveDescription,
     [MOVE_SPLASH - 1] = sSplashDescription,
     [MOVE_DISPERSE - 1] = sDisperseDescription,
-    [MOVE_CRABHAMMER - 1] = sCrabhammerDescription,
+    [MOVE_AQUA_JET - 1] = sAquaJetDescription,
     [MOVE_EXPLOSION - 1] = sExplosionDescription,
     [MOVE_FURY_SWIPES - 1] = sFurySwipesDescription,
     [MOVE_BONEMERANG - 1] = sBonemerangDescription,
