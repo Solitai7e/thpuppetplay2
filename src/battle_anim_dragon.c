@@ -6,7 +6,7 @@
 #include "constants/rgb.h"
 
 static void AnimOutrageFlame(struct Sprite *);
-static void AnimDragonRageFirePlume(struct Sprite *);
+static void AnimDarkPulseFirePlume(struct Sprite *);
 static void AnimDragonFireToTarget(struct Sprite *);
 static void AnimDragonDanceOrb(struct Sprite *);
 static void AnimDragonDanceOrb_Step(struct Sprite *);
@@ -96,7 +96,7 @@ const struct SpriteTemplate gDragonBreathFireSpriteTemplate =
     .callback = AnimDragonFireToTarget,
 };
 
-static const union AnimCmd sAnim_DragonRageFirePlume[] =
+static const union AnimCmd sAnim_DarkPulseFirePlume[] =
 {
     ANIMCMD_FRAME(0, 5),
     ANIMCMD_FRAME(16, 5),
@@ -106,23 +106,23 @@ static const union AnimCmd sAnim_DragonRageFirePlume[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd *const sAnims_DragonRageFirePlume[] =
+static const union AnimCmd *const sAnims_DarkPulseFirePlume[] =
 {
-    sAnim_DragonRageFirePlume,
+    sAnim_DarkPulseFirePlume,
 };
 
-const struct SpriteTemplate gDragonRageFirePlumeSpriteTemplate =
+const struct SpriteTemplate gDarkPulseFirePlumeSpriteTemplate =
 {
     .tileTag = ANIM_TAG_FIRE_PLUME,
     .paletteTag = ANIM_TAG_FIRE_PLUME,
     .oam = &gOamData_AffineOff_ObjNormal_32x32,
-    .anims = sAnims_DragonRageFirePlume,
+    .anims = sAnims_DarkPulseFirePlume,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimDragonRageFirePlume,
+    .callback = AnimDarkPulseFirePlume,
 };
 
-static const union AnimCmd sAnim_DragonRageFire[] =
+static const union AnimCmd sAnim_DarkPulseFire[] =
 {
     ANIMCMD_FRAME(16, 3),
     ANIMCMD_FRAME(32, 3),
@@ -130,38 +130,38 @@ static const union AnimCmd sAnim_DragonRageFire[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd *const sAnims_DragonRageFire[] =
+static const union AnimCmd *const sAnims_DarkPulseFire[] =
 {
-    sAnim_DragonRageFire,
-    sAnim_DragonRageFire,
+    sAnim_DarkPulseFire,
+    sAnim_DarkPulseFire,
 };
 
-static const union AffineAnimCmd sAffineAnim_DragonRageFire_0[] =
+static const union AffineAnimCmd sAffineAnim_DarkPulseFire_0[] =
 {
     AFFINEANIMCMD_FRAME(0x64, 0x64, 127, 1),
     AFFINEANIMCMD_END,
 };
 
-static const union AffineAnimCmd sAffineAnim_DragonRageFire_1[] =
+static const union AffineAnimCmd sAffineAnim_DarkPulseFire_1[] =
 {
     AFFINEANIMCMD_FRAME(0x64, 0x64, 0, 1),
     AFFINEANIMCMD_END,
 };
 
-static const union AffineAnimCmd *const sAffineAnims_DragonRageFire[] =
+static const union AffineAnimCmd *const sAffineAnims_DarkPulseFire[] =
 {
-    sAffineAnim_DragonRageFire_0,
-    sAffineAnim_DragonRageFire_1,
+    sAffineAnim_DarkPulseFire_0,
+    sAffineAnim_DarkPulseFire_1,
 };
 
-const struct SpriteTemplate gDragonRageFireSpitSpriteTemplate =
+const struct SpriteTemplate gDarkPulseFireSpitSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SMALL_EMBER,
     .paletteTag = ANIM_TAG_SMALL_EMBER,
     .oam = &gOamData_AffineDouble_ObjNormal_32x32,
-    .anims = sAnims_DragonRageFire,
+    .anims = sAnims_DarkPulseFire,
     .images = NULL,
-    .affineAnims = sAffineAnims_DragonRageFire,
+    .affineAnims = sAffineAnims_DarkPulseFire,
     .callback = AnimDragonFireToTarget,
 };
 
@@ -238,7 +238,7 @@ static void StartDragonFireTranslation(struct Sprite *sprite)
     StoreSpriteCallbackInData6(sprite, DestroySpriteAndMatrix);
 }
 
-static void AnimDragonRageFirePlume(struct Sprite *sprite)
+static void AnimDarkPulseFirePlume(struct Sprite *sprite)
 {
     if (gBattleAnimArgs[0] == 0)
     {
@@ -257,7 +257,7 @@ static void AnimDragonRageFirePlume(struct Sprite *sprite)
     StoreSpriteCallbackInData6(sprite, DestroySpriteAndMatrix);
 }
 
-// For Dragon Breath and Dragon Rage
+// For Dragon Breath and Dark Pulse
 static void AnimDragonFireToTarget(struct Sprite *sprite)
 {
     if (GetBattlerSide(gBattleAnimAttacker) != B_SIDE_PLAYER)

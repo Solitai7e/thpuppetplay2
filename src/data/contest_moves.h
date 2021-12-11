@@ -649,11 +649,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_DRAGON_RAGE] =
+    [MOVE_DARK_PULSE] =
     {
         .effect = CONTEST_EFFECT_BETTER_WHEN_LATER,
         .contestCategory = CONTEST_CATEGORY_COOL,
-        .comboStarterId = COMBO_STARTER_DRAGON_RAGE,
+        .comboStarterId = COMBO_STARTER_DARK_PULSE,
         .comboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DRAGON_DANCE},
     },
 
@@ -1798,7 +1798,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = COMBO_STARTER_DRAGON_BREATH,
-        .comboMoves = {COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_DRAGON_DANCE},
+        .comboMoves = {COMBO_STARTER_DARK_PULSE, COMBO_STARTER_DRAGON_DANCE},
     },
 
     [MOVE_BATON_PASS] =
@@ -2694,7 +2694,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_DRAGON_DANCE},
+        .comboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DARK_PULSE, COMBO_STARTER_DRAGON_DANCE},
     },
 
     [MOVE_FRENZY_PLANT] =
@@ -2790,7 +2790,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = COMBO_STARTER_DRAGON_DANCE,
-        .comboMoves = {COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_DRAGON_BREATH},
+        .comboMoves = {COMBO_STARTER_DARK_PULSE, COMBO_STARTER_DRAGON_BREATH},
     },
 
     [MOVE_ROCK_BLAST] =

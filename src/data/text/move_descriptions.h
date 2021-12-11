@@ -325,7 +325,7 @@ static const u8 sWireWebDescription[] = _(
     "Binds the foe with string\n"
     "to reduce its SPEED.");
 
-static const u8 sDragonRageDescription[] = _(
+static const u8 sDarkPulseDescription[] = _(
     "Launches shock waves that\n"
     "always inflict 40 HP damage.");
 
@@ -1501,7 +1501,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SLEEP_POWDER - 1] = sSleepPowderDescription,
     [MOVE_BATTLE_CHANT - 1] = sBattleChantDescription,
     [MOVE_WIRE_WEB - 1] = sWireWebDescription,
-    [MOVE_DRAGON_RAGE - 1] = sDragonRageDescription,
+    [MOVE_DARK_PULSE - 1] = sDarkPulseDescription,
     [MOVE_FIRE_SPIN - 1] = sFireSpinDescription,
     [MOVE_THUNDER_SHOCK - 1] = sThunderShockDescription,
     [MOVE_THUNDERBOLT - 1] = sThunderboltDescription,

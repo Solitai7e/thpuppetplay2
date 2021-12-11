@@ -58,7 +58,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectOHKO                   @ EFFECT_OHKO
 	.4byte BattleScript_EffectRazorWind              @ EFFECT_RAZOR_WIND
 	.4byte BattleScript_EffectSuperFang              @ EFFECT_SUPER_FANG
-	.4byte BattleScript_EffectDragonRage             @ EFFECT_DRAGON_RAGE
+	.4byte BattleScript_EffectDarkPulse             @ EFFECT_DARK_PULSE
 	.4byte BattleScript_EffectTrap                   @ EFFECT_TRAP
 	.4byte BattleScript_EffectHit                    @ EFFECT_HIGH_CRITICAL
 	.4byte BattleScript_EffectDoubleHit              @ EFFECT_DOUBLE_HIT
@@ -814,7 +814,7 @@ BattleScript_EffectSuperFang::
 	damagetohalftargethp
 	goto BattleScript_HitFromAtkAnimation
 
-BattleScript_EffectDragonRage::
+BattleScript_EffectDarkPulse::
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring

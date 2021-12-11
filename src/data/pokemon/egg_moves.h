@@ -402,7 +402,7 @@ const u16 gEggMoves[] = {
               MOVE_OCTAZOOKA,
               MOVE_DISABLE,
               MOVE_SPLASH,
-              MOVE_DRAGON_RAGE,
+              MOVE_DARK_PULSE,
               MOVE_DRAGON_BREATH),
 
     egg_moves(CSTARSAPPHIRE,
@@ -1296,7 +1296,7 @@ const u16 gEggMoves[] = {
     egg_moves(KYOUKO,
               MOVE_HYDRO_PUMP,
               MOVE_THRASH,
-              MOVE_DRAGON_RAGE,
+              MOVE_DARK_PULSE,
               MOVE_TWISTER,
               MOVE_DRAGON_DANCE),
 

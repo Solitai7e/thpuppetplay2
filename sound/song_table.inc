@@ -172,7 +172,7 @@ gSongTable::
 	song se_m_mist, 1, 1
 	song se_m_poison_powder, 1, 1
 	song se_m_bind, 2, 2
-	song se_m_dragon_rage, 1, 1
+	song se_m_dark_pulse, 1, 1
 	song se_m_sing, 1, 1
 	song se_m_perish_song, 1, 1
 	song se_m_pay_day, 1, 1

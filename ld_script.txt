@@ -867,7 +867,7 @@ SECTIONS {
         sound/songs/se_m_mist.o(.rodata);
         sound/songs/se_m_poison_powder.o(.rodata);
         sound/songs/midi/se_m_bind.o(.rodata);
-        sound/songs/se_m_dragon_rage.o(.rodata);
+        sound/songs/se_m_dark_pulse.o(.rodata);
         sound/songs/se_m_sing.o(.rodata);
         sound/songs/se_m_perish_song.o(.rodata);
         sound/songs/midi/se_m_pay_day.o(.rodata);

@@ -3669,7 +3669,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_CREISEN,
                                             .heldItem = ITEM_CHARCOAL,
-                                            .moves = {MOVE_FIRE_SPIN, MOVE_DRAGON_RAGE, MOVE_FLAMETHROWER, MOVE_SLASH},
+                                            .moves = {MOVE_FIRE_SPIN, MOVE_DARK_PULSE, MOVE_FLAMETHROWER, MOVE_SLASH},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 252,

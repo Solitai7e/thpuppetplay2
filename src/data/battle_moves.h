@@ -1148,7 +1148,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGIC_COAT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_DRAGON_RAGE] =
+    [MOVE_DARK_PULSE] =
     {
         .effect = EFFECT_FLINCH_HIT,
         .split = 0,
@@ -2788,7 +2788,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_LOCK_ON] =
     {
-        .effect = EFFECT_DRAGON_RAGE,
+        .effect = EFFECT_DARK_PULSE,
         .split = 0,
         .power = 0,
         .type = TYPE_REASON,
