@@ -144,8 +144,8 @@
 #define SE_M_ICY_WIND               137 // SE_W196
 #define SE_M_THUNDER_WAVE           138 // SE_W086
 #define SE_M_COMET_PUNCH            139 // SE_W004
-#define SE_M_MEGA_KICK              140 // SE_W025
-#define SE_M_MEGA_KICK2             141 // SE_W025B
+#define SE_M_GIGA_IMPACT              140 // SE_W025
+#define SE_M_GIGA_IMPACT2             141 // SE_W025B
 #define SE_M_CRABHAMMER             142 // SE_W152
 #define SE_M_JUMP_KICK              143 // SE_W026
 #define SE_M_FLAME_WHEEL            144 // SE_W172

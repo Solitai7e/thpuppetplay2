@@ -31,7 +31,7 @@ BattleFrontier_Lounge7_EventScript_ChooseLeftTutorMove::
 	case 1, BattleFrontier_Lounge7_EventScript_SeismicToss
 	case 2, BattleFrontier_Lounge7_EventScript_DreamEater
 	case 3, BattleFrontier_Lounge7_EventScript_DrainPunch
-	case 4, BattleFrontier_Lounge7_EventScript_MegaKick
+	case 4, BattleFrontier_Lounge7_EventScript_GigaImpact
 	case 5, BattleFrontier_Lounge7_EventScript_BodySlam
 	case 6, BattleFrontier_Lounge7_EventScript_RockSlide
 	case 7, BattleFrontier_Lounge7_EventScript_Counter
@@ -55,7 +55,7 @@ BattleFrontier_Lounge7_EventScript_ChooseNewLeftTutorMove::
 	case 1, BattleFrontier_Lounge7_EventScript_SeismicToss
 	case 2, BattleFrontier_Lounge7_EventScript_DreamEater
 	case 3, BattleFrontier_Lounge7_EventScript_DrainPunch
-	case 4, BattleFrontier_Lounge7_EventScript_MegaKick
+	case 4, BattleFrontier_Lounge7_EventScript_GigaImpact
 	case 5, BattleFrontier_Lounge7_EventScript_BodySlam
 	case 6, BattleFrontier_Lounge7_EventScript_RockSlide
 	case 7, BattleFrontier_Lounge7_EventScript_Counter
@@ -85,7 +85,7 @@ BattleFrontier_Lounge7_EventScript_DrainPunch::
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
-BattleFrontier_Lounge7_EventScript_MegaKick::
+BattleFrontier_Lounge7_EventScript_GigaImpact::
 	setvar VAR_0x8008, 48
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
@@ -398,7 +398,7 @@ BattleFrontier_Lounge7_Text_DrainPunchDesc::
 	.string "thrown with\n"
 	.string "incredible power.$"
 
-BattleFrontier_Lounge7_Text_MegaKickDesc::
+BattleFrontier_Lounge7_Text_GigaImpactDesc::
 	.string "An extremely\n"
 	.string "powerful kick with\n"
 	.string "intense force.$"

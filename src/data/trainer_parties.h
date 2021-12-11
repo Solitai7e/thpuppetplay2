@@ -10556,7 +10556,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly5[] = {
     .lvl = 46,
     .species = SPECIES_CKANAKO,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_MEGA_KICK, MOVE_FOCUS_PUNCH, MOVE_EARTHQUAKE, MOVE_BULK_UP}
+    .moves = {MOVE_GIGA_IMPACT, MOVE_FOCUS_PUNCH, MOVE_EARTHQUAKE, MOVE_BULK_UP}
     },
     {
     .iv = 255,

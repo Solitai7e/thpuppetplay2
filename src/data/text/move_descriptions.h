@@ -97,7 +97,7 @@ static const u8 sDoubleKickDescription[] = _(
     "A double-kicking attack\n"
     "that strikes the foe twice.");
 
-static const u8 sMegaKickDescription[] = _(
+static const u8 sGigaImpactDescription[] = _(
     "An extremely powerful kick\n"
     "with intense force.");
 
@@ -1444,7 +1444,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_VINE_WHIP - 1] = sVineWhipDescription,
     [MOVE_STOMP - 1] = sStompDescription,
     [MOVE_DOUBLE_KICK - 1] = sDoubleKickDescription,
-    [MOVE_MEGA_KICK - 1] = sMegaKickDescription,
+    [MOVE_GIGA_IMPACT - 1] = sGigaImpactDescription,
     [MOVE_JUMP_KICK - 1] = sJumpKickDescription,
     [MOVE_ROLLING_KICK - 1] = sRollingKickDescription,
     [MOVE_SAND_ATTACK - 1] = sSandAttackDescription,

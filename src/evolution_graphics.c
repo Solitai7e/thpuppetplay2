@@ -278,7 +278,7 @@ static void Task_Sparkles_SpiralUpward_Init(u8 taskId)
     gTasks[taskId].tTimer = 0;
     BeginNormalPaletteFade(3 << gTasks[taskId].tPalNum, 0xA, 0, 0x10, RGB_WHITE);
     gTasks[taskId].func = Task_Sparkles_SpiralUpward;
-    PlaySE(SE_M_MEGA_KICK); // 'Charging up' sound for the sparkles as they spiral upwards
+    PlaySE(SE_M_GIGA_IMPACT); // 'Charging up' sound for the sparkles as they spiral upwards
 }
 
 static void Task_Sparkles_SpiralUpward(u8 taskId)

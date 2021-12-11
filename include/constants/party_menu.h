@@ -14,7 +14,7 @@
 
 #define TUTOR_MOVE_DRAIN_PUNCH      0
 #define TUTOR_MOVE_SWORDS_DANCE    1
-#define TUTOR_MOVE_MEGA_KICK       2
+#define TUTOR_MOVE_GIGA_IMPACT       2
 #define TUTOR_MOVE_BODY_SLAM       3
 #define TUTOR_MOVE_DOUBLE_EDGE     4
 #define TUTOR_MOVE_COUNTER         5

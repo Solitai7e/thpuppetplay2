@@ -836,8 +836,8 @@ SECTIONS {
         sound/songs/se_m_icy_wind.o(.rodata);
         sound/songs/se_m_thunder_wave.o(.rodata);
         sound/songs/midi/se_m_comet_punch.o(.rodata);
-        sound/songs/midi/se_m_mega_kick.o(.rodata);
-        sound/songs/midi/se_m_mega_kick2.o(.rodata);
+        sound/songs/midi/se_m_giga_impact.o(.rodata);
+        sound/songs/midi/se_m_giga_impact2.o(.rodata);
         sound/songs/se_m_crabhammer.o(.rodata);
         sound/songs/midi/se_m_jump_kick.o(.rodata);
         sound/songs/se_m_flame_wheel.o(.rodata);

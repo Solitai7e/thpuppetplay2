@@ -350,7 +350,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 
-    [MOVE_MEGA_KICK] =
+    [MOVE_GIGA_IMPACT] =
     {
         .effect = EFFECT_RECOIL_IF_MISS,
         .split = 0,

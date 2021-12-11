@@ -2051,7 +2051,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_REVERSAL,
             MOVE_REVENGE,
             MOVE_FOCUS_ENERGY,
-            MOVE_MEGA_KICK
+            MOVE_GIGA_IMPACT
         },
         .cool = 85,
         .beauty = 30,

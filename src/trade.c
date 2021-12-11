@@ -4412,7 +4412,7 @@ static void SpriteCB_BouncingPokeballDepart(struct Sprite *sprite)
         PlaySE(SE_BALL_BOUNCE_1);
     if (++ sprite->data[0] == 44)
     {
-        PlaySE(SE_M_MEGA_KICK);
+        PlaySE(SE_M_GIGA_IMPACT);
         sprite->callback = SpriteCB_BouncingPokeballDepartEnd;
         sprite->data[0] = 0;
         BeginNormalPaletteFade(1 << (16 + sprite->oam.paletteNum), -1, 0, 16, RGB_WHITEALPHA);

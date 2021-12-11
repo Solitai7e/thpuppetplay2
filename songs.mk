@@ -1236,10 +1236,10 @@ $(MID_SUBDIR)/se_m_fly.s: %.s: %.mid
 $(MID_SUBDIR)/se_m_bind.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V100 -P4
 
-$(MID_SUBDIR)/se_m_mega_kick.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_giga_impact.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V090 -P4
 
-$(MID_SUBDIR)/se_m_mega_kick2.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_giga_impact2.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
 $(MID_SUBDIR)/se_m_jump_kick.s: %.s: %.mid
