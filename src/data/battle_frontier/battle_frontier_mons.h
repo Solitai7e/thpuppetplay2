@@ -2711,7 +2711,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_LAYLA_1] = {
         .species = SPECIES_LAYLA,
-        .moves = {MOVE_BONEMERANG, MOVE_ROCK_SLIDE, MOVE_ICY_WIND, MOVE_HEADBUTT},
+        .moves = {MOVE_CHECKMAID, MOVE_ROCK_SLIDE, MOVE_ICY_WIND, MOVE_HEADBUTT},
         .itemTableId = BATTLE_FRONTIER_ITEM_THICK_CLUB,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_ADAMANT

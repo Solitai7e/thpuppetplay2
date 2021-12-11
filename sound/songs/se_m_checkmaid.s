@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_bonemerang_grp, voicegroup128
-	.equ	se_m_bonemerang_pri, 4
-	.equ	se_m_bonemerang_rev, reverb_set+50
-	.equ	se_m_bonemerang_mvl, 127
-	.equ	se_m_bonemerang_key, 0
-	.equ	se_m_bonemerang_tbs, 1
-	.equ	se_m_bonemerang_exg, 0
-	.equ	se_m_bonemerang_cmp, 1
+	.equ	se_m_checkmaid_grp, voicegroup128
+	.equ	se_m_checkmaid_pri, 4
+	.equ	se_m_checkmaid_rev, reverb_set+50
+	.equ	se_m_checkmaid_mvl, 127
+	.equ	se_m_checkmaid_key, 0
+	.equ	se_m_checkmaid_tbs, 1
+	.equ	se_m_checkmaid_exg, 0
+	.equ	se_m_checkmaid_cmp, 1
 
 	.section .rodata
-	.global	se_m_bonemerang
+	.global	se_m_checkmaid
 	.align	2
 
 @********************** Track  1 **********************@
 
-se_m_bonemerang_1:
-	.byte	KEYSH , se_m_bonemerang_key+0
-	.byte	TEMPO , 150*se_m_bonemerang_tbs/2
+se_m_checkmaid_1:
+	.byte	KEYSH , se_m_checkmaid_key+0
+	.byte	TEMPO , 150*se_m_checkmaid_tbs/2
 	.byte		VOICE , 24
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		VOL   , 110*se_m_bonemerang_mvl/mxv
+	.byte		VOL   , 110*se_m_checkmaid_mvl/mxv
 	.byte		BEND  , c_v+0
 	.byte		N01   , Cn5 , v127
 	.byte	W01
@@ -44,14 +44,14 @@ se_m_bonemerang_1:
 @******************************************************@
 	.align	2
 
-se_m_bonemerang:
+se_m_checkmaid:
 	.byte	1	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	se_m_bonemerang_pri	@ Priority
-	.byte	se_m_bonemerang_rev	@ Reverb.
+	.byte	se_m_checkmaid_pri	@ Priority
+	.byte	se_m_checkmaid_rev	@ Reverb.
 
-	.word	se_m_bonemerang_grp
+	.word	se_m_checkmaid_grp
 
-	.word	se_m_bonemerang_1
+	.word	se_m_checkmaid_1
 
 	.end

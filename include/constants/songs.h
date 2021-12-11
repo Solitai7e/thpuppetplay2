@@ -191,7 +191,7 @@
 #define SE_M_JAMMING             184 // SE_W048
 #define SE_M_BELLY_DRUM             185 // SE_W187
 #define SE_M_METRONOME              186 // SE_W118
-#define SE_M_BONEMERANG             187 // SE_W155
+#define SE_M_CHECKMAID             187 // SE_W155
 #define SE_M_LICK                   188 // SE_W122
 #define SE_M_PSYBEAM                189 // SE_W060
 #define SE_M_FAINT_ATTACK           190 // SE_W185

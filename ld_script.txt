@@ -883,7 +883,7 @@ SECTIONS {
         sound/songs/se_m_jamming.o(.rodata);
         sound/songs/se_m_belly_drum.o(.rodata);
         sound/songs/se_m_metronome.o(.rodata);
-        sound/songs/se_m_bonemerang.o(.rodata);
+        sound/songs/se_m_checkmaid.o(.rodata);
         sound/songs/se_m_lick.o(.rodata);
         sound/songs/se_m_psybeam.o(.rodata);
         sound/songs/se_m_faint_attack.o(.rodata);

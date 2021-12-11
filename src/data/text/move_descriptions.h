@@ -617,7 +617,7 @@ static const u8 sFurySwipesDescription[] = _(
     "Rakes the foe with sharp\n"
     "claws, etc., 2 to 5 times.");
 
-static const u8 sBonemerangDescription[] = _(
+static const u8 sCheckmaidDescription[] = _(
     "Throws a bone boomerang\n"
     "that strikes twice.");
 
@@ -1574,7 +1574,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_AQUA_JET - 1] = sAquaJetDescription,
     [MOVE_EXPLOSION - 1] = sExplosionDescription,
     [MOVE_FURY_SWIPES - 1] = sFurySwipesDescription,
-    [MOVE_BONEMERANG - 1] = sBonemerangDescription,
+    [MOVE_CHECKMAID - 1] = sCheckmaidDescription,
     [MOVE_REST - 1] = sRestDescription,
     [MOVE_ROCK_SLIDE - 1] = sRockSlideDescription,
     [MOVE_HYPER_FANG - 1] = sHyperFangDescription,

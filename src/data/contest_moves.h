@@ -998,7 +998,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .comboStarterId = COMBO_STARTER_BONE_CLUB,
-        .comboMoves = {COMBO_STARTER_BONEMERANG, COMBO_STARTER_BONE_RUSH},
+        .comboMoves = {COMBO_STARTER_CHECKMAID, COMBO_STARTER_BONE_RUSH},
     },
 
     [MOVE_FIRE_BLAST] =
@@ -1233,11 +1233,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_SCRATCH},
     },
 
-    [MOVE_BONEMERANG] =
+    [MOVE_CHECKMAID] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
-        .comboStarterId = COMBO_STARTER_BONEMERANG,
+        .comboStarterId = COMBO_STARTER_CHECKMAID,
         .comboMoves = {COMBO_STARTER_BONE_CLUB, COMBO_STARTER_BONE_RUSH},
     },
 
@@ -1582,7 +1582,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .comboStarterId = COMBO_STARTER_BONE_RUSH,
-        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_BONE_CLUB, COMBO_STARTER_BONEMERANG},
+        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_BONE_CLUB, COMBO_STARTER_CHECKMAID},
     },
 
     [MOVE_LOCK_ON] =

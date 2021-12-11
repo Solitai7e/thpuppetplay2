@@ -188,7 +188,7 @@ gSongTable::
 	song se_m_jamming, 1, 1
 	song se_m_belly_drum, 1, 1
 	song se_m_metronome, 1, 1
-	song se_m_bonemerang, 1, 1
+	song se_m_checkmaid, 1, 1
 	song se_m_lick, 1, 1
 	song se_m_psybeam, 1, 1
 	song se_m_faint_attack, 1, 1

@@ -171,7 +171,7 @@ gBattleAnims_Moves::
 	.4byte Move_AQUA_JET
 	.4byte Move_EXPLOSION
 	.4byte Move_FURY_SWIPES
-	.4byte Move_BONEMERANG
+	.4byte Move_CHECKMAID
 	.4byte Move_REST
 	.4byte Move_ROCK_SLIDE
 	.4byte Move_HYPER_FANG
@@ -6028,14 +6028,14 @@ Move_ACID:
 	clearmonbg ANIM_DEF_PARTNER
 	end
 
-Move_BONEMERANG:
+Move_CHECKMAID:
 	loadspritegfx ANIM_TAG_BONE
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	splitbgprio ANIM_TARGET
 	setalpha 12, 8
-	playsewithpan SE_M_BONEMERANG, SOUND_PAN_ATTACKER
-	createsprite gBonemerangSpriteTemplate, ANIM_ATTACKER, 2
+	playsewithpan SE_M_CHECKMAID, SOUND_PAN_ATTACKER
+	createsprite gCheckmaidSpriteTemplate, ANIM_ATTACKER, 2
 	delay 20
 	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 1
@@ -6054,7 +6054,7 @@ Move_BONE_CLUB:
 	monbg ANIM_DEF_PARTNER
 	splitbgprio ANIM_TARGET
 	setalpha 12, 8
-	playsewithpan SE_M_BONEMERANG, SOUND_PAN_TARGET
+	playsewithpan SE_M_CHECKMAID, SOUND_PAN_TARGET
 	createsprite gSpinningBoneSpriteTemplate, ANIM_ATTACKER, 2, -42, -25, 0, 0, 15
 	delay 12
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 1
@@ -6071,7 +6071,7 @@ Move_BONE_RUSH:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
-	playsewithpan SE_M_BONEMERANG, SOUND_PAN_TARGET
+	playsewithpan SE_M_CHECKMAID, SOUND_PAN_TARGET
 	createsprite gSpinningBoneSpriteTemplate, ANIM_ATTACKER, 2, -42, -25, 0, 0, 15
 	delay 12
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 2
