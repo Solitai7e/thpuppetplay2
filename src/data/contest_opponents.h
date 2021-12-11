@@ -1210,7 +1210,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_KNIFE_THROW,
             MOVE_MAGIC_KNIFE,
-            MOVE_HORN_DRILL,
+            MOVE_SCULPTURE,
             MOVE_TAIL_WHIP
         },
         .cool = 70,

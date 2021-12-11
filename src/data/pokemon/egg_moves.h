@@ -269,7 +269,7 @@ const u16 gEggMoves[] = {
               MOVE_LICK,
               MOVE_PERISH_SONG,
               MOVE_DISABLE,
-              MOVE_HORN_DRILL,
+              MOVE_SCULPTURE,
               MOVE_SLAM,
               MOVE_ENCORE,
               MOVE_FAKE_OUT,
@@ -444,7 +444,7 @@ const u16 gEggMoves[] = {
               MOVE_DRAGON_DANCE,
               MOVE_CURSE,
               MOVE_SLEEP_TALK,
-              MOVE_HORN_DRILL),
+              MOVE_SCULPTURE),
 
     egg_moves(CNUE,
               MOVE_CHARM,

@@ -125,7 +125,7 @@ static const u8 sMagicKnifeDescription[] = _(
     "Jabs the foe 2 to 5 times\n"
     "with sharp horns, etc.");
 
-static const u8 sHornDrillDescription[] = _(
+static const u8 sSculptureDescription[] = _(
     "A one-hit KO attack that\n"
     "uses a horn like a drill.");
 
@@ -1451,7 +1451,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_HEADBUTT - 1] = sHeadbuttDescription,
     [MOVE_KNIFE_THROW - 1] = sKnifeThrowDescription,
     [MOVE_MAGIC_KNIFE - 1] = sMagicKnifeDescription,
-    [MOVE_HORN_DRILL - 1] = sHornDrillDescription,
+    [MOVE_SCULPTURE - 1] = sSculptureDescription,
     [MOVE_TACKLE - 1] = sTackleDescription,
     [MOVE_BODY_SLAM - 1] = sBodySlamDescription,
     [MOVE_WRAP - 1] = sWrapDescription,

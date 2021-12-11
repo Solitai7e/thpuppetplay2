@@ -48,7 +48,7 @@ gBattleAnims_Moves::
 	.4byte Move_HEADBUTT
 	.4byte Move_KNIFE_THROW
 	.4byte Move_MAGIC_KNIFE
-	.4byte Move_HORN_DRILL
+	.4byte Move_SCULPTURE
 	.4byte Move_TACKLE
 	.4byte Move_BODY_SLAM
 	.4byte Move_WRAP
@@ -2461,14 +2461,14 @@ MagicKnifeLeft:
 	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	goto MagicKnifeContinue
 
-Move_HORN_DRILL:
+Move_SCULPTURE:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HORN_HIT
-	jumpifcontest HornDrillInContest
+	jumpifcontest SculptureInContest
 	fadetobg BG_DRILL
 	waitbgfadeout
 	createvisualtask AnimTask_StartSlidingBg, 5, -2304, 768, 1, -1
-HornDrillContinue:
+SculptureContinue:
 	waitbgfadein
 	setalpha 12, 8
 	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 0
@@ -2522,11 +2522,11 @@ HornDrillContinue:
 	waitbgfadein
 	end
 
-HornDrillInContest:
+SculptureInContest:
 	fadetobg BG_DRILL_CONTESTS
 	waitbgfadeout
 	createvisualtask AnimTask_StartSlidingBg, 5, 2304, 768, 0, -1
-	goto HornDrillContinue
+	goto SculptureContinue
 
 Move_THRASH:
 	loadspritegfx ANIM_TAG_IMPACT

@@ -49,7 +49,7 @@ gBattleAI_ScriptsTable::
 AI_CheckBadMove:
 	if_target_is_ally AI_Ret
 	if_move MOVE_FISSURE, AI_CBM_CheckIfNegatesType
-	if_move MOVE_HORN_DRILL, AI_CBM_CheckIfNegatesType
+	if_move MOVE_SCULPTURE, AI_CBM_CheckIfNegatesType
 	get_how_powerful_move_is
 	if_equal MOVE_POWER_OTHER, AI_CheckBadMove_CheckSoundproof
 AI_CBM_CheckIfNegatesType:
@@ -861,7 +861,7 @@ AI_CV_MirrorMove_EncouragedMovesToMirror:
     .2byte MOVE_SMOKESCREEN
     .2byte MOVE_TOXIC
     .2byte MOVE_JUDGEMENT
-    .2byte MOVE_HORN_DRILL
+    .2byte MOVE_SCULPTURE
     .2byte MOVE_FISSURE
     .2byte MOVE_SHEER_COLD
     .2byte MOVE_CROSS_CHOP
