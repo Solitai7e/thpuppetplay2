@@ -17,7 +17,7 @@ static const u8 sCometPunchDescription[] = _(
     "Repeatedly punches the foe\n"
     "2 to 5 times.");
 
-static const u8 sMegaPunchDescription[] = _(
+static const u8 sDrainPunchDescription[] = _(
     "A strong punch thrown with\n"
     "incredible power.");
 
@@ -1424,7 +1424,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_KARATE_CHOP - 1] = sKarateChopDescription,
     [MOVE_DOUBLE_SLAP - 1] = sDoubleSlapDescription,
     [MOVE_COMET_PUNCH - 1] = sCometPunchDescription,
-    [MOVE_MEGA_PUNCH - 1] = sMegaPunchDescription,
+    [MOVE_DRAIN_PUNCH - 1] = sDrainPunchDescription,
     [MOVE_PAY_DAY - 1] = sPayDayDescription,
     [MOVE_FIRE_PUNCH - 1] = sFirePunchDescription,
     [MOVE_ICE_PUNCH - 1] = sIcePunchDescription,

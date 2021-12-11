@@ -1435,7 +1435,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_SKY_UPPERCUT,
             MOVE_DETECT,
             MOVE_REVENGE,
-            MOVE_MEGA_PUNCH
+            MOVE_DRAIN_PUNCH
         },
         .cool = 45,
         .beauty = 20,
@@ -2104,7 +2104,7 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = TRUE,
         .moves =
         {
-            MOVE_MEGA_PUNCH,
+            MOVE_DRAIN_PUNCH,
             MOVE_RAGE,
             MOVE_FOCUS_PUNCH,
             MOVE_TAIL_WHIP

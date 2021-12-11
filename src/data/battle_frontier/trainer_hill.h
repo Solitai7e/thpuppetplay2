@@ -4054,7 +4054,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_KANAKO,
                                             .heldItem = ITEM_FOCUS_BAND,
-                                            .moves = {MOVE_MEGA_PUNCH, MOVE_DETECT, MOVE_COUNTER, MOVE_SKY_UPPERCUT},
+                                            .moves = {MOVE_DRAIN_PUNCH, MOVE_DETECT, MOVE_COUNTER, MOVE_SKY_UPPERCUT},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .attackEV = 255,

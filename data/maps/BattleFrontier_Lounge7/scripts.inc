@@ -30,7 +30,7 @@ BattleFrontier_Lounge7_EventScript_ChooseLeftTutorMove::
 	case 0, BattleFrontier_Lounge7_EventScript_Softboiled
 	case 1, BattleFrontier_Lounge7_EventScript_SeismicToss
 	case 2, BattleFrontier_Lounge7_EventScript_DreamEater
-	case 3, BattleFrontier_Lounge7_EventScript_MegaPunch
+	case 3, BattleFrontier_Lounge7_EventScript_DrainPunch
 	case 4, BattleFrontier_Lounge7_EventScript_MegaKick
 	case 5, BattleFrontier_Lounge7_EventScript_BodySlam
 	case 6, BattleFrontier_Lounge7_EventScript_RockSlide
@@ -54,7 +54,7 @@ BattleFrontier_Lounge7_EventScript_ChooseNewLeftTutorMove::
 	case 0, BattleFrontier_Lounge7_EventScript_Softboiled
 	case 1, BattleFrontier_Lounge7_EventScript_SeismicToss
 	case 2, BattleFrontier_Lounge7_EventScript_DreamEater
-	case 3, BattleFrontier_Lounge7_EventScript_MegaPunch
+	case 3, BattleFrontier_Lounge7_EventScript_DrainPunch
 	case 4, BattleFrontier_Lounge7_EventScript_MegaKick
 	case 5, BattleFrontier_Lounge7_EventScript_BodySlam
 	case 6, BattleFrontier_Lounge7_EventScript_RockSlide
@@ -80,7 +80,7 @@ BattleFrontier_Lounge7_EventScript_DreamEater::
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
-BattleFrontier_Lounge7_EventScript_MegaPunch::
+BattleFrontier_Lounge7_EventScript_DrainPunch::
 	setvar VAR_0x8008, 24
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
@@ -393,7 +393,7 @@ BattleFrontier_Lounge7_Text_DreamEaterDesc::
 	.string "damage inflicted\n"
 	.string "on a sleeping foe.$"
 
-BattleFrontier_Lounge7_Text_MegaPunchDesc::
+BattleFrontier_Lounge7_Text_DrainPunchDesc::
 	.string "A strong punch\n"
 	.string "thrown with\n"
 	.string "incredible power.$"

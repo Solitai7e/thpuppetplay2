@@ -34,7 +34,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_MEGA_PUNCH] =
+    [MOVE_DRAIN_PUNCH] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_TOUGH,

@@ -180,26 +180,26 @@ const struct SpriteTemplate gSpinningHandOrFootSpriteTemplate =
     .callback = AnimSpinningKickOrPunch,
 };
 
-static const union AffineAnimCmd sAffineAnim_MegaPunchKick[] =
+static const union AffineAnimCmd sAffineAnim_DrainPunchKick[] =
 {
     AFFINEANIMCMD_FRAME(0x100, 0x100, 0, 0),
     AFFINEANIMCMD_FRAME(0xFFFC, 0xFFFC, 20, 1),
     AFFINEANIMCMD_JUMP(1),
 };
 
-static const union AffineAnimCmd *const sAffineAnims_MegaPunchKick[] =
+static const union AffineAnimCmd *const sAffineAnims_DrainPunchKick[] =
 {
-    sAffineAnim_MegaPunchKick,
+    sAffineAnim_DrainPunchKick,
 };
 
-const struct SpriteTemplate gMegaPunchKickSpriteTemplate =
+const struct SpriteTemplate gDrainPunchKickSpriteTemplate =
 {
     .tileTag = ANIM_TAG_HANDS_AND_FEET,
     .paletteTag = ANIM_TAG_HANDS_AND_FEET,
     .oam = &gOamData_AffineDouble_ObjNormal_32x32,
     .anims = sAnims_HandsAndFeet,
     .images = NULL,
-    .affineAnims = sAffineAnims_MegaPunchKick,
+    .affineAnims = sAffineAnims_DrainPunchKick,
     .callback = AnimSpinningKickOrPunch,
 };
 
@@ -604,7 +604,7 @@ static void AnimSlidingKick_Step(struct Sprite *sprite)
 }
 
 // Animates the spinning, shrinking kick or punch, which then
-// reappears at full size. Used by moves such as MOVE_MEGA_PUNCH and MOVE_MEGA_KICK.
+// reappears at full size. Used by moves such as MOVE_DRAIN_PUNCH and MOVE_MEGA_KICK.
 // arg 0: initial x pixel offset
 // arg 1: initial y pixel offset
 // arg 2: anim num

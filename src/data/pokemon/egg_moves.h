@@ -226,7 +226,7 @@ const u16 gEggMoves[] = {
               MOVE_CONFUSE_RAY),
 
     egg_moves(CKISUME,
-              MOVE_MEGA_PUNCH,
+              MOVE_DRAIN_PUNCH,
               MOVE_ROCK_SLIDE,
               MOVE_BLOCK),
 
@@ -876,7 +876,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(DKAGUYA,
               MOVE_KARATE_CHOP,
-              MOVE_MEGA_PUNCH,
+              MOVE_DRAIN_PUNCH,
               MOVE_BARRIER,
               MOVE_SCREECH,
               MOVE_CROSS_CHOP,

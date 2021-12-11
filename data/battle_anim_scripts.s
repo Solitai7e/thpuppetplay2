@@ -21,7 +21,7 @@ gBattleAnims_Moves::
 	.4byte Move_KARATE_CHOP
 	.4byte Move_DOUBLE_SLAP
 	.4byte Move_COMET_PUNCH
-	.4byte Move_MEGA_PUNCH
+	.4byte Move_DRAIN_PUNCH
 	.4byte Move_PAY_DAY
 	.4byte Move_FIRE_PUNCH
 	.4byte Move_ICE_PUNCH
@@ -935,7 +935,7 @@ EmberFireHit:
 	delay 4
 	return
 
-Move_MEGA_PUNCH:
+Move_DRAIN_PUNCH:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	monbg ANIM_TARGET
@@ -943,7 +943,7 @@ Move_MEGA_PUNCH:
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 0, 0, 16, RGB_BLACK
 	setalpha 12, 8
 	playsewithpan SE_M_MEGA_KICK, SOUND_PAN_TARGET
-	createsprite gMegaPunchKickSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 50
+	createsprite gDrainPunchKickSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 50
 	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 2, 0, 7, RGB_WHITE
 	delay 50
 	call SetImpactBackground
@@ -986,7 +986,7 @@ Move_MEGA_KICK:
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 0, 0, 16, RGB_BLACK
 	setalpha 12, 8
 	playsewithpan SE_M_MEGA_KICK, SOUND_PAN_TARGET
-	createsprite gMegaPunchKickSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 1, 50
+	createsprite gDrainPunchKickSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 1, 50
 	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 2, 0, 7, RGB_WHITE
 	delay 50
 	playsewithpan SE_M_MEGA_KICK2, SOUND_PAN_TARGET
