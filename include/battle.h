@@ -79,8 +79,8 @@ struct DisableStruct
     u8 perishSongTimer:4;
     u8 perishSongTimerStartValue:4;
     u8 furyCutterCounter;
-    u8 rolloutTimer:4;
-    u8 rolloutTimerStartValue:4;
+    u8 tremorsTimer:4;
+    u8 tremorsTimerStartValue:4;
     u8 chargeTimer:4;
     u8 chargeTimerStartValue:4;
     u8 tauntTimer:4;

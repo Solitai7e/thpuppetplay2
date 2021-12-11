@@ -1027,7 +1027,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(CELIS,
               MOVE_MAGNITUDE,
-              MOVE_ROLLOUT,
+              MOVE_TREMORS,
               MOVE_EXPLOSION),
 
     egg_moves(CSARIEL,
@@ -1097,7 +1097,7 @@ const u16 gEggMoves[] = {
               MOVE_HOWL,
               MOVE_SCARY_FACE,
               MOVE_BODY_SLAM,
-              MOVE_ROLLOUT,
+              MOVE_TREMORS,
               MOVE_DEFENSE_CURL,
               MOVE_STOMP),
 

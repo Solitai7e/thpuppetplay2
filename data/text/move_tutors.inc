@@ -24,7 +24,7 @@ MoveTutor_Text_SwaggerTaught:
 	.string "I'll just praise my POKéMON from now\n"
 	.string "on without the swagger.$"
 
-MoveTutor_Text_RolloutTeach:
+MoveTutor_Text_TremorsTeach:
 	.string "Did you know that you can go from\n"
 	.string "here a long way in that direction\l"
 	.string "without changing direction?\p"
@@ -32,18 +32,18 @@ MoveTutor_Text_RolloutTeach:
 	.string "that way.\p"
 	.string "Do you think your POKéMON will\n"
 	.string "want to roll, too?\p"
-	.string "I can teach one the move ROLLOUT\n"
+	.string "I can teach one the move TREMORS\n"
 	.string "if you'd like.$"
 
-MoveTutor_Text_RolloutDeclined:
+MoveTutor_Text_TremorsDeclined:
 	.string "You don't need to be shy about it.\n"
 	.string "Let's roll!$"
 
-MoveTutor_Text_RolloutWhichMon:
+MoveTutor_Text_TremorsWhichMon:
 	.string "Ehehe, sure thing! It'd be great if\n"
 	.string "the POKéMON looked like me.$"
 
-MoveTutor_Text_RolloutTaught:
+MoveTutor_Text_TremorsTaught:
 	.string "Rolling around in the grass makes me\n"
 	.string "happy. Come on, let's roll!$"
 

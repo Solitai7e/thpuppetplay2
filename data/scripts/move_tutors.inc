@@ -24,29 +24,29 @@ MoveTutor_EventScript_SwaggerTaught::
 	release
 	end
 
-MauvilleCity_EventScript_RolloutTutor::
+MauvilleCity_EventScript_TremorsTutor::
 	lock
 	faceplayer
-	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_ROLLOUT, MoveTutor_EventScript_RolloutTaught
-	msgbox MoveTutor_Text_RolloutTeach, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_RolloutDeclined
+	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_TREMORS, MoveTutor_EventScript_TremorsTaught
+	msgbox MoveTutor_Text_TremorsTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_TremorsDeclined
 	call MoveTutor_EventScript_CanOnlyBeLearnedOnce
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_RolloutDeclined
-	msgbox MoveTutor_Text_RolloutWhichMon, MSGBOX_DEFAULT
-	setvar VAR_0x8005, TUTOR_MOVE_ROLLOUT
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_TremorsDeclined
+	msgbox MoveTutor_Text_TremorsWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_TREMORS
 	call MoveTutor_EventScript_OpenPartyMenu
-	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_RolloutDeclined
-	setflag FLAG_MOVE_TUTOR_TAUGHT_ROLLOUT
-	goto MoveTutor_EventScript_RolloutTaught
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_TremorsDeclined
+	setflag FLAG_MOVE_TUTOR_TAUGHT_TREMORS
+	goto MoveTutor_EventScript_TremorsTaught
 	end
 
-MoveTutor_EventScript_RolloutDeclined::
-	msgbox MoveTutor_Text_RolloutDeclined, MSGBOX_DEFAULT
+MoveTutor_EventScript_TremorsDeclined::
+	msgbox MoveTutor_Text_TremorsDeclined, MSGBOX_DEFAULT
 	release
 	end
 
-MoveTutor_EventScript_RolloutTaught::
-	msgbox MoveTutor_Text_RolloutTaught, MSGBOX_DEFAULT
+MoveTutor_EventScript_TremorsTaught::
+	msgbox MoveTutor_Text_TremorsTaught, MSGBOX_DEFAULT
 	release
 	end
 

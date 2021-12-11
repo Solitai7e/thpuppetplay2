@@ -221,7 +221,7 @@ gBattleAnims_Moves::
 	.4byte Move_GIGA_DRAIN
 	.4byte Move_ENDURE
 	.4byte Move_CHARM
-	.4byte Move_ROLLOUT
+	.4byte Move_TREMORS
 	.4byte Move_FALSE_SWIPE
 	.4byte Move_SWAGGER
 	.4byte Move_MILK_DRINK
@@ -3231,14 +3231,14 @@ Move_CHARM:
 	waitforvisualfinish
 	end
 
-Move_ROLLOUT:
+Move_TREMORS:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_MUD_SAND
 	loadspritegfx ANIM_TAG_ROCKS
 	monbg ANIM_DEF_PARTNER
 	splitbgprio ANIM_TARGET
 	setalpha 12, 8
-	createvisualtask AnimTask_Rollout, 2
+	createvisualtask AnimTask_Tremors, 2
 	waitforvisualfinish
 	createvisualtask AnimTask_ShakeTargetBasedOnMovePowerOrDmg, 2, FALSE, 1, 30, 1, 0
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 4, 0, 0, ANIM_TARGET, 2

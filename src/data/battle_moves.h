@@ -2870,9 +2870,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGIC_COAT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_ROLLOUT] =
+    [MOVE_TREMORS] =
     {
-        .effect = EFFECT_ROLLOUT,
+        .effect = EFFECT_TREMORS,
         .split = 0,
         .power = 40,
         .type = TYPE_EARTH,
@@ -2942,7 +2942,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FURY_CUTTER] =
     {
-        .effect = EFFECT_ROLLOUT,
+        .effect = EFFECT_TREMORS,
         .split = 0,
         .power = 40,
         .type = TYPE_BLADE,

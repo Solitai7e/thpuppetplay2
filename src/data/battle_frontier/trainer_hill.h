@@ -1878,7 +1878,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_MYSTIA,
                                             .heldItem = ITEM_SILK_SCARF,
-                                            .moves = {MOVE_ROLLOUT, MOVE_DEFENSE_CURL, MOVE_SING, MOVE_DREAM_EATER},
+                                            .moves = {MOVE_TREMORS, MOVE_DEFENSE_CURL, MOVE_SING, MOVE_DREAM_EATER},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 255,

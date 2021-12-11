@@ -134,7 +134,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectPerishSong             @ EFFECT_PERISH_SONG
 	.4byte BattleScript_EffectSandstorm              @ EFFECT_SANDSTORM
 	.4byte BattleScript_EffectEndure                 @ EFFECT_ENDURE
-	.4byte BattleScript_EffectRollout                @ EFFECT_ROLLOUT
+	.4byte BattleScript_EffectTremors                @ EFFECT_TREMORS
 	.4byte BattleScript_EffectSwagger                @ EFFECT_SWAGGER
 	.4byte BattleScript_EffectFuryCutter             @ EFFECT_FURY_CUTTER
 	.4byte BattleScript_EffectAttract                @ EFFECT_ATTRACT
@@ -1591,16 +1591,16 @@ BattleScript_EffectSandstorm::
 	setsandstorm
 	goto BattleScript_MoveWeatherChange
 
-BattleScript_EffectRollout::
+BattleScript_EffectTremors::
 	attackcanceler
 	attackstring
-	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_RolloutCheckAccuracy
+	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_TremorsCheckAccuracy
 	ppreduce
-BattleScript_RolloutCheckAccuracy::
-	accuracycheck BattleScript_RolloutHit, ACC_CURR_MOVE
-BattleScript_RolloutHit::
+BattleScript_TremorsCheckAccuracy::
+	accuracycheck BattleScript_TremorsHit, ACC_CURR_MOVE
+BattleScript_TremorsHit::
 	typecalc2
-	rolloutdamagecalculation
+	tremorsdamagecalculation
 	goto BattleScript_HitFromCritCalc
 
 BattleScript_EffectSwagger::

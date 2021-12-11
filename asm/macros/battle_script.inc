@@ -934,7 +934,7 @@
 	.4byte \ptr
 	.endm
 
-	.macro rolloutdamagecalculation
+	.macro tremorsdamagecalculation
 	.byte 0xb3
 	.endm
 

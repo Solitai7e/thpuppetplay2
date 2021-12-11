@@ -817,7 +817,7 @@ static const u8 sCharmDescription[] = _(
     "Charms the foe and sharply\n"
     "reduces its ATTACK.");
 
-static const u8 sRolloutDescription[] = _(
+static const u8 sTremorsDescription[] = _(
     "An attack lasting 5 turns\n"
     "with rising intensity.");
 
@@ -1624,7 +1624,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_GIGA_DRAIN - 1] = sGigaDrainDescription,
     [MOVE_ENDURE - 1] = sEndureDescription,
     [MOVE_CHARM - 1] = sCharmDescription,
-    [MOVE_ROLLOUT - 1] = sRolloutDescription,
+    [MOVE_TREMORS - 1] = sTremorsDescription,
     [MOVE_FALSE_SWIPE - 1] = sFalseSwipeDescription,
     [MOVE_SWAGGER - 1] = sSwaggerDescription,
     [MOVE_MILK_DRINK - 1] = sMilkDrinkDescription,

@@ -864,7 +864,7 @@ void CancelMultiTurnMoves(u8 battler)
 
     gStatuses3[battler] &= ~STATUS3_SEMI_INVULNERABLE;
 
-    gDisableStructs[battler].rolloutTimer = 0;
+    gDisableStructs[battler].tremorsTimer = 0;
     gDisableStructs[battler].furyCutterCounter = 0;
 }
 

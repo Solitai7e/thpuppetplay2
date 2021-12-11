@@ -14,8 +14,8 @@ static void AnimFallingRock_Step(struct Sprite *);
 static void AnimRockFragment(struct Sprite *);
 static void AnimFlyingSandCrescent(struct Sprite *);
 static void AnimRaiseSprite(struct Sprite *);
-static void AnimTask_Rollout_Step(u8 taskId);
-static void AnimRolloutParticle(struct Sprite *);
+static void AnimTask_Tremors_Step(u8 taskId);
+static void AnimTremorsParticle(struct Sprite *);
 static void AnimRockTomb(struct Sprite *);
 static void AnimRockTomb_Step(struct Sprite *sprite);
 static void AnimRockBlastRock(struct Sprite *);
@@ -24,8 +24,8 @@ static void AnimRockScatter_Step(struct Sprite *sprite);
 static void AnimParticleInVortex(struct Sprite *);
 static void AnimParticleInVortex_Step(struct Sprite *sprite);
 static void AnimTask_LoadSandstormBackground_Step(u8 taskId);
-static void CreateRolloutDirtSprite(struct Task *task);
-static u8 GetRolloutCounter(void);
+static void CreateTremorsDirtSprite(struct Task *task);
+static u8 GetTremorsCounter(void);
 
 static const union AnimCmd sAnim_FlyingRock_0[] =
 {
@@ -199,7 +199,7 @@ const struct SpriteTemplate gAncientPowerRockSpriteTemplate =
     .callback = AnimRaiseSprite,
 };
 
-const struct SpriteTemplate gRolloutMudSpriteTemplate =
+const struct SpriteTemplate gTremorsMudSpriteTemplate =
 {
     .tileTag = ANIM_TAG_MUD_SAND,
     .paletteTag = ANIM_TAG_MUD_SAND,
@@ -207,10 +207,10 @@ const struct SpriteTemplate gRolloutMudSpriteTemplate =
     .anims = gDummySpriteAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimRolloutParticle,
+    .callback = AnimTremorsParticle,
 };
 
-const struct SpriteTemplate gRolloutRockSpriteTemplate =
+const struct SpriteTemplate gTremorsRockSpriteTemplate =
 {
     .tileTag = ANIM_TAG_ROCKS,
     .paletteTag = ANIM_TAG_ROCKS,
@@ -218,7 +218,7 @@ const struct SpriteTemplate gRolloutRockSpriteTemplate =
     .anims = gDummySpriteAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimRolloutParticle,
+    .callback = AnimTremorsParticle,
 };
 
 const struct SpriteTemplate gRockTombRockSpriteTemplate =
@@ -554,10 +554,10 @@ static void AnimRaiseSprite(struct Sprite *sprite)
     StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
 }
 
-void AnimTask_Rollout(u8 taskId)
+void AnimTask_Tremors(u8 taskId)
 {
     u16 var0, var1, var2, var3;
-    u8 rolloutCounter;
+    u8 tremorsCounter;
     int var5;
     s16 pan1, pan2;
     struct Task *task;
@@ -572,11 +572,11 @@ void AnimTask_Rollout(u8 taskId)
     if (BATTLE_PARTNER(gBattleAnimAttacker) == gBattleAnimTarget)
         var3 = var1;
 
-    rolloutCounter = GetRolloutCounter();
-    if (rolloutCounter == 1)
+    tremorsCounter = GetTremorsCounter();
+    if (tremorsCounter == 1)
         task->data[8] = 32;
     else
-        task->data[8] = 48 - (rolloutCounter * 8);
+        task->data[8] = 48 - (tremorsCounter * 8);
 
     task->data[0] = 0;
     task->data[11] = 0;
@@ -601,13 +601,13 @@ void AnimTask_Rollout(u8 taskId)
 
     task->data[13] = pan1;
     task->data[14] = (pan2 - pan1) / task->data[8];
-    task->data[1] = rolloutCounter;
+    task->data[1] = tremorsCounter;
     task->data[15] = GetAnimBattlerSpriteId(ANIM_ATTACKER);
 
-    task->func = AnimTask_Rollout_Step;
+    task->func = AnimTask_Tremors_Step;
 }
 
-static void AnimTask_Rollout_Step(u8 taskId)
+static void AnimTask_Tremors_Step(u8 taskId)
 {
     struct Task *task;
 
@@ -655,7 +655,7 @@ static void AnimTask_Rollout_Step(u8 taskId)
         if (++task->data[9] >= task->data[10])
         {
             task->data[9] = 0;
-            CreateRolloutDirtSprite(task);
+            CreateTremorsDirtSprite(task);
             task->data[13] += task->data[14];
             PlaySE12WithPanning(SE_M_DIG, task->data[13]);
         }
@@ -672,7 +672,7 @@ static void AnimTask_Rollout_Step(u8 taskId)
     }
 }
 
-static void CreateRolloutDirtSprite(struct Task *task)
+static void CreateTremorsDirtSprite(struct Task *task)
 {
     const struct SpriteTemplate *spriteTemplate;
     int tileOffset;
@@ -682,20 +682,20 @@ static void CreateRolloutDirtSprite(struct Task *task)
     switch (task->data[1])
     {
     case 1:
-        spriteTemplate = &gRolloutMudSpriteTemplate;
+        spriteTemplate = &gTremorsMudSpriteTemplate;
         tileOffset = 0;
         break;
     case 2:
     case 3:
-        spriteTemplate = &gRolloutRockSpriteTemplate;
+        spriteTemplate = &gTremorsRockSpriteTemplate;
         tileOffset = 80;
         break;
     case 4:
-        spriteTemplate = &gRolloutRockSpriteTemplate;
+        spriteTemplate = &gTremorsRockSpriteTemplate;
         tileOffset = 64;
         break;
     case 5:
-        spriteTemplate = &gRolloutRockSpriteTemplate;
+        spriteTemplate = &gTremorsRockSpriteTemplate;
         tileOffset = 48;
         break;
     default:
@@ -722,11 +722,11 @@ static void CreateRolloutDirtSprite(struct Task *task)
     task->data[12] *= -1;
 }
 
-static void AnimRolloutParticle(struct Sprite *sprite)
+static void AnimTremorsParticle(struct Sprite *sprite)
 {
     if (TranslateAnimHorizontalArc(sprite))
     {
-        u8 taskId = FindTaskIdByFunc(AnimTask_Rollout_Step);
+        u8 taskId = FindTaskIdByFunc(AnimTask_Tremors_Step);
         if (taskId != TASK_NONE)
             gTasks[taskId].data[11]--;
 
@@ -734,9 +734,9 @@ static void AnimRolloutParticle(struct Sprite *sprite)
     }
 }
 
-static u8 GetRolloutCounter(void)
+static u8 GetTremorsCounter(void)
 {
-    u8 retVal = gAnimDisableStructPtr->rolloutTimerStartValue - gAnimDisableStructPtr->rolloutTimer;
+    u8 retVal = gAnimDisableStructPtr->tremorsTimerStartValue - gAnimDisableStructPtr->tremorsTimer;
     u8 var0 = retVal - 1;
     if (var0 > 4)
         retVal = 1;

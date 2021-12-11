@@ -255,7 +255,7 @@ static void Cmd_cursetarget(void);
 static void Cmd_trysetspikes(void);
 static void Cmd_setforesight(void);
 static void Cmd_trysetperishsong(void);
-static void Cmd_rolloutdamagecalculation(void);
+static void Cmd_tremorsdamagecalculation(void);
 static void Cmd_jumpifconfusedandstatmaxed(void);
 static void Cmd_furycuttercalc(void);
 static void Cmd_friendshiptodamagecalculation(void);
@@ -505,7 +505,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_trysetspikes,                            //0xB0
     Cmd_setforesight,                            //0xB1
     Cmd_trysetperishsong,                        //0xB2
-    Cmd_rolloutdamagecalculation,                //0xB3
+    Cmd_tremorsdamagecalculation,                //0xB3
     Cmd_jumpifconfusedandstatmaxed,              //0xB4
     Cmd_furycuttercalc,                          //0xB5
     Cmd_friendshiptodamagecalculation,           //0xB6
@@ -8427,7 +8427,7 @@ static void Cmd_trysetperishsong(void)
         gBattlescriptCurrInstr += 5;
 }
 
-static void Cmd_rolloutdamagecalculation(void)
+static void Cmd_tremorsdamagecalculation(void)
 {
     if (gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
     {
@@ -8440,19 +8440,19 @@ static void Cmd_rolloutdamagecalculation(void)
 
         if (!(gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS)) // first hit
         {
-            gDisableStructs[gBattlerAttacker].rolloutTimer = 5;
-            gDisableStructs[gBattlerAttacker].rolloutTimerStartValue = 5;
+            gDisableStructs[gBattlerAttacker].tremorsTimer = 5;
+            gDisableStructs[gBattlerAttacker].tremorsTimerStartValue = 5;
             gBattleMons[gBattlerAttacker].status2 |= STATUS2_MULTIPLETURNS;
             gLockedMoves[gBattlerAttacker] = gCurrentMove;
         }
-        if (--gDisableStructs[gBattlerAttacker].rolloutTimer == 0) // last hit
+        if (--gDisableStructs[gBattlerAttacker].tremorsTimer == 0) // last hit
         {
             gBattleMons[gBattlerAttacker].status2 &= ~STATUS2_MULTIPLETURNS;
         }
 
         gDynamicBasePower = gBattleMoves[gCurrentMove].power;
 
-        for (i = 1; i < (5 - gDisableStructs[gBattlerAttacker].rolloutTimer); i++)
+        for (i = 1; i < (5 - gDisableStructs[gBattlerAttacker].tremorsTimer); i++)
             gDynamicBasePower *= 2;
 
         if (gBattleMons[gBattlerAttacker].status2 & STATUS2_DEFENSE_CURL)
