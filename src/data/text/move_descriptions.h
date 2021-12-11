@@ -161,7 +161,7 @@ static const u8 sPoisonStingDescription[] = _(
     "A toxic attack with barbs,\n"
     "etc., that may poison.");
 
-static const u8 sTwineedleDescription[] = _(
+static const u8 sSealingNeedleDescription[] = _(
     "Stingers on the forelegs\n"
     "jab the foe twice.");
 
@@ -1460,7 +1460,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_DOUBLE_EDGE - 1] = sDoubleEdgeDescription,
     [MOVE_TAIL_WHIP - 1] = sTailWhipDescription,
     [MOVE_POISON_STING - 1] = sPoisonStingDescription,
-    [MOVE_TWINEEDLE - 1] = sTwineedleDescription,
+    [MOVE_SEALING_NEEDLE - 1] = sSealingNeedleDescription,
     [MOVE_PIN_MISSILE - 1] = sPinMissileDescription,
     [MOVE_LEER - 1] = sLeerDescription,
     [MOVE_BITE - 1] = sBiteDescription,

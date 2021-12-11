@@ -3581,7 +3581,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_CMEDICINE,
                                             .heldItem = ITEM_SHELL_BELL,
-                                            .moves = {MOVE_TWINEEDLE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+                                            .moves = {MOVE_SEALING_NEEDLE, MOVE_NONE, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 252,

@@ -94,7 +94,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHit                    @ EFFECT_EVASION_DOWN_HIT
 	.4byte BattleScript_EffectSkyAttack              @ EFFECT_SKY_ATTACK
 	.4byte BattleScript_EffectConfuseHit             @ EFFECT_CONFUSE_HIT
-	.4byte BattleScript_EffectTwineedle              @ EFFECT_TWINEEDLE
+	.4byte BattleScript_EffectSealingNeedle              @ EFFECT_SEALING_NEEDLE
 	.4byte BattleScript_EffectHit                    @ EFFECT_VITAL_THROW
 	.4byte BattleScript_EffectSubstitute             @ EFFECT_SUBSTITUTE
 	.4byte BattleScript_EffectRecharge               @ EFFECT_RECHARGE
@@ -1070,7 +1070,7 @@ BattleScript_EffectConfuseHit::
 	setmoveeffect MOVE_EFFECT_CONFUSION
 	goto BattleScript_EffectHit
 
-BattleScript_EffectTwineedle::
+BattleScript_EffectSealingNeedle::
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	setbyte sMULTIHIT_EFFECT, MOVE_EFFECT_POISON

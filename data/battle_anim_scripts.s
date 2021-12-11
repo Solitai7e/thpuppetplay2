@@ -57,7 +57,7 @@ gBattleAnims_Moves::
 	.4byte Move_DOUBLE_EDGE
 	.4byte Move_TAIL_WHIP
 	.4byte Move_POISON_STING
-	.4byte Move_TWINEEDLE
+	.4byte Move_SEALING_NEEDLE
 	.4byte Move_PIN_MISSILE
 	.4byte Move_LEER
 	.4byte Move_BITE
@@ -832,7 +832,7 @@ Move_POISON_STING:
 	blendoff
 	end
 
-Move_TWINEEDLE:
+Move_SEALING_NEEDLE:
 	loadspritegfx ANIM_TAG_NEEDLE
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET

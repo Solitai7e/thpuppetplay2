@@ -574,7 +574,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_TWINEEDLE] =
+    [MOVE_SEALING_NEEDLE] =
     {
         .effect = EFFECT_PARALYZE_HIT,
         .split = 0,
