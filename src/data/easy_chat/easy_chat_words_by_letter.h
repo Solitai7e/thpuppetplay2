@@ -32,7 +32,7 @@ const u16 gEasyChatWordsByLetter_A[] = {
     EC_MOVE(ABSORB),
     EC_WORD_ACCEPT,
     EC_MOVE2(ACID),
-    EC_MOVE2(ACID_ARMOR),
+    EC_MOVE2(DISPERSE),
     EC_WORD_ADORE,
     EC_WORD_ADULT,
     EC_WORD_ADVENTURE,

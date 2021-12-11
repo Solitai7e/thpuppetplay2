@@ -770,7 +770,7 @@ const u16 gEggMoves[] = {
               MOVE_SLEEP_TALK),
 
     egg_moves(AMYSTIA,
-              MOVE_ACID_ARMOR,
+              MOVE_DISPERSE,
               MOVE_HEAT_WAVE),
 
     egg_moves(TCHEN,
@@ -1191,7 +1191,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(CKIKURI,
               MOVE_DREAM_EATER,
-              MOVE_ACID_ARMOR,
+              MOVE_DISPERSE,
               MOVE_SMOG,
               MOVE_PAIN_SPLIT),
 

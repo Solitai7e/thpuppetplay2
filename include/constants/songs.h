@@ -222,7 +222,7 @@
 #define SE_M_HYPER_BEAM             215 // SE_W063
 #define SE_M_WATERFALL              216 // SE_W127
 #define SE_M_REVERSAL               217 // SE_W179
-#define SE_M_ACID_ARMOR             218 // SE_W151
+#define SE_M_DISPERSE             218 // SE_W151
 #define SE_M_SANDSTORM              219 // SE_W201
 #define SE_M_TRI_ATTACK             220 // SE_W161
 #define SE_M_TRI_ATTACK2            221 // SE_W161B

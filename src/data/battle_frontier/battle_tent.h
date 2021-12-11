@@ -1885,7 +1885,7 @@ const struct FacilityMon gVerdanturfBattleTentMons[NUM_VERDANTURF_TENT_MONS] =
     },
     [VERDANTURF_TENT_MON_ADMEILING] = {
         .species = SPECIES_ADMEILING,
-        .moves = {MOVE_YAWN, MOVE_SLUDGE, MOVE_ACID_ARMOR, MOVE_AMNESIA},
+        .moves = {MOVE_YAWN, MOVE_SLUDGE, MOVE_DISPERSE, MOVE_AMNESIA},
         .itemTableId = BATTLE_FRONTIER_ITEM_POISON_BARB,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_BOLD

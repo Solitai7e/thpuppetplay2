@@ -601,7 +601,7 @@ static const u8 sSplashDescription[] = _(
     "It's just a splash...\n"
     "Has no effect whatsoever.");
 
-static const u8 sAcidArmorDescription[] = _(
+static const u8 sDisperseDescription[] = _(
     "Liquifies the user's body\n"
     "to sharply raise DEFENSE.");
 
@@ -1570,7 +1570,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_FLASH - 1] = sFlashDescription,
     [MOVE_PSYWAVE - 1] = sPsywaveDescription,
     [MOVE_SPLASH - 1] = sSplashDescription,
-    [MOVE_ACID_ARMOR - 1] = sAcidArmorDescription,
+    [MOVE_DISPERSE - 1] = sDisperseDescription,
     [MOVE_CRABHAMMER - 1] = sCrabhammerDescription,
     [MOVE_EXPLOSION - 1] = sExplosionDescription,
     [MOVE_FURY_SWIPES - 1] = sFurySwipesDescription,

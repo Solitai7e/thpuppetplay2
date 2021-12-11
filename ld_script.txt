@@ -914,7 +914,7 @@ SECTIONS {
         sound/songs/se_m_hyper_beam.o(.rodata);
         sound/songs/se_m_waterfall.o(.rodata);
         sound/songs/se_m_reversal.o(.rodata);
-        sound/songs/se_m_acid_armor.o(.rodata);
+        sound/songs/se_m_disperse.o(.rodata);
         sound/songs/se_m_sandstorm.o(.rodata);
         sound/songs/se_m_tri_attack.o(.rodata);
         sound/songs/se_m_tri_attack2.o(.rodata);

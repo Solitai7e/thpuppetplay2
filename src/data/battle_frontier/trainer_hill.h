@@ -1597,7 +1597,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_HINA,
                         .heldItem = ITEM_BRIGHT_POWDER,
-                        .moves = {MOVE_SCREECH, MOVE_DISABLE, MOVE_SLUDGE_BOMB, MOVE_ACID_ARMOR},
+                        .moves = {MOVE_SCREECH, MOVE_DISABLE, MOVE_SLUDGE_BOMB, MOVE_DISPERSE},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 255,

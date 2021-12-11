@@ -2114,7 +2114,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = 0,
     },
 
-    [MOVE_ACID_ARMOR] =
+    [MOVE_DISPERSE] =
     {
         .effect = EFFECT_DEFENSE_UP_2,
         .split = 0,

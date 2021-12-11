@@ -105,7 +105,7 @@ static void AnimTask_RockMonBackAndForth_Step(u8);
 static void AnimTask_FlailMovement_Step(u8);
 static void AnimTask_RolePlaySilhouette_Step1(u8);
 static void AnimTask_RolePlaySilhouette_Step2(u8);
-static void AnimTask_AcidArmor_Step(u8);
+static void AnimTask_Disperse_Step(u8);
 static void AnimTask_DeepInhale_Step(u8);
 static void AnimTask_SquishAndSweatDroplets_Step(u8);
 static void CreateSweatDroplets(u8, bool8);
@@ -3288,7 +3288,7 @@ static void AnimTask_RolePlaySilhouette_Step2(u8 taskId)
 
 // Performs a wavy transformation on the mon's sprite, and fades out.
 // arg 0: which battler
-void AnimTask_AcidArmor(u8 taskId)
+void AnimTask_Disperse(u8 taskId)
 {
     u8 battler;
     u16 bgX, bgY;
@@ -3347,10 +3347,10 @@ void AnimTask_AcidArmor(u8 taskId)
     scanlineParams.initState = 1;
     scanlineParams.unused9 = 0;
     ScanlineEffect_SetParams(scanlineParams);
-    task->func = AnimTask_AcidArmor_Step;
+    task->func = AnimTask_Disperse_Step;
 }
 
-static void AnimTask_AcidArmor_Step(u8 taskId)
+static void AnimTask_Disperse_Step(u8 taskId)
 {
     struct Task *task;
     s16 var1;

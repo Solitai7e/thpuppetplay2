@@ -1,25 +1,25 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_acid_armor_grp, voicegroup128
-	.equ	se_m_acid_armor_pri, 4
-	.equ	se_m_acid_armor_rev, reverb_set+50
-	.equ	se_m_acid_armor_mvl, 127
-	.equ	se_m_acid_armor_key, 0
-	.equ	se_m_acid_armor_tbs, 1
-	.equ	se_m_acid_armor_exg, 0
-	.equ	se_m_acid_armor_cmp, 1
+	.equ	se_m_disperse_grp, voicegroup128
+	.equ	se_m_disperse_pri, 4
+	.equ	se_m_disperse_rev, reverb_set+50
+	.equ	se_m_disperse_mvl, 127
+	.equ	se_m_disperse_key, 0
+	.equ	se_m_disperse_tbs, 1
+	.equ	se_m_disperse_exg, 0
+	.equ	se_m_disperse_cmp, 1
 
 	.section .rodata
-	.global	se_m_acid_armor
+	.global	se_m_disperse
 	.align	2
 
 @********************** Track  1 **********************@
 
-se_m_acid_armor_1:
-	.byte	KEYSH , se_m_acid_armor_key+0
-	.byte	TEMPO , 150*se_m_acid_armor_tbs/2
+se_m_disperse_1:
+	.byte	KEYSH , se_m_disperse_key+0
+	.byte	TEMPO , 150*se_m_disperse_tbs/2
 	.byte		VOICE , 31
-	.byte		VOL   , 110*se_m_acid_armor_mvl/mxv
+	.byte		VOL   , 110*se_m_disperse_mvl/mxv
 	.byte		BENDR , 24
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_v-37
@@ -189,14 +189,14 @@ se_m_acid_armor_1:
 @******************************************************@
 	.align	2
 
-se_m_acid_armor:
+se_m_disperse:
 	.byte	1	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	se_m_acid_armor_pri	@ Priority
-	.byte	se_m_acid_armor_rev	@ Reverb.
+	.byte	se_m_disperse_pri	@ Priority
+	.byte	se_m_disperse_rev	@ Reverb.
 
-	.word	se_m_acid_armor_grp
+	.word	se_m_disperse_grp
 
-	.word	se_m_acid_armor_1
+	.word	se_m_disperse_1
 
 	.end

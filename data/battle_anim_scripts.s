@@ -167,7 +167,7 @@ gBattleAnims_Moves::
 	.4byte Move_FLASH
 	.4byte Move_PSYWAVE
 	.4byte Move_SPLASH
-	.4byte Move_ACID_ARMOR
+	.4byte Move_DISPERSE
 	.4byte Move_CRABHAMMER
 	.4byte Move_EXPLOSION
 	.4byte Move_FURY_SWIPES
@@ -2993,11 +2993,11 @@ Move_SPLASH:
 	waitforvisualfinish
 	end
 
-Move_ACID_ARMOR:
+Move_DISPERSE:
 	monbg ANIM_ATTACKER
 	setalpha 15, 0
-	createvisualtask AnimTask_AcidArmor, 2, ANIM_ATTACKER
-	playsewithpan SE_M_ACID_ARMOR, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_Disperse, 2, ANIM_ATTACKER
+	playsewithpan SE_M_DISPERSE, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	blendoff
 	clearmonbg ANIM_ATTACKER
