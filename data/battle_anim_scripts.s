@@ -97,7 +97,7 @@ gBattleAnims_Moves::
 	.4byte Move_STUN_SPORE
 	.4byte Move_SLEEP_POWDER
 	.4byte Move_BATTLE_CHANT
-	.4byte Move_STRING_SHOT
+	.4byte Move_WIRE_WEB
 	.4byte Move_DRAGON_RAGE
 	.4byte Move_FIRE_SPIN
 	.4byte Move_THUNDER_SHOCK
@@ -2042,7 +2042,7 @@ Move_WHIRLWIND:
 	delay 29
 	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_TARGET, 12, 6, 1, 5
 	delay 7
-	playsewithpan SE_M_STRING_SHOT, SOUND_PAN_TARGET
+	playsewithpan SE_M_WIRE_WEB, SOUND_PAN_TARGET
 	createvisualtask AnimTask_SlideOffScreen, 5, ANIM_TARGET, 8
 	waitforvisualfinish
 	end
@@ -2057,7 +2057,7 @@ Move_CONFUSE_RAY:
 	createsprite gConfuseRayBallBounceSpriteTemplate, ANIM_TARGET, 2, 28, 0, 288
 	waitforvisualfinish
 	setalpha 8, 8
-	playsewithpan SE_M_STRING_SHOT2, SOUND_PAN_TARGET
+	playsewithpan SE_M_WIRE_WEB2, SOUND_PAN_TARGET
 	createsprite gConfuseRayBallSpiralSpriteTemplate, ANIM_TARGET, 2, 0, -16
 	waitforvisualfinish
 	delay 0
@@ -3949,7 +3949,7 @@ Move_MIST_BALL:
 	loadspritegfx ANIM_TAG_SMALL_BUBBLES
 	loadspritegfx ANIM_TAG_WHITE_FEATHER
 	delay 0
-	playsewithpan SE_M_STRING_SHOT, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_WIRE_WEB, SOUND_PAN_ATTACKER
 	createsprite gMistBallSpriteTemplate, ANIM_TARGET, 0, 0, 0, 0, 0, 30, 0
 	waitforvisualfinish
 	playsewithpan SE_M_SAND_ATTACK, SOUND_PAN_TARGET
@@ -4667,7 +4667,7 @@ Move_ICE_PUNCH:
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 7, RGB_BLACK
 	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 2, 0, 9, RGB(12, 26, 31)
 	delay 20
-	playsewithpan SE_M_STRING_SHOT, SOUND_PAN_TARGET
+	playsewithpan SE_M_WIRE_WEB, SOUND_PAN_TARGET
 	createsprite gIceCrystalSpiralInwardSmall, ANIM_ATTACKER, 2, 0
 	createsprite gIceCrystalSpiralInwardSmall, ANIM_ATTACKER, 2, 64
 	createsprite gIceCrystalSpiralInwardSmall, ANIM_ATTACKER, 2, 128
@@ -7423,34 +7423,34 @@ BideUnleash:
 	blendoff
 	end
 
-Move_STRING_SHOT:
+Move_WIRE_WEB:
 	loadspritegfx ANIM_TAG_STRING
 	loadspritegfx ANIM_TAG_WEB_THREAD
 	monbg ANIM_DEF_PARTNER
 	delay 0
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 5, 1, 2, 0, 9, RGB_BLACK
 	waitforvisualfinish
-	loopsewithpan SE_M_STRING_SHOT, SOUND_PAN_ATTACKER, 9, 6
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
-	call StringShotThread
+	loopsewithpan SE_M_WIRE_WEB, SOUND_PAN_ATTACKER, 9, 6
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
+	call WireWebThread
 	waitforvisualfinish
-	playsewithpan SE_M_STRING_SHOT2, SOUND_PAN_TARGET
+	playsewithpan SE_M_WIRE_WEB2, SOUND_PAN_TARGET
 	createsprite gStringWrapSpriteTemplate, ANIM_TARGET, 2, 0, 10
 	delay 4
 	createsprite gStringWrapSpriteTemplate, ANIM_TARGET, 2, 0, -2
@@ -7463,7 +7463,7 @@ Move_STRING_SHOT:
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 5, 1, 2, 9, 0, RGB_BLACK
 	end
 
-StringShotThread:
+WireWebThread:
 	createsprite gWebThreadSpriteTemplate, ANIM_TARGET, 2, 20, 0, 512, 20, 1
 	delay 1
 	return
@@ -7476,7 +7476,7 @@ Move_SPIDER_WEB:
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 5, 1, 2, 0, 9, RGB_BLACK
 	waitforvisualfinish
 	splitbgprio ANIM_TARGET
-	loopsewithpan SE_M_STRING_SHOT, SOUND_PAN_ATTACKER, 9, 6
+	loopsewithpan SE_M_WIRE_WEB, SOUND_PAN_ATTACKER, 9, 6
 	call SpiderWebThread
 	call SpiderWebThread
 	call SpiderWebThread
@@ -7492,7 +7492,7 @@ Move_SPIDER_WEB:
 	call SpiderWebThread
 	call SpiderWebThread
 	waitforvisualfinish
-	playsewithpan SE_M_STRING_SHOT2, SOUND_PAN_TARGET
+	playsewithpan SE_M_WIRE_WEB2, SOUND_PAN_TARGET
 	createsprite gSpiderWebSpriteTemplate, ANIM_ATTACKER, 2
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
@@ -7774,7 +7774,7 @@ Move_SCARY_FACE:
 	createsprite gEyeSparkleSpriteTemplate, ANIM_ATTACKER, 0, 16, -8
 	waitforvisualfinish
 	createvisualtask AnimTask_ShakeTargetInPattern, 3, 20, 1, FALSE
-	playsewithpan SE_M_STRING_SHOT2, SOUND_PAN_TARGET
+	playsewithpan SE_M_WIRE_WEB2, SOUND_PAN_TARGET
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 16, 0, RGB_BLACK
 	waitforvisualfinish
 	end

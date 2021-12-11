@@ -248,7 +248,7 @@ static void AnimLeechLifeNeedle(struct Sprite *sprite)
 }
 
 // Creates a single web thread that travels from attacker to target.
-// Used by MOVE_STRING_SHOT and MOVE_SPIDER_WEB in their first move phase.
+// Used by MOVE_WIRE_WEB and MOVE_SPIDER_WEB in their first move phase.
 // arg 0: x
 // arg 1: y
 // arg 2: controls the left-to-right movement
@@ -291,7 +291,7 @@ static void AnimTranslateWebThread_Step(struct Sprite *sprite)
     sprite->data[6] = (sprite->data[6] + 13) & 0xFF;
 }
 
-// Second stage of String Shot
+// Second stage of Wire Web
 static void AnimStringWrap(struct Sprite *sprite)
 {
     SetAverageBattlerPositions(gBattleAnimTarget, 0, &sprite->x, &sprite->y);

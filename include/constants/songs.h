@@ -133,8 +133,8 @@
 #define SE_M_BUBBLE3                126 // SE_W145C
 #define SE_M_RAIN_DANCE             127 // SE_W240
 #define SE_M_CUT                    128 // SE_W015
-#define SE_M_STRING_SHOT            129 // SE_W081
-#define SE_M_STRING_SHOT2           130 // SE_W081B
+#define SE_M_WIRE_WEB            129 // SE_W081
+#define SE_M_WIRE_WEB2           130 // SE_W081B
 #define SE_M_ROCK_THROW             131 // SE_W088
 #define SE_M_GUST                   132 // SE_W016
 #define SE_M_GUST2                  133 // SE_W016B

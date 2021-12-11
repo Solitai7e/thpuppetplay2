@@ -148,7 +148,7 @@ static const u16 sCLilyBlackLevelUpLearnset[] = {
 
 static const u16 sLilyBlackLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-    LEVEL_UP_MOVE( 1, MOVE_STRING_SHOT),
+    LEVEL_UP_MOVE( 1, MOVE_WIRE_WEB),
     LEVEL_UP_END
 };
 
@@ -175,7 +175,7 @@ static const u16 sMomijiLevelUpLearnset[] = {
 
 static const u16 sCShizuhaLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POISON_STING),
-    LEVEL_UP_MOVE( 1, MOVE_STRING_SHOT),
+    LEVEL_UP_MOVE( 1, MOVE_WIRE_WEB),
     LEVEL_UP_END
 };
 
@@ -2316,7 +2316,7 @@ static const u16 sCKazamiLevelUpLearnset[] = {
 
 static const u16 sKazamiLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POISON_STING),
-    LEVEL_UP_MOVE( 1, MOVE_STRING_SHOT),
+    LEVEL_UP_MOVE( 1, MOVE_WIRE_WEB),
     LEVEL_UP_MOVE( 6, MOVE_SCARY_FACE),
     LEVEL_UP_MOVE(11, MOVE_CONSTRICT),
     LEVEL_UP_MOVE(17, MOVE_NIGHT_SHADE),
@@ -2330,7 +2330,7 @@ static const u16 sKazamiLevelUpLearnset[] = {
 
 static const u16 sCMeiraLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POISON_STING),
-    LEVEL_UP_MOVE( 1, MOVE_STRING_SHOT),
+    LEVEL_UP_MOVE( 1, MOVE_WIRE_WEB),
     LEVEL_UP_MOVE( 1, MOVE_SCARY_FACE),
     LEVEL_UP_MOVE( 1, MOVE_CONSTRICT),
     LEVEL_UP_MOVE( 6, MOVE_SCARY_FACE),
@@ -3798,7 +3798,7 @@ static const u16 sHMerlinLevelUpLearnset[] = {
 
 static const u16 sHLyricaLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-    LEVEL_UP_MOVE( 1, MOVE_STRING_SHOT),
+    LEVEL_UP_MOVE( 1, MOVE_WIRE_WEB),
     LEVEL_UP_MOVE( 5, MOVE_POISON_STING),
     LEVEL_UP_END
 };

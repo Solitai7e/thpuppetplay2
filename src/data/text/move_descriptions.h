@@ -321,7 +321,7 @@ static const u8 sBattleChantDescription[] = _(
     "A rampage of 2 to 3 turns\n"
     "that confuses the user.");
 
-static const u8 sStringShotDescription[] = _(
+static const u8 sWireWebDescription[] = _(
     "Binds the foe with string\n"
     "to reduce its SPEED.");
 
@@ -1500,7 +1500,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_STUN_SPORE - 1] = sStunSporeDescription,
     [MOVE_SLEEP_POWDER - 1] = sSleepPowderDescription,
     [MOVE_BATTLE_CHANT - 1] = sBattleChantDescription,
-    [MOVE_STRING_SHOT - 1] = sStringShotDescription,
+    [MOVE_WIRE_WEB - 1] = sWireWebDescription,
     [MOVE_DRAGON_RAGE - 1] = sDragonRageDescription,
     [MOVE_FIRE_SPIN - 1] = sFireSpinDescription,
     [MOVE_THUNDER_SHOCK - 1] = sThunderShockDescription,

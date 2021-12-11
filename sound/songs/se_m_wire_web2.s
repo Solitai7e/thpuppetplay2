@@ -1,26 +1,26 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_string_shot2_grp, voicegroup128
-	.equ	se_m_string_shot2_pri, 4
-	.equ	se_m_string_shot2_rev, reverb_set+50
-	.equ	se_m_string_shot2_mvl, 127
-	.equ	se_m_string_shot2_key, 0
-	.equ	se_m_string_shot2_tbs, 1
-	.equ	se_m_string_shot2_exg, 0
-	.equ	se_m_string_shot2_cmp, 1
+	.equ	se_m_wire_web2_grp, voicegroup128
+	.equ	se_m_wire_web2_pri, 4
+	.equ	se_m_wire_web2_rev, reverb_set+50
+	.equ	se_m_wire_web2_mvl, 127
+	.equ	se_m_wire_web2_key, 0
+	.equ	se_m_wire_web2_tbs, 1
+	.equ	se_m_wire_web2_exg, 0
+	.equ	se_m_wire_web2_cmp, 1
 
 	.section .rodata
-	.global	se_m_string_shot2
+	.global	se_m_wire_web2
 	.align	2
 
 @********************** Track  1 **********************@
 
-se_m_string_shot2_1:
-	.byte	KEYSH , se_m_string_shot2_key+0
-	.byte	TEMPO , 250*se_m_string_shot2_tbs/2
+se_m_wire_web2_1:
+	.byte	KEYSH , se_m_wire_web2_key+0
+	.byte	TEMPO , 250*se_m_wire_web2_tbs/2
 	.byte		VOICE , 10
 	.byte		BENDR , 12
-	.byte		VOL   , 105*se_m_string_shot2_mvl/mxv
+	.byte		VOL   , 105*se_m_wire_web2_mvl/mxv
 	.byte		PAN   , c_v-1
 	.byte		BEND  , c_v+0
 	.byte		N09   , En4 , v112
@@ -93,17 +93,17 @@ se_m_string_shot2_1:
 
 @********************** Track  2 **********************@
 
-se_m_string_shot2_2:
-	.byte	KEYSH , se_m_string_shot2_key+0
+se_m_wire_web2_2:
+	.byte	KEYSH , se_m_wire_web2_key+0
 	.byte		VOICE , 5
-	.byte		VOL   , 105*se_m_string_shot2_mvl/mxv
+	.byte		VOL   , 105*se_m_wire_web2_mvl/mxv
 	.byte		PAN   , c_v+9
 	.byte		N09   , Cn3 , v052
 	.byte	W12
 	.byte		PAN   , c_v-7
 	.byte		N09   , Gn2
 	.byte	W12
-se_m_string_shot2_2_000:
+se_m_wire_web2_2_000:
 	.byte		PAN   , c_v+9
 	.byte		N09   , Cn3 , v052
 	.byte	W12
@@ -112,23 +112,23 @@ se_m_string_shot2_2_000:
 	.byte	W12
 	.byte	PEND
 	.byte	PATT
-	 .word	se_m_string_shot2_2_000
+	 .word	se_m_wire_web2_2_000
 	.byte	PATT
-	 .word	se_m_string_shot2_2_000
+	 .word	se_m_wire_web2_2_000
 	.byte	FINE
 
 @******************************************************@
 	.align	2
 
-se_m_string_shot2:
+se_m_wire_web2:
 	.byte	2	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	se_m_string_shot2_pri	@ Priority
-	.byte	se_m_string_shot2_rev	@ Reverb.
+	.byte	se_m_wire_web2_pri	@ Priority
+	.byte	se_m_wire_web2_rev	@ Reverb.
 
-	.word	se_m_string_shot2_grp
+	.word	se_m_wire_web2_grp
 
-	.word	se_m_string_shot2_1
-	.word	se_m_string_shot2_2
+	.word	se_m_wire_web2_1
+	.word	se_m_wire_web2_2
 
 	.end
