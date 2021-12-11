@@ -1889,7 +1889,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_SUNNY_DAY},
     },
 
-    [MOVE_HIDDEN_POWER] =
+    [MOVE_CHARGE_BEAM] =
     {
         .effect = CONTEST_EFFECT_REPETITION_NOT_BORING,
         .contestCategory = CONTEST_CATEGORY_SMART,

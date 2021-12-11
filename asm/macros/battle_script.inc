@@ -996,7 +996,7 @@
 	.4byte \ptr
 	.endm
 
-	.macro hiddenpowercalc
+	.macro chargebeamcalc
 	.byte 0xc1
 	.endm
 

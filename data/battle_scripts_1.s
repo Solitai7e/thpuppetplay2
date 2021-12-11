@@ -152,7 +152,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectEnergyLight             @ EFFECT_ENERGY_LIGHT
 	.4byte BattleScript_EffectSynthesis              @ EFFECT_SYNTHESIS
 	.4byte BattleScript_EffectLunatic              @ EFFECT_LUNATIC
-	.4byte BattleScript_EffectHiddenPower            @ EFFECT_HIDDEN_POWER
+	.4byte BattleScript_EffectChargeBeam            @ EFFECT_CHARGE_BEAM
 	.4byte BattleScript_EffectRainDance              @ EFFECT_RAIN_DANCE
 	.4byte BattleScript_EffectSunnyDay               @ EFFECT_SUNNY_DAY
 	.4byte BattleScript_EffectDefenseUpHit           @ EFFECT_DEFENSE_UP_HIT
@@ -1735,8 +1735,8 @@ BattleScript_EffectLunatic::
 	recoverbasedonsunlight BattleScript_AlreadyAtFullHp
 	goto BattleScript_PresentHealTarget
 
-BattleScript_EffectHiddenPower::
-	hiddenpowercalc
+BattleScript_EffectChargeBeam::
+	chargebeamcalc
 	goto BattleScript_EffectHit
 
 BattleScript_EffectRainDance::

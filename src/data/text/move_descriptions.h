@@ -945,7 +945,7 @@ static const u8 sLunaticDescription[] = _(
     "Restores HP. The amount\n"
     "varies with the weather.");
 
-static const u8 sHiddenPowerDescription[] = _(
+static const u8 sChargeBeamDescription[] = _(
     "The effectiveness varies\n"
     "with the user.");
 
@@ -1656,7 +1656,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_ENERGY_LIGHT - 1] = sEnergyLightDescription,
     [MOVE_SYNTHESIS - 1] = sSynthesisDescription,
     [MOVE_LUNATIC - 1] = sLunaticDescription,
-    [MOVE_HIDDEN_POWER - 1] = sHiddenPowerDescription,
+    [MOVE_CHARGE_BEAM - 1] = sChargeBeamDescription,
     [MOVE_CROSS_CHOP - 1] = sCrossChopDescription,
     [MOVE_TWISTER - 1] = sTwisterDescription,
     [MOVE_RAIN_DANCE - 1] = sRainDanceDescription,

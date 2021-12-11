@@ -269,7 +269,7 @@ static void Cmd_copyfoestats(void);
 static void Cmd_rapidspinfree(void);
 static void Cmd_setdefensecurlbit(void);
 static void Cmd_recoverbasedonsunlight(void);
-static void Cmd_hiddenpowercalc(void);
+static void Cmd_chargebeamcalc(void);
 static void Cmd_selectfirstvalidtarget(void);
 static void Cmd_trysetfutureattack(void);
 static void Cmd_trydobeatup(void);
@@ -519,7 +519,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_rapidspinfree,                           //0xBE
     Cmd_setdefensecurlbit,                       //0xBF
     Cmd_recoverbasedonsunlight,                  //0xC0
-    Cmd_hiddenpowercalc,                         //0xC1
+    Cmd_chargebeamcalc,                         //0xC1
     Cmd_selectfirstvalidtarget,                  //0xC2
     Cmd_trysetfutureattack,                      //0xC3
     Cmd_trydobeatup,                             //0xC4
@@ -8768,7 +8768,7 @@ static void Cmd_recoverbasedonsunlight(void)
     }
 }
 
-static void Cmd_hiddenpowercalc(void)
+static void Cmd_chargebeamcalc(void)
 {
     u8 powerBits = ((gBattleMons[gBattlerAttacker].hpIV & 2) >> 1)
                  | ((gBattleMons[gBattlerAttacker].attackIV & 2) << 0)

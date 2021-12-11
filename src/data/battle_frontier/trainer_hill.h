@@ -2710,7 +2710,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_UNOWN,
                                             .heldItem = ITEM_MIRACLE_SEED,
-                                            .moves = {MOVE_HIDDEN_POWER, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+                                            .moves = {MOVE_CHARGE_BEAM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 255,
@@ -2731,7 +2731,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_UNOWN,
                                             .heldItem = ITEM_MYSTIC_WATER,
-                                            .moves = {MOVE_HIDDEN_POWER, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+                                            .moves = {MOVE_CHARGE_BEAM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 255,
@@ -2752,7 +2752,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_UNOWN,
                                             .heldItem = ITEM_BLACK_BELT,
-                                            .moves = {MOVE_HIDDEN_POWER, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+                                            .moves = {MOVE_CHARGE_BEAM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 255,
@@ -2914,7 +2914,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_UNOWN,
                                             .heldItem = ITEM_CHARCOAL,
-                                            .moves = {MOVE_HIDDEN_POWER, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+                                            .moves = {MOVE_CHARGE_BEAM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 255,
@@ -2935,7 +2935,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_UNOWN,
                                             .heldItem = ITEM_SOFT_SAND,
-                                            .moves = {MOVE_HIDDEN_POWER, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+                                            .moves = {MOVE_CHARGE_BEAM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 255,
@@ -2956,7 +2956,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_UNOWN,
                                             .heldItem = ITEM_TWISTED_SPOON,
-                                            .moves = {MOVE_HIDDEN_POWER, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+                                            .moves = {MOVE_CHARGE_BEAM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 255,

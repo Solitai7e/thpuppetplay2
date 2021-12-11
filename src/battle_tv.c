@@ -74,7 +74,7 @@ enum {
 static const u16 sVariableDmgMoves[] =
 {
     MOVE_COUNTER, MOVE_FISSURE, MOVE_BIDE, MOVE_MIRROR_COAT,
-    MOVE_SCULPTURE, MOVE_FLAIL, MOVE_REVERSAL, MOVE_HIDDEN_POWER,
+    MOVE_SCULPTURE, MOVE_FLAIL, MOVE_REVERSAL, MOVE_CHARGE_BEAM,
     MOVE_SHEER_COLD, MOVE_FOCUS_PUNCH, MOVE_ERUPTION,
     MOVE_WATER_SPOUT, MOVE_DREAM_EATER, MOVE_WEATHER_BALL,
     MOVE_SNORE, MOVE_PAIN_SPLIT, MOVE_JUDGEMENT,
@@ -221,7 +221,7 @@ static const u16 sPoints_MoveEffect[NUM_BATTLE_MOVE_EFFECTS] =
     [EFFECT_ENERGY_LIGHT] = 4,
     [EFFECT_SYNTHESIS] = 4,
     [EFFECT_LUNATIC] = 4,
-    [EFFECT_HIDDEN_POWER] = 1,
+    [EFFECT_CHARGE_BEAM] = 1,
     [EFFECT_RAIN_DANCE] = 4,
     [EFFECT_SUNNY_DAY] = 4,
     [EFFECT_DEFENSE_UP_HIT] = 1,
@@ -1431,7 +1431,7 @@ static void TrySetBattleSeminarShow(void)
         return;
     else if (gBattleMons[gBattlerTarget].statStages[STAT_EVASION] > DEFAULT_STAT_STAGE)
         return;
-    else if (gCurrentMove == MOVE_HIDDEN_POWER || gCurrentMove == MOVE_WEATHER_BALL)
+    else if (gCurrentMove == MOVE_CHARGE_BEAM || gCurrentMove == MOVE_WEATHER_BALL)
         return;
     else if (gBattleTypeFlags & (BATTLE_TYPE_PALACE | BATTLE_TYPE_PIKE | BATTLE_TYPE_PYRAMID))
         return;

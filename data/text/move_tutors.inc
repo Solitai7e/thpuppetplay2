@@ -125,7 +125,7 @@ MoveTutor_Text_SleepTalkTeach:
 
 MoveTutor_Text_SleepTalkDeclined:
 	.string "Oh, fine, fine. You want to stay awake\n"
-	.string "with HIDDEN POWER, too…$"
+	.string "with CHARGE BEAM, too…$"
 
 MoveTutor_Text_SleepTalkWhichMon:
 	.string "Ah, an appreciative child!\n"

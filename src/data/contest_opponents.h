@@ -1406,7 +1406,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_DISABLE,
             MOVE_PSYCHO_CUT,
-            MOVE_HIDDEN_POWER,
+            MOVE_CHARGE_BEAM,
             MOVE_RETURN
         },
         .cool = 10,
