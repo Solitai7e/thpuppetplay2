@@ -1882,7 +1882,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_WATER_PULSE,
             MOVE_REST,
-            MOVE_WATER_SPOUT,
+            MOVE_AQUA_SHOWER,
             MOVE_SPLASH
         },
         .cool = 30,

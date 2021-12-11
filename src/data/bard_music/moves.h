@@ -2590,7 +2590,7 @@ const struct BardSound gBardSounds_Moves[MOVES_COUNT][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND
     },
-    [MOVE_WATER_SPOUT] = {
+    [MOVE_AQUA_SHOWER] = {
         { 0x1b, 0x0, 0x0, 0x0, 0x0},
         { 0x30, 0x0, 0x0, 0x0, 0x0},
         { 0x21, 0x0, 0x0, 0x0, 0x0},

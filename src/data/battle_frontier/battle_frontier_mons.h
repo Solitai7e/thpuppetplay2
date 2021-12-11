@@ -1927,7 +1927,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_DMEILING_2] = {
         .species = SPECIES_DMEILING,
-        .moves = {MOVE_WATER_SPOUT, MOVE_EARTHQUAKE, MOVE_BODY_SLAM, MOVE_REST},
+        .moves = {MOVE_AQUA_SHOWER, MOVE_EARTHQUAKE, MOVE_BODY_SLAM, MOVE_REST},
         .itemTableId = BATTLE_FRONTIER_ITEM_CHESTO_BERRY,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE,
         .nature = NATURE_DOCILE

@@ -339,7 +339,7 @@ gBattleAnims_Moves::
 	.4byte Move_NATURE_SOUND
 	.4byte Move_TICKLE
 	.4byte Move_DRACO_METEOR
-	.4byte Move_WATER_SPOUT
+	.4byte Move_AQUA_SHOWER
 	.4byte Move_SIGNAL_BEAM
 	.4byte Move_SHADOW_PUNCH
 	.4byte Move_EXTRASENSORY
@@ -4281,18 +4281,18 @@ Move_TICKLE:
 	waitforvisualfinish
 	end
 
-Move_WATER_SPOUT:
+Move_AQUA_SHOWER:
 	loadspritegfx ANIM_TAG_GLOWY_BLUE_ORB
 	loadspritegfx ANIM_TAG_WATER_IMPACT
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
-	createvisualtask AnimTask_WaterSpoutLaunch, 5
+	createvisualtask AnimTask_AquaShowerLaunch, 5
 	playsewithpan SE_M_HEADBUTT, SOUND_PAN_ATTACKER
 	delay 44
 	playsewithpan SE_M_DIVE, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	delay 16
-	createvisualtask AnimTask_WaterSpoutRain, 5
+	createvisualtask AnimTask_AquaShowerRain, 5
 	playsewithpan SE_M_SURF, SOUND_PAN_TARGET
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff

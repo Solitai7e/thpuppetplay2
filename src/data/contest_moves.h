@@ -2577,7 +2577,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_WATER_SPOUT] =
+    [MOVE_AQUA_SHOWER] =
     {
         .effect = CONTEST_EFFECT_BETTER_WHEN_LATER,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,

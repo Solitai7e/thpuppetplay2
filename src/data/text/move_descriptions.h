@@ -1289,7 +1289,7 @@ static const u8 sDracoMeteorDescription[] = _(
     "Raises DEFENSE and SP. DEF\n"
     "with a mystic power.");
 
-static const u8 sWaterSpoutDescription[] = _(
+static const u8 sAquaShowerDescription[] = _(
     "Inflicts more damage if the\n"
     "user's HP is high.");
 
@@ -1742,7 +1742,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_NATURE_SOUND - 1] = sGrassWhistleDescription,
     [MOVE_TICKLE - 1] = sTickleDescription,
     [MOVE_DRACO_METEOR - 1] = sDracoMeteorDescription,
-    [MOVE_WATER_SPOUT - 1] = sWaterSpoutDescription,
+    [MOVE_AQUA_SHOWER - 1] = sAquaShowerDescription,
     [MOVE_SIGNAL_BEAM - 1] = sSignalBeamDescription,
     [MOVE_SHADOW_PUNCH - 1] = sShadowPunchDescription,
     [MOVE_EXTRASENSORY - 1] = sExtrasensoryDescription,
