@@ -1738,7 +1738,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_ADMEILING_1] = {
         .species = SPECIES_ADMEILING,
-        .moves = {MOVE_STOCKPILE, MOVE_SWALLOW, MOVE_SPIT_UP, MOVE_SLUDGE},
+        .moves = {MOVE_STOCKPILE, MOVE_SWALLOW, MOVE_MIRROR_SHOT, MOVE_SLUDGE},
         .itemTableId = BATTLE_FRONTIER_ITEM_LAX_INCENSE,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE,
         .nature = NATURE_QUIRKY

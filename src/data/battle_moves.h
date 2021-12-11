@@ -1388,7 +1388,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_RAGE] =
     {
-        .effect = EFFECT_SPIT_UP,
+        .effect = EFFECT_MIRROR_SHOT,
         .split = 0,
         .power = 60,
         .type = TYPE_DREAM,
@@ -3570,7 +3570,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
-    [MOVE_SPIT_UP] =
+    [MOVE_MIRROR_SHOT] =
     {
         .effect = EFFECT_ACCURACY_DOWN_HIT,
         .split = 0,

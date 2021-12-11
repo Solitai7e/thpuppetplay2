@@ -928,7 +928,7 @@ SECTIONS {
         sound/songs/se_m_flatter.o(.rodata);
         sound/songs/se_m_sand_tomb.o(.rodata);
         sound/songs/se_m_grasswhistle.o(.rodata);
-        sound/songs/se_m_spit_up.o(.rodata);
+        sound/songs/se_m_mirror_shot.o(.rodata);
         sound/songs/se_m_dive.o(.rodata);
         sound/songs/se_m_earthquake.o(.rodata);
         sound/songs/se_m_twister.o(.rodata);

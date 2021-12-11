@@ -71,8 +71,8 @@ static void AnimOrbitFast(struct Sprite *);
 static void AnimOrbitFast_Step(struct Sprite *);
 static void AnimOrbitScatter(struct Sprite *);
 static void AnimOrbitScatter_Step(struct Sprite *);
-static void AnimSpitUpOrb(struct Sprite *);
-static void AnimSpitUpOrb_Step(struct Sprite *sprite);
+static void AnimMirrorShotOrb(struct Sprite *);
+static void AnimMirrorShotOrb_Step(struct Sprite *sprite);
 static void AnimEyeSparkle(struct Sprite *);
 static void AnimEyeSparkle_Step(struct Sprite *sprite);
 static void AnimAngel(struct Sprite *);
@@ -985,27 +985,27 @@ const struct SpriteTemplate gChargeBeamOrbScatterSpriteTemplate =
     .callback = AnimOrbitScatter,
 };
 
-const union AffineAnimCmd gSpitUpOrbAffineAnimCmds[] =
+const union AffineAnimCmd gMirrorShotOrbAffineAnimCmds[] =
 {
     AFFINEANIMCMD_FRAME(0x80, 0x80, 0, 0),
     AFFINEANIMCMD_FRAME(0x8, 0x8, 0, 1),
     AFFINEANIMCMD_JUMP(1),
 };
 
-const union AffineAnimCmd *const gSpitUpOrbAffineAnimTable[] =
+const union AffineAnimCmd *const gMirrorShotOrbAffineAnimTable[] =
 {
-    gSpitUpOrbAffineAnimCmds,
+    gMirrorShotOrbAffineAnimCmds,
 };
 
-const struct SpriteTemplate gSpitUpOrbSpriteTemplate =
+const struct SpriteTemplate gMirrorShotOrbSpriteTemplate =
 {
     .tileTag = ANIM_TAG_RED_ORB_2,
     .paletteTag = ANIM_TAG_RED_ORB_2,
     .oam = &gOamData_AffineDouble_ObjNormal_8x8,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
-    .affineAnims = gSpitUpOrbAffineAnimTable,
-    .callback = AnimSpitUpOrb,
+    .affineAnims = gMirrorShotOrbAffineAnimTable,
+    .callback = AnimMirrorShotOrb,
 };
 
 const union AnimCmd gEyeSparkleAnimCmds[] =
@@ -3479,7 +3479,7 @@ static void AnimOrbitScatter_Step(struct Sprite *sprite)
         DestroyAnimSprite(sprite);
 }
 
-static void AnimSpitUpOrb_Step(struct Sprite *sprite)
+static void AnimMirrorShotOrb_Step(struct Sprite *sprite)
 {
     sprite->x2 += sprite->data[0];
     sprite->y2 += sprite->data[1];
@@ -3487,14 +3487,14 @@ static void AnimSpitUpOrb_Step(struct Sprite *sprite)
         DestroyAnimSprite(sprite);
 }
 
-static void AnimSpitUpOrb(struct Sprite *sprite)
+static void AnimMirrorShotOrb(struct Sprite *sprite)
 {
     sprite->x = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
     sprite->y = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
     sprite->data[0] = Sin(gBattleAnimArgs[0], 10);
     sprite->data[1] = Cos(gBattleAnimArgs[0], 7);
     sprite->data[2] = gBattleAnimArgs[1];
-    sprite->callback = AnimSpitUpOrb_Step;
+    sprite->callback = AnimMirrorShotOrb_Step;
 }
 
 static void AnimEyeSparkle_Step(struct Sprite *sprite)

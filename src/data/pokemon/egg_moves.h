@@ -672,7 +672,7 @@ const u16 gEggMoves[] = {
               MOVE_MUD_SPORT,
               MOVE_STOCKPILE,
               MOVE_SWALLOW,
-              MOVE_SPIT_UP),
+              MOVE_MIRROR_SHOT),
 
     egg_moves(CRIKAKO,
               MOVE_WHIRLWIND,
@@ -1105,7 +1105,7 @@ const u16 gEggMoves[] = {
               MOVE_WATER_SPORT,
               MOVE_STOCKPILE,
               MOVE_SWALLOW,
-              MOVE_SPIT_UP,
+              MOVE_MIRROR_SHOT,
               MOVE_YAWN,
               MOVE_ROCK_SLIDE,
               MOVE_CURSE,
@@ -1235,7 +1235,7 @@ const u16 gEggMoves[] = {
     egg_moves(TSATORI,
               MOVE_STOCKPILE,
               MOVE_SWALLOW,
-              MOVE_SPIT_UP,
+              MOVE_MIRROR_SHOT,
               MOVE_BODY_SLAM),
 
     egg_moves(DSATORI,

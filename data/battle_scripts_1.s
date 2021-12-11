@@ -178,7 +178,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectFakeOut                @ EFFECT_FAKE_OUT
 	.4byte BattleScript_EffectUproar                 @ EFFECT_UPROAR
 	.4byte BattleScript_EffectStockpile              @ EFFECT_STOCKPILE
-	.4byte BattleScript_EffectSpitUp                 @ EFFECT_SPIT_UP
+	.4byte BattleScript_EffectMirrorShot                 @ EFFECT_MIRROR_SHOT
 	.4byte BattleScript_EffectSwallow                @ EFFECT_SWALLOW
 	.4byte BattleScript_EffectHit                    @ EFFECT_UNUSED_A3
 	.4byte BattleScript_EffectHail                   @ EFFECT_HAIL
@@ -2089,27 +2089,27 @@ BattleScript_EffectStockpile::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectSpitUp::
+BattleScript_EffectMirrorShot::
 	attackcanceler
-	jumpifbyte CMP_EQUAL, cMISS_TYPE, B_MSG_PROTECTED, BattleScript_SpitUpFailProtect
+	jumpifbyte CMP_EQUAL, cMISS_TYPE, B_MSG_PROTECTED, BattleScript_MirrorShotFailProtect
 	attackstring
 	ppreduce
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
-	stockpiletobasedamage BattleScript_SpitUpFail
+	stockpiletobasedamage BattleScript_MirrorShotFail
 	typecalc
 	adjustsetdamage
 	goto BattleScript_HitFromAtkAnimation
-BattleScript_SpitUpFail::
+BattleScript_MirrorShotFail::
 	pause B_WAIT_TIME_SHORT
-	printstring STRINGID_FAILEDTOSPITUP
+	printstring STRINGID_FAILEDTOMIRRORSHOT
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
-BattleScript_SpitUpFailProtect::
+BattleScript_MirrorShotFailProtect::
 	attackstring
 	ppreduce
 	pause B_WAIT_TIME_LONG
-	stockpiletobasedamage BattleScript_SpitUpFail
+	stockpiletobasedamage BattleScript_MirrorShotFail
 	resultmessage
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd

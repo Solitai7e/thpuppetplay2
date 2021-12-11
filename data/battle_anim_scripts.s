@@ -271,7 +271,7 @@ gBattleAnims_Moves::
 	.4byte Move_FAKE_OUT
 	.4byte Move_UPROAR
 	.4byte Move_STOCKPILE
-	.4byte Move_SPIT_UP
+	.4byte Move_MIRROR_SHOT
 	.4byte Move_SWALLOW
 	.4byte Move_HEAT_WAVE
 	.4byte Move_HAIL
@@ -3769,7 +3769,7 @@ Move_YAWN:
 	playsewithpan SE_M_YAWN, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	createsprite gYawnCloudSpriteTemplate, ANIM_TARGET, 5, 2
-	playsewithpan SE_M_SPIT_UP, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_MIRROR_SHOT, SOUND_PAN_ATTACKER
 	delay 4
 	createsprite gYawnCloudSpriteTemplate, ANIM_TARGET, 5, 1
 	delay 4
@@ -8190,27 +8190,27 @@ StockpileAbsorb:
 	delay 1
 	return
 
-Move_SPIT_UP:
+Move_MIRROR_SHOT:
 	loadspritegfx ANIM_TAG_RED_ORB_2
 	loadspritegfx ANIM_TAG_IMPACT
 	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_SpitUpDeformMon, 5
+	createvisualtask AnimTask_MirrorShotDeformMon, 5
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 8, 2
 	delay 45
-	playsewithpan SE_M_SPIT_UP, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_MIRROR_SHOT, SOUND_PAN_ATTACKER
 	delay 3
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 0, 12
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 32, 12
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 64, 12
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 96, 12
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 128, 12
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 160, 12
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 192, 12
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 224, 12
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 0, 12
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 32, 12
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 64, 12
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 96, 12
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 128, 12
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 160, 12
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 192, 12
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 224, 12
 	delay 5
-	jumpifmoveturn 2, SpitUpStrong
-	jumpifmoveturn 3, SpitUpStrongest
-SpitUpContinue:
+	jumpifmoveturn 2, MirrorShotStrong
+	jumpifmoveturn 3, MirrorShotStrongest
+MirrorShotContinue:
 	delay 5
 	createvisualtask AnimTask_ShakeTargetBasedOnMovePowerOrDmg, 2, FALSE, 1, 8, 1, 0
 	playsewithpan SE_M_DOUBLE_SLAP, SOUND_PAN_TARGET
@@ -8220,22 +8220,22 @@ SpitUpContinue:
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 12, -10, ANIM_TARGET, 1
 	waitforvisualfinish
 	end
-SpitUpStrong:
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 16
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 80
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 144
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 208
-	goto SpitUpContinue
-SpitUpStrongest:
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 16
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 48
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 80
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 112
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 144
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 176
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 208
-	createsprite gSpitUpOrbSpriteTemplate, ANIM_ATTACKER, 2, 240
-	goto SpitUpContinue
+MirrorShotStrong:
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 16
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 80
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 144
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 208
+	goto MirrorShotContinue
+MirrorShotStrongest:
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 16
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 48
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 80
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 112
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 144
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 176
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 208
+	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 240
+	goto MirrorShotContinue
 
 Move_SWALLOW:
 	loadspritegfx ANIM_TAG_BLUE_ORB
@@ -8244,7 +8244,7 @@ Move_SWALLOW:
 	createvisualtask AnimTask_SwallowDeformMon, 5
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 8, 2
 	delay 38
-	playsewithpan SE_M_SPIT_UP, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_MIRROR_SHOT, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 2, 0, 12, 1
 	call SwallowEffect
 	jumpifmoveturn 2, SwallowGood

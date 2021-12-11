@@ -1017,7 +1017,7 @@ static const u8 sStockpileDescription[] = _(
     "Charges up power for up to\n"
     "3 turns.");
 
-static const u8 sSpitUpDescription[] = _(
+static const u8 sMirrorShotDescription[] = _(
     "Releases stockpiled power\n"
     "(the more the better).");
 
@@ -1674,7 +1674,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_FAKE_OUT - 1] = sFakeOutDescription,
     [MOVE_UPROAR - 1] = sUproarDescription,
     [MOVE_STOCKPILE - 1] = sStockpileDescription,
-    [MOVE_SPIT_UP - 1] = sSpitUpDescription,
+    [MOVE_MIRROR_SHOT - 1] = sMirrorShotDescription,
     [MOVE_SWALLOW - 1] = sSwallowDescription,
     [MOVE_HEAT_WAVE - 1] = sHeatWaveDescription,
     [MOVE_HAIL - 1] = sHailDescription,

@@ -184,8 +184,8 @@ AI_CheckBadMove_CheckEffect:
 	if_effect EFFECT_DEFENSE_CURL, AI_CBM_DefenseUp
 	if_effect EFFECT_FAKE_OUT, AI_CBM_FakeOut
 	if_effect EFFECT_STOCKPILE, AI_CBM_Stockpile
-	if_effect EFFECT_SPIT_UP, AI_CBM_SpitUpAndSwallow
-	if_effect EFFECT_SWALLOW, AI_CBM_SpitUpAndSwallow
+	if_effect EFFECT_MIRROR_SHOT, AI_CBM_MirrorShotAndSwallow
+	if_effect EFFECT_SWALLOW, AI_CBM_MirrorShotAndSwallow
 	if_effect EFFECT_HAIL, AI_CBM_Hail
 	if_effect EFFECT_TORMENT, AI_CBM_Torment
 	if_effect EFFECT_FLATTER, AI_CBM_Confuse
@@ -511,7 +511,7 @@ AI_CBM_Stockpile:
 	if_equal 3, Score_Minus10
 	end
 
-AI_CBM_SpitUpAndSwallow:
+AI_CBM_MirrorShotAndSwallow:
 	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
 	get_stockpile_count AI_USER
 	if_equal 0, Score_Minus10
@@ -739,7 +739,7 @@ AI_CheckViability:
 	if_effect EFFECT_SEMI_INVULNERABLE, AI_CV_SemiInvulnerable
 	if_effect EFFECT_SOFTBOILED, AI_CV_Heal
 	if_effect EFFECT_FAKE_OUT, AI_CV_FakeOut
-	if_effect EFFECT_SPIT_UP, AI_CV_SpitUp
+	if_effect EFFECT_MIRROR_SHOT, AI_CV_MirrorShot
 	if_effect EFFECT_SWALLOW, AI_CV_Heal
 	if_effect EFFECT_HAIL, AI_CV_Hail
 	if_effect EFFECT_FLATTER, AI_CV_Flatter
@@ -1726,7 +1726,7 @@ AI_CV_Encore_EncouragedMovesToEncore:
     .byte EFFECT_PSYCHO_CUT
     .byte EFFECT_FAKE_OUT
     .byte EFFECT_STOCKPILE
-    .byte EFFECT_SPIT_UP
+    .byte EFFECT_MIRROR_SHOT
     .byte EFFECT_SWALLOW
     .byte EFFECT_HAIL
     .byte EFFECT_TORMENT
@@ -2223,12 +2223,12 @@ AI_CV_FakeOut:
 	score +2
 	end
 
-AI_CV_SpitUp:
+AI_CV_MirrorShot:
 	get_stockpile_count AI_USER
-	if_less_than 2, AI_CV_SpitUp_End
-	if_random_less_than 80, AI_CV_SpitUp_End
+	if_less_than 2, AI_CV_MirrorShot_End
+	if_random_less_than 80, AI_CV_MirrorShot_End
 	score +2
-AI_CV_SpitUp_End:
+AI_CV_MirrorShot_End:
 	end
 
 AI_CV_Hail:

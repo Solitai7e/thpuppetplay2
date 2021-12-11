@@ -348,7 +348,7 @@ static const u8 sText_SunlightFaded[] = _("The sunlight faded.");
 static const u8 sText_StartedHail[] = _("It started to hail!");
 static const u8 sText_HailContinues[] = _("Hail continues to fall.");
 static const u8 sText_HailStopped[] = _("The hail stopped.");
-static const u8 sText_FailedToSpitUp[] = _("But it failed to SPIT UP\na thing!");
+static const u8 sText_FailedToMirrorShot[] = _("But it failed to SPIT UP\na thing!");
 static const u8 sText_FailedToSwallow[] = _("But it failed to SWALLOW\na thing!");
 static const u8 sText_WindBecameHeatWave[] = _("The wind turned into a\nHEAT WAVE!");
 static const u8 sText_StatChangesGone[] = _("All stat changes were\neliminated!");
@@ -750,7 +750,7 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_STARTEDHAIL - 12] = sText_StartedHail,
     [STRINGID_HAILCONTINUES - 12] = sText_HailContinues,
     [STRINGID_HAILSTOPPED - 12] = sText_HailStopped,
-    [STRINGID_FAILEDTOSPITUP - 12] = sText_FailedToSpitUp,
+    [STRINGID_FAILEDTOMIRRORSHOT - 12] = sText_FailedToMirrorShot,
     [STRINGID_FAILEDTOSWALLOW - 12] = sText_FailedToSwallow,
     [STRINGID_WINDBECAMEHEATWAVE - 12] = sText_WindBecameHeatWave,
     [STRINGID_STATCHANGESGONE - 12] = sText_StatChangesGone,
@@ -1467,7 +1467,7 @@ static const u16 sGrammarMoveUsedTable[] =
     MOVE_CONSTRICT, MOVE_POISON_GAS, MOVE_BUBBLE,
     MOVE_SLASH, MOVE_SPIDER_WEB, MOVE_NIGHTMARE, MOVE_CURSE,
     MOVE_FORESIGHT, MOVE_CHARM, MOVE_ATTRACT, MOVE_ROCK_SMASH,
-    MOVE_UPROAR, MOVE_SPIT_UP, MOVE_SWALLOW, MOVE_TORMENT,
+    MOVE_UPROAR, MOVE_MIRROR_SHOT, MOVE_SWALLOW, MOVE_TORMENT,
     MOVE_FLATTER, MOVE_ROLE_PLAY, MOVE_ENDEAVOR, MOVE_TICKLE,
     MOVE_COVET, 0
 };

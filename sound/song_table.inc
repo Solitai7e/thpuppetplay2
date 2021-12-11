@@ -233,7 +233,7 @@ gSongTable::
 	song se_m_flatter, 1, 1
 	song se_m_sand_tomb, 1, 1
 	song se_m_grasswhistle, 1, 1
-	song se_m_spit_up, 1, 1
+	song se_m_mirror_shot, 1, 1
 	song se_m_dive, 1, 1
 	song se_m_earthquake, 2, 2
 	song se_m_twister, 2, 2
