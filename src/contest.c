@@ -4518,7 +4518,7 @@ static void CalculateAppealMoveImpact(u8 contestant)
         eContestExcitement.excitementAppealBonus = 0;
     }
 
-    // Transform and Role Play require a visible target mon
+    // Transform and Recollection require a visible target mon
     // so randomly choose a contestant to be the "target"
     rnd = Random() % (CONTESTANT_COUNT - 1);
     for (i = 0; i < CONTESTANT_COUNT; i++)
@@ -5320,7 +5320,7 @@ static void SetMoveSpecificAnimData(u8 contestant)
             gAnimMoveTurn = 1;
         break;
     case MOVE_TRANSFORM:
-    case MOVE_ROLE_PLAY:
+    case MOVE_RECOLLECTION:
         targetContestant = eContestantStatus[contestant].contestantAnimTarget;
         gContestResources->moveAnim->targetSpecies = SanitizeSpecies(gContestMons[targetContestant].species);
         gContestResources->moveAnim->targetPersonality = gContestMons[targetContestant].personality;

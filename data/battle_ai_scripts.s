@@ -748,7 +748,7 @@ AI_CheckViability:
 	if_effect EFFECT_FOCUS_PUNCH, AI_CV_FocusPunch
 	if_effect EFFECT_SMELLINGSALT, AI_CV_SmellingSalt
 	if_effect EFFECT_TRICK, AI_CV_Trick
-	if_effect EFFECT_ROLE_PLAY, AI_CV_ChangeSelfAbility
+	if_effect EFFECT_RECOLLECTION, AI_CV_ChangeSelfAbility
 	if_effect EFFECT_SUPERPOWER, AI_CV_Superpower
 	if_effect EFFECT_MAGIC_COAT, AI_CV_MagicCoat
 	if_effect EFFECT_RECYCLE, AI_CV_Recycle
@@ -1734,7 +1734,7 @@ AI_CV_Encore_EncouragedMovesToEncore:
     .byte EFFECT_FOLLOW_ME
     .byte EFFECT_CHARGE
     .byte EFFECT_TRICK
-    .byte EFFECT_ROLE_PLAY
+    .byte EFFECT_RECOLLECTION
     .byte EFFECT_INGRAIN
     .byte EFFECT_RECYCLE
     .byte EFFECT_KNOCK_OFF

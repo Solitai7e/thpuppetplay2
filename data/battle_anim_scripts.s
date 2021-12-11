@@ -288,7 +288,7 @@ gBattleAnims_Moves::
 	.4byte Move_TAUNT
 	.4byte Move_HELPING_HAND
 	.4byte Move_TRICK
-	.4byte Move_ROLE_PLAY
+	.4byte Move_RECOLLECTION
 	.4byte Move_WISH
 	.4byte Move_ASSIST
 	.4byte Move_INGRAIN
@@ -8447,14 +8447,14 @@ CreateFlatterConfetti:
 	createsprite gFlatterConfettiSpriteTemplate, ANIM_ATTACKER, 40, ANIM_TARGET
 	return
 
-Move_ROLE_PLAY:
+Move_RECOLLECTION:
 	monbg ANIM_ATK_PARTNER
 	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 2, 0, 16, RGB_WHITE
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 2, 0, 10, RGB_BLACK
 	waitforvisualfinish
 	playsewithpan SE_M_TRI_ATTACK, SOUND_PAN_ATTACKER
 	waitplaysewithpan SE_M_DETECT, SOUND_PAN_ATTACKER, 30
-	createvisualtask AnimTask_RolePlaySilhouette, 2
+	createvisualtask AnimTask_RecollectionSilhouette, 2
 	waitforvisualfinish
 	clearmonbg ANIM_ATK_PARTNER
 	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 2, 16, 0, RGB_WHITE

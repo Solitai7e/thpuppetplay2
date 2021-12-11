@@ -1085,7 +1085,7 @@ static const u8 sTrickDescription[] = _(
     "Tricks the foe into trading\n"
     "held items.");
 
-static const u8 sRolePlayDescription[] = _(
+static const u8 sRecollectionDescription[] = _(
     "Mimics the target and\n"
     "copies its special ability.");
 
@@ -1691,7 +1691,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_TAUNT - 1] = sTauntDescription,
     [MOVE_HELPING_HAND - 1] = sHelpingHandDescription,
     [MOVE_TRICK - 1] = sTrickDescription,
-    [MOVE_ROLE_PLAY - 1] = sRolePlayDescription,
+    [MOVE_RECOLLECTION - 1] = sRecollectionDescription,
     [MOVE_WISH - 1] = sWishDescription,
     [MOVE_ASSIST - 1] = sAssistDescription,
     [MOVE_INGRAIN - 1] = sIngrainDescription,

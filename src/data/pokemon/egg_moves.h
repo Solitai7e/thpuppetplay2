@@ -310,7 +310,7 @@ const u16 gEggMoves[] = {
     egg_moves(CSAKUYA,
               MOVE_BARRIER,
               MOVE_ASSIST,
-              MOVE_ROLE_PLAY,
+              MOVE_RECOLLECTION,
               MOVE_FIRE_PUNCH,
               MOVE_THUNDER_PUNCH,
               MOVE_ICE_PUNCH),

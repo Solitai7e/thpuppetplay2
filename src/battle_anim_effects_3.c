@@ -103,8 +103,8 @@ static void TormentAttacker_Step(u8);
 static void TormentAttacker_Callback(struct Sprite *);
 static void AnimTask_RockMonBackAndForth_Step(u8);
 static void AnimTask_FlailMovement_Step(u8);
-static void AnimTask_RolePlaySilhouette_Step1(u8);
-static void AnimTask_RolePlaySilhouette_Step2(u8);
+static void AnimTask_RecollectionSilhouette_Step1(u8);
+static void AnimTask_RecollectionSilhouette_Step2(u8);
 static void AnimTask_Disperse_Step(u8);
 static void AnimTask_DeepInhale_Step(u8);
 static void AnimTask_SquishAndSweatDroplets_Step(u8);
@@ -3175,7 +3175,7 @@ static void AnimReversalOrb_Step(struct Sprite *sprite)
 }
 
 // Copies the target mon's sprite, and makes a white silhouette that shrinks away.
-void AnimTask_RolePlaySilhouette(u8 taskId)
+void AnimTask_RecollectionSilhouette(u8 taskId)
 {
     u8 isBackPic;
     u32 personality;
@@ -3252,10 +3252,10 @@ void AnimTask_RolePlaySilhouette(u8 taskId)
     SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(gTasks[taskId].data[1], 16 - gTasks[taskId].data[1]));
 
     gTasks[taskId].data[0] = spriteId;
-    gTasks[taskId].func = AnimTask_RolePlaySilhouette_Step1;
+    gTasks[taskId].func = AnimTask_RecollectionSilhouette_Step1;
 }
 
-static void AnimTask_RolePlaySilhouette_Step1(u8 taskId)
+static void AnimTask_RecollectionSilhouette_Step1(u8 taskId)
 {
     if (gTasks[taskId].data[10]++ > 1)
     {
@@ -3266,12 +3266,12 @@ static void AnimTask_RolePlaySilhouette_Step1(u8 taskId)
         {
             gTasks[taskId].data[10] = 256;
             gTasks[taskId].data[11] = 256;
-            gTasks[taskId].func = AnimTask_RolePlaySilhouette_Step2;
+            gTasks[taskId].func = AnimTask_RecollectionSilhouette_Step2;
         }
     }
 }
 
-static void AnimTask_RolePlaySilhouette_Step2(u8 taskId)
+static void AnimTask_RecollectionSilhouette_Step2(u8 taskId)
 {
     u8 spriteId = gTasks[taskId].data[0];
     gTasks[taskId].data[10] -= 16;

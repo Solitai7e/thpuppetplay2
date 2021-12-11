@@ -195,7 +195,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectTaunt                  @ EFFECT_TAUNT
 	.4byte BattleScript_EffectHelpingHand            @ EFFECT_HELPING_HAND
 	.4byte BattleScript_EffectTrick                  @ EFFECT_TRICK
-	.4byte BattleScript_EffectRolePlay               @ EFFECT_ROLE_PLAY
+	.4byte BattleScript_EffectRecollection               @ EFFECT_RECOLLECTION
 	.4byte BattleScript_EffectWish                   @ EFFECT_WISH
 	.4byte BattleScript_EffectAssist                 @ EFFECT_ASSIST
 	.4byte BattleScript_EffectIngrain                @ EFFECT_INGRAIN
@@ -2340,7 +2340,7 @@ BattleScript_EffectTrick::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectRolePlay::
+BattleScript_EffectRecollection::
 	attackcanceler
 	attackstring
 	ppreduce
