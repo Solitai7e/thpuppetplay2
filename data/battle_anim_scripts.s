@@ -348,7 +348,7 @@ gBattleAnims_Moves::
 	.4byte Move_SHEER_COLD
 	.4byte Move_MUDDY_WATER
 	.4byte Move_BULLET_SEED
-	.4byte Move_AERIAL_ACE
+	.4byte Move_BLADE_FLASH
 	.4byte Move_ICICLE_SPEAR
 	.4byte Move_IRON_DEFENSE
 	.4byte Move_BLOCK
@@ -4340,7 +4340,7 @@ Move_EXTRASENSORY:
 	call UnsetPsychicBackground
 	end
 
-Move_AERIAL_ACE:
+Move_BLADE_FLASH:
 	loadspritegfx ANIM_TAG_CUT
 	monbg ANIM_TARGET
 	setalpha 12, 8

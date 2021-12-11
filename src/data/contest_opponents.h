@@ -342,7 +342,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_WING_ATTACK,
             MOVE_AGILITY,
-            MOVE_AERIAL_ACE,
+            MOVE_BLADE_FLASH,
             MOVE_GROWL
         },
         .cool = 1,
@@ -706,7 +706,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_MIRROR_MOVE,
             MOVE_QUICK_ATTACK,
-            MOVE_AERIAL_ACE,
+            MOVE_BLADE_FLASH,
             MOVE_ROOST
         },
         .cool = 10,
@@ -1657,7 +1657,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_AGILITY,
-            MOVE_AERIAL_ACE,
+            MOVE_BLADE_FLASH,
             MOVE_WING_ATTACK,
             MOVE_FLY
         },
@@ -2889,7 +2889,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_THRASH,
-            MOVE_AERIAL_ACE,
+            MOVE_BLADE_FLASH,
             MOVE_FAKE_TEARS,
             MOVE_LEER
         },

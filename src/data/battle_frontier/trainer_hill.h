@@ -1618,7 +1618,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_APATCHOULI,
                         .heldItem = ITEM_WHITE_HERB,
-                        .moves = {MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_SWEET_SCENT, MOVE_AERIAL_ACE},
+                        .moves = {MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_SWEET_SCENT, MOVE_BLADE_FLASH},
                         .level = 0,
                         .ppBonuses = 0,
                         .attackEV = 120,
@@ -2149,7 +2149,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_CKOAKUMA,
                                             .heldItem = ITEM_BRIGHT_POWDER,
-                                            .moves = {MOVE_ROOST, MOVE_AERIAL_ACE, MOVE_ATTRACT, MOVE_NONE},
+                                            .moves = {MOVE_ROOST, MOVE_BLADE_FLASH, MOVE_ATTRACT, MOVE_NONE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 85,
@@ -2174,7 +2174,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_TIKU,
                                             .heldItem = ITEM_BRIGHT_POWDER,
-                                            .moves = {MOVE_DRAGON_DANCE, MOVE_AERIAL_ACE, MOVE_ATTRACT, MOVE_NONE},
+                                            .moves = {MOVE_DRAGON_DANCE, MOVE_BLADE_FLASH, MOVE_ATTRACT, MOVE_NONE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 85,
@@ -3282,7 +3282,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_YUUGENMAGAN,
                                             .heldItem = ITEM_BRIGHT_POWDER,
-                                            .moves = {MOVE_SKY_ATTACK, MOVE_AERIAL_ACE, MOVE_ROAR, MOVE_SUNNY_DAY},
+                                            .moves = {MOVE_SKY_ATTACK, MOVE_BLADE_FLASH, MOVE_ROAR, MOVE_SUNNY_DAY},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .speedEV = 255,
@@ -3348,7 +3348,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_DICHIRIN,
                                             .heldItem = ITEM_SCOPE_LENS,
-                                            .moves = {MOVE_EARTHQUAKE, MOVE_SHADOW_BALL, MOVE_AERIAL_ACE, MOVE_IMPRISON},
+                                            .moves = {MOVE_EARTHQUAKE, MOVE_SHADOW_BALL, MOVE_BLADE_FLASH, MOVE_IMPRISON},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 252,
@@ -4075,7 +4075,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_TAYA,
                                             .heldItem = ITEM_LEFTOVERS,
-                                            .moves = {MOVE_SURF, MOVE_CONFUSE_RAY, MOVE_ATTRACT, MOVE_AERIAL_ACE},
+                                            .moves = {MOVE_SURF, MOVE_CONFUSE_RAY, MOVE_ATTRACT, MOVE_BLADE_FLASH},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 255,
@@ -4235,7 +4235,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_KONNGARA,
                                             .heldItem = ITEM_NEVER_MELT_ICE,
-                                            .moves = {MOVE_BLIZZARD, MOVE_SHEER_COLD, MOVE_MIST, MOVE_AERIAL_ACE},
+                                            .moves = {MOVE_BLIZZARD, MOVE_SHEER_COLD, MOVE_MIST, MOVE_BLADE_FLASH},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 255,
@@ -4356,7 +4356,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_HMYSTIA,
                                             .heldItem = ITEM_QUICK_CLAW,
-                                            .moves = {MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_BRICK_BREAK, MOVE_AERIAL_ACE},
+                                            .moves = {MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_BRICK_BREAK, MOVE_BLADE_FLASH},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 252,
@@ -4634,7 +4634,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_ATOKIKO,
                                             .heldItem = ITEM_LEFTOVERS,
-                                            .moves = {MOVE_AERIAL_ACE, MOVE_AGILITY, MOVE_FACADE, MOVE_ATTRACT},
+                                            .moves = {MOVE_BLADE_FLASH, MOVE_AGILITY, MOVE_FACADE, MOVE_ATTRACT},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 252,
@@ -5000,7 +5000,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_MEIRA,
                                             .heldItem = ITEM_KINGS_ROCK,
-                                            .moves = {MOVE_CHARMING_LOOK, MOVE_CONFUSE_RAY, MOVE_AERIAL_ACE, MOVE_TOXIC},
+                                            .moves = {MOVE_CHARMING_LOOK, MOVE_CONFUSE_RAY, MOVE_BLADE_FLASH, MOVE_TOXIC},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 250,
@@ -5419,7 +5419,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_YOSHIKA,
                                             .heldItem = ITEM_SHELL_BELL,
-                                            .moves = {MOVE_ROCK_SLIDE, MOVE_FLAMETHROWER, MOVE_DRAGON_CLAW, MOVE_AERIAL_ACE},
+                                            .moves = {MOVE_ROCK_SLIDE, MOVE_FLAMETHROWER, MOVE_DRAGON_CLAW, MOVE_BLADE_FLASH},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .attackEV = 255,

@@ -2649,7 +2649,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_GROWTH},
     },
 
-    [MOVE_AERIAL_ACE] =
+    [MOVE_BLADE_FLASH] =
     {
         .effect = CONTEST_EFFECT_BETTER_IF_FIRST,
         .contestCategory = CONTEST_CATEGORY_COOL,

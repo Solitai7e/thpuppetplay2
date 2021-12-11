@@ -3,7 +3,7 @@
 const u16 gEasyChatGroup_Move2[] = {
     MOVE_ACID,
     MOVE_DISPERSE,
-    MOVE_AERIAL_ACE,
+    MOVE_BLADE_FLASH,
     MOVE_AMNESIA,
     MOVE_FORCE_PALM,
     MOVE_ASSIST,

@@ -1325,7 +1325,7 @@ static const u8 sBulletSeedDescription[] = _(
     "Shoots 2 to 5 seeds in a row\n"
     "to strike the foe.");
 
-static const u8 sAerialAceDescription[] = _(
+static const u8 sBladeFlashDescription[] = _(
     "An extremely speedy and\n"
     "unavoidable attack.");
 
@@ -1751,7 +1751,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SHEER_COLD - 1] = sSheerColdDescription,
     [MOVE_MUDDY_WATER - 1] = sMuddyWaterDescription,
     [MOVE_BULLET_SEED - 1] = sBulletSeedDescription,
-    [MOVE_AERIAL_ACE - 1] = sAerialAceDescription,
+    [MOVE_BLADE_FLASH - 1] = sBladeFlashDescription,
     [MOVE_ICICLE_SPEAR - 1] = sIcicleSpearDescription,
     [MOVE_IRON_DEFENSE - 1] = sIronDefenseDescription,
     [MOVE_BLOCK - 1] = sBlockDescription,

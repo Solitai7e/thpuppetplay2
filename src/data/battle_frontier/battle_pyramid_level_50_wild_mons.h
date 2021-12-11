@@ -184,7 +184,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round4[] =
         .species = SPECIES_SMEDICINE,
         .lvl = 44,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_BITE, MOVE_AERIAL_ACE, MOVE_SHADOW_BALL, MOVE_PROTECT}
+        .moves = {MOVE_BITE, MOVE_BLADE_FLASH, MOVE_SHADOW_BALL, MOVE_PROTECT}
     },
     {
         .species = SPECIES_ADCIRNO,
@@ -502,7 +502,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round10[] =
         .species = SPECIES_DARKALICE,
         .lvl = 44,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_ANCIENT_POWER, MOVE_PROTECT, MOVE_AERIAL_ACE, MOVE_NONE}
+        .moves = {MOVE_ANCIENT_POWER, MOVE_PROTECT, MOVE_BLADE_FLASH, MOVE_NONE}
     },
     {
         .species = SPECIES_ADRAN,
@@ -680,7 +680,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round14[] =
         .species = SPECIES_ADMYSTIA,
         .lvl = 42,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_NIGHT_SHADE, MOVE_PSYCHIC, MOVE_AERIAL_ACE, MOVE_NONE}
+        .moves = {MOVE_NIGHT_SHADE, MOVE_PSYCHIC, MOVE_BLADE_FLASH, MOVE_NONE}
     },
     {
         .species = SPECIES_ARUMIA,
@@ -698,7 +698,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round14[] =
         .species = SPECIES_ZOMBIEFAIRY,
         .lvl = 46,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_EXPLOSION, MOVE_SHADOW_BALL, MOVE_AERIAL_ACE, MOVE_GIGA_DRAIN}
+        .moves = {MOVE_EXPLOSION, MOVE_SHADOW_BALL, MOVE_BLADE_FLASH, MOVE_GIGA_DRAIN}
     },
     {
         .species = SPECIES_TNUE,
@@ -998,7 +998,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round20[] =
         .species = SPECIES_ATOKIKO,
         .lvl = 42,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_AERIAL_ACE, MOVE_HYPER_BEAM, MOVE_TOXIC, MOVE_NONE}
+        .moves = {MOVE_BLADE_FLASH, MOVE_HYPER_BEAM, MOVE_TOXIC, MOVE_NONE}
     },
     {
         .species = SPECIES_HMYSTIA,
