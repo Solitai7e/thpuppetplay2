@@ -228,7 +228,7 @@ gBattleAnims_Moves::
 	.4byte Move_SPARK
 	.4byte Move_FURY_CUTTER
 	.4byte Move_STEEL_WING
-	.4byte Move_MEAN_LOOK
+	.4byte Move_CHARMING_LOOK
 	.4byte Move_ATTRACT
 	.4byte Move_SLEEP_TALK
 	.4byte Move_HEAL_BELL
@@ -2079,14 +2079,14 @@ Move_LOCK_ON:
 	waitforvisualfinish
 	end
 
-Move_MEAN_LOOK:
+Move_CHARMING_LOOK:
 	loadspritegfx ANIM_TAG_EYE
 	monbg ANIM_DEF_PARTNER
 	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 16, RGB_BLACK
 	loopsewithpan SE_M_CONFUSE_RAY, SOUND_PAN_TARGET, 15, 4
 	waitplaysewithpan SE_M_LEER, SOUND_PAN_TARGET, 85
-	createsprite gMeanLookEyeSpriteTemplate, ANIM_ATTACKER, 2
+	createsprite gCharmingLookEyeSpriteTemplate, ANIM_ATTACKER, 2
 	delay 120
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 2, 16, 0, RGB_BLACK
 	delay 30

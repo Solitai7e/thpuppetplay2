@@ -123,7 +123,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHit                    @ EFFECT_QUICK_ATTACK
 	.4byte BattleScript_EffectTripleKick             @ EFFECT_TRIPLE_KICK
 	.4byte BattleScript_EffectThief                  @ EFFECT_THIEF
-	.4byte BattleScript_EffectMeanLook               @ EFFECT_MEAN_LOOK
+	.4byte BattleScript_EffectCharmingLook               @ EFFECT_CHARMING_LOOK
 	.4byte BattleScript_EffectNightmare              @ EFFECT_NIGHTMARE
 	.4byte BattleScript_EffectMinimize               @ EFFECT_MINIMIZE
 	.4byte BattleScript_EffectCurse                  @ EFFECT_CURSE
@@ -1439,7 +1439,7 @@ BattleScript_EffectThief::
 	setmoveeffect MOVE_EFFECT_STEAL_ITEM
 	goto BattleScript_EffectHit
 
-BattleScript_EffectMeanLook::
+BattleScript_EffectCharmingLook::
 	attackcanceler
 	attackstring
 	ppreduce

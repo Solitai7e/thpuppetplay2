@@ -674,7 +674,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_JAMMING] =
     {
-        .effect = EFFECT_MEAN_LOOK,
+        .effect = EFFECT_CHARMING_LOOK,
         .split = 0,
         .power = 0,
         .type = TYPE_DARK,
@@ -2968,7 +2968,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_MEAN_LOOK] =
+    [MOVE_CHARMING_LOOK] =
     {
         .effect = EFFECT_TAUNT,
         .split = 0,
@@ -4692,7 +4692,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_BLOCK] =
     {
-        .effect = EFFECT_MEAN_LOOK,
+        .effect = EFFECT_CHARMING_LOOK,
         .split = 0,
         .power = 0,
         .type = TYPE_HEART,

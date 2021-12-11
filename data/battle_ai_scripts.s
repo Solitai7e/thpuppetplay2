@@ -156,7 +156,7 @@ AI_CheckBadMove_CheckEffect:
 	if_effect EFFECT_SNORE, AI_CBM_DamageDuringSleep
 	if_effect EFFECT_SLEEP_TALK, AI_CBM_DamageDuringSleep
 	if_effect EFFECT_FLAIL, AI_CBM_HighRiskForDamage
-	if_effect EFFECT_MEAN_LOOK, AI_CBM_CantEscape
+	if_effect EFFECT_CHARMING_LOOK, AI_CBM_CantEscape
 	if_effect EFFECT_NIGHTMARE, AI_CBM_Nightmare
 	if_effect EFFECT_MINIMIZE, AI_CBM_EvasionUp
 	if_effect EFFECT_CURSE, AI_CBM_Curse
@@ -718,7 +718,7 @@ AI_CheckViability:
 	if_effect EFFECT_FLAIL, AI_CV_Flail
 	if_effect EFFECT_HEAL_BELL, AI_CV_HealBell
 	if_effect EFFECT_THIEF, AI_CV_Thief
-	if_effect EFFECT_MEAN_LOOK, AI_CV_Trap
+	if_effect EFFECT_CHARMING_LOOK, AI_CV_Trap
 	if_effect EFFECT_MINIMIZE, AI_CV_EvasionUp
 	if_effect EFFECT_CURSE, AI_CV_Curse
 	if_effect EFFECT_PROTECT, AI_CV_Protect
@@ -1708,7 +1708,7 @@ AI_CV_Encore_EncouragedMovesToEncore:
     .byte EFFECT_CONVERSION_2
     .byte EFFECT_LOCK_ON
     .byte EFFECT_HEAL_BELL
-    .byte EFFECT_MEAN_LOOK
+    .byte EFFECT_CHARMING_LOOK
     .byte EFFECT_NIGHTMARE
     .byte EFFECT_PROTECT
     .byte EFFECT_SKILL_SWAP

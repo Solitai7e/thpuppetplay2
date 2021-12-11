@@ -998,7 +998,7 @@ const u16 gEasyChatWordsByLetter_M[] = {
     EC_WORD_MC,
     EC_WORD_ME,
     EC_WORD_MEAN,
-    EC_MOVE(MEAN_LOOK),
+    EC_MOVE(CHARMING_LOOK),
     EC_POKEMON(HKEINE),
     EC_MOVE2(MEDITATE),
     EC_POKEMON(AYUUGI),

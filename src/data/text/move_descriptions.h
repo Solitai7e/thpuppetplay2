@@ -845,7 +845,7 @@ static const u8 sSteelWingDescription[] = _(
     "Strikes the foe with hard\n"
     "wings spread wide.");
 
-static const u8 sMeanLookDescription[] = _(
+static const u8 sCharmingLookDescription[] = _(
     "Fixes the foe with a mean\n"
     "look that prevents escape.");
 
@@ -1631,7 +1631,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SPARK - 1] = sSparkDescription,
     [MOVE_FURY_CUTTER - 1] = sFuryCutterDescription,
     [MOVE_STEEL_WING - 1] = sSteelWingDescription,
-    [MOVE_MEAN_LOOK - 1] = sMeanLookDescription,
+    [MOVE_CHARMING_LOOK - 1] = sCharmingLookDescription,
     [MOVE_ATTRACT - 1] = sAttractDescription,
     [MOVE_SLEEP_TALK - 1] = sSleepTalkDescription,
     [MOVE_HEAL_BELL - 1] = sHealBellDescription,

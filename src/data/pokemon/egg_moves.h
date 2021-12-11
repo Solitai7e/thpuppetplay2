@@ -277,7 +277,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(CHINA,
               MOVE_HAZE,
-              MOVE_MEAN_LOOK,
+              MOVE_CHARMING_LOOK,
               MOVE_LICK,
               MOVE_IMPRISON,
               MOVE_CURSE,
@@ -1289,7 +1289,7 @@ const u16 gEggMoves[] = {
     egg_moves(TENMA,
               MOVE_DISABLE,
               MOVE_WILL_O_WISP,
-              MOVE_MEAN_LOOK,
+              MOVE_CHARMING_LOOK,
               MOVE_MEMENTO,
               MOVE_DESTINY_BOND),
 

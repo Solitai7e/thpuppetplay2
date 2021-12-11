@@ -565,7 +565,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_HAZE,
-            MOVE_MEAN_LOOK,
+            MOVE_CHARMING_LOOK,
             MOVE_CONFUSE_RAY,
             MOVE_LEECH_LIFE
         },
@@ -1545,7 +1545,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_PERISH_SONG,
-            MOVE_MEAN_LOOK,
+            MOVE_CHARMING_LOOK,
             MOVE_CONFUSE_RAY,
             MOVE_PAIN_SPLIT
         },
@@ -2440,7 +2440,7 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = TRUE,
         .moves =
         {
-            MOVE_MEAN_LOOK,
+            MOVE_CHARMING_LOOK,
             MOVE_FAINT_ATTACK,
             MOVE_KNOCK_OFF,
             MOVE_CONFUSE_RAY
@@ -2777,7 +2777,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_PERISH_SONG,
-            MOVE_MEAN_LOOK,
+            MOVE_CHARMING_LOOK,
             MOVE_LOVELY_KISS,
             MOVE_FAKE_TEARS
         },

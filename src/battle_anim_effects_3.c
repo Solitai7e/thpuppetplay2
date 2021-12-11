@@ -31,11 +31,11 @@ static void AnimWhiteHalo(struct Sprite *);
 static void AnimWhiteHalo_Step1(struct Sprite *);
 static void AnimWhiteHalo_Step2(struct Sprite *);
 static void AnimTealAlert(struct Sprite *);
-static void AnimMeanLookEye(struct Sprite *);
-static void AnimMeanLookEye_Step1(struct Sprite *);
-static void AnimMeanLookEye_Step2(struct Sprite *);
-static void AnimMeanLookEye_Step3(struct Sprite *);
-static void AnimMeanLookEye_Step4(struct Sprite *);
+static void AnimCharmingLookEye(struct Sprite *);
+static void AnimCharmingLookEye_Step1(struct Sprite *);
+static void AnimCharmingLookEye_Step2(struct Sprite *);
+static void AnimCharmingLookEye_Step3(struct Sprite *);
+static void AnimCharmingLookEye_Step4(struct Sprite *);
 static void AnimSpikes(struct Sprite *);
 static void AnimSpikes_Step1(struct Sprite *);
 static void AnimSpikes_Step2(struct Sprite *);
@@ -215,7 +215,7 @@ const struct SpriteTemplate gTealAlertSpriteTemplate =
     .callback = AnimTealAlert,
 };
 
-const union AffineAnimCmd gMeanLookEyeAffineAnimCmds1[] =
+const union AffineAnimCmd gCharmingLookEyeAffineAnimCmds1[] =
 {
     AFFINEANIMCMD_FRAME(0x180, 0x180, 0, 0),
     AFFINEANIMCMD_FRAME(-0x20, 0x18, 0, 5),
@@ -223,28 +223,28 @@ const union AffineAnimCmd gMeanLookEyeAffineAnimCmds1[] =
     AFFINEANIMCMD_JUMP(1),
 };
 
-const union AffineAnimCmd gMeanLookEyeAffineAnimCmds2[] =
+const union AffineAnimCmd gCharmingLookEyeAffineAnimCmds2[] =
 {
     AFFINEANIMCMD_FRAME(0x30, 0x30, 0, 0),
     AFFINEANIMCMD_FRAME(0x20, 0x20, 0, 6),
     AFFINEANIMCMD_END,
 };
 
-const union AffineAnimCmd *const gMeanLookEyeAffineAnimTable[] =
+const union AffineAnimCmd *const gCharmingLookEyeAffineAnimTable[] =
 {
-    gMeanLookEyeAffineAnimCmds1,
-    gMeanLookEyeAffineAnimCmds2,
+    gCharmingLookEyeAffineAnimCmds1,
+    gCharmingLookEyeAffineAnimCmds2,
 };
 
-const struct SpriteTemplate gMeanLookEyeSpriteTemplate =
+const struct SpriteTemplate gCharmingLookEyeSpriteTemplate =
 {
     .tileTag = ANIM_TAG_EYE,
     .paletteTag = ANIM_TAG_EYE,
     .oam = &gOamData_AffineDouble_ObjBlend_64x64,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
-    .affineAnims = gMeanLookEyeAffineAnimTable,
-    .callback = AnimMeanLookEye,
+    .affineAnims = gCharmingLookEyeAffineAnimTable,
+    .callback = AnimCharmingLookEye,
 };
 
 const struct SpriteTemplate gSpikesSpriteTemplate =
@@ -1266,15 +1266,15 @@ static void AnimTealAlert(struct Sprite *sprite)
     StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
 }
 
-static void AnimMeanLookEye(struct Sprite *sprite)
+static void AnimCharmingLookEye(struct Sprite *sprite)
 {
     SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT2_ALL | BLDCNT_EFFECT_BLEND);
     SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(0, 16));
     sprite->data[0] = 4;
-    sprite->callback = AnimMeanLookEye_Step1;
+    sprite->callback = AnimCharmingLookEye_Step1;
 }
 
-static void AnimMeanLookEye_Step1(struct Sprite *sprite)
+static void AnimCharmingLookEye_Step1(struct Sprite *sprite)
 {
     SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(sprite->data[0], 16 - sprite->data[0]));
 
@@ -1294,22 +1294,22 @@ static void AnimMeanLookEye_Step1(struct Sprite *sprite)
         sprite->data[2] = 0;
         sprite->invisible = TRUE;
         sprite->affineAnimPaused = 1;
-        sprite->callback = AnimMeanLookEye_Step2;
+        sprite->callback = AnimCharmingLookEye_Step2;
     }
 }
 
-static void AnimMeanLookEye_Step2(struct Sprite *sprite)
+static void AnimCharmingLookEye_Step2(struct Sprite *sprite)
 {
     if (sprite->data[2]++ > 9)
     {
         sprite->invisible = FALSE;
         sprite->affineAnimPaused = 0;
         if (sprite->affineAnimEnded)
-            sprite->callback = AnimMeanLookEye_Step3;
+            sprite->callback = AnimCharmingLookEye_Step3;
     }
 }
 
-static void AnimMeanLookEye_Step3(struct Sprite *sprite)
+static void AnimCharmingLookEye_Step3(struct Sprite *sprite)
 {
     switch (sprite->data[3])
     {
@@ -1344,11 +1344,11 @@ static void AnimMeanLookEye_Step3(struct Sprite *sprite)
         sprite->data[1] = 0;
         SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT2_ALL | BLDCNT_EFFECT_BLEND);
         SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(sprite->data[0], 0));
-        sprite->callback = AnimMeanLookEye_Step4;
+        sprite->callback = AnimCharmingLookEye_Step4;
     }
 }
 
-static void AnimMeanLookEye_Step4(struct Sprite *sprite)
+static void AnimCharmingLookEye_Step4(struct Sprite *sprite)
 {
     SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(sprite->data[0], 16 - sprite->data[0]));
 
