@@ -860,7 +860,7 @@ AI_CV_MirrorMove_EncouragedMovesToMirror:
     .2byte MOVE_SAND_ATTACK
     .2byte MOVE_SMOKESCREEN
     .2byte MOVE_TOXIC
-    .2byte MOVE_GUILLOTINE
+    .2byte MOVE_JUDGEMENT
     .2byte MOVE_HORN_DRILL
     .2byte MOVE_FISSURE
     .2byte MOVE_SHEER_COLD

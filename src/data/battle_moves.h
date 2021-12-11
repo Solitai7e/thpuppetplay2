@@ -168,7 +168,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_GUILLOTINE] =
+    [MOVE_JUDGEMENT] =
     {
         .effect = EFFECT_OHKO,
         .split = 0,

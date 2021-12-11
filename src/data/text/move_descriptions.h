@@ -45,7 +45,7 @@ static const u8 sNightSlashDescription[] = _(
     "Grips the foe with large and\n"
     "powerful pincers.");
 
-static const u8 sGuillotineDescription[] = _(
+static const u8 sJudgementDescription[] = _(
     "A powerful pincer attack\n"
     "that may cause fainting.");
 
@@ -1431,7 +1431,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_THUNDER_PUNCH - 1] = sThunderPunchDescription,
     [MOVE_SCRATCH - 1] = sScratchDescription,
     [MOVE_NIGHT_SLASH - 1] = sNightSlashDescription,
-    [MOVE_GUILLOTINE - 1] = sGuillotineDescription,
+    [MOVE_JUDGEMENT - 1] = sJudgementDescription,
     [MOVE_RAZOR_WIND - 1] = sRazorWindDescription,
     [MOVE_SWORDS_DANCE - 1] = sSwordsDanceDescription,
     [MOVE_CUT - 1] = sCutDescription,

@@ -646,7 +646,7 @@ const u16 gEasyChatWordsByLetter_G[] = {
     EC_MOVE(GRUDGE),
     EC_POKEMON(DYUUGI),
     EC_WORD_GUARD,
-    EC_MOVE2(GUILLOTINE),
+    EC_MOVE2(JUDGEMENT),
     EC_POKEMON(CKIKURI),
     EC_MOVE(GUST),
     EC_WORD_GUTS,

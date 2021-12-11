@@ -28,7 +28,7 @@ gBattleAnims_Moves::
 	.4byte Move_THUNDER_PUNCH
 	.4byte Move_SCRATCH
 	.4byte Move_NIGHT_SLASH
-	.4byte Move_GUILLOTINE
+	.4byte Move_JUDGEMENT
 	.4byte Move_RAZOR_WIND
 	.4byte Move_SWORDS_DANCE
 	.4byte Move_CUT
@@ -1853,16 +1853,16 @@ Move_NIGHT_SLASH:
 	blendoff
 	end
 
-Move_GUILLOTINE:
+Move_JUDGEMENT:
 	loadspritegfx ANIM_TAG_CUT
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
-	fadetobgfromset BG_GUILLOTINE_OPPONENT, BG_GUILLOTINE_PLAYER, BG_GUILLOTINE_CONTESTS
+	fadetobgfromset BG_JUDGEMENT_OPPONENT, BG_JUDGEMENT_PLAYER, BG_JUDGEMENT_CONTESTS
 	waitbgfadein
 	playsewithpan SE_M_NIGHT_SLASH, SOUND_PAN_TARGET
-	createsprite gGuillotineSpriteTemplate, ANIM_ATTACKER, 2, 0
-	createsprite gGuillotineSpriteTemplate, ANIM_ATTACKER, 2, 1
+	createsprite gJudgementSpriteTemplate, ANIM_ATTACKER, 2, 0
+	createsprite gJudgementSpriteTemplate, ANIM_ATTACKER, 2, 1
 	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 2, 0, 16, RGB_BLACK
 	delay 9
 	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 2, 0, 23, 1

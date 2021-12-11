@@ -833,12 +833,12 @@ const u32 gBattleAnimMaskImage_LightBeam[] = INCBIN_U32("graphics/battle_anims/m
 const u32 gBattleAnimMaskPalette_LightBeam[] = INCBIN_U32("graphics/battle_anims/masks/light_beam.gbapal.lz");
 const u32 gBattleAnimMaskTilemap_LightBeam[] = INCBIN_U32("graphics/battle_anims/masks/light_beam.bin.lz");
 
-const u32 gBattleAnimBgTilemap_GuillotineOpponent[] = INCBIN_U32("graphics/battle_anims/backgrounds/guillotine_opponent.bin.lz");
-const u32 gBattleAnimBgTilemap_GuillotinePlayer[] = INCBIN_U32("graphics/battle_anims/backgrounds/guillotine_player.bin.lz");
-const u32 gBattleAnimBgTilemap_GuillotineContests[] = INCBIN_U32("graphics/battle_anims/backgrounds/guillotine_contests.bin.lz");
+const u32 gBattleAnimBgTilemap_JudgementOpponent[] = INCBIN_U32("graphics/battle_anims/backgrounds/judgement_opponent.bin.lz");
+const u32 gBattleAnimBgTilemap_JudgementPlayer[] = INCBIN_U32("graphics/battle_anims/backgrounds/judgement_player.bin.lz");
+const u32 gBattleAnimBgTilemap_JudgementContests[] = INCBIN_U32("graphics/battle_anims/backgrounds/judgement_contests.bin.lz");
 
-const u32 gBattleAnimBgImage_Guillotine[] = INCBIN_U32("graphics/battle_anims/backgrounds/guillotine.4bpp.lz");
-const u32 gBattleAnimBgPalette_Guillotine[] = INCBIN_U32("graphics/battle_anims/backgrounds/guillotine.gbapal.lz");
+const u32 gBattleAnimBgImage_Judgement[] = INCBIN_U32("graphics/battle_anims/backgrounds/judgement.4bpp.lz");
+const u32 gBattleAnimBgPalette_Judgement[] = INCBIN_U32("graphics/battle_anims/backgrounds/judgement.gbapal.lz");
 
 const u32 gBattleAnimBgImage_Thunder[] = INCBIN_U32("graphics/battle_anims/backgrounds/thunder.4bpp.lz");
 const u32 gBattleAnimBgPalette_Thunder[] = INCBIN_U32("graphics/battle_anims/backgrounds/thunder.gbapal.lz");
