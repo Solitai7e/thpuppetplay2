@@ -34,8 +34,8 @@ static void AnimSmallDriftingBubbles_Step(struct Sprite *);
 static void AnimSmallWaterOrb(struct Sprite *);
 static void AnimAquaShowerRain(struct Sprite *);
 static void AnimAquaShowerRainHit(struct Sprite *);
-static void AnimWaterSportDroplet(struct Sprite *);
-static void AnimWaterSportDroplet_Step(struct Sprite *);
+static void AnimSplashingDroplet(struct Sprite *);
+static void AnimSplashingDroplet_Step(struct Sprite *);
 static void AnimWaterPulseBubble(struct Sprite *);
 static void AnimWaterPulseBubble_Step(struct Sprite *);
 static void AnimWaterPulseRingBubble(struct Sprite *);
@@ -50,8 +50,8 @@ static void AnimTask_AquaShowerRain_Step(u8);
 static u8 GetAquaShowerPowerForAnim(void);
 static void CreateAquaShowerLaunchDroplets(struct Task*, u8);
 static void CreateAquaShowerRainDroplet(struct Task*, u8);
-static void AnimTask_WaterSport_Step(u8);
-static void CreateWaterSportDroplet(struct Task*);
+static void AnimTask_Splashing_Step(u8);
+static void CreateSplashingDroplet(struct Task*);
 static void CreateWaterPulseRingBubbles(struct Sprite*, int, int);
 
 static const u8 sUnusedWater_Gfx[] = INCBIN_U8("graphics/battle_anims/unused/water_gfx.4bpp");
@@ -367,7 +367,7 @@ const struct SpriteTemplate gSmallDriftingBubblesSpriteTemplate =
     .callback = AnimSmallDriftingBubbles,
 };
 
-// Used by Aqua Shower / Water Sport
+// Used by Aqua Shower / Splashing
 const struct SpriteTemplate gSmallWaterOrbSpriteTemplate =
 {
     .tileTag = ANIM_TAG_GLOWY_BLUE_ORB,
@@ -1337,7 +1337,7 @@ static void AnimAquaShowerRainHit(struct Sprite *sprite)
     }
 }
 
-void AnimTask_WaterSport(u8 taskId)
+void AnimTask_Splashing(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
 
@@ -1351,22 +1351,22 @@ void AnimTask_WaterSport(u8 taskId)
     task->data[9] = -32;
     task->data[1] = 0;
     task->data[0] = 0;
-    task->func = AnimTask_WaterSport_Step;
+    task->func = AnimTask_Splashing_Step;
 }
 
-static void AnimTask_WaterSport_Step(u8 taskId)
+static void AnimTask_Splashing_Step(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
 
     switch (task->data[0])
     {
     case 0:
-        CreateWaterSportDroplet(task);
+        CreateSplashingDroplet(task);
         if (task->data[10] != 0)
             task->data[0]++;
         break;
     case 1:
-        CreateWaterSportDroplet(task);
+        CreateSplashingDroplet(task);
         if (++task->data[1] > 16)
         {
             task->data[1] = 0;
@@ -1374,7 +1374,7 @@ static void AnimTask_WaterSport_Step(u8 taskId)
         }
         break;
     case 2:
-        CreateWaterSportDroplet(task);
+        CreateSplashingDroplet(task);
         task->data[5] += task->data[7] * 6;
         if (!(task->data[5] >= -16 && task->data[5] <= 256))
         {
@@ -1392,13 +1392,13 @@ static void AnimTask_WaterSport_Step(u8 taskId)
         }
         break;
     case 3:
-        CreateWaterSportDroplet(task);
+        CreateSplashingDroplet(task);
         task->data[6] -= task->data[7] * 2;
         if (++task->data[1] > 7)
             task->data[0]++;
         break;
     case 4:
-        CreateWaterSportDroplet(task);
+        CreateSplashingDroplet(task);
         task->data[5] -= task->data[7] * 6;
         if (!(task->data[5] >= -16 && task->data[5] <= 256))
         {
@@ -1408,7 +1408,7 @@ static void AnimTask_WaterSport_Step(u8 taskId)
         }
         break;
     case 5:
-        CreateWaterSportDroplet(task);
+        CreateSplashingDroplet(task);
         task->data[6] -= task->data[7] * 2;
         if (++task->data[1] > 7)
             task->data[0] = 2;
@@ -1423,7 +1423,7 @@ static void AnimTask_WaterSport_Step(u8 taskId)
     }
 }
 
-static void CreateWaterSportDroplet(struct Task *task)
+static void CreateSplashingDroplet(struct Task *task)
 {
     u8 spriteId;
 
@@ -1438,13 +1438,13 @@ static void CreateWaterSportDroplet(struct Task *task)
             gSprites[spriteId].data[4] = task->data[6];
             gSprites[spriteId].data[5] = task->data[9];
             InitAnimArcTranslation(&gSprites[spriteId]);
-            gSprites[spriteId].callback = AnimWaterSportDroplet;
+            gSprites[spriteId].callback = AnimSplashingDroplet;
             task->data[8]++;
         }
     }
 }
 
-static void AnimWaterSportDroplet(struct Sprite *sprite)
+static void AnimSplashingDroplet(struct Sprite *sprite)
 {
     if (TranslateAnimHorizontalArc(sprite))
     {
@@ -1455,11 +1455,11 @@ static void AnimWaterSportDroplet(struct Sprite *sprite)
         sprite->data[4] = (Random2() & 0x1F) - 16 + sprite->y;
         sprite->data[5] = ~(Random2() & 7);
         InitAnimArcTranslation(sprite);
-        sprite->callback = AnimWaterSportDroplet_Step;
+        sprite->callback = AnimSplashingDroplet_Step;
     }
 }
 
-static void AnimWaterSportDroplet_Step(struct Sprite *sprite)
+static void AnimSplashingDroplet_Step(struct Sprite *sprite)
 {
     u16 i;
 
@@ -1467,7 +1467,7 @@ static void AnimWaterSportDroplet_Step(struct Sprite *sprite)
     {
         for (i = 0; i < NUM_TASKS; i++)
         {
-            if (gTasks[i].func == AnimTask_WaterSport_Step)
+            if (gTasks[i].func == AnimTask_Splashing_Step)
             {
                 gTasks[i].data[10] = 1;
                 gTasks[i].data[8]--;

@@ -206,7 +206,7 @@ AI_CheckBadMove_CheckEffect:
 	if_effect EFFECT_TICKLE, AI_CBM_Tickle
 	if_effect EFFECT_DRACO_METEOR, AI_CBM_DracoMeteor
 	if_effect EFFECT_BULK_UP, AI_CBM_BulkUp
-	if_effect EFFECT_WATER_SPORT, AI_CBM_WaterSport
+	if_effect EFFECT_SPLASHING, AI_CBM_Splashing
 	if_effect EFFECT_CALM_MIND, AI_CBM_CalmMind
 	if_effect EFFECT_DRAGON_DANCE, AI_CBM_DragonDance
 	end
@@ -581,8 +581,8 @@ AI_CBM_BulkUp:
 	if_stat_level_equal AI_USER, STAT_DEF, MAX_STAT_STAGE, Score_Minus8
 	end
 
-AI_CBM_WaterSport:
-	if_status3 AI_USER, STATUS3_WATERSPORT, Score_Minus10
+AI_CBM_Splashing:
+	if_status3 AI_USER, STATUS3_SPLASHING, Score_Minus10
 	end
 
 AI_CBM_CalmMind:
@@ -768,7 +768,7 @@ AI_CheckViability:
 	if_effect EFFECT_DRACO_METEOR, AI_CV_SpDefUp
 	if_effect EFFECT_BULK_UP, AI_CV_DefenseUp
 	if_effect EFFECT_POISON_JAB, AI_CV_HighCrit
-	if_effect EFFECT_WATER_SPORT, AI_CV_WaterSport
+	if_effect EFFECT_SPLASHING, AI_CV_Splashing
 	if_effect EFFECT_CALM_MIND, AI_CV_SpDefUp
 	if_effect EFFECT_DRAGON_DANCE, AI_CV_DragonDance
 	end
@@ -1744,7 +1744,7 @@ AI_CV_Encore_EncouragedMovesToEncore:
     .byte EFFECT_GRUDGE
     .byte EFFECT_TEETER_DANCE
     .byte EFFECT_MUD_SPORT
-    .byte EFFECT_WATER_SPORT
+    .byte EFFECT_SPLASHING
     .byte EFFECT_DRAGON_DANCE
     .byte EFFECT_CAMOUFLAGE
     .byte -1
@@ -2556,21 +2556,21 @@ AI_CV_Overheat_ScoreDown1:
 AI_CV_Overheat_End:
 	end
 
-AI_CV_WaterSport:
-	if_hp_less_than AI_USER, 50, AI_CV_WaterSport_ScoreDown1
+AI_CV_Splashing:
+	if_hp_less_than AI_USER, 50, AI_CV_Splashing_ScoreDown1
 	get_target_type1
-	if_equal TYPE_FIRE, AI_CV_WaterSport2
+	if_equal TYPE_FIRE, AI_CV_Splashing2
 	get_target_type2
-	if_equal TYPE_FIRE, AI_CV_WaterSport2
-	goto AI_CV_WaterSport_ScoreDown1
+	if_equal TYPE_FIRE, AI_CV_Splashing2
+	goto AI_CV_Splashing_ScoreDown1
 
-AI_CV_WaterSport2:
+AI_CV_Splashing2:
 	score +1
-	goto AI_CV_WaterSport_End
+	goto AI_CV_Splashing_End
 
-AI_CV_WaterSport_ScoreDown1:
+AI_CV_Splashing_ScoreDown1:
 	score -1
-AI_CV_WaterSport_End:
+AI_CV_Splashing_End:
 	end
 
 AI_CV_DragonDance:

@@ -811,7 +811,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_DREMILIA_1] = {
         .species = SPECIES_DREMILIA,
-        .moves = {MOVE_TWISTER, MOVE_WATER_SPORT, MOVE_GROWL, MOVE_WING_ATTACK},
+        .moves = {MOVE_TWISTER, MOVE_SPLASHING, MOVE_GROWL, MOVE_WING_ATTACK},
         .itemTableId = BATTLE_FRONTIER_ITEM_DRAGON_FANG,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_DEFENSE,
         .nature = NATURE_MODEST
@@ -902,7 +902,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_CSTARSAPPHIRE] = {
         .species = SPECIES_CSTARSAPPHIRE,
-        .moves = {MOVE_WATER_SPORT, MOVE_KNIFE_THROW, MOVE_WATERFALL, MOVE_JAMMING},
+        .moves = {MOVE_SPLASHING, MOVE_KNIFE_THROW, MOVE_WATERFALL, MOVE_JAMMING},
         .itemTableId = BATTLE_FRONTIER_ITEM_SCOPE_LENS,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_DEFENSE,
         .nature = NATURE_CALM
@@ -1014,7 +1014,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_THATATE] = {
         .species = SPECIES_THATATE,
-        .moves = {MOVE_MAGNITUDE, MOVE_MUD_SPORT, MOVE_WATER_SPORT, MOVE_WATER_GUN},
+        .moves = {MOVE_MAGNITUDE, MOVE_MUD_SPORT, MOVE_SPLASHING, MOVE_WATER_GUN},
         .itemTableId = BATTLE_FRONTIER_ITEM_SEA_INCENSE,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_JOLLY
@@ -2899,7 +2899,7 @@ const struct FacilityMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_THATATE] = {
         .species = SPECIES_THATATE,
-        .moves = {MOVE_SPARK, MOVE_WATER_GUN, MOVE_EARTHQUAKE, MOVE_WATER_SPORT},
+        .moves = {MOVE_SPARK, MOVE_WATER_GUN, MOVE_EARTHQUAKE, MOVE_SPLASHING},
         .itemTableId = BATTLE_FRONTIER_ITEM_LIECHI_BERRY,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_MODEST

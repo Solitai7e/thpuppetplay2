@@ -3058,10 +3058,10 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         effect = i + 1;
                 }
                 break;
-            case ABILITYEFFECT_WATER_SPORT:
+            case ABILITYEFFECT_SPLASHING:
                 for (i = 0; i < gBattlersCount; i++)
                 {
-                    if (gStatuses3[i] & STATUS3_WATERSPORT)
+                    if (gStatuses3[i] & STATUS3_SPLASHING)
                         effect = i + 1;
                 }
                 break;

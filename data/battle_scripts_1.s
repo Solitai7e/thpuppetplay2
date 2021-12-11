@@ -227,7 +227,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectSoar            @ EFFECT_SOAR
 	.4byte BattleScript_EffectBulkUp                 @ EFFECT_BULK_UP
 	.4byte BattleScript_EffectPoisonHit              @ EFFECT_POISON_JAB
-	.4byte BattleScript_EffectWaterSport             @ EFFECT_WATER_SPORT
+	.4byte BattleScript_EffectSplashing             @ EFFECT_SPLASHING
 	.4byte BattleScript_EffectCalmMind               @ EFFECT_CALM_MIND
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
@@ -2623,7 +2623,7 @@ BattleScript_TeeterDanceMissed::
 	goto BattleScript_TeeterDanceDoMoveEndIncrement
 
 BattleScript_EffectMudSport::
-BattleScript_EffectWaterSport::
+BattleScript_EffectSplashing::
 	attackcanceler
 	attackstring
 	ppreduce

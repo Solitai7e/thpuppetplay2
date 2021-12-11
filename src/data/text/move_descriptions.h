@@ -1381,7 +1381,7 @@ static const u8 sMagicalLeafDescription[] = _(
     "Attacks with a strange leaf\n"
     "that cannot be evaded.");
 
-static const u8 sWaterSportDescription[] = _(
+static const u8 sSplashingDescription[] = _(
     "The user becomes soaked to\n"
     "raise resistance to fire.");
 
@@ -1765,7 +1765,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_COVET - 1] = sCovetDescription,
     [MOVE_VOLT_TACKLE - 1] = sVoltTackleDescription,
     [MOVE_MAGICAL_LEAF - 1] = sMagicalLeafDescription,
-    [MOVE_WATER_SPORT - 1] = sWaterSportDescription,
+    [MOVE_SPLASHING - 1] = sSplashingDescription,
     [MOVE_CALM_MIND - 1] = sCalmMindDescription,
     [MOVE_LEAF_BLADE - 1] = sLeafBladeDescription,
     [MOVE_DRAGON_DANCE - 1] = sDragonDanceDescription,

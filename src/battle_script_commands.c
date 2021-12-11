@@ -9610,9 +9610,9 @@ static void Cmd_settypebasedhalvers(void) // water and mud sport
     }
     else // water sport
     {
-        if (!(gStatuses3[gBattlerAttacker] & STATUS3_WATERSPORT))
+        if (!(gStatuses3[gBattlerAttacker] & STATUS3_SPLASHING))
         {
-            gStatuses3[gBattlerAttacker] |= STATUS3_WATERSPORT;
+            gStatuses3[gBattlerAttacker] |= STATUS3_SPLASHING;
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_WEAKEN_FIRE;
             worked = TRUE;
         }

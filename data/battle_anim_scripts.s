@@ -362,7 +362,7 @@ gBattleAnims_Moves::
 	.4byte Move_COVET
 	.4byte Move_VOLT_TACKLE
 	.4byte Move_MAGICAL_LEAF
-	.4byte Move_WATER_SPORT
+	.4byte Move_SPLASHING
 	.4byte Move_CALM_MIND
 	.4byte Move_LEAF_BLADE
 	.4byte Move_DRAGON_DANCE
@@ -4454,9 +4454,9 @@ Move_VOLT_TACKLE:
 	waitforvisualfinish
 	end
 
-Move_WATER_SPORT:
+Move_SPLASHING:
 	loadspritegfx ANIM_TAG_GLOWY_BLUE_ORB
-	createvisualtask AnimTask_WaterSport, 5
+	createvisualtask AnimTask_Splashing, 5
 	delay 8
 	playsewithpan SE_M_SURF, SOUND_PAN_ATTACKER
 	delay 44

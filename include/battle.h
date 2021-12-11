@@ -299,8 +299,8 @@ struct BattleTv_Position
     u32 wrapMoveSlot:2;
     u32 attractMoveSlot:2;
     u32 confusionMoveSlot:2;
-    u32 waterSportMoveSlot:2;
-    u32 waterSportMonId:3;
+    u32 splashingMoveSlot:2;
+    u32 splashingMonId:3;
     u32 mudSportMonId:3;
     u32 mudSportMoveSlot:2;
     u32 ingrainMonId:3;

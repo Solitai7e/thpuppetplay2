@@ -188,7 +188,7 @@ const u16 gEggMoves[] = {
               MOVE_BUBBLE_BEAM,
               MOVE_HAZE,
               MOVE_HEARTS_EYE,
-              MOVE_WATER_SPORT,
+              MOVE_SPLASHING,
               MOVE_ICE_BALL),
 
     egg_moves(LETTY,
@@ -523,7 +523,7 @@ const u16 gEggMoves[] = {
               MOVE_ANCIENT_POWER,
               MOVE_ROCK_SLIDE,
               MOVE_MUD_SPORT,
-              MOVE_WATER_SPORT,
+              MOVE_SPLASHING,
               MOVE_HEART_BREAK),
 
     egg_moves(CHIYURI,
@@ -991,7 +991,7 @@ const u16 gEggMoves[] = {
               MOVE_TWISTER,
               MOVE_AGILITY,
               MOVE_GUST,
-              MOVE_WATER_SPORT),
+              MOVE_SPLASHING),
 
     egg_moves(SFLANDRE,
               MOVE_FORESIGHT,
@@ -1049,7 +1049,7 @@ const u16 gEggMoves[] = {
     egg_moves(AKISISTERS,
               MOVE_SPLASH,
               MOVE_JAMMING,
-              MOVE_WATER_SPORT,
+              MOVE_SPLASHING,
               MOVE_MUD_SPORT),
 
     egg_moves(DLAYLA,
@@ -1102,7 +1102,7 @@ const u16 gEggMoves[] = {
               MOVE_STOMP),
 
     egg_moves(ASUIKA,
-              MOVE_WATER_SPORT,
+              MOVE_SPLASHING,
               MOVE_STOCKPILE,
               MOVE_SWALLOW,
               MOVE_MIRROR_SHOT,
@@ -1249,7 +1249,7 @@ const u16 gEggMoves[] = {
     egg_moves(ADLETTY,
               MOVE_MAGNITUDE,
               MOVE_SKULL_BASH,
-              MOVE_WATER_SPORT,
+              MOVE_SPLASHING,
               MOVE_AMNESIA,
               MOVE_SLEEP_TALK,
               MOVE_ROCK_SLIDE),

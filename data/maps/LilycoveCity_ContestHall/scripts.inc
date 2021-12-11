@@ -483,7 +483,7 @@ LilycoveCity_ContestHall_Text_SuchCharmingCuteAppeals:
 	.string "JUDGE: Oh, such charming and cute\n"
 	.string "appeals!\p"
 	.string "Oh, my goodness! What a perfectly\n"
-	.string "adorable WATER SPORT appeal!$"
+	.string "adorable SPLASHING appeal!$"
 
 LilycoveCity_ContestHall_Text_MyCShinGyokuWasDistracted:
 	.string "Oh, no… My sweet CSHINGYOKU was\n"
