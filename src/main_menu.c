@@ -606,6 +606,7 @@ static u32 InitMainMenu(bool8 returningFromOptionsMenu)
     ShowBg(0);
     HideBg(1);
     CreateTask(Task_MainMenuCheckSaveFile, 0);
+	PlayBGM(MUS_SCHOOL);
 
     return 0;
 }

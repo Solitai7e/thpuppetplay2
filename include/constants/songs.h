@@ -541,7 +541,7 @@
 #define PH_NURSE_HELD               608
 #define PH_NURSE_SOLO               609
 
-#define MUS_MAIDEN                  700 //Maiden's Cappricio (zun midi)
+#define MUS_MAIDEN                  610 //Maiden's Cappricio (zun midi)
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
