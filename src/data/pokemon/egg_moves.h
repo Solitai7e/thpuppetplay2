@@ -38,7 +38,7 @@ const u16 gEggMoves[] = {
               MOVE_FAINT_ATTACK,
               MOVE_FORESIGHT,
               MOVE_STEEL_WING,
-              MOVE_AIR_CUTTER),
+              MOVE_AIR_SLASH),
 
     egg_moves(CNAZRIN,
               MOVE_SCREECH,

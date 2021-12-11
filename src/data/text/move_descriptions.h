@@ -1253,7 +1253,7 @@ static const u8 sFakeTearsDescription[] = _(
     "Feigns crying to sharply\n"
     "lower the foe's SP. DEF.");
 
-static const u8 sAirCutterDescription[] = _(
+static const u8 sAirSlashDescription[] = _(
     "Hacks with razorlike wind.\n"
     "High critical-hit ratio.");
 
@@ -1733,7 +1733,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_WEATHER_BALL - 1] = sWeatherBallDescription,
     [MOVE_AROMATHERAPY - 1] = sAromatherapyDescription,
     [MOVE_FAKE_TEARS - 1] = sFakeTearsDescription,
-    [MOVE_AIR_CUTTER - 1] = sAirCutterDescription,
+    [MOVE_AIR_SLASH - 1] = sAirSlashDescription,
     [MOVE_OVERHEAT - 1] = sOverheatDescription,
     [MOVE_ODOR_SLEUTH - 1] = sOdorSleuthDescription,
     [MOVE_ROCK_TOMB - 1] = sRockTombDescription,

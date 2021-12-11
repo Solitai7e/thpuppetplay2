@@ -74,7 +74,7 @@ static void AnimSlidingHit(struct Sprite *);
 static void AnimWhipHit(struct Sprite *);
 static void AnimFlickeringPunch(struct Sprite *);
 static void AnimCuttingSlice(struct Sprite *);
-static void AnimAirCutterSlice(struct Sprite *);
+static void AnimAirSlashSlice(struct Sprite *);
 static void AnimSlice_Step(struct Sprite *);
 static void AnimCirclingMusicNote(struct Sprite *);
 static void AnimCirclingMusicNote_Step(struct Sprite *);
@@ -1238,7 +1238,7 @@ const struct SpriteTemplate gCuttingSliceSpriteTemplate =
     .callback = AnimCuttingSlice,
 };
 
-const struct SpriteTemplate gAirCutterSliceSpriteTemplate =
+const struct SpriteTemplate gAirSlashSliceSpriteTemplate =
 {
     .tileTag = ANIM_TAG_CUT,
     .paletteTag = ANIM_TAG_CUT,
@@ -1246,7 +1246,7 @@ const struct SpriteTemplate gAirCutterSliceSpriteTemplate =
     .anims = gCuttingSliceAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimAirCutterSlice,
+    .callback = AnimAirSlashSlice,
 };
 
 static const union AnimCmd sAnim_CirclingMusicNote_Eighth[] =
@@ -3814,7 +3814,7 @@ static void AnimCuttingSlice(struct Sprite* sprite)
         sprite->data[1] = -sprite->data[1];
 }
 
-static void AnimAirCutterSlice(struct Sprite* sprite)
+static void AnimAirSlashSlice(struct Sprite* sprite)
 {
     u8 x, y;
     switch (gBattleAnimArgs[3])

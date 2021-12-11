@@ -330,7 +330,7 @@ gBattleAnims_Moves::
 	.4byte Move_WEATHER_BALL
 	.4byte Move_AROMATHERAPY
 	.4byte Move_FAKE_TEARS
-	.4byte Move_AIR_CUTTER
+	.4byte Move_AIR_SLASH
 	.4byte Move_OVERHEAT
 	.4byte Move_ODOR_SLEUTH
 	.4byte Move_ROCK_TOMB
@@ -4189,7 +4189,7 @@ Move_FAKE_TEARS:
 	waitforvisualfinish
 	end
 
-Move_AIR_CUTTER:
+Move_AIR_SLASH:
 	loadspritegfx ANIM_TAG_AIR_WAVE
 	loadspritegfx ANIM_TAG_CUT
 	loadspritegfx ANIM_TAG_IMPACT
@@ -4197,10 +4197,10 @@ Move_AIR_CUTTER:
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
 	delay 0
-	createvisualtask AnimTask_AirCutterProjectile, 2, 32, -24, 6 * 256, 2, 128  @ 6 * 256 == Q_8_8(6)
+	createvisualtask AnimTask_AirSlashProjectile, 2, 32, -24, 6 * 256, 2, 128  @ 6 * 256 == Q_8_8(6)
 	waitforvisualfinish
 	playsewithpan SE_M_CUT, SOUND_PAN_TARGET
-	createsprite gAirCutterSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0, 2
+	createsprite gAirSlashSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0, 2
 	delay 5
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 8, 1
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_DEF_PARTNER, 2, 0, 8, 1

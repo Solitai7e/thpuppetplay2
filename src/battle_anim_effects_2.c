@@ -1613,13 +1613,13 @@ static void AnimAirWaveProjectile(struct Sprite *sprite)
     }
 }
 
-static void AirCutterProjectileStep2(u8 taskId)
+static void AirSlashProjectileStep2(u8 taskId)
 {
     if (gTasks[taskId].data[1] == 0)
         DestroyAnimVisualTask(taskId);
 }
 
-static void AirCutterProjectileStep1(u8 taskId)
+static void AirSlashProjectileStep1(u8 taskId)
 {
     if (gTasks[taskId].data[0]-- <= 0)
     {
@@ -1644,11 +1644,11 @@ static void AirCutterProjectileStep1(u8 taskId)
         gTasks[taskId].data[1]++;
         PlaySE12WithPanning(SE_M_BLIZZARD2, BattleAnimAdjustPanning(-63));
         if (gTasks[taskId].data[1] > 2)
-            gTasks[taskId].func = AirCutterProjectileStep2;
+            gTasks[taskId].func = AirSlashProjectileStep2;
     }
 }
 
-void AnimTask_AirCutterProjectile(u8 taskId)
+void AnimTask_AirSlashProjectile(u8 taskId)
 {
     s16 attackerY = 0;
     s16 attackerX = 0;
@@ -1745,7 +1745,7 @@ void AnimTask_AirCutterProjectile(u8 taskId)
     if (gTasks[taskId].data[2] < 3)
         gTasks[taskId].data[2] = 3;
 
-    gTasks[taskId].func = AirCutterProjectileStep1;
+    gTasks[taskId].func = AirSlashProjectileStep1;
 }
 
 static void AnimVoidLines(struct Sprite *sprite)
