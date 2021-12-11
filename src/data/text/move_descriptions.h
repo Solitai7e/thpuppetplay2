@@ -65,7 +65,7 @@ static const u8 sGustDescription[] = _(
     "Strikes the foe with a gust\n"
     "of wind whipped up by wings.");
 
-static const u8 sWingAttackDescription[] = _(
+static const u8 sGaleDescription[] = _(
     "Strikes the foe with wings\n"
     "spread wide.");
 
@@ -1436,7 +1436,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SWORDS_DANCE - 1] = sSwordsDanceDescription,
     [MOVE_CUT - 1] = sCutDescription,
     [MOVE_GUST - 1] = sGustDescription,
-    [MOVE_WING_ATTACK - 1] = sWingAttackDescription,
+    [MOVE_GALE - 1] = sGaleDescription,
     [MOVE_WHIRLWIND - 1] = sWhirlwindDescription,
     [MOVE_FLY - 1] = sFlyDescription,
     [MOVE_BIND - 1] = sBindDescription,

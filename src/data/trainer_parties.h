@@ -823,7 +823,7 @@ static const struct TrainerMonItemCustomMoves sParty_Randall[] = {
     .lvl = 26,
     .species = SPECIES_ATOKIKO,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_QUICK_ATTACK, MOVE_AGILITY, MOVE_WING_ATTACK, MOVE_NONE}
+    .moves = {MOVE_QUICK_ATTACK, MOVE_AGILITY, MOVE_GALE, MOVE_NONE}
     }
 };
 
@@ -862,7 +862,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Braxton[] = {
     .iv = 100,
     .lvl = 28,
     .species = SPECIES_ATOKIKO,
-    .moves = {MOVE_FOCUS_ENERGY, MOVE_QUICK_ATTACK, MOVE_WING_ATTACK, MOVE_ENDEAVOR}
+    .moves = {MOVE_FOCUS_ENERGY, MOVE_QUICK_ATTACK, MOVE_GALE, MOVE_ENDEAVOR}
     },
     {
     .iv = 100,

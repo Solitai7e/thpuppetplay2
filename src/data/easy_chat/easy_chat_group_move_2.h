@@ -197,7 +197,7 @@ const u16 gEasyChatGroup_Move2[] = {
     MOVE_SPLASHING,
     MOVE_WATERFALL,
     MOVE_WHIRLWIND,
-    MOVE_WING_ATTACK,
+    MOVE_GALE,
     MOVE_WISH,
     MOVE_WRAP,
     MOVE_ENERGY_BALL,

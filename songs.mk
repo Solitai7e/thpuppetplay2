@@ -1227,7 +1227,7 @@ $(MID_SUBDIR)/se_m_gust.s: %.s: %.mid
 $(MID_SUBDIR)/se_m_gust2.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
-$(MID_SUBDIR)/se_m_wing_attack.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_gale.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V105 -P4
 
 $(MID_SUBDIR)/se_m_fly.s: %.s: %.mid

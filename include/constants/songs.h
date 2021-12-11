@@ -161,7 +161,7 @@
 #define SE_M_BLIZZARD2              154 // SE_W059B
 #define SE_M_SCRATCH                155 // SE_W010
 #define SE_M_NIGHT_SLASH               156 // SE_W011
-#define SE_M_WING_ATTACK            157 // SE_W017
+#define SE_M_GALE            157 // SE_W017
 #define SE_M_FLY                    158 // SE_W019
 #define SE_M_SAND_ATTACK            159 // SE_W028
 #define SE_M_RAZOR_WIND2            160 // SE_W013B

@@ -130,7 +130,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_WING_ATTACK] =
+    [MOVE_GALE] =
     {
         .effect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
         .contestCategory = CONTEST_CATEGORY_COOL,

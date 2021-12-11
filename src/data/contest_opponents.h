@@ -340,7 +340,7 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_WING_ATTACK,
+            MOVE_GALE,
             MOVE_AGILITY,
             MOVE_BLADE_FLASH,
             MOVE_GROWL
@@ -1658,7 +1658,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_AGILITY,
             MOVE_BLADE_FLASH,
-            MOVE_WING_ATTACK,
+            MOVE_GALE,
             MOVE_FLY
         },
         .cool = 65,

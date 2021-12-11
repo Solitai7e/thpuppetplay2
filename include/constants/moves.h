@@ -18,7 +18,7 @@
 #define MOVE_SWORDS_DANCE 14
 #define MOVE_CUT 15
 #define MOVE_GUST 16
-#define MOVE_WING_ATTACK 17
+#define MOVE_GALE 17
 #define MOVE_WHIRLWIND 18
 #define MOVE_FLY 19
 #define MOVE_BIND 20

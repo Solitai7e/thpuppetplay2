@@ -33,7 +33,7 @@ gBattleAnims_Moves::
 	.4byte Move_SWORDS_DANCE
 	.4byte Move_CUT
 	.4byte Move_GUST
-	.4byte Move_WING_ATTACK
+	.4byte Move_GALE
 	.4byte Move_WHIRLWIND
 	.4byte Move_FLY
 	.4byte Move_BIND
@@ -6160,13 +6160,13 @@ Move_GUST:
 	blendoff
 	end
 
-Move_WING_ATTACK:
+Move_GALE:
 	loadspritegfx ANIM_TAG_GUST
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	splitbgprio ANIM_TARGET
 	setalpha 12, 8
-	loopsewithpan SE_M_WING_ATTACK, SOUND_PAN_ATTACKER, 20, 2
+	loopsewithpan SE_M_GALE, SOUND_PAN_ATTACKER, 20, 2
 	createvisualtask AnimTask_TranslateMonElliptical, 2, 0, 12, 4, 1, 4
 	createvisualtask AnimTask_AnimateGustTornadoPalette, 5, 1, 70
 	createsprite gGustToTargetSpriteTemplate, ANIM_ATTACKER, 2, -25, 0, 0, 0, 20
@@ -7223,7 +7223,7 @@ Move_STEEL_WING:
 	monbg ANIM_DEF_PARTNER
 	splitbgprio ANIM_TARGET
 	setalpha 12, 8
-	loopsewithpan SE_M_WING_ATTACK, SOUND_PAN_ATTACKER, 20, 2
+	loopsewithpan SE_M_GALE, SOUND_PAN_ATTACKER, 20, 2
 	createvisualtask AnimTask_TranslateMonElliptical, 2, 0, 12, 4, 1, 4
 	createvisualtask AnimTask_AnimateGustTornadoPalette, 5, 1, 70
 	createsprite gGustToTargetSpriteTemplate, ANIM_ATTACKER, 2, -25, 0, 0, 0, 20

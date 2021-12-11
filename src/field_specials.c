@@ -3896,7 +3896,7 @@ void Script_DoCMamizouScene(void)
 void LoopWingFlapSE(void)
 {
     CreateTask(Task_LoopWingFlapSE, 8);
-    PlaySE(SE_M_WING_ATTACK);
+    PlaySE(SE_M_GALE);
 }
 
 static void Task_LoopWingFlapSE(u8 taskId)
@@ -3908,7 +3908,7 @@ static void Task_LoopWingFlapSE(u8 taskId)
     {
         playCount++;
         delay = 0;
-        PlaySE(SE_M_WING_ATTACK);
+        PlaySE(SE_M_GALE);
     }
 
     if (playCount == gSpecialVar_0x8004 - 1)

@@ -1894,7 +1894,7 @@ const u16 gEasyChatWordsByLetter_W[] = {
     EC_MOVE(WILL_O_WISP),
     EC_WORD_WIMPY,
     EC_WORD_WIN,
-    EC_MOVE2(WING_ATTACK),
+    EC_MOVE2(GALE),
     EC_POKEMON(TKOGASA),
     EC_WORD_WINNER,
     EC_WORD_WINS,
