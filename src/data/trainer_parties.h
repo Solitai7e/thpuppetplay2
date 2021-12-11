@@ -3332,7 +3332,7 @@ static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
     .lvl = 52,
     .species = SPECIES_CYOSHIKA,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_ROCK_TOMB, MOVE_DRAGON_CLAW, MOVE_PROTECT, MOVE_DOUBLE_EDGE}
+    .moves = {MOVE_ROCK_TOMB, MOVE_HEART_BREAK, MOVE_PROTECT, MOVE_DOUBLE_EDGE}
     },
     {
     .iv = 250,
@@ -3360,7 +3360,7 @@ static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
     .lvl = 55,
     .species = SPECIES_YOSHIKA,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_FLAMETHROWER, MOVE_DRAGON_CLAW, MOVE_ROCK_SLIDE, MOVE_CRUNCH}
+    .moves = {MOVE_FLAMETHROWER, MOVE_HEART_BREAK, MOVE_ROCK_SLIDE, MOVE_CRUNCH}
     }
 };
 
@@ -11615,7 +11615,7 @@ static const struct TrainerMonItemCustomMoves sParty_Steven[] = {
     .lvl = 76,
     .species = SPECIES_ADALICE,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_THUNDER, MOVE_EARTHQUAKE, MOVE_SOLAR_BEAM, MOVE_DRAGON_CLAW}
+    .moves = {MOVE_THUNDER, MOVE_EARTHQUAKE, MOVE_SOLAR_BEAM, MOVE_HEART_BREAK}
     },
     {
     .iv = 255,

@@ -795,7 +795,7 @@ void AnimTask_MementoHandleBg(u8 taskId)
     DestroyAnimVisualTask(taskId);
 }
 
-// Animates a deep slash from a claw. Used by Metal Claw, Dragon Claw, and Crush Claw
+// Animates a deep slash from a claw. Used by Metal Claw, Heart Break, and Crush Claw
 static void AnimClawSlash(struct Sprite *sprite)
 {
     sprite->x += gBattleAnimArgs[0];

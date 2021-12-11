@@ -564,7 +564,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_ASANAE,
                         .heldItem = ITEM_CHOICE_BAND,
-                        .moves = {MOVE_EARTHQUAKE, MOVE_DRAGON_CLAW, MOVE_CRUNCH, MOVE_FLAMETHROWER},
+                        .moves = {MOVE_EARTHQUAKE, MOVE_HEART_BREAK, MOVE_CRUNCH, MOVE_FLAMETHROWER},
                         .level = 0,
                         .ppBonuses = 0,
                         .attackEV = 155,
@@ -5145,7 +5145,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_TIKU,
                                             .heldItem = ITEM_KINGS_ROCK,
-                                            .moves = {MOVE_PERISH_SONG, MOVE_PROTECT, MOVE_DRAGON_CLAW, MOVE_FIRE_BLAST},
+                                            .moves = {MOVE_PERISH_SONG, MOVE_PROTECT, MOVE_HEART_BREAK, MOVE_FIRE_BLAST},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 252,
@@ -5419,7 +5419,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_YOSHIKA,
                                             .heldItem = ITEM_SHELL_BELL,
-                                            .moves = {MOVE_ROCK_SLIDE, MOVE_FLAMETHROWER, MOVE_DRAGON_CLAW, MOVE_BLADE_FLASH},
+                                            .moves = {MOVE_ROCK_SLIDE, MOVE_FLAMETHROWER, MOVE_HEART_BREAK, MOVE_BLADE_FLASH},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .attackEV = 255,

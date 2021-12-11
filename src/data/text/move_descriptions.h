@@ -1345,7 +1345,7 @@ static const u8 sHowlDescription[] = _(
     "Howls to raise the spirit\n"
     "and boosts ATTACK.");
 
-static const u8 sDragonClawDescription[] = _(
+static const u8 sHeartBreakDescription[] = _(
     "Slashes the foe with sharp\n"
     "claws.");
 
@@ -1756,7 +1756,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_IRON_DEFENSE - 1] = sIronDefenseDescription,
     [MOVE_BLOCK - 1] = sBlockDescription,
     [MOVE_HOWL - 1] = sHowlDescription,
-    [MOVE_DRAGON_CLAW - 1] = sDragonClawDescription,
+    [MOVE_HEART_BREAK - 1] = sHeartBreakDescription,
     [MOVE_FRENZY_PLANT - 1] = sFrenzyPlantDescription,
     [MOVE_BULK_UP - 1] = sBulkUpDescription,
     [MOVE_BOUNCE - 1] = sBounceDescription,

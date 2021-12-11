@@ -353,7 +353,7 @@ gBattleAnims_Moves::
 	.4byte Move_IRON_DEFENSE
 	.4byte Move_BLOCK
 	.4byte Move_HOWL
-	.4byte Move_DRAGON_CLAW
+	.4byte Move_HEART_BREAK
 	.4byte Move_FRENZY_PLANT
 	.4byte Move_BULK_UP
 	.4byte Move_BOUNCE
@@ -8622,14 +8622,14 @@ Move_BULLET_SEED:
 	waitforvisualfinish
 	end
 
-Move_DRAGON_CLAW:
+Move_HEART_BREAK:
 	loadspritegfx ANIM_TAG_SMALL_EMBER
 	loadspritegfx ANIM_TAG_CLAW_SLASH
 	playsewithpan SE_M_SACRED_FIRE2, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_BlendBattleAnimPal, 10, 2, 4, 0, 8, RGB(31, 19, 0)
 	createvisualtask AnimTask_ShakeMon, 5, ANIM_ATTACKER, 0, 2, 15, 1
-	call DragonClawFireSpiral
-	call DragonClawFireSpiral
+	call HeartBreakFireSpiral
+	call HeartBreakFireSpiral
 	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 6, 4
 	createsprite gFireSpinSpriteTemplate, ANIM_ATTACKER, 2, 0, 28, 528, 30, 13, 50, ANIM_ATTACKER
 	delay 2
@@ -8666,7 +8666,7 @@ Move_DRAGON_CLAW:
 	createvisualtask AnimTask_BlendBattleAnimPal, 10, 2, 4, 8, 0, RGB(31, 19, 0)
 	waitforvisualfinish
 	end
-DragonClawFireSpiral:
+HeartBreakFireSpiral:
 	createsprite gFireSpinSpriteTemplate, ANIM_ATTACKER, 2, 0, 28, 528, 30, 13, 50, ANIM_ATTACKER
 	delay 2
 	createsprite gFireSpinSpriteTemplate, ANIM_ATTACKER, 2, 0, 32, 480, 20, 16, -46, ANIM_ATTACKER

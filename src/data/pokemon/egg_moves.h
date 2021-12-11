@@ -524,7 +524,7 @@ const u16 gEggMoves[] = {
               MOVE_ROCK_SLIDE,
               MOVE_MUD_SPORT,
               MOVE_WATER_SPORT,
-              MOVE_DRAGON_CLAW),
+              MOVE_HEART_BREAK),
 
     egg_moves(CHIYURI,
               MOVE_DOUBLE_EDGE,

@@ -4718,7 +4718,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
-    [MOVE_DRAGON_CLAW] =
+    [MOVE_HEART_BREAK] =
     {
         .effect = EFFECT_HIT,
         .split = 0,
