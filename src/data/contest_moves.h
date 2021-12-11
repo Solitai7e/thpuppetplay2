@@ -1105,7 +1105,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_HYPNOSIS, COMBO_STARTER_CALM_MIND},
     },
 
-    [MOVE_POISON_GAS] =
+    [MOVE_OMINOUS_WIND] =
     {
         .effect = CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_SMART,

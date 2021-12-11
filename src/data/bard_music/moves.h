@@ -1118,7 +1118,7 @@ const struct BardSound gBardSounds_Moves[MOVES_COUNT][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND
     },
-    [MOVE_POISON_GAS] = {
+    [MOVE_OMINOUS_WIND] = {
         { 0x1e, 0x0, 0x0, 0x0, 0x0},
         { 0x1b, 0x0, 0x0, 0x0, 0x0},
         { 0x0, 0x0, 0x0, 0x0, 0x0},

@@ -1946,7 +1946,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_POISON_GAS] =
+    [MOVE_OMINOUS_WIND] =
     {
         .effect = EFFECT_ALL_STATS_UP_HIT,
         .split = 0,

@@ -155,7 +155,7 @@ gBattleAnims_Moves::
 	.4byte Move_HI_JUMP_KICK
 	.4byte Move_GLARE
 	.4byte Move_DREAM_EATER
-	.4byte Move_POISON_GAS
+	.4byte Move_OMINOUS_WIND
 	.4byte Move_BARRAGE
 	.4byte Move_LEECH_LIFE
 	.4byte Move_LOVELY_KISS
@@ -7071,7 +7071,7 @@ DreamEaterAbsorb:
 	delay 4
 	return
 
-Move_POISON_GAS:
+Move_OMINOUS_WIND:
 	loadspritegfx ANIM_TAG_PURPLE_GAS_CLOUD
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	delay 0
@@ -7080,22 +7080,22 @@ Move_POISON_GAS:
 	setalpha 12, 8
 	delay 0
 	playsewithpan SE_M_MIST, SOUND_PAN_ATTACKER
-	createsprite gPoisonGasCloudSpriteTemplate, ANIM_TARGET, 0, 64, 0, 0, -32, -6, 4192, 1072, 0
+	createsprite gOminousWindCloudSpriteTemplate, ANIM_TARGET, 0, 64, 0, 0, -32, -6, 4192, 1072, 0
 	delay 4
 	playsewithpan SE_M_MIST, SOUND_PAN_ATTACKER
-	createsprite gPoisonGasCloudSpriteTemplate, ANIM_TARGET, 0, 64, 0, 0, -32, -6, 4192, 1072, 0
+	createsprite gOminousWindCloudSpriteTemplate, ANIM_TARGET, 0, 64, 0, 0, -32, -6, 4192, 1072, 0
 	delay 4
 	playsewithpan SE_M_MIST, SOUND_PAN_ATTACKER
-	createsprite gPoisonGasCloudSpriteTemplate, ANIM_TARGET, 0, 64, 0, 0, -32, -6, 4192, 1072, 0
+	createsprite gOminousWindCloudSpriteTemplate, ANIM_TARGET, 0, 64, 0, 0, -32, -6, 4192, 1072, 0
 	delay 4
 	playsewithpan SE_M_MIST, SOUND_PAN_ATTACKER
-	createsprite gPoisonGasCloudSpriteTemplate, ANIM_TARGET, 0, 64, 0, 0, -32, -6, 4192, 1072, 0
+	createsprite gOminousWindCloudSpriteTemplate, ANIM_TARGET, 0, 64, 0, 0, -32, -6, 4192, 1072, 0
 	delay 4
 	playsewithpan SE_M_MIST, SOUND_PAN_ATTACKER
-	createsprite gPoisonGasCloudSpriteTemplate, ANIM_TARGET, 0, 64, 0, 0, -32, -6, 4192, 1072, 0
+	createsprite gOminousWindCloudSpriteTemplate, ANIM_TARGET, 0, 64, 0, 0, -32, -6, 4192, 1072, 0
 	delay 4
 	playsewithpan SE_M_MIST, SOUND_PAN_ATTACKER
-	createsprite gPoisonGasCloudSpriteTemplate, ANIM_TARGET, 0, 64, 0, 0, -32, -6, 4192, 1072, 0
+	createsprite gOminousWindCloudSpriteTemplate, ANIM_TARGET, 0, 64, 0, 0, -32, -6, 4192, 1072, 0
 	delay 40
 	loopsewithpan SE_M_MIST, SOUND_PAN_TARGET, 28, 6
 	createvisualtask AnimTask_BlendColorCycle, 2, 4, 6, 2, 0, 12, RGB(26, 0, 26)

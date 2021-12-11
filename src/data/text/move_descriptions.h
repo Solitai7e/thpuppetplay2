@@ -553,7 +553,7 @@ static const u8 sDreamEaterDescription[] = _(
     "Takes one half the damage\n"
     "inflicted on a sleeping foe.");
 
-static const u8 sPoisonGasDescription[] = _(
+static const u8 sOminousWindDescription[] = _(
     "Envelops the foe in a toxic\n"
     "gas that may poison.");
 
@@ -1558,7 +1558,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_HI_JUMP_KICK - 1] = sHiJumpKickDescription,
     [MOVE_GLARE - 1] = sGlareDescription,
     [MOVE_DREAM_EATER - 1] = sDreamEaterDescription,
-    [MOVE_POISON_GAS - 1] = sPoisonGasDescription,
+    [MOVE_OMINOUS_WIND - 1] = sOminousWindDescription,
     [MOVE_BARRAGE - 1] = sBarrageDescription,
     [MOVE_LEECH_LIFE - 1] = sLeechLifeDescription,
     [MOVE_LOVELY_KISS - 1] = sLovelyKissDescription,
