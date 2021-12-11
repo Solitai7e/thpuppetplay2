@@ -660,7 +660,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_GabbyAndTy6[] = {
     .iv = 250,
     .lvl = 39,
     .species = SPECIES_CRAN,
-    .moves = {MOVE_SONIC_BOOM, MOVE_THUNDER_WAVE, MOVE_METAL_SOUND, MOVE_THUNDERBOLT}
+    .moves = {MOVE_SONIC_BOOM, MOVE_THUNDER_WAVE, MOVE_BINDING_VOICE, MOVE_THUNDERBOLT}
     },
     {
     .iv = 250,

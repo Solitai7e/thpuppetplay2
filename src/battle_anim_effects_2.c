@@ -332,10 +332,10 @@ const struct SpriteTemplate gScreechRingSpriteTemplate =
     .callback = TranslateAnimSpriteToTargetMonLocation,
 };
 
-const struct SpriteTemplate gMetalSoundSpriteTemplate =
+const struct SpriteTemplate gBindingVoiceSpriteTemplate =
 {
-    .tileTag = ANIM_TAG_METAL_SOUND_WAVES,
-    .paletteTag = ANIM_TAG_METAL_SOUND_WAVES,
+    .tileTag = ANIM_TAG_BINDING_VOICE_WAVES,
+    .paletteTag = ANIM_TAG_BINDING_VOICE_WAVES,
     .oam = &gOamData_AffineDouble_ObjNormal_32x64,
     .anims = gDummySpriteAnimTable,
     .images = NULL,

@@ -335,7 +335,7 @@ gBattleAnims_Moves::
 	.4byte Move_ODOR_SLEUTH
 	.4byte Move_ROCK_TOMB
 	.4byte Move_SILVER_WIND
-	.4byte Move_METAL_SOUND
+	.4byte Move_BINDING_VOICE
 	.4byte Move_GRASS_WHISTLE
 	.4byte Move_TICKLE
 	.4byte Move_COSMIC_POWER
@@ -8846,23 +8846,23 @@ Move_FRENZY_PLANT:
 	blendoff
 	end
 
-Move_METAL_SOUND:
-	loadspritegfx ANIM_TAG_METAL_SOUND_WAVES
+Move_BINDING_VOICE:
+	loadspritegfx ANIM_TAG_BINDING_VOICE_WAVES
 	monbg ANIM_DEF_PARTNER
 	splitbgprio_foes ANIM_TARGET
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 2, 0, 8, 1
-	call MetalSoundRings
-	call MetalSoundRings
-	call MetalSoundRings
-	call MetalSoundRings
+	call BindingVoiceRings
+	call BindingVoiceRings
+	call BindingVoiceRings
+	call BindingVoiceRings
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	delay 0
 	waitforvisualfinish
 	end
-MetalSoundRings:
+BindingVoiceRings:
 	panse SE_M_SCREECH, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
-	createsprite gMetalSoundSpriteTemplate, ANIM_TARGET, 2, 16, 0, 0, 0, 30, 0
+	createsprite gBindingVoiceSpriteTemplate, ANIM_TARGET, 2, 16, 0, 0, 0, 30, 0
 	delay 2
 	return
 

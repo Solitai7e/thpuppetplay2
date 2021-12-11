@@ -1854,7 +1854,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_METAL_SOUND},
+        .comboMoves = {COMBO_STARTER_BINDING_VOICE},
     },
 
     [MOVE_VITAL_THROW] =
@@ -2545,11 +2545,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_METAL_SOUND] =
+    [MOVE_BINDING_VOICE] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_SMART,
-        .comboStarterId = COMBO_STARTER_METAL_SOUND,
+        .comboStarterId = COMBO_STARTER_BINDING_VOICE,
         .comboMoves = {0},
     },
 

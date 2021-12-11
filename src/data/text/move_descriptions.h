@@ -1273,7 +1273,7 @@ static const u8 sSilverWindDescription[] = _(
     "A powdery attack that may\n"
     "raise abilities.");
 
-static const u8 sMetalSoundDescription[] = _(
+static const u8 sBindingVoiceDescription[] = _(
     "Emits a horrible screech\n"
     "that sharply lowers SP. DEF.");
 
@@ -1738,7 +1738,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_ODOR_SLEUTH - 1] = sOdorSleuthDescription,
     [MOVE_ROCK_TOMB - 1] = sRockTombDescription,
     [MOVE_SILVER_WIND - 1] = sSilverWindDescription,
-    [MOVE_METAL_SOUND - 1] = sMetalSoundDescription,
+    [MOVE_BINDING_VOICE - 1] = sBindingVoiceDescription,
     [MOVE_GRASS_WHISTLE - 1] = sGrassWhistleDescription,
     [MOVE_TICKLE - 1] = sTickleDescription,
     [MOVE_COSMIC_POWER - 1] = sCosmicPowerDescription,

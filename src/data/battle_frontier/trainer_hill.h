@@ -683,7 +683,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_CRAN,
                         .heldItem = ITEM_MAGNET,
-                        .moves = {MOVE_ENERGY_BALL, MOVE_THUNDER_WAVE, MOVE_SCREECH, MOVE_METAL_SOUND},
+                        .moves = {MOVE_ENERGY_BALL, MOVE_THUNDER_WAVE, MOVE_SCREECH, MOVE_BINDING_VOICE},
                         .level = 0,
                         .ppBonuses = 0,
                         .speedEV = 255,

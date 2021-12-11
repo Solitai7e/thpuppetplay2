@@ -990,8 +990,8 @@ const u32 gBattleAnimBgImage_Sandstorm[] = INCBIN_U32("graphics/battle_anims/bac
 
 const u32 gBattleAnimSpritePal_FlyingDirt[] = INCBIN_U32("graphics/battle_anims/sprites/flying_dirt.gbapal.lz");
 
-const u32 gBattleAnimSpriteGfx_MetalSoundWaves[] = INCBIN_U32("graphics/battle_anims/sprites/metal_sound_waves.4bpp.lz");
-const u32 gBattleAnimSpritePal_MetalSoundWaves[] = INCBIN_U32("graphics/battle_anims/sprites/metal_sound_waves.gbapal.lz");
+const u32 gBattleAnimSpriteGfx_BindingVoiceWaves[] = INCBIN_U32("graphics/battle_anims/sprites/binding_voice_waves.4bpp.lz");
+const u32 gBattleAnimSpritePal_BindingVoiceWaves[] = INCBIN_U32("graphics/battle_anims/sprites/binding_voice_waves.gbapal.lz");
 
 const u32 gBattleAnimBgImage_Ice[] = INCBIN_U32("graphics/battle_anims/backgrounds/ice.4bpp.lz");
 const u32 gBattleAnimBgPalette_Ice[] = INCBIN_U32("graphics/battle_anims/backgrounds/ice.gbapal.lz");
