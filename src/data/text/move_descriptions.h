@@ -933,7 +933,7 @@ static const u8 sVitalThrowDescription[] = _(
     "Makes the user's move last,\n"
     "but it never misses.");
 
-static const u8 sMorningSunDescription[] = _(
+static const u8 sEnergyLightDescription[] = _(
     "Restores HP. The amount\n"
     "varies with the weather.");
 
@@ -1653,7 +1653,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_STEEL_FIST - 1] = sSteelFistDescription,
     [MOVE_METAL_CLAW - 1] = sMetalClawDescription,
     [MOVE_VITAL_THROW - 1] = sVitalThrowDescription,
-    [MOVE_MORNING_SUN - 1] = sMorningSunDescription,
+    [MOVE_ENERGY_LIGHT - 1] = sEnergyLightDescription,
     [MOVE_SYNTHESIS - 1] = sSynthesisDescription,
     [MOVE_MOONLIGHT - 1] = sMoonlightDescription,
     [MOVE_HIDDEN_POWER - 1] = sHiddenPowerDescription,

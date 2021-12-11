@@ -232,7 +232,7 @@
 #define SE_M_MILK_DRINK             225 // SE_W208
 #define SE_M_ATTRACT                226 // SE_W213
 #define SE_M_ATTRACT2               227 // SE_W213B
-#define SE_M_MORNING_SUN            228 // SE_W234
+#define SE_M_ENERGY_LIGHT            228 // SE_W234
 #define SE_M_FLATTER                229 // SE_W260
 #define SE_M_SAND_TOMB              230 // SE_W328
 #define SE_M_GRASSWHISTLE           231 // SE_W320

@@ -1712,7 +1712,7 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_MORNING_SUN,
+            MOVE_ENERGY_LIGHT,
             MOVE_SILVER_WIND,
             MOVE_STUN_SPORE,
             MOVE_SECRET_POWER
@@ -2834,7 +2834,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_SWIFT,
             MOVE_QUICK_ATTACK,
-            MOVE_MORNING_SUN,
+            MOVE_ENERGY_LIGHT,
             MOVE_TAIL_WHIP
         },
         .cool = 180,

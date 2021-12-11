@@ -149,7 +149,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectRapidSpin              @ EFFECT_RAPID_SPIN
 	.4byte BattleScript_EffectSonicboom              @ EFFECT_SONICBOOM
 	.4byte BattleScript_EffectHit                    @ EFFECT_UNUSED_83
-	.4byte BattleScript_EffectMorningSun             @ EFFECT_MORNING_SUN
+	.4byte BattleScript_EffectEnergyLight             @ EFFECT_ENERGY_LIGHT
 	.4byte BattleScript_EffectSynthesis              @ EFFECT_SYNTHESIS
 	.4byte BattleScript_EffectMoonlight              @ EFFECT_MOONLIGHT
 	.4byte BattleScript_EffectHiddenPower            @ EFFECT_HIDDEN_POWER
@@ -1726,7 +1726,7 @@ BattleScript_EffectSonicboom::
 	adjustsetdamage
 	goto BattleScript_HitFromAtkAnimation
 
-BattleScript_EffectMorningSun::
+BattleScript_EffectEnergyLight::
 BattleScript_EffectSynthesis::
 BattleScript_EffectMoonlight::
 	attackcanceler

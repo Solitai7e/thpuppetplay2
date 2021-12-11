@@ -3276,7 +3276,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_MORNING_SUN] =
+    [MOVE_ENERGY_LIGHT] =
     {
         .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
         .split = 0,

@@ -229,7 +229,7 @@ gSongTable::
 	song se_m_milk_drink, 1, 1
 	song se_m_attract, 1, 1
 	song se_m_attract2, 1, 1
-	song se_m_morning_sun, 1, 1
+	song se_m_energy_light, 1, 1
 	song se_m_flatter, 1, 1
 	song se_m_sand_tomb, 1, 1
 	song se_m_grasswhistle, 1, 1
