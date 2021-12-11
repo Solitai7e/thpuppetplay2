@@ -521,7 +521,7 @@ static const u8 sSkullBashDescription[] = _(
     "Tucks in the head, then\n"
     "attacks on the next turn.");
 
-static const u8 sSpikeCannonDescription[] = _(
+static const u8 sFeintDescription[] = _(
     "Launches sharp spikes that\n"
     "strike 2 to 5 times.");
 
@@ -1550,7 +1550,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_CLAMP - 1] = sClampDescription,
     [MOVE_SWIFT - 1] = sSwiftDescription,
     [MOVE_SKULL_BASH - 1] = sSkullBashDescription,
-    [MOVE_SPIKE_CANNON - 1] = sSpikeCannonDescription,
+    [MOVE_FEINT - 1] = sFeintDescription,
     [MOVE_CONSTRICT - 1] = sConstrictDescription,
     [MOVE_AMNESIA - 1] = sAmnesiaDescription,
     [MOVE_KINESIS - 1] = sKinesisDescription,

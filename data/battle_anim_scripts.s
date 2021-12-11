@@ -147,7 +147,7 @@ gBattleAnims_Moves::
 	.4byte Move_CLAMP
 	.4byte Move_SWIFT
 	.4byte Move_SKULL_BASH
-	.4byte Move_SPIKE_CANNON
+	.4byte Move_FEINT
 	.4byte Move_CONSTRICT
 	.4byte Move_AMNESIA
 	.4byte Move_KINESIS
@@ -1296,7 +1296,7 @@ PursuitOnSwitchout:
 	createvisualtask AnimTask_ShakeTargetBasedOnMovePowerOrDmg, 5, FALSE, 1, 6, 1, 0
 	goto PursuitContinue
 
-Move_SPIKE_CANNON:
+Move_FEINT:
 	loadspritegfx ANIM_TAG_NEEDLE
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET

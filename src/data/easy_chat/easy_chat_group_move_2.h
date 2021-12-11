@@ -157,7 +157,7 @@ const u16 gEasyChatGroup_Move2[] = {
     MOVE_GUNK_SHOT,
     MOVE_SNATCH,
     MOVE_SOFT_BOILED,
-    MOVE_SPIKE_CANNON,
+    MOVE_FEINT,
     MOVE_SPIKES,
     MOVE_SPIT_UP,
     MOVE_SPLASH,

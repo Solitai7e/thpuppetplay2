@@ -968,7 +968,7 @@ static void AnimHitSplatPersistent(struct Sprite *sprite)
 }
 
 // For paired hit splats whose position is inverted when used by the opponent on the player.
-// Used by SealingNeedle and Spike Cannon
+// Used by SealingNeedle and Feint
 static void AnimHitSplatHandleInvert(struct Sprite *sprite)
 {
     if (GetBattlerSide(gBattleAnimAttacker) != B_SIDE_PLAYER && !IsContest())
