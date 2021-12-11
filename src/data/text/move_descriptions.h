@@ -413,7 +413,7 @@ static const u8 sScreechDescription[] = _(
     "Emits a screech to sharply\n"
     "reduce the foe's DEFENSE.");
 
-static const u8 sDoubleTeamDescription[] = _(
+static const u8 sShadowHitDescription[] = _(
     "Creates illusory copies to\n"
     "raise evasiveness.");
 
@@ -1523,7 +1523,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_NIGHT_SHADE - 1] = sNightShadeDescription,
     [MOVE_MIMIC - 1] = sMimicDescription,
     [MOVE_SCREECH - 1] = sScreechDescription,
-    [MOVE_DOUBLE_TEAM - 1] = sDoubleTeamDescription,
+    [MOVE_SHADOW_HIT - 1] = sShadowHitDescription,
     [MOVE_RECOVER - 1] = sRecoverDescription,
     [MOVE_HARDEN - 1] = sHardenDescription,
     [MOVE_MINIMIZE - 1] = sMinimizeDescription,

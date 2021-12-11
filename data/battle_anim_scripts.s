@@ -120,7 +120,7 @@ gBattleAnims_Moves::
 	.4byte Move_NIGHT_SHADE
 	.4byte Move_MIMIC
 	.4byte Move_SCREECH
-	.4byte Move_DOUBLE_TEAM
+	.4byte Move_SHADOW_HIT
 	.4byte Move_RECOVER
 	.4byte Move_HARDEN
 	.4byte Move_MINIMIZE
@@ -1180,7 +1180,7 @@ Move_STOMP:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
 	setalpha 12, 8
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_TARGET
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_TARGET
 	createsprite gStompFootSpriteTemplate, ANIM_ATTACKER, 3, 0, -32, 15
 	delay 19
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, -8, ANIM_TARGET, 1
@@ -2037,7 +2037,7 @@ Move_WHIRLWIND:
 	createsprite gWhirlwindLineSpriteTemplate, ANIM_ATTACKER, 2, 0, 24, ANIM_TARGET, 60, 4
 	createsprite gWhirlwindLineSpriteTemplate, ANIM_ATTACKER, 2, 0, 32, ANIM_TARGET, 60, 0
 	delay 5
-	loopsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_TARGET, 10, 4
+	loopsewithpan SE_M_SHADOW_HIT, SOUND_PAN_TARGET, 10, 4
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 15, 1
 	delay 29
 	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_TARGET, 12, 6, 1, 5
@@ -2263,7 +2263,7 @@ IcyWindSwirlingSnowballs:
 Move_SMOKESCREEN:
 	loadspritegfx ANIM_TAG_BLACK_SMOKE
 	loadspritegfx ANIM_TAG_BLACK_BALL
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	createsprite gBlackBallSpriteTemplate, ANIM_TARGET, 2, 20, 0, 0, 0, 35, -25
 	waitforvisualfinish
 	createvisualtask AnimTask_SmokescreenImpact, 2
@@ -2387,9 +2387,9 @@ Move_ROLLING_KICK:
 	monbg ANIM_TARGET
 	setalpha 12, 8
 	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 18, 6, 1, 4
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	delay 6
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 0, 20, 0, 0, 4
 	createsprite gSlidingKickSpriteTemplate, ANIM_ATTACKER, 2, -24, 0, 48, 10, 160, 0
@@ -2711,15 +2711,15 @@ Move_AGILITY:
 	setalpha 12, 8
 	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 24, 6, 4, 4
 	createvisualtask AnimTask_TraceMonBlended, 2, 0, 4, 7, 10
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	delay 12
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	delay 12
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	delay 12
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	delay 12
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	delay 12
 	waitforvisualfinish
 	clearmonbg ANIM_ATK_PARTNER
@@ -2774,27 +2774,27 @@ Move_TELEPORT:
 	waitforvisualfinish
 	end
 
-Move_DOUBLE_TEAM:
-	createvisualtask AnimTask_DoubleTeam, 2
+Move_SHADOW_HIT:
+	createvisualtask AnimTask_ShadowHit, 2
 	setalpha 12, 8
 	monbg ANIM_ATK_PARTNER
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	delay 32
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	delay 24
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	delay 16
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	delay 8
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	delay 8
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	delay 8
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	delay 8
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	delay 8
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	clearmonbg ANIM_ATK_PARTNER
 	blendoff
@@ -3255,17 +3255,17 @@ Move_FALSE_SWIPE:
 	playsewithpan SE_M_VITAL_THROW, SOUND_PAN_TARGET
 	delay 16
 	createsprite gFalseSwipePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 0
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_TARGET
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_TARGET
 	delay 2
 	createsprite gFalseSwipePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 16
 	delay 2
 	createsprite gFalseSwipePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 32
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_TARGET
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_TARGET
 	delay 2
 	createsprite gFalseSwipePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 48
 	delay 2
 	createsprite gFalseSwipePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 64
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_TARGET
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_TARGET
 	delay 2
 	createsprite gFalseSwipePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 80
 	delay 2
@@ -3414,7 +3414,7 @@ ExtremeSpeedContinue:
 	createvisualtask AnimTask_SpeedDust, 2
 	delay 10
 	createvisualtask AnimTask_ExtremeSpeedMonReappear, 2
-	loopsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER, 8, 4
+	loopsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER, 8, 4
 	waitforvisualfinish
 	restorebg
 	waitbgfadeout
@@ -6404,7 +6404,7 @@ FlySetUp:
 FlyUnleash:
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	createsprite gFlyBallAttackSpriteTemplate, ANIM_ATTACKER, 2, 20
 	delay 20
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 0
@@ -6447,7 +6447,7 @@ Move_KARATE_CHOP:
 	monbg ANIM_DEF_PARTNER
 	splitbgprio ANIM_TARGET
 	setalpha 12, 8
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_TARGET
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_TARGET
 	createsprite gKarateChopSpriteTemplate, ANIM_ATTACKER, 2, -16, 0, 0, 0, 10, 1, 3, 0
 	waitforvisualfinish
 	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
@@ -6686,15 +6686,15 @@ Move_SUBMISSION:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	waitplaysewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET, 10
-	waitplaysewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER, 20
+	waitplaysewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER, 20
 	waitplaysewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET, 30
-	waitplaysewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER, 40
+	waitplaysewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER, 40
 	waitplaysewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET, 50
-	waitplaysewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER, 60
+	waitplaysewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER, 60
 	waitplaysewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET, 70
-	waitplaysewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER, 80
+	waitplaysewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER, 80
 	waitplaysewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET, 90
 	createvisualtask AnimTask_TranslateMonElliptical, 2, 0, -18, 6, 6, 4
 	createvisualtask AnimTask_TranslateMonElliptical, 2, 1, 18, 6, 6, 4
@@ -8127,17 +8127,17 @@ Move_TRICK:
 	createvisualtask AnimTask_StretchTargetUp, 3
 	createvisualtask AnimTask_StretchAttackerUp, 3
 	delay 30
-	playsewithpan SE_M_DOUBLE_TEAM, 0
+	playsewithpan SE_M_SHADOW_HIT, 0
 	delay 24
-	playsewithpan SE_M_DOUBLE_TEAM, 0
+	playsewithpan SE_M_SHADOW_HIT, 0
 	delay 16
-	playsewithpan SE_M_DOUBLE_TEAM, 0
+	playsewithpan SE_M_SHADOW_HIT, 0
 	delay 16
-	playsewithpan SE_M_DOUBLE_TEAM, 0
+	playsewithpan SE_M_SHADOW_HIT, 0
 	delay 16
-	playsewithpan SE_M_DOUBLE_TEAM, 0
+	playsewithpan SE_M_SHADOW_HIT, 0
 	delay 16
-	playsewithpan SE_M_DOUBLE_TEAM, 0
+	playsewithpan SE_M_SHADOW_HIT, 0
 	delay 16
 	playsewithpan SE_M_ATTRACT, 0
 	createvisualtask AnimTask_ShakeMon, 3, ANIM_ATTACKER, 5, 0, 7, 2
@@ -10547,11 +10547,11 @@ SnatchMoveContinue:
 	call SnatchMoveTrySwapToSubstitute
 	end
 SnatchOpposingMonMove:
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_SnatchOpposingMonMove, 2
 	goto SnatchMoveContinue
 SnatchPartnerMonMove:
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_SnatchPartnerMove, 2
 	goto SnatchMoveContinue
 

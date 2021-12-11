@@ -774,7 +774,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_NEXT_APPEAL_EARLIER,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_DOUBLE_TEAM},
+        .comboMoves = {COMBO_STARTER_SHADOW_HIT},
     },
 
     [MOVE_QUICK_ATTACK] =
@@ -782,7 +782,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_NEXT_APPEAL_EARLIER,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_DOUBLE_TEAM},
+        .comboMoves = {COMBO_STARTER_SHADOW_HIT},
     },
 
     [MOVE_RAGE] =
@@ -798,7 +798,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_AVOID_STARTLE,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_DOUBLE_TEAM, COMBO_STARTER_PSYCHIC, COMBO_STARTER_KINESIS, COMBO_STARTER_CONFUSION},
+        .comboMoves = {COMBO_STARTER_SHADOW_HIT, COMBO_STARTER_PSYCHIC, COMBO_STARTER_KINESIS, COMBO_STARTER_CONFUSION},
     },
 
     [MOVE_NIGHT_SHADE] =
@@ -825,11 +825,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_DOUBLE_TEAM] =
+    [MOVE_SHADOW_HIT] =
     {
         .effect = CONTEST_EFFECT_AVOID_STARTLE_ONCE,
         .contestCategory = CONTEST_CATEGORY_COOL,
-        .comboStarterId = COMBO_STARTER_DOUBLE_TEAM,
+        .comboStarterId = COMBO_STARTER_SHADOW_HIT,
         .comboMoves = {0},
     },
 

@@ -154,8 +154,8 @@ static void AnimTask_LeafBlade_Step2(struct Task *, u8);
 static void AnimTask_LeafBlade_Step2_Callback(struct Sprite *);
 static void AnimTask_SkullBashPositionSet(u8);
 static void AnimTask_SkullBashPositionReset(u8);
-static void AnimTask_DoubleTeam_Step(u8);
-static void AnimDoubleTeam(struct Sprite *);
+static void AnimTask_ShadowHit_Step(u8);
+static void AnimShadowHit(struct Sprite *);
 
 const union AnimCmd gPowderParticlesAnimCmds[] =
 {
@@ -5164,7 +5164,7 @@ static void AnimHornHit_Step(struct Sprite* sprite)
         DestroyAnimSprite(sprite);
 }
 
-void AnimTask_DoubleTeam(u8 taskId)
+void AnimTask_ShadowHit(u8 taskId)
 {
     u16 i;
     int obj;
@@ -5187,19 +5187,19 @@ void AnimTask_DoubleTeam(u8 taskId)
         gSprites[obj].data[0] = 0;
         gSprites[obj].data[1] = i << 7;
         gSprites[obj].data[2] = taskId;
-        gSprites[obj].callback = AnimDoubleTeam;
+        gSprites[obj].callback = AnimShadowHit;
         task->data[3]++;
         i++;
     }
 
-    task->func = AnimTask_DoubleTeam_Step;
+    task->func = AnimTask_ShadowHit_Step;
     if (GetBattlerSpriteBGPriorityRank(gBattleAnimAttacker) == 1)
         ClearGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_BG1_ON);
     else
         ClearGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_BG2_ON);
 }
 
-static void AnimTask_DoubleTeam_Step(u8 taskId)
+static void AnimTask_ShadowHit_Step(u8 taskId)
 {
     struct Task* task = &gTasks[taskId];
     if (!task->data[3])
@@ -5214,7 +5214,7 @@ static void AnimTask_DoubleTeam_Step(u8 taskId)
     }
 }
 
-static void AnimDoubleTeam(struct Sprite* sprite)
+static void AnimShadowHit(struct Sprite* sprite)
 {
     if (++sprite->data[3] > 1)
     {

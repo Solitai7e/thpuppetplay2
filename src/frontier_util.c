@@ -219,7 +219,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][FRONTIER_PARTY_SIZ
                 .fixedIV = 16,
                 .nature = NATURE_ADAMANT,
                 .evs = {152, 0, 0, 152, 100, 106},
-                .moves = {MOVE_CONFUSE_RAY, MOVE_DOUBLE_TEAM, MOVE_TOXIC, MOVE_FLY},
+                .moves = {MOVE_CONFUSE_RAY, MOVE_SHADOW_HIT, MOVE_TOXIC, MOVE_FLY},
             },
             {
                 .species = SPECIES_CMIMA,

@@ -139,7 +139,7 @@
 #define SE_M_GUST                   132 // SE_W016
 #define SE_M_GUST2                  133 // SE_W016B
 #define SE_M_DOUBLE_SLAP            134 // SE_W003
-#define SE_M_DOUBLE_TEAM            135 // SE_W104
+#define SE_M_SHADOW_HIT            135 // SE_W104
 #define SE_M_RAZOR_WIND             136 // SE_W013
 #define SE_M_ICY_WIND               137 // SE_W196
 #define SE_M_THUNDER_WAVE           138 // SE_W086

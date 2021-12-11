@@ -136,7 +136,7 @@ gSongTable::
 	song se_m_gust, 2, 2
 	song se_m_gust2, 2, 2
 	song se_m_double_slap, 1, 1
-	song se_m_double_team, 1, 1
+	song se_m_shadow_hit, 1, 1
 	song se_m_razor_wind, 1, 1
 	song se_m_icy_wind, 1, 1
 	song se_m_thunder_wave, 1, 1

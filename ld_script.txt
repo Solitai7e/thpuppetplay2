@@ -831,7 +831,7 @@ SECTIONS {
         sound/songs/midi/se_m_gust.o(.rodata);
         sound/songs/midi/se_m_gust2.o(.rodata);
         sound/songs/midi/se_m_double_slap.o(.rodata);
-        sound/songs/se_m_double_team.o(.rodata);
+        sound/songs/se_m_shadow_hit.o(.rodata);
         sound/songs/midi/se_m_razor_wind.o(.rodata);
         sound/songs/se_m_icy_wind.o(.rodata);
         sound/songs/se_m_thunder_wave.o(.rodata);

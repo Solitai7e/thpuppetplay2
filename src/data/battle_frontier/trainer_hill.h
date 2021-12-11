@@ -5022,7 +5022,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_YAMAME,
                                             .heldItem = ITEM_BRIGHT_POWDER,
-                                            .moves = {MOVE_DOUBLE_TEAM, MOVE_PROTECT, MOVE_RETURN, MOVE_GUNK_SHOT},
+                                            .moves = {MOVE_SHADOW_HIT, MOVE_PROTECT, MOVE_RETURN, MOVE_GUNK_SHOT},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 6,

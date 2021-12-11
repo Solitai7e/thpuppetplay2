@@ -853,14 +853,14 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_ASUWAKO_1] = {
         .species = SPECIES_ASUWAKO,
-        .moves = {MOVE_FURY_CUTTER, MOVE_SCREECH, MOVE_SWORDS_DANCE, MOVE_DOUBLE_TEAM},
+        .moves = {MOVE_FURY_CUTTER, MOVE_SCREECH, MOVE_SWORDS_DANCE, MOVE_SHADOW_HIT},
         .itemTableId = BATTLE_FRONTIER_ITEM_NONE,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_SPEED | F_EV_SPREAD_DEFENSE | F_EV_SPREAD_HP,
         .nature = NATURE_QUIRKY
     },
     [SLATEPORT_TENT_MON_ASUWAKO_2] = {
         .species = SPECIES_ASUWAKO,
-        .moves = {MOVE_FURY_CUTTER, MOVE_DOUBLE_TEAM, MOVE_SCREECH, MOVE_SAND_ATTACK},
+        .moves = {MOVE_FURY_CUTTER, MOVE_SHADOW_HIT, MOVE_SCREECH, MOVE_SAND_ATTACK},
         .itemTableId = BATTLE_FRONTIER_ITEM_SILVER_POWDER,
         .evSpread = F_EV_SPREAD_DEFENSE | F_EV_SPREAD_ATTACK,
         .nature = NATURE_NAUGHTY
@@ -1168,7 +1168,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_YUKI] = {
         .species = SPECIES_YUKI,
-        .moves = {MOVE_TACKLE, MOVE_CONFUSE_RAY, MOVE_QUICK_ATTACK, MOVE_DOUBLE_TEAM},
+        .moves = {MOVE_TACKLE, MOVE_CONFUSE_RAY, MOVE_QUICK_ATTACK, MOVE_SHADOW_HIT},
         .itemTableId = BATTLE_FRONTIER_ITEM_NONE,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_ATTACK,
         .nature = NATURE_HARDY
@@ -1189,7 +1189,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_SENDAI] = {
         .species = SPECIES_SENDAI,
-        .moves = {MOVE_CALM_MIND, MOVE_CONFUSION, MOVE_DOUBLE_TEAM, MOVE_GROWL},
+        .moves = {MOVE_CALM_MIND, MOVE_CONFUSION, MOVE_SHADOW_HIT, MOVE_GROWL},
         .itemTableId = BATTLE_FRONTIER_ITEM_TWISTED_SPOON,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE | F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_CAREFUL
@@ -1829,7 +1829,7 @@ const struct FacilityMon gVerdanturfBattleTentMons[NUM_VERDANTURF_TENT_MONS] =
     },
     [VERDANTURF_TENT_MON_TSHOU] = {
         .species = SPECIES_TSHOU,
-        .moves = {MOVE_AGILITY, MOVE_DOUBLE_TEAM, MOVE_GALE, MOVE_GROWL},
+        .moves = {MOVE_AGILITY, MOVE_SHADOW_HIT, MOVE_GALE, MOVE_GROWL},
         .itemTableId = BATTLE_FRONTIER_ITEM_ORAN_BERRY,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_RELAXED
@@ -1892,7 +1892,7 @@ const struct FacilityMon gVerdanturfBattleTentMons[NUM_VERDANTURF_TENT_MONS] =
     },
     [VERDANTURF_TENT_MON_SWRIGGLE] = {
         .species = SPECIES_SWRIGGLE,
-        .moves = {MOVE_SUBSTITUTE, MOVE_FAINT_ATTACK, MOVE_DOUBLE_TEAM, MOVE_BIND},
+        .moves = {MOVE_SUBSTITUTE, MOVE_FAINT_ATTACK, MOVE_SHADOW_HIT, MOVE_BIND},
         .itemTableId = BATTLE_FRONTIER_ITEM_LAX_INCENSE,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_SPEED,
         .nature = NATURE_QUIET
@@ -1927,7 +1927,7 @@ const struct FacilityMon gVerdanturfBattleTentMons[NUM_VERDANTURF_TENT_MONS] =
     },
     [VERDANTURF_TENT_MON_CSTARSAPPHIRE_1] = {
         .species = SPECIES_CSTARSAPPHIRE,
-        .moves = {MOVE_WATERFALL, MOVE_MUD_SPORT, MOVE_JAMMING, MOVE_DOUBLE_TEAM},
+        .moves = {MOVE_WATERFALL, MOVE_MUD_SPORT, MOVE_JAMMING, MOVE_SHADOW_HIT},
         .itemTableId = BATTLE_FRONTIER_ITEM_MYSTIC_WATER,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_SPEED,
         .nature = NATURE_GENTLE
@@ -1969,7 +1969,7 @@ const struct FacilityMon gVerdanturfBattleTentMons[NUM_VERDANTURF_TENT_MONS] =
     },
     [VERDANTURF_TENT_MON_ATOKIKO] = {
         .species = SPECIES_ATOKIKO,
-        .moves = {MOVE_AGILITY, MOVE_GALE, MOVE_DOUBLE_TEAM, MOVE_JAMMING},
+        .moves = {MOVE_AGILITY, MOVE_GALE, MOVE_SHADOW_HIT, MOVE_JAMMING},
         .itemTableId = BATTLE_FRONTIER_ITEM_SHARP_BEAK,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK,
         .nature = NATURE_NAUGHTY
@@ -2787,7 +2787,7 @@ const struct FacilityMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_ASUWAKO_1] = {
         .species = SPECIES_ASUWAKO,
-        .moves = {MOVE_DOUBLE_TEAM, MOVE_PROTECT, MOVE_DIG, MOVE_SAND_ATTACK},
+        .moves = {MOVE_SHADOW_HIT, MOVE_PROTECT, MOVE_DIG, MOVE_SAND_ATTACK},
         .itemTableId = BATTLE_FRONTIER_ITEM_PETAYA_BERRY,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_SPEED | F_EV_SPREAD_DEFENSE | F_EV_SPREAD_HP,
         .nature = NATURE_TIMID
@@ -2878,21 +2878,21 @@ const struct FacilityMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_MINORIKO] = {
         .species = SPECIES_MINORIKO,
-        .moves = {MOVE_CONFUSE_RAY, MOVE_BITE, MOVE_DOUBLE_TEAM, MOVE_SUBSTITUTE},
+        .moves = {MOVE_CONFUSE_RAY, MOVE_BITE, MOVE_SHADOW_HIT, MOVE_SUBSTITUTE},
         .itemTableId = BATTLE_FRONTIER_ITEM_PETAYA_BERRY,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE | F_EV_SPREAD_HP,
         .nature = NATURE_BOLD
     },
     [FALLARBOR_TENT_MON_TKOGASA] = {
         .species = SPECIES_TKOGASA,
-        .moves = {MOVE_GALE, MOVE_HAIL, MOVE_DOUBLE_TEAM, MOVE_JAMMING},
+        .moves = {MOVE_GALE, MOVE_HAIL, MOVE_SHADOW_HIT, MOVE_JAMMING},
         .itemTableId = BATTLE_FRONTIER_ITEM_RAWST_BERRY,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_SPEED,
         .nature = NATURE_MODEST
     },
     [FALLARBOR_TENT_MON_DREMILIA] = {
         .species = SPECIES_DREMILIA,
-        .moves = {MOVE_TWISTER, MOVE_ICY_WIND, MOVE_DOUBLE_TEAM, MOVE_WATER_GUN},
+        .moves = {MOVE_TWISTER, MOVE_ICY_WIND, MOVE_SHADOW_HIT, MOVE_WATER_GUN},
         .itemTableId = BATTLE_FRONTIER_ITEM_DRAGON_FANG,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK,
         .nature = NATURE_ADAMANT
@@ -2955,7 +2955,7 @@ const struct FacilityMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_CRUMIA] = {
         .species = SPECIES_CRUMIA,
-        .moves = {MOVE_SAND_TOMB, MOVE_SANDSTORM, MOVE_DOUBLE_TEAM, MOVE_FOCUS_PUNCH},
+        .moves = {MOVE_SAND_TOMB, MOVE_SANDSTORM, MOVE_SHADOW_HIT, MOVE_FOCUS_PUNCH},
         .itemTableId = BATTLE_FRONTIER_ITEM_SOFT_SAND,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK,
         .nature = NATURE_JOLLY
