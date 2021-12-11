@@ -3602,7 +3602,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_NAZRIN,
                                             .heldItem = ITEM_FOCUS_BAND,
-                                            .moves = {MOVE_SUPER_FANG, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+                                            .moves = {MOVE_HEAT_CLAW, MOVE_NONE, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 252,

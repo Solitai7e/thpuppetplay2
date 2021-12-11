@@ -178,7 +178,7 @@ gBattleAnims_Moves::
 	.4byte Move_SHARPEN
 	.4byte Move_CONVERSION
 	.4byte Move_TRI_ATTACK
-	.4byte Move_SUPER_FANG
+	.4byte Move_HEAT_CLAW
 	.4byte Move_SLASH
 	.4byte Move_SUBSTITUTE
 	.4byte Move_STRUGGLE
@@ -3010,7 +3010,7 @@ Move_SHARPEN:
 	waitforvisualfinish
 	end
 
-Move_SUPER_FANG:
+Move_HEAT_CLAW:
 	loadspritegfx ANIM_TAG_FANG_ATTACK
 	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_ATTACKER, 1, 0, 20, 1
 	playsewithpan SE_M_DARK_PULSE, SOUND_PAN_ATTACKER
@@ -3021,7 +3021,7 @@ Move_SUPER_FANG:
 	delay 20
 	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 4
 	delay 4
-	createsprite gSuperFangSpriteTemplate, ANIM_TARGET, 2
+	createsprite gHeatClawSpriteTemplate, ANIM_TARGET, 2
 	playsewithpan SE_M_BITE, SOUND_PAN_TARGET
 	delay 8
 	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 3, 1, RGB(31, 2, 2), 14, 0x7FFF, 14

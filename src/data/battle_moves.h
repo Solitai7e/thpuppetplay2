@@ -2268,7 +2268,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_SUPER_FANG] =
+    [MOVE_HEAT_CLAW] =
     {
         .effect = EFFECT_LOW_KICK,
         .split = 0,
@@ -3040,7 +3040,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_PRESENT] =
     {
-        .effect = EFFECT_SUPER_FANG,
+        .effect = EFFECT_HEAT_CLAW,
         .split = 0,
         .power = 1,
         .type = TYPE_DREAM,

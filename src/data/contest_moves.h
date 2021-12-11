@@ -1289,7 +1289,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_LOCK_ON},
     },
 
-    [MOVE_SUPER_FANG] =
+    [MOVE_HEAT_CLAW] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,

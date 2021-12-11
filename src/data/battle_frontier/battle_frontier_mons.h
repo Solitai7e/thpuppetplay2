@@ -2116,7 +2116,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_NAZRIN_2] = {
         .species = SPECIES_NAZRIN,
-        .moves = {MOVE_SUPER_FANG, MOVE_KILLING_BITE, MOVE_SHADOW_BALL, MOVE_SCARY_FACE},
+        .moves = {MOVE_HEAT_CLAW, MOVE_KILLING_BITE, MOVE_SHADOW_BALL, MOVE_SCARY_FACE},
         .itemTableId = BATTLE_FRONTIER_ITEM_FOCUS_BAND,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK,
         .nature = NATURE_ADAMANT

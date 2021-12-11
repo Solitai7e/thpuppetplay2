@@ -645,7 +645,7 @@ static const u8 sTriAttackDescription[] = _(
     "Fires three types of beams\n"
     "at the same time.");
 
-static const u8 sSuperFangDescription[] = _(
+static const u8 sHeatClawDescription[] = _(
     "Attacks with sharp fangs\n"
     "and cuts half the foe's HP.");
 
@@ -1581,7 +1581,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SHARPEN - 1] = sSharpenDescription,
     [MOVE_CONVERSION - 1] = sConversionDescription,
     [MOVE_TRI_ATTACK - 1] = sTriAttackDescription,
-    [MOVE_SUPER_FANG - 1] = sSuperFangDescription,
+    [MOVE_HEAT_CLAW - 1] = sHeatClawDescription,
     [MOVE_SLASH - 1] = sSlashDescription,
     [MOVE_SUBSTITUTE - 1] = sSubstituteDescription,
     [MOVE_STRUGGLE - 1] = sStruggleDescription,

@@ -124,7 +124,7 @@ AI_CheckBadMove_CheckEffect:
 	if_effect EFFECT_LIGHT_SCREEN, AI_CBM_LightScreen
 	if_effect EFFECT_OHKO, AI_CBM_OneHitKO
 	if_effect EFFECT_RAZOR_WIND, AI_CBM_HighRiskForDamage
-	if_effect EFFECT_SUPER_FANG, AI_CBM_HighRiskForDamage
+	if_effect EFFECT_HEAT_CLAW, AI_CBM_HighRiskForDamage
 	if_effect EFFECT_MIST, AI_CBM_Mist
 	if_effect EFFECT_FOCUS_ENERGY, AI_CBM_FocusEnergy
 	if_effect EFFECT_CONFUSE, AI_CBM_Confuse
@@ -679,7 +679,7 @@ AI_CheckViability:
 	if_effect EFFECT_REST, AI_CV_Rest
 	if_effect EFFECT_OHKO, AI_CV_OneHitKO
 	if_effect EFFECT_RAZOR_WIND, AI_CV_ChargeUpMove
-	if_effect EFFECT_SUPER_FANG, AI_CV_SuperFang
+	if_effect EFFECT_HEAT_CLAW, AI_CV_HeatClaw
 	if_effect EFFECT_TRAP, AI_CV_Trap
 	if_effect EFFECT_HIGH_CRITICAL, AI_CV_HighCrit
 	if_effect EFFECT_CONFUSE, AI_CV_Confuse
@@ -1422,10 +1422,10 @@ AI_CV_Rest_End:
 AI_CV_OneHitKO:
 	end
 
-AI_CV_SuperFang:
-	if_hp_more_than AI_TARGET, 50, AI_CV_SuperFang_End
+AI_CV_HeatClaw:
+	if_hp_more_than AI_TARGET, 50, AI_CV_HeatClaw_End
 	score -1
-AI_CV_SuperFang_End:
+AI_CV_HeatClaw_End:
 	end
 
 AI_CV_Trap:
@@ -1696,7 +1696,7 @@ AI_CV_Encore_EncouragedMovesToEncore:
     .byte EFFECT_TOXIC
     .byte EFFECT_LIGHT_SCREEN
     .byte EFFECT_REST
-    .byte EFFECT_SUPER_FANG
+    .byte EFFECT_HEAT_CLAW
     .byte EFFECT_SPECIAL_DEFENSE_UP_2
     .byte EFFECT_CONFUSE
     .byte EFFECT_POISON
@@ -3127,8 +3127,8 @@ AI_HPAware_DiscouragedEffectsWhenTargetLowHP:
     .byte EFFECT_TOXIC
     .byte EFFECT_LIGHT_SCREEN
     .byte EFFECT_OHKO
-    .byte EFFECT_SUPER_FANG //Maybe supposed to be EFFECT_RAZOR_WIND
-    .byte EFFECT_SUPER_FANG
+    .byte EFFECT_HEAT_CLAW //Maybe supposed to be EFFECT_RAZOR_WIND
+    .byte EFFECT_HEAT_CLAW
     .byte EFFECT_MIST
     .byte EFFECT_FOCUS_ENERGY
     .byte EFFECT_CONFUSE

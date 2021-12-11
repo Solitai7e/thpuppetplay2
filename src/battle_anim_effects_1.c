@@ -125,7 +125,7 @@ static void AnimMoonlightSparkle(struct Sprite *);
 static void AnimMoonlightSparkle_Step(struct Sprite *);
 static void AnimHornHit(struct Sprite *);
 static void AnimHornHit_Step(struct Sprite *);
-static void AnimSuperFang(struct Sprite *);
+static void AnimHeatClaw(struct Sprite *);
 static void AnimWavyMusicNotes(struct Sprite *);
 static void AnimWavyMusicNotes_Step(struct Sprite *);
 static void AnimWavyMusicNotesGetNextPos(s16, s16, s16 *, s16 *, s8);
@@ -1861,7 +1861,7 @@ const struct SpriteTemplate gHornHitSpriteTemplate =
     .callback = AnimHornHit,
 };
 
-const union AnimCmd gSuperFangAnimCmds[] =
+const union AnimCmd gHeatClawAnimCmds[] =
 {
     ANIMCMD_FRAME(0, 2),
     ANIMCMD_FRAME(16, 2),
@@ -1870,20 +1870,20 @@ const union AnimCmd gSuperFangAnimCmds[] =
     ANIMCMD_END,
 };
 
-const union AnimCmd *const gSuperFangAnimTable[] =
+const union AnimCmd *const gHeatClawAnimTable[] =
 {
-    gSuperFangAnimCmds,
+    gHeatClawAnimCmds,
 };
 
-const struct SpriteTemplate gSuperFangSpriteTemplate =
+const struct SpriteTemplate gHeatClawSpriteTemplate =
 {
     .tileTag = ANIM_TAG_FANG_ATTACK,
     .paletteTag = ANIM_TAG_FANG_ATTACK,
     .oam = &gOamData_AffineOff_ObjNormal_32x32,
-    .anims = gSuperFangAnimTable,
+    .anims = gHeatClawAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimSuperFang,
+    .callback = AnimHeatClaw,
 };
 
 const union AnimCmd gWavyMusicNotesAnimCmds1[] =
@@ -5236,7 +5236,7 @@ static void AnimDoubleTeam(struct Sprite* sprite)
     }
 }
 
-static void AnimSuperFang(struct Sprite* sprite)
+static void AnimHeatClaw(struct Sprite* sprite)
 {
     StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
     sprite->callback = RunStoredCallbackWhenAnimEnds;

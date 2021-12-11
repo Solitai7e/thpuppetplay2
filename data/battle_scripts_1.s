@@ -57,7 +57,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectRest                   @ EFFECT_REST
 	.4byte BattleScript_EffectOHKO                   @ EFFECT_OHKO
 	.4byte BattleScript_EffectRazorWind              @ EFFECT_RAZOR_WIND
-	.4byte BattleScript_EffectSuperFang              @ EFFECT_SUPER_FANG
+	.4byte BattleScript_EffectHeatClaw              @ EFFECT_HEAT_CLAW
 	.4byte BattleScript_EffectDarkPulse             @ EFFECT_DARK_PULSE
 	.4byte BattleScript_EffectTrap                   @ EFFECT_TRAP
 	.4byte BattleScript_EffectHit                    @ EFFECT_HIGH_CRITICAL
@@ -804,7 +804,7 @@ BattleScriptFirstChargingTurn::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
-BattleScript_EffectSuperFang::
+BattleScript_EffectHeatClaw::
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
