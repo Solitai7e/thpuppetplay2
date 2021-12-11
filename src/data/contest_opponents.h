@@ -1462,7 +1462,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_SING,
             MOVE_SOFT_BOILED,
-            MOVE_EGG_BOMB,
+            MOVE_MIND_BOMB,
             MOVE_DOUBLE_EDGE
         },
         .cool = 20,
@@ -1994,7 +1994,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_STOMP,
             MOVE_HYPNOSIS,
-            MOVE_EGG_BOMB,
+            MOVE_MIND_BOMB,
             MOVE_SKILL_SWAP
         },
         .cool = 40,

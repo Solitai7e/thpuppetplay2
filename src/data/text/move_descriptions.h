@@ -481,7 +481,7 @@ static const u8 sSelfDestructDescription[] = _(
     "Inflicts severe damage but\n"
     "makes the user faint.");
 
-static const u8 sEggBombDescription[] = _(
+static const u8 sMindBombDescription[] = _(
     "An egg is forcibly hurled at\n"
     "the foe.");
 
@@ -1540,7 +1540,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_METRONOME - 1] = sMetronomeDescription,
     [MOVE_MIRROR_MOVE - 1] = sMirrorMoveDescription,
     [MOVE_SELF_DESTRUCT - 1] = sSelfDestructDescription,
-    [MOVE_EGG_BOMB - 1] = sEggBombDescription,
+    [MOVE_MIND_BOMB - 1] = sMindBombDescription,
     [MOVE_LICK - 1] = sLickDescription,
     [MOVE_SMOG - 1] = sSmogDescription,
     [MOVE_SLUDGE - 1] = sSludgeDescription,

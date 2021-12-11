@@ -1435,7 +1435,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_SHINGYOKUM,
                         .heldItem = ITEM_LEFTOVERS,
-                        .moves = {MOVE_SKILL_SWAP, MOVE_EGG_BOMB, MOVE_THUNDERBOLT, MOVE_SING},
+                        .moves = {MOVE_SKILL_SWAP, MOVE_MIND_BOMB, MOVE_THUNDERBOLT, MOVE_SING},
                         .level = 0,
                         .ppBonuses = 0,
                         .defenseEV = 255,

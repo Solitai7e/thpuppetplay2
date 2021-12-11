@@ -137,7 +137,7 @@ gBattleAnims_Moves::
 	.4byte Move_METRONOME
 	.4byte Move_MIRROR_MOVE @ doesnt have an actual animation
 	.4byte Move_SELF_DESTRUCT
-	.4byte Move_EGG_BOMB
+	.4byte Move_MIND_BOMB
 	.4byte Move_LICK
 	.4byte Move_SMOG
 	.4byte Move_SLUDGE
@@ -7321,7 +7321,7 @@ Move_NIGHT_SHADE:
 	waitbgfadein
 	end
 
-Move_EGG_BOMB:
+Move_MIND_BOMB:
 	loadspritegfx ANIM_TAG_EXPLOSION
 	loadspritegfx ANIM_TAG_LARGE_FRESH_EGG
 	playsewithpan SE_M_TAIL_WHIP, SOUND_PAN_ATTACKER
