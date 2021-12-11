@@ -365,7 +365,7 @@ gBattleAnims_Moves::
 	.4byte Move_SPLASHING
 	.4byte Move_CALM_MIND
 	.4byte Move_LEAF_BLADE
-	.4byte Move_DRAGON_DANCE
+	.4byte Move_TAILWIND
 	.4byte Move_ROCK_BLAST
 	.4byte Move_SHOCK_WAVE
 	.4byte Move_WATER_PULSE
@@ -4515,21 +4515,21 @@ Move_LEAF_BLADE:
 	blendoff
 	end
 
-Move_DRAGON_DANCE:
+Move_TAILWIND:
 	loadspritegfx ANIM_TAG_HOLLOW_ORB
 	monbg ANIM_ATTACKER
 	splitbgprio ANIM_ATTACKER
 	delay 1
-	createvisualtask AnimTask_DragonDanceWaver, 5
+	createvisualtask AnimTask_TailwindWaver, 5
 	playsewithpan SE_M_TELEPORT, SOUND_PAN_ATTACKER
 	delay 8
 	createvisualtask AnimTask_BlendPalInAndOutByTag, 5, ANIM_TAG_HOLLOW_ORB, RGB(0, 0, 19), 14, 0, 3
-	createsprite gDragonDanceOrbSpriteTemplate, ANIM_ATTACKER, 2, 0
-	createsprite gDragonDanceOrbSpriteTemplate, ANIM_ATTACKER, 2, 43
-	createsprite gDragonDanceOrbSpriteTemplate, ANIM_ATTACKER, 2, 85
-	createsprite gDragonDanceOrbSpriteTemplate, ANIM_ATTACKER, 2, 128
-	createsprite gDragonDanceOrbSpriteTemplate, ANIM_ATTACKER, 2, 170
-	createsprite gDragonDanceOrbSpriteTemplate, ANIM_ATTACKER, 2, 213
+	createsprite gTailwindOrbSpriteTemplate, ANIM_ATTACKER, 2, 0
+	createsprite gTailwindOrbSpriteTemplate, ANIM_ATTACKER, 2, 43
+	createsprite gTailwindOrbSpriteTemplate, ANIM_ATTACKER, 2, 85
+	createsprite gTailwindOrbSpriteTemplate, ANIM_ATTACKER, 2, 128
+	createsprite gTailwindOrbSpriteTemplate, ANIM_ATTACKER, 2, 170
+	createsprite gTailwindOrbSpriteTemplate, ANIM_ATTACKER, 2, 213
 	delay 30
 	playsewithpan SE_M_TELEPORT, SOUND_PAN_ATTACKER
 	delay 30

@@ -298,7 +298,7 @@ static const u16 sPoints_MoveEffect[NUM_BATTLE_MOVE_EFFECTS] =
     [EFFECT_POISON_JAB] = 1,
     [EFFECT_SPLASHING] = 4,
     [EFFECT_CALM_MIND] = 1,
-    [EFFECT_DRAGON_DANCE] = 1,
+    [EFFECT_TAILWIND] = 1,
     [EFFECT_CAMOUFLAGE] = 3
 };
 

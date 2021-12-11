@@ -21,7 +21,7 @@ const u16 gEggMoves[] = {
               MOVE_OUTRAGE,
               MOVE_BEAT_UP,
               MOVE_SWORDS_DANCE,
-              MOVE_DRAGON_DANCE),
+              MOVE_TAILWIND),
 
     egg_moves(CLILYWHITE,
               MOVE_MIRROR_COAT,
@@ -441,7 +441,7 @@ const u16 gEggMoves[] = {
               MOVE_SUBSTITUTE,
               MOVE_TICKLE,
               MOVE_REFRESH,
-              MOVE_DRAGON_DANCE,
+              MOVE_TAILWIND,
               MOVE_CURSE,
               MOVE_SLEEP_TALK,
               MOVE_SCULPTURE),
@@ -494,7 +494,7 @@ const u16 gEggMoves[] = {
               MOVE_HAZE,
               MOVE_JAMMING,
               MOVE_LAVA_PLUME,
-              MOVE_DRAGON_DANCE),
+              MOVE_TAILWIND),
 
     egg_moves(GENJII,
               MOVE_VINE_WHIP,
@@ -898,7 +898,7 @@ const u16 gEggMoves[] = {
               MOVE_OUTRAGE,
               MOVE_FOCUS_ENERGY,
               MOVE_ANCIENT_POWER,
-              MOVE_DRAGON_DANCE,
+              MOVE_TAILWIND,
               MOVE_CURSE),
 
     egg_moves(HEIRIN,
@@ -1298,7 +1298,7 @@ const u16 gEggMoves[] = {
               MOVE_THRASH,
               MOVE_DARK_PULSE,
               MOVE_TWISTER,
-              MOVE_DRAGON_DANCE),
+              MOVE_TAILWIND),
 
     egg_moves(CWAKASAGI,
               MOVE_DISABLE,

@@ -3339,14 +3339,14 @@ static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
     .lvl = 54,
     .species = SPECIES_TIKU,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_DOUBLE_EDGE, MOVE_LAVA_PLUME, MOVE_DRAGON_DANCE, MOVE_BLADE_FLASH}
+    .moves = {MOVE_DOUBLE_EDGE, MOVE_LAVA_PLUME, MOVE_TAILWIND, MOVE_BLADE_FLASH}
     },
     {
     .iv = 250,
     .lvl = 53,
     .species = SPECIES_TPARSEE,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SMOKESCREEN, MOVE_DRAGON_DANCE, MOVE_SURF, MOVE_BODY_SLAM}
+    .moves = {MOVE_SMOKESCREEN, MOVE_TAILWIND, MOVE_SURF, MOVE_BODY_SLAM}
     },
     {
     .iv = 250,
@@ -3539,7 +3539,7 @@ static const struct TrainerMonItemCustomMoves sParty_Winona1[] = {
     .lvl = 33,
     .species = SPECIES_TIKU,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_EARTHQUAKE, MOVE_LAVA_PLUME, MOVE_DRAGON_DANCE, MOVE_BLADE_FLASH}
+    .moves = {MOVE_EARTHQUAKE, MOVE_LAVA_PLUME, MOVE_TAILWIND, MOVE_BLADE_FLASH}
     }
 };
 
@@ -4445,7 +4445,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wallace[] = {
     .lvl = 56,
     .species = SPECIES_CTEWI,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE, MOVE_HYPER_BEAM, MOVE_SURF}
+    .moves = {MOVE_TAILWIND, MOVE_EARTHQUAKE, MOVE_HYPER_BEAM, MOVE_SURF}
     },
     {
     .iv = 255,
@@ -6753,7 +6753,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_WallyVR1[] = {
     .iv = 150,
     .lvl = 44,
     .species = SPECIES_TIKU,
-    .moves = {MOVE_BLADE_FLASH, MOVE_SAFEGUARD, MOVE_LAVA_PLUME, MOVE_DRAGON_DANCE}
+    .moves = {MOVE_BLADE_FLASH, MOVE_SAFEGUARD, MOVE_LAVA_PLUME, MOVE_TAILWIND}
     },
     {
     .iv = 150,
@@ -8756,7 +8756,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_WallyVR2[] = {
     .iv = 150,
     .lvl = 47,
     .species = SPECIES_TIKU,
-    .moves = {MOVE_BLADE_FLASH, MOVE_SAFEGUARD, MOVE_LAVA_PLUME, MOVE_DRAGON_DANCE}
+    .moves = {MOVE_BLADE_FLASH, MOVE_SAFEGUARD, MOVE_LAVA_PLUME, MOVE_TAILWIND}
     },
     {
     .iv = 150,
@@ -8789,7 +8789,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_WallyVR3[] = {
     .iv = 150,
     .lvl = 50,
     .species = SPECIES_TIKU,
-    .moves = {MOVE_BLADE_FLASH, MOVE_SAFEGUARD, MOVE_LAVA_PLUME, MOVE_DRAGON_DANCE}
+    .moves = {MOVE_BLADE_FLASH, MOVE_SAFEGUARD, MOVE_LAVA_PLUME, MOVE_TAILWIND}
     },
     {
     .iv = 150,
@@ -8822,7 +8822,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_WallyVR4[] = {
     .iv = 150,
     .lvl = 53,
     .species = SPECIES_TIKU,
-    .moves = {MOVE_BLADE_FLASH, MOVE_SAFEGUARD, MOVE_LAVA_PLUME, MOVE_DRAGON_DANCE}
+    .moves = {MOVE_BLADE_FLASH, MOVE_SAFEGUARD, MOVE_LAVA_PLUME, MOVE_TAILWIND}
     },
     {
     .iv = 150,
@@ -8855,7 +8855,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_WallyVR5[] = {
     .iv = 150,
     .lvl = 56,
     .species = SPECIES_TIKU,
-    .moves = {MOVE_BLADE_FLASH, MOVE_SAFEGUARD, MOVE_LAVA_PLUME, MOVE_DRAGON_DANCE}
+    .moves = {MOVE_BLADE_FLASH, MOVE_SAFEGUARD, MOVE_LAVA_PLUME, MOVE_TAILWIND}
     },
     {
     .iv = 150,
@@ -11092,7 +11092,7 @@ static const struct TrainerMonItemCustomMoves sParty_Winona2[] = {
     .lvl = 45,
     .species = SPECIES_TIKU,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_BLADE_FLASH, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE}
+    .moves = {MOVE_BLADE_FLASH, MOVE_REST, MOVE_TAILWIND, MOVE_EARTHQUAKE}
     }
 };
 
@@ -11137,7 +11137,7 @@ static const struct TrainerMonItemCustomMoves sParty_Winona3[] = {
     .lvl = 50,
     .species = SPECIES_TIKU,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_BLADE_FLASH, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE}
+    .moves = {MOVE_BLADE_FLASH, MOVE_REST, MOVE_TAILWIND, MOVE_EARTHQUAKE}
     }
 };
 
@@ -11182,7 +11182,7 @@ static const struct TrainerMonItemCustomMoves sParty_Winona4[] = {
     .lvl = 55,
     .species = SPECIES_TIKU,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_BLADE_FLASH, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE}
+    .moves = {MOVE_BLADE_FLASH, MOVE_REST, MOVE_TAILWIND, MOVE_EARTHQUAKE}
     }
 };
 
@@ -11227,7 +11227,7 @@ static const struct TrainerMonItemCustomMoves sParty_Winona5[] = {
     .lvl = 60,
     .species = SPECIES_TIKU,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_SKY_ATTACK, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE}
+    .moves = {MOVE_SKY_ATTACK, MOVE_REST, MOVE_TAILWIND, MOVE_EARTHQUAKE}
     }
 };
 

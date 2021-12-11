@@ -2174,7 +2174,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_TIKU,
                                             .heldItem = ITEM_BRIGHT_POWDER,
-                                            .moves = {MOVE_DRAGON_DANCE, MOVE_BLADE_FLASH, MOVE_ATTRACT, MOVE_NONE},
+                                            .moves = {MOVE_TAILWIND, MOVE_BLADE_FLASH, MOVE_ATTRACT, MOVE_NONE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 85,
@@ -5461,7 +5461,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_CTEWI,
                                             .heldItem = ITEM_BRIGHT_POWDER,
-                                            .moves = {MOVE_DRAGON_DANCE, MOVE_HYPER_BEAM, MOVE_BITE, MOVE_EARTHQUAKE},
+                                            .moves = {MOVE_TAILWIND, MOVE_HYPER_BEAM, MOVE_BITE, MOVE_EARTHQUAKE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .attackEV = 255,

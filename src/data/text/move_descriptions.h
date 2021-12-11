@@ -1393,7 +1393,7 @@ static const u8 sLeafBladeDescription[] = _(
     "Slashes with a sharp leaf.\n"
     "High critical-hit ratio.");
 
-static const u8 sDragonDanceDescription[] = _(
+static const u8 sTailwindDescription[] = _(
     "A mystical dance that ups\n"
     "ATTACK and SPEED.");
 
@@ -1768,7 +1768,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SPLASHING - 1] = sSplashingDescription,
     [MOVE_CALM_MIND - 1] = sCalmMindDescription,
     [MOVE_LEAF_BLADE - 1] = sLeafBladeDescription,
-    [MOVE_DRAGON_DANCE - 1] = sDragonDanceDescription,
+    [MOVE_TAILWIND - 1] = sTailwindDescription,
     [MOVE_ROCK_BLAST - 1] = sRockBlastDescription,
     [MOVE_SHOCK_WAVE - 1] = sShockWaveDescription,
     [MOVE_WATER_PULSE - 1] = sWaterPulseDescription,

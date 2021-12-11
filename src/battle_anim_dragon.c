@@ -8,12 +8,12 @@
 static void AnimOutrageFlame(struct Sprite *);
 static void AnimDarkPulseFirePlume(struct Sprite *);
 static void AnimDragonFireToTarget(struct Sprite *);
-static void AnimDragonDanceOrb(struct Sprite *);
-static void AnimDragonDanceOrb_Step(struct Sprite *);
+static void AnimTailwindOrb(struct Sprite *);
+static void AnimTailwindOrb_Step(struct Sprite *);
 static void AnimOverheatFlame(struct Sprite *);
 static void AnimOverheatFlame_Step(struct Sprite *);
-static void AnimTask_DragonDanceWaver_Step(u8);
-static void UpdateDragonDanceScanlineEffect(struct Task *);
+static void AnimTask_TailwindWaver_Step(u8);
+static void UpdateTailwindScanlineEffect(struct Task *);
 
 EWRAM_DATA static u16 gUnusedOverheatData[7] = {0};
 
@@ -165,7 +165,7 @@ const struct SpriteTemplate gDarkPulseFireSpitSpriteTemplate =
     .callback = AnimDragonFireToTarget,
 };
 
-const struct SpriteTemplate gDragonDanceOrbSpriteTemplate =
+const struct SpriteTemplate gTailwindOrbSpriteTemplate =
 {
     .tileTag = ANIM_TAG_HOLLOW_ORB,
     .paletteTag = ANIM_TAG_HOLLOW_ORB,
@@ -173,7 +173,7 @@ const struct SpriteTemplate gDragonDanceOrbSpriteTemplate =
     .anims = gDummySpriteAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimDragonDanceOrb,
+    .callback = AnimTailwindOrb,
 };
 
 const struct SpriteTemplate gOverheatFlameSpriteTemplate =
@@ -266,7 +266,7 @@ static void AnimDragonFireToTarget(struct Sprite *sprite)
     StartDragonFireTranslation(sprite);
 }
 
-static void AnimDragonDanceOrb(struct Sprite *sprite)
+static void AnimTailwindOrb(struct Sprite *sprite)
 {
     u16 r5;
     u16 r0;
@@ -283,10 +283,10 @@ static void AnimDragonDanceOrb(struct Sprite *sprite)
         sprite->data[7] = r0 / 2;
     sprite->x2 = Cos(sprite->data[6], sprite->data[7]);
     sprite->y2 = Sin(sprite->data[6], sprite->data[7]);
-    sprite->callback = AnimDragonDanceOrb_Step;
+    sprite->callback = AnimTailwindOrb_Step;
 }
 
-static void AnimDragonDanceOrb_Step(struct Sprite *sprite)
+static void AnimTailwindOrb_Step(struct Sprite *sprite)
 {
     switch (sprite->data[0])
     {
@@ -325,8 +325,8 @@ static void AnimDragonDanceOrb_Step(struct Sprite *sprite)
 }
 
 // Wavers the attacker back and forth. Progressing vertical wave of scanline shifts
-// Used by Dragon Dance
-void AnimTask_DragonDanceWaver(u8 taskId)
+// Used by Tailwind
+void AnimTask_TailwindWaver(u8 taskId)
 {
     struct ScanlineEffectParams scanlineParams;
     struct Task *task = &gTasks[taskId];
@@ -359,10 +359,10 @@ void AnimTask_DragonDanceWaver(u8 taskId)
     }
 
     ScanlineEffect_SetParams(scanlineParams);
-    task->func = AnimTask_DragonDanceWaver_Step;
+    task->func = AnimTask_TailwindWaver_Step;
 }
 
-static void AnimTask_DragonDanceWaver_Step(u8 taskId)
+static void AnimTask_TailwindWaver_Step(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
     switch (task->data[0])
@@ -374,12 +374,12 @@ static void AnimTask_DragonDanceWaver_Step(u8 taskId)
             if (++task->data[6] == 3)
                 task->data[0]++;
         }
-        UpdateDragonDanceScanlineEffect(task);
+        UpdateTailwindScanlineEffect(task);
         break;
     case 1:
         if (++task->data[1] > 0x3C)
             task->data[0]++;
-        UpdateDragonDanceScanlineEffect(task);
+        UpdateTailwindScanlineEffect(task);
         break;
     case 2:
         if (++task->data[7] > 1)
@@ -388,7 +388,7 @@ static void AnimTask_DragonDanceWaver_Step(u8 taskId)
             if (--task->data[6] == 0)
                 task->data[0]++;
         }
-        UpdateDragonDanceScanlineEffect(task);
+        UpdateTailwindScanlineEffect(task);
         break;
     case 3:
         gScanlineEffect.state = 3;
@@ -400,7 +400,7 @@ static void AnimTask_DragonDanceWaver_Step(u8 taskId)
     }
 }
 
-static void UpdateDragonDanceScanlineEffect(struct Task *task)
+static void UpdateTailwindScanlineEffect(struct Task *task)
 {
     u16 sineIndex = task->data[5];
     u16 i;

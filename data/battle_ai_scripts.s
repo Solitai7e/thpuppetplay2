@@ -208,7 +208,7 @@ AI_CheckBadMove_CheckEffect:
 	if_effect EFFECT_BULK_UP, AI_CBM_BulkUp
 	if_effect EFFECT_SPLASHING, AI_CBM_Splashing
 	if_effect EFFECT_CALM_MIND, AI_CBM_CalmMind
-	if_effect EFFECT_DRAGON_DANCE, AI_CBM_DragonDance
+	if_effect EFFECT_TAILWIND, AI_CBM_Tailwind
 	end
 
 AI_CBM_Sleep:
@@ -590,7 +590,7 @@ AI_CBM_CalmMind:
 	if_stat_level_equal AI_USER, STAT_SPDEF, MAX_STAT_STAGE, Score_Minus8
 	end
 
-AI_CBM_DragonDance:
+AI_CBM_Tailwind:
 	if_stat_level_equal AI_USER, STAT_ATK, MAX_STAT_STAGE, Score_Minus10
 	if_stat_level_equal AI_USER, STAT_SPEED, MAX_STAT_STAGE, Score_Minus8
 	end
@@ -770,7 +770,7 @@ AI_CheckViability:
 	if_effect EFFECT_POISON_JAB, AI_CV_HighCrit
 	if_effect EFFECT_SPLASHING, AI_CV_Splashing
 	if_effect EFFECT_CALM_MIND, AI_CV_SpDefUp
-	if_effect EFFECT_DRAGON_DANCE, AI_CV_DragonDance
+	if_effect EFFECT_TAILWIND, AI_CV_Tailwind
 	end
 
 AI_CV_Sleep:
@@ -1745,7 +1745,7 @@ AI_CV_Encore_EncouragedMovesToEncore:
     .byte EFFECT_TEETER_DANCE
     .byte EFFECT_MUD_SPORT
     .byte EFFECT_SPLASHING
-    .byte EFFECT_DRAGON_DANCE
+    .byte EFFECT_TAILWIND
     .byte EFFECT_CAMOUFLAGE
     .byte -1
 
@@ -2573,17 +2573,17 @@ AI_CV_Splashing_ScoreDown1:
 AI_CV_Splashing_End:
 	end
 
-AI_CV_DragonDance:
-	if_target_faster AI_CV_DragonDance2
-	if_hp_more_than AI_USER, 50, AI_CV_DragonDance_End
-	if_random_less_than 70, AI_CV_DragonDance_End
+AI_CV_Tailwind:
+	if_target_faster AI_CV_Tailwind2
+	if_hp_more_than AI_USER, 50, AI_CV_Tailwind_End
+	if_random_less_than 70, AI_CV_Tailwind_End
 	score -1
-	goto AI_CV_DragonDance_End
+	goto AI_CV_Tailwind_End
 
-AI_CV_DragonDance2:
-	if_random_less_than 128, AI_CV_DragonDance_End
+AI_CV_Tailwind2:
+	if_random_less_than 128, AI_CV_Tailwind_End
 	score +1
-AI_CV_DragonDance_End:
+AI_CV_Tailwind_End:
 	end
 
 AI_TryToFaint:
@@ -2729,7 +2729,7 @@ AI_PreferBatonPass:
 	if_random_less_than 80, AI_Risky_End
 AI_PreferBatonPass_GoForBatonPass:
 	if_move MOVE_SWORDS_DANCE, AI_PreferBatonPass2
-	if_move MOVE_DRAGON_DANCE, AI_PreferBatonPass2
+	if_move MOVE_TAILWIND, AI_PreferBatonPass2
 	if_move MOVE_CALM_MIND, AI_PreferBatonPass2
 	if_effect EFFECT_PROTECT, AI_PreferBatonPass_End
 	if_move MOVE_BATON_PASS, AI_PreferBatonPass_EncourageIfHighStats
@@ -3007,7 +3007,7 @@ AI_HPAware_DiscouragedEffectsWhenMediumHP:
     .byte EFFECT_DRACO_METEOR
     .byte EFFECT_BULK_UP
     .byte EFFECT_CALM_MIND
-    .byte EFFECT_DRAGON_DANCE
+    .byte EFFECT_TAILWIND
     .byte -1
 
 AI_HPAware_DiscouragedEffectsWhenLowHP:
@@ -3057,7 +3057,7 @@ AI_HPAware_DiscouragedEffectsWhenLowHP:
     .byte EFFECT_DRACO_METEOR
     .byte EFFECT_BULK_UP
     .byte EFFECT_CALM_MIND
-    .byte EFFECT_DRAGON_DANCE
+    .byte EFFECT_TAILWIND
     .byte -1
 
 AI_HPAware_DiscouragedEffectsWhenTargetHighHP:
@@ -3102,7 +3102,7 @@ AI_HPAware_DiscouragedEffectsWhenTargetMediumHP:
     .byte EFFECT_DRACO_METEOR
     .byte EFFECT_BULK_UP
     .byte EFFECT_CALM_MIND
-    .byte EFFECT_DRAGON_DANCE
+    .byte EFFECT_TAILWIND
     .byte -1
 
 AI_HPAware_DiscouragedEffectsWhenTargetLowHP:
@@ -3164,7 +3164,7 @@ AI_HPAware_DiscouragedEffectsWhenTargetLowHP:
     .byte EFFECT_DRACO_METEOR
     .byte EFFECT_BULK_UP
     .byte EFFECT_CALM_MIND
-    .byte EFFECT_DRAGON_DANCE
+    .byte EFFECT_TAILWIND
     .byte -1
 
 @ Given the AI_TryOnAlly at the beginning it's possible that this was the start of a more
