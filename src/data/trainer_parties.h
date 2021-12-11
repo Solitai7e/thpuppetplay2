@@ -3532,7 +3532,7 @@ static const struct TrainerMonItemCustomMoves sParty_Winona1[] = {
     .lvl = 31,
     .species = SPECIES_ATENSHI,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SAND_ATTACK, MOVE_FURY_ATTACK, MOVE_STEEL_WING, MOVE_AERIAL_ACE}
+    .moves = {MOVE_SAND_ATTACK, MOVE_MAGIC_KNIFE, MOVE_STEEL_WING, MOVE_AERIAL_ACE}
     },
     {
     .iv = 255,
@@ -9174,7 +9174,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_KimAndIris[] = {
     .iv = 0,
     .lvl = 32,
     .species = SPECIES_DIKU,
-    .moves = {MOVE_SING, MOVE_FURY_ATTACK, MOVE_SAFEGUARD, MOVE_AERIAL_ACE}
+    .moves = {MOVE_SING, MOVE_MAGIC_KNIFE, MOVE_SAFEGUARD, MOVE_AERIAL_ACE}
     },
     {
     .iv = 0,

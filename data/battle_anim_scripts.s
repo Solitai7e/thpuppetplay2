@@ -47,7 +47,7 @@ gBattleAnims_Moves::
 	.4byte Move_SAND_ATTACK
 	.4byte Move_HEADBUTT
 	.4byte Move_KNIFE_THROW
-	.4byte Move_FURY_ATTACK
+	.4byte Move_MAGIC_KNIFE
 	.4byte Move_HORN_DRILL
 	.4byte Move_TACKLE
 	.4byte Move_BODY_SLAM
@@ -2437,29 +2437,29 @@ Move_KNIFE_THROW:
 	waitforvisualfinish
 	end
 
-Move_FURY_ATTACK:
+Move_MAGIC_KNIFE:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HORN_HIT
 	createvisualtask AnimTask_RotateMonSpriteToSide, 2, 4, 256, 0, 2
-	choosetwoturnanim FuryAttackRight, FuryAttackLeft
-FuryAttackContinue:
+	choosetwoturnanim MagicKnifeRight, MagicKnifeLeft
+MagicKnifeContinue:
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 5, 0, 6, 1
 	waitforvisualfinish
 	end
 
-FuryAttackRight:
+MagicKnifeRight:
 	createsprite gHornHitSpriteTemplate, ANIM_TARGET, 4, 8, 8, 10
 	waitforvisualfinish
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 0, 0, ANIM_TARGET, 1
 	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
-	goto FuryAttackContinue
+	goto MagicKnifeContinue
 
-FuryAttackLeft:
+MagicKnifeLeft:
 	createsprite gHornHitSpriteTemplate, ANIM_TARGET, 4, -8, -8, 10
 	waitforvisualfinish
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 0, 0, ANIM_TARGET, 1
 	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
-	goto FuryAttackContinue
+	goto MagicKnifeContinue
 
 Move_HORN_DRILL:
 	loadspritegfx ANIM_TAG_IMPACT

@@ -261,7 +261,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_CTOKIKO] = {
         .species = SPECIES_CTOKIKO,
-        .moves = {MOVE_FURY_ATTACK, MOVE_PURSUIT, MOVE_MIRROR_MOVE, MOVE_PROTECT},
+        .moves = {MOVE_MAGIC_KNIFE, MOVE_PURSUIT, MOVE_MIRROR_MOVE, MOVE_PROTECT},
         .itemTableId = BATTLE_FRONTIER_ITEM_LIECHI_BERRY,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_HP,
         .nature = NATURE_DOCILE
@@ -639,7 +639,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_CDAIYOUSEI] = {
         .species = SPECIES_CDAIYOUSEI,
-        .moves = {MOVE_FURY_ATTACK, MOVE_UPROAR, MOVE_MUD_SLAP, MOVE_FAINT_ATTACK},
+        .moves = {MOVE_MAGIC_KNIFE, MOVE_UPROAR, MOVE_MUD_SLAP, MOVE_FAINT_ATTACK},
         .itemTableId = BATTLE_FRONTIER_ITEM_LIECHI_BERRY,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_HP,
         .nature = NATURE_LONELY
@@ -737,7 +737,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_CSTARSAPPHIRE] = {
         .species = SPECIES_CSTARSAPPHIRE,
-        .moves = {MOVE_WATERFALL, MOVE_FURY_ATTACK, MOVE_AGILITY, MOVE_PSYBEAM},
+        .moves = {MOVE_WATERFALL, MOVE_MAGIC_KNIFE, MOVE_AGILITY, MOVE_PSYBEAM},
         .itemTableId = BATTLE_FRONTIER_ITEM_PETAYA_BERRY,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_DOCILE

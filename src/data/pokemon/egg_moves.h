@@ -431,7 +431,7 @@ const u16 gEggMoves[] = {
               MOVE_SILVER_WIND),
 
     egg_moves(SHOU,
-              MOVE_FURY_ATTACK,
+              MOVE_MAGIC_KNIFE,
               MOVE_FLAIL,
               MOVE_FALSE_SWIPE,
               MOVE_FAINT_ATTACK),

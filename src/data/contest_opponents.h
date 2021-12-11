@@ -929,7 +929,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_PECK,
-            MOVE_FURY_ATTACK,
+            MOVE_MAGIC_KNIFE,
             MOVE_RETURN,
             MOVE_GROWL
         },
@@ -1209,7 +1209,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_KNIFE_THROW,
-            MOVE_FURY_ATTACK,
+            MOVE_MAGIC_KNIFE,
             MOVE_HORN_DRILL,
             MOVE_TAIL_WHIP
         },
@@ -1743,7 +1743,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_FLAIL,
             MOVE_SUPERSONIC,
             MOVE_KNIFE_THROW,
-            MOVE_FURY_ATTACK
+            MOVE_MAGIC_KNIFE
         },
         .cool = 80,
         .beauty = 60,
