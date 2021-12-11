@@ -16,7 +16,7 @@ static void AnimSpiderWeb_End(struct Sprite *);
 static void AnimTranslateStinger(struct Sprite *);
 static void AnimMissileArc(struct Sprite *);
 static void AnimMissileArc_Step(struct Sprite *);
-static void AnimTailGlowOrb(struct Sprite *);
+static void AnimManaChargeOrb(struct Sprite *);
 
 static const union AffineAnimCmd sAffineAnim_BraveBirdHorn_0[] =
 {
@@ -168,7 +168,7 @@ const struct SpriteTemplate gIcicleSpearSpriteTemplate =
     .callback = AnimMissileArc,
 };
 
-static const union AffineAnimCmd sAffineAnim_TailGlowOrb[] =
+static const union AffineAnimCmd sAffineAnim_ManaChargeOrb[] =
 {
     AFFINEANIMCMD_FRAME(0x10, 0x10, 0, 0),
     AFFINEANIMCMD_FRAME(0x8, 0x8, 0, 18),
@@ -179,20 +179,20 @@ static const union AffineAnimCmd sAffineAnim_TailGlowOrb[] =
     AFFINEANIMCMD_END,
 };
 
-static const union AffineAnimCmd *const sAffineAnims_TailGlowOrb[] =
+static const union AffineAnimCmd *const sAffineAnims_ManaChargeOrb[] =
 {
-    sAffineAnim_TailGlowOrb,
+    sAffineAnim_ManaChargeOrb,
 };
 
-const struct SpriteTemplate gTailGlowOrbSpriteTemplate =
+const struct SpriteTemplate gManaChargeOrbSpriteTemplate =
 {
     .tileTag = ANIM_TAG_CIRCLE_OF_LIGHT,
     .paletteTag = ANIM_TAG_CIRCLE_OF_LIGHT,
     .oam = &gOamData_AffineNormal_ObjBlend_64x64,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
-    .affineAnims = sAffineAnims_TailGlowOrb,
-    .callback = AnimTailGlowOrb,
+    .affineAnims = sAffineAnims_ManaChargeOrb,
+    .callback = AnimManaChargeOrb,
 };
 
 static void AnimBraveBirdHorn(struct Sprite *sprite)
@@ -469,7 +469,7 @@ static void AnimMissileArc_Step(struct Sprite *sprite)
     }
 }
 
-static void AnimTailGlowOrb(struct Sprite *sprite)
+static void AnimManaChargeOrb(struct Sprite *sprite)
 {
     if (gBattleAnimArgs[0] == ANIM_ATTACKER)
     {

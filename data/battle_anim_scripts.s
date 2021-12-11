@@ -310,7 +310,7 @@ gBattleAnims_Moves::
 	.4byte Move_DIVE
 	.4byte Move_FORCE_PALM
 	.4byte Move_CAMOUFLAGE
-	.4byte Move_TAIL_GLOW
+	.4byte Move_MANA_CHARGE
 	.4byte Move_LUSTER_PURGE
 	.4byte Move_MIST_BALL
 	.4byte Move_FEATHER_DANCE
@@ -3886,13 +3886,13 @@ Move_CAMOUFLAGE:
 	clearmonbg ANIM_ATK_PARTNER
 	end
 
-Move_TAIL_GLOW:
+Move_MANA_CHARGE:
 	loadspritegfx ANIM_TAG_CIRCLE_OF_LIGHT
 	monbg ANIM_ATTACKER
 	setalpha 12, 8
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 2, 0, 4, RGB_BLACK
 	waitforvisualfinish
-	createsprite gTailGlowOrbSpriteTemplate, ANIM_ATTACKER, 66, ANIM_ATTACKER
+	createsprite gManaChargeOrbSpriteTemplate, ANIM_ATTACKER, 66, ANIM_ATTACKER
 	delay 18
 	loopsewithpan SE_M_ENERGY_LIGHT, SOUND_PAN_ATTACKER, 16, 6
 	waitforvisualfinish

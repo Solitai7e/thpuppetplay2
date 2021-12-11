@@ -1626,7 +1626,7 @@ const u16 gEasyChatWordsByLetter_S[] = {
 
 const u16 gEasyChatWordsByLetter_T[] = {
     EC_MOVE2(TACKLE),
-    EC_MOVE2(TAIL_GLOW),
+    EC_MOVE2(MANA_CHARGE),
     EC_MOVE(TAIL_WHIP),
     EC_POKEMON(TSHOU),
     EC_WORD_TAKE,
@@ -2154,7 +2154,7 @@ const u16 gEasyChatWordsByLetter_UnusedJapaneseHo[] = {
     EC_WORD_WANT,
     EC_MOVE2(COVET),
     EC_POKEMON(ADALICE),
-    EC_MOVE2(TAIL_GLOW),
+    EC_MOVE2(MANA_CHARGE),
     EC_POKEMON(DYUYUKO),
     EC_POKEMON_NATIONAL(MEDICINE),
     EC_WORD_AS_MUCH_AS,

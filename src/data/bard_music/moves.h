@@ -2358,7 +2358,7 @@ const struct BardSound gBardSounds_Moves[MOVES_COUNT][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND
     },
-    [MOVE_TAIL_GLOW] = {
+    [MOVE_MANA_CHARGE] = {
         { 0x4, 0x0, 0x0, 0x0, 0x0},
         { 0x1a, 0x0, 0x0, 0x0, 0x0},
         { 0x33, 0x0, 0x0, 0x0, 0x0},

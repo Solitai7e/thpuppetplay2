@@ -1173,7 +1173,7 @@ static const u8 sCamouflageDescription[] = _(
     "Alters the POKéMON's type\n"
     "depending on the location.");
 
-static const u8 sTailGlowDescription[] = _(
+static const u8 sManaChargeDescription[] = _(
     "Flashes a light that sharply\n"
     "raises SP. ATK.");
 
@@ -1713,7 +1713,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_DIVE - 1] = sDiveDescription,
     [MOVE_FORCE_PALM - 1] = sForcePalmDescription,
     [MOVE_CAMOUFLAGE - 1] = sCamouflageDescription,
-    [MOVE_TAIL_GLOW - 1] = sTailGlowDescription,
+    [MOVE_MANA_CHARGE - 1] = sManaChargeDescription,
     [MOVE_LUSTER_PURGE - 1] = sLusterPurgeDescription,
     [MOVE_MIST_BALL - 1] = sMistBallDescription,
     [MOVE_FEATHER_DANCE - 1] = sFeatherDanceDescription,
