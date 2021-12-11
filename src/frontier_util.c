@@ -390,7 +390,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][FRONTIER_PARTY_SIZ
                 .fixedIV = 16,
                 .nature = NATURE_BRAVE,
                 .evs = {252, 0, 252, 0, 6, 0},
-                .moves = {MOVE_SWAGGER, MOVE_CRUNCH, MOVE_POISON_FANG, MOVE_GIGA_DRAIN},
+                .moves = {MOVE_SWAGGER, MOVE_CRUNCH, MOVE_CROSS_POISON, MOVE_GIGA_DRAIN},
             },
             {
                 .species = SPECIES_TSAKUYA,

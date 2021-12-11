@@ -4270,7 +4270,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 
-    [MOVE_POISON_FANG] =
+    [MOVE_CROSS_POISON] =
     {
         .effect = EFFECT_POISON_TAIL,
         .split = 0,

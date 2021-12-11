@@ -321,7 +321,7 @@ gBattleAnims_Moves::
 	.4byte Move_NEEDLE_ARM
 	.4byte Move_SLACK_OFF
 	.4byte Move_HYPER_VOICE
-	.4byte Move_POISON_FANG
+	.4byte Move_CROSS_POISON
 	.4byte Move_CRUSH_CLAW
 	.4byte Move_BLAST_BURN
 	.4byte Move_HYDRO_CANNON
@@ -8768,7 +8768,7 @@ Move_REVENGE:
 	blendoff
 	end
 
-Move_POISON_FANG:
+Move_CROSS_POISON:
 	loadspritegfx ANIM_TAG_FANG_ATTACK
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	playsewithpan SE_M_BITE, SOUND_PAN_TARGET

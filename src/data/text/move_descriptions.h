@@ -1217,7 +1217,7 @@ static const u8 sHyperVoiceDescription[] = _(
     "A loud attack that uses\n"
     "sound waves to injure.");
 
-static const u8 sPoisonFangDescription[] = _(
+static const u8 sCrossPoisonDescription[] = _(
     "A sharp-fanged attack.\n"
     "May badly poison the foe.");
 
@@ -1724,7 +1724,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_NEEDLE_ARM - 1] = sNeedleArmDescription,
     [MOVE_SLACK_OFF - 1] = sSlackOffDescription,
     [MOVE_HYPER_VOICE - 1] = sHyperVoiceDescription,
-    [MOVE_POISON_FANG - 1] = sPoisonFangDescription,
+    [MOVE_CROSS_POISON - 1] = sCrossPoisonDescription,
     [MOVE_CRUSH_CLAW - 1] = sCrushClawDescription,
     [MOVE_BLAST_BURN - 1] = sBlastBurnDescription,
     [MOVE_HYDRO_CANNON - 1] = sHydroCannonDescription,

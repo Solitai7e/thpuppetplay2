@@ -219,7 +219,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectTeeterDance            @ EFFECT_TEETER_DANCE
 	.4byte BattleScript_EffectBurnHit                @ EFFECT_BLAZE_KICK
 	.4byte BattleScript_EffectMudSport               @ EFFECT_MUD_SPORT
-	.4byte BattleScript_EffectPoisonFang             @ EFFECT_POISON_FANG
+	.4byte BattleScript_EffectCrossPoison             @ EFFECT_CROSS_POISON
 	.4byte BattleScript_EffectWeatherBall            @ EFFECT_WEATHER_BALL
 	.4byte BattleScript_EffectOverheat               @ EFFECT_OVERHEAT
 	.4byte BattleScript_EffectTickle                 @ EFFECT_TICKLE
@@ -2634,7 +2634,7 @@ BattleScript_EffectWaterSport::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectPoisonFang::
+BattleScript_EffectCrossPoison::
 	setmoveeffect MOVE_EFFECT_TOXIC
 	goto BattleScript_EffectHit
 

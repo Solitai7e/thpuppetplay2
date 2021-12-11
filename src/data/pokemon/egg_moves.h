@@ -64,7 +64,7 @@ const u16 gEggMoves[] = {
               MOVE_SLAM,
               MOVE_SPITE,
               MOVE_BEAT_UP,
-              MOVE_POISON_FANG),
+              MOVE_CROSS_POISON),
 
     egg_moves(CRUMIA,
               MOVE_FLAIL,
@@ -927,7 +927,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(DYUYUKO,
               MOVE_ASTONISH,
-              MOVE_POISON_FANG,
+              MOVE_CROSS_POISON,
               MOVE_COVET,
               MOVE_LEER,
               MOVE_YAWN),
@@ -1146,7 +1146,7 @@ const u16 gEggMoves[] = {
     egg_moves(TKISUME,
               MOVE_SWORDS_DANCE,
               MOVE_FALSE_SWIPE,
-              MOVE_POISON_FANG,
+              MOVE_CROSS_POISON,
               MOVE_PSYCH_UP,
               MOVE_ANCIENT_POWER,
               MOVE_TICKLE),
