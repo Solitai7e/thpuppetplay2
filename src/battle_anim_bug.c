@@ -4,7 +4,7 @@
 #include "trig.h"
 #include "constants/rgb.h"
 
-static void AnimMegahornHorn(struct Sprite *);
+static void AnimBraveBirdHorn(struct Sprite *);
 static void AnimLeechLifeNeedle(struct Sprite *);
 static void AnimTranslateWebThread(struct Sprite *);
 static void AnimTranslateWebThread_Step(struct Sprite *);
@@ -18,40 +18,40 @@ static void AnimMissileArc(struct Sprite *);
 static void AnimMissileArc_Step(struct Sprite *);
 static void AnimTailGlowOrb(struct Sprite *);
 
-static const union AffineAnimCmd sAffineAnim_MegahornHorn_0[] =
+static const union AffineAnimCmd sAffineAnim_BraveBirdHorn_0[] =
 {
     AFFINEANIMCMD_FRAME(0x100, 0x100, 30, 0),
     AFFINEANIMCMD_END,
 };
 
-static const union AffineAnimCmd sAffineAnim_MegahornHorn_1[] =
+static const union AffineAnimCmd sAffineAnim_BraveBirdHorn_1[] =
 {
     AFFINEANIMCMD_FRAME(0x100, 0x100, -99, 0),
     AFFINEANIMCMD_END,
 };
 
-static const union AffineAnimCmd sAffineAnim_MegahornHorn_2[] =
+static const union AffineAnimCmd sAffineAnim_BraveBirdHorn_2[] =
 {
     AFFINEANIMCMD_FRAME(0x100, 0x100, 94, 0),
     AFFINEANIMCMD_END,
 };
 
-static const union AffineAnimCmd *const sAffineAnims_MegahornHorn[] =
+static const union AffineAnimCmd *const sAffineAnims_BraveBirdHorn[] =
 {
-    sAffineAnim_MegahornHorn_0,
-    sAffineAnim_MegahornHorn_1,
-    sAffineAnim_MegahornHorn_2,
+    sAffineAnim_BraveBirdHorn_0,
+    sAffineAnim_BraveBirdHorn_1,
+    sAffineAnim_BraveBirdHorn_2,
 };
 
-const struct SpriteTemplate gMegahornHornSpriteTemplate =
+const struct SpriteTemplate gBraveBirdHornSpriteTemplate =
 {
     .tileTag = ANIM_TAG_HORN_HIT_2,
     .paletteTag = ANIM_TAG_HORN_HIT_2,
     .oam = &gOamData_AffineDouble_ObjNormal_32x16,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
-    .affineAnims = sAffineAnims_MegahornHorn,
-    .callback = AnimMegahornHorn,
+    .affineAnims = sAffineAnims_BraveBirdHorn,
+    .callback = AnimBraveBirdHorn,
 };
 
 static const union AffineAnimCmd sAffineAnim_LeechLifeNeedle_0[] =
@@ -195,7 +195,7 @@ const struct SpriteTemplate gTailGlowOrbSpriteTemplate =
     .callback = AnimTailGlowOrb,
 };
 
-static void AnimMegahornHorn(struct Sprite *sprite)
+static void AnimBraveBirdHorn(struct Sprite *sprite)
 {
     if (IsContest())
     {

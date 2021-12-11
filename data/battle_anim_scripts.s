@@ -240,7 +240,7 @@ gBattleAnims_Moves::
 	.4byte Move_SACRED_FIRE
 	.4byte Move_MAGNITUDE
 	.4byte Move_DYNAMIC_PUNCH
-	.4byte Move_MEGAHORN
+	.4byte Move_BRAVE_BIRD
 	.4byte Move_DRAGON_BREATH
 	.4byte Move_BATON_PASS
 	.4byte Move_ENCORE
@@ -6099,16 +6099,16 @@ Move_SPIKES:
 	clearmonbg ANIM_DEF_PARTNER
 	end
 
-Move_MEGAHORN:
+Move_BRAVE_BIRD:
 	loadspritegfx ANIM_TAG_HORN_HIT_2
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	playsewithpan SE_M_DARK_PULSE, SOUND_PAN_ATTACKER
-	jumpifcontest MegahornInContest
+	jumpifcontest BraveBirdInContest
 	fadetobg BG_DRILL
 	waitbgfadeout
 	createvisualtask AnimTask_StartSlidingBg, 5, -2304, 768, 1, -1
-MegahornContinue:
+BraveBirdContinue:
 	waitbgfadein
 	setalpha 12, 8
 	createvisualtask AnimTask_ShakeMon, 5, ANIM_ATTACKER, 2, 0, 15, 1
@@ -6116,7 +6116,7 @@ MegahornContinue:
 	delay 10
 	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 0, 24, 0, 0, 6
 	delay 3
-	createsprite gMegahornHornSpriteTemplate, ANIM_ATTACKER, 3, -42, 25, 0, 0, 6
+	createsprite gBraveBirdHornSpriteTemplate, ANIM_ATTACKER, 3, -42, 25, 0, 0, 6
 	delay 4
 	playsewithpan SE_M_NIGHT_SLASH, SOUND_PAN_TARGET
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 0
@@ -6136,11 +6136,11 @@ MegahornContinue:
 	setarg 7, 0xFFFF
 	waitbgfadein
 	end
-MegahornInContest:
+BraveBirdInContest:
 	fadetobg BG_DRILL_CONTESTS
 	waitbgfadeout
 	createvisualtask AnimTask_StartSlidingBg, 5, 2304, 768, 0, -1
-	goto MegahornContinue
+	goto BraveBirdContinue
 
 Move_GUST:
 	loadspritegfx ANIM_TAG_GUST

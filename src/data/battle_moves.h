@@ -3136,7 +3136,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_MEGAHORN] =
+    [MOVE_BRAVE_BIRD] =
     {
         .effect = EFFECT_DOUBLE_EDGE,
         .split = 0,

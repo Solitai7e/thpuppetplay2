@@ -1785,7 +1785,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_HEARTS_EYE},
     },
 
-    [MOVE_MEGAHORN] =
+    [MOVE_BRAVE_BIRD] =
     {
         .effect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
         .contestCategory = CONTEST_CATEGORY_COOL,

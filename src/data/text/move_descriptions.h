@@ -893,7 +893,7 @@ static const u8 sDynamicPunchDescription[] = _(
     "Powerful and sure to cause\n"
     "confusion, but inaccurate.");
 
-static const u8 sMegahornDescription[] = _(
+static const u8 sBraveBirdDescription[] = _(
     "A brutal ramming attack\n"
     "using out-thrust horns.");
 
@@ -1643,7 +1643,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SACRED_FIRE - 1] = sSacredFireDescription,
     [MOVE_MAGNITUDE - 1] = sMagnitudeDescription,
     [MOVE_DYNAMIC_PUNCH - 1] = sDynamicPunchDescription,
-    [MOVE_MEGAHORN - 1] = sMegahornDescription,
+    [MOVE_BRAVE_BIRD - 1] = sBraveBirdDescription,
     [MOVE_DRAGON_BREATH - 1] = sDragonBreathDescription,
     [MOVE_BATON_PASS - 1] = sBatonPassDescription,
     [MOVE_ENCORE - 1] = sEncoreDescription,
