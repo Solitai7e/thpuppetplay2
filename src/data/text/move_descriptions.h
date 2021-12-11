@@ -1365,7 +1365,7 @@ static const u8 sMudShotDescription[] = _(
     "Hurls mud at the foe and\n"
     "reduces SPEED.");
 
-static const u8 sPoisonTailDescription[] = _(
+static const u8 sPoisonJabDescription[] = _(
     "Has a high critical-hit\n"
     "ratio. May also poison.");
 
@@ -1761,7 +1761,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_BULK_UP - 1] = sBulkUpDescription,
     [MOVE_BOUNCE - 1] = sBounceDescription,
     [MOVE_MUD_SHOT - 1] = sMudShotDescription,
-    [MOVE_POISON_TAIL - 1] = sPoisonTailDescription,
+    [MOVE_POISON_JAB - 1] = sPoisonJabDescription,
     [MOVE_COVET - 1] = sCovetDescription,
     [MOVE_VOLT_TACKLE - 1] = sVoltTackleDescription,
     [MOVE_MAGICAL_LEAF - 1] = sMagicalLeafDescription,

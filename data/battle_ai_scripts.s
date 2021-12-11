@@ -767,7 +767,7 @@ AI_CheckViability:
 	if_effect EFFECT_TICKLE, AI_CV_DefenseDown
 	if_effect EFFECT_DRACO_METEOR, AI_CV_SpDefUp
 	if_effect EFFECT_BULK_UP, AI_CV_DefenseUp
-	if_effect EFFECT_POISON_TAIL, AI_CV_HighCrit
+	if_effect EFFECT_POISON_JAB, AI_CV_HighCrit
 	if_effect EFFECT_WATER_SPORT, AI_CV_WaterSport
 	if_effect EFFECT_CALM_MIND, AI_CV_SpDefUp
 	if_effect EFFECT_DRAGON_DANCE, AI_CV_DragonDance

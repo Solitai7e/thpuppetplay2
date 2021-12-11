@@ -4272,7 +4272,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_CROSS_POISON] =
     {
-        .effect = EFFECT_POISON_TAIL,
+        .effect = EFFECT_POISON_JAB,
         .split = 0,
         .power = 70,
         .type = TYPE_MIASMA,
@@ -4788,7 +4788,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_POISON_TAIL] =
+    [MOVE_POISON_JAB] =
     {
         .effect = EFFECT_POISON_HIT,
         .split = 0,

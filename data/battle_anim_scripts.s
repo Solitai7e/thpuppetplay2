@@ -358,7 +358,7 @@ gBattleAnims_Moves::
 	.4byte Move_BULK_UP
 	.4byte Move_BOUNCE
 	.4byte Move_MUD_SHOT
-	.4byte Move_POISON_TAIL
+	.4byte Move_POISON_JAB
 	.4byte Move_COVET
 	.4byte Move_VOLT_TACKLE
 	.4byte Move_MAGICAL_LEAF
@@ -7260,7 +7260,7 @@ Move_STEEL_FIST:
 	waitforvisualfinish
 	end
 
-Move_POISON_TAIL:
+Move_POISON_JAB:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	loopsewithpan SE_M_HARDEN, SOUND_PAN_ATTACKER, 28, 2

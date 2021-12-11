@@ -226,7 +226,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectDracoMeteor            @ EFFECT_DRACO_METEOR
 	.4byte BattleScript_EffectSoar            @ EFFECT_SOAR
 	.4byte BattleScript_EffectBulkUp                 @ EFFECT_BULK_UP
-	.4byte BattleScript_EffectPoisonHit              @ EFFECT_POISON_TAIL
+	.4byte BattleScript_EffectPoisonHit              @ EFFECT_POISON_JAB
 	.4byte BattleScript_EffectWaterSport             @ EFFECT_WATER_SPORT
 	.4byte BattleScript_EffectCalmMind               @ EFFECT_CALM_MIND
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE

@@ -1234,7 +1234,7 @@ const u16 gEasyChatWordsByLetter_P[] = {
     EC_MOVE2(POISON_GAS),
     EC_WORD_POISON_POINT,
     EC_MOVE2(POISON_STING),
-    EC_MOVE2(POISON_TAIL),
+    EC_MOVE2(POISON_JAB),
     EC_MOVE2(POISON_POWDER),
     EC_WORD_POKEBLOCK,
     EC_WORD_POKEDEX,
@@ -2124,7 +2124,7 @@ const u16 gEasyChatWordsByLetter_UnusedJapaneseHe[] = {
 };
 
 const u16 gEasyChatWordsByLetter_UnusedJapaneseHo[] = {
-    EC_MOVE2(POISON_TAIL),
+    EC_MOVE2(POISON_JAB),
     EC_WORD_POINTS,
     EC_POKEMON_NATIONAL(AKOMACHI),
     EC_WORD_SOUNDPROOF,

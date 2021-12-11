@@ -74,7 +74,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round2[] =
         .species = SPECIES_TSATORI,
         .lvl = 12,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_CROSS_POISON, MOVE_SWAGGER, MOVE_CRUNCH, MOVE_POISON_TAIL}
+        .moves = {MOVE_CROSS_POISON, MOVE_SWAGGER, MOVE_CRUNCH, MOVE_POISON_JAB}
     },
     {
         .species = SPECIES_ATENSHI,
