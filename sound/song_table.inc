@@ -232,7 +232,7 @@ gSongTable::
 	song se_m_energy_light, 1, 1
 	song se_m_flatter, 1, 1
 	song se_m_sand_tomb, 1, 1
-	song se_m_grasswhistle, 1, 1
+	song se_m_nature_sound, 1, 1
 	song se_m_mirror_shot, 1, 1
 	song se_m_dive, 1, 1
 	song se_m_earthquake, 2, 2

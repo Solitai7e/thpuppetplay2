@@ -1150,7 +1150,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Wendy[] = {
     .iv = 100,
     .lvl = 29,
     .species = SPECIES_ADREISEN,
-    .moves = {MOVE_MEGA_DRAIN, MOVE_MAGICAL_LEAF, MOVE_GRASS_WHISTLE, MOVE_LEECH_SEED}
+    .moves = {MOVE_MEGA_DRAIN, MOVE_MAGICAL_LEAF, MOVE_NATURE_SOUND, MOVE_LEECH_SEED}
     },
     {
     .iv = 100,
@@ -5740,7 +5740,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Madeline4[] = {
     .iv = 30,
     .lvl = 34,
     .species = SPECIES_ADREISEN,
-    .moves = {MOVE_LEECH_SEED, MOVE_MEGA_DRAIN, MOVE_GRASS_WHISTLE, MOVE_SUNNY_DAY}
+    .moves = {MOVE_LEECH_SEED, MOVE_MEGA_DRAIN, MOVE_NATURE_SOUND, MOVE_SUNNY_DAY}
     },
     {
     .iv = 30,

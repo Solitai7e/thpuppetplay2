@@ -235,7 +235,7 @@
 #define SE_M_ENERGY_LIGHT            228 // SE_W234
 #define SE_M_FLATTER                229 // SE_W260
 #define SE_M_SAND_TOMB              230 // SE_W328
-#define SE_M_GRASSWHISTLE           231 // SE_W320
+#define SE_M_NATURE_SOUND           231 // SE_W320
 #define SE_M_MIRROR_SHOT                232 // SE_W255
 #define SE_M_DIVE                   233 // SE_W291
 #define SE_M_EARTHQUAKE             234 // SE_W089

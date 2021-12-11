@@ -10,7 +10,7 @@ const u16 gEggMoves[] = {
               MOVE_CHARM,
               MOVE_BATTLE_CHANT,
               MOVE_MAGICAL_LEAF,
-              MOVE_GRASS_WHISTLE,
+              MOVE_NATURE_SOUND,
               MOVE_CURSE),
 
     egg_moves(ALICE,
@@ -504,7 +504,7 @@ const u16 gEggMoves[] = {
               MOVE_FLAIL,
               MOVE_NATURE_POWER,
               MOVE_INGRAIN,
-              MOVE_GRASS_WHISTLE),
+              MOVE_NATURE_SOUND),
 
     egg_moves(CELLY,
               MOVE_FURY_SWIPES,
@@ -650,7 +650,7 @@ const u16 gEggMoves[] = {
               MOVE_BEAT_UP),
 
     egg_moves(RIKA,
-              MOVE_GRASS_WHISTLE,
+              MOVE_NATURE_SOUND,
               MOVE_ENCORE,
               MOVE_LEECH_SEED,
               MOVE_NATURE_POWER,
@@ -1112,7 +1112,7 @@ const u16 gEggMoves[] = {
               MOVE_FISSURE),
 
     egg_moves(ANUE,
-              MOVE_GRASS_WHISTLE,
+              MOVE_NATURE_SOUND,
               MOVE_ACID,
               MOVE_TEETER_DANCE,
               MOVE_DYNAMIC_PUNCH,

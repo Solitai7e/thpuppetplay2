@@ -12,7 +12,7 @@
 
 	.align 2
 gMovesWithQuietBGM::
-	.2byte MOVE_SING, MOVE_PERISH_SONG, MOVE_GRASS_WHISTLE, 0xFFFF
+	.2byte MOVE_SING, MOVE_PERISH_SONG, MOVE_NATURE_SOUND, 0xFFFF
 
 	.align 2
 gBattleAnims_Moves::
@@ -336,7 +336,7 @@ gBattleAnims_Moves::
 	.4byte Move_ROCK_TOMB
 	.4byte Move_SILVER_WIND
 	.4byte Move_BINDING_VOICE
-	.4byte Move_GRASS_WHISTLE
+	.4byte Move_NATURE_SOUND
 	.4byte Move_TICKLE
 	.4byte Move_COSMIC_POWER
 	.4byte Move_WATER_SPOUT
@@ -4226,13 +4226,13 @@ Move_ODOR_SLEUTH:
 	playsewithpan SE_M_LEER, SOUND_PAN_ATTACKER
 	end
 
-Move_GRASS_WHISTLE:
+Move_NATURE_SOUND:
 	loadspritegfx ANIM_TAG_MUSIC_NOTES
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 2, 0, 4, RGB(18, 31, 12)
 	waitforvisualfinish
 	createvisualtask AnimTask_MusicNotesRainbowBlend, 2
 	waitforvisualfinish
-	panse SE_M_GRASSWHISTLE, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
+	panse SE_M_NATURE_SOUND, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
 	createsprite gWavyMusicNotesSpriteTemplate, ANIM_TARGET, 2, 7, 1, 0
 	delay 5
 	createsprite gWavyMusicNotesSpriteTemplate, ANIM_TARGET, 2, 6, 1, 0

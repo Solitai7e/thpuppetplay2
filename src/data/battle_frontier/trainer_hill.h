@@ -3033,7 +3033,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_CMUGETSU,
                                             .heldItem = ITEM_PERSIM_BERRY,
-                                            .moves = {MOVE_BATTLE_CHANT, MOVE_GRASS_WHISTLE, MOVE_LIGHT_SCREEN, MOVE_SUNNY_DAY},
+                                            .moves = {MOVE_BATTLE_CHANT, MOVE_NATURE_SOUND, MOVE_LIGHT_SCREEN, MOVE_SUNNY_DAY},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 255,
