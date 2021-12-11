@@ -765,7 +765,7 @@ static const u8 sSpikesDescription[] = _(
     "Sets spikes that hurt a \n"
     "foe switching in.");
 
-static const u8 sZapCannonDescription[] = _(
+static const u8 sEnergyBallDescription[] = _(
     "Powerful and sure to cause\n"
     "paralysis, but inaccurate.");
 
@@ -1611,7 +1611,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MUD_SLAP - 1] = sMudSlapDescription,
     [MOVE_BLACK_RIPPLE - 1] = sBlackRippleDescription,
     [MOVE_SPIKES - 1] = sSpikesDescription,
-    [MOVE_ZAP_CANNON - 1] = sZapCannonDescription,
+    [MOVE_ENERGY_BALL - 1] = sEnergyBallDescription,
     [MOVE_FORESIGHT - 1] = sForesightDescription,
     [MOVE_DESTINY_BOND - 1] = sDestinyBondDescription,
     [MOVE_PERISH_SONG - 1] = sPerishSongDescription,

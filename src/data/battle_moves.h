@@ -2688,7 +2688,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = 0,
     },
 
-    [MOVE_ZAP_CANNON] =
+    [MOVE_ENERGY_BALL] =
     {
         .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
         .split = 0,

@@ -394,7 +394,7 @@ static const u16 sPoints_ElectricMoves[] =
     MOVE_THUNDER_PUNCH, 3,
     MOVE_SPARK, 3,
     MOVE_THUNDER_SHOCK, 3,
-    MOVE_ZAP_CANNON, 3,
+    MOVE_ENERGY_BALL, 3,
     MOVE_SHOCK_WAVE, 3,
     MOVE_THUNDER_WAVE, 0, // Unnecessary, unlisted moves are already given 0 points
     MOVE_THUNDER, 3,

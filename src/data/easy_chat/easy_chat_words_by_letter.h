@@ -1959,7 +1959,7 @@ const u16 gEasyChatWordsByLetter_Y[] = {
 
 const u16 gEasyChatWordsByLetter_Z[] = {
     EC_POKEMON(DSATORI),
-    EC_MOVE2(ZAP_CANNON),
+    EC_MOVE2(ENERGY_BALL),
     EC_POKEMON_NATIONAL(KIKURI),
     EC_POKEMON(HLUNASA),
     DOUBLE_SPECIES_NAME
