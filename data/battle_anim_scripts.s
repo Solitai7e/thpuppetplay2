@@ -349,7 +349,7 @@ gBattleAnims_Moves::
 	.4byte Move_MUDDY_WATER
 	.4byte Move_BULLET_SEED
 	.4byte Move_BLADE_FLASH
-	.4byte Move_ICICLE_SPEAR
+	.4byte Move_ICE_SHARD
 	.4byte Move_IRON_DEFENSE
 	.4byte Move_BLOCK
 	.4byte Move_HOWL
@@ -727,22 +727,22 @@ Move_PIN_MISSILE:
 	blendoff
 	end
 
-Move_ICICLE_SPEAR:
-	loadspritegfx ANIM_TAG_ICICLE_SPEAR
+Move_ICE_SHARD:
+	loadspritegfx ANIM_TAG_ICE_SHARD
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
 	splitbgprio ANIM_TARGET
 	setalpha 12, 8
 	playsewithpan SE_M_ICY_WIND, SOUND_PAN_ATTACKER
-	createsprite gIcicleSpearSpriteTemplate, ANIM_ATTACKER, 2, 20, -8, -8, -8, 20, -32
+	createsprite gIceShardSpriteTemplate, ANIM_ATTACKER, 2, 20, -8, -8, -8, 20, -32
 	delay 15
-	createsprite gIcicleSpearSpriteTemplate, ANIM_ATTACKER, 2, 20, -8, 8, 8, 20, -40
+	createsprite gIceShardSpriteTemplate, ANIM_ATTACKER, 2, 20, -8, 8, 8, 20, -40
 	delay 4
 	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, -8, -8, ANIM_TARGET, 2
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 3, 0, 2, 1
 	delay 9
-	createsprite gIcicleSpearSpriteTemplate, ANIM_ATTACKER, 2, 20, -8, 0, 0, 20, -32
+	createsprite gIceShardSpriteTemplate, ANIM_ATTACKER, 2, 20, -8, 0, 0, 20, -32
 	delay 4
 	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 8, 8, ANIM_TARGET, 2

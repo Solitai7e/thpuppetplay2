@@ -1329,7 +1329,7 @@ static const u8 sBladeFlashDescription[] = _(
     "An extremely speedy and\n"
     "unavoidable attack.");
 
-static const u8 sIcicleSpearDescription[] = _(
+static const u8 sIceShardDescription[] = _(
     "Attacks the foe by firing\n"
     "2 to 5 icicles in a row.");
 
@@ -1752,7 +1752,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MUDDY_WATER - 1] = sMuddyWaterDescription,
     [MOVE_BULLET_SEED - 1] = sBulletSeedDescription,
     [MOVE_BLADE_FLASH - 1] = sBladeFlashDescription,
-    [MOVE_ICICLE_SPEAR - 1] = sIcicleSpearDescription,
+    [MOVE_ICE_SHARD - 1] = sIceShardDescription,
     [MOVE_IRON_DEFENSE - 1] = sIronDefenseDescription,
     [MOVE_BLOCK - 1] = sBlockDescription,
     [MOVE_HOWL - 1] = sHowlDescription,

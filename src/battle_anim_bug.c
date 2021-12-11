@@ -157,10 +157,10 @@ const struct SpriteTemplate gPinMissileSpriteTemplate =
     .callback = AnimMissileArc,
 };
 
-const struct SpriteTemplate gIcicleSpearSpriteTemplate =
+const struct SpriteTemplate gIceShardSpriteTemplate =
 {
-    .tileTag = ANIM_TAG_ICICLE_SPEAR,
-    .paletteTag = ANIM_TAG_ICICLE_SPEAR,
+    .tileTag = ANIM_TAG_ICE_SHARD,
+    .paletteTag = ANIM_TAG_ICE_SHARD,
     .oam = &gOamData_AffineNormal_ObjNormal_32x32,
     .anims = gDummySpriteAnimTable,
     .images = NULL,

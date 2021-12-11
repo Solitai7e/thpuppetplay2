@@ -771,7 +771,7 @@ const u16 gEasyChatWordsByLetter_I[] = {
     EC_MOVE(ICE_BALL),
     EC_MOVE2(ICE_BEAM),
     EC_MOVE2(ICE_PUNCH),
-    EC_MOVE2(ICICLE_SPEAR),
+    EC_MOVE2(ICE_SHARD),
     EC_MOVE(ICY_WIND),
     EC_WORD_IDOL,
     EC_WORD_IF,

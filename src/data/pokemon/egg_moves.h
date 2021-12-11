@@ -273,7 +273,7 @@ const u16 gEggMoves[] = {
               MOVE_SLAM,
               MOVE_ENCORE,
               MOVE_FAKE_OUT,
-              MOVE_ICICLE_SPEAR),
+              MOVE_ICE_SHARD),
 
     egg_moves(CHINA,
               MOVE_HAZE,
@@ -290,7 +290,7 @@ const u16 gEggMoves[] = {
               MOVE_BARRIER,
               MOVE_RAPID_SPIN,
               MOVE_SCREECH,
-              MOVE_ICICLE_SPEAR),
+              MOVE_ICE_SHARD),
 
     egg_moves(CYUYUKO,
               MOVE_PSYWAVE,
@@ -780,7 +780,7 @@ const u16 gEggMoves[] = {
               MOVE_ROCK_SLIDE,
               MOVE_ANCIENT_POWER,
               MOVE_MUD_SHOT,
-              MOVE_ICICLE_SPEAR,
+              MOVE_ICE_SHARD,
               MOVE_DOUBLE_EDGE),
 
     egg_moves(SYOUMU,
@@ -791,7 +791,7 @@ const u16 gEggMoves[] = {
               MOVE_BARRIER,
               MOVE_INGRAIN,
               MOVE_CONFUSE_RAY,
-              MOVE_ICICLE_SPEAR),
+              MOVE_ICE_SHARD),
 
     egg_moves(AYUUKA,
               MOVE_AURORA_BEAM,
