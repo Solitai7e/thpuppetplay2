@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_cosmic_power_grp, voicegroup128
-	.equ	se_m_cosmic_power_pri, 4
-	.equ	se_m_cosmic_power_rev, reverb_set+50
-	.equ	se_m_cosmic_power_mvl, 127
-	.equ	se_m_cosmic_power_key, 0
-	.equ	se_m_cosmic_power_tbs, 1
-	.equ	se_m_cosmic_power_exg, 0
-	.equ	se_m_cosmic_power_cmp, 1
+	.equ	se_m_draco_meteor_grp, voicegroup128
+	.equ	se_m_draco_meteor_pri, 4
+	.equ	se_m_draco_meteor_rev, reverb_set+50
+	.equ	se_m_draco_meteor_mvl, 127
+	.equ	se_m_draco_meteor_key, 0
+	.equ	se_m_draco_meteor_tbs, 1
+	.equ	se_m_draco_meteor_exg, 0
+	.equ	se_m_draco_meteor_cmp, 1
 
 	.section .rodata
-	.global	se_m_cosmic_power
+	.global	se_m_draco_meteor
 	.align	2
 
 @********************** Track  1 **********************@
 
-se_m_cosmic_power_1:
-	.byte	KEYSH , se_m_cosmic_power_key+0
-	.byte	TEMPO , 150*se_m_cosmic_power_tbs/2
+se_m_draco_meteor_1:
+	.byte	KEYSH , se_m_draco_meteor_key+0
+	.byte	TEMPO , 150*se_m_draco_meteor_tbs/2
 	.byte		VOICE , 46
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		VOL   , 110*se_m_cosmic_power_mvl/mxv
+	.byte		VOL   , 110*se_m_draco_meteor_mvl/mxv
 	.byte		BEND  , c_v-4
 	.byte		N09   , As5 , v112
 	.byte	W06
@@ -117,12 +117,12 @@ se_m_cosmic_power_1:
 
 @********************** Track  2 **********************@
 
-se_m_cosmic_power_2:
-	.byte	KEYSH , se_m_cosmic_power_key+0
+se_m_draco_meteor_2:
+	.byte	KEYSH , se_m_draco_meteor_key+0
 	.byte		VOICE , 53
 	.byte		XCMD  , xIECV , 9
 	.byte		        xIECL , 8
-	.byte		VOL   , 43*se_m_cosmic_power_mvl/mxv
+	.byte		VOL   , 43*se_m_draco_meteor_mvl/mxv
 	.byte		BEND  , c_v-2
 	.byte	W04
 	.byte		N08   , Fn5 , v112
@@ -194,15 +194,15 @@ se_m_cosmic_power_2:
 @******************************************************@
 	.align	2
 
-se_m_cosmic_power:
+se_m_draco_meteor:
 	.byte	2	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	se_m_cosmic_power_pri	@ Priority
-	.byte	se_m_cosmic_power_rev	@ Reverb.
+	.byte	se_m_draco_meteor_pri	@ Priority
+	.byte	se_m_draco_meteor_rev	@ Reverb.
 
-	.word	se_m_cosmic_power_grp
+	.word	se_m_draco_meteor_grp
 
-	.word	se_m_cosmic_power_1
-	.word	se_m_cosmic_power_2
+	.word	se_m_draco_meteor_1
+	.word	se_m_draco_meteor_2
 
 	.end

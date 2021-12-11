@@ -2550,7 +2550,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_PROTECT] =
     {
-        .effect = EFFECT_COSMIC_POWER,
+        .effect = EFFECT_DRACO_METEOR,
         .split = 0,
         .power = 0,
         .type = TYPE_ILLUSION,
@@ -4508,7 +4508,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGIC_COAT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_COSMIC_POWER] =
+    [MOVE_DRACO_METEOR] =
     {
         .effect = EFFECT_OVERHEAT,
         .split = 0,

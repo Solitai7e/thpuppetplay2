@@ -204,7 +204,7 @@ AI_CheckBadMove_CheckEffect:
 	if_effect EFFECT_LOW_KICK, AI_CBM_HighRiskForDamage
 	if_effect EFFECT_MUD_SPORT, AI_CBM_MudSport
 	if_effect EFFECT_TICKLE, AI_CBM_Tickle
-	if_effect EFFECT_COSMIC_POWER, AI_CBM_CosmicPower
+	if_effect EFFECT_DRACO_METEOR, AI_CBM_DracoMeteor
 	if_effect EFFECT_BULK_UP, AI_CBM_BulkUp
 	if_effect EFFECT_WATER_SPORT, AI_CBM_WaterSport
 	if_effect EFFECT_CALM_MIND, AI_CBM_CalmMind
@@ -571,7 +571,7 @@ AI_CBM_Tickle:
 	if_stat_level_equal AI_TARGET, STAT_DEF, MIN_STAT_STAGE, Score_Minus8
 	end
 
-AI_CBM_CosmicPower:
+AI_CBM_DracoMeteor:
 	if_stat_level_equal AI_USER, STAT_DEF, MAX_STAT_STAGE, Score_Minus10
 	if_stat_level_equal AI_USER, STAT_SPDEF, MAX_STAT_STAGE, Score_Minus8
 	end
@@ -765,7 +765,7 @@ AI_CheckViability:
 	if_effect EFFECT_MUD_SPORT, AI_CV_MudSport
 	if_effect EFFECT_OVERHEAT, AI_CV_Overheat
 	if_effect EFFECT_TICKLE, AI_CV_DefenseDown
-	if_effect EFFECT_COSMIC_POWER, AI_CV_SpDefUp
+	if_effect EFFECT_DRACO_METEOR, AI_CV_SpDefUp
 	if_effect EFFECT_BULK_UP, AI_CV_DefenseUp
 	if_effect EFFECT_POISON_TAIL, AI_CV_HighCrit
 	if_effect EFFECT_WATER_SPORT, AI_CV_WaterSport
@@ -2671,7 +2671,7 @@ AI_SetupFirstTurn_SetupEffectsToEncourage:
     .byte EFFECT_IMPRISON
     .byte EFFECT_TEETER_DANCE
     .byte EFFECT_TICKLE
-    .byte EFFECT_COSMIC_POWER
+    .byte EFFECT_DRACO_METEOR
     .byte EFFECT_BULK_UP
     .byte EFFECT_CALM_MIND
     .byte EFFECT_CAMOUFLAGE
@@ -3004,7 +3004,7 @@ AI_HPAware_DiscouragedEffectsWhenMediumHP:
     .byte EFFECT_SAFEGUARD
     .byte EFFECT_BELLY_DRUM
     .byte EFFECT_TICKLE
-    .byte EFFECT_COSMIC_POWER
+    .byte EFFECT_DRACO_METEOR
     .byte EFFECT_BULK_UP
     .byte EFFECT_CALM_MIND
     .byte EFFECT_DRAGON_DANCE
@@ -3054,7 +3054,7 @@ AI_HPAware_DiscouragedEffectsWhenLowHP:
     .byte EFFECT_SOLAR_BEAM
     .byte EFFECT_ERUPTION
     .byte EFFECT_TICKLE
-    .byte EFFECT_COSMIC_POWER
+    .byte EFFECT_DRACO_METEOR
     .byte EFFECT_BULK_UP
     .byte EFFECT_CALM_MIND
     .byte EFFECT_DRAGON_DANCE
@@ -3099,7 +3099,7 @@ AI_HPAware_DiscouragedEffectsWhenTargetMediumHP:
     .byte EFFECT_PERISH_SONG
     .byte EFFECT_SAFEGUARD
     .byte EFFECT_TICKLE
-    .byte EFFECT_COSMIC_POWER
+    .byte EFFECT_DRACO_METEOR
     .byte EFFECT_BULK_UP
     .byte EFFECT_CALM_MIND
     .byte EFFECT_DRAGON_DANCE
@@ -3161,7 +3161,7 @@ AI_HPAware_DiscouragedEffectsWhenTargetLowHP:
     .byte EFFECT_MIRROR_COAT
     .byte EFFECT_WILL_O_WISP
     .byte EFFECT_TICKLE
-    .byte EFFECT_COSMIC_POWER
+    .byte EFFECT_DRACO_METEOR
     .byte EFFECT_BULK_UP
     .byte EFFECT_CALM_MIND
     .byte EFFECT_DRAGON_DANCE

@@ -244,7 +244,7 @@ gSongTable::
 	song se_m_heat_wave, 1, 1
 	song se_m_uproar, 1, 1
 	song se_m_hail, 1, 1
-	song se_m_cosmic_power, 2, 2
+	song se_m_draco_meteor, 2, 2
 	song se_m_teeter_dance, 1, 1
 	song se_m_stat_decrease, 1, 1
 	song se_m_haze, 1, 1

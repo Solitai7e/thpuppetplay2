@@ -2582,7 +2582,7 @@ const struct BardSound gBardSounds_Moves[MOVES_COUNT][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND
     },
-    [MOVE_COSMIC_POWER] = {
+    [MOVE_DRACO_METEOR] = {
         { 0x1b, 0x0, 0x0, 0x0, 0x0},
         { 0x11, 0x0, 0x0, 0x0, 0x0},
         { 0x21, 0x0, 0x0, 0x0, 0x0},

@@ -338,7 +338,7 @@ gBattleAnims_Moves::
 	.4byte Move_BINDING_VOICE
 	.4byte Move_NATURE_SOUND
 	.4byte Move_TICKLE
-	.4byte Move_COSMIC_POWER
+	.4byte Move_DRACO_METEOR
 	.4byte Move_WATER_SPOUT
 	.4byte Move_SIGNAL_BEAM
 	.4byte Move_SHADOW_PUNCH
@@ -9051,10 +9051,10 @@ ReturnStrongestHit:
 	waitforvisualfinish
 	return
 
-Move_COSMIC_POWER:
+Move_DRACO_METEOR:
 	loadspritegfx ANIM_TAG_SPARKLE_2
-	createvisualtask SoundTask_PlaySE2WithPanning, 5, SE_M_COSMIC_POWER, 0
-	playsewithpan SE_M_COSMIC_POWER, 0
+	createvisualtask SoundTask_PlaySE2WithPanning, 5, SE_M_DRACO_METEOR, 0
+	playsewithpan SE_M_DRACO_METEOR, 0
 	createvisualtask AnimTask_BlendNonAttackerPalettes, 2, 0, 0, 15, RGB_BLACK
 	waitforvisualfinish
 	fadetobg BG_COSMIC

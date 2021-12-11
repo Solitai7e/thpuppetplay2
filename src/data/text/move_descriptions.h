@@ -1285,7 +1285,7 @@ static const u8 sTickleDescription[] = _(
     "Makes the foe laugh to\n"
     "lower ATTACK and DEFENSE.");
 
-static const u8 sCosmicPowerDescription[] = _(
+static const u8 sDracoMeteorDescription[] = _(
     "Raises DEFENSE and SP. DEF\n"
     "with a mystic power.");
 
@@ -1741,7 +1741,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_BINDING_VOICE - 1] = sBindingVoiceDescription,
     [MOVE_NATURE_SOUND - 1] = sGrassWhistleDescription,
     [MOVE_TICKLE - 1] = sTickleDescription,
-    [MOVE_COSMIC_POWER - 1] = sCosmicPowerDescription,
+    [MOVE_DRACO_METEOR - 1] = sDracoMeteorDescription,
     [MOVE_WATER_SPOUT - 1] = sWaterSpoutDescription,
     [MOVE_SIGNAL_BEAM - 1] = sSignalBeamDescription,
     [MOVE_SHADOW_PUNCH - 1] = sShadowPunchDescription,

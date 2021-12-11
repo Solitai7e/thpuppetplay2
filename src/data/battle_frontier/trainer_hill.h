@@ -1760,7 +1760,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_CYUKARI,
                                             .heldItem = ITEM_SITRUS_BERRY,
-                                            .moves = {MOVE_PRESENT, MOVE_COSMIC_POWER, MOVE_LIGHT_SCREEN, MOVE_LUNATIC},
+                                            .moves = {MOVE_PRESENT, MOVE_DRACO_METEOR, MOVE_LIGHT_SCREEN, MOVE_LUNATIC},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .attackEV = 255,
