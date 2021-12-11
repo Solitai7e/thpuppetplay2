@@ -716,7 +716,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_CKEINE] = {
         .species = SPECIES_CKEINE,
-        .moves = {MOVE_ACID, MOVE_STUN_SPORE, MOVE_SWEET_SCENT, MOVE_MOONLIGHT},
+        .moves = {MOVE_ACID, MOVE_STUN_SPORE, MOVE_SWEET_SCENT, MOVE_LUNATIC},
         .itemTableId = BATTLE_FRONTIER_ITEM_PECHA_BERRY,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_RELAXED
@@ -1171,7 +1171,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_KEINE_1] = {
         .species = SPECIES_KEINE,
-        .moves = {MOVE_BATTLE_CHANT, MOVE_ACID, MOVE_STUN_SPORE, MOVE_MOONLIGHT},
+        .moves = {MOVE_BATTLE_CHANT, MOVE_ACID, MOVE_STUN_SPORE, MOVE_LUNATIC},
         .itemTableId = BATTLE_FRONTIER_ITEM_PERSIM_BERRY,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_QUIRKY
@@ -1906,7 +1906,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_KEINE_2] = {
         .species = SPECIES_KEINE,
-        .moves = {MOVE_SOLAR_BEAM, MOVE_SUNNY_DAY, MOVE_GUNK_SHOT, MOVE_MOONLIGHT},
+        .moves = {MOVE_SOLAR_BEAM, MOVE_SUNNY_DAY, MOVE_GUNK_SHOT, MOVE_LUNATIC},
         .itemTableId = BATTLE_FRONTIER_ITEM_PECHA_BERRY,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_ATTACK,
         .nature = NATURE_QUIRKY
@@ -2760,7 +2760,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_AKEINE_1] = {
         .species = SPECIES_AKEINE,
-        .moves = {MOVE_GUNK_SHOT, MOVE_BATTLE_CHANT, MOVE_MOONLIGHT, MOVE_AROMATHERAPY},
+        .moves = {MOVE_GUNK_SHOT, MOVE_BATTLE_CHANT, MOVE_LUNATIC, MOVE_AROMATHERAPY},
         .itemTableId = BATTLE_FRONTIER_ITEM_PERSIM_BERRY,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_IMPISH

@@ -1617,7 +1617,7 @@ void DestroySpriteWithActiveSheet(struct Sprite *sprite)
     DestroySprite(sprite);
 }
 
-// Only used to fade Moonlight moon sprite in
+// Only used to fade Lunatic moon sprite in
 void AnimTask_AlphaFadeIn(u8 taskId)
 {
     s16 v1 = 0;

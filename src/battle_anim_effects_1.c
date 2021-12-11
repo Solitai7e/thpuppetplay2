@@ -121,8 +121,8 @@ static void AnimConversion2(struct Sprite *);
 static void AnimConversion2_Step(struct Sprite *);
 static void AnimMoon(struct Sprite *);
 static void AnimMoon_Step(struct Sprite *);
-static void AnimMoonlightSparkle(struct Sprite *);
-static void AnimMoonlightSparkle_Step(struct Sprite *);
+static void AnimLunaticSparkle(struct Sprite *);
+static void AnimLunaticSparkle_Step(struct Sprite *);
 static void AnimHornHit(struct Sprite *);
 static void AnimHornHit_Step(struct Sprite *);
 static void AnimHeatClaw(struct Sprite *);
@@ -145,7 +145,7 @@ static void AnimTauntFinger(struct Sprite *);
 static void AnimTauntFinger_Step1(struct Sprite *);
 static void AnimTauntFinger_Step2(struct Sprite *);
 static void AnimMoveTwisterParticle_Step(struct Sprite *);
-static void AnimTask_MoonlightEndFade_Step(u8 taskId);
+static void AnimTask_LunaticEndFade_Step(u8 taskId);
 static void AnimTask_LeafBlade_Step(u8);
 static void AnimTask_DuplicateAndShrinkToPos_Step1(u8);
 static void AnimTask_DuplicateAndShrinkToPos_Step2(u8);
@@ -1796,7 +1796,7 @@ const struct SpriteTemplate gMoonSpriteTemplate =
     .callback = AnimMoon,
 };
 
-const union AnimCmd gMoonlightSparkleAnimCmds[] =
+const union AnimCmd gLunaticSparkleAnimCmds[] =
 {
     ANIMCMD_FRAME(0, 8),
     ANIMCMD_FRAME(4, 8),
@@ -1805,20 +1805,20 @@ const union AnimCmd gMoonlightSparkleAnimCmds[] =
     ANIMCMD_JUMP(0),
 };
 
-const union AnimCmd *const gMoonlightSparkleAnimTable[] =
+const union AnimCmd *const gLunaticSparkleAnimTable[] =
 {
-    gMoonlightSparkleAnimCmds,
+    gLunaticSparkleAnimCmds,
 };
 
-const struct SpriteTemplate gMoonlightSparkleSpriteTemplate =
+const struct SpriteTemplate gLunaticSparkleSpriteTemplate =
 {
     .tileTag = ANIM_TAG_GREEN_SPARKLE,
     .paletteTag = ANIM_TAG_GREEN_SPARKLE,
     .oam = &gOamData_AffineOff_ObjNormal_16x16,
-    .anims = gMoonlightSparkleAnimTable,
+    .anims = gLunaticSparkleAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimMoonlightSparkle,
+    .callback = AnimLunaticSparkle,
 };
 
 const union AnimCmd gHealingBlueStarAnimCmds[] =
@@ -4968,7 +4968,7 @@ static void AnimMoon_Step(struct Sprite* sprite)
         DestroyAnimSprite(sprite);
 }
 
-static void AnimMoonlightSparkle(struct Sprite* sprite)
+static void AnimLunaticSparkle(struct Sprite* sprite)
 {
     sprite->x = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2) + gBattleAnimArgs[0];
     sprite->y = gBattleAnimArgs[1];
@@ -4977,10 +4977,10 @@ static void AnimMoonlightSparkle(struct Sprite* sprite)
     sprite->data[2] = 0;
     sprite->data[3] = 0;
     sprite->data[4] = 1;
-    sprite->callback = AnimMoonlightSparkle_Step;
+    sprite->callback = AnimLunaticSparkle_Step;
 }
 
-static void AnimMoonlightSparkle_Step(struct Sprite* sprite)
+static void AnimLunaticSparkle_Step(struct Sprite* sprite)
 {
     if (++sprite->data[1] > 1)
     {
@@ -4996,7 +4996,7 @@ static void AnimMoonlightSparkle_Step(struct Sprite* sprite)
         DestroyAnimSprite(sprite);
 }
 
-void AnimTask_MoonlightEndFade(u8 taskId)
+void AnimTask_LunaticEndFade(u8 taskId)
 {
     int a = GetBattleBgPalettesMask(1, 0, 0, 0, 0, 0, 0) & 0xFFFF;
     int b;
@@ -5019,11 +5019,11 @@ void AnimTask_MoonlightEndFade(u8 taskId)
     b = b | (0x10000 << IndexOfSpritePaletteTag(ANIM_TAG_MOON));
     d = IndexOfSpritePaletteTag(ANIM_TAG_GREEN_SPARKLE);
     BeginNormalPaletteFade((0x10000 << d) | b, 0, 0, 16, RGB(27, 29, 31));
-    gTasks[taskId].func = AnimTask_MoonlightEndFade_Step;
+    gTasks[taskId].func = AnimTask_LunaticEndFade_Step;
     gTasks[taskId].func(taskId);
 }
 
-static void AnimTask_MoonlightEndFade_Step(u8 taskId)
+static void AnimTask_LunaticEndFade_Step(u8 taskId)
 {
     struct Task* task = &gTasks[taskId];
     switch (task->data[0])
@@ -5079,7 +5079,7 @@ static void AnimTask_MoonlightEndFade_Step(u8 taskId)
             u8 spriteId;
             for (spriteId = 0; spriteId < MAX_SPRITES; spriteId++)
             {
-                if (gSprites[spriteId].template == &gMoonSpriteTemplate || gSprites[spriteId].template == &gMoonlightSparkleSpriteTemplate)
+                if (gSprites[spriteId].template == &gMoonSpriteTemplate || gSprites[spriteId].template == &gLunaticSparkleSpriteTemplate)
                     gSprites[spriteId].data[0] = 1;
             }
 

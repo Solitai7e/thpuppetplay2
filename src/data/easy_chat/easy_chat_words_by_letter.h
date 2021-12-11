@@ -1049,7 +1049,7 @@ const u16 gEasyChatWordsByLetter_M[] = {
     EC_WORD_MONEY,
     EC_WORD_MONTH,
     EC_WORD_MOOD,
-    EC_MOVE2(MOONLIGHT),
+    EC_MOVE2(LUNATIC),
     EC_WORD_MORE,
     EC_WORD_MORNING,
     EC_MOVE(ENERGY_LIGHT),

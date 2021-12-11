@@ -3304,7 +3304,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
-    [MOVE_MOONLIGHT] =
+    [MOVE_LUNATIC] =
     {
         .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
         .split = 0,

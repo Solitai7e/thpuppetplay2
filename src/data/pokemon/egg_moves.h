@@ -326,7 +326,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(CLYRICA,
               MOVE_SYNTHESIS,
-              MOVE_MOONLIGHT,
+              MOVE_LUNATIC,
               MOVE_REFLECT,
               MOVE_ANCIENT_POWER,
               MOVE_PSYCH_UP,
@@ -1039,7 +1039,7 @@ const u16 gEggMoves[] = {
     egg_moves(ADMYSTIA,
               MOVE_PSYCH_UP,
               MOVE_RECOVER,
-              MOVE_MOONLIGHT),
+              MOVE_LUNATIC),
 
     egg_moves(THATATE,
               MOVE_THRASH,

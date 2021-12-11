@@ -2366,7 +2366,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_KURUMI] =
     {
-        .categoryName = _("MOONLIGHT"),
+        .categoryName = _("LUNATIC"),
         .height = 10,
         .weight = 270,
         .description = gKurumiPokedexText,

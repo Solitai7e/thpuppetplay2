@@ -151,7 +151,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHit                    @ EFFECT_UNUSED_83
 	.4byte BattleScript_EffectEnergyLight             @ EFFECT_ENERGY_LIGHT
 	.4byte BattleScript_EffectSynthesis              @ EFFECT_SYNTHESIS
-	.4byte BattleScript_EffectMoonlight              @ EFFECT_MOONLIGHT
+	.4byte BattleScript_EffectLunatic              @ EFFECT_LUNATIC
 	.4byte BattleScript_EffectHiddenPower            @ EFFECT_HIDDEN_POWER
 	.4byte BattleScript_EffectRainDance              @ EFFECT_RAIN_DANCE
 	.4byte BattleScript_EffectSunnyDay               @ EFFECT_SUNNY_DAY
@@ -1728,7 +1728,7 @@ BattleScript_EffectSonicboom::
 
 BattleScript_EffectEnergyLight::
 BattleScript_EffectSynthesis::
-BattleScript_EffectMoonlight::
+BattleScript_EffectLunatic::
 	attackcanceler
 	attackstring
 	ppreduce

@@ -215,7 +215,7 @@
 #define SE_M_BARRIER                208 // SE_W112
 #define SE_M_DETECT                 209 // SE_W197
 #define SE_M_LOCK_ON                210 // SE_W199
-#define SE_M_MOONLIGHT              211 // SE_W236
+#define SE_M_LUNATIC              211 // SE_W236
 #define SE_M_CHARM                  212 // SE_W204
 #define SE_M_CHARGE                 213 // SE_W268
 #define SE_M_STRENGTH               214 // SE_W070

@@ -907,7 +907,7 @@ SECTIONS {
         sound/songs/se_m_barrier.o(.rodata);
         sound/songs/se_m_detect.o(.rodata);
         sound/songs/se_m_lock_on.o(.rodata);
-        sound/songs/se_m_moonlight.o(.rodata);
+        sound/songs/se_m_lunatic.o(.rodata);
         sound/songs/se_m_charm.o(.rodata);
         sound/songs/se_m_charge.o(.rodata);
         sound/songs/se_m_strength.o(.rodata);

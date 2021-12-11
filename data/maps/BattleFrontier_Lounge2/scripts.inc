@@ -251,7 +251,7 @@ BattleFrontier_Lounge2_Text_ArenaTycoonSilverMons::
 	.string "When she's assessing the foe's ability,\n"
 	.string "she supposedly uses these POKéMON:\p"
 	.string "A BUG & FIGHTING SINGLE HORN POKéMON,\n"
-	.string "a DARK-type MOONLIGHT POKéMON,\l"
+	.string "a DARK-type LUNATIC POKéMON,\l"
 	.string "and a BUG & GHOST SHED POKéMON.$"
 
 BattleFrontier_Lounge2_Text_ArenaTycoonGoldMons::
@@ -259,7 +259,7 @@ BattleFrontier_Lounge2_Text_ArenaTycoonGoldMons::
 	.string "when she's serious?\p"
 	.string "When she battles for keeps,\n"
 	.string "she supposedly uses these POKéMON:\p"
-	.string "A DARK-type MOONLIGHT POKéMON,\n"
+	.string "A DARK-type LUNATIC POKéMON,\n"
 	.string "a GHOST & POISON SHADOW POKéMON\l"
 	.string "and a GRASS- & FIGHTING-type\l"
 	.string "MUSHROOM POKéMON.$"

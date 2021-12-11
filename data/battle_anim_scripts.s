@@ -252,7 +252,7 @@ gBattleAnims_Moves::
 	.4byte Move_VITAL_THROW
 	.4byte Move_ENERGY_LIGHT
 	.4byte Move_SYNTHESIS
-	.4byte Move_MOONLIGHT
+	.4byte Move_LUNATIC
 	.4byte Move_HIDDEN_POWER
 	.4byte Move_CROSS_CHOP
 	.4byte Move_TWISTER
@@ -3355,7 +3355,7 @@ Move_RAPID_SPIN:
 	clearmonbg ANIM_ATTACKER
 	end
 
-Move_MOONLIGHT:
+Move_LUNATIC:
 	loadspritegfx ANIM_TAG_MOON
 	loadspritegfx ANIM_TAG_GREEN_SPARKLE
 	loadspritegfx ANIM_TAG_BLUE_STAR
@@ -3364,19 +3364,19 @@ Move_MOONLIGHT:
 	waitforvisualfinish
 	createsprite gMoonSpriteTemplate, ANIM_ATTACKER, 2, 120, 56
 	createvisualtask AnimTask_AlphaFadeIn, 3, 0, 16, 16, 0, 1
-	playsewithpan SE_M_MOONLIGHT, 0
+	playsewithpan SE_M_LUNATIC, 0
 	delay 30
-	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, -12, 0
+	createsprite gLunaticSparkleSpriteTemplate, ANIM_ATTACKER, 40, -12, 0
 	delay 30
-	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, -24, 0
+	createsprite gLunaticSparkleSpriteTemplate, ANIM_ATTACKER, 40, -24, 0
 	delay 30
-	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, 21, 0
+	createsprite gLunaticSparkleSpriteTemplate, ANIM_ATTACKER, 40, 21, 0
 	delay 30
-	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, 0, 0
+	createsprite gLunaticSparkleSpriteTemplate, ANIM_ATTACKER, 40, 0, 0
 	delay 30
-	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, 10, 0
+	createsprite gLunaticSparkleSpriteTemplate, ANIM_ATTACKER, 40, 10, 0
 	delay 20
-	createvisualtask AnimTask_MoonlightEndFade, 2
+	createvisualtask AnimTask_LunaticEndFade, 2
 	waitforvisualfinish
 	call HealingEffect
 	waitforvisualfinish

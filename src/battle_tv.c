@@ -220,7 +220,7 @@ static const u16 sPoints_MoveEffect[NUM_BATTLE_MOVE_EFFECTS] =
     [EFFECT_UNUSED_83] = 1,
     [EFFECT_ENERGY_LIGHT] = 4,
     [EFFECT_SYNTHESIS] = 4,
-    [EFFECT_MOONLIGHT] = 4,
+    [EFFECT_LUNATIC] = 4,
     [EFFECT_HIDDEN_POWER] = 1,
     [EFFECT_RAIN_DANCE] = 4,
     [EFFECT_SUNNY_DAY] = 4,
@@ -372,7 +372,7 @@ static const u16 sPoints_SunMoves[] =
     MOVE_SOLAR_BEAM, 5,
     MOVE_SYNTHESIS, 3,
     MOVE_ENERGY_LIGHT, 3,
-    MOVE_MOONLIGHT, 3,
+    MOVE_LUNATIC, 3,
     MOVE_WEATHER_BALL, 3,
     TABLE_END, 0
 };

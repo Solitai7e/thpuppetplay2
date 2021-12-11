@@ -212,7 +212,7 @@ gSongTable::
 	song se_m_barrier, 1, 1
 	song se_m_detect, 2, 2
 	song se_m_lock_on, 1, 1
-	song se_m_moonlight, 1, 1
+	song se_m_lunatic, 1, 1
 	song se_m_charm, 1, 1
 	song se_m_charge, 1, 1
 	song se_m_strength, 1, 1

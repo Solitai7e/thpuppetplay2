@@ -728,7 +728,7 @@ AI_CheckViability:
 	if_effect EFFECT_PURSUIT, AI_CV_Pursuit
 	if_effect EFFECT_ENERGY_LIGHT, AI_CV_HealWeather
 	if_effect EFFECT_SYNTHESIS, AI_CV_HealWeather
-	if_effect EFFECT_MOONLIGHT, AI_CV_HealWeather
+	if_effect EFFECT_LUNATIC, AI_CV_HealWeather
 	if_effect EFFECT_RAIN_DANCE, AI_CV_RainDance
 	if_effect EFFECT_SUNNY_DAY, AI_CV_SunnyDay
 	if_effect EFFECT_BELLY_DRUM, AI_CV_BellyDrum
@@ -2958,7 +2958,7 @@ AI_HPAware_DiscouragedEffectsWhenHighHP:
     .byte EFFECT_ENDURE
     .byte EFFECT_ENERGY_LIGHT
     .byte EFFECT_SYNTHESIS
-    .byte EFFECT_MOONLIGHT
+    .byte EFFECT_LUNATIC
     .byte EFFECT_SOFTBOILED
     .byte EFFECT_MEMENTO
     .byte EFFECT_GRUDGE

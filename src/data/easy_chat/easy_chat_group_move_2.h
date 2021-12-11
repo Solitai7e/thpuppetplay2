@@ -113,7 +113,7 @@ const u16 gEasyChatGroup_Move2[] = {
     MOVE_MINIMIZE,
     MOVE_MIRROR_COAT,
     MOVE_MIST_BALL,
-    MOVE_MOONLIGHT,
+    MOVE_LUNATIC,
     MOVE_MUD_SHOT,
     MOVE_MUD_SPORT,
     MOVE_MUD_SLAP,
