@@ -393,7 +393,7 @@ static const s8 sMindRatings[] =
     [MOVE_ROCK_BLAST] = 1,
     [MOVE_SHOCK_WAVE] = 1,
     [MOVE_WATER_PULSE] = 1,
-    [MOVE_DOOM_DESIRE] = 1,
+    [MOVE_DECISION] = 1,
     [MOVE_PSYCHO_BOOST] = 1,
 };
 

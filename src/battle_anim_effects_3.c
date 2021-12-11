@@ -632,7 +632,7 @@ const struct SpriteTemplate gGreenStarSpriteTemplate =
     .callback = AnimGreenStar,
 };
 
-const s8 gDoomDesireLightBeamCoordTable[] =
+const s8 gDecisionLightBeamCoordTable[] =
 {
     0x78,
     0x50,
@@ -640,7 +640,7 @@ const s8 gDoomDesireLightBeamCoordTable[] =
     0x00,
 };
 
-const u8 gDoomDesireLightBeamDelayTable[] =
+const u8 gDecisionLightBeamDelayTable[] =
 {
     0,
     0,
@@ -2548,7 +2548,7 @@ static void AnimGreenStar_Callback(struct Sprite *sprite)
     }
 }
 
-void AnimTask_DoomDesireLightBeam(u8 taskId)
+void AnimTask_DecisionLightBeam(u8 taskId)
 {
     struct BattleAnimBgData animBg;
 
@@ -2603,9 +2603,9 @@ void AnimTask_DoomDesireLightBeam(u8 taskId)
     case 1:
         gTasks[taskId].data[3] = 0;
         if (GetBattlerSide(gBattleAnimTarget) == B_SIDE_OPPONENT)
-            gBattle_BG1_X = gTasks[taskId].data[10] + gDoomDesireLightBeamCoordTable[gTasks[taskId].data[2]];
+            gBattle_BG1_X = gTasks[taskId].data[10] + gDecisionLightBeamCoordTable[gTasks[taskId].data[2]];
         else
-            gBattle_BG1_X = gTasks[taskId].data[10] - gDoomDesireLightBeamCoordTable[gTasks[taskId].data[2]];
+            gBattle_BG1_X = gTasks[taskId].data[10] - gDecisionLightBeamCoordTable[gTasks[taskId].data[2]];
 
         if (++gTasks[taskId].data[2] == 5)
             gTasks[taskId].data[0] = 5;
@@ -2621,7 +2621,7 @@ void AnimTask_DoomDesireLightBeam(u8 taskId)
             gTasks[taskId].data[0]++;
         break;
     case 3:
-        if (++gTasks[taskId].data[3] > gDoomDesireLightBeamDelayTable[gTasks[taskId].data[2]])
+        if (++gTasks[taskId].data[3] > gDecisionLightBeamDelayTable[gTasks[taskId].data[2]])
             gTasks[taskId].data[0]++;
         break;
     case 4:

@@ -365,7 +365,7 @@
 #define B_ANIM_ITEM_STEAL               15
 #define B_ANIM_SNATCH_MOVE              16
 #define B_ANIM_PSYCHO_CUT_HIT           17
-#define B_ANIM_DOOM_DESIRE_HIT          18
+#define B_ANIM_DECISION_HIT          18
 #define B_ANIM_FOCUS_PUNCH_SETUP        19
 #define B_ANIM_INGRAIN_HEAL             20
 #define B_ANIM_WISH_HEAL                21

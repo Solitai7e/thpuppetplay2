@@ -61,7 +61,7 @@ enum {
     FNT_WRAP,
     FNT_SPIKES,
     FNT_PSYCHO_CUT,
-    FNT_DOOM_DESIRE,
+    FNT_DECISION,
     FNT_PERISH_SONG,
     FNT_DESTINY_BOND,
     FNT_CONFUSION,
@@ -311,7 +311,7 @@ static const u16 sPoints_Effectiveness[] =
 static const u16 sPoints_SetUp[] =
 {
     4, // Psycho Cut
-    4, // Doom Desire
+    4, // Decision
     6,
     6, // Wish
     7, // Grudge
@@ -604,8 +604,8 @@ void BattleTv_SetDataBasedOnString(u16 stringId)
         tvPtr->side[atkSide].psychoCutMoveSlot = moveSlot;
         break;
     case STRINGID_PKMNCHOSEXASDESTINY:
-        tvPtr->side[atkSide].doomDesireMonId = gBattlerPartyIndexes[gBattlerAttacker] + 1;
-        tvPtr->side[atkSide].doomDesireMoveSlot = moveSlot;
+        tvPtr->side[atkSide].decisionMonId = gBattlerPartyIndexes[gBattlerAttacker] + 1;
+        tvPtr->side[atkSide].decisionMoveSlot = moveSlot;
         break;
     case STRINGID_FAINTINTHREE:
         tvPtr->side[atkSide].perishSongMonId = gBattlerPartyIndexes[gBattlerAttacker] + 1;
@@ -1036,12 +1036,12 @@ void BattleTv_SetDataBasedOnAnimation(u8 animationId)
             tvPtr->side[atkSide].faintCause = FNT_PSYCHO_CUT;
         }
         break;
-    case B_ANIM_DOOM_DESIRE_HIT:
-        if (tvPtr->side[atkSide].doomDesireMonId != 0)
+    case B_ANIM_DECISION_HIT:
+        if (tvPtr->side[atkSide].decisionMonId != 0)
         {
             AddMovePoints(PTS_SET_UP, 1, atkSide,
-                        (tvPtr->side[atkSide].doomDesireMonId - 1) * 4 + tvPtr->side[atkSide].doomDesireMoveSlot);
-            tvPtr->side[atkSide].faintCause = FNT_DOOM_DESIRE;
+                        (tvPtr->side[atkSide].decisionMonId - 1) * 4 + tvPtr->side[atkSide].decisionMoveSlot);
+            tvPtr->side[atkSide].faintCause = FNT_DECISION;
         }
         break;
     }
@@ -1338,11 +1338,11 @@ static void AddPointsOnFainting(bool8 targetFainted)
                 (tvPtr->side[atkSide].psychoCutMonId - 1) * 4 + tvPtr->side[atkSide].psychoCutMoveSlot);
             }
             break;
-        case FNT_DOOM_DESIRE:
-            if (tvPtr->side[atkSide].doomDesireMonId != 0)
+        case FNT_DECISION:
+            if (tvPtr->side[atkSide].decisionMonId != 0)
             {
                 AddMovePoints(PTS_FAINT_SET_UP, 0, atkSide,
-                (tvPtr->side[atkSide].doomDesireMonId - 1) * 4 + tvPtr->side[atkSide].doomDesireMoveSlot);
+                (tvPtr->side[atkSide].decisionMonId - 1) * 4 + tvPtr->side[atkSide].decisionMoveSlot);
             }
             break;
         case FNT_PERISH_SONG:

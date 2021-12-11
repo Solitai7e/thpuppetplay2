@@ -3505,18 +3505,18 @@ BattleScript_SpikesFree::
 BattleScript_MonTookFutureAttack::
 	printstring STRINGID_PKMNTOOKATTACK
 	waitmessage B_WAIT_TIME_LONG
-	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, B_MSG_PSYCHO_CUT, BattleScript_CheckDoomDesireMiss
+	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, B_MSG_PSYCHO_CUT, BattleScript_CheckDecisionMiss
 	accuracycheck BattleScript_FutureAttackMiss, MOVE_PSYCHO_CUT
 	goto BattleScript_FutureAttackAnimate
-BattleScript_CheckDoomDesireMiss::
-	accuracycheck BattleScript_FutureAttackMiss, MOVE_DOOM_DESIRE
+BattleScript_CheckDecisionMiss::
+	accuracycheck BattleScript_FutureAttackMiss, MOVE_DECISION
 BattleScript_FutureAttackAnimate::
 	adjustnormaldamage2
-	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, B_MSG_PSYCHO_CUT, BattleScript_FutureHitAnimDoomDesire
+	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, B_MSG_PSYCHO_CUT, BattleScript_FutureHitAnimDecision
 	playanimation BS_ATTACKER, B_ANIM_PSYCHO_CUT_HIT
 	goto BattleScript_DoFutureAttackHit
-BattleScript_FutureHitAnimDoomDesire::
-	playanimation BS_ATTACKER, B_ANIM_DOOM_DESIRE_HIT
+BattleScript_FutureHitAnimDecision::
+	playanimation BS_ATTACKER, B_ANIM_DECISION_HIT
 BattleScript_DoFutureAttackHit::
 	effectivenesssound
 	hitanimation BS_TARGET

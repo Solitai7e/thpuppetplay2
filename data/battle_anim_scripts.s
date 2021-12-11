@@ -369,7 +369,7 @@ gBattleAnims_Moves::
 	.4byte Move_ROCK_BLAST
 	.4byte Move_SHOCK_WAVE
 	.4byte Move_WATER_PULSE
-	.4byte Move_DOOM_DESIRE
+	.4byte Move_DECISION
 	.4byte Move_PSYCHO_BOOST
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
@@ -405,7 +405,7 @@ gBattleAnims_General::
 	.4byte General_ItemSteal                @ B_ANIM_ITEM_STEAL
 	.4byte General_SnatchMove               @ B_ANIM_SNATCH_MOVE
 	.4byte General_PsychoCutHit           @ B_ANIM_PSYCHO_CUT_HIT
-	.4byte General_DoomDesireHit            @ B_ANIM_DOOM_DESIRE_HIT
+	.4byte General_DecisionHit            @ B_ANIM_DECISION_HIT
 	.4byte General_FocusPunchSetUp          @ B_ANIM_FOCUS_PUNCH_SETUP
 	.4byte General_IngrainHeal              @ B_ANIM_INGRAIN_HEAL
 	.4byte General_WishHeal                 @ B_ANIM_WISH_HEAL
@@ -9570,8 +9570,8 @@ Move_KNOCK_OFF:
 	waitforvisualfinish
 	end
 
-Move_DOOM_DESIRE:
-	createvisualtask GetIsDoomDesireHitTurn, 2
+Move_DECISION:
+	createvisualtask GetIsDecisionHitTurn, 2
 	delay 1
 	monbg ANIM_ATK_PARTNER
 	createvisualtask AnimTask_SetGrayscaleOrOriginalPal, 5, ANIM_TARGET, FALSE
@@ -10575,13 +10575,13 @@ General_PsychoCutHit:
 	call UnsetPsychicBackground
 	end
 
-General_DoomDesireHit:
+General_DecisionHit:
 	createvisualtask AnimTask_SetAnimTargetToBattlerTarget, 2
 	loadspritegfx ANIM_TAG_EXPLOSION
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 3, 0, 16, RGB_WHITE
 	waitforvisualfinish
 	delay 10
-	createvisualtask AnimTask_DoomDesireLightBeam, 5
+	createvisualtask AnimTask_DecisionLightBeam, 5
 	delay 9
 	playsewithpan SE_M_CONFUSE_RAY, SOUND_PAN_ATTACKER
 	delay 9

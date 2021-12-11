@@ -8827,8 +8827,8 @@ static void Cmd_trysetfutureattack(void)
         if (gProtectStructs[gBattlerAttacker].helpingHand)
             gWishFutureKnock.psychoCutDmg[gBattlerTarget] = gWishFutureKnock.psychoCutDmg[gBattlerTarget] * 15 / 10;
 
-        if (gCurrentMove == MOVE_DOOM_DESIRE)
-            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DOOM_DESIRE;
+        if (gCurrentMove == MOVE_DECISION)
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DECISION;
         else
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PSYCHO_CUT;
 

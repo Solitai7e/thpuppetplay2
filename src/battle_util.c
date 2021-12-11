@@ -1787,7 +1787,7 @@ bool8 HandleWishPerishSongOnTurnEnd(void)
                 if (gWishFutureKnock.psychoCutMove[gActiveBattler] == MOVE_PSYCHO_CUT)
                     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PSYCHO_CUT;
                 else
-                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DOOM_DESIRE;
+                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DECISION;
 
                 PREPARE_MOVE_BUFFER(gBattleTextBuff1, gWishFutureKnock.psychoCutMove[gActiveBattler]);
 

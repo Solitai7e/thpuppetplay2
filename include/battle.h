@@ -260,7 +260,7 @@ struct BattleTv_Side
     u32 safeguardMonId:3;
     u32 mistMonId:3;
     u32 psychoCutMonId:3;
-    u32 doomDesireMonId:3;
+    u32 decisionMonId:3;
     u32 perishSongMonId:3;
     u32 wishMonId:3;
     u32 grudgeMonId:3;
@@ -271,7 +271,7 @@ struct BattleTv_Side
     u32 safeguardMoveSlot:2;
     u32 mistMoveSlot:2;
     u32 psychoCutMoveSlot:2;
-    u32 doomDesireMoveSlot:2;
+    u32 decisionMoveSlot:2;
     u32 perishSongMoveSlot:2;
     u32 wishMoveSlot:2;
     u32 grudgeMoveSlot:2;

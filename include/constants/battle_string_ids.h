@@ -515,7 +515,7 @@
 
 // gFutureMoveUsedStringIds
 #define B_MSG_PSYCHO_CUT 0
-#define B_MSG_DOOM_DESIRE  1
+#define B_MSG_DECISION  1
 
 // gItemSwapStringIds
 #define B_MSG_ITEM_SWAP_TAKEN 0

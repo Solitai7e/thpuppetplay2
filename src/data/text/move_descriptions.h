@@ -1409,7 +1409,7 @@ static const u8 sWaterPulseDescription[] = _(
     "Attacks with ultrasonic\n"
     "waves. May confuse the foe.");
 
-static const u8 sDoomDesireDescription[] = _(
+static const u8 sDecisionDescription[] = _(
     "Summons strong sunlight to\n"
     "attack 2 turns later.");
 
@@ -1772,6 +1772,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_ROCK_BLAST - 1] = sRockBlastDescription,
     [MOVE_SHOCK_WAVE - 1] = sShockWaveDescription,
     [MOVE_WATER_PULSE - 1] = sWaterPulseDescription,
-    [MOVE_DOOM_DESIRE - 1] = sDoomDesireDescription,
+    [MOVE_DECISION - 1] = sDecisionDescription,
     [MOVE_PSYCHO_BOOST - 1] = sPsychoBoostDescription,
 };
