@@ -2632,7 +2632,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
-    [MOVE_SLUDGE_BOMB] =
+    [MOVE_GUNK_SHOT] =
     {
         .effect = EFFECT_POISON_HIT,
         .split = 0,

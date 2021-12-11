@@ -990,7 +990,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .comboStarterId = COMBO_STARTER_SLUDGE,
-        .comboMoves = {COMBO_STARTER_SLUDGE_BOMB},
+        .comboMoves = {COMBO_STARTER_GUNK_SHOT},
     },
 
     [MOVE_BONE_CLUB] =
@@ -1497,11 +1497,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_SLUDGE_BOMB] =
+    [MOVE_GUNK_SHOT] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
-        .comboStarterId = COMBO_STARTER_SLUDGE_BOMB,
+        .comboStarterId = COMBO_STARTER_GUNK_SHOT,
         .comboMoves = {COMBO_STARTER_SLUDGE},
     },
 

@@ -3898,10 +3898,10 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM36_SLUDGE_BOMB] =
+    [ITEM_TM36_GUNK_SHOT] =
     {
         .name = _("TM36"),
-        .itemId = ITEM_TM36_SLUDGE_BOMB,
+        .itemId = ITEM_TM36_GUNK_SHOT,
         .price = 1000,
         .description = sTM36Desc,
         .pocket = POCKET_TM_HM,

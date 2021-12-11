@@ -519,7 +519,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_CUTSUHO,
                         .heldItem = ITEM_SALAC_BERRY,
-                        .moves = {MOVE_SLUDGE_BOMB, MOVE_SHADOW_BALL, MOVE_FRUSTRATION, MOVE_DESTINY_BOND},
+                        .moves = {MOVE_GUNK_SHOT, MOVE_SHADOW_BALL, MOVE_FRUSTRATION, MOVE_DESTINY_BOND},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 110,
@@ -1555,7 +1555,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_CUTSUHO,
                         .heldItem = ITEM_POISON_BARB,
-                        .moves = {MOVE_TOXIC, MOVE_SLUDGE_BOMB, MOVE_SMOKESCREEN, MOVE_HAZE},
+                        .moves = {MOVE_TOXIC, MOVE_GUNK_SHOT, MOVE_SMOKESCREEN, MOVE_HAZE},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 255,
@@ -1597,7 +1597,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_HINA,
                         .heldItem = ITEM_BRIGHT_POWDER,
-                        .moves = {MOVE_SCREECH, MOVE_DISABLE, MOVE_SLUDGE_BOMB, MOVE_DISPERSE},
+                        .moves = {MOVE_SCREECH, MOVE_DISABLE, MOVE_GUNK_SHOT, MOVE_DISPERSE},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 255,
@@ -1640,7 +1640,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_CKOTOHIME,
                         .heldItem = ITEM_MENTAL_HERB,
-                        .moves = {MOVE_SWEET_SCENT, MOVE_BATTLE_CHANT, MOVE_STUN_SPORE, MOVE_SLUDGE_BOMB},
+                        .moves = {MOVE_SWEET_SCENT, MOVE_BATTLE_CHANT, MOVE_STUN_SPORE, MOVE_GUNK_SHOT},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 255,
@@ -5022,7 +5022,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_YAMAME,
                                             .heldItem = ITEM_BRIGHT_POWDER,
-                                            .moves = {MOVE_DOUBLE_TEAM, MOVE_PROTECT, MOVE_RETURN, MOVE_SLUDGE_BOMB},
+                                            .moves = {MOVE_DOUBLE_TEAM, MOVE_PROTECT, MOVE_RETURN, MOVE_GUNK_SHOT},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 6,

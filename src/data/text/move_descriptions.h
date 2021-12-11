@@ -749,7 +749,7 @@ static const u8 sBellyDrumDescription[] = _(
     "Maximizes ATTACK while\n"
     "sacrificing HP.");
 
-static const u8 sSludgeBombDescription[] = _(
+static const u8 sGunkShotDescription[] = _(
     "Sludge is hurled to inflict\n"
     "damage. May also poison.");
 
@@ -1607,7 +1607,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_FAINT_ATTACK - 1] = sFaintAttackDescription,
     [MOVE_SWEET_KISS - 1] = sSweetKissDescription,
     [MOVE_BELLY_DRUM - 1] = sBellyDrumDescription,
-    [MOVE_SLUDGE_BOMB - 1] = sSludgeBombDescription,
+    [MOVE_GUNK_SHOT - 1] = sGunkShotDescription,
     [MOVE_MUD_SLAP - 1] = sMudSlapDescription,
     [MOVE_OCTAZOOKA - 1] = sOctazookaDescription,
     [MOVE_SPIKES - 1] = sSpikesDescription,

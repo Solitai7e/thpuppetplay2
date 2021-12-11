@@ -2667,7 +2667,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_DESTINY_BOND,
             MOVE_CONFUSE_RAY,
             MOVE_LICK,
-            MOVE_SLUDGE_BOMB
+            MOVE_GUNK_SHOT
         },
         .cool = 200,
         .beauty = 100,

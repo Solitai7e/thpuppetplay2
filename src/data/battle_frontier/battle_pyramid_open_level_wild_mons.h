@@ -212,7 +212,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round5[] =
         .species = SPECIES_YUYUKO,
         .lvl = 10,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_NIGHT_SHADE, MOVE_THUNDERBOLT, MOVE_SLUDGE_BOMB, MOVE_NONE}
+        .moves = {MOVE_NIGHT_SHADE, MOVE_THUNDERBOLT, MOVE_GUNK_SHOT, MOVE_NONE}
     },
     {
         .species = SPECIES_CWAKASAGI,
@@ -242,7 +242,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round5[] =
         .species = SPECIES_CUTSUHO,
         .lvl = 6,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_SELF_DESTRUCT, MOVE_PROTECT, MOVE_NONE}
+        .moves = {MOVE_GUNK_SHOT, MOVE_SELF_DESTRUCT, MOVE_PROTECT, MOVE_NONE}
     },
     {
         .species = SPECIES_ASANAE,
@@ -306,7 +306,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round6[] =
         .species = SPECIES_YAMAME,
         .lvl = 5,
         .abilityNum = 1,
-        .moves = {MOVE_ROCK_SLIDE, MOVE_SLUDGE_BOMB, MOVE_EARTHQUAKE, MOVE_PROTECT}
+        .moves = {MOVE_ROCK_SLIDE, MOVE_GUNK_SHOT, MOVE_EARTHQUAKE, MOVE_PROTECT}
     }
 };
 
@@ -368,7 +368,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round8[] =
         .species = SPECIES_CUTSUHO,
         .lvl = 10,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_SELF_DESTRUCT, MOVE_SLUDGE_BOMB, MOVE_FIRE_BLAST, MOVE_NONE}
+        .moves = {MOVE_SELF_DESTRUCT, MOVE_GUNK_SHOT, MOVE_FIRE_BLAST, MOVE_NONE}
     },
     {
         .species = SPECIES_MERLIN,
@@ -426,7 +426,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round9[] =
         .species = SPECIES_SEIGA,
         .lvl = 10,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_EARTHQUAKE, MOVE_TOXIC, MOVE_SLUDGE_BOMB, MOVE_PSYCHIC}
+        .moves = {MOVE_EARTHQUAKE, MOVE_TOXIC, MOVE_GUNK_SHOT, MOVE_PSYCHIC}
     },
     {
         .species = SPECIES_LYRICA,
@@ -508,7 +508,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round10[] =
         .species = SPECIES_ADRAN,
         .lvl = 5,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_SLUDGE_BOMB, MOVE_GIGA_DRAIN, MOVE_CONFUSE_RAY, MOVE_NONE}
+        .moves = {MOVE_GUNK_SHOT, MOVE_GIGA_DRAIN, MOVE_CONFUSE_RAY, MOVE_NONE}
     },
     {
         .species = SPECIES_CBYAKUREN,

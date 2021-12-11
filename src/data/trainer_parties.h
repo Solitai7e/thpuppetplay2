@@ -4424,7 +4424,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wallace[] = {
     .lvl = 55,
     .species = SPECIES_MURASA,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_TOXIC, MOVE_HYDRO_PUMP, MOVE_SLUDGE_BOMB, MOVE_ICE_BEAM}
+    .moves = {MOVE_TOXIC, MOVE_HYDRO_PUMP, MOVE_GUNK_SHOT, MOVE_ICE_BEAM}
     },
     {
     .iv = 255,
@@ -6569,7 +6569,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Jonas[] = {
     .iv = 0,
     .lvl = 31,
     .species = SPECIES_RIN,
-    .moves = {MOVE_TOXIC, MOVE_THUNDER, MOVE_SELF_DESTRUCT, MOVE_SLUDGE_BOMB}
+    .moves = {MOVE_TOXIC, MOVE_THUNDER, MOVE_SELF_DESTRUCT, MOVE_GUNK_SHOT}
     }
 };
 

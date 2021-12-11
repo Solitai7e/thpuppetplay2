@@ -204,7 +204,7 @@ gBattleAnims_Moves::
 	.4byte Move_FAINT_ATTACK
 	.4byte Move_SWEET_KISS
 	.4byte Move_BELLY_DRUM
-	.4byte Move_SLUDGE_BOMB
+	.4byte Move_GUNK_SHOT
 	.4byte Move_MUD_SLAP
 	.4byte Move_OCTAZOOKA
 	.4byte Move_SPIKES
@@ -5952,36 +5952,36 @@ Move_SLUDGE:
 	waitforvisualfinish
 	end
 
-Move_SLUDGE_BOMB:
+Move_GUNK_SHOT:
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
-	call SludgeBombProjectile
+	call GunkShotProjectile
+	call GunkShotProjectile
+	call GunkShotProjectile
+	call GunkShotProjectile
+	call GunkShotProjectile
+	call GunkShotProjectile
+	call GunkShotProjectile
+	call GunkShotProjectile
+	call GunkShotProjectile
+	call GunkShotProjectile
 	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 3, 0, 15, 1
 	createvisualtask AnimTask_BlendColorCycle, 2, 4, 1, 2, 0, 12, RGB(30, 0, 31)
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, 42, 27, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, -27, 44, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, 39, -28, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, -42, -42, 20
+	createsprite gGunkShotHitParticleSpriteTemplate, ANIM_TARGET, 2, 42, 27, 20
+	createsprite gGunkShotHitParticleSpriteTemplate, ANIM_TARGET, 2, -27, 44, 20
+	createsprite gGunkShotHitParticleSpriteTemplate, ANIM_TARGET, 2, 39, -28, 20
+	createsprite gGunkShotHitParticleSpriteTemplate, ANIM_TARGET, 2, -42, -42, 20
 	playsewithpan SE_M_DIG, SOUND_PAN_TARGET
 	delay 5
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, 0, 40, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, -8, -44, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, -46, -28, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, 46, 9, 20
+	createsprite gGunkShotHitParticleSpriteTemplate, ANIM_TARGET, 2, 0, 40, 20
+	createsprite gGunkShotHitParticleSpriteTemplate, ANIM_TARGET, 2, -8, -44, 20
+	createsprite gGunkShotHitParticleSpriteTemplate, ANIM_TARGET, 2, -46, -28, 20
+	createsprite gGunkShotHitParticleSpriteTemplate, ANIM_TARGET, 2, 46, 9, 20
 	playsewithpan SE_M_DIG, SOUND_PAN_TARGET
 	delay 5
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, 42, 0, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, -43, -12, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, 16, -46, 20
-	createsprite gSludgeBombHitParticleSpriteTemplate, ANIM_TARGET, 2, -16, 44, 20
+	createsprite gGunkShotHitParticleSpriteTemplate, ANIM_TARGET, 2, 42, 0, 20
+	createsprite gGunkShotHitParticleSpriteTemplate, ANIM_TARGET, 2, -43, -12, 20
+	createsprite gGunkShotHitParticleSpriteTemplate, ANIM_TARGET, 2, 16, -46, 20
+	createsprite gGunkShotHitParticleSpriteTemplate, ANIM_TARGET, 2, -16, 44, 20
 	playsewithpan SE_M_DIG, SOUND_PAN_TARGET
 	delay 0
 	waitsound
@@ -5989,7 +5989,7 @@ Move_SLUDGE_BOMB:
 	call PoisonBubblesEffect
 	waitforvisualfinish
 	end
-SludgeBombProjectile:
+GunkShotProjectile:
 	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
 	createsprite gSludgeProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 0
 	delay 3
