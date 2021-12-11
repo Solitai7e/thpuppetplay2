@@ -921,7 +921,7 @@ static const u8 sSweetScentDescription[] = _(
     "Allures the foe to reduce\n"
     "evasiveness.");
 
-static const u8 sIronTailDescription[] = _(
+static const u8 sSteelFistDescription[] = _(
     "Attacks with a rock-hard\n"
     "tail. May lower DEFENSE.");
 
@@ -1650,7 +1650,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_PURSUIT - 1] = sPursuitDescription,
     [MOVE_RAPID_SPIN - 1] = sRapidSpinDescription,
     [MOVE_SWEET_SCENT - 1] = sSweetScentDescription,
-    [MOVE_IRON_TAIL - 1] = sIronTailDescription,
+    [MOVE_STEEL_FIST - 1] = sSteelFistDescription,
     [MOVE_METAL_CLAW - 1] = sMetalClawDescription,
     [MOVE_VITAL_THROW - 1] = sVitalThrowDescription,
     [MOVE_MORNING_SUN - 1] = sMorningSunDescription,
