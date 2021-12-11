@@ -27,7 +27,7 @@ gBattleAnims_Moves::
 	.4byte Move_ICE_PUNCH
 	.4byte Move_THUNDER_PUNCH
 	.4byte Move_SCRATCH
-	.4byte Move_VICE_GRIP
+	.4byte Move_NIGHT_SLASH
 	.4byte Move_GUILLOTINE
 	.4byte Move_RAZOR_WIND
 	.4byte Move_SWORDS_DANCE
@@ -1837,14 +1837,14 @@ Move_PAIN_SPLIT:
 	createvisualtask AnimTask_PainSplitMovement, 2, ANIM_TARGET, 2
 	end
 
-Move_VICE_GRIP:
+Move_NIGHT_SLASH:
 	loadspritegfx ANIM_TAG_CUT
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
-	playsewithpan SE_M_VICEGRIP, SOUND_PAN_TARGET
-	createsprite gViceGripSpriteTemplate, ANIM_ATTACKER, 2, 0
-	createsprite gViceGripSpriteTemplate, ANIM_ATTACKER, 2, 1
+	playsewithpan SE_M_NIGHT_SLASH, SOUND_PAN_TARGET
+	createsprite gNightSlashSpriteTemplate, ANIM_ATTACKER, 2, 0
+	createsprite gNightSlashSpriteTemplate, ANIM_ATTACKER, 2, 1
 	delay 9
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 1, 0, 0, ANIM_TARGET, 2
 	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 2, 0, 5, 1
@@ -1860,7 +1860,7 @@ Move_GUILLOTINE:
 	setalpha 12, 8
 	fadetobgfromset BG_GUILLOTINE_OPPONENT, BG_GUILLOTINE_PLAYER, BG_GUILLOTINE_CONTESTS
 	waitbgfadein
-	playsewithpan SE_M_VICEGRIP, SOUND_PAN_TARGET
+	playsewithpan SE_M_NIGHT_SLASH, SOUND_PAN_TARGET
 	createsprite gGuillotineSpriteTemplate, ANIM_ATTACKER, 2, 0
 	createsprite gGuillotineSpriteTemplate, ANIM_ATTACKER, 2, 1
 	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 2, 0, 16, RGB_BLACK
@@ -5329,7 +5329,7 @@ Move_CLAMP:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
 	setalpha 12, 8
-	playsewithpan SE_M_VICEGRIP, SOUND_PAN_TARGET
+	playsewithpan SE_M_NIGHT_SLASH, SOUND_PAN_TARGET
 	createsprite gClampJawSpriteTemplate, ANIM_ATTACKER, 2, -32, 0, 2, 819, 0, 10
 	createsprite gClampJawSpriteTemplate, ANIM_ATTACKER, 2, 32, 0, 6, -819, 0, 10
 	delay 10
@@ -6118,7 +6118,7 @@ MegahornContinue:
 	delay 3
 	createsprite gMegahornHornSpriteTemplate, ANIM_ATTACKER, 3, -42, 25, 0, 0, 6
 	delay 4
-	playsewithpan SE_M_VICEGRIP, SOUND_PAN_TARGET
+	playsewithpan SE_M_NIGHT_SLASH, SOUND_PAN_TARGET
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 0
 	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 1, -16, 4, 1, 4
 	waitforvisualfinish
@@ -10389,7 +10389,7 @@ Status_Clamp:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
 	setalpha 12, 8
-	playsewithpan SE_M_VICEGRIP, SOUND_PAN_TARGET
+	playsewithpan SE_M_NIGHT_SLASH, SOUND_PAN_TARGET
 	createsprite gClampJawSpriteTemplate, ANIM_ATTACKER, 2, -32, 0, 2, 819, 0, 10
 	createsprite gClampJawSpriteTemplate, ANIM_ATTACKER, 2, 32, 0, 6, -819, 0, 10
 	delay 10

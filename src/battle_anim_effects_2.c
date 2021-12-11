@@ -39,8 +39,8 @@ static void AnimBulletSeed(struct Sprite *);
 static void AnimBulletSeed_Step1(struct Sprite *);
 static void AnimBulletSeed_Step2(struct Sprite *);
 static void AnimRazorWindTornado(struct Sprite *);
-static void AnimViceGripPincer(struct Sprite *);
-static void AnimViceGripPincer_Step(struct Sprite *);
+static void AnimNightSlashPincer(struct Sprite *);
+static void AnimNightSlashPincer_Step(struct Sprite *);
 static void AnimGuillotinePincer(struct Sprite *);
 static void AnimGuillotinePincer_Step1(struct Sprite *);
 static void AnimGuillotinePincer_Step2(struct Sprite *);
@@ -466,7 +466,7 @@ const struct SpriteTemplate gRazorWindTornadoSpriteTemplate =
     .callback = AnimRazorWindTornado,
 };
 
-const union AnimCmd gViceGripAnimCmds1[] =
+const union AnimCmd gNightSlashAnimCmds1[] =
 {
     ANIMCMD_FRAME(0, 3),
     ANIMCMD_FRAME(16, 3),
@@ -474,7 +474,7 @@ const union AnimCmd gViceGripAnimCmds1[] =
     ANIMCMD_END,
 };
 
-const union AnimCmd gViceGripAnimCmds2[] =
+const union AnimCmd gNightSlashAnimCmds2[] =
 {
     ANIMCMD_FRAME(0, 3, .vFlip = TRUE, .hFlip = TRUE),
     ANIMCMD_FRAME(16, 3, .vFlip = TRUE, .hFlip = TRUE),
@@ -482,21 +482,21 @@ const union AnimCmd gViceGripAnimCmds2[] =
     ANIMCMD_END,
 };
 
-const union AnimCmd *const gViceGripAnimTable[] =
+const union AnimCmd *const gNightSlashAnimTable[] =
 {
-    gViceGripAnimCmds1,
-    gViceGripAnimCmds2,
+    gNightSlashAnimCmds1,
+    gNightSlashAnimCmds2,
 };
 
-const struct SpriteTemplate gViceGripSpriteTemplate =
+const struct SpriteTemplate gNightSlashSpriteTemplate =
 {
     .tileTag = ANIM_TAG_CUT,
     .paletteTag = ANIM_TAG_CUT,
     .oam = &gOamData_AffineOff_ObjBlend_32x32,
-    .anims = gViceGripAnimTable,
+    .anims = gNightSlashAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimViceGripPincer,
+    .callback = AnimNightSlashPincer,
 };
 
 const union AnimCmd gGuillotineAnimCmds1[] =
@@ -1900,7 +1900,7 @@ static void AnimRazorWindTornado(struct Sprite *sprite)
 
 // Animates a single pincer line that extends towards the center of the target mon.
 // arg 0: invert
-static void AnimViceGripPincer(struct Sprite *sprite)
+static void AnimNightSlashPincer(struct Sprite *sprite)
 {
     s16 startXOffset = 32;
     s16 startYOffset = -32;
@@ -1921,10 +1921,10 @@ static void AnimViceGripPincer(struct Sprite *sprite)
     sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2) + endXOffset;
     sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET) + endYOffset;
     sprite->callback = StartAnimLinearTranslation;
-    StoreSpriteCallbackInData6(sprite, AnimViceGripPincer_Step);
+    StoreSpriteCallbackInData6(sprite, AnimNightSlashPincer_Step);
 }
 
-static void AnimViceGripPincer_Step(struct Sprite *sprite)
+static void AnimNightSlashPincer_Step(struct Sprite *sprite)
 {
     if (sprite->animEnded)
         DestroyAnimSprite(sprite);

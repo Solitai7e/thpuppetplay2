@@ -157,7 +157,7 @@ gSongTable::
 	song se_m_blizzard, 1, 1
 	song se_m_blizzard2, 1, 1
 	song se_m_scratch, 1, 1
-	song se_m_vicegrip, 1, 1
+	song se_m_night_slash, 1, 1
 	song se_m_wing_attack, 1, 1
 	song se_m_fly, 1, 1
 	song se_m_sand_attack, 1, 1

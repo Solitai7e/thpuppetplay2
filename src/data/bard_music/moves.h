@@ -94,7 +94,7 @@ const struct BardSound gBardSounds_Moves[MOVES_COUNT][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND
     },
-    [MOVE_VICE_GRIP] = {
+    [MOVE_NIGHT_SLASH] = {
         { 0x14, 0x0, 0x0, 0x0, 0x0},
         { 0x11, 0x0, 0x0, 0x0, 0x0},
         { 0x33, 0x0, 0x0, 0x0, 0x0},

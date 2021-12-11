@@ -176,8 +176,8 @@ gText_SunnyDay::
 gText_Rest2::
 	.string "REST$"
 
-gText_Vicegrip::
-	.string "VICEGRIP$"
+gText_NightSlash::
+	.string "NIGHTSLASH$"
 
 gText_DefenseCurl::
 	.string "DEFENSE CURL$"

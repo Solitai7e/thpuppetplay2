@@ -41,7 +41,7 @@ static const u8 sScratchDescription[] = _(
     "Scratches the foe with\n"
     "sharp claws.");
 
-static const u8 sViceGripDescription[] = _(
+static const u8 sNightSlashDescription[] = _(
     "Grips the foe with large and\n"
     "powerful pincers.");
 
@@ -1430,7 +1430,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_ICE_PUNCH - 1] = sIcePunchDescription,
     [MOVE_THUNDER_PUNCH - 1] = sThunderPunchDescription,
     [MOVE_SCRATCH - 1] = sScratchDescription,
-    [MOVE_VICE_GRIP - 1] = sViceGripDescription,
+    [MOVE_NIGHT_SLASH - 1] = sNightSlashDescription,
     [MOVE_GUILLOTINE - 1] = sGuillotineDescription,
     [MOVE_RAZOR_WIND - 1] = sRazorWindDescription,
     [MOVE_SWORDS_DANCE - 1] = sSwordsDanceDescription,

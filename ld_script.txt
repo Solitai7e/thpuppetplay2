@@ -852,7 +852,7 @@ SECTIONS {
         sound/songs/se_m_blizzard.o(.rodata);
         sound/songs/se_m_blizzard2.o(.rodata);
         sound/songs/midi/se_m_scratch.o(.rodata);
-        sound/songs/midi/se_m_vicegrip.o(.rodata);
+        sound/songs/midi/se_m_night_slash.o(.rodata);
         sound/songs/midi/se_m_wing_attack.o(.rodata);
         sound/songs/midi/se_m_fly.o(.rodata);
         sound/songs/midi/se_m_sand_attack.o(.rodata);
