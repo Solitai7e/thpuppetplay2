@@ -167,7 +167,7 @@ gSongTable::
 	song se_m_surf, 1, 1
 	song se_m_hydro_pump, 1, 1
 	song se_m_whirlpool, 1, 1
-	song se_m_horn_attack, 1, 1
+	song se_m_knife_throw, 1, 1
 	song se_m_tail_whip, 2, 2
 	song se_m_mist, 1, 1
 	song se_m_poison_powder, 1, 1

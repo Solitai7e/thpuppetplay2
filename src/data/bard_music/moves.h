@@ -246,7 +246,7 @@ const struct BardSound gBardSounds_Moves[MOVES_COUNT][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND
     },
-    [MOVE_HORN_ATTACK] = {
+    [MOVE_KNIFE_THROW] = {
         { 0x18, 0x0, 0x0, 0x0, 0x0},
         { 0x2a, 0x0, 0x0, 0x0, 0x0},
         { 0x0, 0x0, 0x0, 0x0, 0x0},

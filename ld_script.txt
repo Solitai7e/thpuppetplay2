@@ -862,7 +862,7 @@ SECTIONS {
         sound/songs/se_m_surf.o(.rodata);
         sound/songs/se_m_hydro_pump.o(.rodata);
         sound/songs/se_m_whirlpool.o(.rodata);
-        sound/songs/midi/se_m_horn_attack.o(.rodata);
+        sound/songs/midi/se_m_knife_throw.o(.rodata);
         sound/songs/midi/se_m_tail_whip.o(.rodata);
         sound/songs/se_m_mist.o(.rodata);
         sound/songs/se_m_poison_powder.o(.rodata);

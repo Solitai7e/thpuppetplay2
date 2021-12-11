@@ -1251,7 +1251,7 @@ $(MID_SUBDIR)/se_m_sand_attack.s: %.s: %.mid
 $(MID_SUBDIR)/se_m_headbutt.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
-$(MID_SUBDIR)/se_m_horn_attack.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_knife_throw.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
 $(MID_SUBDIR)/se_m_take_down.s: %.s: %.mid

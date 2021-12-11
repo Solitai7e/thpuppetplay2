@@ -46,7 +46,7 @@ gBattleAnims_Moves::
 	.4byte Move_ROLLING_KICK
 	.4byte Move_SAND_ATTACK
 	.4byte Move_HEADBUTT
-	.4byte Move_HORN_ATTACK
+	.4byte Move_KNIFE_THROW
 	.4byte Move_FURY_ATTACK
 	.4byte Move_HORN_DRILL
 	.4byte Move_TACKLE
@@ -709,17 +709,17 @@ Move_PIN_MISSILE:
 	delay 15
 	createsprite gPinMissileSpriteTemplate, ANIM_ATTACKER, 2, 20, -8, 8, 8, 20, -40
 	delay 4
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, -8, -8, ANIM_TARGET, 2
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 3, 0, 2, 1
 	delay 9
 	createsprite gPinMissileSpriteTemplate, ANIM_ATTACKER, 2, 20, -8, 0, 0, 20, -32
 	delay 4
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 8, 8, ANIM_TARGET, 2
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 3, 0, 2, 1
 	delay 14
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, ANIM_TARGET, 2
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 3, 0, 2, 1
 	waitforvisualfinish
@@ -738,17 +738,17 @@ Move_ICICLE_SPEAR:
 	delay 15
 	createsprite gIcicleSpearSpriteTemplate, ANIM_ATTACKER, 2, 20, -8, 8, 8, 20, -40
 	delay 4
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, -8, -8, ANIM_TARGET, 2
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 3, 0, 2, 1
 	delay 9
 	createsprite gIcicleSpearSpriteTemplate, ANIM_ATTACKER, 2, 20, -8, 0, 0, 20, -32
 	delay 4
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 8, 8, ANIM_TARGET, 2
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 3, 0, 2, 1
 	delay 14
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, ANIM_TARGET, 2
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 3, 0, 2, 1
 	waitforvisualfinish
@@ -824,7 +824,7 @@ Move_POISON_STING:
 	waitforvisualfinish
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, ANIM_TARGET, 2
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 5, 1
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	waitforvisualfinish
 	call PoisonBubblesEffect
 	waitforvisualfinish
@@ -844,7 +844,7 @@ Move_TWINEEDLE:
 	delay 20
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 5, 1
 	createsprite gHandleInvertHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 0, -4, 1, 3
-	loopsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET, 5, 2
+	loopsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET, 5, 2
 	delay 1
 	createsprite gHandleInvertHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 10, 12, 1, 3
 	waitforvisualfinish
@@ -1314,7 +1314,7 @@ Move_SPIKE_CANNON:
 	createsprite gHandleInvertHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 1, 2
 	createsprite gHandleInvertHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 8, 8, 1, 2
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 3, 0, 7, 1
-	loopsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET, 5, 3
+	loopsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET, 5, 3
 	waitforvisualfinish
 	clearmonbg ANIM_TARGET
 	blendoff
@@ -1529,7 +1529,7 @@ Move_DRILL_PECK:
 	delay 2
 	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 1
 	delay 2
-	loopsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET, 4, 8
+	loopsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET, 4, 8
 	createvisualtask AnimTask_DrillPeckHitSplats, 5
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 18, 1
 	waitforvisualfinish
@@ -2419,7 +2419,7 @@ Move_HEADBUTT:
 	waitforvisualfinish
 	end
 
-Move_HORN_ATTACK:
+Move_KNIFE_THROW:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HORN_HIT
 	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 0
@@ -2433,7 +2433,7 @@ Move_HORN_ATTACK:
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 5, 0, 6, 1
 	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 2
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 0, 0, ANIM_TARGET, 1
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	waitforvisualfinish
 	end
 
@@ -2451,14 +2451,14 @@ FuryAttackRight:
 	createsprite gHornHitSpriteTemplate, ANIM_TARGET, 4, 8, 8, 10
 	waitforvisualfinish
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 0, 0, ANIM_TARGET, 1
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	goto FuryAttackContinue
 
 FuryAttackLeft:
 	createsprite gHornHitSpriteTemplate, ANIM_TARGET, 4, -8, -8, 10
 	waitforvisualfinish
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 0, 0, ANIM_TARGET, 1
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	goto FuryAttackContinue
 
 Move_HORN_DRILL:
@@ -2482,37 +2482,37 @@ HornDrillContinue:
 	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_ATTACKER, 2, 0, 40, 1
 	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_TARGET, 10, 0, 40, 1
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 0, 0, ANIM_TARGET, 3
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	delay 4
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 0, 2, ANIM_TARGET, 3
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	delay 4
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, -4, 3, ANIM_TARGET, 3
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	delay 4
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, -8, -5, ANIM_TARGET, 3
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	delay 4
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 4, -12, ANIM_TARGET, 3
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	delay 4
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 16, 0, ANIM_TARGET, 3
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	delay 4
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 5, 18, ANIM_TARGET, 3
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	delay 4
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, -17, 12, ANIM_TARGET, 2
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	delay 4
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, -21, -15, ANIM_TARGET, 2
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	delay 4
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 8, -27, ANIM_TARGET, 2
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	delay 4
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 32, 0, ANIM_TARGET, 2
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	delay 4
 	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 2
 	waitforvisualfinish
@@ -3840,7 +3840,7 @@ Move_IMPRISON:
 	monbg ANIM_DEF_PARTNER
 	createvisualtask AnimTask_ImprisonOrbs, 5
 	delay 8
-	loopsewithpan SE_M_HORN_ATTACK, SOUND_PAN_ATTACKER, 8, 5
+	loopsewithpan SE_M_KNIFE_THROW, SOUND_PAN_ATTACKER, 8, 5
 	waitforvisualfinish
 	delay 4
 	createsprite gRedXSpriteTemplate, ANIM_ATTACKER, 5, ANIM_ATTACKER, 40
@@ -4058,7 +4058,7 @@ Move_NEEDLE_ARM:
 	loadspritegfx ANIM_TAG_GREEN_SPIKE
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
-	loopsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET, 2, 16
+	loopsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET, 2, 16
 	createsprite gNeedleArmSpikeSpriteTemplate, ANIM_TARGET, 2, 1, 0, 0, -32, 16
 	delay 2
 	createsprite gNeedleArmSpikeSpriteTemplate, ANIM_TARGET, 2, 1, 0, 22, -22, 16
@@ -6037,7 +6037,7 @@ Move_BONEMERANG:
 	playsewithpan SE_M_BONEMERANG, SOUND_PAN_ATTACKER
 	createsprite gBonemerangSpriteTemplate, ANIM_ATTACKER, 2
 	delay 20
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 1
 	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 5, 0, 5, 1
 	delay 17
@@ -6076,7 +6076,7 @@ Move_BONE_RUSH:
 	delay 12
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 2
 	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 0, 3, 5, 1
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
@@ -6086,14 +6086,14 @@ Move_SPIKES:
 	loadspritegfx ANIM_TAG_SPIKES
 	monbg ANIM_DEF_PARTNER
 	playsewithpan SE_M_JUMP_KICK, SOUND_PAN_ATTACKER
-	waitplaysewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET, 28
+	waitplaysewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET, 28
 	createsprite gSpikesSpriteTemplate, ANIM_TARGET, 2, 20, 0, 0, 24, 30
 	delay 10
 	playsewithpan SE_M_JUMP_KICK, SOUND_PAN_ATTACKER
-	waitplaysewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET, 28
+	waitplaysewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET, 28
 	createsprite gSpikesSpriteTemplate, ANIM_TARGET, 2, 20, 0, -24, 24, 30
 	delay 10
-	waitplaysewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET, 28
+	waitplaysewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET, 28
 	createsprite gSpikesSpriteTemplate, ANIM_TARGET, 2, 20, 0, 24, 24, 30
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
@@ -6186,7 +6186,7 @@ Move_WING_ATTACK:
 
 Move_PECK:
 	loadspritegfx ANIM_TAG_IMPACT
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_TARGET
 	createvisualtask AnimTask_RotateMonToSideAndRestore, 2, 3, -768, ANIM_TARGET, 2
 	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, -12, 0, ANIM_TARGET, 3
 	waitforvisualfinish
@@ -7686,7 +7686,7 @@ Move_SOFT_BOILED:
 	createsprite gSoftBoiledEggSpriteTemplate, ANIM_ATTACKER, 4, 0, 16, 1
 	delay 120
 	delay 7
-	playsewithpan SE_M_HORN_ATTACK, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_KNIFE_THROW, SOUND_PAN_ATTACKER
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 31, 3, 10, 0, RGB(12, 24, 30)
 	createsprite gThinRingExpandingSpriteTemplate, ANIM_ATTACKER, 3, 31, 16, 0, 1
 	delay 8

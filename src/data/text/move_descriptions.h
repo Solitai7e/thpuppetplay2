@@ -117,7 +117,7 @@ static const u8 sHeadbuttDescription[] = _(
     "A ramming attack that may\n"
     "cause flinching.");
 
-static const u8 sHornAttackDescription[] = _(
+static const u8 sKnifeThrowDescription[] = _(
     "Jabs the foe with sharp\n"
     "horns.");
 
@@ -1449,7 +1449,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_ROLLING_KICK - 1] = sRollingKickDescription,
     [MOVE_SAND_ATTACK - 1] = sSandAttackDescription,
     [MOVE_HEADBUTT - 1] = sHeadbuttDescription,
-    [MOVE_HORN_ATTACK - 1] = sHornAttackDescription,
+    [MOVE_KNIFE_THROW - 1] = sKnifeThrowDescription,
     [MOVE_FURY_ATTACK - 1] = sFuryAttackDescription,
     [MOVE_HORN_DRILL - 1] = sHornDrillDescription,
     [MOVE_TACKLE - 1] = sTackleDescription,

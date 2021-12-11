@@ -233,11 +233,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_FOCUS_ENERGY},
     },
 
-    [MOVE_HORN_ATTACK] =
+    [MOVE_KNIFE_THROW] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_COOL,
-        .comboStarterId = COMBO_STARTER_HORN_ATTACK,
+        .comboStarterId = COMBO_STARTER_KNIFE_THROW,
         .comboMoves = {COMBO_STARTER_LEER},
     },
 
@@ -246,7 +246,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_HORN_ATTACK, COMBO_STARTER_PECK},
+        .comboMoves = {COMBO_STARTER_KNIFE_THROW, COMBO_STARTER_PECK},
     },
 
     [MOVE_HORN_DRILL] =
@@ -254,7 +254,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_HORN_ATTACK},
+        .comboMoves = {COMBO_STARTER_KNIFE_THROW},
     },
 
     [MOVE_TACKLE] =

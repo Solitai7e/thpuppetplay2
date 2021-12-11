@@ -170,7 +170,7 @@
 #define SE_M_SURF                   163 // SE_W057
 #define SE_M_HYDRO_PUMP             164 // SE_W056
 #define SE_M_WHIRLPOOL              165 // SE_W250
-#define SE_M_HORN_ATTACK            166 // SE_W030
+#define SE_M_KNIFE_THROW            166 // SE_W030
 #define SE_M_TAIL_WHIP              167 // SE_W039
 #define SE_M_MIST                   168 // SE_W054
 #define SE_M_POISON_POWDER          169 // SE_W077
