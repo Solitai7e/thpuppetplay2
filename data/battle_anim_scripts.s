@@ -332,7 +332,7 @@ gBattleAnims_Moves::
 	.4byte Move_FAKE_TEARS
 	.4byte Move_AIR_SLASH
 	.4byte Move_OVERHEAT
-	.4byte Move_ODOR_SLEUTH
+	.4byte Move_DOUBLE_TEAM
 	.4byte Move_ROCK_TOMB
 	.4byte Move_SILVER_WIND
 	.4byte Move_BINDING_VOICE
@@ -4210,9 +4210,9 @@ Move_AIR_SLASH:
 	delay 0
 	end
 
-Move_ODOR_SLEUTH:
+Move_DOUBLE_TEAM:
 	monbg ANIM_TARGET
-	createvisualtask AnimTask_OdorSleuthMovement, 5
+	createvisualtask AnimTask_DoubleTeamMovement, 5
 	delay 24
 	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 3, 4
 	playsewithpan SE_M_SWAGGER, SOUND_PAN_ATTACKER

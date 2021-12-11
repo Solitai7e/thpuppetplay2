@@ -614,7 +614,7 @@ const u16 gEggMoves[] = {
               MOVE_SAFEGUARD,
               MOVE_SCREECH,
               MOVE_REFLECT,
-              MOVE_ODOR_SLEUTH,
+              MOVE_DOUBLE_TEAM,
               MOVE_CHARGE),
 
     egg_moves(KOTOHIME,

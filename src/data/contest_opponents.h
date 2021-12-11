@@ -1686,7 +1686,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_TAUNT,
             MOVE_THIEF,
-            MOVE_ODOR_SLEUTH,
+            MOVE_DOUBLE_TEAM,
             MOVE_TAKE_DOWN
         },
         .cool = 40,

@@ -1261,7 +1261,7 @@ static const u8 sOverheatDescription[] = _(
     "Allows a full-power attack,\n"
     "but sharply lowers SP. ATK.");
 
-static const u8 sOdorSleuthDescription[] = _(
+static const u8 sDoubleTeamDescription[] = _(
     "Negates the foe's efforts\n"
     "to heighten evasiveness.");
 
@@ -1735,7 +1735,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_FAKE_TEARS - 1] = sFakeTearsDescription,
     [MOVE_AIR_SLASH - 1] = sAirSlashDescription,
     [MOVE_OVERHEAT - 1] = sOverheatDescription,
-    [MOVE_ODOR_SLEUTH - 1] = sOdorSleuthDescription,
+    [MOVE_DOUBLE_TEAM - 1] = sDoubleTeamDescription,
     [MOVE_ROCK_TOMB - 1] = sRockTombDescription,
     [MOVE_SILVER_WIND - 1] = sSilverWindDescription,
     [MOVE_BINDING_VOICE - 1] = sBindingVoiceDescription,

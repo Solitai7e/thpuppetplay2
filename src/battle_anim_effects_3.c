@@ -116,8 +116,8 @@ static void AnimTask_BarrageBall_Step(u8);
 static void AnimTask_SmellingSaltsSquish_Step(u8);
 static void AnimTask_HelpingHandAttackerMovement_Step(u8);
 static void AnimTask_MonToSubstituteDoll(u8);
-static void AnimTask_OdorSleuthMovementWaitFinish(u8);
-static void MoveOdorSleuthClone(struct Sprite *);
+static void AnimTask_DoubleTeamMovementWaitFinish(u8);
+static void MoveDoubleTeamClone(struct Sprite *);
 static void AnimTask_TeeterDanceMovement_Step(u8);
 static void AnimTask_SlackOffSquish_Step(u8);
 
@@ -4870,7 +4870,7 @@ static void AnimBlockX_Step(struct Sprite *sprite)
 
 // Quickly moves two clones of the target mon back and forth.
 // No args.
-void AnimTask_OdorSleuthMovement(u8 taskId)
+void AnimTask_DoubleTeamMovement(u8 taskId)
 {
     s16 spriteId1, spriteId2;
 
@@ -4928,18 +4928,18 @@ void AnimTask_OdorSleuthMovement(u8 taskId)
 
     gSprites[spriteId2].oam.objMode = ST_OAM_OBJ_NORMAL;
     gSprites[spriteId1].oam.objMode = ST_OAM_OBJ_NORMAL;
-    gSprites[spriteId2].callback = MoveOdorSleuthClone;
-    gSprites[spriteId1].callback = MoveOdorSleuthClone;
-    gTasks[taskId].func = AnimTask_OdorSleuthMovementWaitFinish;
+    gSprites[spriteId2].callback = MoveDoubleTeamClone;
+    gSprites[spriteId1].callback = MoveDoubleTeamClone;
+    gTasks[taskId].func = AnimTask_DoubleTeamMovementWaitFinish;
 }
 
-static void AnimTask_OdorSleuthMovementWaitFinish(u8 taskId)
+static void AnimTask_DoubleTeamMovementWaitFinish(u8 taskId)
 {
     if (gTasks[taskId].data[0] == 0)
         DestroyAnimVisualTask(taskId);
 }
 
-static void MoveOdorSleuthClone(struct Sprite *sprite)
+static void MoveDoubleTeamClone(struct Sprite *sprite)
 {
     if (++sprite->data[1] > 1)
     {
