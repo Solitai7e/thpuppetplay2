@@ -827,7 +827,7 @@ SECTIONS {
         sound/songs/midi/se_m_cut.o(.rodata);
         sound/songs/se_m_wire_web.o(.rodata);
         sound/songs/se_m_wire_web2.o(.rodata);
-        sound/songs/se_m_rock_throw.o(.rodata);
+        sound/songs/se_m_rock_slide.o(.rodata);
         sound/songs/midi/se_m_gust.o(.rodata);
         sound/songs/midi/se_m_gust2.o(.rodata);
         sound/songs/midi/se_m_double_slap.o(.rodata);

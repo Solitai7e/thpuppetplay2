@@ -697,11 +697,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_CHARGE, COMBO_STARTER_RAIN_DANCE, COMBO_STARTER_LOCK_ON},
     },
 
-    [MOVE_ROCK_THROW] =
+    [MOVE_ROCK_SLIDE] =
     {
         .effect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
-        .comboStarterId = COMBO_STARTER_ROCK_THROW,
+        .comboStarterId = COMBO_STARTER_ROCK_SLIDE,
         .comboMoves = {0},
     },
 
@@ -1254,7 +1254,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_ROCK_THROW},
+        .comboMoves = {COMBO_STARTER_ROCK_SLIDE},
     },
 
     [MOVE_KILLING_BITE] =
@@ -2534,7 +2534,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_ROCK_THROW},
+        .comboMoves = {COMBO_STARTER_ROCK_SLIDE},
     },
 
     [MOVE_SILVER_WIND] =

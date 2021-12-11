@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_rock_throw_grp, voicegroup128
-	.equ	se_m_rock_throw_pri, 4
-	.equ	se_m_rock_throw_rev, reverb_set+50
-	.equ	se_m_rock_throw_mvl, 127
-	.equ	se_m_rock_throw_key, 0
-	.equ	se_m_rock_throw_tbs, 1
-	.equ	se_m_rock_throw_exg, 0
-	.equ	se_m_rock_throw_cmp, 1
+	.equ	se_m_rock_slide_grp, voicegroup128
+	.equ	se_m_rock_slide_pri, 4
+	.equ	se_m_rock_slide_rev, reverb_set+50
+	.equ	se_m_rock_slide_mvl, 127
+	.equ	se_m_rock_slide_key, 0
+	.equ	se_m_rock_slide_tbs, 1
+	.equ	se_m_rock_slide_exg, 0
+	.equ	se_m_rock_slide_cmp, 1
 
 	.section .rodata
-	.global	se_m_rock_throw
+	.global	se_m_rock_slide
 	.align	2
 
 @********************** Track  1 **********************@
 
-se_m_rock_throw_1:
-	.byte	KEYSH , se_m_rock_throw_key+0
-	.byte	TEMPO , 150*se_m_rock_throw_tbs/2
+se_m_rock_slide_1:
+	.byte	KEYSH , se_m_rock_slide_key+0
+	.byte	TEMPO , 150*se_m_rock_slide_tbs/2
 	.byte		VOICE , 26
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		VOL   , 105*se_m_rock_throw_mvl/mxv
+	.byte		VOL   , 105*se_m_rock_slide_mvl/mxv
 	.byte		BEND  , c_v+0
 	.byte		N06   , En3 , v127
 	.byte	W03
@@ -52,14 +52,14 @@ se_m_rock_throw_1:
 @******************************************************@
 	.align	2
 
-se_m_rock_throw:
+se_m_rock_slide:
 	.byte	1	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	se_m_rock_throw_pri	@ Priority
-	.byte	se_m_rock_throw_rev	@ Reverb.
+	.byte	se_m_rock_slide_pri	@ Priority
+	.byte	se_m_rock_slide_rev	@ Reverb.
 
-	.word	se_m_rock_throw_grp
+	.word	se_m_rock_slide_grp
 
-	.word	se_m_rock_throw_1
+	.word	se_m_rock_slide_1
 
 	.end

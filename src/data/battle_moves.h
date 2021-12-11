@@ -1232,7 +1232,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_ROCK_THROW] =
+    [MOVE_ROCK_SLIDE] =
     {
         .effect = EFFECT_FLINCH_HIT,
         .split = 0,

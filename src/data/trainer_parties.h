@@ -3370,14 +3370,14 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     .lvl = 12,
     .species = SPECIES_CKISUME,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_ROCK_THROW, MOVE_ROCK_TOMB}
+    .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_ROCK_SLIDE, MOVE_ROCK_TOMB}
     },
     {
     .iv = 100,
     .lvl = 12,
     .species = SPECIES_CKISUME,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_ROCK_THROW, MOVE_ROCK_TOMB}
+    .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_ROCK_SLIDE, MOVE_ROCK_TOMB}
     },
     {
     .iv = 200,
@@ -9195,7 +9195,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_TyraAndIvy[] = {
     .iv = 0,
     .lvl = 20,
     .species = SPECIES_KISUME,
-    .moves = {MOVE_DEFENSE_CURL, MOVE_TREMORS, MOVE_MUD_SPORT, MOVE_ROCK_THROW}
+    .moves = {MOVE_DEFENSE_CURL, MOVE_TREMORS, MOVE_MUD_SPORT, MOVE_ROCK_SLIDE}
     }
 };
 

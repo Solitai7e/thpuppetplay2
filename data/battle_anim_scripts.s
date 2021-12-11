@@ -104,7 +104,7 @@ gBattleAnims_Moves::
 	.4byte Move_THUNDERBOLT
 	.4byte Move_THUNDER_WAVE
 	.4byte Move_THUNDER
-	.4byte Move_ROCK_THROW
+	.4byte Move_ROCK_SLIDE
 	.4byte Move_EARTHQUAKE
 	.4byte Move_FISSURE
 	.4byte Move_DIG
@@ -2094,24 +2094,24 @@ Move_CHARMING_LOOK:
 	waitforvisualfinish
 	end
 
-Move_ROCK_THROW:
+Move_ROCK_SLIDE:
 	loadspritegfx ANIM_TAG_ROCKS
 	createsprite gShakeMonOrTerrainSpriteTemplate, ANIM_TARGET, 2, 6, 1, 15, 1
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, 0, 1, 0, 0
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 6
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, 19, 1, 10, 0
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 6
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, -23, 2, -10, 0
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 5, 20, 1
 	delay 6
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, -15, 1, -10, 0
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 6
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, 23, 2, 10, 0
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	waitforvisualfinish
 	end
 
@@ -2120,16 +2120,16 @@ Move_ROCK_WRECKER:
 	monbg ANIM_DEF_PARTNER
 	createsprite gShakeMonOrTerrainSpriteTemplate, ANIM_ATTACKER, 2, 7, 1, 11, 1
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, -5, 1, -5, 1
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 2
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, 5, 0, 6, 1
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 2
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, 19, 1, 10, 1
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 2
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, -23, 2, -10, 1
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 5, 50, 1
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_DEF_PARTNER, 0, 5, 50, 1
 	delay 2
@@ -2141,28 +2141,28 @@ Move_ROCK_WRECKER:
 
 RockWreckerRocks:
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, -20, 0, -10, 1
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 2
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, 28, 1, 10, 1
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 2
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, -10, 1, -5, 1
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 2
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, 10, 0, 6, 1
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 2
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, 24, 1, 10, 1
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 2
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, -32, 2, -10, 1
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 2
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, -20, 0, -10, 1
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 2
 	createsprite gFallingRockSpriteTemplate, ANIM_TARGET, 2, 30, 2, 10, 1
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 2
 	return
 
@@ -3815,7 +3815,7 @@ Move_ERUPTION:
 	delay 22
 	createvisualtask AnimTask_HorizontalShake, 5, (MAX_BATTLERS_COUNT + 1), 8, 60
 	createvisualtask AnimTask_HorizontalShake, 5, MAX_BATTLERS_COUNT, 8, 60
-	loopsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET, 16, 12
+	loopsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET, 16, 12
 	delay 80
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 40, 31, 4, 4, 0, RGB_RED
 	end
@@ -6667,7 +6667,7 @@ Move_ROCK_SMASH:
 	playsewithpan SE_M_VITAL_THROW2, SOUND_PAN_TARGET
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 5, 1
 	waitforvisualfinish
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	createsprite gRockFragmentSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 20, 24, 14, 2
 	createsprite gRockFragmentSpriteTemplate, ANIM_ATTACKER, 2, 5, 0, -20, 24, 14, 1
 	createsprite gRockFragmentSpriteTemplate, ANIM_ATTACKER, 2, 0, 5, 20, -24, 14, 2
@@ -9269,7 +9269,7 @@ Move_ROCK_BLAST:
 	createsprite gRockBlastRockSpriteTemplate, ANIM_TARGET, 2, 16, 0, 0, 0, 25, 257
 	waitforvisualfinish
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 3, 0, 0, ANIM_TARGET, 1
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	createsprite gRockFragmentSpriteTemplate, ANIM_TARGET, 2, 0, 0, 20, 24, 14, 2
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 5, 1
 	createsprite gRockFragmentSpriteTemplate, ANIM_TARGET, 2, 5, 0, -20, 24, 14, 1
@@ -9473,7 +9473,7 @@ SeismicTossRockScatter1:
 	return
 SeismicTossRockScatter2:
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 3, 10, -8, ANIM_TARGET, 1
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 3, 5, 1
 	createsprite gRockScatterSpriteTemplate, ANIM_TARGET, 2, -12, 32, 3, 4
 	createsprite gRockScatterSpriteTemplate, ANIM_TARGET, 2, 8, 31, 2, 2
@@ -9641,7 +9641,7 @@ Move_SECRET_POWER:
 	jumpargeq 0, BATTLE_TERRAIN_UNDERWATER, Move_WATERFALL
 	jumpargeq 0, BATTLE_TERRAIN_WATER,      Move_SURF
 	jumpargeq 0, BATTLE_TERRAIN_POND,       Move_BUBBLE_BEAM
-	jumpargeq 0, BATTLE_TERRAIN_MOUNTAIN,   Move_ROCK_THROW
+	jumpargeq 0, BATTLE_TERRAIN_MOUNTAIN,   Move_ROCK_SLIDE
 	jumpargeq 0, BATTLE_TERRAIN_CAVE,       Move_BITE
 	jumpargeq 0, BATTLE_TERRAIN_BUILDING,   Move_STRENGTH
 	goto Move_SLAM
@@ -9886,13 +9886,13 @@ WeatherBallWater:
 WeatherBallSandstorm:
 	loadspritegfx ANIM_TAG_ROCKS
 	createsprite gWeatherBallRockDownSpriteTemplate, ANIM_TARGET, 2, -30, -100, 25, 1, 30, 0
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 5
 	createsprite gWeatherBallRockDownSpriteTemplate, ANIM_TARGET, 2, -30, -100, 25, 1, -40, 20
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	delay 14
 	createsprite gWeatherBallRockDownSpriteTemplate, ANIM_TARGET, 2, -30, -100, 25, 1, 0, 0
-	playsewithpan SE_M_ROCK_THROW, SOUND_PAN_TARGET
+	playsewithpan SE_M_ROCK_SLIDE, SOUND_PAN_TARGET
 	waitforvisualfinish
 	playsewithpan SE_M_STRENGTH, SOUND_PAN_TARGET
 	createsprite gRockScatterSpriteTemplate, ANIM_TARGET, 2, -12, 27, 2, 3

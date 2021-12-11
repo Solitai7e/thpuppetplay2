@@ -132,7 +132,7 @@ gSongTable::
 	song se_m_cut, 1, 1
 	song se_m_wire_web, 1, 1
 	song se_m_wire_web2, 1, 1
-	song se_m_rock_throw, 1, 1
+	song se_m_rock_slide, 1, 1
 	song se_m_gust, 2, 2
 	song se_m_gust2, 2, 2
 	song se_m_double_slap, 1, 1

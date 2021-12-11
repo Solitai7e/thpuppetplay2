@@ -349,7 +349,7 @@ static const u8 sThunderDescription[] = _(
     "A lightning attack that may\n"
     "cause paralysis.");
 
-static const u8 sRockThrowDescription[] = _(
+static const u8 sRockSlideDescription[] = _(
     "Throws small rocks to\n"
     "strike the foe.");
 
@@ -1507,7 +1507,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_THUNDERBOLT - 1] = sThunderboltDescription,
     [MOVE_THUNDER_WAVE - 1] = sThunderWaveDescription,
     [MOVE_THUNDER - 1] = sThunderDescription,
-    [MOVE_ROCK_THROW - 1] = sRockThrowDescription,
+    [MOVE_ROCK_SLIDE - 1] = sRockSlideDescription,
     [MOVE_EARTHQUAKE - 1] = sEarthquakeDescription,
     [MOVE_FISSURE - 1] = sFissureDescription,
     [MOVE_DIG - 1] = sDigDescription,
