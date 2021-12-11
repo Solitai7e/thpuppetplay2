@@ -31,8 +31,8 @@ static void AnimSuperpowerRock(struct Sprite *);
 static void AnimSuperpowerRock_Step1(struct Sprite *);
 static void AnimSuperpowerRock_Step2(struct Sprite *);
 static void AnimSuperpowerFireball(struct Sprite *);
-static void AnimArmThrustHit(struct Sprite *);
-static void AnimArmThrustHit_Step(struct Sprite *sprite);
+static void AnimForcePalmHit(struct Sprite *);
+static void AnimForcePalmHit_Step(struct Sprite *sprite);
 static void AnimRevengeScratch(struct Sprite *);
 static void AnimFocusPunchFist(struct Sprite *);
 static void AnimSpinningKickOrPunchFinish(struct Sprite *);
@@ -294,7 +294,7 @@ const struct SpriteTemplate gSuperpowerFireballSpriteTemplate =
     .callback = AnimSuperpowerFireball,
 };
 
-const struct SpriteTemplate gArmThrustHandSpriteTemplate =
+const struct SpriteTemplate gForcePalmHandSpriteTemplate =
 {
     .tileTag = ANIM_TAG_HANDS_AND_FEET,
     .paletteTag = ANIM_TAG_HANDS_AND_FEET,
@@ -302,7 +302,7 @@ const struct SpriteTemplate gArmThrustHandSpriteTemplate =
     .anims = sAnims_HandsAndFeet,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimArmThrustHit,
+    .callback = AnimForcePalmHit,
 };
 
 static const union AnimCmd sAnim_RevengeSmallScratch_0[] =
@@ -926,7 +926,7 @@ static void AnimSuperpowerFireball(struct Sprite *sprite)
     sprite->callback = AnimTranslateLinear_WithFollowup;
 }
 
-static void AnimArmThrustHit_Step(struct Sprite *sprite)
+static void AnimForcePalmHit_Step(struct Sprite *sprite)
 {
     if (sprite->data[0] == sprite->data[4])
         DestroyAnimSprite(sprite);
@@ -934,7 +934,7 @@ static void AnimArmThrustHit_Step(struct Sprite *sprite)
     sprite->data[0]++;
 }
 
-static void AnimArmThrustHit(struct Sprite *sprite)
+static void AnimForcePalmHit(struct Sprite *sprite)
 {
     u8 turn;
 
@@ -958,7 +958,7 @@ static void AnimArmThrustHit(struct Sprite *sprite)
     StartSpriteAnim(sprite, sprite->data[1]);
     sprite->x2 = sprite->data[2];
     sprite->y2 = sprite->data[3];
-    sprite->callback = AnimArmThrustHit_Step;
+    sprite->callback = AnimForcePalmHit_Step;
 }
 
 static void AnimRevengeScratch(struct Sprite *sprite)

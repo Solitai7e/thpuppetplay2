@@ -3566,7 +3566,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_ADAIYOUSEI] =
     {
-        .categoryName = _("ARM THRUST"),
+        .categoryName = _("FORCE PALM"),
         .height = 23,
         .weight = 2538,
         .description = gADaiyouseiPokedexText,

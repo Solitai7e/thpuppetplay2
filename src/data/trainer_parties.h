@@ -3408,7 +3408,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     .lvl = 19,
     .species = SPECIES_AFLANDRE,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_ARM_THRUST, MOVE_VITAL_THROW, MOVE_REVERSAL, MOVE_BULK_UP}
+    .moves = {MOVE_FORCE_PALM, MOVE_VITAL_THROW, MOVE_REVERSAL, MOVE_BULK_UP}
     }
 };
 
@@ -3802,7 +3802,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_AnnaAndMeg1[] = {
     .iv = 0,
     .lvl = 17,
     .species = SPECIES_AFLANDRE,
-    .moves = {MOVE_TACKLE, MOVE_FOCUS_ENERGY, MOVE_ARM_THRUST, MOVE_NONE}
+    .moves = {MOVE_TACKLE, MOVE_FOCUS_ENERGY, MOVE_FORCE_PALM, MOVE_NONE}
     }
 };
 
@@ -3817,7 +3817,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_AnnaAndMeg2[] = {
     .iv = 10,
     .lvl = 30,
     .species = SPECIES_AFLANDRE,
-    .moves = {MOVE_TACKLE, MOVE_FOCUS_ENERGY, MOVE_ARM_THRUST, MOVE_NONE}
+    .moves = {MOVE_TACKLE, MOVE_FOCUS_ENERGY, MOVE_FORCE_PALM, MOVE_NONE}
     }
 };
 
@@ -3832,7 +3832,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_AnnaAndMeg3[] = {
     .iv = 20,
     .lvl = 33,
     .species = SPECIES_AFLANDRE,
-    .moves = {MOVE_TACKLE, MOVE_FOCUS_ENERGY, MOVE_ARM_THRUST, MOVE_NONE}
+    .moves = {MOVE_TACKLE, MOVE_FOCUS_ENERGY, MOVE_FORCE_PALM, MOVE_NONE}
     }
 };
 
@@ -3847,7 +3847,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_AnnaAndMeg4[] = {
     .iv = 30,
     .lvl = 36,
     .species = SPECIES_AFLANDRE,
-    .moves = {MOVE_TACKLE, MOVE_FOCUS_ENERGY, MOVE_ARM_THRUST, MOVE_NONE}
+    .moves = {MOVE_TACKLE, MOVE_FOCUS_ENERGY, MOVE_FORCE_PALM, MOVE_NONE}
     }
 };
 
@@ -3862,7 +3862,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_AnnaAndMeg5[] = {
     .iv = 40,
     .lvl = 38,
     .species = SPECIES_ADAIYOUSEI,
-    .moves = {MOVE_TACKLE, MOVE_FOCUS_ENERGY, MOVE_ARM_THRUST, MOVE_NONE}
+    .moves = {MOVE_TACKLE, MOVE_FOCUS_ENERGY, MOVE_FORCE_PALM, MOVE_NONE}
     }
 };
 
@@ -4098,7 +4098,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Timothy2[] = {
     .iv = 210,
     .lvl = 33,
     .species = SPECIES_ADAIYOUSEI,
-    .moves = {MOVE_ARM_THRUST, MOVE_KNOCK_OFF, MOVE_SAND_ATTACK, MOVE_DIG}
+    .moves = {MOVE_FORCE_PALM, MOVE_KNOCK_OFF, MOVE_SAND_ATTACK, MOVE_DIG}
     }
 };
 
@@ -4107,7 +4107,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Timothy3[] = {
     .iv = 220,
     .lvl = 36,
     .species = SPECIES_ADAIYOUSEI,
-    .moves = {MOVE_ARM_THRUST, MOVE_KNOCK_OFF, MOVE_SAND_ATTACK, MOVE_DIG}
+    .moves = {MOVE_FORCE_PALM, MOVE_KNOCK_OFF, MOVE_SAND_ATTACK, MOVE_DIG}
     }
 };
 
@@ -4116,7 +4116,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Timothy4[] = {
     .iv = 230,
     .lvl = 39,
     .species = SPECIES_ADAIYOUSEI,
-    .moves = {MOVE_ARM_THRUST, MOVE_BELLY_DRUM, MOVE_SAND_ATTACK, MOVE_DIG}
+    .moves = {MOVE_FORCE_PALM, MOVE_BELLY_DRUM, MOVE_SAND_ATTACK, MOVE_DIG}
     }
 };
 
@@ -4125,7 +4125,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Timothy5[] = {
     .iv = 240,
     .lvl = 42,
     .species = SPECIES_ADAIYOUSEI,
-    .moves = {MOVE_ARM_THRUST, MOVE_BELLY_DRUM, MOVE_SAND_ATTACK, MOVE_DIG}
+    .moves = {MOVE_FORCE_PALM, MOVE_BELLY_DRUM, MOVE_SAND_ATTACK, MOVE_DIG}
     }
 };
 

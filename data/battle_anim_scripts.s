@@ -308,7 +308,7 @@ gBattleAnims_Moves::
 	.4byte Move_SNATCH
 	.4byte Move_SECRET_POWER
 	.4byte Move_DIVE
-	.4byte Move_ARM_THRUST
+	.4byte Move_FORCE_PALM
 	.4byte Move_CAMOUFLAGE
 	.4byte Move_TAIL_GLOW
 	.4byte Move_LUSTER_PURGE
@@ -8564,7 +8564,7 @@ Move_SHEER_COLD:
 	waitbgfadein
 	end
 
-Move_ARM_THRUST:
+Move_FORCE_PALM:
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	loadspritegfx ANIM_TAG_IMPACT
 	splitbgprio ANIM_TARGET
@@ -8574,22 +8574,22 @@ Move_ARM_THRUST:
 	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 3
 	delay 4
 	playsewithpan SE_M_SWAGGER, SOUND_PAN_TARGET
-	createsprite gArmThrustHandSpriteTemplate, ANIM_TARGET, 2, 10, -8, 14, 3
+	createsprite gForcePalmHandSpriteTemplate, ANIM_TARGET, 2, 10, -8, 14, 3
 	waitforvisualfinish
 	createvisualtask AnimTask_RotateMonSpriteToSide, 5, 8, 5, 0, 1
 	playsewithpan SE_M_DOUBLE_SLAP, SOUND_PAN_TARGET
-	choosetwoturnanim ArmThrustRight, ArmThrustLeft
-ArmThrustContinue:
+	choosetwoturnanim ForcePalmRight, ForcePalmLeft
+ForcePalmContinue:
 	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 4, 0, 6, 1
 	waitforvisualfinish
 	blendoff
 	end
-ArmThrustRight:
+ForcePalmRight:
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 2, 8, 0, ANIM_TARGET, 2
-	goto ArmThrustContinue
-ArmThrustLeft:
+	goto ForcePalmContinue
+ForcePalmLeft:
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 2, -8, 0, ANIM_TARGET, 2
-	goto ArmThrustContinue
+	goto ForcePalmContinue
 
 Move_MUDDY_WATER:
 	panse SE_M_WHIRLPOOL, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0

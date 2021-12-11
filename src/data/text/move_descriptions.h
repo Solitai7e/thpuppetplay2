@@ -1165,7 +1165,7 @@ static const u8 sDiveDescription[] = _(
     "Dives underwater the first\n"
     "turn and strikes next turn.");
 
-static const u8 sArmThrustDescription[] = _(
+static const u8 sForcePalmDescription[] = _(
     "Straight-arm punches that\n"
     "strike the foe 2 to 5 times.");
 
@@ -1711,7 +1711,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SNATCH - 1] = sSnatchDescription,
     [MOVE_SECRET_POWER - 1] = sSecretPowerDescription,
     [MOVE_DIVE - 1] = sDiveDescription,
-    [MOVE_ARM_THRUST - 1] = sArmThrustDescription,
+    [MOVE_FORCE_PALM - 1] = sForcePalmDescription,
     [MOVE_CAMOUFLAGE - 1] = sCamouflageDescription,
     [MOVE_TAIL_GLOW - 1] = sTailGlowDescription,
     [MOVE_LUSTER_PURGE - 1] = sLusterPurgeDescription,
