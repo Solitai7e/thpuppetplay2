@@ -2149,7 +2149,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_CKOAKUMA,
                                             .heldItem = ITEM_BRIGHT_POWDER,
-                                            .moves = {MOVE_FEATHER_DANCE, MOVE_AERIAL_ACE, MOVE_ATTRACT, MOVE_NONE},
+                                            .moves = {MOVE_ROOST, MOVE_AERIAL_ACE, MOVE_ATTRACT, MOVE_NONE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 85,

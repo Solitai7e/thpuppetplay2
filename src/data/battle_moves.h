@@ -4158,7 +4158,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_FEATHER_DANCE] =
+    [MOVE_ROOST] =
     {
         .effect = EFFECT_RESTORE_HP,
         .split = 0,

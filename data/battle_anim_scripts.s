@@ -313,7 +313,7 @@ gBattleAnims_Moves::
 	.4byte Move_MANA_CHARGE
 	.4byte Move_LUSTER_PURGE
 	.4byte Move_MIST_BALL
-	.4byte Move_FEATHER_DANCE
+	.4byte Move_ROOST
 	.4byte Move_TEETER_DANCE
 	.4byte Move_BLAZE_KICK
 	.4byte Move_MUD_SPORT
@@ -3965,7 +3965,7 @@ Move_MIST_BALL:
 	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 2, 16, 0, RGB_WHITE
 	end
 
-Move_FEATHER_DANCE:
+Move_ROOST:
 	loadspritegfx ANIM_TAG_WHITE_FEATHER
 	monbg ANIM_DEF_PARTNER
 	splitbgprio_all

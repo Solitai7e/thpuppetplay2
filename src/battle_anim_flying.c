@@ -551,7 +551,7 @@ void DestroyAnimSpriteAfterTimer(struct Sprite *sprite)
     }
 }
 
-struct FeatherDanceData
+struct RoostData
 {
     u16 unk0_0a:1;
     u16 unk0_0b:1;
@@ -574,7 +574,7 @@ static void AnimFallingFeather(struct Sprite *sprite)
     u8 battler, matrixNum, sinIndex;
     s16 spriteCoord;
 
-    struct FeatherDanceData *data = (struct FeatherDanceData *)sprite->data;
+    struct RoostData *data = (struct RoostData *)sprite->data;
 
     if (gBattleAnimArgs[7] & 0x100)
         battler = gBattleAnimAttacker;
@@ -648,7 +648,7 @@ static void AnimFallingFeather_Step(struct Sprite *sprite)
 {
     u8 matrixNum, sinIndex;
     s16 sinVal = 0;
-    struct FeatherDanceData *data = (struct FeatherDanceData *)sprite->data;
+    struct RoostData *data = (struct RoostData *)sprite->data;
     if (data->unk0_0a)
     {
         if (data->unk1-- % 256 == 0)

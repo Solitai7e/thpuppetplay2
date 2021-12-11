@@ -1185,7 +1185,7 @@ static const u8 sMistBallDescription[] = _(
     "Attacks with a flurry of\n"
     "down. May lower SP. ATK.");
 
-static const u8 sFeatherDanceDescription[] = _(
+static const u8 sRoostDescription[] = _(
     "Envelops the foe with down\n"
     "to sharply reduce ATTACK.");
 
@@ -1716,7 +1716,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MANA_CHARGE - 1] = sManaChargeDescription,
     [MOVE_LUSTER_PURGE - 1] = sLusterPurgeDescription,
     [MOVE_MIST_BALL - 1] = sMistBallDescription,
-    [MOVE_FEATHER_DANCE - 1] = sFeatherDanceDescription,
+    [MOVE_ROOST - 1] = sRoostDescription,
     [MOVE_TEETER_DANCE - 1] = sTeeterDanceDescription,
     [MOVE_BLAZE_KICK - 1] = sBlazeKickDescription,
     [MOVE_MUD_SPORT - 1] = sMudSportDescription,

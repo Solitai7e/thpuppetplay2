@@ -707,7 +707,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_MIRROR_MOVE,
             MOVE_QUICK_ATTACK,
             MOVE_AERIAL_ACE,
-            MOVE_FEATHER_DANCE
+            MOVE_ROOST
         },
         .cool = 10,
         .beauty = 8,

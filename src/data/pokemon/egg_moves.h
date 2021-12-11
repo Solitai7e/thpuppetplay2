@@ -254,7 +254,7 @@ const u16 gEggMoves[] = {
               MOVE_GUST,
               MOVE_QUICK_ATTACK,
               MOVE_FLAIL,
-              MOVE_FEATHER_DANCE,
+              MOVE_ROOST,
               MOVE_CURSE),
 
     egg_moves(CDAIYOUSEI,
@@ -543,7 +543,7 @@ const u16 gEggMoves[] = {
               MOVE_WING_ATTACK,
               MOVE_WHIRLWIND,
               MOVE_SKY_ATTACK,
-              MOVE_FEATHER_DANCE),
+              MOVE_ROOST),
 
     egg_moves(ELLEN,
               MOVE_PSYBEAM,
@@ -605,7 +605,7 @@ const u16 gEggMoves[] = {
               MOVE_FAINT_ATTACK,
               MOVE_STEEL_WING,
               MOVE_PSYCH_UP,
-              MOVE_FEATHER_DANCE,
+              MOVE_ROOST,
               MOVE_REFRESH),
 
     egg_moves(HAKUREI,
@@ -681,7 +681,7 @@ const u16 gEggMoves[] = {
               MOVE_WING_ATTACK,
               MOVE_SKY_ATTACK,
               MOVE_CONFUSE_RAY,
-              MOVE_FEATHER_DANCE,
+              MOVE_ROOST,
               MOVE_PERISH_SONG),
 
     egg_moves(CYUKI,
