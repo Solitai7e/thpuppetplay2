@@ -174,7 +174,7 @@ gBattleAnims_Moves::
 	.4byte Move_CHECKMAID
 	.4byte Move_REST
 	.4byte Move_ROCK_SLIDE
-	.4byte Move_HYPER_FANG
+	.4byte Move_KILLING_BITE
 	.4byte Move_SHARPEN
 	.4byte Move_CONVERSION
 	.4byte Move_TRI_ATTACK
@@ -7986,17 +7986,17 @@ Move_SLEEP_TALK:
 	waitforvisualfinish
 	end
 
-Move_HYPER_FANG:
+Move_KILLING_BITE:
 	loadspritegfx ANIM_TAG_FANG_ATTACK
 	playsewithpan SE_M_BITE, SOUND_PAN_TARGET
 	delay 1
 	delay 2
 	createvisualtask AnimTask_IsContest, 2
-	jumprettrue HyperFangInContest
+	jumprettrue KillingBiteInContest
 	createvisualtask AnimTask_IsTargetPlayerSide, 2
-	jumpretfalse HyperFangOnOpponent
-	goto HyperFangOnPlayer
-HyperFangContinue:
+	jumpretfalse KillingBiteOnOpponent
+	goto KillingBiteOnPlayer
+KillingBiteContinue:
 	waitbgfadeout
 	createsprite gFangSpriteTemplate, ANIM_TARGET, 2
 	waitbgfadein
@@ -8007,15 +8007,15 @@ HyperFangContinue:
 	waitbgfadein
 	waitforvisualfinish
 	end
-HyperFangOnOpponent:
+KillingBiteOnOpponent:
 	fadetobg BG_IMPACT_OPPONENT
-	goto HyperFangContinue
-HyperFangOnPlayer:
+	goto KillingBiteContinue
+KillingBiteOnPlayer:
 	fadetobg BG_IMPACT_PLAYER
-	goto HyperFangContinue
-HyperFangInContest:
+	goto KillingBiteContinue
+KillingBiteInContest:
 	fadetobg BG_IMPACT_CONTESTS
-	goto HyperFangContinue
+	goto KillingBiteContinue
 
 Move_TRI_ATTACK:
 	loadspritegfx ANIM_TAG_TRI_ATTACK_TRIANGLE

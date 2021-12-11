@@ -629,7 +629,7 @@ static const u8 sRockSlideDescription[] = _(
     "Large boulders are hurled.\n"
     "May cause flinching.");
 
-static const u8 sHyperFangDescription[] = _(
+static const u8 sKillingBiteDescription[] = _(
     "Attacks with sharp fangs.\n"
     "May cause flinching.");
 
@@ -1577,7 +1577,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_CHECKMAID - 1] = sCheckmaidDescription,
     [MOVE_REST - 1] = sRestDescription,
     [MOVE_ROCK_SLIDE - 1] = sRockSlideDescription,
-    [MOVE_HYPER_FANG - 1] = sHyperFangDescription,
+    [MOVE_KILLING_BITE - 1] = sKillingBiteDescription,
     [MOVE_SHARPEN - 1] = sSharpenDescription,
     [MOVE_CONVERSION - 1] = sConversionDescription,
     [MOVE_TRI_ATTACK - 1] = sTriAttackDescription,
