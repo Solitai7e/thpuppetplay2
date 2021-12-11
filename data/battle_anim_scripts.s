@@ -343,7 +343,7 @@ gBattleAnims_Moves::
 	.4byte Move_SIGNAL_BEAM
 	.4byte Move_SHADOW_PUNCH
 	.4byte Move_EXTRASENSORY
-	.4byte Move_SKY_UPPERCUT
+	.4byte Move_SOAR
 	.4byte Move_SAND_TOMB
 	.4byte Move_SHEER_COLD
 	.4byte Move_MUDDY_WATER
@@ -2966,7 +2966,7 @@ SkyAttackUnleash:
 	delay 4
 	createvisualtask AnimTask_AttackerFadeToInvisible, 5, 0
 	waitforvisualfinish
-	createvisualtask SoundTask_PlaySE2WithPanning, 5, SE_M_SKY_UPPERCUT, SOUND_PAN_ATTACKER
+	createvisualtask SoundTask_PlaySE2WithPanning, 5, SE_M_SOAR, SOUND_PAN_ATTACKER
 	createsprite gSkyAttackBirdSpriteTemplate, ANIM_TARGET, 2
 	delay 14
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 10, 0, 18, 1
@@ -9426,7 +9426,7 @@ Move_SEISMIC_TOSS:
 	fadetobg BG_IN_AIR
 	waitbgfadeout
 	createvisualtask AnimTask_MoveSeismicTossBg, 3
-	playsewithpan SE_M_SKY_UPPERCUT, 0
+	playsewithpan SE_M_SOAR, 0
 	waitbgfadein
 	waitforvisualfinish
 	createvisualtask AnimTask_SeismicTossBgAccelerateDownAtEnd, 3
@@ -9589,14 +9589,14 @@ Move_DOOM_DESIRE:
 	blendoff
 	end
 
-Move_SKY_UPPERCUT:
+Move_SOAR:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	splitbgprio ANIM_TARGET
 	fadetobg BG_IN_AIR
 	waitbgfadeout
-	playsewithpan SE_M_SKY_UPPERCUT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_MoveSkyUppercutBg, 5, 55
+	playsewithpan SE_M_SOAR, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_MoveSoarBg, 5, 55
 	waitbgfadein
 	setalpha 12, 8
 	delay 38

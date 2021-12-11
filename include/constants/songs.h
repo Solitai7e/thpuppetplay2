@@ -242,7 +242,7 @@
 #define SE_M_TWISTER                235 // SE_W239
 #define SE_M_SWEET_SCENT            236 // SE_W230
 #define SE_M_YAWN                   237 // SE_W281
-#define SE_M_SKY_UPPERCUT           238 // SE_W327
+#define SE_M_SOAR           238 // SE_W327
 #define SE_M_STAT_INCREASE          239 // SE_W287
 #define SE_M_HEAT_WAVE              240 // SE_W257
 #define SE_M_UPROAR                 241 // SE_W253

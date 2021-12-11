@@ -4578,9 +4578,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_SKY_UPPERCUT] =
+    [MOVE_SOAR] =
     {
-        .effect = EFFECT_SKY_UPPERCUT,
+        .effect = EFFECT_SOAR,
         .split = 0,
         .power = 90,
         .type = TYPE_FLYING,

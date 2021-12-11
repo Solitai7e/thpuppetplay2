@@ -224,7 +224,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectOverheat               @ EFFECT_OVERHEAT
 	.4byte BattleScript_EffectTickle                 @ EFFECT_TICKLE
 	.4byte BattleScript_EffectDracoMeteor            @ EFFECT_DRACO_METEOR
-	.4byte BattleScript_EffectSkyUppercut            @ EFFECT_SKY_UPPERCUT
+	.4byte BattleScript_EffectSoar            @ EFFECT_SOAR
 	.4byte BattleScript_EffectBulkUp                 @ EFFECT_BULK_UP
 	.4byte BattleScript_EffectPoisonHit              @ EFFECT_POISON_TAIL
 	.4byte BattleScript_EffectWaterSport             @ EFFECT_WATER_SPORT
@@ -2706,7 +2706,7 @@ BattleScript_DracoMeteorTrySpDef::
 BattleScript_DracoMeteorEnd::
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectSkyUppercut::
+BattleScript_EffectSoar::
 	orword gHitMarker, HITMARKER_IGNORE_ON_AIR
 	goto BattleScript_EffectHit
 

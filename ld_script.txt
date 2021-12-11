@@ -934,7 +934,7 @@ SECTIONS {
         sound/songs/se_m_twister.o(.rodata);
         sound/songs/se_m_sweet_scent.o(.rodata);
         sound/songs/se_m_yawn.o(.rodata);
-        sound/songs/se_m_sky_uppercut.o(.rodata);
+        sound/songs/se_m_soar.o(.rodata);
         sound/songs/se_m_stat_increase.o(.rodata);
         sound/songs/se_m_heat_wave.o(.rodata);
         sound/songs/se_m_uproar.o(.rodata);

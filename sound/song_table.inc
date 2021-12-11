@@ -239,7 +239,7 @@ gSongTable::
 	song se_m_twister, 2, 2
 	song se_m_sweet_scent, 1, 1
 	song se_m_yawn, 1, 1
-	song se_m_sky_uppercut, 2, 2
+	song se_m_soar, 2, 2
 	song se_m_stat_increase, 1, 1
 	song se_m_heat_wave, 1, 1
 	song se_m_uproar, 1, 1

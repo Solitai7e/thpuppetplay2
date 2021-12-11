@@ -1305,7 +1305,7 @@ static const u8 sExtrasensoryDescription[] = _(
     "Attacks with a peculiar\n"
     "power. May cause flinching.");
 
-static const u8 sSkyUppercutDescription[] = _(
+static const u8 sSoarDescription[] = _(
     "An uppercut thrown as if\n"
     "leaping into the sky.");
 
@@ -1746,7 +1746,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SIGNAL_BEAM - 1] = sSignalBeamDescription,
     [MOVE_SHADOW_PUNCH - 1] = sShadowPunchDescription,
     [MOVE_EXTRASENSORY - 1] = sExtrasensoryDescription,
-    [MOVE_SKY_UPPERCUT - 1] = sSkyUppercutDescription,
+    [MOVE_SOAR - 1] = sSoarDescription,
     [MOVE_SAND_TOMB - 1] = sSandTombDescription,
     [MOVE_SHEER_COLD - 1] = sSheerColdDescription,
     [MOVE_MUDDY_WATER - 1] = sMuddyWaterDescription,
