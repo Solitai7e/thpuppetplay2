@@ -677,7 +677,7 @@ static const u8 sSpiderWebDescription[] = _(
     "Ensnares the foe to stop it\n"
     "from fleeing or switching.");
 
-static const u8 sMindReaderDescription[] = _(
+static const u8 sHeartsEyeDescription[] = _(
     "Senses the foe's action to\n"
     "ensure the next move's hit.");
 
@@ -1589,7 +1589,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_TRIPLE_KICK - 1] = sTripleKickDescription,
     [MOVE_THIEF - 1] = sThiefDescription,
     [MOVE_SPIDER_WEB - 1] = sSpiderWebDescription,
-    [MOVE_MIND_READER - 1] = sMindReaderDescription,
+    [MOVE_HEARTS_EYE - 1] = sHeartsEyeDescription,
     [MOVE_NIGHTMARE - 1] = sNightmareDescription,
     [MOVE_FLAME_WHEEL - 1] = sFlameWheelDescription,
     [MOVE_SNORE - 1] = sSnoreDescription,

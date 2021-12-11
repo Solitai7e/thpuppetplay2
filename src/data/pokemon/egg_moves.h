@@ -187,7 +187,7 @@ const u16 gEggMoves[] = {
               MOVE_SPLASH,
               MOVE_BUBBLE_BEAM,
               MOVE_HAZE,
-              MOVE_MIND_READER,
+              MOVE_HEARTS_EYE,
               MOVE_WATER_SPORT,
               MOVE_ICE_BALL),
 
@@ -855,7 +855,7 @@ const u16 gEggMoves[] = {
               MOVE_RAPID_SPIN,
               MOVE_HI_JUMP_KICK,
               MOVE_MACH_PUNCH,
-              MOVE_MIND_READER,
+              MOVE_HEARTS_EYE,
               MOVE_HELPING_HAND),
 
     egg_moves(DKANAKO,
@@ -998,7 +998,7 @@ const u16 gEggMoves[] = {
               MOVE_MUD_SHOT,
               MOVE_PSYBEAM,
               MOVE_HYDRO_PUMP,
-              MOVE_MIND_READER),
+              MOVE_HEARTS_EYE),
 
     egg_moves(DMEILING,
               MOVE_DOUBLE_EDGE,

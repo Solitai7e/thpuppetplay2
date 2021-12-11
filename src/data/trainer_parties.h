@@ -8702,7 +8702,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Riley[] = {
     .iv = 0,
     .lvl = 28,
     .species = SPECIES_HSHIZUHA,
-    .moves = {MOVE_LEECH_LIFE, MOVE_FURY_SWIPES, MOVE_MIND_READER, MOVE_DIG}
+    .moves = {MOVE_LEECH_LIFE, MOVE_FURY_SWIPES, MOVE_HEARTS_EYE, MOVE_DIG}
     },
     {
     .iv = 0,

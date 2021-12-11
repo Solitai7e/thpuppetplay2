@@ -186,7 +186,7 @@ gBattleAnims_Moves::
 	.4byte Move_TRIPLE_KICK
 	.4byte Move_THIEF
 	.4byte Move_SPIDER_WEB
-	.4byte Move_MIND_READER
+	.4byte Move_HEARTS_EYE
 	.4byte Move_NIGHTMARE
 	.4byte Move_FLAME_WHEEL
 	.4byte Move_SNORE
@@ -4618,7 +4618,7 @@ BellyDrumRight:
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_ATTACKER, 0, 8, 2, 1
 	return
 
-Move_MIND_READER:
+Move_HEARTS_EYE:
 	loadspritegfx ANIM_TAG_TEAL_ALERT
 	loadspritegfx ANIM_TAG_OPENING_EYE
 	loadspritegfx ANIM_TAG_ROUND_WHITE_HALO
@@ -4629,12 +4629,12 @@ Move_MIND_READER:
 	delay 40
 	playsewithpan SE_M_LEER, SOUND_PAN_TARGET
 	createvisualtask AnimTask_BlendColorCycle, 2, 1, 1, 2, 0, 10, RGB_BLACK
-	call MindReaderEyeSpikeEffect
+	call HeartsEyeEyeSpikeEffect
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	end
 
-MindReaderEyeSpikeEffect:
+HeartsEyeEyeSpikeEffect:
 	createsprite gTealAlertSpriteTemplate, ANIM_ATTACKER, 4, 70, 0, 6
 	createsprite gTealAlertSpriteTemplate, ANIM_ATTACKER, 4, 40, 40, 6
 	createsprite gTealAlertSpriteTemplate, ANIM_ATTACKER, 4, 10, -60, 6

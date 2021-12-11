@@ -4130,7 +4130,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_CKANAKO,
                                             .heldItem = ITEM_FOCUS_BAND,
-                                            .moves = {MOVE_GIGA_IMPACT, MOVE_MIND_READER, MOVE_FOCUS_ENERGY, MOVE_HI_JUMP_KICK},
+                                            .moves = {MOVE_GIGA_IMPACT, MOVE_HEARTS_EYE, MOVE_FOCUS_ENERGY, MOVE_HI_JUMP_KICK},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 255,
@@ -5189,7 +5189,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_CSHINKI,
                                             .heldItem = ITEM_BRIGHT_POWDER,
-                                            .moves = {MOVE_HYDRO_PUMP, MOVE_BLIZZARD, MOVE_MIND_READER, MOVE_PERISH_SONG},
+                                            .moves = {MOVE_HYDRO_PUMP, MOVE_BLIZZARD, MOVE_HEARTS_EYE, MOVE_PERISH_SONG},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 252,

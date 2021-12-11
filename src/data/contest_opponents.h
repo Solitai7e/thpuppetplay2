@@ -371,7 +371,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_LEECH_LIFE,
             MOVE_FALSE_SWIPE,
             MOVE_FURY_SWIPES,
-            MOVE_MIND_READER
+            MOVE_HEARTS_EYE
         },
         .cool = 5,
         .beauty = 2,

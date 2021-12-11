@@ -39,7 +39,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_MIND_READER},
+        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_HEARTS_EYE},
     },
 
     [MOVE_PAY_DAY] =
@@ -198,7 +198,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_MIND_READER},
+        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_HEARTS_EYE},
     },
 
     [MOVE_JUMP_KICK] =
@@ -206,7 +206,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_MIND_READER},
+        .comboMoves = {COMBO_STARTER_HEARTS_EYE},
     },
 
     [MOVE_ROLLING_KICK] =
@@ -526,7 +526,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_MIND_READER},
+        .comboMoves = {COMBO_STARTER_HEARTS_EYE},
     },
 
     [MOVE_LOW_KICK] =
@@ -1086,7 +1086,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_MIND_READER},
+        .comboMoves = {COMBO_STARTER_HEARTS_EYE},
     },
 
     [MOVE_GLARE] =
@@ -1353,11 +1353,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_WIRE_WEB},
     },
 
-    [MOVE_MIND_READER] =
+    [MOVE_HEARTS_EYE] =
     {
         .effect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
         .contestCategory = CONTEST_CATEGORY_SMART,
-        .comboStarterId = COMBO_STARTER_MIND_READER,
+        .comboStarterId = COMBO_STARTER_HEARTS_EYE,
         .comboMoves = {0},
     },
 
@@ -1782,7 +1782,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_MIND_READER},
+        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_HEARTS_EYE},
     },
 
     [MOVE_MEGAHORN] =
