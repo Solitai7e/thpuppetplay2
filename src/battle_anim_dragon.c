@@ -43,7 +43,7 @@ const struct SpriteTemplate gOutrageFlameSpriteTemplate =
     .callback = AnimOutrageFlame,
 };
 
-static const union AnimCmd sAnim_DragonBreathFire_0[] =
+static const union AnimCmd sAnim_LavaPlumeFire_0[] =
 {
     ANIMCMD_FRAME(16, 3),
     ANIMCMD_FRAME(32, 3),
@@ -51,7 +51,7 @@ static const union AnimCmd sAnim_DragonBreathFire_0[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd sAnim_DragonBreathFire_1[] =
+static const union AnimCmd sAnim_LavaPlumeFire_1[] =
 {
     ANIMCMD_FRAME(16, 3, .vFlip = TRUE, .hFlip = TRUE),
     ANIMCMD_FRAME(32, 3, .vFlip = TRUE, .hFlip = TRUE),
@@ -59,40 +59,40 @@ static const union AnimCmd sAnim_DragonBreathFire_1[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd *const sAnims_DragonBreathFire[] =
+static const union AnimCmd *const sAnims_LavaPlumeFire[] =
 {
-    sAnim_DragonBreathFire_0,
-    sAnim_DragonBreathFire_1,
+    sAnim_LavaPlumeFire_0,
+    sAnim_LavaPlumeFire_1,
 };
 
-static const union AffineAnimCmd sAffineAnim_DragonBreathFire_0[] =
+static const union AffineAnimCmd sAffineAnim_LavaPlumeFire_0[] =
 {
     AFFINEANIMCMD_FRAME(0x50, 0x50, 127, 0),
     AFFINEANIMCMD_FRAME(0xD, 0xD, 0, 100),
     AFFINEANIMCMD_END,
 };
 
-static const union AffineAnimCmd sAffineAnim_DragonBreathFire_1[] =
+static const union AffineAnimCmd sAffineAnim_LavaPlumeFire_1[] =
 {
     AFFINEANIMCMD_FRAME(0x50, 0x50, 0, 0),
     AFFINEANIMCMD_FRAME(0xD, 0xD, 0, 100),
     AFFINEANIMCMD_END,
 };
 
-static const union AffineAnimCmd *const sAffineAnims_DragonBreathFire[] =
+static const union AffineAnimCmd *const sAffineAnims_LavaPlumeFire[] =
 {
-    sAffineAnim_DragonBreathFire_0,
-    sAffineAnim_DragonBreathFire_1,
+    sAffineAnim_LavaPlumeFire_0,
+    sAffineAnim_LavaPlumeFire_1,
 };
 
-const struct SpriteTemplate gDragonBreathFireSpriteTemplate =
+const struct SpriteTemplate gLavaPlumeFireSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SMALL_EMBER,
     .paletteTag = ANIM_TAG_SMALL_EMBER,
     .oam = &gOamData_AffineDouble_ObjNormal_32x32,
-    .anims = sAnims_DragonBreathFire,
+    .anims = sAnims_LavaPlumeFire,
     .images = NULL,
-    .affineAnims = sAffineAnims_DragonBreathFire,
+    .affineAnims = sAffineAnims_LavaPlumeFire,
     .callback = AnimDragonFireToTarget,
 };
 
@@ -257,7 +257,7 @@ static void AnimDarkPulseFirePlume(struct Sprite *sprite)
     StoreSpriteCallbackInData6(sprite, DestroySpriteAndMatrix);
 }
 
-// For Dragon Breath and Dark Pulse
+// For Lava Plume and Dark Pulse
 static void AnimDragonFireToTarget(struct Sprite *sprite)
 {
     if (GetBattlerSide(gBattleAnimAttacker) != B_SIDE_PLAYER)

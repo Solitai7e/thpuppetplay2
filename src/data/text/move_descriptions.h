@@ -897,7 +897,7 @@ static const u8 sBraveBirdDescription[] = _(
     "A brutal ramming attack\n"
     "using out-thrust horns.");
 
-static const u8 sDragonBreathDescription[] = _(
+static const u8 sLavaPlumeDescription[] = _(
     "Strikes the foe with an\n"
     "incredible blast of breath.");
 
@@ -1644,7 +1644,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MAGNITUDE - 1] = sMagnitudeDescription,
     [MOVE_DYNAMIC_PUNCH - 1] = sDynamicPunchDescription,
     [MOVE_BRAVE_BIRD - 1] = sBraveBirdDescription,
-    [MOVE_DRAGON_BREATH - 1] = sDragonBreathDescription,
+    [MOVE_LAVA_PLUME - 1] = sLavaPlumeDescription,
     [MOVE_BATON_PASS - 1] = sBatonPassDescription,
     [MOVE_ENCORE - 1] = sEncoreDescription,
     [MOVE_PURSUIT - 1] = sPursuitDescription,

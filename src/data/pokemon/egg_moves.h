@@ -403,7 +403,7 @@ const u16 gEggMoves[] = {
               MOVE_DISABLE,
               MOVE_SPLASH,
               MOVE_DARK_PULSE,
-              MOVE_DRAGON_BREATH),
+              MOVE_LAVA_PLUME),
 
     egg_moves(CSTARSAPPHIRE,
               MOVE_PSYBEAM,
@@ -477,7 +477,7 @@ const u16 gEggMoves[] = {
               MOVE_PURSUIT,
               MOVE_FORESIGHT,
               MOVE_STEEL_WING,
-              MOVE_DRAGON_BREATH,
+              MOVE_LAVA_PLUME,
               MOVE_CURSE),
 
     egg_moves(BYAKUREN,
@@ -493,7 +493,7 @@ const u16 gEggMoves[] = {
               MOVE_MIST,
               MOVE_HAZE,
               MOVE_JAMMING,
-              MOVE_DRAGON_BREATH,
+              MOVE_LAVA_PLUME,
               MOVE_DRAGON_DANCE),
 
     egg_moves(GENJII,
@@ -906,7 +906,7 @@ const u16 gEggMoves[] = {
               MOVE_MUD_SPORT,
               MOVE_ENDEAVOR,
               MOVE_LEECH_SEED,
-              MOVE_DRAGON_BREATH,
+              MOVE_LAVA_PLUME,
               MOVE_CRUSH_CLAW),
 
     egg_moves(AALICE,
@@ -1060,7 +1060,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(AREMILIA,
               MOVE_MIRROR_COAT,
-              MOVE_DRAGON_BREATH,
+              MOVE_LAVA_PLUME,
               MOVE_MUD_SPORT,
               MOVE_HYPNOSIS,
               MOVE_LIGHT_SCREEN,
