@@ -1135,7 +1135,7 @@ const u16 gEasyChatWordsByLetter_N[] = {
 
 const u16 gEasyChatWordsByLetter_O[] = {
     EC_WORD_OBLIVIOUS,
-    EC_MOVE(OCTAZOOKA),
+    EC_MOVE(BLACK_RIPPLE),
     EC_POKEMON_NATIONAL(TYUUKA),
     DOUBLE_SPECIES_NAME
     EC_POKEMON(CKEINE),

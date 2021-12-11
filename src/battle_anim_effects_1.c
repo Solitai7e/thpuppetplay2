@@ -1687,7 +1687,7 @@ const struct SpriteTemplate gSharpenSphereSpriteTemplate =
     .callback = AnimSharpenSphere,
 };
 
-const struct SpriteTemplate gOctazookaBallSpriteTemplate =
+const struct SpriteTemplate gBlackRippleBallSpriteTemplate =
 {
     .tileTag = ANIM_TAG_BLACK_BALL,
     .paletteTag = ANIM_TAG_BLACK_BALL,
@@ -1698,7 +1698,7 @@ const struct SpriteTemplate gOctazookaBallSpriteTemplate =
     .callback = TranslateAnimSpriteToTargetMonLocation,
 };
 
-const union AnimCmd gOctazookaAnimCmds[] =
+const union AnimCmd gBlackRippleAnimCmds[] =
 {
     ANIMCMD_FRAME(0, 3),
     ANIMCMD_FRAME(16, 3),
@@ -1708,17 +1708,17 @@ const union AnimCmd gOctazookaAnimCmds[] =
     ANIMCMD_END,
 };
 
-const union AnimCmd *const gOctazookaAnimTable[] =
+const union AnimCmd *const gBlackRippleAnimTable[] =
 {
-    gOctazookaAnimCmds,
+    gBlackRippleAnimCmds,
 };
 
-const struct SpriteTemplate gOctazookaSmokeSpriteTemplate =
+const struct SpriteTemplate gBlackRippleSmokeSpriteTemplate =
 {
     .tileTag = ANIM_TAG_GRAY_SMOKE,
     .paletteTag = ANIM_TAG_GRAY_SMOKE,
     .oam = &gOamData_AffineOff_ObjNormal_32x32,
-    .anims = gOctazookaAnimTable,
+    .anims = gBlackRippleAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimSpriteOnMonPos,

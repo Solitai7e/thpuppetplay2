@@ -206,7 +206,7 @@ gBattleAnims_Moves::
 	.4byte Move_BELLY_DRUM
 	.4byte Move_GUNK_SHOT
 	.4byte Move_MUD_SLAP
-	.4byte Move_OCTAZOOKA
+	.4byte Move_BLACK_RIPPLE
 	.4byte Move_SPIKES
 	.4byte Move_ZAP_CANNON
 	.4byte Move_FORESIGHT
@@ -6898,20 +6898,20 @@ Move_ANCIENT_POWER:
 	blendoff
 	end
 
-Move_OCTAZOOKA:
+Move_BLACK_RIPPLE:
 	loadspritegfx ANIM_TAG_GRAY_SMOKE
 	loadspritegfx ANIM_TAG_BLACK_BALL
 	playsewithpan SE_M_GIGA_IMPACT2, SOUND_PAN_ATTACKER
-	createsprite gOctazookaBallSpriteTemplate, ANIM_TARGET, 2, 20, 0, 0, 0, 20, 0
+	createsprite gBlackRippleBallSpriteTemplate, ANIM_TARGET, 2, 20, 0, 0, 0, 20, 0
 	waitforvisualfinish
 	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
-	createsprite gOctazookaSmokeSpriteTemplate, ANIM_TARGET, 2, 8, 8, 1, 0
+	createsprite gBlackRippleSmokeSpriteTemplate, ANIM_TARGET, 2, 8, 8, 1, 0
 	delay 2
-	createsprite gOctazookaSmokeSpriteTemplate, ANIM_TARGET, 2, -8, -8, 1, 0
+	createsprite gBlackRippleSmokeSpriteTemplate, ANIM_TARGET, 2, -8, -8, 1, 0
 	delay 2
-	createsprite gOctazookaSmokeSpriteTemplate, ANIM_TARGET, 2, 8, -8, 1, 0
+	createsprite gBlackRippleSmokeSpriteTemplate, ANIM_TARGET, 2, 8, -8, 1, 0
 	delay 2
-	createsprite gOctazookaSmokeSpriteTemplate, ANIM_TARGET, 2, -8, 8, 1, 0
+	createsprite gBlackRippleSmokeSpriteTemplate, ANIM_TARGET, 2, -8, 8, 1, 0
 	waitforvisualfinish
 	end
 

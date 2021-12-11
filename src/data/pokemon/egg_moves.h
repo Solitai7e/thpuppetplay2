@@ -399,7 +399,7 @@ const u16 gEggMoves[] = {
     egg_moves(CLUNACHILD,
               MOVE_FLAIL,
               MOVE_AURORA_BEAM,
-              MOVE_OCTAZOOKA,
+              MOVE_BLACK_RIPPLE,
               MOVE_DISABLE,
               MOVE_SPLASH,
               MOVE_DARK_PULSE,
@@ -795,7 +795,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(AYUUKA,
               MOVE_AURORA_BEAM,
-              MOVE_OCTAZOOKA,
+              MOVE_BLACK_RIPPLE,
               MOVE_JAMMING,
               MOVE_HAZE,
               MOVE_SCREECH,

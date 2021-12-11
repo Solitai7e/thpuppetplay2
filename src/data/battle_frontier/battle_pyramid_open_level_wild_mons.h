@@ -732,7 +732,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round15[] =
         .species = SPECIES_TYUUKA,
         .lvl = 10,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_OCTAZOOKA, MOVE_ICE_BEAM, MOVE_FIRE_BLAST, MOVE_NONE}
+        .moves = {MOVE_BLACK_RIPPLE, MOVE_ICE_BEAM, MOVE_FIRE_BLAST, MOVE_NONE}
     },
     {
         .species = SPECIES_NITORI,

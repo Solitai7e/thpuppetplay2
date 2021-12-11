@@ -1526,7 +1526,7 @@ const struct BardSound gBardSounds_Moves[MOVES_COUNT][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND
     },
-    [MOVE_OCTAZOOKA] = {
+    [MOVE_BLACK_RIPPLE] = {
         { 0x1b, 0x0, 0x0, 0x0, 0x0},
         { 0x2c, 0x0, 0x0, 0x0, 0x0},
         { 0x28, 0x0, 0x0, 0x0, 0x0},

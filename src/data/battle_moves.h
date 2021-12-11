@@ -2660,7 +2660,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_OCTAZOOKA] =
+    [MOVE_BLACK_RIPPLE] =
     {
         .effect = EFFECT_PARALYZE_HIT,
         .split = 0,
