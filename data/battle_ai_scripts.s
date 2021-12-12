@@ -202,7 +202,7 @@ AI_CheckBadMove_CheckEffect:
 	if_effect EFFECT_IMPRISON, AI_CBM_Imprison
 	if_effect EFFECT_REFRESH, AI_CBM_Refresh
 	if_effect EFFECT_LOW_KICK, AI_CBM_HighRiskForDamage
-	if_effect EFFECT_MUD_SPORT, AI_CBM_MudSport
+	if_effect EFFECT_MUD_SLAP, AI_CBM_MudSlap
 	if_effect EFFECT_TICKLE, AI_CBM_Tickle
 	if_effect EFFECT_DRACO_METEOR, AI_CBM_DracoMeteor
 	if_effect EFFECT_BULK_UP, AI_CBM_BulkUp
@@ -562,8 +562,8 @@ AI_CBM_Refresh:
 	if_not_status AI_USER, STATUS1_POISON | STATUS1_BURN | STATUS1_PARALYSIS | STATUS1_TOXIC_POISON, Score_Minus10
 	end
 
-AI_CBM_MudSport:
-	if_status3 AI_USER, STATUS3_MUDSPORT, Score_Minus10
+AI_CBM_MudSlap:
+	if_status3 AI_USER, STATUS3_MUDSLAP, Score_Minus10
 	end
 
 AI_CBM_Tickle:
@@ -762,7 +762,7 @@ AI_CheckViability:
 	if_effect EFFECT_REFRESH, AI_CV_Refresh
 	if_effect EFFECT_SNATCH, AI_CV_Snatch
 	if_effect EFFECT_BLAZE_KICK, AI_CV_HighCrit
-	if_effect EFFECT_MUD_SPORT, AI_CV_MudSport
+	if_effect EFFECT_MUD_SLAP, AI_CV_MudSlap
 	if_effect EFFECT_OVERHEAT, AI_CV_Overheat
 	if_effect EFFECT_TICKLE, AI_CV_DefenseDown
 	if_effect EFFECT_DRACO_METEOR, AI_CV_SpDefUp
@@ -1743,7 +1743,7 @@ AI_CV_Encore_EncouragedMovesToEncore:
     .byte EFFECT_REFRESH
     .byte EFFECT_GRUDGE
     .byte EFFECT_TEETER_DANCE
-    .byte EFFECT_MUD_SPORT
+    .byte EFFECT_MUD_SLAP
     .byte EFFECT_SPLASHING
     .byte EFFECT_TAILWIND
     .byte EFFECT_CAMOUFLAGE
@@ -2525,21 +2525,21 @@ AI_CV_Snatch5:
 AI_CV_Snatch_End:
 	end
 
-AI_CV_MudSport:
-	if_hp_less_than AI_USER, 50, AI_CV_MudSport_ScoreDown1
+AI_CV_MudSlap:
+	if_hp_less_than AI_USER, 50, AI_CV_MudSlap_ScoreDown1
 	get_target_type1
-	if_equal TYPE_WIND, AI_CV_MudSport2
+	if_equal TYPE_WIND, AI_CV_MudSlap2
 	get_target_type2
-	if_equal TYPE_WIND, AI_CV_MudSport2
-	goto AI_CV_MudSport_ScoreDown1
+	if_equal TYPE_WIND, AI_CV_MudSlap2
+	goto AI_CV_MudSlap_ScoreDown1
 
-AI_CV_MudSport2:
+AI_CV_MudSlap2:
 	score +1
-	goto AI_CV_MudSport_End
+	goto AI_CV_MudSlap_End
 
-AI_CV_MudSport_ScoreDown1:
+AI_CV_MudSlap_ScoreDown1:
 	score -1
-AI_CV_MudSport_End:
+AI_CV_MudSlap_End:
 	end
 
 AI_CV_Overheat:

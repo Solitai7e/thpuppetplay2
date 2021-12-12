@@ -1542,7 +1542,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_WITHDRAW] =
     {
-        .effect = EFFECT_MUD_SPORT,
+        .effect = EFFECT_MUD_SLAP,
         .split = 0,
         .power = 0,
         .type = TYPE_DARK,
@@ -1794,7 +1794,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_CLAMP] =
     {
-        .effect = EFFECT_MUD_SPORT,
+        .effect = EFFECT_MUD_SLAP,
         .split = 0,
         .power = 0,
         .type = TYPE_REASON,
@@ -4200,7 +4200,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
 
-    [MOVE_MUD_SPORT] =
+    [MOVE_MUD_SLAP] =
     {
         .effect = EFFECT_ACCURACY_DOWN_HIT,
         .split = 0,

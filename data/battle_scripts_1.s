@@ -218,7 +218,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectDoubleEdge             @ EFFECT_DOUBLE_EDGE
 	.4byte BattleScript_EffectTeeterDance            @ EFFECT_TEETER_DANCE
 	.4byte BattleScript_EffectBurnHit                @ EFFECT_BLAZE_KICK
-	.4byte BattleScript_EffectMudSport               @ EFFECT_MUD_SPORT
+	.4byte BattleScript_EffectMudSlap               @ EFFECT_MUD_SLAP
 	.4byte BattleScript_EffectCrossPoison             @ EFFECT_CROSS_POISON
 	.4byte BattleScript_EffectWeatherBall            @ EFFECT_WEATHER_BALL
 	.4byte BattleScript_EffectOverheat               @ EFFECT_OVERHEAT
@@ -2622,7 +2622,7 @@ BattleScript_TeeterDanceMissed::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_TeeterDanceDoMoveEndIncrement
 
-BattleScript_EffectMudSport::
+BattleScript_EffectMudSlap::
 BattleScript_EffectSplashing::
 	attackcanceler
 	attackstring

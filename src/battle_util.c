@@ -3051,10 +3051,10 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
         case ABILITYEFFECT_FIELD_SPORT: // 14
             switch (gLastUsedAbility)
             {
-            case ABILITYEFFECT_MUD_SPORT:
+            case ABILITYEFFECT_MUD_SLAP:
                 for (i = 0; i < gBattlersCount; i++)
                 {
-                    if (gStatuses3[i] & STATUS3_MUDSPORT)
+                    if (gStatuses3[i] & STATUS3_MUDSLAP)
                         effect = i + 1;
                 }
                 break;

@@ -1197,7 +1197,7 @@ static const u8 sBlazeKickDescription[] = _(
     "A kick with a high critical-\n"
     "hit ratio. May cause a burn.");
 
-static const u8 sMudSportDescription[] = _(
+static const u8 sMudSlapDescription[] = _(
     "Covers the user in mud to\n"
     "raise electrical resistance.");
 
@@ -1719,7 +1719,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_ROOST - 1] = sRoostDescription,
     [MOVE_TEETER_DANCE - 1] = sTeeterDanceDescription,
     [MOVE_BLAZE_KICK - 1] = sBlazeKickDescription,
-    [MOVE_MUD_SPORT - 1] = sMudSportDescription,
+    [MOVE_MUD_SLAP - 1] = sMudSlapDescription,
     [MOVE_ICE_BALL - 1] = sIceBallDescription,
     [MOVE_NEEDLE_ARM - 1] = sNeedleArmDescription,
     [MOVE_SLACK_OFF - 1] = sSlackOffDescription,

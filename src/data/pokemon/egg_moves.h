@@ -30,7 +30,7 @@ const u16 gEggMoves[] = {
               MOVE_FORESIGHT,
               MOVE_FLAIL,
               MOVE_REFRESH,
-              MOVE_MUD_SPORT,
+              MOVE_MUD_SLAP,
               MOVE_YAWN),
 
     egg_moves(MEDICINE,
@@ -243,7 +243,7 @@ const u16 gEggMoves[] = {
               MOVE_BELLY_DRUM,
               MOVE_PSYCHO_CUT,
               MOVE_STOMP,
-              MOVE_MUD_SPORT,
+              MOVE_MUD_SLAP,
               MOVE_SLEEP_TALK,
               MOVE_SNORE),
 
@@ -410,7 +410,7 @@ const u16 gEggMoves[] = {
               MOVE_HAZE,
               MOVE_HYDRO_PUMP,
               MOVE_SLEEP_TALK,
-              MOVE_MUD_SPORT),
+              MOVE_MUD_SLAP),
 
     egg_moves(CAYA,
               MOVE_PSYCHO_CUT,
@@ -522,7 +522,7 @@ const u16 gEggMoves[] = {
               MOVE_HYDRO_PUMP,
               MOVE_ANCIENT_POWER,
               MOVE_ROCK_WRECKER,
-              MOVE_MUD_SPORT,
+              MOVE_MUD_SLAP,
               MOVE_SPLASHING,
               MOVE_HEART_BREAK),
 
@@ -669,7 +669,7 @@ const u16 gEggMoves[] = {
               MOVE_ANCIENT_POWER,
               MOVE_SAFEGUARD,
               MOVE_CURSE,
-              MOVE_MUD_SPORT,
+              MOVE_MUD_SLAP,
               MOVE_STOCKPILE,
               MOVE_SWALLOW,
               MOVE_MIRROR_SHOT),
@@ -815,7 +815,7 @@ const u16 gEggMoves[] = {
               MOVE_HYDRO_PUMP,
               MOVE_HAZE,
               MOVE_SLAM,
-              MOVE_MUD_SPORT,
+              MOVE_MUD_SLAP,
               MOVE_ROCK_WRECKER),
 
     egg_moves(ATENSHI,
@@ -903,7 +903,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(HEIRIN,
               MOVE_CRUNCH,
-              MOVE_MUD_SPORT,
+              MOVE_MUD_SLAP,
               MOVE_ENDEAVOR,
               MOVE_LEECH_SEED,
               MOVE_LAVA_PLUME,
@@ -1050,10 +1050,10 @@ const u16 gEggMoves[] = {
               MOVE_SPLASH,
               MOVE_JAMMING,
               MOVE_SPLASHING,
-              MOVE_MUD_SPORT),
+              MOVE_MUD_SLAP),
 
     egg_moves(DLAYLA,
-              MOVE_MUD_SPORT,
+              MOVE_MUD_SLAP,
               MOVE_ENDEAVOR,
               MOVE_BODY_SLAM,
               MOVE_ANCIENT_POWER),
@@ -1061,7 +1061,7 @@ const u16 gEggMoves[] = {
     egg_moves(AREMILIA,
               MOVE_MIRROR_COAT,
               MOVE_LAVA_PLUME,
-              MOVE_MUD_SPORT,
+              MOVE_MUD_SLAP,
               MOVE_HYPNOSIS,
               MOVE_LIGHT_SCREEN,
               MOVE_CONFUSE_RAY),
@@ -1211,7 +1211,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(AMURASA,
               MOVE_REFRESH,
-              MOVE_MUD_SPORT,
+              MOVE_MUD_SLAP,
               MOVE_BODY_SLAM,
               MOVE_JAMMING,
               MOVE_BARRIER,

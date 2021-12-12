@@ -115,7 +115,7 @@ const u16 gEasyChatGroup_Move2[] = {
     MOVE_MIST_BALL,
     MOVE_LUNATIC,
     MOVE_EARTH_POWER,
-    MOVE_MUD_SPORT,
+    MOVE_MUD_SLAP,
     MOVE_MUD_SHOT,
     MOVE_MUDDY_WATER,
     MOVE_NEEDLE_ARM,

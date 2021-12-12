@@ -9599,11 +9599,11 @@ static void Cmd_settypebasedhalvers(void) // water and mud sport
 {
     bool8 worked = FALSE;
 
-    if (gBattleMoves[gCurrentMove].effect == EFFECT_MUD_SPORT)
+    if (gBattleMoves[gCurrentMove].effect == EFFECT_MUD_SLAP)
     {
-        if (!(gStatuses3[gBattlerAttacker] & STATUS3_MUDSPORT))
+        if (!(gStatuses3[gBattlerAttacker] & STATUS3_MUDSLAP))
         {
-            gStatuses3[gBattlerAttacker] |= STATUS3_MUDSPORT;
+            gStatuses3[gBattlerAttacker] |= STATUS3_MUDSLAP;
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_WEAKEN_ELECTRIC;
             worked = TRUE;
         }

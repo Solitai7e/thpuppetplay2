@@ -29,7 +29,7 @@
 #define ABILITYEFFECT_COUNT_BATTLER_SIDE         17
 #define ABILITYEFFECT_COUNT_ON_FIELD             18
 #define ABILITYEFFECT_CHECK_ON_FIELD             19
-#define ABILITYEFFECT_MUD_SPORT                  253
+#define ABILITYEFFECT_MUD_SLAP                  253
 #define ABILITYEFFECT_SPLASHING                254
 #define ABILITYEFFECT_SWITCH_IN_WEATHER          255
 

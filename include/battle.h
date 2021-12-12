@@ -301,8 +301,8 @@ struct BattleTv_Position
     u32 confusionMoveSlot:2;
     u32 splashingMoveSlot:2;
     u32 splashingMonId:3;
-    u32 mudSportMonId:3;
-    u32 mudSportMoveSlot:2;
+    u32 mudSlapMonId:3;
+    u32 mudSlapMoveSlot:2;
     u32 ingrainMonId:3;
     u32 ingrainMoveSlot:2;
     u32 attackedByMonId:3;
