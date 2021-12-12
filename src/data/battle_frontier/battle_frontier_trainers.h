@@ -1043,7 +1043,7 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
     [FRONTIER_TRAINER_GRIFFEN] = {
         .facilityClass = FACILITY_CLASS_POKEMANIAC,
         .trainerName = _("GRIFFEN"),
-        .speechBefore = {EC_WORD_I, EC_MOVE2(SWALLOW), EC_MOVE2(SLUDGE), EC_WORD_TO, EC_MOVE2(TRANSFORM), EC_WORD_MYSELF},
+        .speechBefore = {EC_WORD_I, EC_MOVE2(SWALLOW), EC_MOVE2(POISON_BOMB), EC_WORD_TO, EC_MOVE2(TRANSFORM), EC_WORD_MYSELF},
         .speechWin = {EC_WORD_I, EC_WORD_HAVE, EC_WORD_A, EC_MOVE(GROWTH), EC_WORD_OF, EC_MOVE2(DISPERSE)},
         .speechLose = {EC_WORD_I, EC_WORD_HAVE, EC_WORD_A, EC_MOVE(GROWTH), EC_WORD_OF, EC_WORD_SUCTION_CUPS},
         .monSet = gBattleFrontierTrainerMons_Griffen

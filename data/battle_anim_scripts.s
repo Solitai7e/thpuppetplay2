@@ -140,7 +140,7 @@ gBattleAnims_Moves::
 	.4byte Move_MIND_BOMB
 	.4byte Move_LICK
 	.4byte Move_SMOG
-	.4byte Move_SLUDGE
+	.4byte Move_POISON_BOMB
 	.4byte Move_BONE_CLUB
 	.4byte Move_FIRE_BLAST
 	.4byte Move_WATERFALL
@@ -5941,10 +5941,10 @@ ToxicBubbles:
 	delay 15
 	return
 
-Move_SLUDGE:
+Move_POISON_BOMB:
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
-	createsprite gSludgeProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 0
+	createsprite gPoisonBombProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 0
 	waitforvisualfinish
 	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 3, 0, 5, 1
 	createvisualtask AnimTask_BlendColorCycle, 2, 4, 1, 2, 0, 12, RGB(30, 0, 31)
@@ -5991,7 +5991,7 @@ Move_GUNK_SHOT:
 	end
 GunkShotProjectile:
 	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
-	createsprite gSludgeProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 0
+	createsprite gPoisonBombProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 0
 	delay 3
 	return
 

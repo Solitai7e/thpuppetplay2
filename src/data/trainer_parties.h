@@ -4265,7 +4265,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Ben[] = {
     .iv = 150,
     .lvl = 17,
     .species = SPECIES_CKIKURI,
-    .moves = {MOVE_AMNESIA, MOVE_SLUDGE, MOVE_YAWN, MOVE_POUND}
+    .moves = {MOVE_AMNESIA, MOVE_POISON_BOMB, MOVE_YAWN, MOVE_POUND}
     }
 };
 
@@ -5460,7 +5460,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Lao1[] = {
     .iv = 0,
     .lvl = 17,
     .species = SPECIES_RIN,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_SLUDGE, MOVE_SELF_DESTRUCT}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_SELF_DESTRUCT}
     }
 };
 
@@ -5482,25 +5482,25 @@ static const struct TrainerMonNoItemCustomMoves sParty_Lao2[] = {
     .iv = 0,
     .lvl = 24,
     .species = SPECIES_RIN,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_SLUDGE, MOVE_SELF_DESTRUCT}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_SELF_DESTRUCT}
     },
     {
     .iv = 0,
     .lvl = 24,
     .species = SPECIES_RIN,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_SLUDGE, MOVE_NONE}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_NONE}
     },
     {
     .iv = 0,
     .lvl = 24,
     .species = SPECIES_RIN,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_SLUDGE, MOVE_SELF_DESTRUCT}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_SELF_DESTRUCT}
     },
     {
     .iv = 0,
     .lvl = 26,
     .species = SPECIES_RIN,
-    .moves = {MOVE_TACKLE, MOVE_SLUDGE, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -5509,25 +5509,25 @@ static const struct TrainerMonNoItemCustomMoves sParty_Lao3[] = {
     .iv = 20,
     .lvl = 27,
     .species = SPECIES_RIN,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_SLUDGE, MOVE_SELF_DESTRUCT}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_SELF_DESTRUCT}
     },
     {
     .iv = 20,
     .lvl = 27,
     .species = SPECIES_RIN,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_SLUDGE, MOVE_SELF_DESTRUCT}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_SELF_DESTRUCT}
     },
     {
     .iv = 20,
     .lvl = 27,
     .species = SPECIES_RIN,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_SLUDGE, MOVE_NONE}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_NONE}
     },
     {
     .iv = 20,
     .lvl = 29,
     .species = SPECIES_RIN,
-    .moves = {MOVE_TACKLE, MOVE_SLUDGE, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -5536,25 +5536,25 @@ static const struct TrainerMonNoItemCustomMoves sParty_Lao4[] = {
     .iv = 30,
     .lvl = 30,
     .species = SPECIES_RIN,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_SLUDGE, MOVE_NONE}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_NONE}
     },
     {
     .iv = 30,
     .lvl = 30,
     .species = SPECIES_RIN,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_SLUDGE, MOVE_NONE}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_NONE}
     },
     {
     .iv = 30,
     .lvl = 30,
     .species = SPECIES_RIN,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_SLUDGE, MOVE_NONE}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_NONE}
     },
     {
     .iv = 30,
     .lvl = 32,
     .species = SPECIES_RIN,
-    .moves = {MOVE_TACKLE, MOVE_SLUDGE, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -5564,28 +5564,28 @@ static const struct TrainerMonItemCustomMoves sParty_Lao5[] = {
     .lvl = 33,
     .species = SPECIES_RIN,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_SLUDGE, MOVE_NONE}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_NONE}
     },
     {
     .iv = 40,
     .lvl = 33,
     .species = SPECIES_RIN,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_SLUDGE, MOVE_SELF_DESTRUCT}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_SELF_DESTRUCT}
     },
     {
     .iv = 40,
     .lvl = 33,
     .species = SPECIES_RIN,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_SLUDGE, MOVE_SELF_DESTRUCT}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_SELF_DESTRUCT}
     },
     {
     .iv = 40,
     .lvl = 35,
     .species = SPECIES_CUTSUHO,
     .heldItem = ITEM_SMOKE_BALL,
-    .moves = {MOVE_TACKLE, MOVE_SLUDGE, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_TACKLE, MOVE_POISON_BOMB, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -8672,13 +8672,13 @@ static const struct TrainerMonNoItemCustomMoves sParty_Hideo[] = {
     .iv = 0,
     .lvl = 25,
     .species = SPECIES_RIN,
-    .moves = {MOVE_TACKLE, MOVE_SELF_DESTRUCT, MOVE_SLUDGE, MOVE_SMOKESCREEN}
+    .moves = {MOVE_TACKLE, MOVE_SELF_DESTRUCT, MOVE_POISON_BOMB, MOVE_SMOKESCREEN}
     },
     {
     .iv = 0,
     .lvl = 25,
     .species = SPECIES_RIN,
-    .moves = {MOVE_TACKLE, MOVE_OMINOUS_WIND, MOVE_SLUDGE, MOVE_SMOKESCREEN}
+    .moves = {MOVE_TACKLE, MOVE_OMINOUS_WIND, MOVE_POISON_BOMB, MOVE_SMOKESCREEN}
     }
 };
 
@@ -8687,7 +8687,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Keigo[] = {
     .iv = 0,
     .lvl = 28,
     .species = SPECIES_RIN,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_SELF_DESTRUCT, MOVE_SLUDGE, MOVE_SMOKESCREEN}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_SELF_DESTRUCT, MOVE_POISON_BOMB, MOVE_SMOKESCREEN}
     },
     {
     .iv = 0,
@@ -8708,7 +8708,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Riley[] = {
     .iv = 0,
     .lvl = 28,
     .species = SPECIES_RIN,
-    .moves = {MOVE_TACKLE, MOVE_SELF_DESTRUCT, MOVE_SLUDGE, MOVE_SMOKESCREEN}
+    .moves = {MOVE_TACKLE, MOVE_SELF_DESTRUCT, MOVE_POISON_BOMB, MOVE_SMOKESCREEN}
     }
 };
 

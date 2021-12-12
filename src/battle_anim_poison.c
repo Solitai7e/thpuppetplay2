@@ -3,8 +3,8 @@
 #include "trig.h"
 #include "constants/rgb.h"
 
-static void AnimSludgeProjectile(struct Sprite *);
-static void AnimSludgeProjectile_Step(struct Sprite *);
+static void AnimPoisonBombProjectile(struct Sprite *);
+static void AnimPoisonBombProjectile_Step(struct Sprite *);
 static void AnimAcidPoisonBubble(struct Sprite *);
 static void AnimAcidPoisonBubble_Step(struct Sprite *);
 static void AnimGunkShotHitParticle(struct Sprite *);
@@ -95,7 +95,7 @@ static const union AffineAnimCmd *const sAffineAnims_GunkShotHit[] =
     sAffineAnim_GunkShotHit,
 };
 
-const struct SpriteTemplate gSludgeProjectileSpriteTemplate =
+const struct SpriteTemplate gPoisonBombProjectileSpriteTemplate =
 {
     .tileTag = ANIM_TAG_POISON_BUBBLE,
     .paletteTag = ANIM_TAG_POISON_BUBBLE,
@@ -103,7 +103,7 @@ const struct SpriteTemplate gSludgeProjectileSpriteTemplate =
     .anims = sAnims_PoisonProjectile,
     .images = NULL,
     .affineAnims = sAffineAnims_PoisonProjectile,
-    .callback = AnimSludgeProjectile,
+    .callback = AnimPoisonBombProjectile,
 };
 
 const struct SpriteTemplate gAcidPoisonBubbleSpriteTemplate =
@@ -185,7 +185,7 @@ const struct SpriteTemplate gWaterBubbleSpriteTemplate =
     .callback = AnimBubbleEffect,
 };
 
-static void AnimSludgeProjectile(struct Sprite *sprite)
+static void AnimPoisonBombProjectile(struct Sprite *sprite)
 {
     if (!gBattleAnimArgs[3])
         StartSpriteAnim(sprite, 2);
@@ -199,10 +199,10 @@ static void AnimSludgeProjectile(struct Sprite *sprite)
 
     InitAnimArcTranslation(sprite);
 
-    sprite->callback = AnimSludgeProjectile_Step;
+    sprite->callback = AnimPoisonBombProjectile_Step;
 }
 
-static void AnimSludgeProjectile_Step(struct Sprite *sprite)
+static void AnimPoisonBombProjectile_Step(struct Sprite *sprite)
 {
     if (TranslateAnimHorizontalArc(sprite))
         DestroyAnimSprite(sprite);

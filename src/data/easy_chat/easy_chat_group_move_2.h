@@ -153,7 +153,7 @@ const u16 gEasyChatGroup_Move2[] = {
     MOVE_SLAM,
     MOVE_SLEEP_POWDER,
     MOVE_SLEEP_TALK,
-    MOVE_SLUDGE,
+    MOVE_POISON_BOMB,
     MOVE_GUNK_SHOT,
     MOVE_SNATCH,
     MOVE_SOFT_BOILED,

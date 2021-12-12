@@ -1736,7 +1736,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED,
     },
 
-    [MOVE_SLUDGE] =
+    [MOVE_POISON_BOMB] =
     {
         .effect = EFFECT_POISON_HIT,
         .split = 0,

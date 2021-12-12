@@ -772,7 +772,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_CHINA] = {
         .species = SPECIES_CHINA,
-        .moves = {MOVE_SLUDGE, MOVE_ROCK_TOMB, MOVE_DISPERSE, MOVE_MINIMIZE},
+        .moves = {MOVE_POISON_BOMB, MOVE_ROCK_TOMB, MOVE_DISPERSE, MOVE_MINIMIZE},
         .itemTableId = BATTLE_FRONTIER_ITEM_PECHA_BERRY,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE | F_EV_SPREAD_HP,
         .nature = NATURE_QUIRKY
@@ -891,7 +891,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_RIN] = {
         .species = SPECIES_RIN,
-        .moves = {MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_TORMENT, MOVE_HAZE},
+        .moves = {MOVE_POISON_BOMB, MOVE_SMOKESCREEN, MOVE_TORMENT, MOVE_HAZE},
         .itemTableId = BATTLE_FRONTIER_ITEM_POISON_BARB,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_QUIRKY
@@ -1738,7 +1738,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_ADMEILING_1] = {
         .species = SPECIES_ADMEILING,
-        .moves = {MOVE_STOCKPILE, MOVE_SWALLOW, MOVE_MIRROR_SHOT, MOVE_SLUDGE},
+        .moves = {MOVE_STOCKPILE, MOVE_SWALLOW, MOVE_MIRROR_SHOT, MOVE_POISON_BOMB},
         .itemTableId = BATTLE_FRONTIER_ITEM_LAX_INCENSE,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE,
         .nature = NATURE_QUIRKY

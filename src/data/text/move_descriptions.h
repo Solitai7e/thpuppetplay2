@@ -493,8 +493,8 @@ static const u8 sSmogDescription[] = _(
     "An exhaust-gas attack\n"
     "that may also poison.");
 
-static const u8 sSludgeDescription[] = _(
-    "Sludge is hurled to inflict\n"
+static const u8 sPoisonBombDescription[] = _(
+    "Poison Bomb is hurled to inflict\n"
     "damage. May also poison.");
 
 static const u8 sBoneClubDescription[] = _(
@@ -750,7 +750,7 @@ static const u8 sBellyDrumDescription[] = _(
     "sacrificing HP.");
 
 static const u8 sGunkShotDescription[] = _(
-    "Sludge is hurled to inflict\n"
+    "Poison Bomb is hurled to inflict\n"
     "damage. May also poison.");
 
 static const u8 sMudShotDescription[] = _(
@@ -1543,7 +1543,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MIND_BOMB - 1] = sMindBombDescription,
     [MOVE_LICK - 1] = sLickDescription,
     [MOVE_SMOG - 1] = sSmogDescription,
-    [MOVE_SLUDGE - 1] = sSludgeDescription,
+    [MOVE_POISON_BOMB - 1] = sPoisonBombDescription,
     [MOVE_BONE_CLUB - 1] = sBoneClubDescription,
     [MOVE_FIRE_BLAST - 1] = sFireBlastDescription,
     [MOVE_WATERFALL - 1] = sWaterfallDescription,
