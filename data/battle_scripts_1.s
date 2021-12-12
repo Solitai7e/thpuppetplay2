@@ -26,7 +26,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectParalyzeHit            @ EFFECT_PARALYZE_HIT
 	.4byte BattleScript_EffectExplosion              @ EFFECT_EXPLOSION
 	.4byte BattleScript_EffectDreamEater             @ EFFECT_DREAM_EATER
-	.4byte BattleScript_EffectMirrorMove             @ EFFECT_MIRROR_MOVE
+	.4byte BattleScript_EffectFalseSwipe             @ EFFECT_FALSE_SWIPE
 	.4byte BattleScript_EffectAttackUp               @ EFFECT_ATTACK_UP
 	.4byte BattleScript_EffectDefenseUp              @ EFFECT_DEFENSE_UP
 	.4byte BattleScript_EffectHit                    @ EFFECT_SPEED_UP
@@ -459,14 +459,14 @@ BattleScript_DreamEaterTryFaintEnd:
 	tryfaintmon BS_TARGET
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectMirrorMove::
+BattleScript_EffectFalseSwipe::
 	attackcanceler
 	attackstring
 	pause B_WAIT_TIME_LONG
-	trymirrormove
+	tryfalseswipe
 	ppreduce
 	orbyte gMoveResultFlags, MOVE_RESULT_FAILED
-	printstring STRINGID_MIRRORMOVEFAILED
+	printstring STRINGID_FALSESWIPEFAILED
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
@@ -3114,7 +3114,7 @@ BattleScript_DoSwitchOut::
 	waitstate
 	switchineffects BS_ATTACKER
 	moveendcase MOVEEND_IMMUNITY_ABILITIES
-	moveendcase MOVEEND_MIRROR_MOVE
+	moveendcase MOVEEND_FALSE_SWIPE
 	end2
 
 BattleScript_PursuitDmgOnSwitchOut::

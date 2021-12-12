@@ -958,7 +958,7 @@ const struct BardSound gBardSounds_Moves[MOVES_COUNT][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND
     },
-    [MOVE_MIRROR_MOVE] = {
+    [MOVE_FALSE_SWIPE] = {
         { 0xc, 0x0, 0x0, 0x0, 0x0},
         { 0x32, 0x0, 0x0, 0x0, 0x0},
         { 0x29, 0x0, 0x0, 0x0, 0x0},

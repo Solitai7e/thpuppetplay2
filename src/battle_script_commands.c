@@ -200,7 +200,7 @@ static void Cmd_faintifabilitynotdamp(void);
 static void Cmd_setatkhptozero(void);
 static void Cmd_jumpifnexttargetvalid(void);
 static void Cmd_tryhealhalfhealth(void);
-static void Cmd_trymirrormove(void);
+static void Cmd_tryfalseswipe(void);
 static void Cmd_setrain(void);
 static void Cmd_setreflect(void);
 static void Cmd_setseeded(void);
@@ -450,7 +450,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_setatkhptozero,                          //0x79
     Cmd_jumpifnexttargetvalid,                   //0x7A
     Cmd_tryhealhalfhealth,                       //0x7B
-    Cmd_trymirrormove,                           //0x7C
+    Cmd_tryfalseswipe,                           //0x7C
     Cmd_setrain,                                 //0x7D
     Cmd_setreflect,                              //0x7E
     Cmd_setseeded,                               //0x7F
@@ -4393,9 +4393,9 @@ static void Cmd_moveend(void)
             }
             gBattleScripting.moveendState++;
             break;
-        case MOVEEND_MIRROR_MOVE: // mirror move
+        case MOVEEND_FALSE_SWIPE: // mirror move
             if (!(gAbsentBattlerFlags & gBitTable[gBattlerAttacker]) && !(gBattleStruct->absentBattlerFlags & gBitTable[gBattlerAttacker])
-                && gBattleMoves[originallyUsedMove].flags & FLAG_MIRROR_MOVE_AFFECTED && gHitMarker & HITMARKER_OBEYS
+                && gBattleMoves[originallyUsedMove].flags & FLAG_FALSE_SWIPE_AFFECTED && gHitMarker & HITMARKER_OBEYS
                 && gBattlerAttacker != gBattlerTarget && !(gHitMarker & HITMARKER_FAINTED(gBattlerTarget))
                 && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
             {
@@ -6576,7 +6576,7 @@ static void Cmd_tryhealhalfhealth(void)
         gBattlescriptCurrInstr += 6;
 }
 
-static void Cmd_trymirrormove(void)
+static void Cmd_tryfalseswipe(void)
 {
     s32 validMovesCount;
     s32 i;
@@ -7924,7 +7924,7 @@ static void Cmd_trysetencore(void)
 
     if (gLastMoves[gBattlerTarget] == MOVE_STRUGGLE
         || gLastMoves[gBattlerTarget] == MOVE_ENCORE
-        || gLastMoves[gBattlerTarget] == MOVE_MIRROR_MOVE)
+        || gLastMoves[gBattlerTarget] == MOVE_FALSE_SWIPE)
     {
         i = 4;
     }
@@ -8105,7 +8105,7 @@ static bool8 IsTwoTurnsMove(u16 move)
 static bool8 IsInvalidForSleepTalkOrAssist(u16 move)
 {
     if (move == 0 || move == MOVE_SLEEP_TALK || move == MOVE_ASSIST
-        || move == MOVE_MIRROR_MOVE || move == MOVE_METRONOME)
+        || move == MOVE_FALSE_SWIPE || move == MOVE_METRONOME)
         return TRUE;
     else
         return FALSE;

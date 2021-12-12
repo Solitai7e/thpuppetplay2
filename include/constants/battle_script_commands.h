@@ -152,7 +152,7 @@
 #define MOVEEND_KINGSROCK_SHELLBELL               12
 #define MOVEEND_SUBSTITUTE                        13
 #define MOVEEND_UPDATE_LAST_MOVES                 14
-#define MOVEEND_MIRROR_MOVE                       15
+#define MOVEEND_FALSE_SWIPE                       15
 #define MOVEEND_NEXT_TARGET                       16
 #define MOVEEND_COUNT                             17
 

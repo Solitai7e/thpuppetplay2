@@ -3511,7 +3511,7 @@ static const struct TrainerMonItemCustomMoves sParty_Winona1[] = {
     .lvl = 29,
     .species = SPECIES_DIKU,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_PERISH_SONG, MOVE_MIRROR_MOVE, MOVE_SAFEGUARD, MOVE_BLADE_FLASH}
+    .moves = {MOVE_PERISH_SONG, MOVE_FALSE_SWIPE, MOVE_SAFEGUARD, MOVE_BLADE_FLASH}
     },
     {
     .iv = 210,

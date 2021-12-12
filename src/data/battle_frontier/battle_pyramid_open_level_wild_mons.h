@@ -1022,7 +1022,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round20[] =
         .species = SPECIES_TOKIKO,
         .lvl = 6,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_HYPER_BEAM, MOVE_FLY, MOVE_MIRROR_MOVE, MOVE_PROTECT}
+        .moves = {MOVE_HYPER_BEAM, MOVE_FLY, MOVE_FALSE_SWIPE, MOVE_PROTECT}
     },
     {
         .species = SPECIES_BYAKUREN,

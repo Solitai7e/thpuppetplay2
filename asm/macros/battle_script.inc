@@ -687,7 +687,7 @@
 	.byte \battler
 	.endm
 
-	.macro trymirrormove
+	.macro tryfalseswipe
 	.byte 0x7c
 	.endm
 

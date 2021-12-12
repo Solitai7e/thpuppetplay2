@@ -135,7 +135,7 @@ gBattleAnims_Moves::
 	.4byte Move_FOCUS_ENERGY
 	.4byte Move_BIDE
 	.4byte Move_METRONOME
-	.4byte Move_MIRROR_MOVE @ doesnt have an actual animation
+	.4byte Move_FALSE_SWIPE @ doesnt have an actual animation
 	.4byte Move_SELF_DESTRUCT
 	.4byte Move_MIND_BOMB
 	.4byte Move_LICK
@@ -421,7 +421,7 @@ gBattleAnims_Special::
 	.4byte Special_MonToSubstitute          @ B_ANIM_MON_TO_SUBSTITUTE
 
 Move_NONE:
-Move_MIRROR_MOVE:
+Move_FALSE_SWIPE:
 Move_POUND:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET

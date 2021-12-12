@@ -261,7 +261,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_CTOKIKO] = {
         .species = SPECIES_CTOKIKO,
-        .moves = {MOVE_MAGIC_KNIFE, MOVE_PURSUIT, MOVE_MIRROR_MOVE, MOVE_PROTECT},
+        .moves = {MOVE_MAGIC_KNIFE, MOVE_PURSUIT, MOVE_FALSE_SWIPE, MOVE_PROTECT},
         .itemTableId = BATTLE_FRONTIER_ITEM_LIECHI_BERRY,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_HP,
         .nature = NATURE_DOCILE

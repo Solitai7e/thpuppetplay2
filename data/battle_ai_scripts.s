@@ -653,7 +653,7 @@ AI_CheckViability:
 	if_effect EFFECT_ABSORB, AI_CV_Absorb
 	if_effect EFFECT_EXPLOSION, AI_CV_SelfKO
 	if_effect EFFECT_DREAM_EATER, AI_CV_DreamEater
-	if_effect EFFECT_MIRROR_MOVE, AI_CV_MirrorMove
+	if_effect EFFECT_FALSE_SWIPE, AI_CV_FalseSwipe
 	if_effect EFFECT_ATTACK_UP, AI_CV_AttackUp
 	if_effect EFFECT_DEFENSE_UP, AI_CV_DefenseUp
 	if_effect EFFECT_SPEED_UP, AI_CV_SpeedUp
@@ -833,23 +833,23 @@ AI_CV_DreamEater_ScoreDown1:
 AI_CV_DreamEater_End:
 	end
 
-AI_CV_MirrorMove:
-	if_target_faster AI_CV_MirrorMove2
+AI_CV_FalseSwipe:
+	if_target_faster AI_CV_FalseSwipe2
 	get_last_used_bank_move AI_TARGET
-	if_not_in_hwords AI_CV_MirrorMove_EncouragedMovesToMirror, AI_CV_MirrorMove2
-	if_random_less_than 128, AI_CV_MirrorMove_End
+	if_not_in_hwords AI_CV_FalseSwipe_EncouragedMovesToMirror, AI_CV_FalseSwipe2
+	if_random_less_than 128, AI_CV_FalseSwipe_End
 	score +2
-	goto AI_CV_MirrorMove_End
+	goto AI_CV_FalseSwipe_End
 
-AI_CV_MirrorMove2:
+AI_CV_FalseSwipe2:
 	get_last_used_bank_move AI_TARGET
-	if_in_hwords AI_CV_MirrorMove_EncouragedMovesToMirror, AI_CV_MirrorMove_End
-	if_random_less_than 80, AI_CV_MirrorMove_End
+	if_in_hwords AI_CV_FalseSwipe_EncouragedMovesToMirror, AI_CV_FalseSwipe_End
+	if_random_less_than 80, AI_CV_FalseSwipe_End
 	score -1
-AI_CV_MirrorMove_End:
+AI_CV_FalseSwipe_End:
 	end
 
-AI_CV_MirrorMove_EncouragedMovesToMirror:
+AI_CV_FalseSwipe_EncouragedMovesToMirror:
     .2byte MOVE_SLEEP_POWDER
     .2byte MOVE_LOVELY_KISS
     .2byte MOVE_SPORE
@@ -2700,7 +2700,7 @@ AI_Risky_End:
 AI_Risky_EffectsToEncourage:
     .byte EFFECT_SLEEP
     .byte EFFECT_EXPLOSION
-    .byte EFFECT_MIRROR_MOVE
+    .byte EFFECT_FALSE_SWIPE
     .byte EFFECT_OHKO
     .byte EFFECT_HIGH_CRITICAL
     .byte EFFECT_CONFUSE

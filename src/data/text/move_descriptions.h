@@ -473,7 +473,7 @@ static const u8 sMetronomeDescription[] = _(
     "Waggles a finger to use any\n"
     "POKéMON move at random.");
 
-static const u8 sMirrorMoveDescription[] = _(
+static const u8 sFalseSwipeDescription[] = _(
     "Counters the foe's attack\n"
     "with the same move.");
 
@@ -1538,7 +1538,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_FOCUS_ENERGY - 1] = sFocusEnergyDescription,
     [MOVE_BIDE - 1] = sBideDescription,
     [MOVE_METRONOME - 1] = sMetronomeDescription,
-    [MOVE_MIRROR_MOVE - 1] = sMirrorMoveDescription,
+    [MOVE_FALSE_SWIPE - 1] = sFalseSwipeDescription,
     [MOVE_SELF_DESTRUCT - 1] = sSelfDestructDescription,
     [MOVE_MIND_BOMB - 1] = sMindBombDescription,
     [MOVE_LICK - 1] = sLickDescription,
