@@ -52,7 +52,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(CTOKIKO,
               MOVE_FAINT_ATTACK,
-              MOVE_FALSE_SWIPE,
+              MOVE_DRAWN_LINE,
               MOVE_SCARY_FACE,
               MOVE_QUICK_ATTACK,
               MOVE_TRI_ATTACK,
@@ -121,7 +121,7 @@ const u16 gEggMoves[] = {
               MOVE_INGRAIN),
 
     egg_moves(CIKU,
-              MOVE_FALSE_SWIPE,
+              MOVE_DRAWN_LINE,
               MOVE_SCREECH,
               MOVE_COUNTER,
               MOVE_PSYBEAM,
@@ -433,7 +433,7 @@ const u16 gEggMoves[] = {
     egg_moves(SHOU,
               MOVE_MAGIC_KNIFE,
               MOVE_FLAIL,
-              MOVE_FALSE_SWIPE,
+              MOVE_DRAWN_LINE,
               MOVE_FAINT_ATTACK),
 
     egg_moves(TEWI,
@@ -748,7 +748,7 @@ const u16 gEggMoves[] = {
               MOVE_HARDEN,
               MOVE_BIDE,
               MOVE_FLAIL,
-              MOVE_FALSE_SWIPE),
+              MOVE_DRAWN_LINE),
 
     egg_moves(ARUMIA,
               MOVE_COUNTER,
@@ -953,7 +953,7 @@ const u16 gEggMoves[] = {
               MOVE_QUICK_ATTACK,
               MOVE_RAZOR_WIND,
               MOVE_TAKE_DOWN,
-              MOVE_FALSE_SWIPE),
+              MOVE_DRAWN_LINE),
 
     egg_moves(HSHIZUHA,
               MOVE_ENDURE,
@@ -973,7 +973,7 @@ const u16 gEggMoves[] = {
               MOVE_FAKE_TEARS,
               MOVE_SWAGGER,
               MOVE_CHARM,
-              MOVE_FALSE_SWIPE,
+              MOVE_DRAWN_LINE,
               MOVE_HELPING_HAND),
 
     egg_moves(SKOGASA,
@@ -1145,7 +1145,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(TKISUME,
               MOVE_SWORDS_DANCE,
-              MOVE_FALSE_SWIPE,
+              MOVE_DRAWN_LINE,
               MOVE_CROSS_POISON,
               MOVE_PSYCH_UP,
               MOVE_ANCIENT_POWER,

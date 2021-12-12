@@ -821,7 +821,7 @@ static const u8 sTremorsDescription[] = _(
     "An attack lasting 5 turns\n"
     "with rising intensity.");
 
-static const u8 sFalseSwipeDescription[] = _(
+static const u8 sDrawnLineDescription[] = _(
     "An attack that leaves the\n"
     "foe with at least 1 HP.");
 
@@ -1625,7 +1625,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_ENDURE - 1] = sEndureDescription,
     [MOVE_CHARM - 1] = sCharmDescription,
     [MOVE_TREMORS - 1] = sTremorsDescription,
-    [MOVE_FALSE_SWIPE - 1] = sFalseSwipeDescription,
+    [MOVE_DRAWN_LINE - 1] = sDrawnLineDescription,
     [MOVE_SWAGGER - 1] = sSwaggerDescription,
     [MOVE_MILK_DRINK - 1] = sMilkDrinkDescription,
     [MOVE_SPARK - 1] = sSparkDescription,

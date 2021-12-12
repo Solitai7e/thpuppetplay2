@@ -222,7 +222,7 @@ gBattleAnims_Moves::
 	.4byte Move_ENDURE
 	.4byte Move_CHARM
 	.4byte Move_TREMORS
-	.4byte Move_FALSE_SWIPE
+	.4byte Move_DRAWN_LINE
 	.4byte Move_SWAGGER
 	.4byte Move_MILK_DRINK
 	.4byte Move_SPARK
@@ -3248,26 +3248,26 @@ Move_TREMORS:
 	blendoff
 	end
 
-Move_FALSE_SWIPE:
+Move_DRAWN_LINE:
 	loadspritegfx ANIM_TAG_SLASH_2
 	loadspritegfx ANIM_TAG_IMPACT
-	createsprite gFalseSwipeSliceSpriteTemplate, ANIM_TARGET, 2
+	createsprite gDrawnLineSliceSpriteTemplate, ANIM_TARGET, 2
 	playsewithpan SE_M_VITAL_THROW, SOUND_PAN_TARGET
 	delay 16
-	createsprite gFalseSwipePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 0
+	createsprite gDrawnLinePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 0
 	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_TARGET
 	delay 2
-	createsprite gFalseSwipePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 16
+	createsprite gDrawnLinePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 16
 	delay 2
-	createsprite gFalseSwipePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 32
+	createsprite gDrawnLinePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 32
 	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_TARGET
 	delay 2
-	createsprite gFalseSwipePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 48
+	createsprite gDrawnLinePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 48
 	delay 2
-	createsprite gFalseSwipePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 64
+	createsprite gDrawnLinePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 64
 	playsewithpan SE_M_SHADOW_HIT, SOUND_PAN_TARGET
 	delay 2
-	createsprite gFalseSwipePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 80
+	createsprite gDrawnLinePositionedSliceSpriteTemplate, ANIM_TARGET, 2, 80
 	delay 2
 	waitforvisualfinish
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 5, 0, 6, 1

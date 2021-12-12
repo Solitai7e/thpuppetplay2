@@ -369,7 +369,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_LEECH_LIFE,
-            MOVE_FALSE_SWIPE,
+            MOVE_DRAWN_LINE,
             MOVE_FURY_SWIPES,
             MOVE_HEARTS_EYE
         },

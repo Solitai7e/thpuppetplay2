@@ -1668,7 +1668,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_MIRROR_MOVE] =
     {
-        .effect = EFFECT_FALSE_SWIPE,
+        .effect = EFFECT_DRAWN_LINE,
         .split = 0,
         .power = 40,
         .type = TYPE_ILLUSION,
@@ -2884,7 +2884,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 
-    [MOVE_FALSE_SWIPE] =
+    [MOVE_DRAWN_LINE] =
     {
         .effect = EFFECT_HIGH_CRITICAL,
         .split = 0,
