@@ -279,7 +279,7 @@ static const u16 sIgnoredPowerfulMoveEffects[] =
     EFFECT_FOCUS_PUNCH,
     EFFECT_SUPERPOWER,
     EFFECT_ERUPTION,
-    EFFECT_OVERHEAT,
+    EFFECT_FLARE_BLITZ,
     IGNORED_MOVES_END
 };
 

@@ -290,7 +290,7 @@ static const u16 sPoints_MoveEffect[NUM_BATTLE_MOVE_EFFECTS] =
     [EFFECT_MUD_SLAP] = 4,
     [EFFECT_CROSS_POISON] = 1,
     [EFFECT_WEATHER_BALL] = 1,
-    [EFFECT_OVERHEAT] = 3,
+    [EFFECT_FLARE_BLITZ] = 3,
     [EFFECT_TICKLE] = 1,
     [EFFECT_DRACO_METEOR] = 1,
     [EFFECT_SOAR] = 1,
@@ -340,7 +340,7 @@ static const u16 sPoints_RainMoves[] =
     MOVE_WEATHER_BALL, 3,
     MOVE_THUNDER, 3,
     MOVE_SOLAR_BEAM, -4,
-    MOVE_OVERHEAT, -4,
+    MOVE_FLARE_BLITZ, -4,
     MOVE_FLAME_WHEEL, -4,
     MOVE_FLAMETHROWER, -4,
     MOVE_SACRED_FIRE, -4,
@@ -357,7 +357,7 @@ static const u16 sPoints_RainMoves[] =
 };
 static const u16 sPoints_SunMoves[] =
 {
-    MOVE_OVERHEAT, 3,
+    MOVE_FLARE_BLITZ, 3,
     MOVE_FLAME_WHEEL, 3,
     MOVE_FLAMETHROWER, 3,
     MOVE_SACRED_FIRE, 3,

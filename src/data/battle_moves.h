@@ -4300,7 +4300,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_BLAST_BURN] =
     {
-        .effect = EFFECT_OVERHEAT,
+        .effect = EFFECT_FLARE_BLITZ,
         .split = 0,
         .power = 140,
         .type = TYPE_FIRE,
@@ -4314,7 +4314,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_HYDRO_CANNON] =
     {
-        .effect = EFFECT_OVERHEAT,
+        .effect = EFFECT_FLARE_BLITZ,
         .split = 0,
         .power = 140,
         .type = TYPE_WATER,
@@ -4410,7 +4410,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED,
     },
 
-    [MOVE_OVERHEAT] =
+    [MOVE_FLARE_BLITZ] =
     {
         .effect = EFFECT_HEAD_SMASH,
         .split = 0,
@@ -4510,7 +4510,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_DRACO_METEOR] =
     {
-        .effect = EFFECT_OVERHEAT,
+        .effect = EFFECT_FLARE_BLITZ,
         .split = 0,
         .power = 140,
         .type = TYPE_ILLUSION,
@@ -4734,7 +4734,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FRENZY_PLANT] =
     {
-        .effect = EFFECT_OVERHEAT,
+        .effect = EFFECT_FLARE_BLITZ,
         .split = 0,
         .power = 140,
         .type = TYPE_NATURE,
@@ -4958,7 +4958,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_PSYCHO_BOOST] =
     {
-        .effect = EFFECT_OVERHEAT,
+        .effect = EFFECT_FLARE_BLITZ,
         .split = 0,
         .power = 140,
         .type = TYPE_REASON,

@@ -221,7 +221,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectMudSlap               @ EFFECT_MUD_SLAP
 	.4byte BattleScript_EffectCrossPoison             @ EFFECT_CROSS_POISON
 	.4byte BattleScript_EffectWeatherBall            @ EFFECT_WEATHER_BALL
-	.4byte BattleScript_EffectOverheat               @ EFFECT_OVERHEAT
+	.4byte BattleScript_EffectFlareBlitz               @ EFFECT_FLARE_BLITZ
 	.4byte BattleScript_EffectTickle                 @ EFFECT_TICKLE
 	.4byte BattleScript_EffectDracoMeteor            @ EFFECT_DRACO_METEOR
 	.4byte BattleScript_EffectSoar            @ EFFECT_SOAR
@@ -2642,7 +2642,7 @@ BattleScript_EffectWeatherBall::
 	setweatherballtype
 	goto BattleScript_EffectHit
 
-BattleScript_EffectOverheat::
+BattleScript_EffectFlareBlitz::
 	setmoveeffect MOVE_EFFECT_SP_ATK_TWO_DOWN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
 	goto BattleScript_EffectHit
 

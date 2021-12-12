@@ -1257,7 +1257,7 @@ static const u8 sAirSlashDescription[] = _(
     "Hacks with razorlike wind.\n"
     "High critical-hit ratio.");
 
-static const u8 sOverheatDescription[] = _(
+static const u8 sFlareBlitzDescription[] = _(
     "Allows a full-power attack,\n"
     "but sharply lowers SP. ATK.");
 
@@ -1734,7 +1734,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_AROMATHERAPY - 1] = sAromatherapyDescription,
     [MOVE_FAKE_TEARS - 1] = sFakeTearsDescription,
     [MOVE_AIR_SLASH - 1] = sAirSlashDescription,
-    [MOVE_OVERHEAT - 1] = sOverheatDescription,
+    [MOVE_FLARE_BLITZ - 1] = sFlareBlitzDescription,
     [MOVE_DOUBLE_TEAM - 1] = sDoubleTeamDescription,
     [MOVE_ROCK_TOMB - 1] = sRockTombDescription,
     [MOVE_SILVER_WIND - 1] = sSilverWindDescription,

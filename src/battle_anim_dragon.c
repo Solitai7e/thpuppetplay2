@@ -10,14 +10,14 @@ static void AnimDarkPulseFirePlume(struct Sprite *);
 static void AnimDragonFireToTarget(struct Sprite *);
 static void AnimTailwindOrb(struct Sprite *);
 static void AnimTailwindOrb_Step(struct Sprite *);
-static void AnimOverheatFlame(struct Sprite *);
-static void AnimOverheatFlame_Step(struct Sprite *);
+static void AnimFlareBlitzFlame(struct Sprite *);
+static void AnimFlareBlitzFlame_Step(struct Sprite *);
 static void AnimTask_TailwindWaver_Step(u8);
 static void UpdateTailwindScanlineEffect(struct Task *);
 
-EWRAM_DATA static u16 gUnusedOverheatData[7] = {0};
+EWRAM_DATA static u16 gUnusedFlareBlitzData[7] = {0};
 
-static const union AnimCmd sAnim_OutrageOverheatFire_0[] =
+static const union AnimCmd sAnim_OutrageFlareBlitzFire_0[] =
 {
     ANIMCMD_FRAME(0, 4),
     ANIMCMD_FRAME(16, 4),
@@ -27,9 +27,9 @@ static const union AnimCmd sAnim_OutrageOverheatFire_0[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd *const sAnims_OutrageOverheatFire[] =
+static const union AnimCmd *const sAnims_OutrageFlareBlitzFire[] =
 {
-    sAnim_OutrageOverheatFire_0,
+    sAnim_OutrageFlareBlitzFire_0,
 };
 
 const struct SpriteTemplate gOutrageFlameSpriteTemplate =
@@ -37,7 +37,7 @@ const struct SpriteTemplate gOutrageFlameSpriteTemplate =
     .tileTag = ANIM_TAG_SMALL_EMBER,
     .paletteTag = ANIM_TAG_SMALL_EMBER,
     .oam = &gOamData_AffineOff_ObjNormal_32x32,
-    .anims = sAnims_OutrageOverheatFire,
+    .anims = sAnims_OutrageFlareBlitzFire,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimOutrageFlame,
@@ -176,15 +176,15 @@ const struct SpriteTemplate gTailwindOrbSpriteTemplate =
     .callback = AnimTailwindOrb,
 };
 
-const struct SpriteTemplate gOverheatFlameSpriteTemplate =
+const struct SpriteTemplate gFlareBlitzFlameSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SMALL_EMBER,
     .paletteTag = ANIM_TAG_SMALL_EMBER,
     .oam = &gOamData_AffineOff_ObjNormal_32x32,
-    .anims = sAnims_OutrageOverheatFire,
+    .anims = sAnims_OutrageFlareBlitzFire,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimOverheatFlame,
+    .callback = AnimFlareBlitzFlame,
 };
 
 static void AnimOutrageFlame(struct Sprite *sprite)
@@ -413,7 +413,7 @@ static void UpdateTailwindScanlineEffect(struct Task *task)
     task->data[5] = (task->data[5] + 9) & 0xFF;
 }
 
-static void AnimOverheatFlame(struct Sprite *sprite)
+static void AnimFlareBlitzFlame(struct Sprite *sprite)
 {
     int i;
     int yAmplitude = (gBattleAnimArgs[2] * 3) / 5;
@@ -424,12 +424,12 @@ static void AnimOverheatFlame(struct Sprite *sprite)
     sprite->x += sprite->data[1] * gBattleAnimArgs[0];
     sprite->y += sprite->data[2] * gBattleAnimArgs[0];
     sprite->data[3] = gBattleAnimArgs[3];
-    sprite->callback = AnimOverheatFlame_Step;
+    sprite->callback = AnimFlareBlitzFlame_Step;
     for (i = 0; i < 7; i++)
-        gUnusedOverheatData[i] = sprite->data[i];
+        gUnusedFlareBlitzData[i] = sprite->data[i];
 }
 
-static void AnimOverheatFlame_Step(struct Sprite *sprite)
+static void AnimFlareBlitzFlame_Step(struct Sprite *sprite)
 {
     sprite->data[4] += sprite->data[1];
     sprite->data[5] += sprite->data[2];

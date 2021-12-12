@@ -763,7 +763,7 @@ AI_CheckViability:
 	if_effect EFFECT_SNATCH, AI_CV_Snatch
 	if_effect EFFECT_BLAZE_KICK, AI_CV_HighCrit
 	if_effect EFFECT_MUD_SLAP, AI_CV_MudSlap
-	if_effect EFFECT_OVERHEAT, AI_CV_Overheat
+	if_effect EFFECT_FLARE_BLITZ, AI_CV_FlareBlitz
 	if_effect EFFECT_TICKLE, AI_CV_DefenseDown
 	if_effect EFFECT_DRACO_METEOR, AI_CV_SpDefUp
 	if_effect EFFECT_BULK_UP, AI_CV_DefenseUp
@@ -2542,18 +2542,18 @@ AI_CV_MudSlap_ScoreDown1:
 AI_CV_MudSlap_End:
 	end
 
-AI_CV_Overheat:
-	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_Overheat_ScoreDown1
-	if_type_effectiveness AI_EFFECTIVENESS_x0_5, AI_CV_Overheat_ScoreDown1
-	if_target_faster AI_CV_Overheat2
-	if_hp_more_than AI_USER, 60, AI_CV_Overheat_End
-	goto AI_CV_Overheat_ScoreDown1
+AI_CV_FlareBlitz:
+	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_FlareBlitz_ScoreDown1
+	if_type_effectiveness AI_EFFECTIVENESS_x0_5, AI_CV_FlareBlitz_ScoreDown1
+	if_target_faster AI_CV_FlareBlitz2
+	if_hp_more_than AI_USER, 60, AI_CV_FlareBlitz_End
+	goto AI_CV_FlareBlitz_ScoreDown1
 
-AI_CV_Overheat2:
-	if_hp_more_than AI_USER, 80, AI_CV_Overheat_End
-AI_CV_Overheat_ScoreDown1:
+AI_CV_FlareBlitz2:
+	if_hp_more_than AI_USER, 80, AI_CV_FlareBlitz_End
+AI_CV_FlareBlitz_ScoreDown1:
 	score -1
-AI_CV_Overheat_End:
+AI_CV_FlareBlitz_End:
 	end
 
 AI_CV_Splashing:
@@ -2962,7 +2962,7 @@ AI_HPAware_DiscouragedEffectsWhenHighHP:
     .byte EFFECT_SOFTBOILED
     .byte EFFECT_MEMENTO
     .byte EFFECT_GRUDGE
-    .byte EFFECT_OVERHEAT
+    .byte EFFECT_FLARE_BLITZ
     .byte -1
 
 AI_HPAware_DiscouragedEffectsWhenMediumHP:

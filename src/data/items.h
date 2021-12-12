@@ -4052,10 +4052,10 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM50_OVERHEAT] =
+    [ITEM_TM50_FLARE_BLITZ] =
     {
         .name = _("TM50"),
-        .itemId = ITEM_TM50_OVERHEAT,
+        .itemId = ITEM_TM50_FLARE_BLITZ,
         .price = 3000,
         .description = sTM50Desc,
         .pocket = POCKET_TM_HM,

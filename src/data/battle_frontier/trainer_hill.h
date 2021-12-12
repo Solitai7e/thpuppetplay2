@@ -916,7 +916,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_CSUIKA,
                         .heldItem = ITEM_LUM_BERRY,
-                        .moves = {MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY, MOVE_TAIL_WHIP, MOVE_OVERHEAT},
+                        .moves = {MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY, MOVE_TAIL_WHIP, MOVE_FLARE_BLITZ},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 252,
@@ -1325,7 +1325,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_SUIKA,
                         .heldItem = ITEM_SALAC_BERRY,
-                        .moves = {MOVE_OVERHEAT, MOVE_QUICK_ATTACK, MOVE_SPITE, MOVE_TAIL_WHIP},
+                        .moves = {MOVE_FLARE_BLITZ, MOVE_QUICK_ATTACK, MOVE_SPITE, MOVE_TAIL_WHIP},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 6,
@@ -1347,7 +1347,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_REISEN,
                         .heldItem = ITEM_SALAC_BERRY,
-                        .moves = {MOVE_OVERHEAT, MOVE_BEAT_UP, MOVE_SCARY_FACE, MOVE_GROWL},
+                        .moves = {MOVE_FLARE_BLITZ, MOVE_BEAT_UP, MOVE_SCARY_FACE, MOVE_GROWL},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 6,
@@ -4867,7 +4867,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_SUIKA,
                                             .heldItem = ITEM_WHITE_HERB,
-                                            .moves = {MOVE_OVERHEAT, MOVE_CONFUSE_RAY, MOVE_WILL_O_WISP, MOVE_ATTRACT},
+                                            .moves = {MOVE_FLARE_BLITZ, MOVE_CONFUSE_RAY, MOVE_WILL_O_WISP, MOVE_ATTRACT},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 6,
@@ -5364,7 +5364,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_SUIKA,
                                             .heldItem = ITEM_WHITE_HERB,
-                                            .moves = {MOVE_IMPRISON, MOVE_PROTECT, MOVE_OVERHEAT, MOVE_CONFUSE_RAY},
+                                            .moves = {MOVE_IMPRISON, MOVE_PROTECT, MOVE_FLARE_BLITZ, MOVE_CONFUSE_RAY},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .speedEV = 255,

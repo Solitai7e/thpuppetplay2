@@ -150,7 +150,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round3[] =
         .species = SPECIES_DPARSEE,
         .lvl = 42,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_FLAMETHROWER, MOVE_BITE, MOVE_SOLAR_BEAM, MOVE_OVERHEAT}
+        .moves = {MOVE_FLAMETHROWER, MOVE_BITE, MOVE_SOLAR_BEAM, MOVE_FLARE_BLITZ}
     }
 };
 
@@ -178,7 +178,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round4[] =
         .species = SPECIES_SUIKA,
         .lvl = 42,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_GRUDGE, MOVE_WILL_O_WISP, MOVE_OVERHEAT, MOVE_NONE}
+        .moves = {MOVE_GRUDGE, MOVE_WILL_O_WISP, MOVE_FLARE_BLITZ, MOVE_NONE}
     },
     {
         .species = SPECIES_SMEDICINE,
@@ -716,7 +716,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round14[] =
         .species = SPECIES_DPARSEE,
         .lvl = 50,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_OVERHEAT, MOVE_CRUNCH, MOVE_SHADOW_BALL, MOVE_PROTECT}
+        .moves = {MOVE_FLARE_BLITZ, MOVE_CRUNCH, MOVE_SHADOW_BALL, MOVE_PROTECT}
     },
     {
         .species = SPECIES_KURUMI,
