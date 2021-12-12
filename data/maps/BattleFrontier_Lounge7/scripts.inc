@@ -143,7 +143,7 @@ BattleFrontier_Lounge7_EventScript_ChooseRightTutorMove::
 	switch VAR_RESULT
 	case 0, BattleFrontier_Lounge7_EventScript_DefenseCurl
 	case 1, BattleFrontier_Lounge7_EventScript_Snore
-	case 2, BattleFrontier_Lounge7_EventScript_MudSlap
+	case 2, BattleFrontier_Lounge7_EventScript_MudShot
 	case 3, BattleFrontier_Lounge7_EventScript_Swift
 	case 4, BattleFrontier_Lounge7_EventScript_IcyWind
 	case 5, BattleFrontier_Lounge7_EventScript_Endure
@@ -167,7 +167,7 @@ BattleFrontier_Lounge7_EventScript_ChooseNewRightTutorMove::
 	switch VAR_RESULT
 	case 0, BattleFrontier_Lounge7_EventScript_DefenseCurl
 	case 1, BattleFrontier_Lounge7_EventScript_Snore
-	case 2, BattleFrontier_Lounge7_EventScript_MudSlap
+	case 2, BattleFrontier_Lounge7_EventScript_MudShot
 	case 3, BattleFrontier_Lounge7_EventScript_Swift
 	case 4, BattleFrontier_Lounge7_EventScript_IcyWind
 	case 5, BattleFrontier_Lounge7_EventScript_Endure
@@ -189,7 +189,7 @@ BattleFrontier_Lounge7_EventScript_Snore::
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
-BattleFrontier_Lounge7_EventScript_MudSlap::
+BattleFrontier_Lounge7_EventScript_MudShot::
 	setvar VAR_0x8008, 24
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
@@ -438,7 +438,7 @@ BattleFrontier_Lounge7_Text_SnoreDesc::
 	.string "that can be used\n"
 	.string "only while asleep.$"
 
-BattleFrontier_Lounge7_Text_MudSlapDesc::
+BattleFrontier_Lounge7_Text_MudShotDesc::
 	.string "Hurls mud in the\n"
 	.string "foe's face to re-\n"
 	.string "duce its accuracy.$"

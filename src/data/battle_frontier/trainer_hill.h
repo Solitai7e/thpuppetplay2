@@ -281,7 +281,7 @@ static const struct TrHillFloor sDataTagJPDefault_Floors[] = {
                     [2] = {
                         .species = SPECIES_HKOAKUMA,
                         .heldItem = ITEM_PERSIM_BERRY,
-                        .moves = { MOVE_PSYBEAM, MOVE_ROCK_TOMB, MOVE_MUD_SLAP, MOVE_HARDEN },
+                        .moves = { MOVE_PSYBEAM, MOVE_ROCK_TOMB, MOVE_MUD_SHOT, MOVE_HARDEN },
                         .level = 0,
                         .ppBonuses = 0x0,
                         .hpEV = 100,
@@ -641,7 +641,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_YUUGI,
                         .heldItem = ITEM_BLACK_BELT,
-                        .moves = {MOVE_DYNAMIC_PUNCH, MOVE_MUD_SLAP, MOVE_COUNTER, MOVE_SCARY_FACE},
+                        .moves = {MOVE_DYNAMIC_PUNCH, MOVE_MUD_SHOT, MOVE_COUNTER, MOVE_SCARY_FACE},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 255,
@@ -1159,7 +1159,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_CRIN,
                         .heldItem = ITEM_CHESTO_BERRY,
-                        .moves = {MOVE_BELLY_DRUM, MOVE_REST, MOVE_MUD_SLAP, MOVE_SWAGGER},
+                        .moves = {MOVE_BELLY_DRUM, MOVE_REST, MOVE_MUD_SHOT, MOVE_SWAGGER},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 250,
@@ -1181,7 +1181,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_CEIRIN,
                         .heldItem = ITEM_LEFTOVERS,
-                        .moves = {MOVE_BELLY_DRUM, MOVE_MUD_SLAP, MOVE_SWAGGER, MOVE_AMNESIA},
+                        .moves = {MOVE_BELLY_DRUM, MOVE_MUD_SHOT, MOVE_SWAGGER, MOVE_AMNESIA},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 250,
@@ -1203,7 +1203,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_HMERLIN,
                         .heldItem = ITEM_LUM_BERRY,
-                        .moves = {MOVE_BELLY_DRUM, MOVE_REST, MOVE_MUD_SLAP, MOVE_SWAGGER},
+                        .moves = {MOVE_BELLY_DRUM, MOVE_REST, MOVE_MUD_SHOT, MOVE_SWAGGER},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 250,

@@ -82,23 +82,23 @@ const struct SpriteTemplate gSandAttackDirtSpriteTemplate =
     .callback = AnimDirtScatter,
 };
 
-static const union AnimCmd sAnim_MudSlapMud[] =
+static const union AnimCmd sAnim_MudShotMud[] =
 {
     ANIMCMD_FRAME(1, 1),
     ANIMCMD_END,
 };
 
-static const union AnimCmd *const sAnims_MudSlapMud[] =
+static const union AnimCmd *const sAnims_MudShotMud[] =
 {
-    sAnim_MudSlapMud,
+    sAnim_MudShotMud,
 };
 
-const struct SpriteTemplate gMudSlapMudSpriteTemplate =
+const struct SpriteTemplate gMudShotMudSpriteTemplate =
 {
     .tileTag = ANIM_TAG_MUD_SAND,
     .paletteTag = ANIM_TAG_MUD_SAND,
     .oam = &gOamData_AffineOff_ObjNormal_16x16,
-    .anims = sAnims_MudSlapMud,
+    .anims = sAnims_MudShotMud,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimDirtScatter,

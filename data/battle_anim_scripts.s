@@ -205,7 +205,7 @@ gBattleAnims_Moves::
 	.4byte Move_SWEET_KISS
 	.4byte Move_BELLY_DRUM
 	.4byte Move_GUNK_SHOT
-	.4byte Move_MUD_SLAP
+	.4byte Move_MUD_SHOT
 	.4byte Move_BLACK_RIPPLE
 	.4byte Move_SPIKES
 	.4byte Move_ENERGY_BALL
@@ -5210,26 +5210,26 @@ SandAttackDirt:
 	delay 2
 	return
 
-Move_MUD_SLAP:
+Move_MUD_SHOT:
 	loadspritegfx ANIM_TAG_MUD_SAND
 	playsewithpan SE_M_SAND_ATTACK, SOUND_PAN_ATTACKER
 	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 0, -10, 0, 0, 3
 	waitforvisualfinish
 	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 2
-	call MudSlapMud
-	call MudSlapMud
-	call MudSlapMud
-	call MudSlapMud
-	call MudSlapMud
-	call MudSlapMud
+	call MudShotMud
+	call MudShotMud
+	call MudShotMud
+	call MudShotMud
+	call MudShotMud
+	call MudShotMud
 	waitforvisualfinish
 	end
-MudSlapMud:
-	createsprite gMudSlapMudSpriteTemplate, ANIM_TARGET, 2, 15, 15, 20, 0, 0
-	createsprite gMudSlapMudSpriteTemplate, ANIM_TARGET, 2, 15, 15, 20, 10, 5
-	createsprite gMudSlapMudSpriteTemplate, ANIM_TARGET, 2, 15, 15, 20, -10, -5
-	createsprite gMudSlapMudSpriteTemplate, ANIM_TARGET, 2, 15, 15, 20, 20, 10
-	createsprite gMudSlapMudSpriteTemplate, ANIM_TARGET, 2, 15, 15, 20, -20, -10
+MudShotMud:
+	createsprite gMudShotMudSpriteTemplate, ANIM_TARGET, 2, 15, 15, 20, 0, 0
+	createsprite gMudShotMudSpriteTemplate, ANIM_TARGET, 2, 15, 15, 20, 10, 5
+	createsprite gMudShotMudSpriteTemplate, ANIM_TARGET, 2, 15, 15, 20, -10, -5
+	createsprite gMudShotMudSpriteTemplate, ANIM_TARGET, 2, 15, 15, 20, 20, 10
+	createsprite gMudShotMudSpriteTemplate, ANIM_TARGET, 2, 15, 15, 20, -20, -10
 	delay 2
 	return
 

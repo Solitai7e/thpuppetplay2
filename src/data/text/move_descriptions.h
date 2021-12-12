@@ -753,7 +753,7 @@ static const u8 sGunkShotDescription[] = _(
     "Sludge is hurled to inflict\n"
     "damage. May also poison.");
 
-static const u8 sMudSlapDescription[] = _(
+static const u8 sMudShotDescription[] = _(
     "Hurls mud in the foe's face\n"
     "to reduce its accuracy.");
 
@@ -1608,7 +1608,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SWEET_KISS - 1] = sSweetKissDescription,
     [MOVE_BELLY_DRUM - 1] = sBellyDrumDescription,
     [MOVE_GUNK_SHOT - 1] = sGunkShotDescription,
-    [MOVE_MUD_SLAP - 1] = sMudSlapDescription,
+    [MOVE_MUD_SHOT - 1] = sMudShotDescription,
     [MOVE_BLACK_RIPPLE - 1] = sBlackRippleDescription,
     [MOVE_SPIKES - 1] = sSpikesDescription,
     [MOVE_ENERGY_BALL - 1] = sEnergyBallDescription,

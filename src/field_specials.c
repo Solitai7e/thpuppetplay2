@@ -2565,7 +2565,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     {
         gText_DefenseCurl16BP,
         gText_Snore24BP,
-        gText_MudSlap24BP,
+        gText_MudShot24BP,
         gText_Swift24BP,
         gText_IcyWind24BP,
         gText_Endure48BP,
@@ -3143,7 +3143,7 @@ static const u16 sBattleFrontier_TutorMoves2[] =
 {
     MOVE_DEFENSE_CURL,
     MOVE_SNORE,
-    MOVE_MUD_SLAP,
+    MOVE_MUD_SHOT,
     MOVE_SWIFT,
     MOVE_ICY_WIND,
     MOVE_ENDURE,
@@ -3210,7 +3210,7 @@ static void ShowBattleFrontierTutorMoveDescription(u8 menu, u16 selection)
     {
         BattleFrontier_Lounge7_Text_DefenseCurlDesc,
         BattleFrontier_Lounge7_Text_SnoreDesc,
-        BattleFrontier_Lounge7_Text_MudSlapDesc,
+        BattleFrontier_Lounge7_Text_MudShotDesc,
         BattleFrontier_Lounge7_Text_SwiftDesc,
         BattleFrontier_Lounge7_Text_IcyWindDesc,
         BattleFrontier_Lounge7_Text_EndureDesc,

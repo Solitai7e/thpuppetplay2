@@ -33,7 +33,7 @@
 #define TUTOR_MOVE_SNORE           18
 #define TUTOR_MOVE_ICY_WIND        19
 #define TUTOR_MOVE_ENDURE          20
-#define TUTOR_MOVE_MUD_SLAP        21
+#define TUTOR_MOVE_MUD_SHOT        21
 #define TUTOR_MOVE_ICE_PUNCH       22
 #define TUTOR_MOVE_SWAGGER         23
 #define TUTOR_MOVE_SLEEP_TALK      24

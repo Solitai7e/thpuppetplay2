@@ -930,7 +930,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_ADTEWI_2] = {
         .species = SPECIES_ADTEWI,
-        .moves = {MOVE_MUD_SLAP, MOVE_STEEL_FIST, MOVE_HARDEN, MOVE_ROAR},
+        .moves = {MOVE_MUD_SHOT, MOVE_STEEL_FIST, MOVE_HARDEN, MOVE_ROAR},
         .itemTableId = BATTLE_FRONTIER_ITEM_LEPPA_BERRY,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_MODEST
@@ -1857,7 +1857,7 @@ const struct FacilityMon gVerdanturfBattleTentMons[NUM_VERDANTURF_TENT_MONS] =
     },
     [VERDANTURF_TENT_MON_THATATE] = {
         .species = SPECIES_THATATE,
-        .moves = {MOVE_MUD_SLAP, MOVE_WATER_GUN, MOVE_RAIN_DANCE, MOVE_SPARK},
+        .moves = {MOVE_MUD_SHOT, MOVE_WATER_GUN, MOVE_RAIN_DANCE, MOVE_SPARK},
         .itemTableId = BATTLE_FRONTIER_ITEM_ASPEAR_BERRY,
         .evSpread = F_EV_SPREAD_SPEED,
         .nature = NATURE_HASTY
@@ -2752,7 +2752,7 @@ const struct FacilityMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_HSHIZUHA] = {
         .species = SPECIES_HSHIZUHA,
-        .moves = {MOVE_FURY_SWIPES, MOVE_ENDURE, MOVE_MUD_SLAP, MOVE_DIG},
+        .moves = {MOVE_FURY_SWIPES, MOVE_ENDURE, MOVE_MUD_SHOT, MOVE_DIG},
         .itemTableId = BATTLE_FRONTIER_ITEM_LUM_BERRY,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK,
         .nature = NATURE_SERIOUS
@@ -2808,7 +2808,7 @@ const struct FacilityMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_ADTEWI_2] = {
         .species = SPECIES_ADTEWI,
-        .moves = {MOVE_SECRET_POWER, MOVE_METAL_CLAW, MOVE_IRON_DEFENSE, MOVE_MUD_SLAP},
+        .moves = {MOVE_SECRET_POWER, MOVE_METAL_CLAW, MOVE_IRON_DEFENSE, MOVE_MUD_SHOT},
         .itemTableId = BATTLE_FRONTIER_ITEM_SITRUS_BERRY,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_SPEED,
         .nature = NATURE_GENTLE

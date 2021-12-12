@@ -222,7 +222,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .comboStarterId = COMBO_STARTER_SAND_ATTACK,
-        .comboMoves = {COMBO_STARTER_MUD_SLAP, COMBO_STARTER_SANDSTORM},
+        .comboMoves = {COMBO_STARTER_MUD_SHOT, COMBO_STARTER_SANDSTORM},
     },
 
     [MOVE_HEADBUTT] =
@@ -1505,11 +1505,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_SLUDGE},
     },
 
-    [MOVE_MUD_SLAP] =
+    [MOVE_MUD_SHOT] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_CUTE,
-        .comboStarterId = COMBO_STARTER_MUD_SLAP,
+        .comboStarterId = COMBO_STARTER_MUD_SHOT,
         .comboMoves = {COMBO_STARTER_SAND_ATTACK, COMBO_STARTER_MUD_SPORT, COMBO_STARTER_SANDSTORM},
     },
 
@@ -2398,7 +2398,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .comboStarterId = COMBO_STARTER_MUD_SPORT,
-        .comboMoves = {COMBO_STARTER_MUD_SLAP, COMBO_STARTER_SPLASHING},
+        .comboMoves = {COMBO_STARTER_MUD_SHOT, COMBO_STARTER_SPLASHING},
     },
 
     [MOVE_ICE_BALL] =

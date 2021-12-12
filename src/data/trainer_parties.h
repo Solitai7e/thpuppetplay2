@@ -2568,7 +2568,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Beau[] = {
     .iv = 0,
     .lvl = 21,
     .species = SPECIES_HKOAKUMA,
-    .moves = {MOVE_RAPID_SPIN, MOVE_MUD_SLAP, MOVE_PSYBEAM, MOVE_ROCK_TOMB}
+    .moves = {MOVE_RAPID_SPIN, MOVE_MUD_SHOT, MOVE_PSYBEAM, MOVE_ROCK_TOMB}
     },
     {
     .iv = 0,
@@ -2580,7 +2580,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Beau[] = {
     .iv = 0,
     .lvl = 21,
     .species = SPECIES_HKOAKUMA,
-    .moves = {MOVE_RAPID_SPIN, MOVE_MUD_SLAP, MOVE_PSYBEAM, MOVE_ROCK_TOMB}
+    .moves = {MOVE_RAPID_SPIN, MOVE_MUD_SHOT, MOVE_PSYBEAM, MOVE_ROCK_TOMB}
     }
 };
 
@@ -6070,7 +6070,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Heidi[] = {
     .iv = 0,
     .lvl = 22,
     .species = SPECIES_HKOAKUMA,
-    .moves = {MOVE_RAPID_SPIN, MOVE_MUD_SLAP, MOVE_PSYBEAM, MOVE_ROCK_TOMB}
+    .moves = {MOVE_RAPID_SPIN, MOVE_MUD_SHOT, MOVE_PSYBEAM, MOVE_ROCK_TOMB}
     }
 };
 
