@@ -296,7 +296,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_SFLANDRE] = {
         .species = SPECIES_SFLANDRE,
-        .moves = {MOVE_BUBBLE_BEAM, MOVE_RAIN_DANCE, MOVE_SWEET_SCENT, MOVE_QUICK_ATTACK},
+        .moves = {MOVE_BUBBLE_BEAM, MOVE_RAIN_DANCE, MOVE_NATURE_POWER, MOVE_QUICK_ATTACK},
         .itemTableId = BATTLE_FRONTIER_ITEM_MYSTIC_WATER,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_RELAXED
@@ -702,7 +702,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_CSANAE] = {
         .species = SPECIES_CSANAE,
-        .moves = {MOVE_RAZOR_LEAF, MOVE_SWEET_SCENT, MOVE_SLEEP_POWDER, MOVE_LIGHT_SCREEN},
+        .moves = {MOVE_RAZOR_LEAF, MOVE_NATURE_POWER, MOVE_SLEEP_POWDER, MOVE_LIGHT_SCREEN},
         .itemTableId = BATTLE_FRONTIER_ITEM_BRIGHT_POWDER,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_RELAXED
@@ -716,7 +716,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_CKEINE] = {
         .species = SPECIES_CKEINE,
-        .moves = {MOVE_ACID, MOVE_STUN_SPORE, MOVE_SWEET_SCENT, MOVE_LUNATIC},
+        .moves = {MOVE_ACID, MOVE_STUN_SPORE, MOVE_NATURE_POWER, MOVE_LUNATIC},
         .itemTableId = BATTLE_FRONTIER_ITEM_PECHA_BERRY,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_RELAXED
@@ -1157,7 +1157,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_CPARSEE_1] = {
         .species = SPECIES_CPARSEE,
-        .moves = {MOVE_RAZOR_LEAF, MOVE_ACID, MOVE_WRAP, MOVE_SWEET_SCENT},
+        .moves = {MOVE_RAZOR_LEAF, MOVE_ACID, MOVE_WRAP, MOVE_NATURE_POWER},
         .itemTableId = BATTLE_FRONTIER_ITEM_SCOPE_LENS,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_QUIET
@@ -1220,7 +1220,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_SANAE_1] = {
         .species = SPECIES_SANAE,
-        .moves = {MOVE_BATTLE_CHANT, MOVE_GROWTH, MOVE_SWEET_SCENT, MOVE_FURY_CUTTER},
+        .moves = {MOVE_BATTLE_CHANT, MOVE_GROWTH, MOVE_NATURE_POWER, MOVE_FURY_CUTTER},
         .itemTableId = BATTLE_FRONTIER_ITEM_PERSIM_BERRY,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_GENTLE
@@ -2767,7 +2767,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_PARSEE_1] = {
         .species = SPECIES_PARSEE,
-        .moves = {MOVE_GIGA_DRAIN, MOVE_SLEEP_POWDER, MOVE_SWEET_SCENT, MOVE_SYNTHESIS},
+        .moves = {MOVE_GIGA_DRAIN, MOVE_SLEEP_POWDER, MOVE_NATURE_POWER, MOVE_SYNTHESIS},
         .itemTableId = BATTLE_FRONTIER_ITEM_SITRUS_BERRY,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE,
         .nature = NATURE_QUIET

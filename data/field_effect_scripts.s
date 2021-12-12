@@ -56,7 +56,7 @@ gFieldEffectScriptPointers::
 	.4byte gFieldEffectScript_Nop48                     @ FLDEFF_NOP_48
 	.4byte gFieldEffectScript_AshPuff                   @ FLDEFF_ASH_PUFF
 	.4byte gFieldEffectScript_AshLaunch                 @ FLDEFF_ASH_LAUNCH
-	.4byte gFieldEffectScript_SweetScent                @ FLDEFF_SWEET_SCENT
+	.4byte gFieldEffectScript_NaturePower                @ FLDEFF_NATURE_POWER
 	.4byte gFieldEffectScript_SandPillar                @ FLDEFF_SAND_PILLAR
 	.4byte gFieldEffectScript_Bubbles                   @ FLDEFF_BUBBLES
 	.4byte gFieldEffectScript_Sparkle                   @ FLDEFF_SPARKLE
@@ -279,8 +279,8 @@ gFieldEffectScript_AshLaunch::
 	field_eff_loadfadedpal_callnative gSpritePalette_Ash, FldEff_AshLaunch
 	field_eff_end
 
-gFieldEffectScript_SweetScent::
-	field_eff_callnative FldEff_SweetScent
+gFieldEffectScript_NaturePower::
+	field_eff_callnative FldEff_NaturePower
 	field_eff_end
 
 gFieldEffectScript_SandPillar::

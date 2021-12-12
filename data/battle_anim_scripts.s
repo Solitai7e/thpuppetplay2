@@ -246,7 +246,7 @@ gBattleAnims_Moves::
 	.4byte Move_ENCORE
 	.4byte Move_PURSUIT
 	.4byte Move_RAPID_SPIN
-	.4byte Move_SWEET_SCENT
+	.4byte Move_NATURE_POWER
 	.4byte Move_STEEL_FIST
 	.4byte Move_METAL_CLAW
 	.4byte Move_VITAL_THROW
@@ -8314,41 +8314,41 @@ EnergyLightStar:
 	delay 5
 	return
 
-Move_SWEET_SCENT:
+Move_NATURE_POWER:
 	loadspritegfx ANIM_TAG_PINK_PETAL
-	playsewithpan SE_M_SWEET_SCENT, SOUND_PAN_ATTACKER
-	createsprite gSweetScentPetalSpriteTemplate, ANIM_ATTACKER, 2, 100, 0, 100
+	playsewithpan SE_M_NATURE_POWER, SOUND_PAN_ATTACKER
+	createsprite gNaturePowerPetalSpriteTemplate, ANIM_ATTACKER, 2, 100, 0, 100
 	delay 25
 	setpan 0
-	call SweetScentEffect
-	createsprite gSweetScentPetalSpriteTemplate, ANIM_ATTACKER, 2, 55, 0
+	call NaturePowerEffect
+	createsprite gNaturePowerPetalSpriteTemplate, ANIM_ATTACKER, 2, 55, 0
 	setpan SOUND_PAN_TARGET
 	createvisualtask AnimTask_BlendColorCycle, 2, 20, 1, 5, 5, 13, RGB(31, 21, 21)
-	call SweetScentEffect
+	call NaturePowerEffect
 	waitforvisualfinish
 	end
-SweetScentEffect:
-	createsprite gSweetScentPetalSpriteTemplate, ANIM_ATTACKER, 2, 70, 1, 64
+NaturePowerEffect:
+	createsprite gNaturePowerPetalSpriteTemplate, ANIM_ATTACKER, 2, 70, 1, 64
 	delay 2
-	createsprite gSweetScentPetalSpriteTemplate, ANIM_ATTACKER, 2, 60, 0, 64
+	createsprite gNaturePowerPetalSpriteTemplate, ANIM_ATTACKER, 2, 60, 0, 64
 	delay 5
-	createsprite gSweetScentPetalSpriteTemplate, ANIM_ATTACKER, 2, 80, 1, 64
+	createsprite gNaturePowerPetalSpriteTemplate, ANIM_ATTACKER, 2, 80, 1, 64
 	delay 2
-	createsprite gSweetScentPetalSpriteTemplate, ANIM_ATTACKER, 2, 58, 0, 120
+	createsprite gNaturePowerPetalSpriteTemplate, ANIM_ATTACKER, 2, 58, 0, 120
 	delay 2
-	createsprite gSweetScentPetalSpriteTemplate, ANIM_ATTACKER, 2, 100, 0, 120
+	createsprite gNaturePowerPetalSpriteTemplate, ANIM_ATTACKER, 2, 100, 0, 120
 	delay 2
-	createsprite gSweetScentPetalSpriteTemplate, ANIM_ATTACKER, 2, 90, 0, 64
+	createsprite gNaturePowerPetalSpriteTemplate, ANIM_ATTACKER, 2, 90, 0, 64
 	delay 2
-	createsprite gSweetScentPetalSpriteTemplate, ANIM_ATTACKER, 2, 48, 0, 64
+	createsprite gNaturePowerPetalSpriteTemplate, ANIM_ATTACKER, 2, 48, 0, 64
 	delay 2
-	createsprite gSweetScentPetalSpriteTemplate, ANIM_ATTACKER, 2, 95, 1, 80
+	createsprite gNaturePowerPetalSpriteTemplate, ANIM_ATTACKER, 2, 95, 1, 80
 	delay 2
-	createsprite gSweetScentPetalSpriteTemplate, ANIM_ATTACKER, 2, 100, 0, 120
+	createsprite gNaturePowerPetalSpriteTemplate, ANIM_ATTACKER, 2, 100, 0, 120
 	delay 2
-	createsprite gSweetScentPetalSpriteTemplate, ANIM_ATTACKER, 2, 75, 1, 64
+	createsprite gNaturePowerPetalSpriteTemplate, ANIM_ATTACKER, 2, 75, 1, 64
 	delay 2
-	createsprite gSweetScentPetalSpriteTemplate, ANIM_ATTACKER, 2, 85, 0, 120
+	createsprite gNaturePowerPetalSpriteTemplate, ANIM_ATTACKER, 2, 85, 0, 120
 	delay 2
 	return
 

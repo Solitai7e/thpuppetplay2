@@ -651,7 +651,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_GROWL,
             MOVE_LEECH_SEED,
             MOVE_TACKLE,
-            MOVE_SWEET_SCENT
+            MOVE_NATURE_POWER
         },
         .cool = 5,
         .beauty = 3,
@@ -2413,7 +2413,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_BATTLE_CHANT,
-            MOVE_SWEET_SCENT,
+            MOVE_NATURE_POWER,
             MOVE_STUN_SPORE,
             MOVE_FLASH
         },

@@ -52,7 +52,7 @@
 #define FLDEFF_NOP_48                    48
 #define FLDEFF_ASH_PUFF                  49
 #define FLDEFF_ASH_LAUNCH                50
-#define FLDEFF_SWEET_SCENT               51
+#define FLDEFF_NATURE_POWER               51
 #define FLDEFF_SAND_PILLAR               52
 #define FLDEFF_BUBBLES                   53
 #define FLDEFF_SPARKLE                   54

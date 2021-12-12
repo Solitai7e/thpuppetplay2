@@ -247,7 +247,7 @@ SECTIONS {
         src/contest_ai.o(.text);
         src/battle_anim_sound_tasks.o(.text);
         src/battle_controller_safari.o(.text);
-        src/fldeff_sweetscent.o(.text);
+        src/fldeff_naturepower.o(.text);
         src/battle_anim_effects_3.o(.text);
         src/move_relearner.o(.text);
         src/fldeff_softboiled.o(.text);
@@ -932,7 +932,7 @@ SECTIONS {
         sound/songs/se_m_dive.o(.rodata);
         sound/songs/se_m_earthquake.o(.rodata);
         sound/songs/se_m_twister.o(.rodata);
-        sound/songs/se_m_sweet_scent.o(.rodata);
+        sound/songs/se_m_nature_power.o(.rodata);
         sound/songs/se_m_yawn.o(.rodata);
         sound/songs/se_m_soar.o(.rodata);
         sound/songs/se_m_stat_increase.o(.rodata);

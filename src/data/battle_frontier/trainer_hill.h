@@ -960,7 +960,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_ADREISEN,
                         .heldItem = ITEM_LUM_BERRY,
-                        .moves = {MOVE_TOXIC, MOVE_LEECH_SEED, MOVE_SWEET_SCENT, MOVE_GIGA_DRAIN},
+                        .moves = {MOVE_TOXIC, MOVE_LEECH_SEED, MOVE_NATURE_POWER, MOVE_GIGA_DRAIN},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 252,
@@ -1618,7 +1618,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_APATCHOULI,
                         .heldItem = ITEM_WHITE_HERB,
-                        .moves = {MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_SWEET_SCENT, MOVE_BLADE_FLASH},
+                        .moves = {MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_NATURE_POWER, MOVE_BLADE_FLASH},
                         .level = 0,
                         .ppBonuses = 0,
                         .attackEV = 120,
@@ -1640,7 +1640,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_CKOTOHIME,
                         .heldItem = ITEM_MENTAL_HERB,
-                        .moves = {MOVE_SWEET_SCENT, MOVE_BATTLE_CHANT, MOVE_STUN_SPORE, MOVE_GUNK_SHOT},
+                        .moves = {MOVE_NATURE_POWER, MOVE_BATTLE_CHANT, MOVE_STUN_SPORE, MOVE_GUNK_SHOT},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 255,
@@ -3712,7 +3712,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_SANAE,
                                             .heldItem = ITEM_MIRACLE_SEED,
-                                            .moves = {MOVE_SOLAR_BEAM, MOVE_SYNTHESIS, MOVE_GROWTH, MOVE_SWEET_SCENT},
+                                            .moves = {MOVE_SOLAR_BEAM, MOVE_SYNTHESIS, MOVE_GROWTH, MOVE_NATURE_POWER},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 252,

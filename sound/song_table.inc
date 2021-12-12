@@ -237,7 +237,7 @@ gSongTable::
 	song se_m_dive, 1, 1
 	song se_m_earthquake, 2, 2
 	song se_m_twister, 2, 2
-	song se_m_sweet_scent, 1, 1
+	song se_m_nature_power, 1, 1
 	song se_m_yawn, 1, 1
 	song se_m_soar, 2, 2
 	song se_m_stat_increase, 1, 1

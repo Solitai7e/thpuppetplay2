@@ -580,7 +580,7 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
         .facilityClass = FACILITY_CLASS_AROMA_LADY,
         .trainerName = _("JILLIAN"),
         .speechBefore = {EC_WORD_WHAT, EC_WORD_IS, EC_WORD_THAT, EC_WORD_I, EC_WORD_SMELL, EC_WORD_QUES},
-        .speechWin = {EC_WORD_IT_S, EC_WORD_THE, EC_MOVE(SWEET_SCENT), EC_WORD_OF, EC_WORD_TASTY, EC_WORD_WATER},
+        .speechWin = {EC_WORD_IT_S, EC_WORD_THE, EC_MOVE(NATURE_POWER), EC_WORD_OF, EC_WORD_TASTY, EC_WORD_WATER},
         .speechLose = {EC_WORD_IT_S, EC_WORD_YOUR, EC_WORD_OFFENSIVE, EC_WORD_STENCH, EC_WORD_THAT_S, EC_WORD_WHAT},
         .monSet = gBattleFrontierTrainerMons_Jillian
     },
@@ -916,7 +916,7 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
         .facilityClass = FACILITY_CLASS_EXPERT_M,
         .trainerName = _("EVAN"),
         .speechBefore = {EC_WORD_EVERY, EC_WORD_BATTLE, EC_WORD_HAS, EC_WORD_A, EC_WORD_SMELL, EC_EMPTY_WORD},
-        .speechWin = {EC_WORD_OH, EC_WORD_EXCL, EC_WORD_THE, EC_MOVE(SWEET_SCENT), EC_WORD_OF, EC_WORD_VICTORY},
+        .speechWin = {EC_WORD_OH, EC_WORD_EXCL, EC_WORD_THE, EC_MOVE(NATURE_POWER), EC_WORD_OF, EC_WORD_VICTORY},
         .speechLose = {EC_WORD_THE, EC_WORD_AWFUL, EC_WORD_STENCH, EC_WORD_OF, EC_WORD_A, EC_WORD_LOSS},
         .monSet = gBattleFrontierTrainerMons_Evan
     },
@@ -1115,7 +1115,7 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
     [FRONTIER_TRAINER_SOFIA] = {
         .facilityClass = FACILITY_CLASS_AROMA_LADY,
         .trainerName = _("SOFIA"),
-        .speechBefore = {EC_POKEMON(AMARISA), EC_WORD_PROBABLY, EC_WORD_HAS, EC_WORD_A, EC_MOVE(SWEET_SCENT), EC_EMPTY_WORD},
+        .speechBefore = {EC_POKEMON(AMARISA), EC_WORD_PROBABLY, EC_WORD_HAS, EC_WORD_A, EC_MOVE(NATURE_POWER), EC_EMPTY_WORD},
         .speechWin = {EC_WORD_THAT_S, EC_WORD_THE, EC_WORD_FEELING, EC_WORD_THAT, EC_WORD_I, EC_WORD_GET},
         .speechLose = {EC_WORD_I, EC_WORD_WORK, EC_WORD_AT, EC_WORD_THE, EC_WORD_DEPT_STORE, EC_EMPTY_WORD},
         .monSet = gBattleFrontierTrainerMons_Sofia
@@ -2388,7 +2388,7 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
         .facilityClass = FACILITY_CLASS_AROMA_LADY,
         .trainerName = _("ABBY"),
         .speechBefore = {EC_WORD_I, EC_WORD_LIKE, EC_WORD_A, EC_WORD_TRAINER, EC_WORD_THAT_S, EC_WORD_REFRESHING},
-        .speechWin = {EC_WORD_VICTORY, EC_WORD_HAS, EC_WORD_A, EC_MOVE(SWEET_SCENT), EC_WORD_EXCL, EC_EMPTY_WORD},
+        .speechWin = {EC_WORD_VICTORY, EC_WORD_HAS, EC_WORD_A, EC_MOVE(NATURE_POWER), EC_WORD_EXCL, EC_EMPTY_WORD},
         .speechLose = {EC_WORD_WHAT, EC_WORD_AN, EC_WORD_AWFUL, EC_WORD_STENCH, EC_WORD_EXCL, EC_EMPTY_WORD},
         .monSet = gBattleFrontierTrainerMons_Abby
     },

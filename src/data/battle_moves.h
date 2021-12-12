@@ -3220,7 +3220,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 
-    [MOVE_SWEET_SCENT] =
+    [MOVE_NATURE_POWER] =
     {
         .effect = EFFECT_LOW_KICK,
         .split = 0,

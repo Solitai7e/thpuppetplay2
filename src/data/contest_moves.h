@@ -614,7 +614,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_SWEET_SCENT},
+        .comboMoves = {COMBO_STARTER_NATURE_POWER},
     },
 
     [MOVE_STUN_SPORE] =
@@ -622,7 +622,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_SWEET_SCENT},
+        .comboMoves = {COMBO_STARTER_NATURE_POWER},
     },
 
     [MOVE_SLEEP_POWDER] =
@@ -630,7 +630,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_SWEET_SCENT},
+        .comboMoves = {COMBO_STARTER_NATURE_POWER},
     },
 
     [MOVE_BATTLE_CHANT] =
@@ -1833,11 +1833,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_SWEET_SCENT] =
+    [MOVE_NATURE_POWER] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_CUTE,
-        .comboStarterId = COMBO_STARTER_SWEET_SCENT,
+        .comboStarterId = COMBO_STARTER_NATURE_POWER,
         .comboMoves = {0},
     },
 

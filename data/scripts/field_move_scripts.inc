@@ -281,9 +281,9 @@ Text_WantToSurface:
 	.string "Light is filtering down from above.\n"
 	.string "Would you like to use DIVE?$"
 
-EventScript_FailSweetScent::
-	msgbox Text_FailSweetScent, MSGBOX_SIGN
+EventScript_FailNaturePower::
+	msgbox Text_FailNaturePower, MSGBOX_SIGN
 	end
 
-Text_FailSweetScent:
+Text_FailNaturePower:
 	.string "Looks like there's nothing here…$"

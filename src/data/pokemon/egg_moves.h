@@ -126,7 +126,7 @@ const u16 gEggMoves[] = {
               MOVE_COUNTER,
               MOVE_PSYBEAM,
               MOVE_FLAIL,
-              MOVE_SWEET_SCENT,
+              MOVE_NATURE_POWER,
               MOVE_LIGHT_SCREEN,
               MOVE_PURSUIT),
 
@@ -742,7 +742,7 @@ const u16 gEggMoves[] = {
               MOVE_ASTONISH),
 
     egg_moves(TSAKUYA,
-              MOVE_SWEET_SCENT),
+              MOVE_NATURE_POWER),
 
     egg_moves(HSAKUYA,
               MOVE_HARDEN,
@@ -942,7 +942,7 @@ const u16 gEggMoves[] = {
     egg_moves(AHINA,
               MOVE_SYNTHESIS,
               MOVE_RAZOR_LEAF,
-              MOVE_SWEET_SCENT,
+              MOVE_NATURE_POWER,
               MOVE_LEECH_SEED,
               MOVE_FLAIL,
               MOVE_WATER_GUN),

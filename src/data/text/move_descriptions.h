@@ -917,7 +917,7 @@ static const u8 sRapidSpinDescription[] = _(
     "Spins the body at high\n"
     "speed to strike the foe.");
 
-static const u8 sSweetScentDescription[] = _(
+static const u8 sNaturePowerDescription[] = _(
     "Allures the foe to reduce\n"
     "evasiveness.");
 
@@ -1649,7 +1649,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_ENCORE - 1] = sEncoreDescription,
     [MOVE_PURSUIT - 1] = sPursuitDescription,
     [MOVE_RAPID_SPIN - 1] = sRapidSpinDescription,
-    [MOVE_SWEET_SCENT - 1] = sSweetScentDescription,
+    [MOVE_NATURE_POWER - 1] = sNaturePowerDescription,
     [MOVE_STEEL_FIST - 1] = sSteelFistDescription,
     [MOVE_METAL_CLAW - 1] = sMetalClawDescription,
     [MOVE_VITAL_THROW - 1] = sVitalThrowDescription,

@@ -1846,7 +1846,7 @@ const struct BardSound gBardSounds_Moves[MOVES_COUNT][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND
     },
-    [MOVE_SWEET_SCENT] = {
+    [MOVE_NATURE_POWER] = {
         { 0xe, 0x0, 0x0, 0x0, 0x0},
         { 0xb, 0x0, 0x0, 0x0, 0x0},
         { 0x33, 0x0, 0x0, 0x0, 0x0},

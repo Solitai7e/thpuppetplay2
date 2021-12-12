@@ -62,8 +62,8 @@ static void AnimGreenStar_Step1(struct Sprite *);
 static void AnimGreenStar_Step2(struct Sprite *);
 static void AnimGreenStar_Callback(struct Sprite *);
 static void AnimWeakFrustrationAngerMark(struct Sprite *);
-static void AnimSweetScentPetal(struct Sprite *);
-static void AnimSweetScentPetal_Step(struct Sprite *);
+static void AnimNaturePowerPetal(struct Sprite *);
+static void AnimNaturePowerPetal_Step(struct Sprite *);
 static void AnimPainSplitProjectile(struct Sprite *);
 static void AnimFlatterConfetti(struct Sprite *);
 static void AnimFlatterConfetti_Step(struct Sprite *);
@@ -668,7 +668,7 @@ const struct SpriteTemplate gWeakFrustrationAngerMarkSpriteTemplate =
     .callback = AnimWeakFrustrationAngerMark,
 };
 
-const union AnimCmd gSweetScentPetalAnimCmds1[] =
+const union AnimCmd gNaturePowerPetalAnimCmds1[] =
 {
     ANIMCMD_FRAME(0, 8),
     ANIMCMD_FRAME(1, 8),
@@ -681,7 +681,7 @@ const union AnimCmd gSweetScentPetalAnimCmds1[] =
     ANIMCMD_JUMP(0),
 };
 
-const union AnimCmd gSweetScentPetalAnimCmds2[] =
+const union AnimCmd gNaturePowerPetalAnimCmds2[] =
 {
     ANIMCMD_FRAME(0, 8, .hFlip = TRUE),
     ANIMCMD_FRAME(1, 8, .hFlip = TRUE),
@@ -694,28 +694,28 @@ const union AnimCmd gSweetScentPetalAnimCmds2[] =
     ANIMCMD_JUMP(0),
 };
 
-const union AnimCmd gSweetScentPetalAnimCmds3[] =
+const union AnimCmd gNaturePowerPetalAnimCmds3[] =
 {
     ANIMCMD_FRAME(0, 8),
     ANIMCMD_END,
 };
 
-const union AnimCmd *const gSweetScentPetalAnimCmdTable[] =
+const union AnimCmd *const gNaturePowerPetalAnimCmdTable[] =
 {
-    gSweetScentPetalAnimCmds1,
-    gSweetScentPetalAnimCmds2,
-    gSweetScentPetalAnimCmds3,
+    gNaturePowerPetalAnimCmds1,
+    gNaturePowerPetalAnimCmds2,
+    gNaturePowerPetalAnimCmds3,
 };
 
-const struct SpriteTemplate gSweetScentPetalSpriteTemplate =
+const struct SpriteTemplate gNaturePowerPetalSpriteTemplate =
 {
     .tileTag = ANIM_TAG_PINK_PETAL,
     .paletteTag = ANIM_TAG_PINK_PETAL,
     .oam = &gOamData_AffineOff_ObjNormal_8x8,
-    .anims = gSweetScentPetalAnimCmdTable,
+    .anims = gNaturePowerPetalAnimCmdTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimSweetScentPetal,
+    .callback = AnimNaturePowerPetal,
 };
 
 static const u16 sUnusedPalette[] = INCBIN_U16("graphics/battle_anims/unused/unknown.gbapal");
@@ -2792,7 +2792,7 @@ static void AnimTask_RockMonBackAndForth_Step(u8 taskId)
 // arg 0: initial y pixel offset
 // arg 1: sprite anim num
 // arg 2: unused
-static void AnimSweetScentPetal(struct Sprite *sprite)
+static void AnimNaturePowerPetal(struct Sprite *sprite)
 {
     if (GetBattlerSide(gBattleAnimAttacker) == B_SIDE_PLAYER)
     {
@@ -2807,10 +2807,10 @@ static void AnimSweetScentPetal(struct Sprite *sprite)
 
     sprite->data[2] = gBattleAnimArgs[2];
     StartSpriteAnim(sprite, gBattleAnimArgs[1]);
-    sprite->callback = AnimSweetScentPetal_Step;
+    sprite->callback = AnimNaturePowerPetal_Step;
 }
 
-static void AnimSweetScentPetal_Step(struct Sprite *sprite)
+static void AnimNaturePowerPetal_Step(struct Sprite *sprite)
 {
     sprite->data[0] += 3;
     if (GetBattlerSide(gBattleAnimAttacker) == B_SIDE_PLAYER)
