@@ -1463,7 +1463,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_SING,
             MOVE_SOFT_BOILED,
             MOVE_MIND_BOMB,
-            MOVE_DOUBLE_EDGE
+            MOVE_HEAD_SMASH
         },
         .cool = 20,
         .beauty = 35,

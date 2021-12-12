@@ -506,7 +506,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_TAKE_DOWN] =
     {
-        .effect = EFFECT_DOUBLE_EDGE,
+        .effect = EFFECT_HEAD_SMASH,
         .split = 0,
         .power = 120,
         .type = TYPE_BEAST,
@@ -532,9 +532,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 
-    [MOVE_DOUBLE_EDGE] =
+    [MOVE_HEAD_SMASH] =
     {
-        .effect = EFFECT_DOUBLE_EDGE,
+        .effect = EFFECT_HEAD_SMASH,
         .split = 0,
         .power = 120,
         .type = TYPE_EARTH,
@@ -3138,7 +3138,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_BRAVE_BIRD] =
     {
-        .effect = EFFECT_DOUBLE_EDGE,
+        .effect = EFFECT_HEAD_SMASH,
         .split = 0,
         .power = 120,
         .type = TYPE_FLYING,
@@ -4412,7 +4412,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_OVERHEAT] =
     {
-        .effect = EFFECT_DOUBLE_EDGE,
+        .effect = EFFECT_HEAD_SMASH,
         .split = 0,
         .power = 120,
         .type = TYPE_FIRE,
@@ -4818,7 +4818,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_VOLT_TACKLE] =
     {
-        .effect = EFFECT_DOUBLE_EDGE,
+        .effect = EFFECT_HEAD_SMASH,
         .split = 0,
         .power = 120,
         .type = TYPE_WIND,

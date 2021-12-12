@@ -149,7 +149,7 @@ static const u8 sThrashDescription[] = _(
     "A rampage of 2 to 3 turns\n"
     "that confuses the user.");
 
-static const u8 sDoubleEdgeDescription[] = _(
+static const u8 sHeadSmashDescription[] = _(
     "A life-risking tackle that\n"
     "also hurts the user.");
 
@@ -1457,7 +1457,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_WRAP - 1] = sWrapDescription,
     [MOVE_TAKE_DOWN - 1] = sTakeDownDescription,
     [MOVE_THRASH - 1] = sThrashDescription,
-    [MOVE_DOUBLE_EDGE - 1] = sDoubleEdgeDescription,
+    [MOVE_HEAD_SMASH - 1] = sHeadSmashDescription,
     [MOVE_TAIL_WHIP - 1] = sTailWhipDescription,
     [MOVE_POISON_STING - 1] = sPoisonStingDescription,
     [MOVE_SEALING_NEEDLE - 1] = sSealingNeedleDescription,

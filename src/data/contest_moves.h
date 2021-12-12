@@ -297,7 +297,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_RAGE},
     },
 
-    [MOVE_DOUBLE_EDGE] =
+    [MOVE_HEAD_SMASH] =
     {
         .effect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
         .contestCategory = CONTEST_CATEGORY_TOUGH,

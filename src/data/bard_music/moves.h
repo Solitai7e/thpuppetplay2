@@ -310,7 +310,7 @@ const struct BardSound gBardSounds_Moves[MOVES_COUNT][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND
     },
-    [MOVE_DOUBLE_EDGE] = {
+    [MOVE_HEAD_SMASH] = {
         { 0x2c, 0x0, 0x0, 0x0, 0x0},
         { 0x24, 0x0, 0x0, 0x0, 0x0},
         { 0xa, 0x0, 0x0, 0x0, 0x0},

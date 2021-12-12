@@ -16,7 +16,7 @@
 #define TUTOR_MOVE_SWORDS_DANCE    1
 #define TUTOR_MOVE_GIGA_IMPACT       2
 #define TUTOR_MOVE_BODY_SLAM       3
-#define TUTOR_MOVE_DOUBLE_EDGE     4
+#define TUTOR_MOVE_HEAD_SMASH     4
 #define TUTOR_MOVE_COUNTER         5
 #define TUTOR_MOVE_SEISMIC_TOSS    6
 #define TUTOR_MOVE_MIMIC           7

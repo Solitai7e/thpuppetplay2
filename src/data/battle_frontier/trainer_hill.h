@@ -1238,7 +1238,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_ASUNNYMILK,
                         .heldItem = ITEM_FOCUS_BAND,
-                        .moves = {MOVE_PSYCH_UP, MOVE_DOUBLE_EDGE, MOVE_SHADOW_BALL, MOVE_STEEL_FIST},
+                        .moves = {MOVE_PSYCH_UP, MOVE_HEAD_SMASH, MOVE_SHADOW_BALL, MOVE_STEEL_FIST},
                         .level = 0,
                         .ppBonuses = 0,
                         .attackEV = 252,
@@ -4334,7 +4334,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_SHINGYOKUO,
                                             .heldItem = ITEM_LEFTOVERS,
-                                            .moves = {MOVE_DOUBLE_EDGE, MOVE_SHADOW_BALL, MOVE_ATTRACT, MOVE_MILK_DRINK},
+                                            .moves = {MOVE_HEAD_SMASH, MOVE_SHADOW_BALL, MOVE_ATTRACT, MOVE_MILK_DRINK},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 6,
@@ -4356,7 +4356,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_HMYSTIA,
                                             .heldItem = ITEM_QUICK_CLAW,
-                                            .moves = {MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_BRICK_BREAK, MOVE_BLADE_FLASH},
+                                            .moves = {MOVE_HEAD_SMASH, MOVE_CRUNCH, MOVE_BRICK_BREAK, MOVE_BLADE_FLASH},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 252,
@@ -5123,7 +5123,7 @@ static const struct TrHillFloor sDataTagExpert_Floors[] = {
                                         {
                                             .species = SPECIES_SMEDICINE,
                                             .heldItem = ITEM_FOCUS_BAND,
-                                            .moves = {MOVE_PERISH_SONG, MOVE_DOUBLE_EDGE, MOVE_PROTECT, MOVE_TORMENT},
+                                            .moves = {MOVE_PERISH_SONG, MOVE_HEAD_SMASH, MOVE_PROTECT, MOVE_TORMENT},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 252,

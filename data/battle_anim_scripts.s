@@ -54,7 +54,7 @@ gBattleAnims_Moves::
 	.4byte Move_WRAP
 	.4byte Move_TAKE_DOWN
 	.4byte Move_THRASH
-	.4byte Move_DOUBLE_EDGE
+	.4byte Move_HEAD_SMASH
 	.4byte Move_TAIL_WHIP
 	.4byte Move_POISON_STING
 	.4byte Move_SEALING_NEEDLE
@@ -779,7 +779,7 @@ Move_TAKE_DOWN:
 	blendoff
 	end
 
-Move_DOUBLE_EDGE:
+Move_HEAD_SMASH:
 	loadspritegfx ANIM_TAG_IMPACT
 	playsewithpan SE_M_SWIFT, SOUND_PAN_ATTACKER
 	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 2, 4, 2, RGB_WHITE, 10, 0, 0

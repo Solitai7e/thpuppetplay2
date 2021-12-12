@@ -236,7 +236,7 @@ const u16 gEggMoves[] = {
               MOVE_DOUBLE_KICK,
               MOVE_HYPNOSIS,
               MOVE_CHARM,
-              MOVE_DOUBLE_EDGE),
+              MOVE_HEAD_SMASH),
 
     egg_moves(SATORI,
               MOVE_SAFEGUARD,
@@ -483,7 +483,7 @@ const u16 gEggMoves[] = {
     egg_moves(BYAKUREN,
               MOVE_LICK,
               MOVE_CHARM,
-              MOVE_DOUBLE_EDGE,
+              MOVE_HEAD_SMASH,
               MOVE_CURSE,
               MOVE_FISSURE,
               MOVE_SUBSTITUTE),
@@ -527,7 +527,7 @@ const u16 gEggMoves[] = {
               MOVE_HEART_BREAK),
 
     egg_moves(CHIYURI,
-              MOVE_DOUBLE_EDGE,
+              MOVE_HEAD_SMASH,
               MOVE_PURSUIT,
               MOVE_SLASH,
               MOVE_FOCUS_ENERGY,
@@ -633,7 +633,7 @@ const u16 gEggMoves[] = {
     egg_moves(SHINKI,
               MOVE_CONFUSION,
               MOVE_ENCORE,
-              MOVE_DOUBLE_EDGE,
+              MOVE_HEAD_SMASH,
               MOVE_REFLECT,
               MOVE_AMNESIA,
               MOVE_HELPING_HAND,
@@ -781,7 +781,7 @@ const u16 gEggMoves[] = {
               MOVE_ANCIENT_POWER,
               MOVE_EARTH_POWER,
               MOVE_ICE_SHARD,
-              MOVE_DOUBLE_EDGE),
+              MOVE_HEAD_SMASH),
 
     egg_moves(SYOUMU,
               MOVE_ROCK_WRECKER,
@@ -1001,7 +1001,7 @@ const u16 gEggMoves[] = {
               MOVE_HEARTS_EYE),
 
     egg_moves(DMEILING,
-              MOVE_DOUBLE_EDGE,
+              MOVE_HEAD_SMASH,
               MOVE_THRASH,
               MOVE_SWAGGER,
               MOVE_SNORE,
@@ -1068,7 +1068,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(ATEWI,
               MOVE_HYDRO_PUMP,
-              MOVE_DOUBLE_EDGE,
+              MOVE_HEAD_SMASH,
               MOVE_THRASH),
 
     egg_moves(DMINORIKO,
@@ -1220,7 +1220,7 @@ const u16 gEggMoves[] = {
     egg_moves(SMEDICINE,
               MOVE_BATON_PASS,
               MOVE_FAINT_ATTACK,
-              MOVE_DOUBLE_EDGE,
+              MOVE_HEAD_SMASH,
               MOVE_MAGIC_COAT,
               MOVE_CURSE,
               MOVE_SUBSTITUTE),

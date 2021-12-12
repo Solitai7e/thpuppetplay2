@@ -206,29 +206,29 @@ MoveTutor_EventScript_DynamicPunchTaught::
 	release
 	end
 
-SootopolisCity_PokemonCenter_1F_EventScript_DoubleEdgeTutor::
+SootopolisCity_PokemonCenter_1F_EventScript_HeadSmashTutor::
 	lock
 	faceplayer
-	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_DOUBLE_EDGE, MoveTutor_EventScript_DoubleEdgeTaught
-	msgbox MoveTutor_Text_DoubleEdgeTeach, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_DoubleEdgeDeclined
+	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_HEAD_SMASH, MoveTutor_EventScript_HeadSmashTaught
+	msgbox MoveTutor_Text_HeadSmashTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_HeadSmashDeclined
 	call MoveTutor_EventScript_CanOnlyBeLearnedOnce
-	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_DoubleEdgeDeclined
-	msgbox MoveTutor_Text_DoubleEdgeWhichMon, MSGBOX_DEFAULT
-	setvar VAR_0x8005, TUTOR_MOVE_DOUBLE_EDGE
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_HeadSmashDeclined
+	msgbox MoveTutor_Text_HeadSmashWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TUTOR_MOVE_HEAD_SMASH
 	call MoveTutor_EventScript_OpenPartyMenu
-	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_DoubleEdgeDeclined
-	setflag FLAG_MOVE_TUTOR_TAUGHT_DOUBLE_EDGE
-	goto MoveTutor_EventScript_DoubleEdgeTaught
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_HeadSmashDeclined
+	setflag FLAG_MOVE_TUTOR_TAUGHT_HEAD_SMASH
+	goto MoveTutor_EventScript_HeadSmashTaught
 	end
 
-MoveTutor_EventScript_DoubleEdgeDeclined::
-	msgbox MoveTutor_Text_DoubleEdgeDeclined, MSGBOX_DEFAULT
+MoveTutor_EventScript_HeadSmashDeclined::
+	msgbox MoveTutor_Text_HeadSmashDeclined, MSGBOX_DEFAULT
 	release
 	end
 
-MoveTutor_EventScript_DoubleEdgeTaught::
-	msgbox MoveTutor_Text_DoubleEdgeTaught, MSGBOX_DEFAULT
+MoveTutor_EventScript_HeadSmashTaught::
+	msgbox MoveTutor_Text_HeadSmashTaught, MSGBOX_DEFAULT
 	release
 	end
 

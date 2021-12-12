@@ -188,26 +188,26 @@ MoveTutor_Text_DynamicPunchTaught:
 	.string "I want you to win at the MOSSDEEP GYM\n"
 	.string "using that DYNAMICPUNCH!$"
 
-MoveTutor_Text_DoubleEdgeTeach:
+MoveTutor_Text_HeadSmashTeach:
 	.string "Sigh…\p"
 	.string "SOOTOPOLIS's GYM LEADER is really\n"
 	.string "lovably admirable.\p"
 	.string "But that also means I have many\n"
 	.string "rivals for his attention.\p"
-	.string "He's got appeal with a DOUBLE-EDGE.\n"
+	.string "He's got appeal with a HEAD-SMASH.\n"
 	.string "I couldn't even catch his eye.\p"
 	.string "Please, let me teach your POKéMON\n"
-	.string "the move DOUBLE-EDGE!$"
+	.string "the move HEAD-SMASH!$"
 
-MoveTutor_Text_DoubleEdgeDeclined:
+MoveTutor_Text_HeadSmashDeclined:
 	.string "Oh…\n"
 	.string "Even you rejected me…$"
 
-MoveTutor_Text_DoubleEdgeWhichMon:
+MoveTutor_Text_HeadSmashWhichMon:
 	.string "Okay, which POKéMON should I teach\n"
-	.string "DOUBLE-EDGE?$"
+	.string "HEAD-SMASH?$"
 
-MoveTutor_Text_DoubleEdgeTaught:
+MoveTutor_Text_HeadSmashTaught:
 	.string "I won't live for love anymore!\n"
 	.string "I'll become tough!$"
 

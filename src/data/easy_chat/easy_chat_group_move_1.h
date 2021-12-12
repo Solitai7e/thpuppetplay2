@@ -28,7 +28,7 @@ const u16 gEasyChatGroup_Move1[] = {
     MOVE_DIG,
     MOVE_DISABLE,
     MOVE_SHADOW_HIT,
-    MOVE_DOUBLE_EDGE,
+    MOVE_HEAD_SMASH,
     MOVE_DOUBLE_SLAP,
     MOVE_EARTHQUAKE,
     MOVE_ENCORE,

@@ -2807,7 +2807,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = BattleScript_AtkDefDown;
                 break;
-            case MOVE_EFFECT_RECOIL_33: // Double Edge
+            case MOVE_EFFECT_RECOIL_33: // Head Smash
                 gBattleMoveDamage = gHpDealt / 3;
                 if (gBattleMoveDamage == 0)
                     gBattleMoveDamage = 1;

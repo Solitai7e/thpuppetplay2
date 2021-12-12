@@ -215,7 +215,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectSnatch                 @ EFFECT_SNATCH
 	.4byte BattleScript_EffectLowKick                @ EFFECT_LOW_KICK
 	.4byte BattleScript_EffectSecretPower            @ EFFECT_SECRET_POWER
-	.4byte BattleScript_EffectDoubleEdge             @ EFFECT_DOUBLE_EDGE
+	.4byte BattleScript_EffectHeadSmash             @ EFFECT_HEAD_SMASH
 	.4byte BattleScript_EffectTeeterDance            @ EFFECT_TEETER_DANCE
 	.4byte BattleScript_EffectBurnHit                @ EFFECT_BLAZE_KICK
 	.4byte BattleScript_EffectMudSlap               @ EFFECT_MUD_SLAP
@@ -2561,7 +2561,7 @@ BattleScript_EffectSecretPower::
 	getsecretpowereffect
 	goto BattleScript_EffectHit
 
-BattleScript_EffectDoubleEdge::
+BattleScript_EffectHeadSmash::
 	setmoveeffect MOVE_EFFECT_RECOIL_33 | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
 	goto BattleScript_EffectHit
 
