@@ -1131,7 +1131,7 @@ AI_CV_DefenseDown_End:
 AI_CV_SpeedDownFromChance:
 	if_move MOVE_ICY_WIND, AI_CV_SpeedDown
 	if_move MOVE_ROCK_TOMB, AI_CV_SpeedDown
-	if_move MOVE_MUD_SHOT, AI_CV_SpeedDown
+	if_move MOVE_EARTH_POWER, AI_CV_SpeedDown
 	end
 
 AI_CV_SpeedDown:

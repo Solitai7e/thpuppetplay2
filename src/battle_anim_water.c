@@ -187,7 +187,7 @@ const struct SpriteTemplate gHydroPumpOrbSpriteTemplate =
     .callback = AnimToTargetInSinWave,
 };
 
-const struct SpriteTemplate gMudShotOrbSpriteTemplate =
+const struct SpriteTemplate gEarthPowerOrbSpriteTemplate =
 {
     .tileTag = ANIM_TAG_BROWN_ORB,
     .paletteTag = ANIM_TAG_BROWN_ORB,

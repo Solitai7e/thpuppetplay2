@@ -2721,7 +2721,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_MUD_SHOT] =
+    [MOVE_EARTH_POWER] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,

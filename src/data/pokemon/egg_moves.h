@@ -779,7 +779,7 @@ const u16 gEggMoves[] = {
               MOVE_BODY_SLAM,
               MOVE_ROCK_WRECKER,
               MOVE_ANCIENT_POWER,
-              MOVE_MUD_SHOT,
+              MOVE_EARTH_POWER,
               MOVE_ICE_SHARD,
               MOVE_DOUBLE_EDGE),
 
@@ -995,7 +995,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(SFLANDRE,
               MOVE_FORESIGHT,
-              MOVE_MUD_SHOT,
+              MOVE_EARTH_POWER,
               MOVE_PSYBEAM,
               MOVE_HYDRO_PUMP,
               MOVE_HEARTS_EYE),

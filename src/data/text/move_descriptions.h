@@ -1361,7 +1361,7 @@ static const u8 sBounceDescription[] = _(
     "Bounces up, then down the\n"
     "next turn. May paralyze.");
 
-static const u8 sMudShotDescription[] = _(
+static const u8 sEarthPowerDescription[] = _(
     "Hurls mud at the foe and\n"
     "reduces SPEED.");
 
@@ -1760,7 +1760,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_FRENZY_PLANT - 1] = sFrenzyPlantDescription,
     [MOVE_BULK_UP - 1] = sBulkUpDescription,
     [MOVE_BOUNCE - 1] = sBounceDescription,
-    [MOVE_MUD_SHOT - 1] = sMudShotDescription,
+    [MOVE_EARTH_POWER - 1] = sEarthPowerDescription,
     [MOVE_POISON_JAB - 1] = sPoisonJabDescription,
     [MOVE_COVET - 1] = sCovetDescription,
     [MOVE_VOLT_TACKLE - 1] = sVoltTackleDescription,

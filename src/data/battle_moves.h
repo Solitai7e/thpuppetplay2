@@ -4774,7 +4774,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 
-    [MOVE_MUD_SHOT] =
+    [MOVE_EARTH_POWER] =
     {
         .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
         .split = 0,

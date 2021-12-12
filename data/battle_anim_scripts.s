@@ -357,7 +357,7 @@ gBattleAnims_Moves::
 	.4byte Move_FRENZY_PLANT
 	.4byte Move_BULK_UP
 	.4byte Move_BOUNCE
-	.4byte Move_MUD_SHOT
+	.4byte Move_EARTH_POWER
 	.4byte Move_POISON_JAB
 	.4byte Move_COVET
 	.4byte Move_VOLT_TACKLE
@@ -8682,7 +8682,7 @@ HeartBreakFireSpiral:
 	return
 	end
 
-Move_MUD_SHOT:
+Move_EARTH_POWER:
 	loadspritegfx ANIM_TAG_BROWN_ORB
 	monbg ANIM_DEF_PARTNER
 	splitbgprio ANIM_TARGET
@@ -8691,26 +8691,26 @@ Move_MUD_SHOT:
 	delay 6
 	createvisualtask AnimTask_StartSinAnimTimer, 5, 100
 	panse SE_M_WHIRLPOOL, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +1, 0
-	call MudShotOrbs
-	call MudShotOrbs
-	call MudShotOrbs
+	call EarthPowerOrbs
+	call EarthPowerOrbs
+	call EarthPowerOrbs
 	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 3, 0, 43, 1
-	call MudShotOrbs
-	call MudShotOrbs
-	call MudShotOrbs
-	call MudShotOrbs
-	call MudShotOrbs
-	call MudShotOrbs
-	call MudShotOrbs
-	call MudShotOrbs
+	call EarthPowerOrbs
+	call EarthPowerOrbs
+	call EarthPowerOrbs
+	call EarthPowerOrbs
+	call EarthPowerOrbs
+	call EarthPowerOrbs
+	call EarthPowerOrbs
+	call EarthPowerOrbs
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
 	end
-MudShotOrbs:
-	createsprite gMudShotOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, 10, 0, 16
+EarthPowerOrbs:
+	createsprite gEarthPowerOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, 10, 0, 16
 	delay 2
-	createsprite gMudShotOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, 10, 0, 16
+	createsprite gEarthPowerOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, 10, 0, 16
 	delay 2
 	return
 
@@ -9637,7 +9637,7 @@ Move_SECRET_POWER:
 	createvisualtask AnimTask_GetBattleTerrain, 5
 	jumpargeq 0, BATTLE_TERRAIN_GRASS,      Move_NEEDLE_ARM
 	jumpargeq 0, BATTLE_TERRAIN_LONG_GRASS, Move_MAGICAL_LEAF
-	jumpargeq 0, BATTLE_TERRAIN_SAND,       Move_MUD_SHOT
+	jumpargeq 0, BATTLE_TERRAIN_SAND,       Move_EARTH_POWER
 	jumpargeq 0, BATTLE_TERRAIN_UNDERWATER, Move_WATERFALL
 	jumpargeq 0, BATTLE_TERRAIN_WATER,      Move_SURF
 	jumpargeq 0, BATTLE_TERRAIN_POND,       Move_BUBBLE_BEAM
