@@ -1065,7 +1065,7 @@ static const u8 sFollowMeDescription[] = _(
     "Draws attention to make\n"
     "foes attack only the user.");
 
-static const u8 sNaturePowerDescription[] = _(
+static const u8 sRockBulletDescription[] = _(
     "The type of attack varies\n"
     "depending on the location.");
 
@@ -1686,7 +1686,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_FOCUS_PUNCH - 1] = sFocusPunchDescription,
     [MOVE_SMELLING_SALT - 1] = sSmellingSaltDescription,
     [MOVE_FOLLOW_ME - 1] = sFollowMeDescription,
-    [MOVE_NATURE_POWER - 1] = sNaturePowerDescription,
+    [MOVE_ROCK_BULLET - 1] = sRockBulletDescription,
     [MOVE_CHARGE - 1] = sChargeDescription,
     [MOVE_TAUNT - 1] = sTauntDescription,
     [MOVE_HELPING_HAND - 1] = sHelpingHandDescription,

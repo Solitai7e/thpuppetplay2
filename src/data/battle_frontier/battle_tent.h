@@ -832,7 +832,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_AHINA] = {
         .species = SPECIES_AHINA,
-        .moves = {MOVE_SYNTHESIS, MOVE_NATURE_POWER, MOVE_RAIN_DANCE, MOVE_MEGA_DRAIN},
+        .moves = {MOVE_SYNTHESIS, MOVE_ROCK_BULLET, MOVE_RAIN_DANCE, MOVE_MEGA_DRAIN},
         .itemTableId = BATTLE_FRONTIER_ITEM_MYSTIC_WATER,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_DEFENSE | F_EV_SPREAD_HP,
         .nature = NATURE_DOCILE
@@ -846,7 +846,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_ARIN] = {
         .species = SPECIES_ARIN,
-        .moves = {MOVE_FAKE_OUT, MOVE_NATURE_POWER, MOVE_HARDEN, MOVE_ATTRACT},
+        .moves = {MOVE_FAKE_OUT, MOVE_ROCK_BULLET, MOVE_HARDEN, MOVE_ATTRACT},
         .itemTableId = BATTLE_FRONTIER_ITEM_NONE,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_LONELY
@@ -1084,7 +1084,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_DHINA_2] = {
         .species = SPECIES_DHINA,
-        .moves = {MOVE_NATURE_POWER, MOVE_ASTONISH, MOVE_GROWL, MOVE_ABSORB},
+        .moves = {MOVE_ROCK_BULLET, MOVE_ASTONISH, MOVE_GROWL, MOVE_ABSORB},
         .itemTableId = BATTLE_FRONTIER_ITEM_NONE,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK,
         .nature = NATURE_LONELY
@@ -2983,14 +2983,14 @@ const struct FacilityMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_DHINA] = {
         .species = SPECIES_DHINA,
-        .moves = {MOVE_NATURE_POWER, MOVE_WATER_GUN, MOVE_RAIN_DANCE, MOVE_FLASH},
+        .moves = {MOVE_ROCK_BULLET, MOVE_WATER_GUN, MOVE_RAIN_DANCE, MOVE_FLASH},
         .itemTableId = BATTLE_FRONTIER_ITEM_LEFTOVERS,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE | F_EV_SPREAD_HP,
         .nature = NATURE_BASHFUL
     },
     [FALLARBOR_TENT_MON_ARIN] = {
         .species = SPECIES_ARIN,
-        .moves = {MOVE_NATURE_POWER, MOVE_TORMENT, MOVE_SWAGGER, MOVE_REST},
+        .moves = {MOVE_ROCK_BULLET, MOVE_TORMENT, MOVE_SWAGGER, MOVE_REST},
         .itemTableId = BATTLE_FRONTIER_ITEM_CHESTO_BERRY,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK,
         .nature = NATURE_ADAMANT

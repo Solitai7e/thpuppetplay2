@@ -384,7 +384,7 @@ const u16 gEggMoves[] = {
               MOVE_REFLECT,
               MOVE_AMNESIA,
               MOVE_LEECH_SEED,
-              MOVE_NATURE_POWER),
+              MOVE_ROCK_BULLET),
 
     egg_moves(SUNNYMILK,
               MOVE_STOMP,
@@ -502,7 +502,7 @@ const u16 gEggMoves[] = {
               MOVE_COUNTER,
               MOVE_ANCIENT_POWER,
               MOVE_FLAIL,
-              MOVE_NATURE_POWER,
+              MOVE_ROCK_BULLET,
               MOVE_INGRAIN,
               MOVE_NATURE_SOUND),
 
@@ -653,7 +653,7 @@ const u16 gEggMoves[] = {
               MOVE_NATURE_SOUND,
               MOVE_ENCORE,
               MOVE_LEECH_SEED,
-              MOVE_NATURE_POWER,
+              MOVE_ROCK_BULLET,
               MOVE_CURSE,
               MOVE_HELPING_HAND),
 
@@ -1200,7 +1200,7 @@ const u16 gEggMoves[] = {
               MOVE_SLAM,
               MOVE_RAZOR_WIND,
               MOVE_LEECH_SEED,
-              MOVE_NATURE_POWER),
+              MOVE_ROCK_BULLET),
 
     egg_moves(SMARISA,
               MOVE_TAKE_DOWN,

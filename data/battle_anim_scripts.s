@@ -283,7 +283,7 @@ gBattleAnims_Moves::
 	.4byte Move_FOCUS_PUNCH
 	.4byte Move_SMELLING_SALT
 	.4byte Move_FOLLOW_ME
-	.4byte Move_NATURE_POWER
+	.4byte Move_ROCK_BULLET
 	.4byte Move_CHARGE
 	.4byte Move_TAUNT
 	.4byte Move_HELPING_HAND
@@ -6862,8 +6862,8 @@ Move_RAZOR_LEAF:
 	blendoff
 	end
 
-Move_NATURE_POWER:
-	@ No actual animation, uses the animation of a move from sNaturePowerMoves instead
+Move_ROCK_BULLET:
+	@ No actual animation, uses the animation of a move from sRockBulletMoves instead
 
 Move_ANCIENT_POWER:
 	loadspritegfx ANIM_TAG_ROCKS

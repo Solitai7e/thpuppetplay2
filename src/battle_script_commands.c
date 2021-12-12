@@ -751,7 +751,7 @@ static const u8 sFlailHpScaleToPowerTable[] =
     48, 20
 };
 
-static const u16 sNaturePowerMoves[] =
+static const u16 sRockBulletMoves[] =
 {
     [BATTLE_TERRAIN_GRASS]      = MOVE_STUN_SPORE,
     [BATTLE_TERRAIN_LONG_GRASS] = MOVE_RAZOR_LEAF,
@@ -8982,7 +8982,7 @@ static void Cmd_setcharge(void)
 static void Cmd_callterrainattack(void) // nature power
 {
     gHitMarker &= ~HITMARKER_ATTACKSTRING_PRINTED;
-    gCurrentMove = sNaturePowerMoves[gBattleTerrain];
+    gCurrentMove = sRockBulletMoves[gBattleTerrain];
     gBattlerTarget = GetMoveTarget(gCurrentMove, NO_TARGET_OVERRIDE);
     BattleScriptPush(gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect]);
     gBattlescriptCurrInstr++;
