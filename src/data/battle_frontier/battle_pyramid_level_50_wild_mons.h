@@ -108,7 +108,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round3[] =
         .species = SPECIES_CMOKOU,
         .lvl = 37,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_FLAME_WHEEL, MOVE_TAKE_DOWN, MOVE_NONE, MOVE_NONE}
+        .moves = {MOVE_FLAME_WHEEL, MOVE_DOUBLE_EDGE, MOVE_NONE, MOVE_NONE}
     },
     {
         .species = SPECIES_CSUIKA,
@@ -628,7 +628,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round13[] =
         .species = SPECIES_DSUNNYMILK,
         .lvl = 42,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_EXPLOSION, MOVE_TAKE_DOWN, MOVE_NONE, MOVE_NONE}
+        .moves = {MOVE_EXPLOSION, MOVE_DOUBLE_EDGE, MOVE_NONE, MOVE_NONE}
     },
     {
         .species = SPECIES_TSAKUYA,
@@ -872,7 +872,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round17[] =
         .species = SPECIES_ADALICE,
         .lvl = 50,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_EARTHQUAKE, MOVE_TAKE_DOWN, MOVE_SURF, MOVE_ICE_BEAM}
+        .moves = {MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_SURF, MOVE_ICE_BEAM}
     },
     {
         .species = SPECIES_CTOJIKO,
@@ -940,7 +940,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round19[] =
         .species = SPECIES_MOKOU,
         .lvl = 42,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_FIRE_BLAST, MOVE_TAKE_DOWN, MOVE_NONE, MOVE_NONE}
+        .moves = {MOVE_FIRE_BLAST, MOVE_DOUBLE_EDGE, MOVE_NONE, MOVE_NONE}
     },
     {
         .species = SPECIES_CLETTY,

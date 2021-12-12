@@ -4214,7 +4214,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_TBYAKUREN,
                                             .heldItem = ITEM_LEFTOVERS,
-                                            .moves = {MOVE_CONFUSE_RAY, MOVE_SWAGGER, MOVE_PSYCH_UP, MOVE_TAKE_DOWN},
+                                            .moves = {MOVE_CONFUSE_RAY, MOVE_SWAGGER, MOVE_PSYCH_UP, MOVE_DOUBLE_EDGE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .attackEV = 255,

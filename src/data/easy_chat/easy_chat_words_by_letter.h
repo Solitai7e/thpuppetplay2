@@ -1630,7 +1630,7 @@ const u16 gEasyChatWordsByLetter_T[] = {
     EC_MOVE(TAIL_WHIP),
     EC_POKEMON(TSHOU),
     EC_WORD_TAKE,
-    EC_MOVE2(TAKE_DOWN),
+    EC_MOVE2(DOUBLE_EDGE),
     EC_WORD_TAKE_THAT,
     EC_WORD_TALENT,
     EC_WORD_TALK,

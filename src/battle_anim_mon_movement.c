@@ -635,7 +635,7 @@ static void SlideMonToOffsetAndBack_End(struct Sprite *sprite)
 
 // Task to facilitate a two-part translation animation, in which the sprite
 // is first translated in an arc to one position.  Then, it "lunges" to a target
-// x offset.  Used in TAKE_DOWN, for example.
+// x offset.  Used in DOUBLE_EDGE, for example.
 // arg 0: anim bank
 // arg 1: horizontal speed (subpixel)
 // arg 2: wave amplitude

@@ -230,7 +230,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_ROAR,
             MOVE_BITE,
-            MOVE_TAKE_DOWN,
+            MOVE_DOUBLE_EDGE,
             MOVE_HOWL
         },
         .cool = 10,
@@ -539,7 +539,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_METAL_CLAW,
             MOVE_IRON_DEFENSE,
             MOVE_HEADBUTT,
-            MOVE_TAKE_DOWN
+            MOVE_DOUBLE_EDGE
         },
         .cool = 5,
         .beauty = 10,
@@ -1575,7 +1575,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_BINDING_VOICE,
             MOVE_METAL_CLAW,
             MOVE_HARDEN,
-            MOVE_TAKE_DOWN
+            MOVE_DOUBLE_EDGE
         },
         .cool = 30,
         .beauty = 50,
@@ -1687,7 +1687,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_TAUNT,
             MOVE_THIEF,
             MOVE_DOUBLE_TEAM,
-            MOVE_TAKE_DOWN
+            MOVE_DOUBLE_EDGE
         },
         .cool = 40,
         .beauty = 80,
@@ -2163,7 +2163,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_SPITE,
             MOVE_YAWN,
             MOVE_DEFENSE_CURL,
-            MOVE_TAKE_DOWN
+            MOVE_DOUBLE_EDGE
         },
         .cool = 40,
         .beauty = 35,
@@ -2499,7 +2499,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_AGILITY,
             MOVE_SWAGGER,
             MOVE_TAUNT,
-            MOVE_TAKE_DOWN
+            MOVE_DOUBLE_EDGE
         },
         .cool = 140,
         .beauty = 70,
@@ -2526,7 +2526,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_SWEET_KISS,
             MOVE_ATTRACT,
-            MOVE_TAKE_DOWN,
+            MOVE_DOUBLE_EDGE,
             MOVE_CHARM
         },
         .cool = 50,

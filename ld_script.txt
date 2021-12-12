@@ -848,7 +848,7 @@ SECTIONS {
         sound/songs/se_m_sacred_fire.o(.rodata);
         sound/songs/se_m_sacred_fire2.o(.rodata);
         sound/songs/se_m_ember.o(.rodata);
-        sound/songs/midi/se_m_take_down.o(.rodata);
+        sound/songs/midi/se_m_double_edge.o(.rodata);
         sound/songs/se_m_blizzard.o(.rodata);
         sound/songs/se_m_blizzard2.o(.rodata);
         sound/songs/midi/se_m_scratch.o(.rodata);

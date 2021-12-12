@@ -1470,7 +1470,7 @@ static const struct TrainerMonItemCustomMoves sParty_Daphne[] = {
     .lvl = 39,
     .species = SPECIES_AKISISTERS,
     .heldItem = ITEM_NUGGET,
-    .moves = {MOVE_ATTRACT, MOVE_SAFEGUARD, MOVE_TAKE_DOWN, MOVE_WATER_PULSE}
+    .moves = {MOVE_ATTRACT, MOVE_SAFEGUARD, MOVE_DOUBLE_EDGE, MOVE_WATER_PULSE}
     }
 };
 
@@ -3449,7 +3449,7 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     .lvl = 24,
     .species = SPECIES_CKONNGARA,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_OVERHEAT, MOVE_TAKE_DOWN, MOVE_MAGNITUDE, MOVE_SUNNY_DAY}
+    .moves = {MOVE_OVERHEAT, MOVE_DOUBLE_EDGE, MOVE_MAGNITUDE, MOVE_SUNNY_DAY}
     },
     {
     .iv = 200,
@@ -5731,7 +5731,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Madeline3[] = {
     .iv = 20,
     .lvl = 32,
     .species = SPECIES_CKONNGARA,
-    .moves = {MOVE_EMBER, MOVE_TAKE_DOWN, MOVE_MAGNITUDE, MOVE_SUNNY_DAY}
+    .moves = {MOVE_EMBER, MOVE_DOUBLE_EDGE, MOVE_MAGNITUDE, MOVE_SUNNY_DAY}
     }
 };
 
@@ -5746,7 +5746,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Madeline4[] = {
     .iv = 30,
     .lvl = 34,
     .species = SPECIES_CKONNGARA,
-    .moves = {MOVE_FLAMETHROWER, MOVE_TAKE_DOWN, MOVE_MAGNITUDE, MOVE_SUNNY_DAY}
+    .moves = {MOVE_FLAMETHROWER, MOVE_DOUBLE_EDGE, MOVE_MAGNITUDE, MOVE_SUNNY_DAY}
     }
 };
 
@@ -5761,7 +5761,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Madeline5[] = {
     .iv = 40,
     .lvl = 37,
     .species = SPECIES_CYUUGENMAGAN,
-    .moves = {MOVE_FLAMETHROWER, MOVE_TAKE_DOWN, MOVE_EARTHQUAKE, MOVE_SUNNY_DAY}
+    .moves = {MOVE_FLAMETHROWER, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_SUNNY_DAY}
     }
 };
 
@@ -9180,7 +9180,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_KimAndIris[] = {
     .iv = 0,
     .lvl = 35,
     .species = SPECIES_CKONNGARA,
-    .moves = {MOVE_FLAMETHROWER, MOVE_TAKE_DOWN, MOVE_REST, MOVE_EARTHQUAKE}
+    .moves = {MOVE_FLAMETHROWER, MOVE_DOUBLE_EDGE, MOVE_REST, MOVE_EARTHQUAKE}
     }
 };
 
@@ -11040,7 +11040,7 @@ static const struct TrainerMonItemCustomMoves sParty_Norman5[] = {
     .lvl = 57,
     .species = SPECIES_CWRIGGLE,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_TAKE_DOWN, MOVE_PROTECT, MOVE_FIRE_BLAST, MOVE_EARTHQUAKE}
+    .moves = {MOVE_DOUBLE_EDGE, MOVE_PROTECT, MOVE_FIRE_BLAST, MOVE_EARTHQUAKE}
     },
     {
     .iv = 255,

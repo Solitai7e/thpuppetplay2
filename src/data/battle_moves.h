@@ -504,7 +504,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 
-    [MOVE_TAKE_DOWN] =
+    [MOVE_DOUBLE_EDGE] =
     {
         .effect = EFFECT_HEAD_SMASH,
         .split = 0,

@@ -37,7 +37,7 @@
 #define MOVE_TACKLE 33
 #define MOVE_BODY_SLAM 34
 #define MOVE_WRAP 35
-#define MOVE_TAKE_DOWN 36
+#define MOVE_DOUBLE_EDGE 36
 #define MOVE_THRASH 37
 #define MOVE_HEAD_SMASH 38
 #define MOVE_TAIL_WHIP 39

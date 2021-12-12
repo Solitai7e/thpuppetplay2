@@ -141,7 +141,7 @@ static const u8 sWrapDescription[] = _(
     "Wraps and squeezes the foe\n"
     "2 to 5 times with vines, etc.");
 
-static const u8 sTakeDownDescription[] = _(
+static const u8 sDoubleEdgeDescription[] = _(
     "A reckless charge attack\n"
     "that also hurts the user.");
 
@@ -1455,7 +1455,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_TACKLE - 1] = sTackleDescription,
     [MOVE_BODY_SLAM - 1] = sBodySlamDescription,
     [MOVE_WRAP - 1] = sWrapDescription,
-    [MOVE_TAKE_DOWN - 1] = sTakeDownDescription,
+    [MOVE_DOUBLE_EDGE - 1] = sDoubleEdgeDescription,
     [MOVE_THRASH - 1] = sThrashDescription,
     [MOVE_HEAD_SMASH - 1] = sHeadSmashDescription,
     [MOVE_TAIL_WHIP - 1] = sTailWhipDescription,

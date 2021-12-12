@@ -156,7 +156,7 @@
 #define SE_M_SACRED_FIRE            149 // SE_W221
 #define SE_M_SACRED_FIRE2           150 // SE_W221B
 #define SE_M_EMBER                  151 // SE_W052
-#define SE_M_TAKE_DOWN              152 // SE_W036
+#define SE_M_DOUBLE_EDGE              152 // SE_W036
 #define SE_M_BLIZZARD               153 // SE_W059
 #define SE_M_BLIZZARD2              154 // SE_W059B
 #define SE_M_SCRATCH                155 // SE_W010

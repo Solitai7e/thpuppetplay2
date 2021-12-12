@@ -153,7 +153,7 @@ gSongTable::
 	song se_m_sacred_fire, 1, 1
 	song se_m_sacred_fire2, 2, 2
 	song se_m_ember, 1, 1
-	song se_m_take_down, 2, 2
+	song se_m_double_edge, 2, 2
 	song se_m_blizzard, 1, 1
 	song se_m_blizzard2, 1, 1
 	song se_m_scratch, 1, 1

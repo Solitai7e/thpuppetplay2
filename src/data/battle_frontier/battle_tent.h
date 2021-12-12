@@ -1007,7 +1007,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_CKONNGARA_1] = {
         .species = SPECIES_CKONNGARA,
-        .moves = {MOVE_EMBER, MOVE_TAKE_DOWN, MOVE_GROWL, MOVE_FOCUS_ENERGY},
+        .moves = {MOVE_EMBER, MOVE_DOUBLE_EDGE, MOVE_GROWL, MOVE_FOCUS_ENERGY},
         .itemTableId = BATTLE_FRONTIER_ITEM_NONE,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_ATTACK,
         .nature = NATURE_MODEST
@@ -1997,14 +1997,14 @@ const struct FacilityMon gVerdanturfBattleTentMons[NUM_VERDANTURF_TENT_MONS] =
     },
     [VERDANTURF_TENT_MON_ADTEWI_2] = {
         .species = SPECIES_ADTEWI,
-        .moves = {MOVE_TAKE_DOWN, MOVE_METAL_CLAW, MOVE_IRON_DEFENSE, MOVE_ATTRACT},
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_METAL_CLAW, MOVE_IRON_DEFENSE, MOVE_ATTRACT},
         .itemTableId = BATTLE_FRONTIER_ITEM_QUICK_CLAW,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_MODEST
     },
     [VERDANTURF_TENT_MON_AYUYUKO] = {
         .species = SPECIES_AYUYUKO,
-        .moves = {MOVE_HOWL, MOVE_TAKE_DOWN, MOVE_DOUBLE_TEAM, MOVE_SAND_ATTACK},
+        .moves = {MOVE_HOWL, MOVE_DOUBLE_EDGE, MOVE_DOUBLE_TEAM, MOVE_SAND_ATTACK},
         .itemTableId = BATTLE_FRONTIER_ITEM_KINGS_ROCK,
         .evSpread = F_EV_SPREAD_DEFENSE | F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_QUIRKY
@@ -2864,7 +2864,7 @@ const struct FacilityMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_DIKU] = {
         .species = SPECIES_DIKU,
-        .moves = {MOVE_TAKE_DOWN, MOVE_SING, MOVE_GROWL, MOVE_SAFEGUARD},
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_SING, MOVE_GROWL, MOVE_SAFEGUARD},
         .itemTableId = BATTLE_FRONTIER_ITEM_FOCUS_BAND,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE | F_EV_SPREAD_HP,
         .nature = NATURE_QUIRKY

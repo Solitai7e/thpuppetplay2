@@ -79,7 +79,7 @@ const u16 gEggMoves[] = {
     egg_moves(SHANGHAI,
               MOVE_JAMMING,
               MOVE_DISABLE,
-              MOVE_TAKE_DOWN,
+              MOVE_DOUBLE_EDGE,
               MOVE_FOCUS_ENERGY,
               MOVE_CHARM,
               MOVE_COUNTER,
@@ -89,7 +89,7 @@ const u16 gEggMoves[] = {
               MOVE_COUNTER,
               MOVE_DISABLE,
               MOVE_JAMMING,
-              MOVE_TAKE_DOWN,
+              MOVE_DOUBLE_EDGE,
               MOVE_AMNESIA,
               MOVE_CONFUSION,
               MOVE_BEAT_UP),
@@ -286,7 +286,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(CKOMACHI,
               MOVE_BUBBLE_BEAM,
-              MOVE_TAKE_DOWN,
+              MOVE_DOUBLE_EDGE,
               MOVE_BARRIER,
               MOVE_RAPID_SPIN,
               MOVE_SCREECH,
@@ -609,7 +609,7 @@ const u16 gEggMoves[] = {
               MOVE_REFRESH),
 
     egg_moves(HAKUREI,
-              MOVE_TAKE_DOWN,
+              MOVE_DOUBLE_EDGE,
               MOVE_BODY_SLAM,
               MOVE_SAFEGUARD,
               MOVE_SCREECH,
@@ -691,7 +691,7 @@ const u16 gEggMoves[] = {
               MOVE_IMPRISON),
 
     egg_moves(MAI,
-              MOVE_TAKE_DOWN,
+              MOVE_DOUBLE_EDGE,
               MOVE_AMNESIA,
               MOVE_FORESIGHT,
               MOVE_PSYCHO_CUT,
@@ -761,7 +761,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(SRUMIA,
               MOVE_CRUNCH,
-              MOVE_TAKE_DOWN,
+              MOVE_DOUBLE_EDGE,
               MOVE_SEISMIC_TOSS,
               MOVE_COUNTER,
               MOVE_METAL_CLAW,
@@ -774,7 +774,7 @@ const u16 gEggMoves[] = {
               MOVE_HEAT_WAVE),
 
     egg_moves(TCHEN,
-              MOVE_TAKE_DOWN,
+              MOVE_DOUBLE_EDGE,
               MOVE_BITE,
               MOVE_BODY_SLAM,
               MOVE_ROCK_WRECKER,
@@ -952,7 +952,7 @@ const u16 gEggMoves[] = {
               MOVE_AMNESIA,
               MOVE_QUICK_ATTACK,
               MOVE_RAZOR_WIND,
-              MOVE_TAKE_DOWN,
+              MOVE_DOUBLE_EDGE,
               MOVE_DRAWN_LINE),
 
     egg_moves(HSHIZUHA,
@@ -1203,7 +1203,7 @@ const u16 gEggMoves[] = {
               MOVE_ROCK_BULLET),
 
     egg_moves(SMARISA,
-              MOVE_TAKE_DOWN,
+              MOVE_DOUBLE_EDGE,
               MOVE_SNORE,
               MOVE_SWAGGER,
               MOVE_EXTRASENSORY,

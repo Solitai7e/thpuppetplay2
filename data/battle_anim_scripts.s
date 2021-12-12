@@ -52,7 +52,7 @@ gBattleAnims_Moves::
 	.4byte Move_TACKLE
 	.4byte Move_BODY_SLAM
 	.4byte Move_WRAP
-	.4byte Move_TAKE_DOWN
+	.4byte Move_DOUBLE_EDGE
 	.4byte Move_THRASH
 	.4byte Move_HEAD_SMASH
 	.4byte Move_TAIL_WHIP
@@ -557,7 +557,7 @@ Move_STRENGTH:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_ShakeAndSinkMon, 5, ANIM_ATTACKER, 2, 0, 96, 30
 	waitforvisualfinish
 	delay 10
@@ -597,7 +597,7 @@ Move_BODY_SLAM:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	createsprite gVerticalDipSpriteTemplate, ANIM_ATTACKER, 2, 6, 1, ANIM_ATTACKER
 	waitforvisualfinish
 	delay 11
@@ -756,7 +756,7 @@ Move_ICE_SHARD:
 	blendoff
 	end
 
-Move_TAKE_DOWN:
+Move_DOUBLE_EDGE:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
@@ -1213,7 +1213,7 @@ Move_CUT:
 
 Move_CHARGE_BEAM:
 	loadspritegfx ANIM_TAG_RED_ORB
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0
 	waitforvisualfinish
 	delay 30
@@ -2024,7 +2024,7 @@ Move_GROWTH:
 	end
 GrowthEffect:
 	createvisualtask AnimTask_BlendColorCycle, 2, 2, 0, 2, 0, 8, RGB_WHITE
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_ScaleMonAndRestore, 5, -3, -3, 16, ANIM_ATTACKER, 0
 	return
 
@@ -2701,7 +2701,7 @@ Move_MEDITATE:
 	createvisualtask AnimTask_MeditateStretchAttacker, 2
 	playsewithpan SE_M_HEADBUTT, SOUND_PAN_ATTACKER
 	delay 16
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	call UnsetPsychicBackground
 	end
@@ -2832,7 +2832,7 @@ SkullBashSetUp:
 	goto SkullBashEnd
 SkullBashSetUpHeadDown:
 	createsprite gSlideMonToOffsetAndBackSpriteTemplate, ANIM_ATTACKER, 2, ANIM_ATTACKER, -24, 0, 0, 10, 0
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	createvisualtask AnimTask_RotateMonSpriteToSide, 2, 16, 96, 0, 2
 	waitforvisualfinish
@@ -2842,7 +2842,7 @@ SkullBashSetUpHeadDown:
 SkullBashAttack:
 	loadspritegfx ANIM_TAG_IMPACT
 	createvisualtask AnimTask_SkullBashPosition, 2, 0
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	playse SE_BANG
 	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 3, 1, RGB_BLACK, 14, 0x7FFF, 14
@@ -3689,10 +3689,10 @@ Move_RECYCLE:
 	setalpha 0, 16
 	delay 1
 	createsprite gRecycleSpriteTemplate, ANIM_ATTACKER, 2
-	loopsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER, 24, 3
+	loopsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER, 24, 3
 	waitforvisualfinish
 	createvisualtask AnimTask_BlendMonInAndOut, 5, ANIM_ATTACKER, RGB_WHITE, 12, 2, 1
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	blendoff
 	clearmonbg ANIM_ATTACKER
@@ -7387,7 +7387,7 @@ Move_BIDE:
 	choosetwoturnanim BideSetUp, BideUnleash
 	end
 BideSetUp:
-	loopsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER, 9, 2
+	loopsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER, 9, 2
 	createvisualtask AnimTask_BlendColorCycle, 2, 2, 2, 2, 0, 11, RGB_RED
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 32, 1
 	waitforvisualfinish
@@ -7397,7 +7397,7 @@ BideUnleash:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
-	loopsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER, 9, 2
+	loopsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER, 9, 2
 	createvisualtask AnimTask_BlendBattleAnimPal, 10, 2, 2, 0, 11, RGB_RED
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 32, 1
 	waitforvisualfinish
@@ -7606,7 +7606,7 @@ Move_MIMIC:
 	delay 10
 	setarg 7, 0xFFFF
 	waitforvisualfinish
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_BlendColorCycle, 2, 2, 0, 2, 0, 11, RGB_WHITE
 	waitforvisualfinish
 	clearmonbg_static ANIM_DEF_PARTNER
@@ -8193,7 +8193,7 @@ StockpileAbsorb:
 Move_MIRROR_SHOT:
 	loadspritegfx ANIM_TAG_RED_ORB_2
 	loadspritegfx ANIM_TAG_IMPACT
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_MirrorShotDeformMon, 5
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 8, 2
 	delay 45
@@ -8240,7 +8240,7 @@ MirrorShotStrongest:
 Move_SWALLOW:
 	loadspritegfx ANIM_TAG_BLUE_ORB
 	loadspritegfx ANIM_TAG_BLUE_STAR
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_SwallowDeformMon, 5
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 8, 2
 	delay 38
@@ -8743,7 +8743,7 @@ Move_REVENGE:
 	loadspritegfx ANIM_TAG_PURPLE_SCRATCH
 	monbg ANIM_TARGET
 	setalpha 12, 8
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	createsprite gRevengeSmallScratchSpriteTemplate, ANIM_ATTACKER, 2, 10, -10
 	waitforvisualfinish
 	createvisualtask AnimTask_BlendColorCycle, 2, 2, 0, 4, 2, 8, RGB_RED
@@ -9211,7 +9211,7 @@ SilverWindOnPlayer:
 	goto SilverWindContinue
 
 Move_SNATCH:
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_WindUpLunge, 5, ANIM_ATTACKER, -12, 4, 10, 10, 12, 6
 	end
 
@@ -10418,13 +10418,13 @@ General_HeldItemEffect:
 	loadspritegfx ANIM_TAG_THIN_RING
 	loadspritegfx ANIM_TAG_SPARKLE_2
 	delay 0
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_RotateMonToSideAndRestore, 2, 16, 128, ANIM_ATTACKER, 2
 	waitforvisualfinish
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_RotateMonToSideAndRestore, 2, 16, 128, ANIM_ATTACKER, 2
 	waitforvisualfinish
-	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_RotateMonToSideAndRestore, 2, 16, 128, ANIM_ATTACKER, 2
 	waitforvisualfinish
 	playsewithpan SE_M_ENERGY_LIGHT, SOUND_PAN_ATTACKER
