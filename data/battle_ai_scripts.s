@@ -118,7 +118,7 @@ AI_CheckBadMove_CheckEffect:
 	if_effect EFFECT_ACCURACY_DOWN, AI_CBM_AccDown
 	if_effect EFFECT_EVASION_DOWN, AI_CBM_EvasionDown
 	if_effect EFFECT_HAZE, AI_CBM_Haze
-	if_effect EFFECT_BIDE, AI_CBM_HighRiskForDamage
+	if_effect EFFECT_GUARD, AI_CBM_HighRiskForDamage
 	if_effect EFFECT_ROAR, AI_CBM_Roar
 	if_effect EFFECT_TOXIC, AI_CBM_Toxic
 	if_effect EFFECT_LIGHT_SCREEN, AI_CBM_LightScreen
@@ -670,7 +670,7 @@ AI_CheckViability:
 	if_effect EFFECT_ACCURACY_DOWN, AI_CV_AccuracyDown
 	if_effect EFFECT_EVASION_DOWN, AI_CV_EvasionDown
 	if_effect EFFECT_HAZE, AI_CV_Haze
-	if_effect EFFECT_BIDE, AI_CV_Bide
+	if_effect EFFECT_GUARD, AI_CV_Guard
 	if_effect EFFECT_ROAR, AI_CV_Roar
 	if_effect EFFECT_CONVERSION, AI_CV_Conversion
 	if_effect EFFECT_RESTORE_HP, AI_CV_Heal
@@ -1276,10 +1276,10 @@ AI_CV_Haze4:
 AI_CV_Haze_End:
 	end
 
-AI_CV_Bide:
-	if_hp_more_than AI_USER, 90, AI_CV_Bide_End
+AI_CV_Guard:
+	if_hp_more_than AI_USER, 90, AI_CV_Guard_End
 	score -2
-AI_CV_Bide_End:
+AI_CV_Guard_End:
 	end
 
 AI_CV_Roar:
@@ -2981,7 +2981,7 @@ AI_HPAware_DiscouragedEffectsWhenMediumHP:
     .byte EFFECT_SPECIAL_DEFENSE_DOWN
     .byte EFFECT_ACCURACY_DOWN
     .byte EFFECT_EVASION_DOWN
-    .byte EFFECT_BIDE
+    .byte EFFECT_GUARD
     .byte EFFECT_CONVERSION
     .byte EFFECT_LIGHT_SCREEN
     .byte EFFECT_MIST
@@ -3025,7 +3025,7 @@ AI_HPAware_DiscouragedEffectsWhenLowHP:
     .byte EFFECT_SPECIAL_DEFENSE_DOWN
     .byte EFFECT_ACCURACY_DOWN
     .byte EFFECT_EVASION_DOWN
-    .byte EFFECT_BIDE
+    .byte EFFECT_GUARD
     .byte EFFECT_CONVERSION
     .byte EFFECT_LIGHT_SCREEN
     .byte EFFECT_MIST
@@ -3122,7 +3122,7 @@ AI_HPAware_DiscouragedEffectsWhenTargetLowHP:
     .byte EFFECT_SPECIAL_DEFENSE_DOWN
     .byte EFFECT_ACCURACY_DOWN
     .byte EFFECT_EVASION_DOWN
-    .byte EFFECT_BIDE
+    .byte EFFECT_GUARD
     .byte EFFECT_CONVERSION
     .byte EFFECT_TOXIC
     .byte EFFECT_LIGHT_SCREEN

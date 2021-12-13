@@ -133,7 +133,7 @@ gBattleAnims_Moves::
 	.4byte Move_HAZE
 	.4byte Move_REFLECT
 	.4byte Move_FOCUS_ENERGY
-	.4byte Move_BIDE
+	.4byte Move_GUARD
 	.4byte Move_METRONOME
 	.4byte Move_FALSE_SWIPE @ doesnt have an actual animation
 	.4byte Move_SELF_DESTRUCT
@@ -7383,17 +7383,17 @@ Move_FOCUS_ENERGY:
 	waitforvisualfinish
 	end
 
-Move_BIDE:
-	choosetwoturnanim BideSetUp, BideUnleash
+Move_GUARD:
+	choosetwoturnanim GuardSetUp, GuardUnleash
 	end
-BideSetUp:
+GuardSetUp:
 	loopsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER, 9, 2
 	createvisualtask AnimTask_BlendColorCycle, 2, 2, 2, 2, 0, 11, RGB_RED
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 32, 1
 	waitforvisualfinish
 	end
 
-BideUnleash:
+GuardUnleash:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8

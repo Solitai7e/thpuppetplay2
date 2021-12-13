@@ -43,7 +43,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectAccuracyDown           @ EFFECT_ACCURACY_DOWN
 	.4byte BattleScript_EffectEvasionDown            @ EFFECT_EVASION_DOWN
 	.4byte BattleScript_EffectHaze                   @ EFFECT_HAZE
-	.4byte BattleScript_EffectBide                   @ EFFECT_BIDE
+	.4byte BattleScript_EffectGuard                   @ EFFECT_GUARD
 	.4byte BattleScript_EffectRampage                @ EFFECT_RAMPAGE
 	.4byte BattleScript_EffectRoar                   @ EFFECT_ROAR
 	.4byte BattleScript_EffectMultiHit               @ EFFECT_MULTI_HIT
@@ -568,14 +568,14 @@ BattleScript_EffectHaze::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectBide::
+BattleScript_EffectGuard::
 	attackcanceler
 	attackstring
 	ppreduce
 	attackanimation
 	waitanimation
 	orword gHitMarker, HITMARKER_CHARGING
-	setbide
+	setguard
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectRampage::
@@ -3281,12 +3281,12 @@ BattleScript_LeechSeedTurnPrintAndUpdateHp::
 	tryfaintmon BS_TARGET
 	end2
 
-BattleScript_BideStoringEnergy::
+BattleScript_GuardStoringEnergy::
 	printstring STRINGID_PKMNSTORINGENERGY
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
-BattleScript_BideAttack::
+BattleScript_GuardAttack::
 	attackcanceler
 	setmoveeffect MOVE_EFFECT_CHARGING
 	clearstatusfromeffect BS_ATTACKER
@@ -3295,7 +3295,7 @@ BattleScript_BideAttack::
 	accuracycheck BattleScript_MoveMissed, ACC_CURR_MOVE
 	typecalc
 	bicbyte gMoveResultFlags, MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE
-	copyword gBattleMoveDamage, sBIDE_DMG
+	copyword gBattleMoveDamage, sGUARD_DMG
 	adjustsetdamage
 	setbyte sB_ANIM_TURN, 1
 	attackanimation
@@ -3310,7 +3310,7 @@ BattleScript_BideAttack::
 	tryfaintmon BS_TARGET
 	goto BattleScript_MoveEnd
 
-BattleScript_BideNoEnergyToAttack::
+BattleScript_GuardNoEnergyToAttack::
 	attackcanceler
 	setmoveeffect MOVE_EFFECT_CHARGING
 	clearstatusfromeffect BS_ATTACKER

@@ -860,7 +860,7 @@ void CancelMultiTurnMoves(u8 battler)
     gBattleMons[battler].status2 &= ~STATUS2_MULTIPLETURNS;
     gBattleMons[battler].status2 &= ~STATUS2_LOCK_CONFUSE;
     gBattleMons[battler].status2 &= ~STATUS2_UPROAR;
-    gBattleMons[battler].status2 &= ~STATUS2_BIDE;
+    gBattleMons[battler].status2 &= ~STATUS2_GUARD;
 
     gStatuses3[battler] &= ~STATUS3_SEMI_INVULNERABLE;
 
@@ -1975,7 +1975,7 @@ enum
     CANCELLER_CONFUSED,
     CANCELLER_PARALYSED,
     CANCELLER_IN_LOVE,
-    CANCELLER_BIDE,
+    CANCELLER_GUARD,
     CANCELLER_THAW,
     CANCELLER_END,
 };
@@ -1983,7 +1983,7 @@ enum
 u8 AtkCanceller_UnableToUseMove(void)
 {
     u8 effect = 0;
-    s32 *bideDmg = &gBattleScripting.bideDmg;
+    s32 *guardDmg = &gBattleScripting.guardDmg;
     do
     {
         switch (gBattleStruct->atkCancellerTracker)
@@ -2198,13 +2198,13 @@ u8 AtkCanceller_UnableToUseMove(void)
             }
             gBattleStruct->atkCancellerTracker++;
             break;
-        case CANCELLER_BIDE: // bide
-            if (gBattleMons[gBattlerAttacker].status2 & STATUS2_BIDE)
+        case CANCELLER_GUARD: // guard
+            if (gBattleMons[gBattlerAttacker].status2 & STATUS2_GUARD)
             {
-                gBattleMons[gBattlerAttacker].status2 -= STATUS2_BIDE_TURN(1);
-                if (gBattleMons[gBattlerAttacker].status2 & STATUS2_BIDE)
+                gBattleMons[gBattlerAttacker].status2 -= STATUS2_GUARD_TURN(1);
+                if (gBattleMons[gBattlerAttacker].status2 & STATUS2_GUARD)
                 {
-                    gBattlescriptCurrInstr = BattleScript_BideStoringEnergy;
+                    gBattlescriptCurrInstr = BattleScript_GuardStoringEnergy;
                 }
                 else
                 {
@@ -2212,16 +2212,16 @@ u8 AtkCanceller_UnableToUseMove(void)
                     //gBattleMons[gBattlerAttacker].status2 &= ~STATUS2_MULTIPLETURNS;
                     if (gTakenDmg[gBattlerAttacker])
                     {
-                        gCurrentMove = MOVE_BIDE;
-                        *bideDmg = gTakenDmg[gBattlerAttacker] * 2;
+                        gCurrentMove = MOVE_GUARD;
+                        *guardDmg = gTakenDmg[gBattlerAttacker] * 2;
                         gBattlerTarget = gTakenDmgByBattler[gBattlerAttacker];
                         if (gAbsentBattlerFlags & gBitTable[gBattlerTarget])
-                            gBattlerTarget = GetMoveTarget(MOVE_BIDE, MOVE_TARGET_SELECTED + 1);
-                        gBattlescriptCurrInstr = BattleScript_BideAttack;
+                            gBattlerTarget = GetMoveTarget(MOVE_GUARD, MOVE_TARGET_SELECTED + 1);
+                        gBattlescriptCurrInstr = BattleScript_GuardAttack;
                     }
                     else
                     {
-                        gBattlescriptCurrInstr = BattleScript_BideNoEnergyToAttack;
+                        gBattlescriptCurrInstr = BattleScript_GuardNoEnergyToAttack;
                     }
                 }
                 effect = 1;

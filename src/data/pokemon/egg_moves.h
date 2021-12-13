@@ -547,7 +547,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(ELLEN,
               MOVE_PSYBEAM,
-              MOVE_BIDE,
+              MOVE_GUARD,
               MOVE_SILVER_WIND),
 
     egg_moves(KAZAMI,
@@ -565,7 +565,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(CLUIZE,
               MOVE_REVERSAL,
-              MOVE_BIDE,
+              MOVE_GUARD,
               MOVE_PRESENT,
               MOVE_ENCORE,
               MOVE_DOUBLE_SLAP,
@@ -709,7 +709,7 @@ const u16 gEggMoves[] = {
               MOVE_SAND_TOMB),
 
     egg_moves(HSTARSAPPHIRE,
-              MOVE_BIDE,
+              MOVE_GUARD,
               MOVE_ANCIENT_POWER,
               MOVE_ROCK_WRECKER,
               MOVE_BITE,
@@ -746,7 +746,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(HSAKUYA,
               MOVE_HARDEN,
-              MOVE_BIDE,
+              MOVE_GUARD,
               MOVE_FLAIL,
               MOVE_DRAWN_LINE),
 

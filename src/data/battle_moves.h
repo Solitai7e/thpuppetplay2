@@ -1638,7 +1638,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
-    [MOVE_BIDE] =
+    [MOVE_GUARD] =
     {
         .effect = EFFECT_FOLLOW_ME,
         .split = 0,

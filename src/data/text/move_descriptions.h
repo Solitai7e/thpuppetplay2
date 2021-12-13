@@ -465,7 +465,7 @@ static const u8 sFocusEnergyDescription[] = _(
     "Focuses power to raise the\n"
     "critical-hit ratio.");
 
-static const u8 sBideDescription[] = _(
+static const u8 sGuardDescription[] = _(
     "Endures attack for 2\n"
     "turns to retaliate double.");
 
@@ -1536,7 +1536,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_HAZE - 1] = sHazeDescription,
     [MOVE_REFLECT - 1] = sReflectDescription,
     [MOVE_FOCUS_ENERGY - 1] = sFocusEnergyDescription,
-    [MOVE_BIDE - 1] = sBideDescription,
+    [MOVE_GUARD - 1] = sGuardDescription,
     [MOVE_METRONOME - 1] = sMetronomeDescription,
     [MOVE_FALSE_SWIPE - 1] = sFalseSwipeDescription,
     [MOVE_SELF_DESTRUCT - 1] = sSelfDestructDescription,

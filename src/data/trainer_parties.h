@@ -8648,7 +8648,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Vivian[] = {
     .iv = 100,
     .lvl = 17,
     .species = SPECIES_AYUUGI,
-    .moves = {MOVE_BIDE, MOVE_DETECT, MOVE_CONFUSION, MOVE_THUNDER_PUNCH}
+    .moves = {MOVE_GUARD, MOVE_DETECT, MOVE_CONFUSION, MOVE_THUNDER_PUNCH}
     },
     {
     .iv = 100,
@@ -8663,7 +8663,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Danielle[] = {
     .iv = 100,
     .lvl = 23,
     .species = SPECIES_AYUUGI,
-    .moves = {MOVE_BIDE, MOVE_DETECT, MOVE_CONFUSION, MOVE_FIRE_PUNCH}
+    .moves = {MOVE_GUARD, MOVE_DETECT, MOVE_CONFUSION, MOVE_FIRE_PUNCH}
     }
 };
 

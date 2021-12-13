@@ -169,7 +169,7 @@ const u16 gEasyChatWordsByLetter_B[] = {
     EC_WORD_BESIDE,
     EC_WORD_BEST,
     EC_WORD_BETTER,
-    EC_MOVE(BIDE),
+    EC_MOVE(GUARD),
     EC_WORD_BIG,
     EC_WORD_BIKE,
     EC_MOVE(BIND),

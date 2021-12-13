@@ -478,7 +478,7 @@ struct BattleStruct
 struct BattleScripting
 {
     s32 painSplitHp;
-    s32 bideDmg;
+    s32 guardDmg;
     u8 multihitString[6];
     u8 dmgMultiplier;
     u8 twoTurnsMoveStringId;

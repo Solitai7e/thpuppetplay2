@@ -755,7 +755,7 @@
 	.byte 0x8a
 	.endm
 
-	.macro setbide
+	.macro setguard
 	.byte 0x8b
 	.endm
 

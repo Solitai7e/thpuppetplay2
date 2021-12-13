@@ -215,7 +215,7 @@ static void Cmd_stockpiletohpheal(void);
 static void Cmd_negativedamage(void);
 static void Cmd_statbuffchange(void);
 static void Cmd_normalisebuffs(void);
-static void Cmd_setbide(void);
+static void Cmd_setguard(void);
 static void Cmd_confuseifrepeatingattackends(void);
 static void Cmd_setmultihitcounter(void);
 static void Cmd_initmultihitstring(void);
@@ -465,7 +465,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_negativedamage,                          //0x88
     Cmd_statbuffchange,                          //0x89
     Cmd_normalisebuffs,                          //0x8A
-    Cmd_setbide,                                 //0x8B
+    Cmd_setguard,                                 //0x8B
     Cmd_confuseifrepeatingattackends,            //0x8C
     Cmd_setmultihitcounter,                      //0x8D
     Cmd_initmultihitstring,                      //0x8E
@@ -7072,12 +7072,12 @@ static void Cmd_normalisebuffs(void) // haze
     gBattlescriptCurrInstr++;
 }
 
-static void Cmd_setbide(void)
+static void Cmd_setguard(void)
 {
     gBattleMons[gBattlerAttacker].status2 |= STATUS2_MULTIPLETURNS;
     gLockedMoves[gBattlerAttacker] = gCurrentMove;
     gTakenDmg[gBattlerAttacker] = 0;
-    gBattleMons[gBattlerAttacker].status2 |= STATUS2_BIDE_TURN(2);
+    gBattleMons[gBattlerAttacker].status2 |= STATUS2_GUARD_TURN(2);
 
     gBattlescriptCurrInstr++;
 }
@@ -8096,7 +8096,7 @@ static bool8 IsTwoTurnsMove(u16 move)
         || gBattleMoves[move].effect == EFFECT_SKY_ATTACK
         || gBattleMoves[move].effect == EFFECT_SOLAR_BEAM
         || gBattleMoves[move].effect == EFFECT_SEMI_INVULNERABLE
-        || gBattleMoves[move].effect == EFFECT_BIDE)
+        || gBattleMoves[move].effect == EFFECT_GUARD)
         return TRUE;
     else
         return FALSE;
@@ -8123,7 +8123,7 @@ static u8 AttacksThisTurn(u8 battlerId, u16 move) // Note: returns 1 if it's a c
         || gBattleMoves[move].effect == EFFECT_SKY_ATTACK
         || gBattleMoves[move].effect == EFFECT_SOLAR_BEAM
         || gBattleMoves[move].effect == EFFECT_SEMI_INVULNERABLE
-        || gBattleMoves[move].effect == EFFECT_BIDE)
+        || gBattleMoves[move].effect == EFFECT_GUARD)
     {
         if ((gHitMarker & HITMARKER_CHARGING))
             return 1;
