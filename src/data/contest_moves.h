@@ -862,7 +862,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_SHIFT_JUDGE_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_SMOG},
+        .comboMoves = {COMBO_STARTER_TOXIC_GAS},
     },
 
     [MOVE_CONFUSE_RAY] =
@@ -977,11 +977,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_SMOG] =
+    [MOVE_TOXIC_GAS] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
-        .comboStarterId = COMBO_STARTER_SMOG,
+        .comboStarterId = COMBO_STARTER_TOXIC_GAS,
         .comboMoves = {0},
     },
 

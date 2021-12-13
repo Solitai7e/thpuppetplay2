@@ -1192,7 +1192,7 @@ const u16 gEggMoves[] = {
     egg_moves(CKIKURI,
               MOVE_DREAM_EATER,
               MOVE_DISPERSE,
-              MOVE_SMOG,
+              MOVE_TOXIC_GAS,
               MOVE_PAIN_SPLIT),
 
     egg_moves(APATCHOULI,

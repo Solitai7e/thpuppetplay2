@@ -1722,7 +1722,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED,
     },
 
-    [MOVE_SMOG] =
+    [MOVE_TOXIC_GAS] =
     {
         .effect = EFFECT_POISON_HIT,
         .split = 0,

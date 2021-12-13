@@ -139,7 +139,7 @@ gBattleAnims_Moves::
 	.4byte Move_SELF_DESTRUCT
 	.4byte Move_MIND_BOMB
 	.4byte Move_LICK
-	.4byte Move_SMOG
+	.4byte Move_TOXIC_GAS
 	.4byte Move_POISON_BOMB
 	.4byte Move_BONE_CLUB
 	.4byte Move_FIRE_BLAST
@@ -5119,19 +5119,19 @@ Move_BUBBLE:
 	blendoff
 	end
 
-Move_SMOG:
+Move_TOXIC_GAS:
 	loadspritegfx ANIM_TAG_PURPLE_GAS_CLOUD
 	monbg ANIM_DEF_PARTNER
 	splitbgprio_all
 	setalpha 12, 8
 	loopsewithpan SE_M_MIST, SOUND_PAN_TARGET, 17, 10
-	call SmogCloud
-	call SmogCloud
-	call SmogCloud
-	call SmogCloud
-	call SmogCloud
-	call SmogCloud
-	call SmogCloud
+	call ToxicGasCloud
+	call ToxicGasCloud
+	call ToxicGasCloud
+	call ToxicGasCloud
+	call ToxicGasCloud
+	call ToxicGasCloud
+	call ToxicGasCloud
 	delay 120
 	loopsewithpan SE_M_TOXIC, SOUND_PAN_TARGET, 18, 2
 	createvisualtask AnimTask_BlendColorCycle, 2, 4, 2, 2, 0, 12, RGB(26, 0, 26)
@@ -5141,8 +5141,8 @@ Move_SMOG:
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
 	end
-SmogCloud:
-	createsprite gSmogCloudSpriteTemplate, ANIM_ATTACKER, 2, 0, -24, 48, 240, 1, 0
+ToxicGasCloud:
+	createsprite gToxicGasCloudSpriteTemplate, ANIM_ATTACKER, 2, 0, -24, 48, 240, 1, 0
 	delay 7
 	return
 

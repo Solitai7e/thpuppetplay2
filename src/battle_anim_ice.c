@@ -326,7 +326,7 @@ const struct SpriteTemplate gMistCloudSpriteTemplate =
     .callback = InitSwirlingFogAnim,
 };
 
-const struct SpriteTemplate gSmogCloudSpriteTemplate =
+const struct SpriteTemplate gToxicGasCloudSpriteTemplate =
 {
     .tileTag = ANIM_TAG_PURPLE_GAS_CLOUD,
     .paletteTag = ANIM_TAG_PURPLE_GAS_CLOUD,
@@ -885,7 +885,7 @@ static void AnimWaveFromCenterOfTarget(struct Sprite *sprite)
     }
 }
 
-// Animates the fog that swirls around the mon in Mist and Smog.
+// Animates the fog that swirls around the mon in Mist and Toxic Gas.
 // arg 0: initial x pixel offset
 // arg 1: initial y pixel offset
 // arg 2: change in y pixels per rotation

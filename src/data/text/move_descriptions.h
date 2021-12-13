@@ -489,7 +489,7 @@ static const u8 sLickDescription[] = _(
     "Licks with a long tongue to\n"
     "injure. May also paralyze.");
 
-static const u8 sSmogDescription[] = _(
+static const u8 sToxicGasDescription[] = _(
     "An exhaust-gas attack\n"
     "that may also poison.");
 
@@ -1542,7 +1542,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SELF_DESTRUCT - 1] = sSelfDestructDescription,
     [MOVE_MIND_BOMB - 1] = sMindBombDescription,
     [MOVE_LICK - 1] = sLickDescription,
-    [MOVE_SMOG - 1] = sSmogDescription,
+    [MOVE_TOXIC_GAS - 1] = sToxicGasDescription,
     [MOVE_POISON_BOMB - 1] = sPoisonBombDescription,
     [MOVE_BONE_CLUB - 1] = sBoneClubDescription,
     [MOVE_FIRE_BLAST - 1] = sFireBlastDescription,

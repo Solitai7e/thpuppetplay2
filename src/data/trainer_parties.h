@@ -3456,7 +3456,7 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     .lvl = 24,
     .species = SPECIES_AMYSTIA,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_FLARE_BLITZ, MOVE_SMOG, MOVE_LIGHT_SCREEN, MOVE_SUNNY_DAY}
+    .moves = {MOVE_FLARE_BLITZ, MOVE_TOXIC_GAS, MOVE_LIGHT_SCREEN, MOVE_SUNNY_DAY}
     },
     {
     .iv = 250,
@@ -5448,13 +5448,13 @@ static const struct TrainerMonNoItemCustomMoves sParty_Lao1[] = {
     .iv = 0,
     .lvl = 17,
     .species = SPECIES_RIN,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_SMOG, MOVE_SELF_DESTRUCT}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_TOXIC_GAS, MOVE_SELF_DESTRUCT}
     },
     {
     .iv = 0,
     .lvl = 17,
     .species = SPECIES_RIN,
-    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_SMOG, MOVE_SELF_DESTRUCT}
+    .moves = {MOVE_OMINOUS_WIND, MOVE_TACKLE, MOVE_TOXIC_GAS, MOVE_SELF_DESTRUCT}
     },
     {
     .iv = 0,
