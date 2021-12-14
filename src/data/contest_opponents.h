@@ -287,7 +287,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_SILVER_WIND,
             MOVE_LUNATIC,
             MOVE_LIGHT_SCREEN,
-            MOVE_GUST
+            MOVE_RAZOR_WIND
         },
         .cool = 2,
         .beauty = 10,
@@ -1601,7 +1601,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_GROWTH,
-            MOVE_RAZOR_WIND,
+            MOVE_GUST,
             MOVE_EXPLOSION,
             MOVE_EXTRASENSORY
         },

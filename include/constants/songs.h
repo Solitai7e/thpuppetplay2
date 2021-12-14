@@ -136,11 +136,11 @@
 #define SE_M_WIRE_WEB            129 // SE_W081
 #define SE_M_WIRE_WEB2           130 // SE_W081B
 #define SE_M_ROCK_SLIDE             131 // SE_W088
-#define SE_M_GUST                   132 // SE_W016
-#define SE_M_GUST2                  133 // SE_W016B
+#define SE_M_RAZOR_WIND                   132 // SE_W016
+#define SE_M_RAZOR_WIND2                  133 // SE_W016B
 #define SE_M_DOUBLE_SLAP            134 // SE_W003
 #define SE_M_SHADOW_HIT            135 // SE_W104
-#define SE_M_RAZOR_WIND             136 // SE_W013
+#define SE_M_GUST             136 // SE_W013
 #define SE_M_ICY_WIND               137 // SE_W196
 #define SE_M_THUNDER_WAVE           138 // SE_W086
 #define SE_M_COMET_PUNCH            139 // SE_W004
@@ -164,7 +164,7 @@
 #define SE_M_GALE            157 // SE_W017
 #define SE_M_FLY                    158 // SE_W019
 #define SE_M_SAND_ATTACK            159 // SE_W028
-#define SE_M_RAZOR_WIND2            160 // SE_W013B
+#define SE_M_GUST2            160 // SE_W013B
 #define SE_M_BITE                   161 // SE_W044
 #define SE_M_HEADBUTT               162 // SE_W029
 #define SE_M_SURF                   163 // SE_W057

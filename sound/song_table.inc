@@ -133,11 +133,11 @@ gSongTable::
 	song se_m_wire_web, 1, 1
 	song se_m_wire_web2, 1, 1
 	song se_m_rock_slide, 1, 1
-	song se_m_gust, 2, 2
-	song se_m_gust2, 2, 2
+	song se_m_razor_wind, 2, 2
+	song se_m_razor_wind2, 2, 2
 	song se_m_double_slap, 1, 1
 	song se_m_shadow_hit, 1, 1
-	song se_m_razor_wind, 1, 1
+	song se_m_gust, 1, 1
 	song se_m_icy_wind, 1, 1
 	song se_m_thunder_wave, 1, 1
 	song se_m_comet_punch, 1, 1
@@ -161,7 +161,7 @@ gSongTable::
 	song se_m_gale, 1, 1
 	song se_m_fly, 1, 1
 	song se_m_sand_attack, 1, 1
-	song se_m_razor_wind2, 1, 1
+	song se_m_gust2, 1, 1
 	song se_m_bite, 1, 1
 	song se_m_headbutt, 1, 1
 	song se_m_surf, 1, 1

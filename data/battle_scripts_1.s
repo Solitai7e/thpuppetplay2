@@ -56,7 +56,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectTriAttack              @ EFFECT_TRI_ATTACK
 	.4byte BattleScript_EffectRest                   @ EFFECT_REST
 	.4byte BattleScript_EffectOHKO                   @ EFFECT_OHKO
-	.4byte BattleScript_EffectRazorWind              @ EFFECT_RAZOR_WIND
+	.4byte BattleScript_EffectGust              @ EFFECT_GUST
 	.4byte BattleScript_EffectHeatClaw              @ EFFECT_HEAT_CLAW
 	.4byte BattleScript_EffectDarkPulse             @ EFFECT_DARK_PULSE
 	.4byte BattleScript_EffectTrap                   @ EFFECT_TRAP
@@ -166,7 +166,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectTwister                @ EFFECT_TWISTER
 	.4byte BattleScript_EffectEarthquake             @ EFFECT_EARTHQUAKE
 	.4byte BattleScript_EffectPsychoCut            @ EFFECT_PSYCHO_CUT
-	.4byte BattleScript_EffectGust                   @ EFFECT_GUST
+	.4byte BattleScript_EffectRazorWind                   @ EFFECT_RAZOR_WIND
 	.4byte BattleScript_EffectStomp                  @ EFFECT_FLINCH_MINIMIZE_HIT
 	.4byte BattleScript_EffectSolarBeam              @ EFFECT_SOLAR_BEAM
 	.4byte BattleScript_EffectThunder                @ EFFECT_THUNDER
@@ -773,10 +773,10 @@ BattleScript_KOFail::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectRazorWind::
+BattleScript_EffectGust::
 	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_TwoTurnMovesSecondTurn
 	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_TwoTurnMovesSecondTurn
-	setbyte sTWOTURN_STRINGID, B_MSG_TURN1_RAZOR_WIND
+	setbyte sTWOTURN_STRINGID, B_MSG_TURN1_GUST
 	call BattleScriptFirstChargingTurn
 	goto BattleScript_MoveEnd
 
@@ -1887,7 +1887,7 @@ BattleScript_EffectPsychoCut::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectGust::
+BattleScript_EffectRazorWind::
 	jumpifnostatus3 BS_TARGET, STATUS3_ON_AIR, BattleScript_EffectHit
 	orword gHitMarker, HITMARKER_IGNORE_ON_AIR
 	setbyte sDMG_MULTIPLIER, 2

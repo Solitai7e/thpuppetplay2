@@ -1209,10 +1209,10 @@ $(MID_SUBDIR)/se_m_scratch.s: %.s: %.mid
 $(MID_SUBDIR)/se_m_night_slash.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
-$(MID_SUBDIR)/se_m_razor_wind.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_gust.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
-$(MID_SUBDIR)/se_m_razor_wind2.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_gust2.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V090 -P4
 
 $(MID_SUBDIR)/se_m_swords_dance.s: %.s: %.mid
@@ -1221,10 +1221,10 @@ $(MID_SUBDIR)/se_m_swords_dance.s: %.s: %.mid
 $(MID_SUBDIR)/se_m_cut.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V120 -P4
 
-$(MID_SUBDIR)/se_m_gust.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_razor_wind.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
-$(MID_SUBDIR)/se_m_gust2.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_razor_wind2.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
 $(MID_SUBDIR)/se_m_gale.s: %.s: %.mid

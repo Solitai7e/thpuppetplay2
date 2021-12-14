@@ -422,7 +422,7 @@
 #define B_MSG_LEECH_SEED_OOZE  4
 
 // gFirstTurnOfTwoStringIds
-#define B_MSG_TURN1_RAZOR_WIND  0
+#define B_MSG_TURN1_GUST  0
 #define B_MSG_TURN1_SOLAR_BEAM  1
 #define B_MSG_TURN1_SKULL_BASH  2
 #define B_MSG_TURN1_SKY_ATTACK  3

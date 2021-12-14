@@ -182,9 +182,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED,
     },
 
-    [MOVE_RAZOR_WIND] =
+    [MOVE_GUST] =
     {
-        .effect = EFFECT_GUST,
+        .effect = EFFECT_RAZOR_WIND,
         .split = 0,
         .power = 40,
         .type = TYPE_WIND,
@@ -224,7 +224,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 
-    [MOVE_GUST] =
+    [MOVE_RAZOR_WIND] =
     {
         .effect = EFFECT_ALWAYS_HIT,
         .split = 0,

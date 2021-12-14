@@ -49,7 +49,7 @@ static const u8 sJudgementDescription[] = _(
     "A powerful pincer attack\n"
     "that may cause fainting.");
 
-static const u8 sRazorWindDescription[] = _(
+static const u8 sGustDescription[] = _(
     "A 2-turn move that strikes\n"
     "the foe on the 2nd turn.");
 
@@ -61,7 +61,7 @@ static const u8 sCutDescription[] = _(
     "Cuts the foe with sharp\n"
     "scythes, claws, etc.");
 
-static const u8 sGustDescription[] = _(
+static const u8 sRazorWindDescription[] = _(
     "Strikes the foe with a gust\n"
     "of wind whipped up by wings.");
 
@@ -1432,10 +1432,10 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SCRATCH - 1] = sScratchDescription,
     [MOVE_NIGHT_SLASH - 1] = sNightSlashDescription,
     [MOVE_JUDGEMENT - 1] = sJudgementDescription,
-    [MOVE_RAZOR_WIND - 1] = sRazorWindDescription,
+    [MOVE_GUST - 1] = sGustDescription,
     [MOVE_SWORDS_DANCE - 1] = sSwordsDanceDescription,
     [MOVE_CUT - 1] = sCutDescription,
-    [MOVE_GUST - 1] = sGustDescription,
+    [MOVE_RAZOR_WIND - 1] = sRazorWindDescription,
     [MOVE_GALE - 1] = sGaleDescription,
     [MOVE_WHIRLWIND - 1] = sWhirlwindDescription,
     [MOVE_FLY - 1] = sFlyDescription,

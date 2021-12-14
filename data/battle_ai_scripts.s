@@ -123,7 +123,7 @@ AI_CheckBadMove_CheckEffect:
 	if_effect EFFECT_TOXIC, AI_CBM_Toxic
 	if_effect EFFECT_LIGHT_SCREEN, AI_CBM_LightScreen
 	if_effect EFFECT_OHKO, AI_CBM_OneHitKO
-	if_effect EFFECT_RAZOR_WIND, AI_CBM_HighRiskForDamage
+	if_effect EFFECT_GUST, AI_CBM_HighRiskForDamage
 	if_effect EFFECT_HEAT_CLAW, AI_CBM_HighRiskForDamage
 	if_effect EFFECT_MIST, AI_CBM_Mist
 	if_effect EFFECT_FOCUS_ENERGY, AI_CBM_FocusEnergy
@@ -678,7 +678,7 @@ AI_CheckViability:
 	if_effect EFFECT_LIGHT_SCREEN, AI_CV_LightScreen
 	if_effect EFFECT_REST, AI_CV_Rest
 	if_effect EFFECT_OHKO, AI_CV_OneHitKO
-	if_effect EFFECT_RAZOR_WIND, AI_CV_ChargeUpMove
+	if_effect EFFECT_GUST, AI_CV_ChargeUpMove
 	if_effect EFFECT_HEAT_CLAW, AI_CV_HeatClaw
 	if_effect EFFECT_TRAP, AI_CV_Trap
 	if_effect EFFECT_HIGH_CRITICAL, AI_CV_HighCrit
@@ -3127,7 +3127,7 @@ AI_HPAware_DiscouragedEffectsWhenTargetLowHP:
     .byte EFFECT_TOXIC
     .byte EFFECT_LIGHT_SCREEN
     .byte EFFECT_OHKO
-    .byte EFFECT_HEAT_CLAW //Maybe supposed to be EFFECT_RAZOR_WIND
+    .byte EFFECT_HEAT_CLAW //Maybe supposed to be EFFECT_GUST
     .byte EFFECT_HEAT_CLAW
     .byte EFFECT_MIST
     .byte EFFECT_FOCUS_ENERGY

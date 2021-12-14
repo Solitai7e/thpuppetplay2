@@ -38,7 +38,7 @@ static void AnimFallingCoin_Step(struct Sprite *);
 static void AnimBulletSeed(struct Sprite *);
 static void AnimBulletSeed_Step1(struct Sprite *);
 static void AnimBulletSeed_Step2(struct Sprite *);
-static void AnimRazorWindTornado(struct Sprite *);
+static void AnimGustTornado(struct Sprite *);
 static void AnimNightSlashPincer(struct Sprite *);
 static void AnimNightSlashPincer_Step(struct Sprite *);
 static void AnimJudgementPincer(struct Sprite *);
@@ -443,27 +443,27 @@ const struct SpriteTemplate gBulletSeedSpriteTemplate =
     .callback = AnimBulletSeed,
 };
 
-const union AffineAnimCmd gRazorWindTornadoAffineAnimCmds[] =
+const union AffineAnimCmd gGustTornadoAffineAnimCmds[] =
 {
     AFFINEANIMCMD_FRAME(0x10, 0x100, 0, 0),
     AFFINEANIMCMD_FRAME(0x4, 0x0, 0, 40),
     AFFINEANIMCMD_END,
 };
 
-const union AffineAnimCmd *const gRazorWindTornadoAffineAnimTable[] =
+const union AffineAnimCmd *const gGustTornadoAffineAnimTable[] =
 {
-    gRazorWindTornadoAffineAnimCmds,
+    gGustTornadoAffineAnimCmds,
 };
 
-const struct SpriteTemplate gRazorWindTornadoSpriteTemplate =
+const struct SpriteTemplate gGustTornadoSpriteTemplate =
 {
     .tileTag = ANIM_TAG_GUST,
     .paletteTag = ANIM_TAG_GUST,
     .oam = &gOamData_AffineNormal_ObjNormal_32x64,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
-    .affineAnims = gRazorWindTornadoAffineAnimTable,
-    .callback = AnimRazorWindTornado,
+    .affineAnims = gGustTornadoAffineAnimTable,
+    .callback = AnimGustTornado,
 };
 
 const union AnimCmd gNightSlashAnimCmds1[] =
@@ -1882,7 +1882,7 @@ static void AnimBulletSeed_Step2(struct Sprite *sprite)
 // arg 4: initial wave offset
 // arg 5: wave period (higher means faster wave)
 // arg 6: duration
-static void AnimRazorWindTornado(struct Sprite *sprite)
+static void AnimGustTornado(struct Sprite *sprite)
 {
     InitSpritePosToAnimAttacker(sprite, FALSE);
     if (GetBattlerSide(gBattleAnimAttacker) == B_SIDE_PLAYER)

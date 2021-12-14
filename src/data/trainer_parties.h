@@ -8415,7 +8415,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Mike1[] = {
     .iv = 0,
     .lvl = 10,
     .species = SPECIES_DREMILIA,
-    .moves = {MOVE_GUST, MOVE_GROWL, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_RAZOR_WIND, MOVE_GROWL, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 0,
@@ -9204,13 +9204,13 @@ static const struct TrainerMonNoItemCustomMoves sParty_MelAndPaul[] = {
     .iv = 0,
     .lvl = 27,
     .species = SPECIES_TMEDICINE,
-    .moves = {MOVE_GUST, MOVE_PSYBEAM, MOVE_TOXIC, MOVE_PROTECT}
+    .moves = {MOVE_RAZOR_WIND, MOVE_PSYBEAM, MOVE_TOXIC, MOVE_PROTECT}
     },
     {
     .iv = 0,
     .lvl = 27,
     .species = SPECIES_HRAN,
-    .moves = {MOVE_GUST, MOVE_MEGA_DRAIN, MOVE_ATTRACT, MOVE_STUN_SPORE}
+    .moves = {MOVE_RAZOR_WIND, MOVE_MEGA_DRAIN, MOVE_ATTRACT, MOVE_STUN_SPORE}
     }
 };
 

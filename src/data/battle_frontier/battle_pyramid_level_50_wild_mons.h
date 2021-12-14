@@ -68,7 +68,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round2[] =
         .species = SPECIES_MOMIJI,
         .lvl = 38,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_POISON_POWDER, MOVE_GUST, MOVE_PSYBEAM, MOVE_NONE}
+        .moves = {MOVE_POISON_POWDER, MOVE_RAZOR_WIND, MOVE_PSYBEAM, MOVE_NONE}
     },
     {
         .species = SPECIES_TSATORI,

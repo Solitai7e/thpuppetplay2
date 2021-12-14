@@ -270,7 +270,7 @@ static const u16 sIgnoredPowerfulMoveEffects[] =
 {
     EFFECT_EXPLOSION,
     EFFECT_DREAM_EATER,
-    EFFECT_RAZOR_WIND,
+    EFFECT_GUST,
     EFFECT_SKY_ATTACK,
     EFFECT_RECHARGE,
     EFFECT_SKULL_BASH,

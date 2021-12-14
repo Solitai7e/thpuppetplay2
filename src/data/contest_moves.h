@@ -98,7 +98,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_NIGHT_SLASH},
     },
 
-    [MOVE_RAZOR_WIND] =
+    [MOVE_GUST] =
     {
         .effect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -122,7 +122,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_SWORDS_DANCE},
     },
 
-    [MOVE_GUST] =
+    [MOVE_RAZOR_WIND] =
     {
         .effect = CONTEST_EFFECT_SCRAMBLE_NEXT_TURN_ORDER,
         .contestCategory = CONTEST_CATEGORY_SMART,

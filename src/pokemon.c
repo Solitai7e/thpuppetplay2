@@ -84,7 +84,7 @@ struct CombinedMove
 
 static const struct CombinedMove sCombinedMoves[2] =
 {
-    {MOVE_EMBER, MOVE_GUST, MOVE_HEAT_WAVE},
+    {MOVE_EMBER, MOVE_RAZOR_WIND, MOVE_HEAT_WAVE},
     {0xFFFF, 0xFFFF, 0xFFFF}
 };
 
