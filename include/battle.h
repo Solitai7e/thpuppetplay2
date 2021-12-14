@@ -151,8 +151,8 @@ struct SideTimer
     u8 mistBattlerId;
     u8 safeguardTimer;
     u8 safeguardBattlerId;
-    u8 followmeTimer;
-    u8 followmeTarget;
+    u8 disturbanceTimer;
+    u8 disturbanceTarget;
     u8 spikesAmount;
 };
 

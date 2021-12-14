@@ -138,9 +138,9 @@ static void AnimThoughtBubble(struct Sprite *);
 static void AnimThoughtBubble_Step(struct Sprite *);
 static void AnimMetronomeFinger(struct Sprite *);
 static void AnimMetronomeFinger_Step(struct Sprite *);
-static void AnimFollowMeFinger(struct Sprite *);
-static void AnimFollowMeFinger_Step1(struct Sprite *);
-static void AnimFollowMeFinger_Step2(struct Sprite *);
+static void AnimDisturbanceFinger(struct Sprite *);
+static void AnimDisturbanceFinger_Step1(struct Sprite *);
+static void AnimDisturbanceFinger_Step2(struct Sprite *);
 static void AnimTauntFinger(struct Sprite *);
 static void AnimTauntFinger_Step1(struct Sprite *);
 static void AnimTauntFinger_Step2(struct Sprite *);
@@ -2123,7 +2123,7 @@ const struct SpriteTemplate gMetronomeFingerSpriteTemplate =
     .callback = AnimMetronomeFinger,
 };
 
-const struct SpriteTemplate gFollowMeFingerSpriteTemplate =
+const struct SpriteTemplate gDisturbanceFingerSpriteTemplate =
 {
     .tileTag = ANIM_TAG_FINGER,
     .paletteTag = ANIM_TAG_FINGER,
@@ -2131,7 +2131,7 @@ const struct SpriteTemplate gFollowMeFingerSpriteTemplate =
     .anims = gDummySpriteAnimTable,
     .images = NULL,
     .affineAnims = gMetronomeFingerAffineAnimTable,
-    .callback = AnimFollowMeFinger,
+    .callback = AnimDisturbanceFinger,
 };
 
 const union AnimCmd gTauntFingerAnimCmds1[] =
@@ -5517,7 +5517,7 @@ static void AnimMetronomeFinger_Step(struct Sprite* sprite)
     }
 }
 
-static void AnimFollowMeFinger(struct Sprite* sprite)
+static void AnimDisturbanceFinger(struct Sprite* sprite)
 {
     u8 battler;
     if (gBattleAnimArgs[0] == 0)
@@ -5535,17 +5535,17 @@ static void AnimFollowMeFinger(struct Sprite* sprite)
     sprite->data[2] = sprite->subpriority;
     sprite->data[3] = sprite->subpriority + 4;
     sprite->data[4] = 0;
-    StoreSpriteCallbackInData6(sprite, AnimFollowMeFinger_Step1);
+    StoreSpriteCallbackInData6(sprite, AnimDisturbanceFinger_Step1);
     sprite->callback = RunStoredCallbackWhenAffineAnimEnds;
 }
 
-static void AnimFollowMeFinger_Step1(struct Sprite* sprite)
+static void AnimDisturbanceFinger_Step1(struct Sprite* sprite)
 {
     if (++sprite->data[4] > 12)
-        sprite->callback = AnimFollowMeFinger_Step2;
+        sprite->callback = AnimDisturbanceFinger_Step2;
 }
 
-static void AnimFollowMeFinger_Step2(struct Sprite* sprite)
+static void AnimDisturbanceFinger_Step2(struct Sprite* sprite)
 {
     s16 x1, x2;
 

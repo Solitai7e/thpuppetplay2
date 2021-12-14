@@ -540,7 +540,7 @@ const u16 gEasyChatWordsByLetter_F[] = {
     EC_MOVE(FOCUS_ENERGY),
     EC_MOVE(FOCUS_PUNCH),
     EC_WORD_FOE,
-    EC_MOVE(FOLLOW_ME),
+    EC_MOVE(DISTURBANCE),
     EC_WORD_FOR,
     EC_WORD_FOR_NOW,
     EC_WORD_FORECAST,

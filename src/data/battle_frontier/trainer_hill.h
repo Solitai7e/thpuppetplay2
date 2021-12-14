@@ -1026,7 +1026,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_MARGATROID,
                         .heldItem = ITEM_SITRUS_BERRY,
-                        .moves = {MOVE_LIGHT_SCREEN, MOVE_REFLECT, MOVE_FOLLOW_ME, MOVE_METRONOME},
+                        .moves = {MOVE_LIGHT_SCREEN, MOVE_REFLECT, MOVE_DISTURBANCE, MOVE_METRONOME},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 252,

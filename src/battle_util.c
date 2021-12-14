@@ -147,15 +147,15 @@ void HandleAction_UseMove(void)
 
     // choose target
     side = GetBattlerSide(gBattlerAttacker) ^ BIT_SIDE;
-    if (gSideTimers[side].followmeTimer != 0
+    if (gSideTimers[side].disturbanceTimer != 0
         && gBattleMoves[gCurrentMove].target == MOVE_TARGET_SELECTED
-        && GetBattlerSide(gBattlerAttacker) != GetBattlerSide(gSideTimers[side].followmeTarget)
-        && gBattleMons[gSideTimers[side].followmeTarget].hp != 0)
+        && GetBattlerSide(gBattlerAttacker) != GetBattlerSide(gSideTimers[side].disturbanceTarget)
+        && gBattleMons[gSideTimers[side].disturbanceTarget].hp != 0)
     {
-        gBattlerTarget = gSideTimers[side].followmeTarget;
+        gBattlerTarget = gSideTimers[side].disturbanceTarget;
     }
     else if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
-             && gSideTimers[side].followmeTimer == 0
+             && gSideTimers[side].disturbanceTimer == 0
              && (gBattleMoves[gCurrentMove].power != 0
                  || gBattleMoves[gCurrentMove].target != MOVE_TARGET_USER)
              && gBattleMons[*(gBattleStruct->moveTarget + gBattlerAttacker)].ability != ABILITY_LIGHTNING_ROD
@@ -3780,8 +3780,8 @@ u8 GetMoveTarget(u16 move, u8 setTarget)
     {
     case MOVE_TARGET_SELECTED:
         side = GetBattlerSide(gBattlerAttacker) ^ BIT_SIDE;
-        if (gSideTimers[side].followmeTimer && gBattleMons[gSideTimers[side].followmeTarget].hp)
-            targetBattler = gSideTimers[side].followmeTarget;
+        if (gSideTimers[side].disturbanceTimer && gBattleMons[gSideTimers[side].disturbanceTarget].hp)
+            targetBattler = gSideTimers[side].disturbanceTarget;
         else
         {
             side = GetBattlerSide(gBattlerAttacker);
@@ -3809,8 +3809,8 @@ u8 GetMoveTarget(u16 move, u8 setTarget)
         break;
     case MOVE_TARGET_RANDOM:
         side = GetBattlerSide(gBattlerAttacker) ^ BIT_SIDE;
-        if (gSideTimers[side].followmeTimer && gBattleMons[gSideTimers[side].followmeTarget].hp)
-            targetBattler = gSideTimers[side].followmeTarget;
+        if (gSideTimers[side].disturbanceTimer && gBattleMons[gSideTimers[side].disturbanceTarget].hp)
+            targetBattler = gSideTimers[side].disturbanceTarget;
         else if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE && moveTarget & MOVE_TARGET_RANDOM)
         {
             if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)

@@ -189,7 +189,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectFacade                 @ EFFECT_FACADE
 	.4byte BattleScript_EffectFocusPunch             @ EFFECT_FOCUS_PUNCH
 	.4byte BattleScript_EffectSmellingsalt           @ EFFECT_SMELLINGSALT
-	.4byte BattleScript_EffectFollowMe               @ EFFECT_FOLLOW_ME
+	.4byte BattleScript_EffectDisturbance               @ EFFECT_DISTURBANCE
 	.4byte BattleScript_EffectRockBullet            @ EFFECT_ROCK_BULLET
 	.4byte BattleScript_EffectCharge                 @ EFFECT_CHARGE
 	.4byte BattleScript_EffectTaunt                  @ EFFECT_TAUNT
@@ -2271,7 +2271,7 @@ BattleScript_SmellingsaltDoubleDmg:
 	setbyte sDMG_MULTIPLIER, 2
 	goto BattleScript_EffectHit
 
-BattleScript_EffectFollowMe::
+BattleScript_EffectDisturbance::
 	attackcanceler
 	attackstring
 	ppreduce

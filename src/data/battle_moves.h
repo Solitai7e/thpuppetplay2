@@ -1640,7 +1640,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_GUARD] =
     {
-        .effect = EFFECT_FOLLOW_ME,
+        .effect = EFFECT_DISTURBANCE,
         .split = 0,
         .power = 0,
         .type = TYPE_HEART,
@@ -3724,7 +3724,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED,
     },
 
-    [MOVE_FOLLOW_ME] =
+    [MOVE_DISTURBANCE] =
     {
         .effect = EFFECT_ACCURACY_DOWN,
         .split = 0,

@@ -732,7 +732,7 @@ static const u16 sMovesForbiddenToCopy[] =
     MOVE_DESTINY_BOND,
     MOVE_SLEEP_TALK,
     MOVE_THIEF,
-    MOVE_FOLLOW_ME,
+    MOVE_DISTURBANCE,
     MOVE_SNATCH,
     MOVE_HELPING_HAND,
     MOVE_COVET,
@@ -6284,8 +6284,8 @@ static void Cmd_various(void)
     case VARIOUS_SET_MAGIC_COAT_TARGET:
         gBattlerAttacker = gBattlerTarget;
         side = GetBattlerSide(gBattlerAttacker) ^ BIT_SIDE;
-        if (gSideTimers[side].followmeTimer != 0 && gBattleMons[gSideTimers[side].followmeTarget].hp != 0)
-            gBattlerTarget = gSideTimers[side].followmeTarget;
+        if (gSideTimers[side].disturbanceTimer != 0 && gBattleMons[gSideTimers[side].disturbanceTarget].hp != 0)
+            gBattlerTarget = gSideTimers[side].disturbanceTarget;
         else
             gBattlerTarget = gActiveBattler;
         break;
@@ -7850,8 +7850,8 @@ static void Cmd_counterdamagecalculator(void)
     {
         gBattleMoveDamage = gProtectStructs[gBattlerAttacker].physicalDmg * 2;
 
-        if (gSideTimers[sideTarget].followmeTimer && gBattleMons[gSideTimers[sideTarget].followmeTarget].hp)
-            gBattlerTarget = gSideTimers[sideTarget].followmeTarget;
+        if (gSideTimers[sideTarget].disturbanceTimer && gBattleMons[gSideTimers[sideTarget].disturbanceTarget].hp)
+            gBattlerTarget = gSideTimers[sideTarget].disturbanceTarget;
         else
             gBattlerTarget = gProtectStructs[gBattlerAttacker].physicalBattlerId;
 
@@ -7873,8 +7873,8 @@ static void Cmd_mirrorcoatdamagecalculator(void) // a copy of Cmd with the physi
     {
         gBattleMoveDamage = gProtectStructs[gBattlerAttacker].specialDmg * 2;
 
-        if (gSideTimers[sideTarget].followmeTimer && gBattleMons[gSideTimers[sideTarget].followmeTarget].hp)
-            gBattlerTarget = gSideTimers[sideTarget].followmeTarget;
+        if (gSideTimers[sideTarget].disturbanceTimer && gBattleMons[gSideTimers[sideTarget].disturbanceTarget].hp)
+            gBattlerTarget = gSideTimers[sideTarget].disturbanceTarget;
         else
             gBattlerTarget = gProtectStructs[gBattlerAttacker].specialBattlerId;
 
@@ -8966,8 +8966,8 @@ static void Cmd_jumpifattackandspecialattackcannotfall(void) // memento
 
 static void Cmd_setforcedtarget(void) // follow me
 {
-    gSideTimers[GetBattlerSide(gBattlerAttacker)].followmeTimer = 1;
-    gSideTimers[GetBattlerSide(gBattlerAttacker)].followmeTarget = gBattlerAttacker;
+    gSideTimers[GetBattlerSide(gBattlerAttacker)].disturbanceTimer = 1;
+    gSideTimers[GetBattlerSide(gBattlerAttacker)].disturbanceTarget = gBattlerAttacker;
     gBattlescriptCurrInstr++;
 }
 

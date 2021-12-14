@@ -2807,7 +2807,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_GROWL,
             MOVE_YAWN,
             MOVE_ENCORE,
-            MOVE_FOLLOW_ME
+            MOVE_DISTURBANCE
         },
         .cool = 80,
         .beauty = 120,

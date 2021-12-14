@@ -4808,8 +4808,8 @@ static void TurnValuesCleanUp(bool8 var0)
             gBattleMons[gActiveBattler].status2 &= ~STATUS2_SUBSTITUTE;
     }
 
-    gSideTimers[0].followmeTimer = 0;
-    gSideTimers[1].followmeTimer = 0;
+    gSideTimers[0].disturbanceTimer = 0;
+    gSideTimers[1].disturbanceTimer = 0;
 }
 
 void SpecialStatusesClear(void)

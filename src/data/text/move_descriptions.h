@@ -1061,7 +1061,7 @@ static const u8 sSmellingSaltDescription[] = _(
     "Powerful against paralyzed\n"
     "foes, but also heals them.");
 
-static const u8 sFollowMeDescription[] = _(
+static const u8 sDisturbanceDescription[] = _(
     "Draws attention to make\n"
     "foes attack only the user.");
 
@@ -1685,7 +1685,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_FACADE - 1] = sFacadeDescription,
     [MOVE_FOCUS_PUNCH - 1] = sFocusPunchDescription,
     [MOVE_SMELLING_SALT - 1] = sSmellingSaltDescription,
-    [MOVE_FOLLOW_ME - 1] = sFollowMeDescription,
+    [MOVE_DISTURBANCE - 1] = sDisturbanceDescription,
     [MOVE_ROCK_BULLET - 1] = sRockBulletDescription,
     [MOVE_CHARGE - 1] = sChargeDescription,
     [MOVE_TAUNT - 1] = sTauntDescription,

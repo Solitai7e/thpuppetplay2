@@ -282,7 +282,7 @@ gBattleAnims_Moves::
 	.4byte Move_FACADE
 	.4byte Move_FOCUS_PUNCH
 	.4byte Move_SMELLING_SALT
-	.4byte Move_FOLLOW_ME
+	.4byte Move_DISTURBANCE
 	.4byte Move_ROCK_BULLET
 	.4byte Move_CHARGE
 	.4byte Move_TAUNT
@@ -3550,9 +3550,9 @@ Move_SMELLING_SALT:
 	loopsewithpan SE_M_SWAGGER2, SOUND_PAN_TARGET, 16, 3
 	end
 
-Move_FOLLOW_ME:
+Move_DISTURBANCE:
 	loadspritegfx ANIM_TAG_FINGER
-	createsprite gFollowMeFingerSpriteTemplate, ANIM_ATTACKER, 2, 0
+	createsprite gDisturbanceFingerSpriteTemplate, ANIM_ATTACKER, 2, 0
 	playsewithpan SE_M_TAIL_WHIP, SOUND_PAN_ATTACKER
 	delay 18
 	playsewithpan SE_M_ATTRACT, SOUND_PAN_ATTACKER

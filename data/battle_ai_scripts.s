@@ -1731,7 +1731,7 @@ AI_CV_Encore_EncouragedMovesToEncore:
     .byte EFFECT_HAIL
     .byte EFFECT_TORMENT
     .byte EFFECT_WILL_O_WISP
-    .byte EFFECT_FOLLOW_ME
+    .byte EFFECT_DISTURBANCE
     .byte EFFECT_CHARGE
     .byte EFFECT_TRICK
     .byte EFFECT_RECOLLECTION
