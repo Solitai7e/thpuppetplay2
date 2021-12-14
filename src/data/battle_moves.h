@@ -2058,7 +2058,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED,
     },
 
-    [MOVE_SPORE] =
+    [MOVE_BURN_POWDER] =
     {
         .effect = EFFECT_WILL_O_WISP,
         .split = 0,

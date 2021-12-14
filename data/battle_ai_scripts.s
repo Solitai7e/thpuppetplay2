@@ -852,7 +852,7 @@ AI_CV_FalseSwipe_End:
 AI_CV_FalseSwipe_EncouragedMovesToMirror:
     .2byte MOVE_SLEEP_POWDER
     .2byte MOVE_LOVELY_KISS
-    .2byte MOVE_SPORE
+    .2byte MOVE_BURN_POWDER
     .2byte MOVE_HYPNOSIS
     .2byte MOVE_SING
     .2byte MOVE_NATURE_SOUND

@@ -130,7 +130,7 @@ const u16 gEasyChatGroup_Move1[] = {
     MOVE_SPARK,
     MOVE_SPIDER_WEB,
     MOVE_SPITE,
-    MOVE_SPORE,
+    MOVE_BURN_POWDER,
     MOVE_STRENGTH,
     MOVE_WIRE_WEB,
     MOVE_STUN_SPORE,

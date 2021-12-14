@@ -1077,7 +1077,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_DSUWAKO_2] = {
         .species = SPECIES_DSUWAKO,
-        .moves = {MOVE_ABSORB, MOVE_STUN_SPORE, MOVE_SPORE, MOVE_LEECH_SEED},
+        .moves = {MOVE_ABSORB, MOVE_STUN_SPORE, MOVE_BURN_POWDER, MOVE_LEECH_SEED},
         .itemTableId = BATTLE_FRONTIER_ITEM_FIGY_BERRY,
         .evSpread = F_EV_SPREAD_ATTACK,
         .nature = NATURE_BRAVE
@@ -2969,7 +2969,7 @@ const struct FacilityMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_DSUWAKO] = {
         .species = SPECIES_DSUWAKO,
-        .moves = {MOVE_HEADBUTT, MOVE_SPORE, MOVE_SWAGGER, MOVE_LEECH_SEED},
+        .moves = {MOVE_HEADBUTT, MOVE_BURN_POWDER, MOVE_SWAGGER, MOVE_LEECH_SEED},
         .itemTableId = BATTLE_FRONTIER_ITEM_QUICK_CLAW,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE | F_EV_SPREAD_HP,
         .nature = NATURE_IMPISH

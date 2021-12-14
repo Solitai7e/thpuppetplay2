@@ -163,7 +163,7 @@ gBattleAnims_Moves::
 	.4byte Move_TRANSFORM
 	.4byte Move_BUBBLE
 	.4byte Move_DIZZY_PUNCH
-	.4byte Move_SPORE
+	.4byte Move_BURN_POWDER
 	.4byte Move_FLASH
 	.4byte Move_PSYWAVE
 	.4byte Move_SPLASH
@@ -6760,7 +6760,7 @@ CreateCottonSpores:
 	delay 12
 	return
 
-Move_SPORE:
+Move_BURN_POWDER:
 	loadspritegfx ANIM_TAG_SPORE
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8

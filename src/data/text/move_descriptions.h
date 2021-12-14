@@ -585,7 +585,7 @@ static const u8 sDizzyPunchDescription[] = _(
     "A rhythmic punch that may\n"
     "confuse the foe.");
 
-static const u8 sSporeDescription[] = _(
+static const u8 sBurnPowderDescription[] = _(
     "Scatters a cloud of spores\n"
     "that always induce sleep.");
 
@@ -1566,7 +1566,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_TRANSFORM - 1] = sTransformDescription,
     [MOVE_BUBBLE - 1] = sBubbleDescription,
     [MOVE_DIZZY_PUNCH - 1] = sDizzyPunchDescription,
-    [MOVE_SPORE - 1] = sSporeDescription,
+    [MOVE_BURN_POWDER - 1] = sBurnPowderDescription,
     [MOVE_FLASH - 1] = sFlashDescription,
     [MOVE_PSYWAVE - 1] = sPsywaveDescription,
     [MOVE_SPLASH - 1] = sSplashDescription,
