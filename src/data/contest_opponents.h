@@ -1853,7 +1853,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_CROSS_POISON,
-            MOVE_GLARE,
+            MOVE_COERCE,
             MOVE_WRAP,
             MOVE_SCREECH
         },

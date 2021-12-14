@@ -1402,7 +1402,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_HSTARSAPPHIRE_1] = {
         .species = SPECIES_HSTARSAPPHIRE,
-        .moves = {MOVE_HEADBUTT, MOVE_GLARE, MOVE_DEFENSE_CURL, MOVE_TREMORS},
+        .moves = {MOVE_HEADBUTT, MOVE_COERCE, MOVE_DEFENSE_CURL, MOVE_TREMORS},
         .itemTableId = BATTLE_FRONTIER_ITEM_LAX_INCENSE,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_DOCILE
@@ -1521,7 +1521,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_REMILIA_1] = {
         .species = SPECIES_REMILIA,
-        .moves = {MOVE_CROSS_POISON, MOVE_DIG, MOVE_BITE, MOVE_GLARE},
+        .moves = {MOVE_CROSS_POISON, MOVE_DIG, MOVE_BITE, MOVE_COERCE},
         .itemTableId = BATTLE_FRONTIER_ITEM_PERSIM_BERRY,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_ADAMANT
@@ -1675,7 +1675,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_TSATORI_1] = {
         .species = SPECIES_TSATORI,
-        .moves = {MOVE_POISON_JAB, MOVE_BITE, MOVE_GLARE, MOVE_SCREECH},
+        .moves = {MOVE_POISON_JAB, MOVE_BITE, MOVE_COERCE, MOVE_SCREECH},
         .itemTableId = BATTLE_FRONTIER_ITEM_SCOPE_LENS,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_HARDY
@@ -2256,7 +2256,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_REMILIA_2] = {
         .species = SPECIES_REMILIA,
-        .moves = {MOVE_GUNK_SHOT, MOVE_EARTHQUAKE, MOVE_STEEL_FIST, MOVE_GLARE},
+        .moves = {MOVE_GUNK_SHOT, MOVE_EARTHQUAKE, MOVE_STEEL_FIST, MOVE_COERCE},
         .itemTableId = BATTLE_FRONTIER_ITEM_LUM_BERRY,
         .evSpread = F_EV_SPREAD_DEFENSE | F_EV_SPREAD_HP,
         .nature = NATURE_ADAMANT

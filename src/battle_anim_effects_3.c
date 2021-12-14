@@ -77,7 +77,7 @@ static void AnimSmokeBallEscapeCloud(struct Sprite *);
 static void AnimFacadeSweatDrop(struct Sprite *);
 static void AnimRoarNoiseLine(struct Sprite *);
 static void AnimRoarNoiseLine_Step(struct Sprite *);
-static void AnimGlareEyeDot(struct Sprite *);
+static void AnimCoerceEyeDot(struct Sprite *);
 static void AnimAssistPawprint(struct Sprite *);
 static void AnimSmellingSaltsHand(struct Sprite *);
 static void AnimSmellingSaltsHand_Step(struct Sprite *);
@@ -110,8 +110,8 @@ static void AnimTask_DeepInhale_Step(u8);
 static void AnimTask_SquishAndSweatDroplets_Step(u8);
 static void CreateSweatDroplets(u8, bool8);
 static void AnimTask_FacadeColorBlend_Step(u8);
-static void AnimTask_GlareEyeDots_Step(u8);
-static void GetGlareEyeDotCoords(s16, s16, s16, s16, u8, u8, s16 *, s16 *);
+static void AnimTask_CoerceEyeDots_Step(u8);
+static void GetCoerceEyeDotCoords(s16, s16, s16, s16, u8, u8, s16 *, s16 *);
 static void AnimTask_BarrageBall_Step(u8);
 static void AnimTask_SmellingSaltsSquish_Step(u8);
 static void AnimTask_HelpingHandAttackerMovement_Step(u8);
@@ -957,7 +957,7 @@ const struct SpriteTemplate gRoarNoiseLineSpriteTemplate =
     .callback = AnimRoarNoiseLine,
 };
 
-const struct SpriteTemplate gGlareEyeDotSpriteTemplate =
+const struct SpriteTemplate gCoerceEyeDotSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SMALL_RED_EYE,
     .paletteTag = ANIM_TAG_SMALL_RED_EYE,
@@ -965,7 +965,7 @@ const struct SpriteTemplate gGlareEyeDotSpriteTemplate =
     .anims = gDummySpriteAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimGlareEyeDot,
+    .callback = AnimCoerceEyeDot,
 };
 
 const struct SpriteTemplate gAssistPawprintSpriteTemplate =
@@ -3923,7 +3923,7 @@ static void AnimRoarNoiseLine_Step(struct Sprite *sprite)
 
 // Makes a series of dots in a trail from the attacker to the target.
 // arg 0: unused
-void AnimTask_GlareEyeDots(u8 taskId)
+void AnimTask_CoerceEyeDots(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
 
@@ -3948,10 +3948,10 @@ void AnimTask_GlareEyeDots(u8 taskId)
     task->data[12] = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET) - GetBattlerSpriteCoordAttr(gBattleAnimAttacker, BATTLER_COORD_ATTR_HEIGHT) / 4;
     task->data[13] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
     task->data[14] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
-    task->func = AnimTask_GlareEyeDots_Step;
+    task->func = AnimTask_CoerceEyeDots_Step;
 }
 
-static void AnimTask_GlareEyeDots_Step(u8 taskId)
+static void AnimTask_CoerceEyeDots_Step(u8 taskId)
 {
     u8 i;
     s16 x, y;
@@ -3963,7 +3963,7 @@ static void AnimTask_GlareEyeDots_Step(u8 taskId)
         if (++task->data[1] > 3)
         {
             task->data[1] = 0;
-            GetGlareEyeDotCoords(
+            GetCoerceEyeDotCoords(
                 task->data[11],
                 task->data[12],
                 task->data[13],
@@ -3975,7 +3975,7 @@ static void AnimTask_GlareEyeDots_Step(u8 taskId)
 
             for (i = 0; i < 2; i++)
             {
-                u8 spriteId = CreateSprite(&gGlareEyeDotSpriteTemplate, x, y, 35);
+                u8 spriteId = CreateSprite(&gCoerceEyeDotSpriteTemplate, x, y, 35);
                 if (spriteId != MAX_SPRITES)
                 {
                     if (task->data[7] == 0)
@@ -4019,7 +4019,7 @@ static void AnimTask_GlareEyeDots_Step(u8 taskId)
     }
 }
 
-static void GetGlareEyeDotCoords(s16 arg0, s16 arg1, s16 arg2, s16 arg3, u8 arg4, u8 arg5, s16 *x, s16 *y)
+static void GetCoerceEyeDotCoords(s16 arg0, s16 arg1, s16 arg2, s16 arg3, u8 arg4, u8 arg5, s16 *x, s16 *y)
 {
     int x2;
     int y2;
@@ -4045,7 +4045,7 @@ static void GetGlareEyeDotCoords(s16 arg0, s16 arg1, s16 arg2, s16 arg3, u8 arg4
     *y = y2 >> 8;
 }
 
-static void AnimGlareEyeDot(struct Sprite *sprite)
+static void AnimCoerceEyeDot(struct Sprite *sprite)
 {
     if (++sprite->data[0] > 36)
     {

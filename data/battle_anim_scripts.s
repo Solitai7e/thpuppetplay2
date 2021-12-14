@@ -153,7 +153,7 @@ gBattleAnims_Moves::
 	.4byte Move_KINESIS
 	.4byte Move_SOFT_BOILED
 	.4byte Move_HI_JUMP_KICK
-	.4byte Move_GLARE
+	.4byte Move_COERCE
 	.4byte Move_DREAM_EATER
 	.4byte Move_OMINOUS_WIND
 	.4byte Move_BARRAGE
@@ -2885,10 +2885,10 @@ Move_KINESIS:
 	call UnsetPsychicBackground
 	end
 
-Move_GLARE:
+Move_COERCE:
 	loadspritegfx ANIM_TAG_SMALL_RED_EYE
 	loadspritegfx ANIM_TAG_EYE_SPARKLE
-	createvisualtask AnimTask_GlareEyeDots, 5, 0
+	createvisualtask AnimTask_CoerceEyeDots, 5, 0
 	playsewithpan SE_M_PSYBEAM2, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	createvisualtask AnimTask_BlendBattleAnimPal, 5, 1, 0, 0, 16, RGB_BLACK

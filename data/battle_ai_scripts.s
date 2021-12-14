@@ -874,7 +874,7 @@ AI_CV_FalseSwipe_EncouragedMovesToMirror:
     .2byte MOVE_FAKE_TEARS
     .2byte MOVE_BINDING_VOICE
     .2byte MOVE_THUNDER_WAVE
-    .2byte MOVE_GLARE
+    .2byte MOVE_COERCE
     .2byte MOVE_POISON_POWDER
     .2byte MOVE_SHADOW_BALL
     .2byte MOVE_DYNAMIC_PUNCH

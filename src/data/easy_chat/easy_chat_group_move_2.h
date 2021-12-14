@@ -68,7 +68,7 @@ const u16 gEasyChatGroup_Move2[] = {
     MOVE_FURY_CUTTER,
     MOVE_FURY_SWIPES,
     MOVE_PSYCHO_CUT,
-    MOVE_GLARE,
+    MOVE_COERCE,
     MOVE_GROWL,
     MOVE_JUDGEMENT,
     MOVE_HEAT_WAVE,

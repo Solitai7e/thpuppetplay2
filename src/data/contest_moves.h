@@ -1089,7 +1089,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_HEARTS_EYE},
     },
 
-    [MOVE_GLARE] =
+    [MOVE_COERCE] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,

@@ -545,7 +545,7 @@ static const u8 sHiJumpKickDescription[] = _(
     "A jumping knee kick. If it\n"
     "misses, the user is hurt.");
 
-static const u8 sGlareDescription[] = _(
+static const u8 sCoerceDescription[] = _(
     "Intimidates and frightens\n"
     "the foe into paralysis.");
 
@@ -1556,7 +1556,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_KINESIS - 1] = sKinesisDescription,
     [MOVE_SOFT_BOILED - 1] = sSoftBoiledDescription,
     [MOVE_HI_JUMP_KICK - 1] = sHiJumpKickDescription,
-    [MOVE_GLARE - 1] = sGlareDescription,
+    [MOVE_COERCE - 1] = sCoerceDescription,
     [MOVE_DREAM_EATER - 1] = sDreamEaterDescription,
     [MOVE_OMINOUS_WIND - 1] = sOminousWindDescription,
     [MOVE_BARRAGE - 1] = sBarrageDescription,
