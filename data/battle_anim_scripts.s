@@ -5944,7 +5944,7 @@ ToxicBubbles:
 Move_POISON_BOMB:
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
-	createsprite gPoisonBombProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 0
+	createsprite gSludgeProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 0
 	waitforvisualfinish
 	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 3, 0, 5, 1
 	createvisualtask AnimTask_BlendColorCycle, 2, 4, 1, 2, 0, 12, RGB(30, 0, 31)
@@ -5991,7 +5991,7 @@ Move_GUNK_SHOT:
 	end
 GunkShotProjectile:
 	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
-	createsprite gPoisonBombProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 0
+	createsprite gSludgeProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 0
 	delay 3
 	return
 
