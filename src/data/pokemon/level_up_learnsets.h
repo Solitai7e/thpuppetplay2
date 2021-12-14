@@ -831,7 +831,7 @@ static const u16 sLettyLevelUpLearnset[] = {
 
 static const u16 sCPatchouliLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TELEPORT),
-    LEVEL_UP_MOVE( 1, MOVE_KINESIS),
+    LEVEL_UP_MOVE( 1, MOVE_LUNA_DIAL),
     LEVEL_UP_MOVE( 1, MOVE_CONFUSION),
     LEVEL_UP_MOVE(16, MOVE_CONFUSION),
     LEVEL_UP_MOVE(18, MOVE_DISABLE),
@@ -847,7 +847,7 @@ static const u16 sCPatchouliLevelUpLearnset[] = {
 
 static const u16 sPatchouliLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TELEPORT),
-    LEVEL_UP_MOVE( 1, MOVE_KINESIS),
+    LEVEL_UP_MOVE( 1, MOVE_LUNA_DIAL),
     LEVEL_UP_MOVE( 1, MOVE_CONFUSION),
     LEVEL_UP_MOVE(16, MOVE_CONFUSION),
     LEVEL_UP_MOVE(18, MOVE_DISABLE),

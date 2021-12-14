@@ -23,7 +23,7 @@ static void AnimVibrateBattlerBack(struct Sprite *);
 static void AnimMovingClamp(struct Sprite *);
 static void AnimMovingClamp_Step(struct Sprite *);
 static void AnimMovingClamp_End(struct Sprite *);
-static void AnimKinesisZapEnergy(struct Sprite *);
+static void AnimLunaDialZapEnergy(struct Sprite *);
 static void AnimSwordsDanceBlade(struct Sprite *);
 static void AnimSwordsDanceBlade_Step(struct Sprite *);
 static void AnimSonicBoomProjectile(struct Sprite *);
@@ -206,7 +206,7 @@ static const struct SpriteTemplate sSmallExplosionSpriteTemplate =
     .callback = AnimSpriteOnMonPos,
 };
 
-const union AnimCmd gKinesisZapEnergyAnimCmds[] =
+const union AnimCmd gLunaDialZapEnergyAnimCmds[] =
 {
     ANIMCMD_FRAME(0, 3, .hFlip = TRUE),
     ANIMCMD_FRAME(8, 3, .hFlip = TRUE),
@@ -219,20 +219,20 @@ const union AnimCmd gKinesisZapEnergyAnimCmds[] =
     ANIMCMD_END,
 };
 
-const union AnimCmd *const gKinesisZapEnergyAnimTable[] =
+const union AnimCmd *const gLunaDialZapEnergyAnimTable[] =
 {
-    gKinesisZapEnergyAnimCmds,
+    gLunaDialZapEnergyAnimCmds,
 };
 
-const struct SpriteTemplate gKinesisZapEnergySpriteTemplate =
+const struct SpriteTemplate gLunaDialZapEnergySpriteTemplate =
 {
     .tileTag = ANIM_TAG_ALERT,
     .paletteTag = ANIM_TAG_ALERT,
     .oam = &gOamData_AffineOff_ObjNormal_32x16,
-    .anims = gKinesisZapEnergyAnimTable,
+    .anims = gLunaDialZapEnergyAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimKinesisZapEnergy,
+    .callback = AnimLunaDialZapEnergy,
 };
 
 const union AffineAnimCmd gSwordsDanceBladeAffineAnimCmds[] =
@@ -1435,11 +1435,11 @@ static void AnimTask_Withdraw_Step(u8 taskId)
     }
 }
 
-// Animates a "zap of energy" used in KINESIS.
+// Animates a "zap of energy" used in Luna Dial.
 // arg 0: x pixel offset
 // arg 1: y pixel offset
 // arg 2: vertical flip
-static void AnimKinesisZapEnergy(struct Sprite *sprite)
+static void AnimLunaDialZapEnergy(struct Sprite *sprite)
 {
     SetSpriteCoordsToAnimAttackerCoords(sprite);
     if (GetBattlerSide(gBattleAnimAttacker) != B_SIDE_PLAYER)

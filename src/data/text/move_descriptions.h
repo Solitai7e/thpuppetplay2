@@ -533,7 +533,7 @@ static const u8 sAmnesiaDescription[] = _(
     "Forgets about something\n"
     "and sharply raises SP. DEF.");
 
-static const u8 sKinesisDescription[] = _(
+static const u8 sLunaDialDescription[] = _(
     "Distracts the foe.\n"
     "May lower accuracy.");
 
@@ -1553,7 +1553,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_FEINT - 1] = sFeintDescription,
     [MOVE_CONSTRICT - 1] = sConstrictDescription,
     [MOVE_AMNESIA - 1] = sAmnesiaDescription,
-    [MOVE_KINESIS - 1] = sKinesisDescription,
+    [MOVE_LUNA_DIAL - 1] = sLunaDialDescription,
     [MOVE_SOFT_BOILED - 1] = sSoftBoiledDescription,
     [MOVE_HI_JUMP_KICK - 1] = sHiJumpKickDescription,
     [MOVE_COERCE - 1] = sCoerceDescription,

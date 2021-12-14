@@ -150,7 +150,7 @@ gBattleAnims_Moves::
 	.4byte Move_FEINT
 	.4byte Move_CONSTRICT
 	.4byte Move_AMNESIA
-	.4byte Move_KINESIS
+	.4byte Move_LUNA_DIAL
 	.4byte Move_SOFT_BOILED
 	.4byte Move_HI_JUMP_KICK
 	.4byte Move_COERCE
@@ -2866,14 +2866,14 @@ Move_AMNESIA:
 	call UnsetPsychicBackground
 	end
 
-Move_KINESIS:
+Move_LUNA_DIAL:
 	loadspritegfx ANIM_TAG_ALERT
 	loadspritegfx ANIM_TAG_BENT_SPOON
 	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
 	call SetPsychicBackground
 	createsprite gBentSpoonSpriteTemplate, ANIM_ATTACKER, 20
-	createsprite gKinesisZapEnergySpriteTemplate, ANIM_ATTACKER, 19, 32, -8, 0
-	createsprite gKinesisZapEnergySpriteTemplate, ANIM_ATTACKER, 19, 32, 16, 1
+	createsprite gLunaDialZapEnergySpriteTemplate, ANIM_ATTACKER, 19, 32, -8, 0
+	createsprite gLunaDialZapEnergySpriteTemplate, ANIM_ATTACKER, 19, 32, 16, 1
 	loopsewithpan SE_M_CONFUSE_RAY, SOUND_PAN_ATTACKER, 21, 2
 	delay 60
 	playsewithpan SE_M_DIZZY_PUNCH, SOUND_PAN_ATTACKER

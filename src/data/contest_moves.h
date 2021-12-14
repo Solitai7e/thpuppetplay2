@@ -742,7 +742,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_STARTLE_PREV_MON,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = COMBO_STARTER_CONFUSION,
-        .comboMoves = {COMBO_STARTER_PSYCHIC, COMBO_STARTER_KINESIS, COMBO_STARTER_CALM_MIND},
+        .comboMoves = {COMBO_STARTER_PSYCHIC, COMBO_STARTER_LUNA_DIAL, COMBO_STARTER_CALM_MIND},
     },
 
     [MOVE_PSYCHIC] =
@@ -750,7 +750,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = COMBO_STARTER_PSYCHIC,
-        .comboMoves = {COMBO_STARTER_KINESIS, COMBO_STARTER_CONFUSION, COMBO_STARTER_CALM_MIND},
+        .comboMoves = {COMBO_STARTER_LUNA_DIAL, COMBO_STARTER_CONFUSION, COMBO_STARTER_CALM_MIND},
     },
 
     [MOVE_HYPNOSIS] =
@@ -798,7 +798,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_AVOID_STARTLE,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_SHADOW_HIT, COMBO_STARTER_PSYCHIC, COMBO_STARTER_KINESIS, COMBO_STARTER_CONFUSION},
+        .comboMoves = {COMBO_STARTER_SHADOW_HIT, COMBO_STARTER_PSYCHIC, COMBO_STARTER_LUNA_DIAL, COMBO_STARTER_CONFUSION},
     },
 
     [MOVE_NIGHT_SHADE] =
@@ -1065,11 +1065,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_KINESIS] =
+    [MOVE_LUNA_DIAL] =
     {
         .effect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
         .contestCategory = CONTEST_CATEGORY_SMART,
-        .comboStarterId = COMBO_STARTER_KINESIS,
+        .comboStarterId = COMBO_STARTER_LUNA_DIAL,
         .comboMoves = {COMBO_STARTER_PSYCHIC, COMBO_STARTER_CONFUSION},
     },
 
@@ -1982,7 +1982,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_PSYCHIC, COMBO_STARTER_KINESIS, COMBO_STARTER_CONFUSION, COMBO_STARTER_CALM_MIND},
+        .comboMoves = {COMBO_STARTER_PSYCHIC, COMBO_STARTER_LUNA_DIAL, COMBO_STARTER_CONFUSION, COMBO_STARTER_CALM_MIND},
     },
 
     [MOVE_ROCK_SMASH] =

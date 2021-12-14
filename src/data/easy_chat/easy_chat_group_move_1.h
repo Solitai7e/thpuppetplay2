@@ -62,7 +62,7 @@ const u16 gEasyChatGroup_Move1[] = {
     MOVE_ICY_WIND,
     MOVE_STEEL_FIST,
     MOVE_KARATE_CHOP,
-    MOVE_KINESIS,
+    MOVE_LUNA_DIAL,
     MOVE_LEECH_LIFE,
     MOVE_LICK,
     MOVE_LOVELY_KISS,
