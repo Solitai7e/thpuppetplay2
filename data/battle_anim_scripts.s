@@ -233,7 +233,7 @@ gBattleAnims_Moves::
 	.4byte Move_SLEEP_TALK
 	.4byte Move_HEAL_BELL
 	.4byte Move_RETURN
-	.4byte Move_PRESENT
+	.4byte Move_PRANK
 	.4byte Move_FRUSTRATION
 	.4byte Move_SAFEGUARD
 	.4byte Move_PAIN_SPLIT
@@ -7856,10 +7856,10 @@ Move_INGRAIN:
 	waitforvisualfinish
 	end
 
-Move_PRESENT:
+Move_PRANK:
 	loadspritegfx ANIM_TAG_ITEM_BAG
 	createvisualtask AnimTask_IsHealingMove, 2
-	createsprite gPresentSpriteTemplate, ANIM_TARGET, 2, 0, -5, 10, 2, -1
+	createsprite gPrankSpriteTemplate, ANIM_TARGET, 2, 0, -5, 10, 2, -1
 	playsewithpan SE_M_TAIL_WHIP, SOUND_PAN_ATTACKER
 	delay 14
 	playsewithpan SE_M_BUBBLE2, SOUND_PAN_ATTACKER
@@ -7868,11 +7868,11 @@ Move_PRESENT:
 	delay 20
 	playsewithpan SE_M_BUBBLE2, SOUND_PAN_TARGET
 	waitforvisualfinish
-	jumpretfalse PresentDamage
-	jumprettrue PresentHeal
+	jumpretfalse PrankDamage
+	jumprettrue PrankHeal
 	end
 
-PresentDamage:
+PrankDamage:
 	loadspritegfx ANIM_TAG_EXPLOSION
 	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
 	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, 0, 0, 1, 1
@@ -7890,27 +7890,27 @@ PresentDamage:
 	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, 16, 16, 1, 1
 	end
 
-PresentHeal:
+PrankHeal:
 	loadspritegfx ANIM_TAG_GREEN_SPARKLE
 	loadspritegfx ANIM_TAG_BLUE_STAR
 	playsewithpan SE_M_ENERGY_LIGHT, SOUND_PAN_TARGET
-	createsprite gPresentHealParticleSpriteTemplate, ANIM_TARGET, 4, -16, 32, -3, 1
+	createsprite gPrankHealParticleSpriteTemplate, ANIM_TARGET, 4, -16, 32, -3, 1
 	delay 3
-	createsprite gPresentHealParticleSpriteTemplate, ANIM_TARGET, 4, 16, 32, -3, -1
+	createsprite gPrankHealParticleSpriteTemplate, ANIM_TARGET, 4, 16, 32, -3, -1
 	delay 3
-	createsprite gPresentHealParticleSpriteTemplate, ANIM_TARGET, 4, 32, 32, -3, 1
+	createsprite gPrankHealParticleSpriteTemplate, ANIM_TARGET, 4, 32, 32, -3, 1
 	delay 3
-	createsprite gPresentHealParticleSpriteTemplate, ANIM_TARGET, 4, -32, 32, -3, 1
+	createsprite gPrankHealParticleSpriteTemplate, ANIM_TARGET, 4, -32, 32, -3, 1
 	delay 3
-	createsprite gPresentHealParticleSpriteTemplate, ANIM_TARGET, 4, 0, 32, -3, 1
+	createsprite gPrankHealParticleSpriteTemplate, ANIM_TARGET, 4, 0, 32, -3, 1
 	delay 3
-	createsprite gPresentHealParticleSpriteTemplate, ANIM_TARGET, 4, -8, 32, -3, 1
+	createsprite gPrankHealParticleSpriteTemplate, ANIM_TARGET, 4, -8, 32, -3, 1
 	delay 3
-	createsprite gPresentHealParticleSpriteTemplate, ANIM_TARGET, 4, -8, 32, -3, 1
+	createsprite gPrankHealParticleSpriteTemplate, ANIM_TARGET, 4, -8, 32, -3, 1
 	delay 3
-	createsprite gPresentHealParticleSpriteTemplate, ANIM_TARGET, 4, 24, 32, -3, 1
+	createsprite gPrankHealParticleSpriteTemplate, ANIM_TARGET, 4, 24, 32, -3, 1
 	delay 3
-	createsprite gPresentHealParticleSpriteTemplate, ANIM_TARGET, 4, -24, 32, -3, 1
+	createsprite gPrankHealParticleSpriteTemplate, ANIM_TARGET, 4, -24, 32, -3, 1
 	waitforvisualfinish
 	waitsound
 	call HealingEffect2

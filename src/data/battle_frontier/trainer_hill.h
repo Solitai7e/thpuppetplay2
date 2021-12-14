@@ -1729,9 +1729,9 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                             .name = _("TERRANCE"),
                             .facilityClass = FACILITY_CLASS_GENTLEMAN,
                             .unused = 0,
-                            .speechBefore = {EC_WORD_GOOD, EC_WORD_CHILDREN, EC_WORD_WILL, EC_WORD_GET, EC_WORD_A, EC_MOVE2(PRESENT)},
-                            .speechWin = {EC_WORD_THANK_YOU, EC_WORD_MY, EC_WORD_VICTORY, EC_WORD_IS, EC_WORD_YOUR, EC_MOVE2(PRESENT)},
-                            .speechLose = {EC_WORD_THAT_WAS, EC_WORD_MY, EC_MOVE2(PRESENT), EC_WORD_TO, EC_WORD_YOU, EC_EMPTY_WORD},
+                            .speechBefore = {EC_WORD_GOOD, EC_WORD_CHILDREN, EC_WORD_WILL, EC_WORD_GET, EC_WORD_A, EC_MOVE2(PRANK)},
+                            .speechWin = {EC_WORD_THANK_YOU, EC_WORD_MY, EC_WORD_VICTORY, EC_WORD_IS, EC_WORD_YOUR, EC_MOVE2(PRANK)},
+                            .speechLose = {EC_WORD_THAT_WAS, EC_WORD_MY, EC_MOVE2(PRANK), EC_WORD_TO, EC_WORD_YOU, EC_EMPTY_WORD},
                             .speechAfter = {EC_WORD_WELL_THEN, EC_WORD_CONGRATS, EC_WORD_MY, EC_WORD_FRIEND, EC_EMPTY_WORD, EC_EMPTY_WORD},
                             .mons =
                                 {
@@ -1739,7 +1739,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_SAYA,
                                             .heldItem = ITEM_SITRUS_BERRY,
-                                            .moves = {MOVE_PRESENT, MOVE_SPLASH, MOVE_HAIL, MOVE_PROTECT},
+                                            .moves = {MOVE_PRANK, MOVE_SPLASH, MOVE_HAIL, MOVE_PROTECT},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .attackEV = 255,
@@ -1760,7 +1760,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_CYUKARI,
                                             .heldItem = ITEM_SITRUS_BERRY,
-                                            .moves = {MOVE_PRESENT, MOVE_DRACO_METEOR, MOVE_LIGHT_SCREEN, MOVE_LUNATIC},
+                                            .moves = {MOVE_PRANK, MOVE_DRACO_METEOR, MOVE_LIGHT_SCREEN, MOVE_LUNATIC},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .attackEV = 255,
@@ -1781,7 +1781,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_CCIRNO,
                                             .heldItem = ITEM_SITRUS_BERRY,
-                                            .moves = {MOVE_PRESENT, MOVE_GROWL, MOVE_TAIL_WHIP, MOVE_AGILITY},
+                                            .moves = {MOVE_PRANK, MOVE_GROWL, MOVE_TAIL_WHIP, MOVE_AGILITY},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .attackEV = 255,
@@ -1802,7 +1802,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_KOTOHIME,
                                             .heldItem = ITEM_SITRUS_BERRY,
-                                            .moves = {MOVE_PRESENT, MOVE_DEFENSE_CURL, MOVE_TAIL_WHIP, MOVE_ENDURE},
+                                            .moves = {MOVE_PRANK, MOVE_DEFENSE_CURL, MOVE_TAIL_WHIP, MOVE_ENDURE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .attackEV = 255,
@@ -1823,7 +1823,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_CMYSTIA,
                                             .heldItem = ITEM_SITRUS_BERRY,
-                                            .moves = {MOVE_PRESENT, MOVE_SING, MOVE_DISABLE, MOVE_REST},
+                                            .moves = {MOVE_PRANK, MOVE_SING, MOVE_DISABLE, MOVE_REST},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .attackEV = 255,
@@ -1844,7 +1844,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_CKANA,
                                             .heldItem = ITEM_SITRUS_BERRY,
-                                            .moves = {MOVE_PRESENT, MOVE_CHARM, MOVE_SWEET_KISS, MOVE_WISH},
+                                            .moves = {MOVE_PRANK, MOVE_CHARM, MOVE_SWEET_KISS, MOVE_WISH},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .attackEV = 255,

@@ -865,7 +865,7 @@ static const u8 sReturnDescription[] = _(
     "An attack that increases\n"
     "in power with friendship.");
 
-static const u8 sPresentDescription[] = _(
+static const u8 sPrankDescription[] = _(
     "A gift in the form of a\n"
     "bomb. May restore HP.");
 
@@ -1636,7 +1636,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SLEEP_TALK - 1] = sSleepTalkDescription,
     [MOVE_HEAL_BELL - 1] = sHealBellDescription,
     [MOVE_RETURN - 1] = sReturnDescription,
-    [MOVE_PRESENT - 1] = sPresentDescription,
+    [MOVE_PRANK - 1] = sPrankDescription,
     [MOVE_FRUSTRATION - 1] = sFrustrationDescription,
     [MOVE_SAFEGUARD - 1] = sSafeguardDescription,
     [MOVE_PAIN_SPLIT - 1] = sPainSplitDescription,

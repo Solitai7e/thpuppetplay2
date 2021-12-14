@@ -11,7 +11,7 @@ extern const u8 BattleScript_ButItFailed[];
 extern const u8 BattleScript_StatUp[];
 extern const u8 BattleScript_StatDown[];
 extern const u8 BattleScript_AlreadyAtFullHp[];
-extern const u8 BattleScript_PresentHealTarget[];
+extern const u8 BattleScript_PrankHealTarget[];
 extern const u8 BattleScript_MoveUsedMustRecharge[];
 extern const u8 BattleScript_FaintAttacker[];
 extern const u8 BattleScript_FaintTarget[];

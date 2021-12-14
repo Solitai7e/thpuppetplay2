@@ -139,7 +139,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectFuryCutter             @ EFFECT_FURY_CUTTER
 	.4byte BattleScript_EffectAttract                @ EFFECT_ATTRACT
 	.4byte BattleScript_EffectReturn                 @ EFFECT_RETURN
-	.4byte BattleScript_EffectPresent                @ EFFECT_PRESENT
+	.4byte BattleScript_EffectPrank                @ EFFECT_PRANK
 	.4byte BattleScript_EffectFrustration            @ EFFECT_FRUSTRATION
 	.4byte BattleScript_EffectSafeguard              @ EFFECT_SAFEGUARD
 	.4byte BattleScript_EffectThawHit                @ EFFECT_THAW_HIT
@@ -742,7 +742,7 @@ BattleScript_EffectRest::
 	waitmessage B_WAIT_TIME_LONG
 	updatestatusicon BS_ATTACKER
 	waitstate
-	goto BattleScript_PresentHealTarget
+	goto BattleScript_PrankHealTarget
 
 BattleScript_RestCantSleep::
 	pause B_WAIT_TIME_LONG
@@ -1659,13 +1659,13 @@ BattleScript_EffectFrustration::
 	friendshiptodamagecalculation
 	goto BattleScript_HitFromAtkString
 
-BattleScript_EffectPresent::
+BattleScript_EffectPrank::
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
 	ppreduce
 	typecalc
-	presentdamagecalculation
+	prankdamagecalculation
 
 BattleScript_EffectSafeguard::
 	attackcanceler
@@ -1733,7 +1733,7 @@ BattleScript_EffectLunatic::
 	attackstring
 	ppreduce
 	recoverbasedonsunlight BattleScript_AlreadyAtFullHp
-	goto BattleScript_PresentHealTarget
+	goto BattleScript_PrankHealTarget
 
 BattleScript_EffectChargeBeam::
 	chargebeamcalc
@@ -2027,7 +2027,7 @@ BattleScript_EffectSoftboiled::
 	attackstring
 	ppreduce
 	tryhealhalfhealth BattleScript_AlreadyAtFullHp, BS_TARGET
-BattleScript_PresentHealTarget::
+BattleScript_PrankHealTarget::
 	attackanimation
 	waitanimation
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
@@ -2119,7 +2119,7 @@ BattleScript_EffectSwallow::
 	attackstring
 	ppreduce
 	stockpiletohpheal BattleScript_SwallowFail
-	goto BattleScript_PresentHealTarget
+	goto BattleScript_PrankHealTarget
 
 BattleScript_SwallowFail::
 	pause B_WAIT_TIME_SHORT

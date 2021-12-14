@@ -520,7 +520,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_THRASH] =
     {
-        .effect = EFFECT_PRESENT,
+        .effect = EFFECT_PRANK,
         .split = 0,
         .power = 100,
         .type = TYPE_DREAM,
@@ -3038,7 +3038,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 
-    [MOVE_PRESENT] =
+    [MOVE_PRANK] =
     {
         .effect = EFFECT_HEAT_CLAW,
         .split = 0,

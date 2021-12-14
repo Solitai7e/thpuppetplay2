@@ -259,7 +259,7 @@ static void Cmd_tremorsdamagecalculation(void);
 static void Cmd_jumpifconfusedandstatmaxed(void);
 static void Cmd_furycuttercalc(void);
 static void Cmd_friendshiptodamagecalculation(void);
-static void Cmd_presentdamagecalculation(void);
+static void Cmd_prankdamagecalculation(void);
 static void Cmd_setsafeguard(void);
 static void Cmd_magnitudedamagecalculation(void);
 static void Cmd_jumpifnopursuitswitchdmg(void);
@@ -509,7 +509,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_jumpifconfusedandstatmaxed,              //0xB4
     Cmd_furycuttercalc,                          //0xB5
     Cmd_friendshiptodamagecalculation,           //0xB6
-    Cmd_presentdamagecalculation,                //0xB7
+    Cmd_prankdamagecalculation,                //0xB7
     Cmd_setsafeguard,                            //0xB8
     Cmd_magnitudedamagecalculation,              //0xB9
     Cmd_jumpifnopursuitswitchdmg,                //0xBA
@@ -8504,7 +8504,7 @@ static void Cmd_friendshiptodamagecalculation(void)
     gBattlescriptCurrInstr++;
 }
 
-static void Cmd_presentdamagecalculation(void)
+static void Cmd_prankdamagecalculation(void)
 {
     s32 rand = Random() & 0xFF;
 
@@ -8528,7 +8528,7 @@ static void Cmd_presentdamagecalculation(void)
     else
     {
         gMoveResultFlags &= ~MOVE_RESULT_DOESNT_AFFECT_FOE;
-        gBattlescriptCurrInstr = BattleScript_PresentHealTarget;
+        gBattlescriptCurrInstr = BattleScript_PrankHealTarget;
     }
 }
 

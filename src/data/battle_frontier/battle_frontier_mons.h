@@ -828,7 +828,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_SAYA] = {
         .species = SPECIES_SAYA,
-        .moves = {MOVE_PRESENT, MOVE_ICE_BALL, MOVE_BLADE_FLASH, MOVE_HAIL},
+        .moves = {MOVE_PRANK, MOVE_ICE_BALL, MOVE_BLADE_FLASH, MOVE_HAIL},
         .itemTableId = BATTLE_FRONTIER_ITEM_NEVER_MELT_ICE,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_DOCILE

@@ -952,7 +952,7 @@
 	.byte 0xb6
 	.endm
 
-	.macro presentdamagecalculation
+	.macro prankdamagecalculation
 	.byte 0xb7
 	.endm
 

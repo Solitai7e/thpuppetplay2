@@ -3083,7 +3083,7 @@ static const u16 sTYuukaLevelUpLearnset[] = {
 };
 
 static const u16 sSAyaLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_PRESENT),
+    LEVEL_UP_MOVE( 1, MOVE_PRANK),
     LEVEL_UP_END
 };
 

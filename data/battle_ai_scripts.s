@@ -167,7 +167,7 @@ AI_CheckBadMove_CheckEffect:
 	if_effect EFFECT_SWAGGER, AI_CBM_Confuse
 	if_effect EFFECT_ATTRACT, AI_CBM_Attract
 	if_effect EFFECT_RETURN, AI_CBM_HighRiskForDamage
-	if_effect EFFECT_PRESENT, AI_CBM_HighRiskForDamage
+	if_effect EFFECT_PRANK, AI_CBM_HighRiskForDamage
 	if_effect EFFECT_FRUSTRATION, AI_CBM_HighRiskForDamage
 	if_effect EFFECT_SAFEGUARD, AI_CBM_Safeguard
 	if_effect EFFECT_MAGNITUDE, AI_CBM_Magnitude
@@ -2710,7 +2710,7 @@ AI_Risky_EffectsToEncourage:
     .byte EFFECT_DESTINY_BOND
     .byte EFFECT_SWAGGER
     .byte EFFECT_ATTRACT
-    .byte EFFECT_PRESENT
+    .byte EFFECT_PRANK
     .byte EFFECT_ALL_STATS_UP_HIT
     .byte EFFECT_BELLY_DRUM
     .byte EFFECT_MIRROR_COAT

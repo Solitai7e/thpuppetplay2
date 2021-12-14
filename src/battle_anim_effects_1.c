@@ -55,9 +55,9 @@ static void AnimIngrainRoot(struct Sprite *);
 static void AnimFrenzyPlantRoot(struct Sprite *);
 static void AnimRootFlickerOut(struct Sprite *);
 static void AnimIngrainOrb(struct Sprite *);
-static void AnimPresent(struct Sprite *);
+static void AnimPrank(struct Sprite *);
 static void AnimKnockOffItem(struct Sprite *);
-static void AnimPresentHealParticle(struct Sprite *);
+static void AnimPrankHealParticle(struct Sprite *);
 static void AnimItemSteal(struct Sprite *);
 static void AnimItemSteal_Step1(struct Sprite *);
 static void AnimItemSteal_Step2(struct Sprite *);
@@ -777,7 +777,7 @@ const union AffineAnimCmd *const gFallingBagAffineAnimTable[] = {
     gFallingBagAffineAnimCmds2,
 };
 
-const struct SpriteTemplate gPresentSpriteTemplate =
+const struct SpriteTemplate gPrankSpriteTemplate =
 {
     .tileTag = ANIM_TAG_ITEM_BAG,
     .paletteTag = ANIM_TAG_ITEM_BAG,
@@ -785,7 +785,7 @@ const struct SpriteTemplate gPresentSpriteTemplate =
     .anims = gFallingBagAnimTable,
     .images = NULL,
     .affineAnims = gFallingBagAffineAnimTable,
-    .callback = AnimPresent,
+    .callback = AnimPrank,
 };
 
 const struct SpriteTemplate gKnockOffItemSpriteTemplate =
@@ -799,7 +799,7 @@ const struct SpriteTemplate gKnockOffItemSpriteTemplate =
     .callback = AnimKnockOffItem,
 };
 
-const union AnimCmd gPresentHealParticleAnimCmds[] =
+const union AnimCmd gPrankHealParticleAnimCmds[] =
 {
     ANIMCMD_FRAME(0, 4),
     ANIMCMD_FRAME(4, 4),
@@ -808,20 +808,20 @@ const union AnimCmd gPresentHealParticleAnimCmds[] =
     ANIMCMD_END,
 };
 
-const union AnimCmd *const gPresentHealParticleAnimTable[] =
+const union AnimCmd *const gPrankHealParticleAnimTable[] =
 {
-    gPresentHealParticleAnimCmds,
+    gPrankHealParticleAnimCmds,
 };
 
-const struct SpriteTemplate gPresentHealParticleSpriteTemplate =
+const struct SpriteTemplate gPrankHealParticleSpriteTemplate =
 {
     .tileTag = ANIM_TAG_GREEN_SPARKLE,
     .paletteTag = ANIM_TAG_GREEN_SPARKLE,
     .oam = &gOamData_AffineOff_ObjNormal_16x16,
-    .anims = gPresentHealParticleAnimTable,
+    .anims = gPrankHealParticleAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimPresentHealParticle,
+    .callback = AnimPrankHealParticle,
 };
 
 const struct SpriteTemplate gItemStealSpriteTemplate =
@@ -3054,7 +3054,7 @@ static void AnimItemSteal_Step1(struct Sprite* sprite)
     }
 }
 
-static void AnimPresent(struct Sprite* sprite)
+static void AnimPrank(struct Sprite* sprite)
 {
     s16 targetX;
     s16 targetY;
@@ -3131,7 +3131,7 @@ static void AnimKnockOffItem(struct Sprite* sprite)
 // arg 1: initial y pixel offset
 // arg 2: vertical velocity
 // arg 3: unused
-static void AnimPresentHealParticle(struct Sprite* sprite)
+static void AnimPrankHealParticle(struct Sprite* sprite)
 {
     if (!sprite->data[0])
     {
