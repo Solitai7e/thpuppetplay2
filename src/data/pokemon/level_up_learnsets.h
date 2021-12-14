@@ -1226,7 +1226,7 @@ static const u16 sCKomachiLevelUpLearnset[] = {
     LEVEL_UP_MOVE(17, MOVE_AURORA_BEAM),
     LEVEL_UP_MOVE(25, MOVE_PROTECT),
     LEVEL_UP_MOVE(33, MOVE_LEER),
-    LEVEL_UP_MOVE(41, MOVE_CLAMP),
+    LEVEL_UP_MOVE(41, MOVE_MANA_SHIELD),
     LEVEL_UP_MOVE(49, MOVE_ICE_BEAM),
     LEVEL_UP_END
 };
@@ -5038,7 +5038,7 @@ static const u16 sDMurasaLevelUpLearnset[] = {
 };
 
 static const u16 sAMurasaLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_CLAMP),
+    LEVEL_UP_MOVE( 1, MOVE_MANA_SHIELD),
     LEVEL_UP_MOVE( 1, MOVE_WATER_GUN),
     LEVEL_UP_MOVE( 1, MOVE_WHIRLPOOL),
     LEVEL_UP_MOVE( 1, MOVE_IRON_DEFENSE),

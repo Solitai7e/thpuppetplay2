@@ -583,7 +583,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_CKOMACHI] = {
         .species = SPECIES_CKOMACHI,
-        .moves = {MOVE_ICE_SHARD, MOVE_JAMMING, MOVE_CLAMP, MOVE_WITHDRAW},
+        .moves = {MOVE_ICE_SHARD, MOVE_JAMMING, MOVE_MANA_SHIELD, MOVE_WITHDRAW},
         .itemTableId = BATTLE_FRONTIER_ITEM_CHERI_BERRY,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_RELAXED

@@ -144,7 +144,7 @@ gBattleAnims_Moves::
 	.4byte Move_BONE_CLUB
 	.4byte Move_FIRE_BLAST
 	.4byte Move_WATERFALL
-	.4byte Move_CLAMP
+	.4byte Move_MANA_SHIELD
 	.4byte Move_SWIFT
 	.4byte Move_SKULL_BASH
 	.4byte Move_FEINT
@@ -5324,7 +5324,7 @@ Move_CRUNCH:
 	waitbgfadein
 	end
 
-Move_CLAMP:
+Move_MANA_SHIELD:
 	loadspritegfx ANIM_TAG_CLAMP
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET

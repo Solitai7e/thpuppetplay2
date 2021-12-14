@@ -509,7 +509,7 @@ static const u8 sWaterfallDescription[] = _(
     "Charges the foe with speed\n"
     "to climb waterfalls.");
 
-static const u8 sClampDescription[] = _(
+static const u8 sManaShieldDescription[] = _(
     "Traps and squeezes the\n"
     "foe for 2 to 5 turns.");
 
@@ -1547,7 +1547,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_BONE_CLUB - 1] = sBoneClubDescription,
     [MOVE_FIRE_BLAST - 1] = sFireBlastDescription,
     [MOVE_WATERFALL - 1] = sWaterfallDescription,
-    [MOVE_CLAMP - 1] = sClampDescription,
+    [MOVE_MANA_SHIELD - 1] = sManaShieldDescription,
     [MOVE_SWIFT - 1] = sSwiftDescription,
     [MOVE_SKULL_BASH - 1] = sSkullBashDescription,
     [MOVE_FEINT - 1] = sFeintDescription,

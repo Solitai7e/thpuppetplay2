@@ -323,7 +323,7 @@ static const u16 sPoints_RainMoves[] =
     MOVE_BUBBLE, 3,
     MOVE_WHIRLPOOL, 3,
     MOVE_BLACK_RIPPLE, 3,
-    MOVE_CLAMP, 3,
+    MOVE_MANA_SHIELD, 3,
     MOVE_WITHDRAW, 3,
     MOVE_AQUA_JET, 3,
     MOVE_AQUA_SHOWER, 3,
