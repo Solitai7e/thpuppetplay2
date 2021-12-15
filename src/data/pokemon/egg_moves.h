@@ -91,7 +91,7 @@ const u16 gEggMoves[] = {
               MOVE_JAMMING,
               MOVE_DOUBLE_EDGE,
               MOVE_AMNESIA,
-              MOVE_CONFUSION,
+              MOVE_PSYSHOT,
               MOVE_BEAT_UP),
 
     egg_moves(CSUIKA,
@@ -379,7 +379,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(CSUNNYMILK,
               MOVE_FLAIL,
-              MOVE_CONFUSION,
+              MOVE_PSYSHOT,
               MOVE_MEGA_DRAIN,
               MOVE_REFLECT,
               MOVE_AMNESIA,
@@ -631,7 +631,7 @@ const u16 gEggMoves[] = {
               MOVE_SELF_DESTRUCT),
 
     egg_moves(SHINKI,
-              MOVE_CONFUSION,
+              MOVE_PSYSHOT,
               MOVE_ENCORE,
               MOVE_HEAD_SMASH,
               MOVE_REFLECT,

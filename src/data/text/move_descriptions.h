@@ -369,7 +369,7 @@ static const u8 sToxicDescription[] = _(
     "Poisons the foe with an\n"
     "intensifying toxin.");
 
-static const u8 sConfusionDescription[] = _(
+static const u8 sPsyshotDescription[] = _(
     "A psychic attack that may\n"
     "cause confusion.");
 
@@ -1512,7 +1512,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_FISSURE - 1] = sFissureDescription,
     [MOVE_DIG - 1] = sDigDescription,
     [MOVE_TOXIC - 1] = sToxicDescription,
-    [MOVE_CONFUSION - 1] = sConfusionDescription,
+    [MOVE_PSYSHOT - 1] = sPsyshotDescription,
     [MOVE_PSYCHIC - 1] = sPsychicDescription,
     [MOVE_HYPNOSIS - 1] = sHypnosisDescription,
     [MOVE_MEDITATE - 1] = sMeditateDescription,

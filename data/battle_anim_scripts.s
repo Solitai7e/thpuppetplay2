@@ -109,7 +109,7 @@ gBattleAnims_Moves::
 	.4byte Move_FISSURE
 	.4byte Move_DIG
 	.4byte Move_TOXIC
-	.4byte Move_CONFUSION
+	.4byte Move_PSYSHOT
 	.4byte Move_PSYCHIC
 	.4byte Move_HYPNOSIS
 	.4byte Move_MEDITATE
@@ -4706,7 +4706,7 @@ Move_REST:
 	waitforvisualfinish
 	end
 
-Move_CONFUSION:
+Move_PSYSHOT:
 	monbg ANIM_DEF_PARTNER
 	call SetPsychicBackground
 	setalpha 8, 8

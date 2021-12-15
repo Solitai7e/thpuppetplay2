@@ -1043,7 +1043,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_SELF_DESTRUCT,
             MOVE_ROCK_TOMB,
             MOVE_PSYBEAM,
-            MOVE_CONFUSION
+            MOVE_PSYSHOT
         },
         .cool = 50,
         .beauty = 40,
@@ -1323,7 +1323,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_YAWN,
             MOVE_DISABLE,
             MOVE_GROWL,
-            MOVE_CONFUSION
+            MOVE_PSYSHOT
         },
         .cool = 20,
         .beauty = 40,
@@ -1939,7 +1939,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_EXPLOSION,
             MOVE_PSYCHO_CUT,
             MOVE_PSYCHIC,
-            MOVE_CONFUSION
+            MOVE_PSYSHOT
         },
         .cool = 50,
         .beauty = 70,

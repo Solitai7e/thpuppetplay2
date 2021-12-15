@@ -94,7 +94,7 @@
 #define MOVE_FISSURE 90
 #define MOVE_DIG 91
 #define MOVE_TOXIC 92
-#define MOVE_CONFUSION 93
+#define MOVE_PSYSHOT 93
 #define MOVE_PSYCHIC 94
 #define MOVE_HYPNOSIS 95
 #define MOVE_MEDITATE 96

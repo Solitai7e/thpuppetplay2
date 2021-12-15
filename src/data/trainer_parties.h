@@ -3202,7 +3202,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Walter5[] = {
     .iv = 40,
     .lvl = 41,
     .species = SPECIES_YORIHIME,
-    .moves = {MOVE_FURY_SWIPES, MOVE_DISABLE, MOVE_CONFUSION, MOVE_PSYCH_UP}
+    .moves = {MOVE_FURY_SWIPES, MOVE_DISABLE, MOVE_PSYSHOT, MOVE_PSYCH_UP}
     },
     {
     .iv = 40,
@@ -4134,7 +4134,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Vicky[] = {
     .iv = 200,
     .lvl = 18,
     .species = SPECIES_AYUUGI,
-    .moves = {MOVE_HI_JUMP_KICK, MOVE_MEDITATE, MOVE_CONFUSION, MOVE_DETECT}
+    .moves = {MOVE_HI_JUMP_KICK, MOVE_MEDITATE, MOVE_PSYSHOT, MOVE_DETECT}
     }
 };
 
@@ -8648,13 +8648,13 @@ static const struct TrainerMonNoItemCustomMoves sParty_Vivian[] = {
     .iv = 100,
     .lvl = 17,
     .species = SPECIES_AYUUGI,
-    .moves = {MOVE_GUARD, MOVE_DETECT, MOVE_CONFUSION, MOVE_THUNDER_PUNCH}
+    .moves = {MOVE_GUARD, MOVE_DETECT, MOVE_PSYSHOT, MOVE_THUNDER_PUNCH}
     },
     {
     .iv = 100,
     .lvl = 17,
     .species = SPECIES_AYUUGI,
-    .moves = {MOVE_THUNDER_PUNCH, MOVE_DETECT, MOVE_CONFUSION, MOVE_MEDITATE}
+    .moves = {MOVE_THUNDER_PUNCH, MOVE_DETECT, MOVE_PSYSHOT, MOVE_MEDITATE}
     }
 };
 
@@ -8663,7 +8663,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Danielle[] = {
     .iv = 100,
     .lvl = 23,
     .species = SPECIES_AYUUGI,
-    .moves = {MOVE_GUARD, MOVE_DETECT, MOVE_CONFUSION, MOVE_FIRE_PUNCH}
+    .moves = {MOVE_GUARD, MOVE_DETECT, MOVE_PSYSHOT, MOVE_FIRE_PUNCH}
     }
 };
 
