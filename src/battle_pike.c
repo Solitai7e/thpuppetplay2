@@ -96,7 +96,7 @@ static const struct PikeWildMon sLvl50_Mons1[] =
     {
         .species = SPECIES_TSATORI,
         .levelDelta = 4,
-        .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_BODY_SLAM, MOVE_SLUDGE_BOMB}
+        .moves = {MOVE_TOXIC, MOVE_COERCE, MOVE_BODY_SLAM, MOVE_GUNK_SHOT}
     },
     {
         .species = SPECIES_DTEWI,
@@ -106,7 +106,7 @@ static const struct PikeWildMon sLvl50_Mons1[] =
     {
         .species = SPECIES_ADCIRNO,
         .levelDelta = 5,
-        .moves = {MOVE_WILL_O_WISP, MOVE_MEAN_LOOK, MOVE_TOXIC, MOVE_SHADOW_PUNCH}
+        .moves = {MOVE_WILL_O_WISP, MOVE_CHARMING_LOOK, MOVE_TOXIC, MOVE_SHADOW_PUNCH}
     }
 };
 
@@ -115,7 +115,7 @@ static const struct PikeWildMon sLvl50_Mons2[] =
     {
         .species = SPECIES_TSATORI,
         .levelDelta = 4,
-        .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_BODY_SLAM, MOVE_SLUDGE_BOMB}
+        .moves = {MOVE_TOXIC, MOVE_COERCE, MOVE_BODY_SLAM, MOVE_GUNK_SHOT}
     },
     {
         .species = SPECIES_DTEWI,
@@ -134,7 +134,7 @@ static const struct PikeWildMon sLvl50_Mons3[] =
     {
         .species = SPECIES_TSATORI,
         .levelDelta = 4,
-        .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_BODY_SLAM, MOVE_SLUDGE_BOMB}
+        .moves = {MOVE_TOXIC, MOVE_COERCE, MOVE_BODY_SLAM, MOVE_GUNK_SHOT}
     },
     {
         .species = SPECIES_DTEWI,
@@ -144,7 +144,7 @@ static const struct PikeWildMon sLvl50_Mons3[] =
     {
         .species = SPECIES_SYAMAME,
         .levelDelta = 5,
-        .moves = {MOVE_SPORE, MOVE_STUN_SPORE, MOVE_POISON_POWDER, MOVE_HIDDEN_POWER}
+        .moves = {MOVE_BURN_POWDER, MOVE_STUN_SPORE, MOVE_POISON_POWDER, MOVE_CHARGE_BEAM}
     }
 };
 
@@ -153,7 +153,7 @@ static const struct PikeWildMon sLvl50_Mons4[] =
     {
         .species = SPECIES_TSATORI,
         .levelDelta = 4,
-        .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_BODY_SLAM, MOVE_SLUDGE_BOMB}
+        .moves = {MOVE_TOXIC, MOVE_COERCE, MOVE_BODY_SLAM, MOVE_GUNK_SHOT}
     },
     {
         .species = SPECIES_DTEWI,
@@ -180,7 +180,7 @@ static const struct PikeWildMon sLvlOpen_Mons1[] =
     {
         .species = SPECIES_TSATORI,
         .levelDelta = 4,
-        .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_POISON_FANG, MOVE_SLUDGE_BOMB}
+        .moves = {MOVE_TOXIC, MOVE_COERCE, MOVE_CROSS_POISON, MOVE_GUNK_SHOT}
     },
     {
         .species = SPECIES_DTEWI,
@@ -190,7 +190,7 @@ static const struct PikeWildMon sLvlOpen_Mons1[] =
     {
         .species = SPECIES_ADCIRNO,
         .levelDelta = 5,
-        .moves = {MOVE_WILL_O_WISP, MOVE_MEAN_LOOK, MOVE_TOXIC, MOVE_ICE_BEAM}
+        .moves = {MOVE_WILL_O_WISP, MOVE_CHARMING_LOOK, MOVE_TOXIC, MOVE_ICE_BEAM}
     }
 };
 
@@ -199,7 +199,7 @@ static const struct PikeWildMon sLvlOpen_Mons2[] =
     {
         .species = SPECIES_TSATORI,
         .levelDelta = 4,
-        .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_POISON_FANG, MOVE_SLUDGE_BOMB}
+        .moves = {MOVE_TOXIC, MOVE_COERCE, MOVE_CROSS_POISON, MOVE_GUNK_SHOT}
     },
     {
         .species = SPECIES_DTEWI,
@@ -218,7 +218,7 @@ static const struct PikeWildMon sLvlOpen_Mons3[] =
     {
         .species = SPECIES_TSATORI,
         .levelDelta = 4,
-        .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_POISON_FANG, MOVE_SLUDGE_BOMB}
+        .moves = {MOVE_TOXIC, MOVE_COERCE, MOVE_CROSS_POISON, MOVE_GUNK_SHOT}
     },
     {
         .species = SPECIES_DTEWI,
@@ -228,7 +228,7 @@ static const struct PikeWildMon sLvlOpen_Mons3[] =
     {
         .species = SPECIES_SYAMAME,
         .levelDelta = 5,
-        .moves = {MOVE_SPORE, MOVE_STUN_SPORE, MOVE_POISON_POWDER, MOVE_HIDDEN_POWER}
+        .moves = {MOVE_BURN_POWDER, MOVE_STUN_SPORE, MOVE_POISON_POWDER, MOVE_CHARGE_BEAM}
     }
 };
 
@@ -237,7 +237,7 @@ static const struct PikeWildMon sLvlOpen_Mons4[] =
     {
         .species = SPECIES_TSATORI,
         .levelDelta = 4,
-        .moves = {MOVE_TOXIC, MOVE_GLARE, MOVE_POISON_FANG, MOVE_SLUDGE_BOMB}
+        .moves = {MOVE_TOXIC, MOVE_COERCE, MOVE_CROSS_POISON, MOVE_GUNK_SHOT}
     },
     {
         .species = SPECIES_DTEWI,

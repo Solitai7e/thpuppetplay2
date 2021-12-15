@@ -79,8 +79,8 @@ struct DisableStruct
     u8 perishSongTimer:4;
     u8 perishSongTimerStartValue:4;
     u8 furyCutterCounter;
-    u8 rolloutTimer:4;
-    u8 rolloutTimerStartValue:4;
+    u8 tremorsTimer:4;
+    u8 tremorsTimerStartValue:4;
     u8 chargeTimer:4;
     u8 chargeTimerStartValue:4;
     u8 tauntTimer:4;
@@ -151,17 +151,17 @@ struct SideTimer
     u8 mistBattlerId;
     u8 safeguardTimer;
     u8 safeguardBattlerId;
-    u8 followmeTimer;
-    u8 followmeTarget;
+    u8 disturbanceTimer;
+    u8 disturbanceTarget;
     u8 spikesAmount;
 };
 
 struct WishFutureKnock
 {
-    u8 futureSightCounter[MAX_BATTLERS_COUNT];
-    u8 futureSightAttacker[MAX_BATTLERS_COUNT];
-    s32 futureSightDmg[MAX_BATTLERS_COUNT];
-    u16 futureSightMove[MAX_BATTLERS_COUNT];
+    u8 psychoCutCounter[MAX_BATTLERS_COUNT];
+    u8 psychoCutAttacker[MAX_BATTLERS_COUNT];
+    s32 psychoCutDmg[MAX_BATTLERS_COUNT];
+    u16 psychoCutMove[MAX_BATTLERS_COUNT];
     u8 wishCounter[MAX_BATTLERS_COUNT];
     u8 wishMonId[MAX_BATTLERS_COUNT];
     u8 weatherDuration;
@@ -259,8 +259,8 @@ struct BattleTv_Side
     u32 lightScreenMonId:3;
     u32 safeguardMonId:3;
     u32 mistMonId:3;
-    u32 futureSightMonId:3;
-    u32 doomDesireMonId:3;
+    u32 psychoCutMonId:3;
+    u32 decisionMonId:3;
     u32 perishSongMonId:3;
     u32 wishMonId:3;
     u32 grudgeMonId:3;
@@ -270,8 +270,8 @@ struct BattleTv_Side
     u32 lightScreenMoveSlot:2;
     u32 safeguardMoveSlot:2;
     u32 mistMoveSlot:2;
-    u32 futureSightMoveSlot:2;
-    u32 doomDesireMoveSlot:2;
+    u32 psychoCutMoveSlot:2;
+    u32 decisionMoveSlot:2;
     u32 perishSongMoveSlot:2;
     u32 wishMoveSlot:2;
     u32 grudgeMoveSlot:2;
@@ -299,10 +299,10 @@ struct BattleTv_Position
     u32 wrapMoveSlot:2;
     u32 attractMoveSlot:2;
     u32 confusionMoveSlot:2;
-    u32 waterSportMoveSlot:2;
-    u32 waterSportMonId:3;
-    u32 mudSportMonId:3;
-    u32 mudSportMoveSlot:2;
+    u32 splashingMoveSlot:2;
+    u32 splashingMonId:3;
+    u32 mudSlapMonId:3;
+    u32 mudSlapMoveSlot:2;
     u32 ingrainMonId:3;
     u32 ingrainMoveSlot:2;
     u32 attackedByMonId:3;
@@ -478,7 +478,7 @@ struct BattleStruct
 struct BattleScripting
 {
     s32 painSplitHp;
-    s32 bideDmg;
+    s32 guardDmg;
     u8 multihitString[6];
     u8 dmgMultiplier;
     u8 twoTurnsMoveStringId;

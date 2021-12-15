@@ -51,7 +51,7 @@ static const struct UCoords8 sBattlerCoords[][MAX_BATTLERS_COUNT] =
     },
 };
 
-// Placeholders for pokemon sprites to be created for a move animation effect (e.g. Role Play / Snatch)
+// Placeholders for pokemon sprites to be created for a move animation effect (e.g. Recollection / Snatch)
 #define TAG_MOVE_EFFECT_MON_1 55125
 #define TAG_MOVE_EFFECT_MON_2 55126
 
@@ -1617,7 +1617,7 @@ void DestroySpriteWithActiveSheet(struct Sprite *sprite)
     DestroySprite(sprite);
 }
 
-// Only used to fade Moonlight moon sprite in
+// Only used to fade Lunatic moon sprite in
 void AnimTask_AlphaFadeIn(u8 taskId)
 {
     s16 v1 = 0;
@@ -2047,7 +2047,7 @@ u8 GetBattlerSpriteBGPriorityRank(u8 battlerId)
     return 1;
 }
 
-// Create pokemon sprite to be used for a move animation effect (e.g. Role Play / Snatch)
+// Create pokemon sprite to be used for a move animation effect (e.g. Recollection / Snatch)
 u8 CreateAdditionalMonSpriteForMoveAnim(u16 species, bool8 isBackpic, u8 id, s16 x, s16 y, u8 subpriority, u32 personality, u32 trainerId, u32 battlerId)
 {
     u8 spriteId;

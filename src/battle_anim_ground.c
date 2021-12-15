@@ -6,17 +6,17 @@
 #include "trig.h"
 #include "constants/rgb.h"
 
-static void AnimBonemerangProjectile(struct Sprite *);
+static void AnimCheckmaidProjectile(struct Sprite *);
 static void AnimBoneHitProjectile(struct Sprite *);
 static void AnimDirtScatter(struct Sprite *);
-static void AnimMudSportDirt(struct Sprite *);
+static void AnimMudSlapDirt(struct Sprite *);
 static void AnimDirtPlumeParticle(struct Sprite *);
 static void AnimDirtPlumeParticle_Step(struct Sprite *);
 static void AnimDigDirtMound(struct Sprite *);
-static void AnimBonemerangProjectile_Step(struct Sprite *);
-static void AnimBonemerangProjectile_End(struct Sprite *);
-static void AnimMudSportDirtRising(struct Sprite *);
-static void AnimMudSportDirtFalling(struct Sprite *);
+static void AnimCheckmaidProjectile_Step(struct Sprite *);
+static void AnimCheckmaidProjectile_End(struct Sprite *);
+static void AnimMudSlapDirtRising(struct Sprite *);
+static void AnimMudSlapDirtFalling(struct Sprite *);
 static void AnimTask_DigBounceMovement(u8);
 static void AnimTask_DigEndBounceMovementSetInvisible(u8);
 static void AnimTask_DigSetVisibleUnderground(u8);
@@ -27,7 +27,7 @@ static void AnimTask_ShakeBattlers(u8);
 static void SetBattlersXOffsetForShake(struct Task *);
 static void WaitForFissureCompletion(u8);
 
-static const union AffineAnimCmd sAffineAnim_Bonemerang[] =
+static const union AffineAnimCmd sAffineAnim_Checkmaid[] =
 {
     AFFINEANIMCMD_FRAME(0x0, 0x0, 15, 1),
     AFFINEANIMCMD_JUMP(0),
@@ -39,9 +39,9 @@ static const union AffineAnimCmd sAffineAnim_SpinningBone[] =
     AFFINEANIMCMD_JUMP(0),
 };
 
-static const union AffineAnimCmd *const sAffineAnims_Bonemerang[] =
+static const union AffineAnimCmd *const sAffineAnims_Checkmaid[] =
 {
-    sAffineAnim_Bonemerang,
+    sAffineAnim_Checkmaid,
 };
 
 static const union AffineAnimCmd *const sAffineAnims_SpinningBone[] =
@@ -49,15 +49,15 @@ static const union AffineAnimCmd *const sAffineAnims_SpinningBone[] =
     sAffineAnim_SpinningBone,
 };
 
-const struct SpriteTemplate gBonemerangSpriteTemplate =
+const struct SpriteTemplate gCheckmaidSpriteTemplate =
 {
     .tileTag = ANIM_TAG_BONE,
     .paletteTag = ANIM_TAG_BONE,
     .oam = &gOamData_AffineNormal_ObjNormal_32x32,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
-    .affineAnims = sAffineAnims_Bonemerang,
-    .callback = AnimBonemerangProjectile,
+    .affineAnims = sAffineAnims_Checkmaid,
+    .callback = AnimCheckmaidProjectile,
 };
 
 const struct SpriteTemplate gSpinningBoneSpriteTemplate =
@@ -82,15 +82,26 @@ const struct SpriteTemplate gSandAttackDirtSpriteTemplate =
     .callback = AnimDirtScatter,
 };
 
-static const union AnimCmd sAnim_MudSlapMud[] =
+static const union AnimCmd sAnim_MudShotMud[] =
 {
     ANIMCMD_FRAME(1, 1),
     ANIMCMD_END,
 };
 
-static const union AnimCmd *const sAnims_MudSlapMud[] =
+static const union AnimCmd *const sAnims_MudShotMud[] =
 {
-    sAnim_MudSlapMud,
+    sAnim_MudShotMud,
+};
+
+const struct SpriteTemplate gMudShotMudSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_MUD_SAND,
+    .paletteTag = ANIM_TAG_MUD_SAND,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = sAnims_MudShotMud,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimDirtScatter,
 };
 
 const struct SpriteTemplate gMudSlapMudSpriteTemplate =
@@ -98,21 +109,10 @@ const struct SpriteTemplate gMudSlapMudSpriteTemplate =
     .tileTag = ANIM_TAG_MUD_SAND,
     .paletteTag = ANIM_TAG_MUD_SAND,
     .oam = &gOamData_AffineOff_ObjNormal_16x16,
-    .anims = sAnims_MudSlapMud,
-    .images = NULL,
-    .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimDirtScatter,
-};
-
-const struct SpriteTemplate gMudsportMudSpriteTemplate =
-{
-    .tileTag = ANIM_TAG_MUD_SAND,
-    .paletteTag = ANIM_TAG_MUD_SAND,
-    .oam = &gOamData_AffineOff_ObjNormal_16x16,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimMudSportDirt,
+    .callback = AnimMudSlapDirt,
 };
 
 const struct SpriteTemplate gDirtPlumeSpriteTemplate =
@@ -139,7 +139,7 @@ const struct SpriteTemplate gDirtMoundSpriteTemplate =
 
 // Moves a bone projectile towards the target mon, which moves like
 // a boomerang. After hitting the target mon, it comes back to the user.
-static void AnimBonemerangProjectile(struct Sprite *sprite)
+static void AnimCheckmaidProjectile(struct Sprite *sprite)
 {
     sprite->x = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
     sprite->y = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
@@ -148,10 +148,10 @@ static void AnimBonemerangProjectile(struct Sprite *sprite)
     sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
     sprite->data[5] = -40;
     InitAnimArcTranslation(sprite);
-    sprite->callback = AnimBonemerangProjectile_Step;
+    sprite->callback = AnimCheckmaidProjectile_Step;
 }
 
-static void AnimBonemerangProjectile_Step(struct Sprite *sprite)
+static void AnimCheckmaidProjectile_Step(struct Sprite *sprite)
 {
     if (TranslateAnimHorizontalArc(sprite))
     {
@@ -164,11 +164,11 @@ static void AnimBonemerangProjectile_Step(struct Sprite *sprite)
         sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
         sprite->data[5] = 40;
         InitAnimArcTranslation(sprite);
-        sprite->callback = AnimBonemerangProjectile_End;
+        sprite->callback = AnimCheckmaidProjectile_End;
     }
 }
 
-static void AnimBonemerangProjectile_End(struct Sprite *sprite)
+static void AnimCheckmaidProjectile_End(struct Sprite *sprite)
 {
     if (TranslateAnimHorizontalArc(sprite))
         DestroyAnimSprite(sprite);
@@ -224,12 +224,12 @@ static void AnimDirtScatter(struct Sprite *sprite)
     StoreSpriteCallbackInData6(sprite, DestroySpriteAndMatrix);
 }
 
-// Moves a particle of dirt in the Mud Sport animation.
+// Moves a particle of dirt in the Mud-Slap animation.
 // The dirt can either be rising upward, or falling down.
 // arg 0: 0 = dirt is rising into the air, 1 = dirt is falling down
 // arg 1: initial x pixel offset
 // arg 2: initial y pixel offset
-static void AnimMudSportDirt(struct Sprite *sprite)
+static void AnimMudSlapDirt(struct Sprite *sprite)
 {
     sprite->oam.tileNum++;
     if (gBattleAnimArgs[0] == 0)
@@ -237,18 +237,18 @@ static void AnimMudSportDirt(struct Sprite *sprite)
         sprite->x = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2) + gBattleAnimArgs[1];
         sprite->y = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET) + gBattleAnimArgs[2];
         sprite->data[0] = gBattleAnimArgs[1] > 0 ? 1 : -1;
-        sprite->callback = AnimMudSportDirtRising;
+        sprite->callback = AnimMudSlapDirtRising;
     }
     else
     {
         sprite->x = gBattleAnimArgs[1];
         sprite->y = gBattleAnimArgs[2];
         sprite->y2 = -gBattleAnimArgs[2];
-        sprite->callback = AnimMudSportDirtFalling;
+        sprite->callback = AnimMudSlapDirtFalling;
     }
 }
 
-static void AnimMudSportDirtRising(struct Sprite *sprite)
+static void AnimMudSlapDirtRising(struct Sprite *sprite)
 {
     if (++sprite->data[1] > 1)
     {
@@ -261,7 +261,7 @@ static void AnimMudSportDirtRising(struct Sprite *sprite)
         DestroyAnimSprite(sprite);
 }
 
-static void AnimMudSportDirtFalling(struct Sprite *sprite)
+static void AnimMudSlapDirtFalling(struct Sprite *sprite)
 {
     switch (sprite->data[0])
     {

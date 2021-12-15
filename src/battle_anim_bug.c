@@ -4,7 +4,7 @@
 #include "trig.h"
 #include "constants/rgb.h"
 
-static void AnimMegahornHorn(struct Sprite *);
+static void AnimBraveBirdHorn(struct Sprite *);
 static void AnimLeechLifeNeedle(struct Sprite *);
 static void AnimTranslateWebThread(struct Sprite *);
 static void AnimTranslateWebThread_Step(struct Sprite *);
@@ -16,42 +16,42 @@ static void AnimSpiderWeb_End(struct Sprite *);
 static void AnimTranslateStinger(struct Sprite *);
 static void AnimMissileArc(struct Sprite *);
 static void AnimMissileArc_Step(struct Sprite *);
-static void AnimTailGlowOrb(struct Sprite *);
+static void AnimManaChargeOrb(struct Sprite *);
 
-static const union AffineAnimCmd sAffineAnim_MegahornHorn_0[] =
+static const union AffineAnimCmd sAffineAnim_BraveBirdHorn_0[] =
 {
     AFFINEANIMCMD_FRAME(0x100, 0x100, 30, 0),
     AFFINEANIMCMD_END,
 };
 
-static const union AffineAnimCmd sAffineAnim_MegahornHorn_1[] =
+static const union AffineAnimCmd sAffineAnim_BraveBirdHorn_1[] =
 {
     AFFINEANIMCMD_FRAME(0x100, 0x100, -99, 0),
     AFFINEANIMCMD_END,
 };
 
-static const union AffineAnimCmd sAffineAnim_MegahornHorn_2[] =
+static const union AffineAnimCmd sAffineAnim_BraveBirdHorn_2[] =
 {
     AFFINEANIMCMD_FRAME(0x100, 0x100, 94, 0),
     AFFINEANIMCMD_END,
 };
 
-static const union AffineAnimCmd *const sAffineAnims_MegahornHorn[] =
+static const union AffineAnimCmd *const sAffineAnims_BraveBirdHorn[] =
 {
-    sAffineAnim_MegahornHorn_0,
-    sAffineAnim_MegahornHorn_1,
-    sAffineAnim_MegahornHorn_2,
+    sAffineAnim_BraveBirdHorn_0,
+    sAffineAnim_BraveBirdHorn_1,
+    sAffineAnim_BraveBirdHorn_2,
 };
 
-const struct SpriteTemplate gMegahornHornSpriteTemplate =
+const struct SpriteTemplate gBraveBirdHornSpriteTemplate =
 {
     .tileTag = ANIM_TAG_HORN_HIT_2,
     .paletteTag = ANIM_TAG_HORN_HIT_2,
     .oam = &gOamData_AffineDouble_ObjNormal_32x16,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
-    .affineAnims = sAffineAnims_MegahornHorn,
-    .callback = AnimMegahornHorn,
+    .affineAnims = sAffineAnims_BraveBirdHorn,
+    .callback = AnimBraveBirdHorn,
 };
 
 static const union AffineAnimCmd sAffineAnim_LeechLifeNeedle_0[] =
@@ -157,10 +157,10 @@ const struct SpriteTemplate gPinMissileSpriteTemplate =
     .callback = AnimMissileArc,
 };
 
-const struct SpriteTemplate gIcicleSpearSpriteTemplate =
+const struct SpriteTemplate gIceShardSpriteTemplate =
 {
-    .tileTag = ANIM_TAG_ICICLE_SPEAR,
-    .paletteTag = ANIM_TAG_ICICLE_SPEAR,
+    .tileTag = ANIM_TAG_ICE_SHARD,
+    .paletteTag = ANIM_TAG_ICE_SHARD,
     .oam = &gOamData_AffineNormal_ObjNormal_32x32,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
@@ -168,7 +168,7 @@ const struct SpriteTemplate gIcicleSpearSpriteTemplate =
     .callback = AnimMissileArc,
 };
 
-static const union AffineAnimCmd sAffineAnim_TailGlowOrb[] =
+static const union AffineAnimCmd sAffineAnim_ManaChargeOrb[] =
 {
     AFFINEANIMCMD_FRAME(0x10, 0x10, 0, 0),
     AFFINEANIMCMD_FRAME(0x8, 0x8, 0, 18),
@@ -179,23 +179,23 @@ static const union AffineAnimCmd sAffineAnim_TailGlowOrb[] =
     AFFINEANIMCMD_END,
 };
 
-static const union AffineAnimCmd *const sAffineAnims_TailGlowOrb[] =
+static const union AffineAnimCmd *const sAffineAnims_ManaChargeOrb[] =
 {
-    sAffineAnim_TailGlowOrb,
+    sAffineAnim_ManaChargeOrb,
 };
 
-const struct SpriteTemplate gTailGlowOrbSpriteTemplate =
+const struct SpriteTemplate gManaChargeOrbSpriteTemplate =
 {
     .tileTag = ANIM_TAG_CIRCLE_OF_LIGHT,
     .paletteTag = ANIM_TAG_CIRCLE_OF_LIGHT,
     .oam = &gOamData_AffineNormal_ObjBlend_64x64,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
-    .affineAnims = sAffineAnims_TailGlowOrb,
-    .callback = AnimTailGlowOrb,
+    .affineAnims = sAffineAnims_ManaChargeOrb,
+    .callback = AnimManaChargeOrb,
 };
 
-static void AnimMegahornHorn(struct Sprite *sprite)
+static void AnimBraveBirdHorn(struct Sprite *sprite)
 {
     if (IsContest())
     {
@@ -248,7 +248,7 @@ static void AnimLeechLifeNeedle(struct Sprite *sprite)
 }
 
 // Creates a single web thread that travels from attacker to target.
-// Used by MOVE_STRING_SHOT and MOVE_SPIDER_WEB in their first move phase.
+// Used by MOVE_WIRE_WEB and MOVE_SPIDER_WEB in their first move phase.
 // arg 0: x
 // arg 1: y
 // arg 2: controls the left-to-right movement
@@ -291,7 +291,7 @@ static void AnimTranslateWebThread_Step(struct Sprite *sprite)
     sprite->data[6] = (sprite->data[6] + 13) & 0xFF;
 }
 
-// Second stage of String Shot
+// Second stage of Wire Web
 static void AnimStringWrap(struct Sprite *sprite)
 {
     SetAverageBattlerPositions(gBattleAnimTarget, 0, &sprite->x, &sprite->y);
@@ -469,7 +469,7 @@ static void AnimMissileArc_Step(struct Sprite *sprite)
     }
 }
 
-static void AnimTailGlowOrb(struct Sprite *sprite)
+static void AnimManaChargeOrb(struct Sprite *sprite)
 {
     if (gBattleAnimArgs[0] == ANIM_ATTACKER)
     {

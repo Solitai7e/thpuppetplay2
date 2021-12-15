@@ -211,7 +211,7 @@ static void AnimTask_HardwarePaletteFade_Step(u8 taskId)
         DestroyAnimVisualTask(taskId);
 }
 
-// Used to leave blended traces of a mon, usually to imply speed as in Agility or Aerial Ace
+// Used to leave blended traces of a mon, usually to imply speed as in Agility or Blade Flash
 void AnimTask_TraceMonBlended(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];

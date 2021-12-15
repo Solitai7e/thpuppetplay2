@@ -687,7 +687,7 @@
 	.byte \battler
 	.endm
 
-	.macro trymirrormove
+	.macro tryfalseswipe
 	.byte 0x7c
 	.endm
 
@@ -755,7 +755,7 @@
 	.byte 0x8a
 	.endm
 
-	.macro setbide
+	.macro setguard
 	.byte 0x8b
 	.endm
 
@@ -934,7 +934,7 @@
 	.4byte \ptr
 	.endm
 
-	.macro rolloutdamagecalculation
+	.macro tremorsdamagecalculation
 	.byte 0xb3
 	.endm
 
@@ -952,7 +952,7 @@
 	.byte 0xb6
 	.endm
 
-	.macro presentdamagecalculation
+	.macro prankdamagecalculation
 	.byte 0xb7
 	.endm
 
@@ -996,7 +996,7 @@
 	.4byte \ptr
 	.endm
 
-	.macro hiddenpowercalc
+	.macro chargebeamcalc
 	.byte 0xc1
 	.endm
 

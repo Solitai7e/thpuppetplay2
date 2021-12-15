@@ -198,19 +198,19 @@ static const struct {
 } sPokeOutbreakSpeciesList[] = {
     {
         .species = SPECIES_SRIN,
-        .moves = {MOVE_BIDE, MOVE_HARDEN, MOVE_LEECH_SEED},
+        .moves = {MOVE_GUARD, MOVE_HARDEN, MOVE_LEECH_SEED},
         .level = 3,
         .location = MAP_NUM(ROUTE102)
     },
     {
         .species = SPECIES_ARIN,
-        .moves = {MOVE_HARDEN, MOVE_GROWTH, MOVE_NATURE_POWER, MOVE_LEECH_SEED},
+        .moves = {MOVE_HARDEN, MOVE_GROWTH, MOVE_ROCK_BULLET, MOVE_LEECH_SEED},
         .level = 15,
         .location = MAP_NUM(ROUTE114),
     },
     {
         .species = SPECIES_SRIN,
-        .moves = {MOVE_HARDEN, MOVE_GROWTH, MOVE_NATURE_POWER, MOVE_LEECH_SEED},
+        .moves = {MOVE_HARDEN, MOVE_GROWTH, MOVE_ROCK_BULLET, MOVE_LEECH_SEED},
         .level = 13,
         .location = MAP_NUM(ROUTE117),
     },

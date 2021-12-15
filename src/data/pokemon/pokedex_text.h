@@ -53,7 +53,7 @@ const u8 gLilyWhitePokedexText[] = _(
     "of this POKéMON's toughness in battle.");
 
 const u8 gCLilyBlackPokedexText[] = _(
-    "The waterspouts that protrude from its\n"
+    "The aquashowers that protrude from its\n"
     "shell are highly accurate. Their bullets of\n"
     "water can precisely nail tin cans from\n"
     "a distance of over 160 feet.");

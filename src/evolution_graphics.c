@@ -278,7 +278,7 @@ static void Task_Sparkles_SpiralUpward_Init(u8 taskId)
     gTasks[taskId].tTimer = 0;
     BeginNormalPaletteFade(3 << gTasks[taskId].tPalNum, 0xA, 0, 0x10, RGB_WHITE);
     gTasks[taskId].func = Task_Sparkles_SpiralUpward;
-    PlaySE(SE_M_MEGA_KICK); // 'Charging up' sound for the sparkles as they spiral upwards
+    PlaySE(SE_M_GIGA_IMPACT); // 'Charging up' sound for the sparkles as they spiral upwards
 }
 
 static void Task_Sparkles_SpiralUpward(u8 taskId)
@@ -398,7 +398,7 @@ static void Task_Sparkles_SprayAndFlash_Init(u8 taskId)
     CpuSet(&gPlttBufferFaded[0x20], &gPlttBufferUnfaded[0x20], 0x30);
     BeginNormalPaletteFade(0xFFF9041C, 0, 0, 0x10, RGB_WHITE); // was 0xFFF9001C in R/S
     gTasks[taskId].func = Task_Sparkles_SprayAndFlash;
-    PlaySE(SE_M_PETAL_DANCE);
+    PlaySE(SE_M_BATTLE_CHANT);
 }
 
 static void Task_Sparkles_SprayAndFlash(u8 taskId)
@@ -447,7 +447,7 @@ static void Task_Sparkles_SprayAndFlashTrade_Init(u8 taskId)
     CpuSet(&gPlttBufferFaded[0x20], &gPlttBufferUnfaded[0x20], 0x30);
     BeginNormalPaletteFade(0xFFF90400, 0, 0, 0x10, RGB_WHITE); // was 0xFFFF0001 in R/S
     gTasks[taskId].func = Task_Sparkles_SprayAndFlashTrade;
-    PlaySE(SE_M_PETAL_DANCE);
+    PlaySE(SE_M_BATTLE_CHANT);
 }
 
 static void Task_Sparkles_SprayAndFlashTrade(u8 taskId)

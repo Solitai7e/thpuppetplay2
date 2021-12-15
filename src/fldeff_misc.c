@@ -617,7 +617,7 @@ bool8 FldEff_SecretPowerCave(void)
 
 static void SpriteCB_CaveEntranceInit(struct Sprite *sprite)
 {
-    PlaySE(SE_M_ROCK_THROW);
+    PlaySE(SE_M_ROCK_SLIDE);
 
     sprite->data[0] = 0;
     sprite->callback = SpriteCB_CaveEntranceOpen;
@@ -1080,7 +1080,7 @@ bool8 FldEff_SandPillar(void)
 
 static void SpriteCB_SandPillar_BreakTop(struct Sprite *sprite)
 {
-    PlaySE(SE_M_ROCK_THROW);
+    PlaySE(SE_M_ROCK_SLIDE);
 
     if (MapGridGetMetatileIdAt(gFieldEffectArguments[5], gFieldEffectArguments[6] - 1) == METATILE_SecretBase_SandOrnament_TopWall)
         MapGridSetMetatileIdAt(gFieldEffectArguments[5], gFieldEffectArguments[6] - 1, METATILE_SecretBase_Wall_TopMid | METATILE_COLLISION_MASK);

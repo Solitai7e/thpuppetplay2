@@ -230,7 +230,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_ROAR,
             MOVE_BITE,
-            MOVE_TAKE_DOWN,
+            MOVE_DOUBLE_EDGE,
             MOVE_HOWL
         },
         .cool = 10,
@@ -285,9 +285,9 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_SILVER_WIND,
-            MOVE_MOONLIGHT,
+            MOVE_LUNATIC,
             MOVE_LIGHT_SCREEN,
-            MOVE_GUST
+            MOVE_RAZOR_WIND
         },
         .cool = 2,
         .beauty = 10,
@@ -312,7 +312,7 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = TRUE,
         .moves =
         {
-            MOVE_BIDE,
+            MOVE_GUARD,
             MOVE_SYNTHESIS,
             MOVE_BULLET_SEED,
             MOVE_GROWTH
@@ -340,9 +340,9 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_WING_ATTACK,
+            MOVE_GALE,
             MOVE_AGILITY,
-            MOVE_AERIAL_ACE,
+            MOVE_BLADE_FLASH,
             MOVE_GROWL
         },
         .cool = 1,
@@ -369,9 +369,9 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_LEECH_LIFE,
-            MOVE_FALSE_SWIPE,
+            MOVE_DRAWN_LINE,
             MOVE_FURY_SWIPES,
-            MOVE_MIND_READER
+            MOVE_HEARTS_EYE
         },
         .cool = 5,
         .beauty = 2,
@@ -482,7 +482,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_ASTONISH,
             MOVE_SCREECH,
-            MOVE_UPROAR,
+            MOVE_PERFORMANCE,
             MOVE_HYPER_VOICE
         },
         .cool = 2,
@@ -539,7 +539,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_METAL_CLAW,
             MOVE_IRON_DEFENSE,
             MOVE_HEADBUTT,
-            MOVE_TAKE_DOWN
+            MOVE_DOUBLE_EDGE
         },
         .cool = 5,
         .beauty = 10,
@@ -565,7 +565,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_HAZE,
-            MOVE_MEAN_LOOK,
+            MOVE_CHARMING_LOOK,
             MOVE_CONFUSE_RAY,
             MOVE_LEECH_LIFE
         },
@@ -592,7 +592,7 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_SLUDGE,
+            MOVE_POISON_BOMB,
             MOVE_AMNESIA,
             MOVE_TOXIC,
             MOVE_YAWN
@@ -620,7 +620,7 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_SPARK,
+            MOVE_DISCHARGE,
             MOVE_THUNDER_WAVE,
             MOVE_THUNDER,
             MOVE_ROAR
@@ -651,7 +651,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_GROWL,
             MOVE_LEECH_SEED,
             MOVE_TACKLE,
-            MOVE_SWEET_SCENT
+            MOVE_NATURE_POWER
         },
         .cool = 5,
         .beauty = 3,
@@ -676,7 +676,7 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_SUPERSONIC,
+            MOVE_JAMMING,
             MOVE_WHIRLWIND,
             MOVE_SILVER_WIND,
             MOVE_SAFEGUARD
@@ -704,10 +704,10 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_MIRROR_MOVE,
+            MOVE_FALSE_SWIPE,
             MOVE_QUICK_ATTACK,
-            MOVE_AERIAL_ACE,
-            MOVE_FEATHER_DANCE
+            MOVE_BLADE_FLASH,
+            MOVE_ROOST
         },
         .cool = 10,
         .beauty = 8,
@@ -844,7 +844,7 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = TRUE,
         .moves =
         {
-            MOVE_PRESENT,
+            MOVE_PRANK,
             MOVE_FACADE,
             MOVE_FOCUS_PUNCH,
             MOVE_RETURN
@@ -900,9 +900,9 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_PETAL_DANCE,
+            MOVE_BATTLE_CHANT,
             MOVE_MAGICAL_LEAF,
-            MOVE_GRASS_WHISTLE,
+            MOVE_NATURE_SOUND,
             MOVE_INGRAIN
         },
         .cool = 50,
@@ -929,7 +929,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_PECK,
-            MOVE_FURY_ATTACK,
+            MOVE_MAGIC_KNIFE,
             MOVE_RETURN,
             MOVE_GROWL
         },
@@ -1043,7 +1043,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_SELF_DESTRUCT,
             MOVE_ROCK_TOMB,
             MOVE_PSYBEAM,
-            MOVE_CONFUSION
+            MOVE_PSYSHOT
         },
         .cool = 50,
         .beauty = 40,
@@ -1099,7 +1099,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_TEETER_DANCE,
             MOVE_PSYCH_UP,
             MOVE_HYPNOSIS,
-            MOVE_UPROAR
+            MOVE_PERFORMANCE
         },
         .cool = 25,
         .beauty = 75,
@@ -1124,7 +1124,7 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_MIRROR_MOVE,
+            MOVE_FALSE_SWIPE,
             MOVE_PERISH_SONG,
             MOVE_SAFEGUARD,
             MOVE_MIST
@@ -1208,9 +1208,9 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_HORN_ATTACK,
-            MOVE_FURY_ATTACK,
-            MOVE_HORN_DRILL,
+            MOVE_KNIFE_THROW,
+            MOVE_MAGIC_KNIFE,
+            MOVE_SCULPTURE,
             MOVE_TAIL_WHIP
         },
         .cool = 70,
@@ -1236,8 +1236,8 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = TRUE,
         .moves =
         {
-            MOVE_MUD_SPORT,
-            MOVE_WATER_SPORT,
+            MOVE_MUD_SLAP,
+            MOVE_SPLASHING,
             MOVE_EARTHQUAKE,
             MOVE_PSYCHO_CUT
         },
@@ -1265,7 +1265,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_SWIFT,
-            MOVE_DOUBLE_TEAM,
+            MOVE_SHADOW_HIT,
             MOVE_AGILITY,
             MOVE_CUT
         },
@@ -1323,7 +1323,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_YAWN,
             MOVE_DISABLE,
             MOVE_GROWL,
-            MOVE_CONFUSION
+            MOVE_PSYSHOT
         },
         .cool = 20,
         .beauty = 40,
@@ -1406,7 +1406,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_DISABLE,
             MOVE_PSYCHO_CUT,
-            MOVE_HIDDEN_POWER,
+            MOVE_CHARGE_BEAM,
             MOVE_RETURN
         },
         .cool = 10,
@@ -1432,10 +1432,10 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = TRUE,
         .moves =
         {
-            MOVE_SKY_UPPERCUT,
+            MOVE_SOAR,
             MOVE_DETECT,
             MOVE_REVENGE,
-            MOVE_MEGA_PUNCH
+            MOVE_DRAIN_PUNCH
         },
         .cool = 45,
         .beauty = 20,
@@ -1462,8 +1462,8 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_SING,
             MOVE_SOFT_BOILED,
-            MOVE_EGG_BOMB,
-            MOVE_DOUBLE_EDGE
+            MOVE_MIND_BOMB,
+            MOVE_HEAD_SMASH
         },
         .cool = 20,
         .beauty = 35,
@@ -1545,7 +1545,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_PERISH_SONG,
-            MOVE_MEAN_LOOK,
+            MOVE_CHARMING_LOOK,
             MOVE_CONFUSE_RAY,
             MOVE_PAIN_SPLIT
         },
@@ -1572,10 +1572,10 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = TRUE,
         .moves =
         {
-            MOVE_METAL_SOUND,
+            MOVE_BINDING_VOICE,
             MOVE_METAL_CLAW,
             MOVE_HARDEN,
-            MOVE_TAKE_DOWN
+            MOVE_DOUBLE_EDGE
         },
         .cool = 30,
         .beauty = 50,
@@ -1601,7 +1601,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_GROWTH,
-            MOVE_RAZOR_WIND,
+            MOVE_GUST,
             MOVE_EXPLOSION,
             MOVE_EXTRASENSORY
         },
@@ -1657,8 +1657,8 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_AGILITY,
-            MOVE_AERIAL_ACE,
-            MOVE_WING_ATTACK,
+            MOVE_BLADE_FLASH,
+            MOVE_GALE,
             MOVE_FLY
         },
         .cool = 65,
@@ -1686,8 +1686,8 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_TAUNT,
             MOVE_THIEF,
-            MOVE_ODOR_SLEUTH,
-            MOVE_TAKE_DOWN
+            MOVE_DOUBLE_TEAM,
+            MOVE_DOUBLE_EDGE
         },
         .cool = 40,
         .beauty = 80,
@@ -1712,7 +1712,7 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_MORNING_SUN,
+            MOVE_ENERGY_LIGHT,
             MOVE_SILVER_WIND,
             MOVE_STUN_SPORE,
             MOVE_SECRET_POWER
@@ -1741,9 +1741,9 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_FLAIL,
-            MOVE_SUPERSONIC,
-            MOVE_HORN_ATTACK,
-            MOVE_FURY_ATTACK
+            MOVE_JAMMING,
+            MOVE_KNIFE_THROW,
+            MOVE_MAGIC_KNIFE
         },
         .cool = 80,
         .beauty = 60,
@@ -1826,7 +1826,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_ATTRACT,
             MOVE_FLASH,
-            MOVE_UPROAR,
+            MOVE_PERFORMANCE,
             MOVE_GROWL
         },
         .cool = 40,
@@ -1852,8 +1852,8 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = TRUE,
         .moves =
         {
-            MOVE_POISON_FANG,
-            MOVE_GLARE,
+            MOVE_CROSS_POISON,
+            MOVE_COERCE,
             MOVE_WRAP,
             MOVE_SCREECH
         },
@@ -1882,7 +1882,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_WATER_PULSE,
             MOVE_REST,
-            MOVE_WATER_SPOUT,
+            MOVE_AQUA_SHOWER,
             MOVE_SPLASH
         },
         .cool = 30,
@@ -1938,8 +1938,8 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_EXPLOSION,
             MOVE_PSYCHO_CUT,
-            MOVE_PSYCHIC,
-            MOVE_CONFUSION
+            MOVE_MANA_BURST,
+            MOVE_PSYSHOT
         },
         .cool = 50,
         .beauty = 70,
@@ -1994,7 +1994,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_STOMP,
             MOVE_HYPNOSIS,
-            MOVE_EGG_BOMB,
+            MOVE_MIND_BOMB,
             MOVE_SKILL_SWAP
         },
         .cool = 40,
@@ -2021,7 +2021,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_BONE_CLUB,
-            MOVE_BONEMERANG,
+            MOVE_CHECKMAID,
             MOVE_BONE_RUSH,
             MOVE_GROWL
         },
@@ -2051,7 +2051,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_REVERSAL,
             MOVE_REVENGE,
             MOVE_FOCUS_ENERGY,
-            MOVE_MEGA_KICK
+            MOVE_GIGA_IMPACT
         },
         .cool = 85,
         .beauty = 30,
@@ -2104,7 +2104,7 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = TRUE,
         .moves =
         {
-            MOVE_MEGA_PUNCH,
+            MOVE_DRAIN_PUNCH,
             MOVE_RAGE,
             MOVE_FOCUS_PUNCH,
             MOVE_TAIL_WHIP
@@ -2163,7 +2163,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_SPITE,
             MOVE_YAWN,
             MOVE_DEFENSE_CURL,
-            MOVE_TAKE_DOWN
+            MOVE_DOUBLE_EDGE
         },
         .cool = 40,
         .beauty = 35,
@@ -2356,7 +2356,7 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_DRAGON_DANCE,
+            MOVE_TAILWIND,
             MOVE_HYPER_BEAM,
             MOVE_PERISH_SONG,
             MOVE_SAFEGUARD
@@ -2412,8 +2412,8 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_PETAL_DANCE,
-            MOVE_SWEET_SCENT,
+            MOVE_BATTLE_CHANT,
+            MOVE_NATURE_POWER,
             MOVE_STUN_SPORE,
             MOVE_FLASH
         },
@@ -2440,9 +2440,9 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = TRUE,
         .moves =
         {
-            MOVE_MEAN_LOOK,
+            MOVE_CHARMING_LOOK,
             MOVE_FAINT_ATTACK,
-            MOVE_KNOCK_OFF,
+            MOVE_BRAVER,
             MOVE_CONFUSE_RAY
         },
         .cool = 25,
@@ -2471,7 +2471,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_NIGHT_SHADE,
             MOVE_PSYCHO_CUT,
             MOVE_CONFUSE_RAY,
-            MOVE_PSYCHIC
+            MOVE_MANA_BURST
         },
         .cool = 35,
         .beauty = 35,
@@ -2499,7 +2499,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_AGILITY,
             MOVE_SWAGGER,
             MOVE_TAUNT,
-            MOVE_TAKE_DOWN
+            MOVE_DOUBLE_EDGE
         },
         .cool = 140,
         .beauty = 70,
@@ -2526,8 +2526,8 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_SWEET_KISS,
             MOVE_ATTRACT,
-            MOVE_TAKE_DOWN,
-            MOVE_CHARM
+            MOVE_DOUBLE_EDGE,
+            MOVE_SMILE
         },
         .cool = 50,
         .beauty = 100,
@@ -2667,7 +2667,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_DESTINY_BOND,
             MOVE_CONFUSE_RAY,
             MOVE_LICK,
-            MOVE_SLUDGE_BOMB
+            MOVE_GUNK_SHOT
         },
         .cool = 200,
         .beauty = 100,
@@ -2721,7 +2721,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_OUTRAGE,
-            MOVE_SLAM,
+            MOVE_POWER_WHIP,
             MOVE_TWISTER,
             MOVE_EARTHQUAKE
         },
@@ -2777,7 +2777,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_PERISH_SONG,
-            MOVE_MEAN_LOOK,
+            MOVE_CHARMING_LOOK,
             MOVE_LOVELY_KISS,
             MOVE_FAKE_TEARS
         },
@@ -2807,7 +2807,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_GROWL,
             MOVE_YAWN,
             MOVE_ENCORE,
-            MOVE_FOLLOW_ME
+            MOVE_DISTURBANCE
         },
         .cool = 80,
         .beauty = 120,
@@ -2834,7 +2834,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_SWIFT,
             MOVE_QUICK_ATTACK,
-            MOVE_MORNING_SUN,
+            MOVE_ENERGY_LIGHT,
             MOVE_TAIL_WHIP
         },
         .cool = 180,
@@ -2889,7 +2889,7 @@ const struct ContestPokemon gContestOpponents[] =
         .moves =
         {
             MOVE_THRASH,
-            MOVE_AERIAL_ACE,
+            MOVE_BLADE_FLASH,
             MOVE_FAKE_TEARS,
             MOVE_LEER
         },

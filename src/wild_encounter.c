@@ -677,7 +677,7 @@ void RockSmashWildEncounter(void)
     }
 }
 
-bool8 SweetScentWildEncounter(void)
+bool8 NaturePowerWildEncounter(void)
 {
     s16 x, y;
     u16 headerId;

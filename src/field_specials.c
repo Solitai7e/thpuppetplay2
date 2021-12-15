@@ -2552,10 +2552,10 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_Softboiled16BP,
         gText_SeismicToss24BP,
         gText_DreamEater24BP,
-        gText_MegaPunch24BP,
-        gText_MegaKick48BP,
+        gText_DrainPunch24BP,
+        gText_GigaImpact48BP,
         gText_BodySlam48BP,
-        gText_RockSlide48BP,
+        gText_RockWrecker48BP,
         gText_Counter48BP,
         gText_ThunderWave48BP,
         gText_SwordsDance48BP,
@@ -2565,7 +2565,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     {
         gText_DefenseCurl16BP,
         gText_Snore24BP,
-        gText_MudSlap24BP,
+        gText_MudShot24BP,
         gText_Swift24BP,
         gText_IcyWind24BP,
         gText_Endure48BP,
@@ -3130,10 +3130,10 @@ static const u16 sBattleFrontier_TutorMoves1[] =
     MOVE_SOFT_BOILED,
     MOVE_SEISMIC_TOSS,
     MOVE_DREAM_EATER,
-    MOVE_MEGA_PUNCH,
-    MOVE_MEGA_KICK,
+    MOVE_DRAIN_PUNCH,
+    MOVE_GIGA_IMPACT,
     MOVE_BODY_SLAM,
-    MOVE_ROCK_SLIDE,
+    MOVE_ROCK_WRECKER,
     MOVE_COUNTER,
     MOVE_THUNDER_WAVE,
     MOVE_SWORDS_DANCE
@@ -3143,7 +3143,7 @@ static const u16 sBattleFrontier_TutorMoves2[] =
 {
     MOVE_DEFENSE_CURL,
     MOVE_SNORE,
-    MOVE_MUD_SLAP,
+    MOVE_MUD_SHOT,
     MOVE_SWIFT,
     MOVE_ICY_WIND,
     MOVE_ENDURE,
@@ -3196,10 +3196,10 @@ static void ShowBattleFrontierTutorMoveDescription(u8 menu, u16 selection)
         BattleFrontier_Lounge7_Text_SoftboiledDesc,
         BattleFrontier_Lounge7_Text_SeismicTossDesc,
         BattleFrontier_Lounge7_Text_DreamEaterDesc,
-        BattleFrontier_Lounge7_Text_MegaPunchDesc,
-        BattleFrontier_Lounge7_Text_MegaKickDesc,
+        BattleFrontier_Lounge7_Text_DrainPunchDesc,
+        BattleFrontier_Lounge7_Text_GigaImpactDesc,
         BattleFrontier_Lounge7_Text_BodySlamDesc,
-        BattleFrontier_Lounge7_Text_RockSlideDesc,
+        BattleFrontier_Lounge7_Text_RockWreckerDesc,
         BattleFrontier_Lounge7_Text_CounterDesc,
         BattleFrontier_Lounge7_Text_ThunderWaveDesc,
         BattleFrontier_Lounge7_Text_SwordsDanceDesc,
@@ -3210,7 +3210,7 @@ static void ShowBattleFrontierTutorMoveDescription(u8 menu, u16 selection)
     {
         BattleFrontier_Lounge7_Text_DefenseCurlDesc,
         BattleFrontier_Lounge7_Text_SnoreDesc,
-        BattleFrontier_Lounge7_Text_MudSlapDesc,
+        BattleFrontier_Lounge7_Text_MudShotDesc,
         BattleFrontier_Lounge7_Text_SwiftDesc,
         BattleFrontier_Lounge7_Text_IcyWindDesc,
         BattleFrontier_Lounge7_Text_EndureDesc,
@@ -3896,7 +3896,7 @@ void Script_DoCMamizouScene(void)
 void LoopWingFlapSE(void)
 {
     CreateTask(Task_LoopWingFlapSE, 8);
-    PlaySE(SE_M_WING_ATTACK);
+    PlaySE(SE_M_GALE);
 }
 
 static void Task_LoopWingFlapSE(u8 taskId)
@@ -3908,7 +3908,7 @@ static void Task_LoopWingFlapSE(u8 taskId)
     {
         playCount++;
         delay = 0;
-        PlaySE(SE_M_WING_ATTACK);
+        PlaySE(SE_M_GALE);
     }
 
     if (playCount == gSpecialVar_0x8004 - 1)

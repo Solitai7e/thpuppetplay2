@@ -36,8 +36,8 @@ static void AnimWaveFromCenterOfTarget(struct Sprite *);
 static void InitSwirlingFogAnim(struct Sprite *);
 static void AnimSwirlingFogAnim(struct Sprite *);
 static void AnimThrowMistBall(struct Sprite *);
-static void InitPoisonGasCloudAnim(struct Sprite *);
-static void MovePoisonGasCloud(struct Sprite *);
+static void InitOminousWindCloudAnim(struct Sprite *);
+static void MoveOminousWindCloud(struct Sprite *);
 static void AnimHailBegin(struct Sprite *);
 static void AnimHailContinue(struct Sprite *);
 static void InitIceBallAnim(struct Sprite *);
@@ -326,7 +326,7 @@ const struct SpriteTemplate gMistCloudSpriteTemplate =
     .callback = InitSwirlingFogAnim,
 };
 
-const struct SpriteTemplate gSmogCloudSpriteTemplate =
+const struct SpriteTemplate gToxicGasCloudSpriteTemplate =
 {
     .tileTag = ANIM_TAG_PURPLE_GAS_CLOUD,
     .paletteTag = ANIM_TAG_PURPLE_GAS_CLOUD,
@@ -358,7 +358,7 @@ static const u8 wMistBlendAmounts[] =
     0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5,
 };
 
-const struct SpriteTemplate gPoisonGasCloudSpriteTemplate =
+const struct SpriteTemplate gOminousWindCloudSpriteTemplate =
 {
     .tileTag = ANIM_TAG_PURPLE_GAS_CLOUD,
     .paletteTag = ANIM_TAG_PURPLE_GAS_CLOUD,
@@ -366,7 +366,7 @@ const struct SpriteTemplate gPoisonGasCloudSpriteTemplate =
     .anims = sAnims_Cloud,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = InitPoisonGasCloudAnim,
+    .callback = InitOminousWindCloudAnim,
 };
 
 static const struct HailStruct sHailCoordData[] =
@@ -885,7 +885,7 @@ static void AnimWaveFromCenterOfTarget(struct Sprite *sprite)
     }
 }
 
-// Animates the fog that swirls around the mon in Mist and Smog.
+// Animates the fog that swirls around the mon in Mist and Toxic Gas.
 // arg 0: initial x pixel offset
 // arg 1: initial y pixel offset
 // arg 2: change in y pixels per rotation
@@ -1173,7 +1173,7 @@ static void AnimTask_LoadMistTiles_Step(u8 taskId)
     }
 }
 
-// Initializes gas clouds in the Poison Gas animation.
+// Initializes gas clouds in the Ominous Wind animation.
 // arg 0: duration
 // arg 1: ? target x offset
 // arg 2: ? target y offset
@@ -1182,7 +1182,7 @@ static void AnimTask_LoadMistTiles_Step(u8 taskId)
 // arg 5: ??? unknown
 // arg 6: ??? unknown
 // arg 7: ??? unknown boolean
-static void InitPoisonGasCloudAnim(struct Sprite *sprite)
+static void InitOminousWindCloudAnim(struct Sprite *sprite)
 {
     sprite->data[0] = gBattleAnimArgs[0];
 
@@ -1226,10 +1226,10 @@ static void InitPoisonGasCloudAnim(struct Sprite *sprite)
     }
 
     InitAnimLinearTranslation(sprite);
-    sprite->callback = MovePoisonGasCloud;
+    sprite->callback = MoveOminousWindCloud;
 }
 
-static void MovePoisonGasCloud(struct Sprite *sprite)
+static void MoveOminousWindCloud(struct Sprite *sprite)
 {
     int value;
 
@@ -1491,7 +1491,7 @@ static void AnimHailContinue(struct Sprite *sprite)
 // arg 5: arc height (negative)
 static void InitIceBallAnim(struct Sprite *sprite)
 {
-    u8 animNum = gAnimDisableStructPtr->rolloutTimerStartValue - gAnimDisableStructPtr->rolloutTimer - 1;
+    u8 animNum = gAnimDisableStructPtr->tremorsTimerStartValue - gAnimDisableStructPtr->tremorsTimer - 1;
 
     if (animNum > 4)
         animNum = 4;
@@ -1564,6 +1564,6 @@ void AnimTask_GetIceBallCounter(u8 taskId)
 {
     u8 arg = gBattleAnimArgs[0];
 
-    gBattleAnimArgs[arg] = gAnimDisableStructPtr->rolloutTimerStartValue - gAnimDisableStructPtr->rolloutTimer - 1;
+    gBattleAnimArgs[arg] = gAnimDisableStructPtr->tremorsTimerStartValue - gAnimDisableStructPtr->tremorsTimer - 1;
     DestroyAnimVisualTask(taskId);
 }

@@ -273,7 +273,7 @@ LilycoveCity_ContestHall_EventScript_CuteContestant2::
 LilycoveCity_ContestHall_EventScript_CuteContestant3::
 	lock
 	faceplayer
-	msgbox LilycoveCity_ContestHall_Text_PetalDanceIsMarvel, MSGBOX_DEFAULT
+	msgbox LilycoveCity_ContestHall_Text_BattleChantIsMarvel, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_CUTE_CONTESTANT_3, Common_Movement_FaceOriginalDirection
 	waitmovement 0
@@ -483,7 +483,7 @@ LilycoveCity_ContestHall_Text_SuchCharmingCuteAppeals:
 	.string "JUDGE: Oh, such charming and cute\n"
 	.string "appeals!\p"
 	.string "Oh, my goodness! What a perfectly\n"
-	.string "adorable WATER SPORT appeal!$"
+	.string "adorable SPLASHING appeal!$"
 
 LilycoveCity_ContestHall_Text_MyCShinGyokuWasDistracted:
 	.string "Oh, no… My sweet CSHINGYOKU was\n"
@@ -493,8 +493,8 @@ LilycoveCity_ContestHall_Text_NeverWonBattleButContest:
 	.string "My POKéMON has never won in a battle,\n"
 	.string "but put it in a CONTEST and look out!$"
 
-LilycoveCity_ContestHall_Text_PetalDanceIsMarvel:
-	.string "My POKéMON's PETAL DANCE is a marvel\n"
+LilycoveCity_ContestHall_Text_BattleChantIsMarvel:
+	.string "My POKéMON's BATTLE CHANT is a marvel\n"
 	.string "of elegance.\p"
 	.string "I won't let anyone disturb its\n"
 	.string "performance.$"

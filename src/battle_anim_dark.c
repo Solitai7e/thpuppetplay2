@@ -795,7 +795,7 @@ void AnimTask_MementoHandleBg(u8 taskId)
     DestroyAnimVisualTask(taskId);
 }
 
-// Animates a deep slash from a claw. Used by Metal Claw, Dragon Claw, and Crush Claw
+// Animates a deep slash from a claw. Used by Metal Claw, Heart Break, and Crush Claw
 static void AnimClawSlash(struct Sprite *sprite)
 {
     sprite->x += gBattleAnimArgs[0];
@@ -810,7 +810,7 @@ static void AnimClawSlash(struct Sprite *sprite)
 // arg0: if true won't change battler's palette back
 // arg1: if true, use custom color
 // arg2: custom color
-// Custom color argument is used in MOVE_POISON_TAIL to make the mon turn purplish/pinkish as if became cloaked in poison.
+// Custom color argument is used in MOVE_POISON_JAB to make the mon turn purplish/pinkish as if became cloaked in poison.
 void AnimTask_MetallicShine(u8 taskId)
 {
     u16 species;
@@ -979,7 +979,7 @@ void AnimTask_SetGrayscaleOrOriginalPal(u8 taskId)
     DestroyAnimVisualTask(taskId);
 }
 
-void GetIsDoomDesireHitTurn(u8 taskId)
+void GetIsDecisionHitTurn(u8 taskId)
 {
     if (gAnimMoveTurn < 2)
         gBattleAnimArgs[ARG_RET_ID] = FALSE;

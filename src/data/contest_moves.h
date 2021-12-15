@@ -18,7 +18,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_FOCUS_ENERGY},
     },
 
-    [MOVE_DOUBLE_SLAP] =
+    [MOVE_KNOCK_OFF] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -34,12 +34,12 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_MEGA_PUNCH] =
+    [MOVE_DRAIN_PUNCH] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_MIND_READER},
+        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_HEARTS_EYE},
     },
 
     [MOVE_PAY_DAY] =
@@ -82,23 +82,23 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_LEER},
     },
 
-    [MOVE_VICE_GRIP] =
+    [MOVE_NIGHT_SLASH] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
-        .comboStarterId = COMBO_STARTER_VICE_GRIP,
+        .comboStarterId = COMBO_STARTER_NIGHT_SLASH,
         .comboMoves = {0},
     },
 
-    [MOVE_GUILLOTINE] =
+    [MOVE_JUDGEMENT] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_VICE_GRIP},
+        .comboMoves = {COMBO_STARTER_NIGHT_SLASH},
     },
 
-    [MOVE_RAZOR_WIND] =
+    [MOVE_GUST] =
     {
         .effect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -122,7 +122,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_SWORDS_DANCE},
     },
 
-    [MOVE_GUST] =
+    [MOVE_RAZOR_WIND] =
     {
         .effect = CONTEST_EFFECT_SCRAMBLE_NEXT_TURN_ORDER,
         .contestCategory = CONTEST_CATEGORY_SMART,
@@ -130,7 +130,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_WING_ATTACK] =
+    [MOVE_GALE] =
     {
         .effect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -159,10 +159,10 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_VICE_GRIP},
+        .comboMoves = {COMBO_STARTER_NIGHT_SLASH},
     },
 
-    [MOVE_SLAM] =
+    [MOVE_POWER_WHIP] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -193,12 +193,12 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_MEGA_KICK] =
+    [MOVE_GIGA_IMPACT] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_MIND_READER},
+        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_HEARTS_EYE},
     },
 
     [MOVE_JUMP_KICK] =
@@ -206,7 +206,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_MIND_READER},
+        .comboMoves = {COMBO_STARTER_HEARTS_EYE},
     },
 
     [MOVE_ROLLING_KICK] =
@@ -222,7 +222,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .comboStarterId = COMBO_STARTER_SAND_ATTACK,
-        .comboMoves = {COMBO_STARTER_MUD_SLAP, COMBO_STARTER_SANDSTORM},
+        .comboMoves = {COMBO_STARTER_MUD_SHOT, COMBO_STARTER_SANDSTORM},
     },
 
     [MOVE_HEADBUTT] =
@@ -233,28 +233,28 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_FOCUS_ENERGY},
     },
 
-    [MOVE_HORN_ATTACK] =
+    [MOVE_KNIFE_THROW] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_COOL,
-        .comboStarterId = COMBO_STARTER_HORN_ATTACK,
+        .comboStarterId = COMBO_STARTER_KNIFE_THROW,
         .comboMoves = {COMBO_STARTER_LEER},
     },
 
-    [MOVE_FURY_ATTACK] =
+    [MOVE_MAGIC_KNIFE] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_HORN_ATTACK, COMBO_STARTER_PECK},
+        .comboMoves = {COMBO_STARTER_KNIFE_THROW, COMBO_STARTER_PECK},
     },
 
-    [MOVE_HORN_DRILL] =
+    [MOVE_SCULPTURE] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_HORN_ATTACK},
+        .comboMoves = {COMBO_STARTER_KNIFE_THROW},
     },
 
     [MOVE_TACKLE] =
@@ -281,7 +281,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_TAKE_DOWN] =
+    [MOVE_DOUBLE_EDGE] =
     {
         .effect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -297,7 +297,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_RAGE},
     },
 
-    [MOVE_DOUBLE_EDGE] =
+    [MOVE_HEAD_SMASH] =
     {
         .effect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -310,7 +310,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_BETTER_IF_LAST,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_CHARM},
+        .comboMoves = {COMBO_STARTER_SMILE},
     },
 
     [MOVE_POISON_STING] =
@@ -321,7 +321,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_TWINEEDLE] =
+    [MOVE_SEALING_NEEDLE] =
     {
         .effect = CONTEST_EFFECT_STARTLE_PREV_MON,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -358,7 +358,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_BETTER_IF_LAST,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_CHARM},
+        .comboMoves = {COMBO_STARTER_SMILE},
     },
 
     [MOVE_ROAR] =
@@ -377,7 +377,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_SUPERSONIC] =
+    [MOVE_JAMMING] =
     {
         .effect = CONTEST_EFFECT_SCRAMBLE_NEXT_TURN_ORDER,
         .contestCategory = CONTEST_CATEGORY_SMART,
@@ -401,7 +401,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_ACID] =
+    [MOVE_POISON_TEARS] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
         .contestCategory = CONTEST_CATEGORY_SMART,
@@ -438,7 +438,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_RAIN_DANCE, COMBO_STARTER_WATER_SPORT, COMBO_STARTER_MUD_SPORT},
+        .comboMoves = {COMBO_STARTER_RAIN_DANCE, COMBO_STARTER_SPLASHING, COMBO_STARTER_MUD_SLAP},
     },
 
     [MOVE_HYDRO_PUMP] =
@@ -454,7 +454,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .comboStarterId = COMBO_STARTER_SURF,
-        .comboMoves = {COMBO_STARTER_RAIN_DANCE, COMBO_STARTER_DIVE},
+        .comboMoves = {COMBO_STARTER_RAIN_DANCE, COMBO_STARTER_SHADOW_DIVE},
     },
 
     [MOVE_ICE_BEAM] =
@@ -513,7 +513,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_DRILL_PECK] =
+    [MOVE_WING_ATTACK] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -526,7 +526,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_MIND_READER},
+        .comboMoves = {COMBO_STARTER_HEARTS_EYE},
     },
 
     [MOVE_LOW_KICK] =
@@ -614,7 +614,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_SWEET_SCENT},
+        .comboMoves = {COMBO_STARTER_NATURE_POWER},
     },
 
     [MOVE_STUN_SPORE] =
@@ -622,7 +622,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_SWEET_SCENT},
+        .comboMoves = {COMBO_STARTER_NATURE_POWER},
     },
 
     [MOVE_SLEEP_POWDER] =
@@ -630,10 +630,10 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_SWEET_SCENT},
+        .comboMoves = {COMBO_STARTER_NATURE_POWER},
     },
 
-    [MOVE_PETAL_DANCE] =
+    [MOVE_BATTLE_CHANT] =
     {
         .effect = CONTEST_EFFECT_JAMS_OTHERS_BUT_MISS_ONE_TURN,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -641,20 +641,20 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_GROWTH},
     },
 
-    [MOVE_STRING_SHOT] =
+    [MOVE_WIRE_WEB] =
     {
         .effect = CONTEST_EFFECT_STARTLE_PREV_MON,
         .contestCategory = CONTEST_CATEGORY_SMART,
-        .comboStarterId = COMBO_STARTER_STRING_SHOT,
+        .comboStarterId = COMBO_STARTER_WIRE_WEB,
         .comboMoves = {0},
     },
 
-    [MOVE_DRAGON_RAGE] =
+    [MOVE_DARK_PULSE] =
     {
         .effect = CONTEST_EFFECT_BETTER_WHEN_LATER,
         .contestCategory = CONTEST_CATEGORY_COOL,
-        .comboStarterId = COMBO_STARTER_DRAGON_RAGE,
-        .comboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DRAGON_DANCE},
+        .comboStarterId = COMBO_STARTER_DARK_PULSE,
+        .comboMoves = {COMBO_STARTER_LAVA_PLUME, COMBO_STARTER_TAILWIND},
     },
 
     [MOVE_FIRE_SPIN] =
@@ -697,11 +697,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_CHARGE, COMBO_STARTER_RAIN_DANCE, COMBO_STARTER_LOCK_ON},
     },
 
-    [MOVE_ROCK_THROW] =
+    [MOVE_ROCK_SLIDE] =
     {
         .effect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
-        .comboStarterId = COMBO_STARTER_ROCK_THROW,
+        .comboStarterId = COMBO_STARTER_ROCK_SLIDE,
         .comboMoves = {0},
     },
 
@@ -737,20 +737,20 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_CONFUSION] =
+    [MOVE_PSYSHOT] =
     {
         .effect = CONTEST_EFFECT_STARTLE_PREV_MON,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = COMBO_STARTER_CONFUSION,
-        .comboMoves = {COMBO_STARTER_PSYCHIC, COMBO_STARTER_KINESIS, COMBO_STARTER_CALM_MIND},
+        .comboMoves = {COMBO_STARTER_PSYCHIC, COMBO_STARTER_LUNA_DIAL, COMBO_STARTER_CALM_MIND},
     },
 
-    [MOVE_PSYCHIC] =
+    [MOVE_MANA_BURST] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = COMBO_STARTER_PSYCHIC,
-        .comboMoves = {COMBO_STARTER_KINESIS, COMBO_STARTER_CONFUSION, COMBO_STARTER_CALM_MIND},
+        .comboMoves = {COMBO_STARTER_LUNA_DIAL, COMBO_STARTER_CONFUSION, COMBO_STARTER_CALM_MIND},
     },
 
     [MOVE_HYPNOSIS] =
@@ -761,7 +761,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_MEDITATE] =
+    [MOVE_ZEN_HEADBUTT] =
     {
         .effect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -774,7 +774,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_NEXT_APPEAL_EARLIER,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_DOUBLE_TEAM},
+        .comboMoves = {COMBO_STARTER_SHADOW_HIT},
     },
 
     [MOVE_QUICK_ATTACK] =
@@ -782,7 +782,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_NEXT_APPEAL_EARLIER,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_DOUBLE_TEAM},
+        .comboMoves = {COMBO_STARTER_SHADOW_HIT},
     },
 
     [MOVE_RAGE] =
@@ -798,7 +798,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_AVOID_STARTLE,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_DOUBLE_TEAM, COMBO_STARTER_PSYCHIC, COMBO_STARTER_KINESIS, COMBO_STARTER_CONFUSION},
+        .comboMoves = {COMBO_STARTER_SHADOW_HIT, COMBO_STARTER_PSYCHIC, COMBO_STARTER_LUNA_DIAL, COMBO_STARTER_CONFUSION},
     },
 
     [MOVE_NIGHT_SHADE] =
@@ -825,11 +825,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_DOUBLE_TEAM] =
+    [MOVE_SHADOW_HIT] =
     {
         .effect = CONTEST_EFFECT_AVOID_STARTLE_ONCE,
         .contestCategory = CONTEST_CATEGORY_COOL,
-        .comboStarterId = COMBO_STARTER_DOUBLE_TEAM,
+        .comboStarterId = COMBO_STARTER_SHADOW_HIT,
         .comboMoves = {0},
     },
 
@@ -862,7 +862,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_SHIFT_JUDGE_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_SMOG},
+        .comboMoves = {COMBO_STARTER_TOXIC_GAS},
     },
 
     [MOVE_CONFUSE_RAY] =
@@ -929,7 +929,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_BIDE] =
+    [MOVE_GUARD] =
     {
         .effect = CONTEST_EFFECT_AVOID_STARTLE,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -945,7 +945,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_MIRROR_MOVE] =
+    [MOVE_FALSE_SWIPE] =
     {
         .effect = CONTEST_EFFECT_APPEAL_AS_GOOD_AS_PREV_ONE,
         .contestCategory = CONTEST_CATEGORY_SMART,
@@ -961,7 +961,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_EGG_BOMB] =
+    [MOVE_MIND_BOMB] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -977,20 +977,20 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_SMOG] =
+    [MOVE_TOXIC_GAS] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
-        .comboStarterId = COMBO_STARTER_SMOG,
+        .comboStarterId = COMBO_STARTER_TOXIC_GAS,
         .comboMoves = {0},
     },
 
-    [MOVE_SLUDGE] =
+    [MOVE_POISON_BOMB] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
-        .comboStarterId = COMBO_STARTER_SLUDGE,
-        .comboMoves = {COMBO_STARTER_SLUDGE_BOMB},
+        .comboStarterId = COMBO_STARTER_POISON_BOMB,
+        .comboMoves = {COMBO_STARTER_GUNK_SHOT},
     },
 
     [MOVE_BONE_CLUB] =
@@ -998,7 +998,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .comboStarterId = COMBO_STARTER_BONE_CLUB,
-        .comboMoves = {COMBO_STARTER_BONEMERANG, COMBO_STARTER_BONE_RUSH},
+        .comboMoves = {COMBO_STARTER_CHECKMAID, COMBO_STARTER_BONE_RUSH},
     },
 
     [MOVE_FIRE_BLAST] =
@@ -1017,7 +1017,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_RAIN_DANCE},
     },
 
-    [MOVE_CLAMP] =
+    [MOVE_MANA_SHIELD] =
     {
         .effect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -1041,7 +1041,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_SPIKE_CANNON] =
+    [MOVE_FEINT] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -1065,11 +1065,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_KINESIS] =
+    [MOVE_LUNA_DIAL] =
     {
         .effect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
         .contestCategory = CONTEST_CATEGORY_SMART,
-        .comboStarterId = COMBO_STARTER_KINESIS,
+        .comboStarterId = COMBO_STARTER_LUNA_DIAL,
         .comboMoves = {COMBO_STARTER_PSYCHIC, COMBO_STARTER_CONFUSION},
     },
 
@@ -1086,10 +1086,10 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_MIND_READER},
+        .comboMoves = {COMBO_STARTER_HEARTS_EYE},
     },
 
-    [MOVE_GLARE] =
+    [MOVE_COERCE] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -1105,7 +1105,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_HYPNOSIS, COMBO_STARTER_CALM_MIND},
     },
 
-    [MOVE_POISON_GAS] =
+    [MOVE_OMINOUS_WIND] =
     {
         .effect = CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_SMART,
@@ -1169,7 +1169,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_SPORE] =
+    [MOVE_BURN_POWDER] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -1201,7 +1201,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_ACID_ARMOR] =
+    [MOVE_DISPERSE] =
     {
         .effect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -1209,7 +1209,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_CRABHAMMER] =
+    [MOVE_AQUA_JET] =
     {
         .effect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -1233,11 +1233,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_SCRATCH},
     },
 
-    [MOVE_BONEMERANG] =
+    [MOVE_CHECKMAID] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
-        .comboStarterId = COMBO_STARTER_BONEMERANG,
+        .comboStarterId = COMBO_STARTER_CHECKMAID,
         .comboMoves = {COMBO_STARTER_BONE_CLUB, COMBO_STARTER_BONE_RUSH},
     },
 
@@ -1246,18 +1246,18 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_AVOID_STARTLE_ONCE,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .comboStarterId = COMBO_STARTER_REST,
-        .comboMoves = {COMBO_STARTER_BELLY_DRUM, COMBO_STARTER_CHARM, COMBO_STARTER_YAWN},
+        .comboMoves = {COMBO_STARTER_BELLY_DRUM, COMBO_STARTER_SMILE, COMBO_STARTER_YAWN},
     },
 
-    [MOVE_ROCK_SLIDE] =
+    [MOVE_ROCK_WRECKER] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_ROCK_THROW},
+        .comboMoves = {COMBO_STARTER_ROCK_SLIDE},
     },
 
-    [MOVE_HYPER_FANG] =
+    [MOVE_KILLING_BITE] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -1289,7 +1289,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_LOCK_ON},
     },
 
-    [MOVE_SUPER_FANG] =
+    [MOVE_HEAT_CLAW] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -1350,14 +1350,14 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_MAKE_FOLLOWING_MONS_NERVOUS,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_STRING_SHOT},
+        .comboMoves = {COMBO_STARTER_WIRE_WEB},
     },
 
-    [MOVE_MIND_READER] =
+    [MOVE_HEARTS_EYE] =
     {
         .effect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
         .contestCategory = CONTEST_CATEGORY_SMART,
-        .comboStarterId = COMBO_STARTER_MIND_READER,
+        .comboStarterId = COMBO_STARTER_HEARTS_EYE,
         .comboMoves = {0},
     },
 
@@ -1486,7 +1486,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_MAKE_FOLLOWING_MONS_NERVOUS,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_CHARM},
+        .comboMoves = {COMBO_STARTER_SMILE},
     },
 
     [MOVE_BELLY_DRUM] =
@@ -1497,23 +1497,23 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_SLUDGE_BOMB] =
+    [MOVE_GUNK_SHOT] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
-        .comboStarterId = COMBO_STARTER_SLUDGE_BOMB,
-        .comboMoves = {COMBO_STARTER_SLUDGE},
+        .comboStarterId = COMBO_STARTER_GUNK_SHOT,
+        .comboMoves = {COMBO_STARTER_POISON_BOMB},
     },
 
-    [MOVE_MUD_SLAP] =
+    [MOVE_MUD_SHOT] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_CUTE,
-        .comboStarterId = COMBO_STARTER_MUD_SLAP,
-        .comboMoves = {COMBO_STARTER_SAND_ATTACK, COMBO_STARTER_MUD_SPORT, COMBO_STARTER_SANDSTORM},
+        .comboStarterId = COMBO_STARTER_MUD_SHOT,
+        .comboMoves = {COMBO_STARTER_SAND_ATTACK, COMBO_STARTER_MUD_SLAP, COMBO_STARTER_SANDSTORM},
     },
 
-    [MOVE_OCTAZOOKA] =
+    [MOVE_BLACK_RIPPLE] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -1529,7 +1529,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_ZAP_CANNON] =
+    [MOVE_ENERGY_BALL] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -1550,7 +1550,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_GREAT_APPEAL_BUT_NO_MORE_MOVES,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_MEAN_LOOK, COMBO_STARTER_CURSE, COMBO_STARTER_ENDURE},
+        .comboMoves = {COMBO_STARTER_CHARMING_LOOK, COMBO_STARTER_CURSE, COMBO_STARTER_ENDURE},
     },
 
     [MOVE_PERISH_SONG] =
@@ -1558,7 +1558,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_MEAN_LOOK, COMBO_STARTER_SING},
+        .comboMoves = {COMBO_STARTER_CHARMING_LOOK, COMBO_STARTER_SING},
     },
 
     [MOVE_ICY_WIND] =
@@ -1582,7 +1582,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .comboStarterId = COMBO_STARTER_BONE_RUSH,
-        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_BONE_CLUB, COMBO_STARTER_BONEMERANG},
+        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_BONE_CLUB, COMBO_STARTER_CHECKMAID},
     },
 
     [MOVE_LOCK_ON] =
@@ -1625,15 +1625,15 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_CHARM] =
+    [MOVE_SMILE] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
         .contestCategory = CONTEST_CATEGORY_CUTE,
-        .comboStarterId = COMBO_STARTER_CHARM,
+        .comboStarterId = COMBO_STARTER_SMILE,
         .comboMoves = {0},
     },
 
-    [MOVE_ROLLOUT] =
+    [MOVE_TREMORS] =
     {
         .effect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -1641,7 +1641,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_DEFENSE_CURL, COMBO_STARTER_HARDEN},
     },
 
-    [MOVE_FALSE_SWIPE] =
+    [MOVE_DRAWN_LINE] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -1665,7 +1665,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_SPARK] =
+    [MOVE_DISCHARGE] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -1689,11 +1689,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_MEAN_LOOK] =
+    [MOVE_CHARMING_LOOK] =
     {
         .effect = CONTEST_EFFECT_MAKE_FOLLOWING_MONS_NERVOUS,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
-        .comboStarterId = COMBO_STARTER_MEAN_LOOK,
+        .comboStarterId = COMBO_STARTER_CHARMING_LOOK,
         .comboMoves = {COMBO_STARTER_CURSE},
     },
 
@@ -1729,7 +1729,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_PRESENT] =
+    [MOVE_PRANK] =
     {
         .effect = CONTEST_EFFECT_REPETITION_NOT_BORING,
         .contestCategory = CONTEST_CATEGORY_CUTE,
@@ -1782,10 +1782,10 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_MIND_READER},
+        .comboMoves = {COMBO_STARTER_FOCUS_ENERGY, COMBO_STARTER_HEARTS_EYE},
     },
 
-    [MOVE_MEGAHORN] =
+    [MOVE_BRAVE_BIRD] =
     {
         .effect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -1793,12 +1793,12 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_DRAGON_BREATH] =
+    [MOVE_LAVA_PLUME] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_COOL,
-        .comboStarterId = COMBO_STARTER_DRAGON_BREATH,
-        .comboMoves = {COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_DRAGON_DANCE},
+        .comboStarterId = COMBO_STARTER_LAVA_PLUME,
+        .comboMoves = {COMBO_STARTER_DARK_PULSE, COMBO_STARTER_TAILWIND},
     },
 
     [MOVE_BATON_PASS] =
@@ -1833,15 +1833,15 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_SWEET_SCENT] =
+    [MOVE_NATURE_POWER] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_CUTE,
-        .comboStarterId = COMBO_STARTER_SWEET_SCENT,
+        .comboStarterId = COMBO_STARTER_NATURE_POWER,
         .comboMoves = {0},
     },
 
-    [MOVE_IRON_TAIL] =
+    [MOVE_STEEL_FIST] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -1854,7 +1854,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_METAL_SOUND},
+        .comboMoves = {COMBO_STARTER_BINDING_VOICE},
     },
 
     [MOVE_VITAL_THROW] =
@@ -1865,7 +1865,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_FAKE_OUT},
     },
 
-    [MOVE_MORNING_SUN] =
+    [MOVE_ENERGY_LIGHT] =
     {
         .effect = CONTEST_EFFECT_QUALITY_DEPENDS_ON_TIMING,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -1881,7 +1881,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_SUNNY_DAY},
     },
 
-    [MOVE_MOONLIGHT] =
+    [MOVE_LUNATIC] =
     {
         .effect = CONTEST_EFFECT_QUALITY_DEPENDS_ON_TIMING,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -1889,7 +1889,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_SUNNY_DAY},
     },
 
-    [MOVE_HIDDEN_POWER] =
+    [MOVE_CHARGE_BEAM] =
     {
         .effect = CONTEST_EFFECT_REPETITION_NOT_BORING,
         .contestCategory = CONTEST_CATEGORY_SMART,
@@ -1982,7 +1982,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_PSYCHIC, COMBO_STARTER_KINESIS, COMBO_STARTER_CONFUSION, COMBO_STARTER_CALM_MIND},
+        .comboMoves = {COMBO_STARTER_PSYCHIC, COMBO_STARTER_LUNA_DIAL, COMBO_STARTER_CONFUSION, COMBO_STARTER_CALM_MIND},
     },
 
     [MOVE_ROCK_SMASH] =
@@ -2017,7 +2017,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_UPROAR] =
+    [MOVE_PERFORMANCE] =
     {
         .effect = CONTEST_EFFECT_SCRAMBLE_NEXT_TURN_ORDER,
         .contestCategory = CONTEST_CATEGORY_CUTE,
@@ -2025,28 +2025,28 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_STOCKPILE] =
+    [MOVE_NASTY_PLOT] =
     {
         .effect = CONTEST_EFFECT_AVOID_STARTLE_ONCE,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
-        .comboStarterId = COMBO_STARTER_STOCKPILE,
+        .comboStarterId = COMBO_STARTER_NASTY_PLOT,
         .comboMoves = {0},
     },
 
-    [MOVE_SPIT_UP] =
+    [MOVE_MIRROR_SHOT] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_STOCKPILE},
+        .comboMoves = {COMBO_STARTER_NASTY_PLOT},
     },
 
-    [MOVE_SWALLOW] =
+    [MOVE_MYSTIC_WATER] =
     {
         .effect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_STOCKPILE},
+        .comboMoves = {COMBO_STARTER_NASTY_PLOT},
     },
 
     [MOVE_HEAT_WAVE] =
@@ -2073,12 +2073,12 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_FLATTER] =
+    [MOVE_LUCKY_CHANT] =
     {
         .effect = CONTEST_EFFECT_MAKE_FOLLOWING_MONS_NERVOUS,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_CHARM},
+        .comboMoves = {COMBO_STARTER_SMILE},
     },
 
     [MOVE_WILL_O_WISP] =
@@ -2121,7 +2121,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_FOLLOW_ME] =
+    [MOVE_DISTURBANCE] =
     {
         .effect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
         .contestCategory = CONTEST_CATEGORY_CUTE,
@@ -2129,7 +2129,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_NATURE_POWER] =
+    [MOVE_ROCK_BULLET] =
     {
         .effect = CONTEST_EFFECT_BETTER_WHEN_AUDIENCE_EXCITED,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -2169,7 +2169,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_ROLE_PLAY] =
+    [MOVE_RECOLLECTION] =
     {
         .effect = CONTEST_EFFECT_APPEAL_AS_GOOD_AS_PREV_ONES,
         .contestCategory = CONTEST_CATEGORY_CUTE,
@@ -2249,7 +2249,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_KNOCK_OFF] =
+    [MOVE_BRAVER] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
         .contestCategory = CONTEST_CATEGORY_SMART,
@@ -2294,10 +2294,10 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_WATER_SPORT, COMBO_STARTER_SING},
+        .comboMoves = {COMBO_STARTER_SPLASHING, COMBO_STARTER_SING},
     },
 
-    [MOVE_GRUDGE] =
+    [MOVE_SHADOW_DANCE] =
     {
         .effect = CONTEST_EFFECT_BETTER_WHEN_LATER,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -2321,15 +2321,15 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_DIVE] =
+    [MOVE_SHADOW_DIVE] =
     {
         .effect = CONTEST_EFFECT_AVOID_STARTLE_ONCE,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
-        .comboStarterId = COMBO_STARTER_DIVE,
+        .comboStarterId = COMBO_STARTER_SHADOW_DIVE,
         .comboMoves = {COMBO_STARTER_RAIN_DANCE, COMBO_STARTER_SURF},
     },
 
-    [MOVE_ARM_THRUST] =
+    [MOVE_FORCE_PALM] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -2345,7 +2345,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_TAIL_GLOW] =
+    [MOVE_MANA_CHARGE] =
     {
         .effect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -2369,7 +2369,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_CALM_MIND},
     },
 
-    [MOVE_FEATHER_DANCE] =
+    [MOVE_ROOST] =
     {
         .effect = CONTEST_EFFECT_BETTER_IF_LAST,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -2393,12 +2393,12 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_SUNNY_DAY},
     },
 
-    [MOVE_MUD_SPORT] =
+    [MOVE_MUD_SLAP] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_CUTE,
-        .comboStarterId = COMBO_STARTER_MUD_SPORT,
-        .comboMoves = {COMBO_STARTER_MUD_SLAP, COMBO_STARTER_WATER_SPORT},
+        .comboStarterId = COMBO_STARTER_MUD_SLAP,
+        .comboMoves = {COMBO_STARTER_MUD_SHOT, COMBO_STARTER_SPLASHING},
     },
 
     [MOVE_ICE_BALL] =
@@ -2433,7 +2433,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_POISON_FANG] =
+    [MOVE_CROSS_POISON] =
     {
         .effect = CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_SMART,
@@ -2505,7 +2505,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_AIR_CUTTER] =
+    [MOVE_AIR_SLASH] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -2513,7 +2513,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_OVERHEAT] =
+    [MOVE_FLARE_BLITZ] =
     {
         .effect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -2521,7 +2521,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_SUNNY_DAY},
     },
 
-    [MOVE_ODOR_SLEUTH] =
+    [MOVE_DOUBLE_TEAM] =
     {
         .effect = CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_SMART,
@@ -2534,7 +2534,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_ROCK_THROW},
+        .comboMoves = {COMBO_STARTER_ROCK_SLIDE},
     },
 
     [MOVE_SILVER_WIND] =
@@ -2545,15 +2545,15 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_METAL_SOUND] =
+    [MOVE_BINDING_VOICE] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_SMART,
-        .comboStarterId = COMBO_STARTER_METAL_SOUND,
+        .comboStarterId = COMBO_STARTER_BINDING_VOICE,
         .comboMoves = {0},
     },
 
-    [MOVE_GRASS_WHISTLE] =
+    [MOVE_NATURE_SOUND] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_SMART,
@@ -2569,7 +2569,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_COSMIC_POWER] =
+    [MOVE_DRACO_METEOR] =
     {
         .effect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -2577,7 +2577,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_WATER_SPOUT] =
+    [MOVE_AQUA_SHOWER] =
     {
         .effect = CONTEST_EFFECT_BETTER_WHEN_LATER,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -2609,7 +2609,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_SKY_UPPERCUT] =
+    [MOVE_SOAR] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -2649,7 +2649,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_GROWTH},
     },
 
-    [MOVE_AERIAL_ACE] =
+    [MOVE_BLADE_FLASH] =
     {
         .effect = CONTEST_EFFECT_BETTER_IF_FIRST,
         .contestCategory = CONTEST_CATEGORY_COOL,
@@ -2657,7 +2657,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_ICICLE_SPEAR] =
+    [MOVE_ICE_SHARD] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
@@ -2689,12 +2689,12 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_DRAGON_CLAW] =
+    [MOVE_HEART_BREAK] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_DRAGON_BREATH, COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_DRAGON_DANCE},
+        .comboMoves = {COMBO_STARTER_LAVA_PLUME, COMBO_STARTER_DARK_PULSE, COMBO_STARTER_TAILWIND},
     },
 
     [MOVE_FRENZY_PLANT] =
@@ -2721,7 +2721,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_MUD_SHOT] =
+    [MOVE_EARTH_POWER] =
     {
         .effect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -2729,7 +2729,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_POISON_TAIL] =
+    [MOVE_POISON_JAB] =
     {
         .effect = CONTEST_EFFECT_WORSEN_CONDITION_OF_PREV_MONS,
         .contestCategory = CONTEST_CATEGORY_SMART,
@@ -2761,12 +2761,12 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_GROWTH},
     },
 
-    [MOVE_WATER_SPORT] =
+    [MOVE_SPLASHING] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_CUTE,
-        .comboStarterId = COMBO_STARTER_WATER_SPORT,
-        .comboMoves = {COMBO_STARTER_RAIN_DANCE, COMBO_STARTER_MUD_SPORT},
+        .comboStarterId = COMBO_STARTER_SPLASHING,
+        .comboMoves = {COMBO_STARTER_RAIN_DANCE, COMBO_STARTER_MUD_SLAP},
     },
 
     [MOVE_CALM_MIND] =
@@ -2785,12 +2785,12 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_DRAGON_DANCE] =
+    [MOVE_TAILWIND] =
     {
         .effect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_COOL,
-        .comboStarterId = COMBO_STARTER_DRAGON_DANCE,
-        .comboMoves = {COMBO_STARTER_DRAGON_RAGE, COMBO_STARTER_DRAGON_BREATH},
+        .comboStarterId = COMBO_STARTER_TAILWIND,
+        .comboMoves = {COMBO_STARTER_DARK_PULSE, COMBO_STARTER_LAVA_PLUME},
     },
 
     [MOVE_ROCK_BLAST] =
@@ -2817,7 +2817,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_RAIN_DANCE},
     },
 
-    [MOVE_DOOM_DESIRE] =
+    [MOVE_DECISION] =
     {
         .effect = CONTEST_EFFECT_DONT_EXCITE_AUDIENCE,
         .contestCategory = CONTEST_CATEGORY_COOL,

@@ -267,9 +267,9 @@
 #define ANIM_TAG_FLAT_ROCK                  (ANIM_SPRITES_START + 257)
 #define ANIM_TAG_MAGNIFYING_GLASS           (ANIM_SPRITES_START + 258)
 #define ANIM_TAG_BROWN_ORB                  (ANIM_SPRITES_START + 259)
-#define ANIM_TAG_METAL_SOUND_WAVES          (ANIM_SPRITES_START + 260)
+#define ANIM_TAG_BINDING_VOICE_WAVES          (ANIM_SPRITES_START + 260)
 #define ANIM_TAG_FLYING_DIRT                (ANIM_SPRITES_START + 261)
-#define ANIM_TAG_ICICLE_SPEAR               (ANIM_SPRITES_START + 262)
+#define ANIM_TAG_ICE_SHARD               (ANIM_SPRITES_START + 262)
 #define ANIM_TAG_HAIL                       (ANIM_SPRITES_START + 263)
 #define ANIM_TAG_GLOWY_RED_ORB              (ANIM_SPRITES_START + 264)
 #define ANIM_TAG_GLOWY_GREEN_ORB            (ANIM_SPRITES_START + 265)
@@ -330,9 +330,9 @@
 #define BG_HIGHSPEED_OPPONENT 9
 #define BG_HIGHSPEED_PLAYER 10
 #define BG_THUNDER 11
-#define BG_GUILLOTINE_OPPONENT 12
-#define BG_GUILLOTINE_PLAYER 13
-#define BG_GUILLOTINE_CONTESTS 14
+#define BG_JUDGEMENT_OPPONENT 12
+#define BG_JUDGEMENT_PLAYER 13
+#define BG_JUDGEMENT_CONTESTS 14
 #define BG_ICE 15
 #define BG_COSMIC 16
 #define BG_IN_AIR 17
@@ -365,7 +365,7 @@
 #define B_ANIM_ITEM_STEAL               15
 #define B_ANIM_SNATCH_MOVE              16
 #define B_ANIM_PSYCHO_CUT_HIT           17
-#define B_ANIM_DOOM_DESIRE_HIT          18
+#define B_ANIM_DECISION_HIT          18
 #define B_ANIM_FOCUS_PUNCH_SETUP        19
 #define B_ANIM_INGRAIN_HEAL             20
 #define B_ANIM_WISH_HEAL                21

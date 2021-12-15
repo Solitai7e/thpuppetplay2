@@ -11,8 +11,8 @@ static void AnimUnusedSpinningFist(struct Sprite *);
 static void AnimUnusedSpinningFist_Step(struct Sprite *);
 static void AnimUnusedCirclingShock(struct Sprite *);
 static void AnimSparkElectricity(struct Sprite *);
-static void AnimZapCannonSpark(struct Sprite *);
-static void AnimZapCannonSpark_Step(struct Sprite *);
+static void AnimEnergyBallSpark(struct Sprite *);
+static void AnimEnergyBallSpark_Step(struct Sprite *);
 static void AnimThunderboltOrb(struct Sprite *);
 static void AnimThunderboltOrb_Step(struct Sprite *);
 static void AnimSparkElectricityFlashing(struct Sprite *);
@@ -127,7 +127,7 @@ const struct SpriteTemplate gSparkElectricitySpriteTemplate =
     .callback = AnimSparkElectricity,
 };
 
-const struct SpriteTemplate gZapCannonBallSpriteTemplate =
+const struct SpriteTemplate gEnergyBallBallSpriteTemplate =
 {
     .tileTag = ANIM_TAG_BLACK_BALL_2,
     .paletteTag = ANIM_TAG_BLACK_BALL_2,
@@ -149,7 +149,7 @@ static const union AffineAnimCmd *const sAffineAnims_FlashingSpark[] =
     sAffineAnim_FlashingSpark,
 };
 
-const struct SpriteTemplate gZapCannonSparkSpriteTemplate =
+const struct SpriteTemplate gEnergyBallSparkSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SPARK_2,
     .paletteTag = ANIM_TAG_SPARK_2,
@@ -157,7 +157,7 @@ const struct SpriteTemplate gZapCannonSparkSpriteTemplate =
     .anims = gDummySpriteAnimTable,
     .images = NULL,
     .affineAnims = sAffineAnims_FlashingSpark,
-    .callback = AnimZapCannonSpark,
+    .callback = AnimEnergyBallSpark,
 };
 
 static const union AnimCmd sAnim_ThunderboltOrb[] =
@@ -569,7 +569,7 @@ static void AnimSparkElectricity(struct Sprite *sprite)
     sprite->callback = DestroyAnimSpriteAfterTimer;
 }
 
-static void AnimZapCannonSpark(struct Sprite *sprite)
+static void AnimEnergyBallSpark(struct Sprite *sprite)
 {
     InitSpritePosToAnimAttacker(sprite, 1);
     sprite->data[0] = gBattleAnimArgs[3];
@@ -582,11 +582,11 @@ static void AnimZapCannonSpark(struct Sprite *sprite)
     sprite->data[6] = gBattleAnimArgs[5];
     sprite->data[7] = gBattleAnimArgs[4];
     sprite->oam.tileNum += gBattleAnimArgs[6] * 4;
-    sprite->callback = AnimZapCannonSpark_Step;
-    AnimZapCannonSpark_Step(sprite);
+    sprite->callback = AnimEnergyBallSpark_Step;
+    AnimEnergyBallSpark_Step(sprite);
 }
 
-static void AnimZapCannonSpark_Step(struct Sprite *sprite)
+static void AnimEnergyBallSpark_Step(struct Sprite *sprite)
 {
     if (!AnimTranslateLinear(sprite))
     {

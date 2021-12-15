@@ -833,12 +833,12 @@ const u32 gBattleAnimMaskImage_LightBeam[] = INCBIN_U32("graphics/battle_anims/m
 const u32 gBattleAnimMaskPalette_LightBeam[] = INCBIN_U32("graphics/battle_anims/masks/light_beam.gbapal.lz");
 const u32 gBattleAnimMaskTilemap_LightBeam[] = INCBIN_U32("graphics/battle_anims/masks/light_beam.bin.lz");
 
-const u32 gBattleAnimBgTilemap_GuillotineOpponent[] = INCBIN_U32("graphics/battle_anims/backgrounds/guillotine_opponent.bin.lz");
-const u32 gBattleAnimBgTilemap_GuillotinePlayer[] = INCBIN_U32("graphics/battle_anims/backgrounds/guillotine_player.bin.lz");
-const u32 gBattleAnimBgTilemap_GuillotineContests[] = INCBIN_U32("graphics/battle_anims/backgrounds/guillotine_contests.bin.lz");
+const u32 gBattleAnimBgTilemap_JudgementOpponent[] = INCBIN_U32("graphics/battle_anims/backgrounds/judgement_opponent.bin.lz");
+const u32 gBattleAnimBgTilemap_JudgementPlayer[] = INCBIN_U32("graphics/battle_anims/backgrounds/judgement_player.bin.lz");
+const u32 gBattleAnimBgTilemap_JudgementContests[] = INCBIN_U32("graphics/battle_anims/backgrounds/judgement_contests.bin.lz");
 
-const u32 gBattleAnimBgImage_Guillotine[] = INCBIN_U32("graphics/battle_anims/backgrounds/guillotine.4bpp.lz");
-const u32 gBattleAnimBgPalette_Guillotine[] = INCBIN_U32("graphics/battle_anims/backgrounds/guillotine.gbapal.lz");
+const u32 gBattleAnimBgImage_Judgement[] = INCBIN_U32("graphics/battle_anims/backgrounds/judgement.4bpp.lz");
+const u32 gBattleAnimBgPalette_Judgement[] = INCBIN_U32("graphics/battle_anims/backgrounds/judgement.gbapal.lz");
 
 const u32 gBattleAnimBgImage_Thunder[] = INCBIN_U32("graphics/battle_anims/backgrounds/thunder.4bpp.lz");
 const u32 gBattleAnimBgPalette_Thunder[] = INCBIN_U32("graphics/battle_anims/backgrounds/thunder.gbapal.lz");
@@ -990,15 +990,15 @@ const u32 gBattleAnimBgImage_Sandstorm[] = INCBIN_U32("graphics/battle_anims/bac
 
 const u32 gBattleAnimSpritePal_FlyingDirt[] = INCBIN_U32("graphics/battle_anims/sprites/flying_dirt.gbapal.lz");
 
-const u32 gBattleAnimSpriteGfx_MetalSoundWaves[] = INCBIN_U32("graphics/battle_anims/sprites/metal_sound_waves.4bpp.lz");
-const u32 gBattleAnimSpritePal_MetalSoundWaves[] = INCBIN_U32("graphics/battle_anims/sprites/metal_sound_waves.gbapal.lz");
+const u32 gBattleAnimSpriteGfx_BindingVoiceWaves[] = INCBIN_U32("graphics/battle_anims/sprites/binding_voice_waves.4bpp.lz");
+const u32 gBattleAnimSpritePal_BindingVoiceWaves[] = INCBIN_U32("graphics/battle_anims/sprites/binding_voice_waves.gbapal.lz");
 
 const u32 gBattleAnimBgImage_Ice[] = INCBIN_U32("graphics/battle_anims/backgrounds/ice.4bpp.lz");
 const u32 gBattleAnimBgPalette_Ice[] = INCBIN_U32("graphics/battle_anims/backgrounds/ice.gbapal.lz");
 const u32 gBattleAnimBgTilemap_Ice[] = INCBIN_U32("graphics/battle_anims/backgrounds/ice.bin.lz");
 
-const u32 gBattleAnimSpriteGfx_IcicleSpear[] = INCBIN_U32("graphics/battle_anims/sprites/icicle_spear.4bpp.lz");
-const u32 gBattleAnimSpritePal_IcicleSpear[] = INCBIN_U32("graphics/battle_anims/sprites/icicle_spear.gbapal.lz");
+const u32 gBattleAnimSpriteGfx_IceShard[] = INCBIN_U32("graphics/battle_anims/sprites/ice_shard.4bpp.lz");
+const u32 gBattleAnimSpritePal_IceShard[] = INCBIN_U32("graphics/battle_anims/sprites/ice_shard.gbapal.lz");
 
 const u32 gContestNextTurnGfx[] = INCBIN_U32("graphics/contest/nextturn.4bpp.lz");
 const u8 gContestNextTurnNumbersGfx[] = INCBIN_U8("graphics/contest/nextturn_numbers.4bpp");

@@ -1206,13 +1206,13 @@ $(MID_SUBDIR)/se_m_fire_punch.s: %.s: %.mid
 $(MID_SUBDIR)/se_m_scratch.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
-$(MID_SUBDIR)/se_m_vicegrip.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_night_slash.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
-$(MID_SUBDIR)/se_m_razor_wind.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_gust.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
-$(MID_SUBDIR)/se_m_razor_wind2.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_gust2.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V090 -P4
 
 $(MID_SUBDIR)/se_m_swords_dance.s: %.s: %.mid
@@ -1221,13 +1221,13 @@ $(MID_SUBDIR)/se_m_swords_dance.s: %.s: %.mid
 $(MID_SUBDIR)/se_m_cut.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V120 -P4
 
-$(MID_SUBDIR)/se_m_gust.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_razor_wind.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
-$(MID_SUBDIR)/se_m_gust2.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_razor_wind2.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
-$(MID_SUBDIR)/se_m_wing_attack.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_gale.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V105 -P4
 
 $(MID_SUBDIR)/se_m_fly.s: %.s: %.mid
@@ -1236,10 +1236,10 @@ $(MID_SUBDIR)/se_m_fly.s: %.s: %.mid
 $(MID_SUBDIR)/se_m_bind.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V100 -P4
 
-$(MID_SUBDIR)/se_m_mega_kick.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_giga_impact.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V090 -P4
 
-$(MID_SUBDIR)/se_m_mega_kick2.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_giga_impact2.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
 $(MID_SUBDIR)/se_m_jump_kick.s: %.s: %.mid
@@ -1251,10 +1251,10 @@ $(MID_SUBDIR)/se_m_sand_attack.s: %.s: %.mid
 $(MID_SUBDIR)/se_m_headbutt.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
-$(MID_SUBDIR)/se_m_horn_attack.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_knife_throw.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V110 -P4
 
-$(MID_SUBDIR)/se_m_take_down.s: %.s: %.mid
+$(MID_SUBDIR)/se_m_double_edge.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G128 -V105 -P4
 
 $(MID_SUBDIR)/se_m_tail_whip.s: %.s: %.mid

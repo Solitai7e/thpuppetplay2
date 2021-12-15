@@ -24,7 +24,7 @@ MoveTutor_Text_SwaggerTaught:
 	.string "I'll just praise my POKéMON from now\n"
 	.string "on without the swagger.$"
 
-MoveTutor_Text_RolloutTeach:
+MoveTutor_Text_TremorsTeach:
 	.string "Did you know that you can go from\n"
 	.string "here a long way in that direction\l"
 	.string "without changing direction?\p"
@@ -32,18 +32,18 @@ MoveTutor_Text_RolloutTeach:
 	.string "that way.\p"
 	.string "Do you think your POKéMON will\n"
 	.string "want to roll, too?\p"
-	.string "I can teach one the move ROLLOUT\n"
+	.string "I can teach one the move TREMORS\n"
 	.string "if you'd like.$"
 
-MoveTutor_Text_RolloutDeclined:
+MoveTutor_Text_TremorsDeclined:
 	.string "You don't need to be shy about it.\n"
 	.string "Let's roll!$"
 
-MoveTutor_Text_RolloutWhichMon:
+MoveTutor_Text_TremorsWhichMon:
 	.string "Ehehe, sure thing! It'd be great if\n"
 	.string "the POKéMON looked like me.$"
 
-MoveTutor_Text_RolloutTaught:
+MoveTutor_Text_TremorsTaught:
 	.string "Rolling around in the grass makes me\n"
 	.string "happy. Come on, let's roll!$"
 
@@ -125,7 +125,7 @@ MoveTutor_Text_SleepTalkTeach:
 
 MoveTutor_Text_SleepTalkDeclined:
 	.string "Oh, fine, fine. You want to stay awake\n"
-	.string "with HIDDEN POWER, too…$"
+	.string "with CHARGE BEAM, too…$"
 
 MoveTutor_Text_SleepTalkWhichMon:
 	.string "Ah, an appreciative child!\n"
@@ -188,26 +188,26 @@ MoveTutor_Text_DynamicPunchTaught:
 	.string "I want you to win at the MOSSDEEP GYM\n"
 	.string "using that DYNAMICPUNCH!$"
 
-MoveTutor_Text_DoubleEdgeTeach:
+MoveTutor_Text_HeadSmashTeach:
 	.string "Sigh…\p"
 	.string "SOOTOPOLIS's GYM LEADER is really\n"
 	.string "lovably admirable.\p"
 	.string "But that also means I have many\n"
 	.string "rivals for his attention.\p"
-	.string "He's got appeal with a DOUBLE-EDGE.\n"
+	.string "He's got appeal with a HEAD-SMASH.\n"
 	.string "I couldn't even catch his eye.\p"
 	.string "Please, let me teach your POKéMON\n"
-	.string "the move DOUBLE-EDGE!$"
+	.string "the move HEAD-SMASH!$"
 
-MoveTutor_Text_DoubleEdgeDeclined:
+MoveTutor_Text_HeadSmashDeclined:
 	.string "Oh…\n"
 	.string "Even you rejected me…$"
 
-MoveTutor_Text_DoubleEdgeWhichMon:
+MoveTutor_Text_HeadSmashWhichMon:
 	.string "Okay, which POKéMON should I teach\n"
-	.string "DOUBLE-EDGE?$"
+	.string "HEAD-SMASH?$"
 
-MoveTutor_Text_DoubleEdgeTaught:
+MoveTutor_Text_HeadSmashTaught:
 	.string "I won't live for love anymore!\n"
 	.string "I'll become tough!$"
 

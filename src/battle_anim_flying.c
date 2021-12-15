@@ -24,10 +24,10 @@ static void AnimUnusedBubbleThrow(struct Sprite *);
 static void AnimWhirlwindLine(struct Sprite *);
 static void AnimBounceBallShrink(struct Sprite *);
 static void AnimBounceBallLand(struct Sprite *);
-static void AnimDiveBall(struct Sprite *);
-static void AnimDiveBall_Step1(struct Sprite *);
-static void AnimDiveBall_Step2(struct Sprite *);
-static void AnimDiveWaterSplash(struct Sprite *);
+static void AnimShadowDiveBall(struct Sprite *);
+static void AnimShadowDiveBall_Step1(struct Sprite *);
+static void AnimShadowDiveBall_Step2(struct Sprite *);
+static void AnimShadowDiveWaterSplash(struct Sprite *);
 static void AnimSprayWaterDroplet(struct Sprite *);
 static void AnimSprayWaterDroplet_Step(struct Sprite *);
 static void AnimUnusedFlashingLight(struct Sprite *);
@@ -265,7 +265,7 @@ const struct SpriteTemplate gBounceBallLandSpriteTemplate =
     .callback = AnimBounceBallLand,
 };
 
-static const union AffineAnimCmd sAffineAnim_DiveBall[] =
+static const union AffineAnimCmd sAffineAnim_ShadowDiveBall[] =
 {
     AFFINEANIMCMD_FRAME(0x10, 0x100, 0, 0),
     AFFINEANIMCMD_FRAME(0x28, 0x0, 0, 6),
@@ -274,20 +274,20 @@ static const union AffineAnimCmd sAffineAnim_DiveBall[] =
     AFFINEANIMCMD_END,
 };
 
-static const union AffineAnimCmd *const sAffineAnims_DiveBall[] =
+static const union AffineAnimCmd *const sAffineAnims_ShadowDiveBall[] =
 {
-    sAffineAnim_DiveBall,
+    sAffineAnim_ShadowDiveBall,
 };
 
-const struct SpriteTemplate gDiveBallSpriteTemplate =
+const struct SpriteTemplate gShadowDiveBallSpriteTemplate =
 {
     .tileTag = ANIM_TAG_ROUND_SHADOW,
     .paletteTag = ANIM_TAG_ROUND_SHADOW,
     .oam = &gOamData_AffineDouble_ObjNormal_64x64,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
-    .affineAnims = sAffineAnims_DiveBall,
-    .callback = AnimDiveBall,
+    .affineAnims = sAffineAnims_ShadowDiveBall,
+    .callback = AnimShadowDiveBall,
 };
 
 static const union AffineAnimCmd sAnim_Unused[] =
@@ -304,7 +304,7 @@ static const union AffineAnimCmd *const sAnims_Unused[] =
     sAnim_Unused,
 };
 
-const struct SpriteTemplate gDiveWaterSplashSpriteTemplate =
+const struct SpriteTemplate gShadowDiveWaterSplashSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SPLASH,
     .paletteTag = ANIM_TAG_SPLASH,
@@ -312,7 +312,7 @@ const struct SpriteTemplate gDiveWaterSplashSpriteTemplate =
     .anims = gDummySpriteAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimDiveWaterSplash,
+    .callback = AnimShadowDiveWaterSplash,
 };
 
 const struct SpriteTemplate gSprayWaterDropletSpriteTemplate =
@@ -551,7 +551,7 @@ void DestroyAnimSpriteAfterTimer(struct Sprite *sprite)
     }
 }
 
-struct FeatherDanceData
+struct RoostData
 {
     u16 unk0_0a:1;
     u16 unk0_0b:1;
@@ -574,7 +574,7 @@ static void AnimFallingFeather(struct Sprite *sprite)
     u8 battler, matrixNum, sinIndex;
     s16 spriteCoord;
 
-    struct FeatherDanceData *data = (struct FeatherDanceData *)sprite->data;
+    struct RoostData *data = (struct RoostData *)sprite->data;
 
     if (gBattleAnimArgs[7] & 0x100)
         battler = gBattleAnimAttacker;
@@ -648,7 +648,7 @@ static void AnimFallingFeather_Step(struct Sprite *sprite)
 {
     u8 matrixNum, sinIndex;
     s16 sinVal = 0;
-    struct FeatherDanceData *data = (struct FeatherDanceData *)sprite->data;
+    struct RoostData *data = (struct RoostData *)sprite->data;
     if (data->unk0_0a)
     {
         if (data->unk1-- % 256 == 0)
@@ -943,7 +943,7 @@ static void AnimWhirlwindLine_Step(struct Sprite *sprite)
         DestroyAnimSprite(sprite);
 }
 
-void AnimTask_DrillPeckHitSplats(u8 task)
+void AnimTask_WingAttackHitSplats(u8 task)
 {
     if (!(gTasks[task].data[0] % 32))
     {
@@ -1007,16 +1007,16 @@ static void AnimBounceBallLand(struct Sprite *sprite)
     }
 }
 
-static void AnimDiveBall(struct Sprite *sprite)
+static void AnimShadowDiveBall(struct Sprite *sprite)
 {
     InitSpritePosToAnimAttacker(sprite, 1);
     sprite->data[0] = gBattleAnimArgs[2];
     sprite->data[1] = gBattleAnimArgs[3];
-    sprite->callback = AnimDiveBall_Step1;
+    sprite->callback = AnimShadowDiveBall_Step1;
     gSprites[GetAnimBattlerSpriteId(ANIM_ATTACKER)].invisible = TRUE;
 }
 
-void AnimDiveBall_Step1(struct Sprite *sprite)
+void AnimShadowDiveBall_Step1(struct Sprite *sprite)
 {
     if (sprite->data[0] > 0)
     {
@@ -1031,11 +1031,11 @@ void AnimDiveBall_Step1(struct Sprite *sprite)
     {
         sprite->invisible = TRUE;
         if (sprite->data[3]++ > 20)
-            sprite->callback = AnimDiveBall_Step2;
+            sprite->callback = AnimShadowDiveBall_Step2;
     }
 }
 
-static void AnimDiveBall_Step2(struct Sprite *sprite)
+static void AnimShadowDiveBall_Step2(struct Sprite *sprite)
 {
     sprite->y2 += sprite->data[2] >> 8;
 
@@ -1046,7 +1046,7 @@ static void AnimDiveBall_Step2(struct Sprite *sprite)
         DestroyAnimSprite(sprite);
 }
 
-static void AnimDiveWaterSplash(struct Sprite *sprite)
+static void AnimShadowDiveWaterSplash(struct Sprite *sprite)
 {
     u32 matrixNum;
     int t1, t2;
@@ -1100,7 +1100,7 @@ static void AnimDiveWaterSplash(struct Sprite *sprite)
     }
 }
 
-// Launches a water droplet away from the specified battler. Used by Astonish and Dive
+// Launches a water droplet away from the specified battler. Used by Astonish and Shadow Dive
 static void AnimSprayWaterDroplet(struct Sprite *sprite)
 {
     int v1 = 0x1ff & Random2();

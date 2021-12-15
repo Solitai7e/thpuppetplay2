@@ -217,7 +217,7 @@ Text_MonUsedWaterfall:
 
 EventScript_UseDive::
 	lockall
-	checkpartymove MOVE_DIVE
+	checkpartymove MOVE_SHADOW_DIVE
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantDive
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	setfieldeffectargument 0, VAR_RESULT
@@ -240,7 +240,7 @@ EventScript_EndDive::
 
 EventScript_UseDiveUnderwater::
 	lockall
-	checkpartymove MOVE_DIVE
+	checkpartymove MOVE_SHADOW_DIVE
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSurface
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	setfieldeffectargument 0, VAR_RESULT
@@ -281,9 +281,9 @@ Text_WantToSurface:
 	.string "Light is filtering down from above.\n"
 	.string "Would you like to use DIVE?$"
 
-EventScript_FailSweetScent::
-	msgbox Text_FailSweetScent, MSGBOX_SIGN
+EventScript_FailNaturePower::
+	msgbox Text_FailNaturePower, MSGBOX_SIGN
 	end
 
-Text_FailSweetScent:
+Text_FailNaturePower:
 	.string "Looks like there's nothing here…$"

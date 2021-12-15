@@ -130,20 +130,20 @@ gSongTable::
 	song se_m_bubble3, 1, 1
 	song se_m_rain_dance, 1, 1
 	song se_m_cut, 1, 1
-	song se_m_string_shot, 1, 1
-	song se_m_string_shot2, 1, 1
-	song se_m_rock_throw, 1, 1
-	song se_m_gust, 2, 2
-	song se_m_gust2, 2, 2
+	song se_m_wire_web, 1, 1
+	song se_m_wire_web2, 1, 1
+	song se_m_rock_slide, 1, 1
+	song se_m_razor_wind, 2, 2
+	song se_m_razor_wind2, 2, 2
 	song se_m_double_slap, 1, 1
-	song se_m_double_team, 1, 1
-	song se_m_razor_wind, 1, 1
+	song se_m_shadow_hit, 1, 1
+	song se_m_gust, 1, 1
 	song se_m_icy_wind, 1, 1
 	song se_m_thunder_wave, 1, 1
 	song se_m_comet_punch, 1, 1
-	song se_m_mega_kick, 1, 1
-	song se_m_mega_kick2, 1, 1
-	song se_m_crabhammer, 1, 1
+	song se_m_giga_impact, 1, 1
+	song se_m_giga_impact2, 1, 1
+	song se_m_aqua_jet, 1, 1
 	song se_m_jump_kick, 1, 1
 	song se_m_flame_wheel, 1, 1
 	song se_m_flame_wheel2, 1, 1
@@ -153,26 +153,26 @@ gSongTable::
 	song se_m_sacred_fire, 1, 1
 	song se_m_sacred_fire2, 2, 2
 	song se_m_ember, 1, 1
-	song se_m_take_down, 2, 2
+	song se_m_double_edge, 2, 2
 	song se_m_blizzard, 1, 1
 	song se_m_blizzard2, 1, 1
 	song se_m_scratch, 1, 1
-	song se_m_vicegrip, 1, 1
-	song se_m_wing_attack, 1, 1
+	song se_m_night_slash, 1, 1
+	song se_m_gale, 1, 1
 	song se_m_fly, 1, 1
 	song se_m_sand_attack, 1, 1
-	song se_m_razor_wind2, 1, 1
+	song se_m_gust2, 1, 1
 	song se_m_bite, 1, 1
 	song se_m_headbutt, 1, 1
 	song se_m_surf, 1, 1
 	song se_m_hydro_pump, 1, 1
 	song se_m_whirlpool, 1, 1
-	song se_m_horn_attack, 1, 1
+	song se_m_knife_throw, 1, 1
 	song se_m_tail_whip, 2, 2
 	song se_m_mist, 1, 1
 	song se_m_poison_powder, 1, 1
 	song se_m_bind, 2, 2
-	song se_m_dragon_rage, 1, 1
+	song se_m_dark_pulse, 1, 1
 	song se_m_sing, 1, 1
 	song se_m_perish_song, 1, 1
 	song se_m_pay_day, 1, 1
@@ -185,10 +185,10 @@ gSongTable::
 	song se_m_screech, 1, 1
 	song se_m_bubble_beam, 1, 1
 	song se_m_bubble_beam2, 1, 1
-	song se_m_supersonic, 1, 1
+	song se_m_jamming, 1, 1
 	song se_m_belly_drum, 1, 1
 	song se_m_metronome, 1, 1
-	song se_m_bonemerang, 1, 1
+	song se_m_checkmaid, 1, 1
 	song se_m_lick, 1, 1
 	song se_m_psybeam, 1, 1
 	song se_m_faint_attack, 1, 1
@@ -203,7 +203,7 @@ gSongTable::
 	song se_m_giga_drain, 1, 1
 	song se_m_psybeam2, 1, 1
 	song se_m_solar_beam, 2, 2
-	song se_m_petal_dance, 1, 1
+	song se_m_battle_chant, 1, 1
 	song se_m_teleport, 1, 1
 	song se_m_minimize, 1, 1
 	song se_m_sketch, 1, 1
@@ -212,14 +212,14 @@ gSongTable::
 	song se_m_barrier, 1, 1
 	song se_m_detect, 2, 2
 	song se_m_lock_on, 1, 1
-	song se_m_moonlight, 1, 1
+	song se_m_lunatic, 1, 1
 	song se_m_charm, 1, 1
 	song se_m_charge, 1, 1
 	song se_m_strength, 1, 1
 	song se_m_hyper_beam, 1, 1
 	song se_m_waterfall, 1, 1
 	song se_m_reversal, 1, 1
-	song se_m_acid_armor, 1, 1
+	song se_m_disperse, 1, 1
 	song se_m_sandstorm, 1, 1
 	song se_m_tri_attack, 1, 1
 	song se_m_tri_attack2, 1, 1
@@ -229,22 +229,22 @@ gSongTable::
 	song se_m_milk_drink, 1, 1
 	song se_m_attract, 1, 1
 	song se_m_attract2, 1, 1
-	song se_m_morning_sun, 1, 1
+	song se_m_energy_light, 1, 1
 	song se_m_flatter, 1, 1
 	song se_m_sand_tomb, 1, 1
-	song se_m_grasswhistle, 1, 1
-	song se_m_spit_up, 1, 1
+	song se_m_nature_sound, 1, 1
+	song se_m_mirror_shot, 1, 1
 	song se_m_dive, 1, 1
 	song se_m_earthquake, 2, 2
 	song se_m_twister, 2, 2
-	song se_m_sweet_scent, 1, 1
+	song se_m_nature_power, 1, 1
 	song se_m_yawn, 1, 1
-	song se_m_sky_uppercut, 2, 2
+	song se_m_soar, 2, 2
 	song se_m_stat_increase, 1, 1
 	song se_m_heat_wave, 1, 1
-	song se_m_uproar, 1, 1
+	song se_m_performance, 1, 1
 	song se_m_hail, 1, 1
-	song se_m_cosmic_power, 2, 2
+	song se_m_draco_meteor, 2, 2
 	song se_m_teeter_dance, 1, 1
 	song se_m_stat_decrease, 1, 1
 	song se_m_haze, 1, 1

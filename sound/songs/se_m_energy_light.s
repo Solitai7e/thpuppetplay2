@@ -1,25 +1,25 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_morning_sun_grp, voicegroup128
-	.equ	se_m_morning_sun_pri, 5
-	.equ	se_m_morning_sun_rev, reverb_set+50
-	.equ	se_m_morning_sun_mvl, 127
-	.equ	se_m_morning_sun_key, 0
-	.equ	se_m_morning_sun_tbs, 1
-	.equ	se_m_morning_sun_exg, 0
-	.equ	se_m_morning_sun_cmp, 1
+	.equ	se_m_energy_light_grp, voicegroup128
+	.equ	se_m_energy_light_pri, 5
+	.equ	se_m_energy_light_rev, reverb_set+50
+	.equ	se_m_energy_light_mvl, 127
+	.equ	se_m_energy_light_key, 0
+	.equ	se_m_energy_light_tbs, 1
+	.equ	se_m_energy_light_exg, 0
+	.equ	se_m_energy_light_cmp, 1
 
 	.section .rodata
-	.global	se_m_morning_sun
+	.global	se_m_energy_light
 	.align	2
 
 @********************** Track  1 **********************@
 
-se_m_morning_sun_1:
-	.byte	KEYSH , se_m_morning_sun_key+0
-	.byte	TEMPO , 150*se_m_morning_sun_tbs/2
+se_m_energy_light_1:
+	.byte	KEYSH , se_m_energy_light_key+0
+	.byte	TEMPO , 150*se_m_energy_light_tbs/2
 	.byte		VOICE , 46
-	.byte		VOL   , 95*se_m_morning_sun_mvl/mxv
+	.byte		VOL   , 95*se_m_energy_light_mvl/mxv
 	.byte		BENDR , 2
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_v+15
@@ -72,11 +72,11 @@ se_m_morning_sun_1:
 
 @********************** Track  2 **********************@
 
-se_m_morning_sun_2:
-	.byte	KEYSH , se_m_morning_sun_key+0
+se_m_energy_light_2:
+	.byte	KEYSH , se_m_energy_light_key+0
 	.byte		VOICE , 53
 	.byte		BENDR , 2
-	.byte		VOL   , 43*se_m_morning_sun_mvl/mxv
+	.byte		VOL   , 43*se_m_energy_light_mvl/mxv
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_v+15
 	.byte		N06   , Gs6 , v108
@@ -121,15 +121,15 @@ se_m_morning_sun_2:
 @******************************************************@
 	.align	2
 
-se_m_morning_sun:
+se_m_energy_light:
 	.byte	2	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	se_m_morning_sun_pri	@ Priority
-	.byte	se_m_morning_sun_rev	@ Reverb.
+	.byte	se_m_energy_light_pri	@ Priority
+	.byte	se_m_energy_light_rev	@ Reverb.
 
-	.word	se_m_morning_sun_grp
+	.word	se_m_energy_light_grp
 
-	.word	se_m_morning_sun_1
-	.word	se_m_morning_sun_2
+	.word	se_m_energy_light_1
+	.word	se_m_energy_light_2
 
 	.end

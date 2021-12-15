@@ -161,8 +161,8 @@ gText_Hypnosis::
 gText_Softboiled::
 	.string "SOFTBOILED$"
 
-gText_HornAttack::
-	.string "HORN ATTACK$"
+gText_KnifeThrow::
+	.string "Knife Throw$"
 
 gText_SwordsDance::
 	.string "SWORDS DANCE$"
@@ -176,8 +176,8 @@ gText_SunnyDay::
 gText_Rest2::
 	.string "REST$"
 
-gText_Vicegrip::
-	.string "VICEGRIP$"
+gText_NightSlash::
+	.string "NIGHTSLASH$"
 
 gText_DefenseCurl::
 	.string "DEFENSE CURL$"

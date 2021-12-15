@@ -1,25 +1,25 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_moonlight_grp, voicegroup128
-	.equ	se_m_moonlight_pri, 4
-	.equ	se_m_moonlight_rev, reverb_set+50
-	.equ	se_m_moonlight_mvl, 127
-	.equ	se_m_moonlight_key, 0
-	.equ	se_m_moonlight_tbs, 1
-	.equ	se_m_moonlight_exg, 0
-	.equ	se_m_moonlight_cmp, 1
+	.equ	se_m_lunatic_grp, voicegroup128
+	.equ	se_m_lunatic_pri, 4
+	.equ	se_m_lunatic_rev, reverb_set+50
+	.equ	se_m_lunatic_mvl, 127
+	.equ	se_m_lunatic_key, 0
+	.equ	se_m_lunatic_tbs, 1
+	.equ	se_m_lunatic_exg, 0
+	.equ	se_m_lunatic_cmp, 1
 
 	.section .rodata
-	.global	se_m_moonlight
+	.global	se_m_lunatic
 	.align	2
 
 @********************** Track  1 **********************@
 
-se_m_moonlight_1:
-	.byte	KEYSH , se_m_moonlight_key+0
-	.byte	TEMPO , 150*se_m_moonlight_tbs/2
+se_m_lunatic_1:
+	.byte	KEYSH , se_m_lunatic_key+0
+	.byte	TEMPO , 150*se_m_lunatic_tbs/2
 	.byte		VOICE , 46
-	.byte		VOL   , 100*se_m_moonlight_mvl/mxv
+	.byte		VOL   , 100*se_m_lunatic_mvl/mxv
 	.byte		BENDR , 4
 	.byte		PAN   , c_v+0
 	.byte		MOD   , 6
@@ -32,7 +32,7 @@ se_m_moonlight_1:
 	.byte	W01
 	.byte		N20   , Gn6 , v100
 	.byte	W21
-se_m_moonlight_1_000:
+se_m_lunatic_1_000:
 	.byte		N01   , Ds6 , v056
 	.byte	W01
 	.byte		        Dn6
@@ -50,7 +50,7 @@ se_m_moonlight_1_000:
 	.byte		        c_v-4
 	.byte	W04
 	.byte	PEND
-se_m_moonlight_1_001:
+se_m_lunatic_1_001:
 	.byte		PAN   , c_v+0
 	.byte		N01   , Gs5 , v092
 	.byte	W01
@@ -61,7 +61,7 @@ se_m_moonlight_1_001:
 	.byte		N20   , Cn6 , v100
 	.byte	W21
 	.byte	PEND
-se_m_moonlight_1_002:
+se_m_lunatic_1_002:
 	.byte		PAN   , c_v+16
 	.byte		N01   , Gs5 , v056
 	.byte	W01
@@ -72,7 +72,7 @@ se_m_moonlight_1_002:
 	.byte		N20   , Cn6 , v064
 	.byte	W21
 	.byte	PEND
-se_m_moonlight_1_003:
+se_m_lunatic_1_003:
 	.byte		PAN   , c_v-16
 	.byte		N01   , Gs5 , v040
 	.byte	W01
@@ -83,7 +83,7 @@ se_m_moonlight_1_003:
 	.byte		N20   , Cn6
 	.byte	W21
 	.byte	PEND
-se_m_moonlight_1_004:
+se_m_lunatic_1_004:
 	.byte		PAN   , c_v+32
 	.byte		N01   , Gs5 , v020
 	.byte	W01
@@ -105,24 +105,24 @@ se_m_moonlight_1_004:
 	.byte		N20   , Gn6 , v100
 	.byte	W21
 	.byte	PATT
-	 .word	se_m_moonlight_1_000
+	 .word	se_m_lunatic_1_000
 	.byte	PATT
-	 .word	se_m_moonlight_1_001
+	 .word	se_m_lunatic_1_001
 	.byte	PATT
-	 .word	se_m_moonlight_1_002
+	 .word	se_m_lunatic_1_002
 	.byte	PATT
-	 .word	se_m_moonlight_1_003
+	 .word	se_m_lunatic_1_003
 	.byte	PATT
-	 .word	se_m_moonlight_1_004
+	 .word	se_m_lunatic_1_004
 	.byte	FINE
 
 @********************** Track  2 **********************@
 
-se_m_moonlight_2:
-	.byte	KEYSH , se_m_moonlight_key+0
+se_m_lunatic_2:
+	.byte	KEYSH , se_m_lunatic_key+0
 	.byte		VOICE , 55
 	.byte		PAN   , c_v+0
-	.byte		VOL   , 39*se_m_moonlight_mvl/mxv
+	.byte		VOL   , 39*se_m_lunatic_mvl/mxv
 	.byte		BEND  , c_v-4
 	.byte	W10
 	.byte		N01   , Ds6 , v112
@@ -135,7 +135,7 @@ se_m_moonlight_2:
 	.byte	W05
 	.byte		        Gn6 , v096
 	.byte	W05
-se_m_moonlight_2_000:
+se_m_lunatic_2_000:
 	.byte		PAN   , c_v+50
 	.byte		N04   , Gn6 , v080
 	.byte	W04
@@ -149,7 +149,7 @@ se_m_moonlight_2_000:
 	.byte		N04   , Gn6 , v032
 	.byte	W10
 	.byte	PEND
-se_m_moonlight_2_001:
+se_m_lunatic_2_001:
 	.byte		PAN   , c_v+0
 	.byte	W10
 	.byte		N01   , Gs5 , v112
@@ -163,7 +163,7 @@ se_m_moonlight_2_001:
 	.byte		        Cn6 , v096
 	.byte	W05
 	.byte	PEND
-se_m_moonlight_2_002:
+se_m_lunatic_2_002:
 	.byte		PAN   , c_v+50
 	.byte		N04   , Cn6 , v080
 	.byte	W04
@@ -192,11 +192,11 @@ se_m_moonlight_2_002:
 	.byte		        Gn6 , v096
 	.byte	W05
 	.byte	PATT
-	 .word	se_m_moonlight_2_000
+	 .word	se_m_lunatic_2_000
 	.byte	PATT
-	 .word	se_m_moonlight_2_001
+	 .word	se_m_lunatic_2_001
 	.byte	PATT
-	 .word	se_m_moonlight_2_002
+	 .word	se_m_lunatic_2_002
 	.byte	W24
 	.byte	W24
 	.byte	FINE
@@ -204,15 +204,15 @@ se_m_moonlight_2_002:
 @******************************************************@
 	.align	2
 
-se_m_moonlight:
+se_m_lunatic:
 	.byte	2	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	se_m_moonlight_pri	@ Priority
-	.byte	se_m_moonlight_rev	@ Reverb.
+	.byte	se_m_lunatic_pri	@ Priority
+	.byte	se_m_lunatic_rev	@ Reverb.
 
-	.word	se_m_moonlight_grp
+	.word	se_m_lunatic_grp
 
-	.word	se_m_moonlight_1
-	.word	se_m_moonlight_2
+	.word	se_m_lunatic_1
+	.word	se_m_lunatic_2
 
 	.end

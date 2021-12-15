@@ -402,7 +402,7 @@ static void CursorCb_FieldMove(u8);
 static bool8 SetUpFieldMove_Surf(void);
 static bool8 SetUpFieldMove_Fly(void);
 static bool8 SetUpFieldMove_Waterfall(void);
-static bool8 SetUpFieldMove_Dive(void);
+static bool8 SetUpFieldMove_ShadowDive(void);
 
 // static const data
 #include "data/pokemon/tutor_learnsets.h"
@@ -3830,19 +3830,19 @@ static bool8 SetUpFieldMove_Waterfall(void)
     return FALSE;
 }
 
-static void FieldCallback_Dive(void)
+static void FieldCallback_ShadowDive(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
     FieldEffectStart(FLDEFF_USE_DIVE);
 }
 
-static bool8 SetUpFieldMove_Dive(void)
+static bool8 SetUpFieldMove_ShadowDive(void)
 {
     gFieldEffectArguments[1] = TrySetDiveWarp();
     if (gFieldEffectArguments[1] != 0)
     {
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
-        gPostMenuFieldCallback = FieldCallback_Dive;
+        gPostMenuFieldCallback = FieldCallback_ShadowDive;
         return TRUE;
     }
     return FALSE;

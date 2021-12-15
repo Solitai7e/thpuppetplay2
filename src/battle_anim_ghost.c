@@ -37,8 +37,8 @@ static void AnimCurseNail_Step2(struct Sprite *);
 static void AnimCurseNail_End(struct Sprite *);
 static void AnimGhostStatusSprite(struct Sprite *);
 static void AnimGhostStatusSprite_Step(struct Sprite *);
-static void AnimTask_GrudgeFlames_Step(u8 taskId);
-static void AnimGrudgeFlame(struct Sprite *);
+static void AnimTask_ShadowDanceFlames_Step(u8 taskId);
+static void AnimShadowDanceFlame(struct Sprite *);
 static void AnimMonMoveCircular(struct Sprite *);
 static void AnimMonMoveCircular_Step(struct Sprite *);
 
@@ -180,7 +180,7 @@ const struct SpriteTemplate gNightmareDevilSpriteTemplate =
     .callback = AnimGhostStatusSprite,
 };
 
-static const union AnimCmd sAnim_GrudgeFlame[] =
+static const union AnimCmd sAnim_ShadowDanceFlame[] =
 {
     ANIMCMD_FRAME(0, 4),
     ANIMCMD_FRAME(8, 4),
@@ -189,20 +189,20 @@ static const union AnimCmd sAnim_GrudgeFlame[] =
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd *const sAnims_GrudgeFlame[] =
+static const union AnimCmd *const sAnims_ShadowDanceFlame[] =
 {
-    sAnim_GrudgeFlame,
+    sAnim_ShadowDanceFlame,
 };
 
-const struct SpriteTemplate gGrudgeFlameSpriteTemplate =
+const struct SpriteTemplate gShadowDanceFlameSpriteTemplate =
 {
     .tileTag = ANIM_TAG_PURPLE_FLAME,
     .paletteTag = ANIM_TAG_PURPLE_FLAME,
     .oam = &gOamData_AffineOff_ObjBlend_16x32,
-    .anims = sAnims_GrudgeFlame,
+    .anims = sAnims_ShadowDanceFlame,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimGrudgeFlame,
+    .callback = AnimShadowDanceFlame,
 };
 
 // Unused
@@ -1169,7 +1169,7 @@ static void AnimGhostStatusSprite_Step(struct Sprite *sprite)
     DestroyAnimSprite(sprite);
 }
 
-void AnimTask_GrudgeFlames(u8 taskId)
+void AnimTask_ShadowDanceFlames(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
 
@@ -1186,10 +1186,10 @@ void AnimTask_GrudgeFlames(u8 taskId)
     SetGpuReg(REG_OFFSET_BLDCNT, (BLDCNT_EFFECT_BLEND | BLDCNT_TGT2_ALL));
     SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(0, 0x10));
     task->data[8] = 0;
-    task->func = AnimTask_GrudgeFlames_Step;
+    task->func = AnimTask_ShadowDanceFlames_Step;
 }
 
-static void AnimTask_GrudgeFlames_Step(u8 taskId)
+static void AnimTask_ShadowDanceFlames_Step(u8 taskId)
 {
     u16 i;
     u8 spriteId;
@@ -1200,7 +1200,7 @@ static void AnimTask_GrudgeFlames_Step(u8 taskId)
     case 0:
         for (i = 0; i < 6; i++)
         {
-            spriteId = CreateSprite(&gGrudgeFlameSpriteTemplate, task->data[9], task->data[10], task->data[6]);
+            spriteId = CreateSprite(&gShadowDanceFlameSpriteTemplate, task->data[9], task->data[10], task->data[6]);
             if (spriteId != MAX_SPRITES)
             {
                 gSprites[spriteId].data[0] = taskId;
@@ -1274,7 +1274,7 @@ static void AnimTask_GrudgeFlames_Step(u8 taskId)
     }
 }
 
-static void AnimGrudgeFlame(struct Sprite *sprite)
+static void AnimShadowDanceFlame(struct Sprite *sprite)
 {
     u16 index;
 

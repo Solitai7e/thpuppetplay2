@@ -161,16 +161,16 @@ static const u8 sText_PkmnEvadedAttack[] = _("{B_DEF_NAME_WITH_PREFIX} evaded\nt
 static const u8 sText_PkmnSappedByLeechSeed[] = _("{B_ATK_NAME_WITH_PREFIX}'s health is\nsapped by LEECH SEED!");
 static const u8 sText_PkmnFastAsleep[] = _("{B_ATK_NAME_WITH_PREFIX} is fast\nasleep.");
 static const u8 sText_PkmnWokeUp[] = _("{B_ATK_NAME_WITH_PREFIX} woke up!");
-static const u8 sText_PkmnUproarKeptAwake[] = _("But {B_SCR_ACTIVE_NAME_WITH_PREFIX}'s UPROAR\nkept it awake!");
-static const u8 sText_PkmnWokeUpInUproar[] = _("{B_ATK_NAME_WITH_PREFIX} woke up\nin the UPROAR!");
-static const u8 sText_PkmnCausedUproar[] = _("{B_ATK_NAME_WITH_PREFIX} caused\nan UPROAR!");
-static const u8 sText_PkmnMakingUproar[] = _("{B_ATK_NAME_WITH_PREFIX} is making\nan UPROAR!");
+static const u8 sText_PkmnPerformanceKeptAwake[] = _("But {B_SCR_ACTIVE_NAME_WITH_PREFIX}'s UPROAR\nkept it awake!");
+static const u8 sText_PkmnWokenUpByPerformance[] = _("{B_ATK_NAME_WITH_PREFIX} woke up\nin the UPROAR!");
+static const u8 sText_PkmnBeganPerformance[] = _("{B_ATK_NAME_WITH_PREFIX} caused\nan UPROAR!");
+static const u8 sText_PkmnInPerformance[] = _("{B_ATK_NAME_WITH_PREFIX} is making\nan UPROAR!");
 static const u8 sText_PkmnCalmedDown[] = _("{B_ATK_NAME_WITH_PREFIX} calmed down.");
-static const u8 sText_PkmnCantSleepInUproar[] = _("But {B_DEF_NAME_WITH_PREFIX} can't\nsleep in an UPROAR!");
+static const u8 sText_PkmnCantSleepDuringPerformance[] = _("But {B_DEF_NAME_WITH_PREFIX} can't\nsleep in an UPROAR!");
 static const u8 sText_PkmnStockpiled[] = _("{B_ATK_NAME_WITH_PREFIX} STOCKPILED\n{B_BUFF1}!");
 static const u8 sText_PkmnCantStockpile[] = _("{B_ATK_NAME_WITH_PREFIX} can't\nSTOCKPILE any more!");
-static const u8 sText_PkmnCantSleepInUproar2[] = _("But {B_DEF_NAME_WITH_PREFIX} can't\nsleep in an UPROAR!");
-static const u8 sText_UproarKeptPkmnAwake[] = _("But the UPROAR kept\n{B_DEF_NAME_WITH_PREFIX} awake!");
+static const u8 sText_PkmnCantSleepDuringPerformance2[] = _("But {B_DEF_NAME_WITH_PREFIX} can't\nsleep in an UPROAR!");
+static const u8 sText_PerformanceKeptPkmnAwake[] = _("But the UPROAR kept\n{B_DEF_NAME_WITH_PREFIX} awake!");
 static const u8 sText_PkmnStayedAwakeUsing[] = _("{B_DEF_NAME_WITH_PREFIX} stayed awake\nusing its {B_DEF_ABILITY}!");
 static const u8 sText_PkmnStoringEnergy[] = _("{B_ATK_NAME_WITH_PREFIX} is storing\nenergy!");
 static const u8 sText_PkmnUnleashedEnergy[] = _("{B_ATK_NAME_WITH_PREFIX} unleashed\nenergy!");
@@ -218,7 +218,7 @@ static const u8 sText_PkmnChoseXAsDestiny[] = _("{B_ATK_NAME_WITH_PREFIX} chose\
 static const u8 sText_PkmnAttack[] = _("{B_BUFF1}'s attack!");
 static const u8 sText_PkmnCenterAttention[] = _("{B_ATK_NAME_WITH_PREFIX} became the\ncenter of attention!");
 static const u8 sText_PkmnChargingPower[] = _("{B_ATK_NAME_WITH_PREFIX} began\ncharging power!");
-static const u8 sText_NaturePowerTurnedInto[] = _("NATURE POWER turned into\n{B_CURRENT_MOVE}!");
+static const u8 sText_RockBulletTurnedInto[] = _("ROCK BULLET turned into\n{B_CURRENT_MOVE}!");
 static const u8 sText_PkmnStatusNormal[] = _("{B_ATK_NAME_WITH_PREFIX}'s status\nreturned to normal!");
 static const u8 sText_PkmnSubjectedToTorment[] = _("{B_DEF_NAME_WITH_PREFIX} was subjected\nto TORMENT!");
 static const u8 sText_PkmnTighteningFocus[] = _("{B_ATK_NAME_WITH_PREFIX} is tightening\nits focus!");
@@ -333,7 +333,7 @@ static const u8 sText_DontLeaveBirch[] = _("PROF. BIRCH: Don't leave me like thi
 static const u8 sText_ButNothingHappened[] = _("But nothing happened!");
 static const u8 sText_ButItFailed[] = _("But it failed!");
 static const u8 sText_ItHurtConfusion[] = _("It hurt itself in its\nconfusion!");
-static const u8 sText_MirrorMoveFailed[] = _("The MIRROR MOVE failed!");
+static const u8 sText_FalseSwipeFailed[] = _("The FALSE SWIPE failed!");
 static const u8 sText_StartedToRain[] = _("It started to rain!");
 static const u8 sText_DownpourStarted[] = _("A downpour started!"); // corresponds to DownpourText in pokegold and pokecrystal and is used by Rain Dance in GSC
 static const u8 sText_RainContinues[] = _("Rain continues to fall.");
@@ -348,7 +348,7 @@ static const u8 sText_SunlightFaded[] = _("The sunlight faded.");
 static const u8 sText_StartedHail[] = _("It started to hail!");
 static const u8 sText_HailContinues[] = _("Hail continues to fall.");
 static const u8 sText_HailStopped[] = _("The hail stopped.");
-static const u8 sText_FailedToSpitUp[] = _("But it failed to SPIT UP\na thing!");
+static const u8 sText_FailedToMirrorShot[] = _("But it failed to SPIT UP\na thing!");
 static const u8 sText_FailedToSwallow[] = _("But it failed to SWALLOW\na thing!");
 static const u8 sText_WindBecameHeatWave[] = _("The wind turned into a\nHEAT WAVE!");
 static const u8 sText_StatChangesGone[] = _("All stat changes were\neliminated!");
@@ -613,16 +613,16 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNSAPPEDBYLEECHSEED - 12] = sText_PkmnSappedByLeechSeed,
     [STRINGID_PKMNFASTASLEEP - 12] = sText_PkmnFastAsleep,
     [STRINGID_PKMNWOKEUP - 12] = sText_PkmnWokeUp,
-    [STRINGID_PKMNUPROARKEPTAWAKE - 12] = sText_PkmnUproarKeptAwake,
-    [STRINGID_PKMNWOKEUPINUPROAR - 12] = sText_PkmnWokeUpInUproar,
-    [STRINGID_PKMNCAUSEDUPROAR - 12] = sText_PkmnCausedUproar,
-    [STRINGID_PKMNMAKINGUPROAR - 12] = sText_PkmnMakingUproar,
+    [STRINGID_PKMNPERFORMANCEKEPTAWAKE - 12] = sText_PkmnPerformanceKeptAwake,
+    [STRINGID_PKMNWOKENUPBYPERFORMANCE - 12] = sText_PkmnWokenUpByPerformance,
+    [STRINGID_PKMNBEGANPERFORMANCE - 12] = sText_PkmnBeganPerformance,
+    [STRINGID_PKMNINPERFORMANCE - 12] = sText_PkmnInPerformance,
     [STRINGID_PKMNCALMEDDOWN - 12] = sText_PkmnCalmedDown,
-    [STRINGID_PKMNCANTSLEEPINUPROAR - 12] = sText_PkmnCantSleepInUproar,
+    [STRINGID_PKMNCANTSLEEPDURINGPERFORMANCE - 12] = sText_PkmnCantSleepDuringPerformance,
     [STRINGID_PKMNSTOCKPILED - 12] = sText_PkmnStockpiled,
     [STRINGID_PKMNCANTSTOCKPILE - 12] = sText_PkmnCantStockpile,
-    [STRINGID_PKMNCANTSLEEPINUPROAR2 - 12] = sText_PkmnCantSleepInUproar2,
-    [STRINGID_UPROARKEPTPKMNAWAKE - 12] = sText_UproarKeptPkmnAwake,
+    [STRINGID_PKMNCANTSLEEPDURINGPERFORMANCE2 - 12] = sText_PkmnCantSleepDuringPerformance2,
+    [STRINGID_PERFORMANCEKEPTPKMNAWAKE - 12] = sText_PerformanceKeptPkmnAwake,
     [STRINGID_PKMNSTAYEDAWAKEUSING - 12] = sText_PkmnStayedAwakeUsing,
     [STRINGID_PKMNSTORINGENERGY - 12] = sText_PkmnStoringEnergy,
     [STRINGID_PKMNUNLEASHEDENERGY - 12] = sText_PkmnUnleashedEnergy,
@@ -670,7 +670,7 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNATTACK - 12] = sText_PkmnAttack,
     [STRINGID_PKMNCENTERATTENTION - 12] = sText_PkmnCenterAttention,
     [STRINGID_PKMNCHARGINGPOWER - 12] = sText_PkmnChargingPower,
-    [STRINGID_NATUREPOWERTURNEDINTO - 12] = sText_NaturePowerTurnedInto,
+    [STRINGID_ROCKBULLETTURNEDINTO - 12] = sText_RockBulletTurnedInto,
     [STRINGID_PKMNSTATUSNORMAL - 12] = sText_PkmnStatusNormal,
     [STRINGID_PKMNHASNOMOVESLEFT - 12] = sText_PkmnHasNoMovesLeft,
     [STRINGID_PKMNSUBJECTEDTOTORMENT - 12] = sText_PkmnSubjectedToTorment,
@@ -735,7 +735,7 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_BUTNOTHINGHAPPENED - 12] = sText_ButNothingHappened,
     [STRINGID_BUTITFAILED - 12] = sText_ButItFailed,
     [STRINGID_ITHURTCONFUSION - 12] = sText_ItHurtConfusion,
-    [STRINGID_MIRRORMOVEFAILED - 12] = sText_MirrorMoveFailed,
+    [STRINGID_FALSESWIPEFAILED - 12] = sText_FalseSwipeFailed,
     [STRINGID_STARTEDTORAIN - 12] = sText_StartedToRain,
     [STRINGID_DOWNPOURSTARTED - 12] = sText_DownpourStarted,
     [STRINGID_RAINCONTINUES - 12] = sText_RainContinues,
@@ -750,7 +750,7 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_STARTEDHAIL - 12] = sText_StartedHail,
     [STRINGID_HAILCONTINUES - 12] = sText_HailContinues,
     [STRINGID_HAILSTOPPED - 12] = sText_HailStopped,
-    [STRINGID_FAILEDTOSPITUP - 12] = sText_FailedToSpitUp,
+    [STRINGID_FAILEDTOMIRRORSHOT - 12] = sText_FailedToMirrorShot,
     [STRINGID_FAILEDTOSWALLOW - 12] = sText_FailedToSwallow,
     [STRINGID_WINDBECAMEHEATWAVE - 12] = sText_WindBecameHeatWave,
     [STRINGID_STATCHANGESGONE - 12] = sText_StatChangesGone,
@@ -972,10 +972,10 @@ const u16 gRestUsedStringIds[] =
     [B_MSG_REST_STATUSED] = STRINGID_PKMNSLEPTHEALTHY
 };
 
-const u16 gUproarOverTurnStringIds[] =
+const u16 gPerformanceOverTurnStringIds[] =
 {
-    [B_MSG_UPROAR_CONTINUES] = STRINGID_PKMNMAKINGUPROAR,
-    [B_MSG_UPROAR_ENDS]      = STRINGID_PKMNCALMEDDOWN
+    [B_MSG_PERFORMANCE_CONTINUES] = STRINGID_PKMNINPERFORMANCE,
+    [B_MSG_PERFORMANCE_ENDS]      = STRINGID_PKMNCALMEDDOWN
 };
 
 const u16 gStockpileUsedStringIds[] =
@@ -987,7 +987,7 @@ const u16 gStockpileUsedStringIds[] =
 const u16 gWokeUpStringIds[] =
 {
     [B_MSG_WOKE_UP]        = STRINGID_PKMNWOKEUP,
-    [B_MSG_WOKE_UP_UPROAR] = STRINGID_PKMNWOKEUPINUPROAR
+    [B_MSG_WOKE_UP_PERFORMANCE] = STRINGID_PKMNWOKENUPBYPERFORMANCE
 };
 
 const u16 gSwallowFailStringIds[] =
@@ -996,10 +996,10 @@ const u16 gSwallowFailStringIds[] =
     [B_MSG_SWALLOW_FULL_HP] = STRINGID_PKMNHPFULL
 };
 
-const u16 gUproarAwakeStringIds[] =
+const u16 gPerformanceAwakeStringIds[] =
 {
-    [B_MSG_CANT_SLEEP_UPROAR]  = STRINGID_PKMNCANTSLEEPINUPROAR2,
-    [B_MSG_UPROAR_KEPT_AWAKE]  = STRINGID_UPROARKEPTPKMNAWAKE,
+    [B_MSG_CANT_SLEEP_PERFORMANCE]  = STRINGID_PKMNCANTSLEEPDURINGPERFORMANCE2,
+    [B_MSG_PERFORMANCE_KEPT_AWAKE]  = STRINGID_PERFORMANCEKEPTPKMNAWAKE,
     [B_MSG_STAYED_AWAKE_USING] = STRINGID_PKMNSTAYEDAWAKEUSING,
 };
 
@@ -1024,13 +1024,13 @@ const u16 gStatDownStringIds[] =
 // Index read from sTWOTURN_STRINGID
 const u16 gFirstTurnOfTwoStringIds[] =
 {
-    [B_MSG_TURN1_RAZOR_WIND] = STRINGID_PKMNWHIPPEDWHIRLWIND,
+    [B_MSG_TURN1_GUST] = STRINGID_PKMNWHIPPEDWHIRLWIND,
     [B_MSG_TURN1_SOLAR_BEAM] = STRINGID_PKMNTOOKSUNLIGHT,
     [B_MSG_TURN1_SKULL_BASH] = STRINGID_PKMNLOWEREDHEAD,
     [B_MSG_TURN1_SKY_ATTACK] = STRINGID_PKMNISGLOWING,
     [B_MSG_TURN1_FLY]        = STRINGID_PKMNFLEWHIGH,
     [B_MSG_TURN1_DIG]        = STRINGID_PKMNDUGHOLE,
-    [B_MSG_TURN1_DIVE]       = STRINGID_PKMNHIDUNDERWATER,
+    [B_MSG_TURN1_SHADOW_DIVE]       = STRINGID_PKMNHIDUNDERWATER,
     [B_MSG_TURN1_BOUNCE]     = STRINGID_PKMNSPRANGUP,
 };
 
@@ -1040,7 +1040,7 @@ const u16 gWrappedStringIds[] =
     STRINGID_PKMNSQUEEZEDBYBIND,   // MOVE_BIND
     STRINGID_PKMNWRAPPEDBY,        // MOVE_WRAP
     STRINGID_PKMNTRAPPEDINVORTEX,  // MOVE_FIRE_SPIN
-    STRINGID_PKMNCLAMPED,          // MOVE_CLAMP
+    STRINGID_PKMNCLAMPED,          // MOVE_MANA_SHIELD
     STRINGID_PKMNTRAPPEDINVORTEX,  // MOVE_WHIRLPOOL
     STRINGID_PKMNTRAPPEDBYSANDTOMB // MOVE_SAND_TOMB
 };
@@ -1141,7 +1141,7 @@ const u16 gPartyStatusHealStringIds[] =
 const u16 gFutureMoveUsedStringIds[] =
 {
     [B_MSG_PSYCHO_CUT] = STRINGID_PKMNFORESAWATTACK,
-    [B_MSG_DOOM_DESIRE]  = STRINGID_PKMNCHOSEXASDESTINY
+    [B_MSG_DECISION]  = STRINGID_PKMNCHOSEXASDESTINY
 };
 
 const u16 gBallEscapeStringIds[] =
@@ -1258,7 +1258,7 @@ const u16 gTrappingMoves[] =
     MOVE_BIND,
     MOVE_WRAP,
     MOVE_FIRE_SPIN,
-    MOVE_CLAMP,
+    MOVE_MANA_SHIELD,
     MOVE_WHIRLPOOL,
     MOVE_SAND_TOMB,
     0xFFFF
@@ -1436,39 +1436,39 @@ static const u16 sGrammarMoveUsedTable[] =
 {
     MOVE_SWORDS_DANCE, MOVE_STRENGTH, MOVE_GROWTH,
     MOVE_HARDEN, MOVE_MINIMIZE, MOVE_SMOKESCREEN,
-    MOVE_WITHDRAW, MOVE_DEFENSE_CURL, MOVE_EGG_BOMB,
-    MOVE_SMOG, MOVE_BONE_CLUB, MOVE_FLASH, MOVE_SPLASH,
-    MOVE_ACID_ARMOR, MOVE_BONEMERANG, MOVE_REST, MOVE_SHARPEN,
-    MOVE_SUBSTITUTE, MOVE_MIND_READER, MOVE_SNORE,
-    MOVE_PROTECT, MOVE_SPIKES, MOVE_ENDURE, MOVE_ROLLOUT,
-    MOVE_SWAGGER, MOVE_SLEEP_TALK, MOVE_HIDDEN_POWER,
-    MOVE_PSYCH_UP, MOVE_EXTREME_SPEED, MOVE_FOLLOW_ME,
-    MOVE_TRICK, MOVE_ASSIST, MOVE_INGRAIN, MOVE_KNOCK_OFF,
-    MOVE_CAMOUFLAGE, MOVE_ASTONISH, MOVE_ODOR_SLEUTH,
-    MOVE_GRASS_WHISTLE, MOVE_SHEER_COLD, MOVE_MUDDY_WATER,
+    MOVE_WITHDRAW, MOVE_DEFENSE_CURL, MOVE_MIND_BOMB,
+    MOVE_TOXIC_GAS, MOVE_BONE_CLUB, MOVE_FLASH, MOVE_SPLASH,
+    MOVE_DISPERSE, MOVE_CHECKMAID, MOVE_REST, MOVE_SHARPEN,
+    MOVE_SUBSTITUTE, MOVE_HEARTS_EYE, MOVE_SNORE,
+    MOVE_PROTECT, MOVE_SPIKES, MOVE_ENDURE, MOVE_TREMORS,
+    MOVE_SWAGGER, MOVE_SLEEP_TALK, MOVE_CHARGE_BEAM,
+    MOVE_PSYCH_UP, MOVE_EXTREME_SPEED, MOVE_DISTURBANCE,
+    MOVE_TRICK, MOVE_ASSIST, MOVE_INGRAIN, MOVE_BRAVER,
+    MOVE_CAMOUFLAGE, MOVE_ASTONISH, MOVE_DOUBLE_TEAM,
+    MOVE_NATURE_SOUND, MOVE_SHEER_COLD, MOVE_MUDDY_WATER,
     MOVE_IRON_DEFENSE, MOVE_BOUNCE, 0,
 
-    MOVE_TELEPORT, MOVE_RECOVER, MOVE_BIDE, MOVE_AMNESIA,
+    MOVE_TELEPORT, MOVE_RECOVER, MOVE_GUARD, MOVE_AMNESIA,
     MOVE_FLAIL, MOVE_TAUNT, MOVE_BULK_UP, 0,
 
-    MOVE_MEDITATE, MOVE_AGILITY, MOVE_MIMIC, MOVE_DOUBLE_TEAM,
+    MOVE_ZEN_HEADBUTT, MOVE_AGILITY, MOVE_MIMIC, MOVE_SHADOW_HIT,
     MOVE_BARRAGE, MOVE_TRANSFORM, MOVE_STRUGGLE, MOVE_SCARY_FACE,
     MOVE_CHARGE, MOVE_WISH, MOVE_BRICK_BREAK, MOVE_YAWN,
-    MOVE_FEATHER_DANCE, MOVE_TEETER_DANCE, MOVE_MUD_SPORT,
-    MOVE_FAKE_TEARS, MOVE_WATER_SPORT, MOVE_CALM_MIND, 0,
+    MOVE_ROOST, MOVE_TEETER_DANCE, MOVE_MUD_SLAP,
+    MOVE_FAKE_TEARS, MOVE_SPLASHING, MOVE_CALM_MIND, 0,
 
-    MOVE_POUND, MOVE_SCRATCH, MOVE_VICE_GRIP,
-    MOVE_WING_ATTACK, MOVE_FLY, MOVE_BIND, MOVE_SLAM,
-    MOVE_HORN_ATTACK, MOVE_WRAP, MOVE_THRASH, MOVE_TAIL_WHIP,
+    MOVE_POUND, MOVE_SCRATCH, MOVE_NIGHT_SLASH,
+    MOVE_GALE, MOVE_FLY, MOVE_BIND, MOVE_POWER_WHIP,
+    MOVE_KNIFE_THROW, MOVE_WRAP, MOVE_THRASH, MOVE_TAIL_WHIP,
     MOVE_LEER, MOVE_BITE, MOVE_GROWL, MOVE_ROAR,
-    MOVE_SING, MOVE_PECK, MOVE_ABSORB, MOVE_STRING_SHOT,
+    MOVE_SING, MOVE_PECK, MOVE_ABSORB, MOVE_WIRE_WEB,
     MOVE_EARTHQUAKE, MOVE_FISSURE, MOVE_DIG, MOVE_TOXIC,
-    MOVE_SCREECH, MOVE_METRONOME, MOVE_LICK, MOVE_CLAMP,
-    MOVE_CONSTRICT, MOVE_POISON_GAS, MOVE_BUBBLE,
+    MOVE_SCREECH, MOVE_METRONOME, MOVE_LICK, MOVE_MANA_SHIELD,
+    MOVE_CONSTRICT, MOVE_OMINOUS_WIND, MOVE_BUBBLE,
     MOVE_SLASH, MOVE_SPIDER_WEB, MOVE_NIGHTMARE, MOVE_CURSE,
-    MOVE_FORESIGHT, MOVE_CHARM, MOVE_ATTRACT, MOVE_ROCK_SMASH,
-    MOVE_UPROAR, MOVE_SPIT_UP, MOVE_SWALLOW, MOVE_TORMENT,
-    MOVE_FLATTER, MOVE_ROLE_PLAY, MOVE_ENDEAVOR, MOVE_TICKLE,
+    MOVE_FORESIGHT, MOVE_SMILE, MOVE_ATTRACT, MOVE_ROCK_SMASH,
+    MOVE_PERFORMANCE, MOVE_MIRROR_SHOT, MOVE_MYSTIC_WATER, MOVE_TORMENT,
+    MOVE_LUCKY_CHANT, MOVE_RECOLLECTION, MOVE_ENDEAVOR, MOVE_TICKLE,
     MOVE_COVET, 0
 };
 

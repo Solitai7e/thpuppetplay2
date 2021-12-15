@@ -30,10 +30,10 @@ BattleFrontier_Lounge7_EventScript_ChooseLeftTutorMove::
 	case 0, BattleFrontier_Lounge7_EventScript_Softboiled
 	case 1, BattleFrontier_Lounge7_EventScript_SeismicToss
 	case 2, BattleFrontier_Lounge7_EventScript_DreamEater
-	case 3, BattleFrontier_Lounge7_EventScript_MegaPunch
-	case 4, BattleFrontier_Lounge7_EventScript_MegaKick
+	case 3, BattleFrontier_Lounge7_EventScript_DrainPunch
+	case 4, BattleFrontier_Lounge7_EventScript_GigaImpact
 	case 5, BattleFrontier_Lounge7_EventScript_BodySlam
-	case 6, BattleFrontier_Lounge7_EventScript_RockSlide
+	case 6, BattleFrontier_Lounge7_EventScript_RockWrecker
 	case 7, BattleFrontier_Lounge7_EventScript_Counter
 	case 8, BattleFrontier_Lounge7_EventScript_ThunderWave
 	case 9, BattleFrontier_Lounge7_EventScript_SwordsDance
@@ -54,10 +54,10 @@ BattleFrontier_Lounge7_EventScript_ChooseNewLeftTutorMove::
 	case 0, BattleFrontier_Lounge7_EventScript_Softboiled
 	case 1, BattleFrontier_Lounge7_EventScript_SeismicToss
 	case 2, BattleFrontier_Lounge7_EventScript_DreamEater
-	case 3, BattleFrontier_Lounge7_EventScript_MegaPunch
-	case 4, BattleFrontier_Lounge7_EventScript_MegaKick
+	case 3, BattleFrontier_Lounge7_EventScript_DrainPunch
+	case 4, BattleFrontier_Lounge7_EventScript_GigaImpact
 	case 5, BattleFrontier_Lounge7_EventScript_BodySlam
-	case 6, BattleFrontier_Lounge7_EventScript_RockSlide
+	case 6, BattleFrontier_Lounge7_EventScript_RockWrecker
 	case 7, BattleFrontier_Lounge7_EventScript_Counter
 	case 8, BattleFrontier_Lounge7_EventScript_ThunderWave
 	case 9, BattleFrontier_Lounge7_EventScript_SwordsDance
@@ -80,12 +80,12 @@ BattleFrontier_Lounge7_EventScript_DreamEater::
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
-BattleFrontier_Lounge7_EventScript_MegaPunch::
+BattleFrontier_Lounge7_EventScript_DrainPunch::
 	setvar VAR_0x8008, 24
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
-BattleFrontier_Lounge7_EventScript_MegaKick::
+BattleFrontier_Lounge7_EventScript_GigaImpact::
 	setvar VAR_0x8008, 48
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
@@ -95,7 +95,7 @@ BattleFrontier_Lounge7_EventScript_BodySlam::
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
-BattleFrontier_Lounge7_EventScript_RockSlide::
+BattleFrontier_Lounge7_EventScript_RockWrecker::
 	setvar VAR_0x8008, 48
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
@@ -143,7 +143,7 @@ BattleFrontier_Lounge7_EventScript_ChooseRightTutorMove::
 	switch VAR_RESULT
 	case 0, BattleFrontier_Lounge7_EventScript_DefenseCurl
 	case 1, BattleFrontier_Lounge7_EventScript_Snore
-	case 2, BattleFrontier_Lounge7_EventScript_MudSlap
+	case 2, BattleFrontier_Lounge7_EventScript_MudShot
 	case 3, BattleFrontier_Lounge7_EventScript_Swift
 	case 4, BattleFrontier_Lounge7_EventScript_IcyWind
 	case 5, BattleFrontier_Lounge7_EventScript_Endure
@@ -167,7 +167,7 @@ BattleFrontier_Lounge7_EventScript_ChooseNewRightTutorMove::
 	switch VAR_RESULT
 	case 0, BattleFrontier_Lounge7_EventScript_DefenseCurl
 	case 1, BattleFrontier_Lounge7_EventScript_Snore
-	case 2, BattleFrontier_Lounge7_EventScript_MudSlap
+	case 2, BattleFrontier_Lounge7_EventScript_MudShot
 	case 3, BattleFrontier_Lounge7_EventScript_Swift
 	case 4, BattleFrontier_Lounge7_EventScript_IcyWind
 	case 5, BattleFrontier_Lounge7_EventScript_Endure
@@ -189,7 +189,7 @@ BattleFrontier_Lounge7_EventScript_Snore::
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
 
-BattleFrontier_Lounge7_EventScript_MudSlap::
+BattleFrontier_Lounge7_EventScript_MudShot::
 	setvar VAR_0x8008, 24
 	goto BattleFrontier_Lounge7_EventScript_ConfirmMoveSelection
 	end
@@ -393,12 +393,12 @@ BattleFrontier_Lounge7_Text_DreamEaterDesc::
 	.string "damage inflicted\n"
 	.string "on a sleeping foe.$"
 
-BattleFrontier_Lounge7_Text_MegaPunchDesc::
+BattleFrontier_Lounge7_Text_DrainPunchDesc::
 	.string "A strong punch\n"
 	.string "thrown with\n"
 	.string "incredible power.$"
 
-BattleFrontier_Lounge7_Text_MegaKickDesc::
+BattleFrontier_Lounge7_Text_GigaImpactDesc::
 	.string "An extremely\n"
 	.string "powerful kick with\n"
 	.string "intense force.$"
@@ -408,7 +408,7 @@ BattleFrontier_Lounge7_Text_BodySlamDesc::
 	.string "that may cause\n"
 	.string "paralysis.$"
 
-BattleFrontier_Lounge7_Text_RockSlideDesc::
+BattleFrontier_Lounge7_Text_RockWreckerDesc::
 	.string "Large boulders\n"
 	.string "are hurled. May\n"
 	.string "cause flinching.$"
@@ -438,7 +438,7 @@ BattleFrontier_Lounge7_Text_SnoreDesc::
 	.string "that can be used\n"
 	.string "only while asleep.$"
 
-BattleFrontier_Lounge7_Text_MudSlapDesc::
+BattleFrontier_Lounge7_Text_MudShotDesc::
 	.string "Hurls mud in the\n"
 	.string "foe's face to re-\n"
 	.string "duce its accuracy.$"

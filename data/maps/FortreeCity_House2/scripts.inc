@@ -1,11 +1,11 @@
 FortreeCity_House2_MapScripts::
 	.byte 0
 
-FortreeCity_House2_EventScript_HiddenPowerGiver::
+FortreeCity_House2_EventScript_ChargeBeamGiver::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_TM10, FortreeCity_House2_EventScript_ExplainHiddenPower
-	call_if_unset FLAG_MET_HIDDEN_POWER_GIVER, FortreeCity_House2_EventScript_Greeting
+	goto_if_set FLAG_RECEIVED_TM10, FortreeCity_House2_EventScript_ExplainChargeBeam
+	call_if_unset FLAG_MET_CHARGE_BEAM_GIVER, FortreeCity_House2_EventScript_Greeting
 	msgbox FortreeCity_House2_Text_CoinInWhichHand, MSGBOX_DEFAULT
 	multichoice 21, 8, MULTI_RIGHTLEFT, TRUE
 	switch VAR_RESULT
@@ -18,21 +18,21 @@ FortreeCity_House2_EventScript_HiddenPowerGiver::
 	multichoice 21, 8, MULTI_RIGHTLEFT, TRUE
 	switch VAR_RESULT
 	case 0, FortreeCity_House2_EventScript_WrongGuess
-	msgbox FortreeCity_House2_Text_YourHiddenPowerHasAwoken, MSGBOX_DEFAULT
+	msgbox FortreeCity_House2_Text_YourChargeBeamHasAwoken, MSGBOX_DEFAULT
 	giveitem ITEM_TM10
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_TM10
-	msgbox FortreeCity_House2_Text_ExplainHiddenPower, MSGBOX_DEFAULT
+	msgbox FortreeCity_House2_Text_ExplainChargeBeam, MSGBOX_DEFAULT
 	release
 	end
 
 FortreeCity_House2_EventScript_Greeting::
-	msgbox FortreeCity_House2_Text_HiddenPowersArousedByNature, MSGBOX_DEFAULT
-	setflag FLAG_MET_HIDDEN_POWER_GIVER
+	msgbox FortreeCity_House2_Text_ChargeBeamsArousedByNature, MSGBOX_DEFAULT
+	setflag FLAG_MET_CHARGE_BEAM_GIVER
 	return
 
-FortreeCity_House2_EventScript_ExplainHiddenPower::
-	msgbox FortreeCity_House2_Text_ExplainHiddenPower, MSGBOX_DEFAULT
+FortreeCity_House2_EventScript_ExplainChargeBeam::
+	msgbox FortreeCity_House2_Text_ExplainChargeBeam, MSGBOX_DEFAULT
 	release
 	end
 
@@ -41,7 +41,7 @@ FortreeCity_House2_EventScript_WrongGuess::
 	release
 	end
 
-FortreeCity_House2_Text_HiddenPowersArousedByNature:
+FortreeCity_House2_Text_ChargeBeamsArousedByNature:
 	.string "People… POKéMON…\p"
 	.string "Their hidden powers are aroused by\n"
 	.string "living in natural environments…$"
@@ -65,14 +65,14 @@ FortreeCity_House2_Text_CorrectTryAgainWhichHand2:
 	.string "In which hand have I palmed the coin?\n"
 	.string "The right or left?$"
 
-FortreeCity_House2_Text_YourHiddenPowerHasAwoken:
+FortreeCity_House2_Text_YourChargeBeamHasAwoken:
 	.string "Oh! Splendid!\n"
 	.string "Your hidden power has awoken!\p"
 	.string "Here, take this and awaken the hidden\n"
 	.string "power of your POKéMON.$"
 
-FortreeCity_House2_Text_ExplainHiddenPower:
-	.string "HIDDEN POWER is a move that changes\n"
+FortreeCity_House2_Text_ExplainChargeBeam:
+	.string "CHARGE BEAM is a move that changes\n"
 	.string "with the POKéMON.$"
 
 FortreeCity_House2_Text_YouGuessedWrong:

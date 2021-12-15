@@ -892,7 +892,7 @@ struct ExternalEventData
 // In Emerald, Kasen cannot normally be received, but hacking the distribution discs allows Emerald to receive Kasen and set the flag
 struct ExternalEventFlags
 {
-    u8 usedBoxRS:1; // Set by Pokémon Box: Ruby & Sapphire; denotes whether this save has connected to it and triggered the free False Swipe DIku Egg giveaway.
+    u8 usedBoxRS:1; // Set by Pokémon Box: Ruby & Sapphire; denotes whether this save has connected to it and triggered the free Drawn Line DIku Egg giveaway.
     u8 boxRSEggsUnlocked:2; // Set by Pokémon Box: Ruby & Sapphire; denotes the number of Eggs unlocked from deposits; 1 for ExtremeSpeed HLunasa (at 100 deposited), 2 for Pay Day ASunnyMilk (at 500 deposited), 3 for Surf CLuize (at 1499 deposited)
     u8 padding:5;
     u8 unknownFlag1;

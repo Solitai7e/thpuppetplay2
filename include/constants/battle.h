@@ -112,11 +112,11 @@
 #define STATUS2_CONFUSION             (1 << 0 | 1 << 1 | 1 << 2)
 #define STATUS2_CONFUSION_TURN(num)   ((num) << 0)
 #define STATUS2_FLINCHED              (1 << 3)
-#define STATUS2_UPROAR                (1 << 4 | 1 << 5 | 1 << 6)
-#define STATUS2_UPROAR_TURN(num)      ((num) << 4)
+#define STATUS2_PERFORMANCE                (1 << 4 | 1 << 5 | 1 << 6)
+#define STATUS2_PERFORMANCE_TURN(num)      ((num) << 4)
 #define STATUS2_UNUSED                (1 << 7)
-#define STATUS2_BIDE                  (1 << 8 | 1 << 9)
-#define STATUS2_BIDE_TURN(num)        (((num) << 8) & STATUS2_BIDE)
+#define STATUS2_GUARD                  (1 << 8 | 1 << 9)
+#define STATUS2_GUARD_TURN(num)        (((num) << 8) & STATUS2_GUARD)
 #define STATUS2_LOCK_CONFUSE          (1 << 10 | 1 << 11) // e.g. Thrash
 #define STATUS2_LOCK_CONFUSE_TURN(num)((num) << 10)
 #define STATUS2_MULTIPLETURNS         (1 << 12)
@@ -153,8 +153,8 @@
 #define STATUS3_IMPRISONED_OTHERS       (1 << 13)
 #define STATUS3_GRUDGE                  (1 << 14)
 #define STATUS3_CANT_SCORE_A_CRIT       (1 << 15)
-#define STATUS3_MUDSPORT                (1 << 16)
-#define STATUS3_WATERSPORT              (1 << 17)
+#define STATUS3_MUDSLAP                (1 << 16)
+#define STATUS3_SPLASHING              (1 << 17)
 #define STATUS3_UNDERWATER              (1 << 18)
 #define STATUS3_INTIMIDATE_POKES        (1 << 19)
 #define STATUS3_TRACE                   (1 << 20)
@@ -235,7 +235,7 @@
 #define MOVE_EFFECT_CONFUSION           7
 #define MOVE_EFFECT_FLINCH              8
 #define MOVE_EFFECT_TRI_ATTACK          9
-#define MOVE_EFFECT_UPROAR              10
+#define MOVE_EFFECT_PERFORMANCE              10
 #define MOVE_EFFECT_PAYDAY              11
 #define MOVE_EFFECT_CHARGING            12
 #define MOVE_EFFECT_WRAP                13
