@@ -1044,7 +1044,7 @@ const u16 gEggMoves[] = {
     egg_moves(THATATE,
               MOVE_THRASH,
               MOVE_WHIRLPOOL,
-              MOVE_SPARK),
+              MOVE_DISCHARGE),
 
     egg_moves(AKISISTERS,
               MOVE_SPLASH,

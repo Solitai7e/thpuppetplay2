@@ -2302,7 +2302,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Kirk[] = {
     .iv = 100,
     .lvl = 17,
     .species = SPECIES_ASHIKIEIKI,
-    .moves = {MOVE_QUICK_ATTACK, MOVE_THUNDER_WAVE, MOVE_SPARK, MOVE_LEER}
+    .moves = {MOVE_QUICK_ATTACK, MOVE_THUNDER_WAVE, MOVE_DISCHARGE, MOVE_LEER}
     },
     {
     .iv = 100,
@@ -3172,7 +3172,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Walter3[] = {
     .iv = 20,
     .lvl = 36,
     .species = SPECIES_TTOYOHIME,
-    .moves = {MOVE_QUICK_ATTACK, MOVE_SPARK, MOVE_DOUBLE_TEAM, MOVE_ROAR}
+    .moves = {MOVE_QUICK_ATTACK, MOVE_DISCHARGE, MOVE_DOUBLE_TEAM, MOVE_ROAR}
     }
 };
 
@@ -3187,7 +3187,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Walter4[] = {
     .iv = 30,
     .lvl = 39,
     .species = SPECIES_TTOYOHIME,
-    .moves = {MOVE_QUICK_ATTACK, MOVE_SPARK, MOVE_DOUBLE_TEAM, MOVE_NONE}
+    .moves = {MOVE_QUICK_ATTACK, MOVE_DISCHARGE, MOVE_DOUBLE_TEAM, MOVE_NONE}
     }
 };
 
@@ -3208,7 +3208,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Walter5[] = {
     .iv = 40,
     .lvl = 41,
     .species = SPECIES_TTOYOHIME,
-    .moves = {MOVE_QUICK_ATTACK, MOVE_SPARK, MOVE_DOUBLE_TEAM, MOVE_ROAR}
+    .moves = {MOVE_QUICK_ATTACK, MOVE_DISCHARGE, MOVE_DOUBLE_TEAM, MOVE_ROAR}
     }
 };
 
@@ -3418,7 +3418,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     .lvl = 20,
     .species = SPECIES_CMERLIN,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_TREMORS, MOVE_SPARK, MOVE_SELF_DESTRUCT, MOVE_SHOCK_WAVE}
+    .moves = {MOVE_TREMORS, MOVE_DISCHARGE, MOVE_SELF_DESTRUCT, MOVE_SHOCK_WAVE}
     },
     {
     .iv = 200,
@@ -6338,13 +6338,13 @@ static const struct TrainerMonNoItemCustomMoves sParty_AmyAndLiv5[] = {
     .iv = 30,
     .lvl = 33,
     .species = SPECIES_TNAZRIN,
-    .moves = {MOVE_SPARK, MOVE_CHARGE, MOVE_FAKE_TEARS, MOVE_HELPING_HAND}
+    .moves = {MOVE_DISCHARGE, MOVE_CHARGE, MOVE_FAKE_TEARS, MOVE_HELPING_HAND}
     },
     {
     .iv = 30,
     .lvl = 33,
     .species = SPECIES_HNAZRIN,
-    .moves = {MOVE_SPARK, MOVE_CHARGE, MOVE_SMILE, MOVE_HELPING_HAND}
+    .moves = {MOVE_DISCHARGE, MOVE_CHARGE, MOVE_SMILE, MOVE_HELPING_HAND}
     }
 };
 

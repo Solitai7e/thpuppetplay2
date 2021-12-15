@@ -909,14 +909,14 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_ASHIKIEIKI_1] = {
         .species = SPECIES_ASHIKIEIKI,
-        .moves = {MOVE_BITE, MOVE_SPARK, MOVE_ROAR, MOVE_FLASH},
+        .moves = {MOVE_BITE, MOVE_DISCHARGE, MOVE_ROAR, MOVE_FLASH},
         .itemTableId = BATTLE_FRONTIER_ITEM_MAGNET,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_DEFENSE | F_EV_SPREAD_ATTACK,
         .nature = NATURE_MODEST
     },
     [SLATEPORT_TENT_MON_CMERLIN] = {
         .species = SPECIES_CMERLIN,
-        .moves = {MOVE_SPARK, MOVE_TREMORS, MOVE_CHARGE, MOVE_SCREECH},
+        .moves = {MOVE_DISCHARGE, MOVE_TREMORS, MOVE_CHARGE, MOVE_SCREECH},
         .itemTableId = BATTLE_FRONTIER_ITEM_NONE,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_SP_ATTACK,
         .nature = NATURE_MILD
@@ -986,7 +986,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_EIRIN] = {
         .species = SPECIES_EIRIN,
-        .moves = {MOVE_BINDING_VOICE, MOVE_JAMMING, MOVE_THUNDER_WAVE, MOVE_SPARK},
+        .moves = {MOVE_BINDING_VOICE, MOVE_JAMMING, MOVE_THUNDER_WAVE, MOVE_DISCHARGE},
         .itemTableId = BATTLE_FRONTIER_ITEM_QUICK_CLAW,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_SPEED,
         .nature = NATURE_SERIOUS
@@ -1203,21 +1203,21 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_TNAZRIN_1] = {
         .species = SPECIES_TNAZRIN,
-        .moves = {MOVE_SPARK, MOVE_ENCORE, MOVE_THUNDER_WAVE, MOVE_GROWL},
+        .moves = {MOVE_DISCHARGE, MOVE_ENCORE, MOVE_THUNDER_WAVE, MOVE_GROWL},
         .itemTableId = BATTLE_FRONTIER_ITEM_LIECHI_BERRY,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK,
         .nature = NATURE_LONELY
     },
     [SLATEPORT_TENT_MON_TNAZRIN_2] = {
         .species = SPECIES_TNAZRIN,
-        .moves = {MOVE_SPARK, MOVE_FAKE_TEARS, MOVE_SUBSTITUTE, MOVE_QUICK_ATTACK},
+        .moves = {MOVE_DISCHARGE, MOVE_FAKE_TEARS, MOVE_SUBSTITUTE, MOVE_QUICK_ATTACK},
         .itemTableId = BATTLE_FRONTIER_ITEM_PECHA_BERRY,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_MILD
     },
     [SLATEPORT_TENT_MON_ASHIKIEIKI_2] = {
         .species = SPECIES_ASHIKIEIKI,
-        .moves = {MOVE_SPARK, MOVE_CHARGE, MOVE_ROAR, MOVE_THUNDER_WAVE},
+        .moves = {MOVE_DISCHARGE, MOVE_CHARGE, MOVE_ROAR, MOVE_THUNDER_WAVE},
         .itemTableId = BATTLE_FRONTIER_ITEM_APICOT_BERRY,
         .evSpread = F_EV_SPREAD_SPEED,
         .nature = NATURE_TIMID
@@ -1857,7 +1857,7 @@ const struct FacilityMon gVerdanturfBattleTentMons[NUM_VERDANTURF_TENT_MONS] =
     },
     [VERDANTURF_TENT_MON_THATATE] = {
         .species = SPECIES_THATATE,
-        .moves = {MOVE_MUD_SHOT, MOVE_WATER_GUN, MOVE_RAIN_DANCE, MOVE_SPARK},
+        .moves = {MOVE_MUD_SHOT, MOVE_WATER_GUN, MOVE_RAIN_DANCE, MOVE_DISCHARGE},
         .itemTableId = BATTLE_FRONTIER_ITEM_ASPEAR_BERRY,
         .evSpread = F_EV_SPREAD_SPEED,
         .nature = NATURE_HASTY
@@ -2032,7 +2032,7 @@ const struct FacilityMon gVerdanturfBattleTentMons[NUM_VERDANTURF_TENT_MONS] =
     },
     [VERDANTURF_TENT_MON_CMERLIN] = {
         .species = SPECIES_CMERLIN,
-        .moves = {MOVE_PROTECT, MOVE_SELF_DESTRUCT, MOVE_SPARK, MOVE_SCREECH},
+        .moves = {MOVE_PROTECT, MOVE_SELF_DESTRUCT, MOVE_DISCHARGE, MOVE_SCREECH},
         .itemTableId = BATTLE_FRONTIER_ITEM_SCOPE_LENS,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK,
         .nature = NATURE_BASHFUL
@@ -2703,7 +2703,7 @@ const struct FacilityMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_TNAZRIN] = {
         .species = SPECIES_TNAZRIN,
-        .moves = {MOVE_SPARK, MOVE_GROWL, MOVE_QUICK_ATTACK, MOVE_FAKE_TEARS},
+        .moves = {MOVE_DISCHARGE, MOVE_GROWL, MOVE_QUICK_ATTACK, MOVE_FAKE_TEARS},
         .itemTableId = BATTLE_FRONTIER_ITEM_MENTAL_HERB,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_SPEED,
         .nature = NATURE_MODEST
@@ -2822,14 +2822,14 @@ const struct FacilityMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_EIRIN] = {
         .species = SPECIES_EIRIN,
-        .moves = {MOVE_THUNDER_WAVE, MOVE_JAMMING, MOVE_ENDURE, MOVE_SPARK},
+        .moves = {MOVE_THUNDER_WAVE, MOVE_JAMMING, MOVE_ENDURE, MOVE_DISCHARGE},
         .itemTableId = BATTLE_FRONTIER_ITEM_MAGNET,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_QUIET
     },
     [FALLARBOR_TENT_MON_CMERLIN] = {
         .species = SPECIES_CMERLIN,
-        .moves = {MOVE_CHARGE, MOVE_SPARK, MOVE_SCREECH, MOVE_SONIC_BOOM},
+        .moves = {MOVE_CHARGE, MOVE_DISCHARGE, MOVE_SCREECH, MOVE_SONIC_BOOM},
         .itemTableId = BATTLE_FRONTIER_ITEM_ASPEAR_BERRY,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_SPEED,
         .nature = NATURE_MODEST
@@ -2899,7 +2899,7 @@ const struct FacilityMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_THATATE] = {
         .species = SPECIES_THATATE,
-        .moves = {MOVE_SPARK, MOVE_WATER_GUN, MOVE_EARTHQUAKE, MOVE_SPLASHING},
+        .moves = {MOVE_DISCHARGE, MOVE_WATER_GUN, MOVE_EARTHQUAKE, MOVE_SPLASHING},
         .itemTableId = BATTLE_FRONTIER_ITEM_LIECHI_BERRY,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_MODEST

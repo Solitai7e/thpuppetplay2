@@ -2926,7 +2926,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_SNATCH_AFFECTED,
     },
 
-    [MOVE_SPARK] =
+    [MOVE_DISCHARGE] =
     {
         .effect = EFFECT_PARALYZE_HIT,
         .split = 0,

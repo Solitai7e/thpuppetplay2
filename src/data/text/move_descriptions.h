@@ -833,7 +833,7 @@ static const u8 sMilkDrinkDescription[] = _(
     "Recovers up to half the\n"
     "user's maximum HP.");
 
-static const u8 sSparkDescription[] = _(
+static const u8 sDischargeDescription[] = _(
     "An electrified tackle that\n"
     "may paralyze the foe.");
 
@@ -1628,7 +1628,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_DRAWN_LINE - 1] = sDrawnLineDescription,
     [MOVE_SWAGGER - 1] = sSwaggerDescription,
     [MOVE_MILK_DRINK - 1] = sMilkDrinkDescription,
-    [MOVE_SPARK - 1] = sSparkDescription,
+    [MOVE_DISCHARGE - 1] = sDischargeDescription,
     [MOVE_FURY_CUTTER - 1] = sFuryCutterDescription,
     [MOVE_STEEL_WING - 1] = sSteelWingDescription,
     [MOVE_CHARMING_LOOK - 1] = sCharmingLookDescription,

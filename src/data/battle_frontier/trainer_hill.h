@@ -233,7 +233,7 @@ static const struct TrHillFloor sDataTagJPDefault_Floors[] = {
                     [0] = {
                         .species = SPECIES_ASHIKIEIKI,
                         .heldItem = ITEM_CHERI_BERRY,
-                        .moves = { MOVE_SPARK, MOVE_THUNDER_WAVE, MOVE_QUICK_ATTACK, MOVE_ROAR },
+                        .moves = { MOVE_DISCHARGE, MOVE_THUNDER_WAVE, MOVE_QUICK_ATTACK, MOVE_ROAR },
                         .level = 0,
                         .ppBonuses = 0x0,
                         .hpEV = 120,
@@ -938,7 +938,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_HNAZRIN,
                         .heldItem = ITEM_FOCUS_BAND,
-                        .moves = {MOVE_THUNDER_WAVE, MOVE_SMILE, MOVE_ENCORE, MOVE_SPARK},
+                        .moves = {MOVE_THUNDER_WAVE, MOVE_SMILE, MOVE_ENCORE, MOVE_DISCHARGE},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 252,
@@ -2534,7 +2534,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_EIRIN,
                                             .heldItem = ITEM_MAGNET,
-                                            .moves = {MOVE_THUNDER, MOVE_ENERGY_BALL, MOVE_SPARK, MOVE_THUNDER_SHOCK},
+                                            .moves = {MOVE_THUNDER, MOVE_ENERGY_BALL, MOVE_DISCHARGE, MOVE_THUNDER_SHOCK},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 6,
@@ -3100,7 +3100,7 @@ static const struct TrHillFloor sDataTagUnique_Floors[] = {
                                         {
                                             .species = SPECIES_SARA,
                                             .heldItem = ITEM_PERSIM_BERRY,
-                                            .moves = {MOVE_SPARK, MOVE_WATER_PULSE, MOVE_CONFUSE_RAY, MOVE_RAIN_DANCE},
+                                            .moves = {MOVE_DISCHARGE, MOVE_WATER_PULSE, MOVE_CONFUSE_RAY, MOVE_RAIN_DANCE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .speedEV = 255,

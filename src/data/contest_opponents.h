@@ -620,7 +620,7 @@ const struct ContestPokemon gContestOpponents[] =
         .aiPool_Tough = FALSE,
         .moves =
         {
-            MOVE_SPARK,
+            MOVE_DISCHARGE,
             MOVE_THUNDER_WAVE,
             MOVE_THUNDER,
             MOVE_ROAR

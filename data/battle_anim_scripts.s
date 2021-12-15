@@ -225,7 +225,7 @@ gBattleAnims_Moves::
 	.4byte Move_DRAWN_LINE
 	.4byte Move_SWAGGER
 	.4byte Move_MILK_DRINK
-	.4byte Move_SPARK
+	.4byte Move_DISCHARGE
 	.4byte Move_FURY_CUTTER
 	.4byte Move_STEEL_WING
 	.4byte Move_CHARMING_LOOK
@@ -1941,7 +1941,7 @@ OutrageFlames:
 	createsprite gOutrageFlameSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, -1280, -768, 3
 	return
 
-Move_SPARK:
+Move_DISCHARGE:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_SPARK_2
 	delay 0
