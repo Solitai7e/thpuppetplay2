@@ -3,4 +3,4 @@
 const u8 gEnemyMonElevation[NUM_SPECIES] =
 {
     [SPECIES_CWAKASAGI] = 0,
-};//PUPPETPY
+};

@@ -922,7 +922,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(KASEN),
     SPECIES_TO_NATIONAL(GOMASEKI),
     SPECIES_TO_NATIONAL(CWAKASAGI),
-};//2PUPPETPY
+};
 
  // Assigns all Hoenn Dex Indexes to a National Dex Index
 static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
@@ -1771,7 +1771,7 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_KASEN - 1]     = ANIM_SWING_CONVEX,
     [SPECIES_GOMASEKI - 1]      = ANIM_H_PIVOT,
     [SPECIES_CWAKASAGI - 1]    = ANIM_H_SLIDE_WOBBLE,
-};//PUPPETPY
+};
 
 static const u8 sMonAnimationDelayTable[NUM_SPECIES - 1] =
 {
@@ -1836,7 +1836,7 @@ static const u8 sMonAnimationDelayTable[NUM_SPECIES - 1] =
 #define PP_UP_SHIFTS_INV(val) (u8)~(val), (u8)~((val) << 2), (u8)~((val) << 4), (u8)~((val) << 6)
 
 // PP Up bonuses are stored for a Pokémon as a single byte.
-// There are 2 bits (a value 0-3) for each move slot that
+// There are 2 bits (a value 0-3) for each move slot that 
 // represent how many PP Ups have been applied.
 // The following arrays take a move slot id and return:
 // gPPUpGetMask - A mask to get the number of PP Ups applied to that move slot
@@ -2991,7 +2991,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     spAttack = attacker->spAttack;
     spDefense = defender->spDefense;
 
-    // Get attacker hold item info
+    // Get attacker hold item info    
     if (attacker->item == ITEM_ENIGMA_BERRY)
     {
         attackerHoldEffect = gEnigmaBerries[battlerIdAtk].holdEffect;
@@ -3077,7 +3077,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     // Self-destruct / Explosion cut defense in half
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
         defense /= 2;
-
+	
 	if (WEATHER_HAS_EFFECT2)
         {
             // Rain weakens Fire, boosts Water
@@ -5036,7 +5036,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                     case 4: // ITEM5_PP_MAX
                         dataUnsigned = (GetMonData(mon, MON_DATA_PP_BONUSES, NULL) & gPPUpGetMask[moveIndex]) >> (moveIndex * 2);
                         temp2 = CalculatePPWithBonus(GetMonData(mon, MON_DATA_MOVE1 + moveIndex, NULL), GetMonData(mon, MON_DATA_PP_BONUSES, NULL), moveIndex);
-
+                        
                         // Check if 3 PP Ups have been applied already, and that the move has a total PP of at least 5 (excludes Sketch)
                         if (dataUnsigned < 3 && temp2 >= 5)
                         {
@@ -6636,7 +6636,7 @@ static bool8 ShouldSkipFriendshipChange(void)
 // Only the 'default' mode (MON_SPR_GFX_MODE_NORMAL) is used, which is set
 // up to allocate 4 sprites using the battler sprite templates (gBattlerSpriteTemplates).
 // MON_SPR_GFX_MODE_BATTLE is identical but never used.
-// MON_SPR_GFX_MODE_FULL_PARTY is set up to allocate 7 sprites (party + trainer?)
+// MON_SPR_GFX_MODE_FULL_PARTY is set up to allocate 7 sprites (party + trainer?) 
 // using a generic 64x64 template, and is also never used.
 
 // Between the unnecessarily large sizes below, a mistake allocating the spritePointers
@@ -6682,12 +6682,12 @@ struct MonSpritesGfxManager *CreateMonSpritesGfxManager(void)
     u32 i;
     u8 failureFlags;
     struct MonSpritesGfxManager *gfx;
-
+ 
     failureFlags = 0;
     gfx = AllocZeroed(sizeof(*gfx));
     if (gfx == NULL)
         return NULL;
-
+ 
     gfx->numSprites = MAX_BATTLERS_COUNT;
     gfx->numFrames = GFX_MANAGER_NUM_FRAMES;
     gfx->spriteBuffer = AllocZeroed(GFX_MANAGER_SPR_SIZE * gfx->numSprites);
@@ -6701,7 +6701,7 @@ struct MonSpritesGfxManager *CreateMonSpritesGfxManager(void)
         for (i = 0; i < gfx->numSprites; i++)
             gfx->spritePointers[i] = gfx->spriteBuffer + (GFX_MANAGER_SPR_SIZE * i);
     }
-
+ 
     // Set up sprite structs
     gfx->templates = AllocZeroed(sizeof(struct SpriteTemplate) * gfx->numSprites);
     gfx->frameImages = AllocZeroed(sizeof(struct SpriteFrameImage) * gfx->numSprites * gfx->numFrames);
@@ -6715,7 +6715,7 @@ struct MonSpritesGfxManager *CreateMonSpritesGfxManager(void)
             gfx->frameImages[i].size = MON_PIC_SIZE;
         InitMonSpritesGfx_Battle(gfx);
     }
-
+ 
     // If either of the allocations failed free their respective members
     if (failureFlags & ALLOC_FAIL_STRUCT)
     {
@@ -6727,7 +6727,7 @@ struct MonSpritesGfxManager *CreateMonSpritesGfxManager(void)
         TRY_FREE_AND_SET_NULL(gfx->spritePointers);
         TRY_FREE_AND_SET_NULL(gfx->spriteBuffer);
     }
-
+ 
     if (failureFlags)
     {
         // Clear, something failed to allocate
@@ -6739,17 +6739,17 @@ struct MonSpritesGfxManager *CreateMonSpritesGfxManager(void)
         gfx->active = TRUE;
         sMonSpritesGfxManager = gfx;
     }
-
+ 
     return sMonSpritesGfxManager;
 }
 
 void DestroyMonSpritesGfxManager(void)
 {
     struct MonSpritesGfxManager *gfx = sMonSpritesGfxManager;
-
+ 
     if (gfx == NULL)
         return;
-
+ 
     if (gfx->active)
     {
         TRY_FREE_AND_SET_NULL(gfx->frameImages);
@@ -6766,12 +6766,12 @@ void DestroyMonSpritesGfxManager(void)
 u8 *MonSpritesGfxManager_GetSpritePtr(u8 spriteNum)
 {
     struct MonSpritesGfxManager *gfx = sMonSpritesGfxManager;
-
+ 
     if (gfx->active)
     {
         if (spriteNum >= gfx->numSprites)
             spriteNum = 0;
-
+ 
         return gfx->spritePointers[spriteNum];
     }
     return NULL;

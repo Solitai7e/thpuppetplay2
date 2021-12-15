@@ -49,7 +49,8 @@
 #define EC_GROUP_MOVE_1           18
 #define EC_GROUP_MOVE_2           19
 #define EC_GROUP_TRENDY_SAYING    20
-#define EC_NUM_GROUPS             21
+#define EC_GROUP_POKEMON_NATIONAL 21
+#define EC_NUM_GROUPS             22
 
 // TRAINER
 #define EC_WORD_I_CHOOSE_YOU  (EC_GROUP_TRAINER << 9) | 0x0
@@ -1112,6 +1113,7 @@
 #define EC_MASK_INDEX 0x1FF
 
 #define EC_POKEMON(mon) ((EC_GROUP_POKEMON << 9) | SPECIES_##mon)
+#define EC_POKEMON_NATIONAL(mon) ((EC_GROUP_POKEMON_NATIONAL << 9) | SPECIES_##mon)
 #define EC_MOVE(move) ((EC_GROUP_MOVE_1 << 9) | MOVE_##move)
 #define EC_MOVE2(move) ((EC_GROUP_MOVE_2 << 9) | MOVE_##move)
 

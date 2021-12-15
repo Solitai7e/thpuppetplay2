@@ -12438,6 +12438,5 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .sourceGame = SOURCE_HRTP,
         .noFlip = FALSE,
-    },
-
-};//PUPPETPY
+    }
+};

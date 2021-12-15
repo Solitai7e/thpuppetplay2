@@ -2438,7 +2438,7 @@ extern const u8 gMonIcon_UnownExclamationMark[];
 extern const u32 gMonStillFrontPic_UnownQuestionMark[];
 extern const u32 gMonBackPic_UnownQuestionMark[];
 extern const u8 gMonIcon_UnownQuestionMark[];
-//PUPPETPY
+
 extern const u32 gMonBackPic_CircledQuestionMark[];
 extern const u32 gMonPalette_CircledQuestionMark[];
 extern const u32 gMonShinyPalette_CircledQuestionMark[];
