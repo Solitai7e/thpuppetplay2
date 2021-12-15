@@ -1938,7 +1938,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_EXPLOSION,
             MOVE_PSYCHO_CUT,
-            MOVE_PSYCHIC,
+            MOVE_MANA_BURST,
             MOVE_PSYSHOT
         },
         .cool = 50,
@@ -2471,7 +2471,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_NIGHT_SHADE,
             MOVE_PSYCHO_CUT,
             MOVE_CONFUSE_RAY,
-            MOVE_PSYCHIC
+            MOVE_MANA_BURST
         },
         .cool = 35,
         .beauty = 35,

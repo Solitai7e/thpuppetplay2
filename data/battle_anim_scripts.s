@@ -110,7 +110,7 @@ gBattleAnims_Moves::
 	.4byte Move_DIG
 	.4byte Move_TOXIC
 	.4byte Move_PSYSHOT
-	.4byte Move_PSYCHIC
+	.4byte Move_MANA_BURST
 	.4byte Move_HYPNOSIS
 	.4byte Move_MEDITATE
 	.4byte Move_AGILITY
@@ -4723,7 +4723,7 @@ Move_PSYSHOT:
 	call UnsetPsychicBackground
 	end
 
-Move_PSYCHIC:
+Move_MANA_BURST:
 	monbg ANIM_DEF_PARTNER
 	call SetPsychicBackground
 	setalpha 8, 8

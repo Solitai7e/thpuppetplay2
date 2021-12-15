@@ -95,7 +95,7 @@
 #define MOVE_DIG 91
 #define MOVE_TOXIC 92
 #define MOVE_PSYSHOT 93
-#define MOVE_PSYCHIC 94
+#define MOVE_MANA_BURST 94
 #define MOVE_HYPNOSIS 95
 #define MOVE_MEDITATE 96
 #define MOVE_AGILITY 97

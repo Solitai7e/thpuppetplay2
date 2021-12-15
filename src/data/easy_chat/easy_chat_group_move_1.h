@@ -85,7 +85,7 @@ const u16 gEasyChatGroup_Move1[] = {
     MOVE_POWDER_SNOW,
     MOVE_PSYBEAM,
     MOVE_PSYCH_UP,
-    MOVE_PSYCHIC,
+    MOVE_MANA_BURST,
     MOVE_PSYCHO_BOOST,
     MOVE_PSYWAVE,
     MOVE_PURSUIT,

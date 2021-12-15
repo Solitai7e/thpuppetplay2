@@ -373,7 +373,7 @@ static const u8 sPsyshotDescription[] = _(
     "A psychic attack that may\n"
     "cause confusion.");
 
-static const u8 sPsychicDescription[] = _(
+static const u8 sManaBurstDescription[] = _(
     "A powerful psychic attack\n"
     "that may lower SP. DEF.");
 
@@ -1513,7 +1513,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_DIG - 1] = sDigDescription,
     [MOVE_TOXIC - 1] = sToxicDescription,
     [MOVE_PSYSHOT - 1] = sPsyshotDescription,
-    [MOVE_PSYCHIC - 1] = sPsychicDescription,
+    [MOVE_MANA_BURST - 1] = sManaBurstDescription,
     [MOVE_HYPNOSIS - 1] = sHypnosisDescription,
     [MOVE_MEDITATE - 1] = sMeditateDescription,
     [MOVE_AGILITY - 1] = sAgilityDescription,

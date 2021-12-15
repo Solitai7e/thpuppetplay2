@@ -159,7 +159,7 @@ const u16 gEggMoves[] = {
               MOVE_FORESIGHT,
               MOVE_LIGHT_SCREEN,
               MOVE_PSYCHO_CUT,
-              MOVE_PSYCHIC,
+              MOVE_MANA_BURST,
               MOVE_CROSS_CHOP,
               MOVE_REFRESH),
 
