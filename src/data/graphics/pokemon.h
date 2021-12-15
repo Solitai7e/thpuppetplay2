@@ -2696,6 +2696,7 @@ const u32 gMonBackPic_Gomaseki[] = INCBIN_U32("graphics/pokemon/gomaseki/back.4b
 const u32 gMonShinyPalette_Gomaseki[] = INCBIN_U32("graphics/pokemon/gomaseki/shiny.gbapal.lz");
 const u8 gMonIcon_Gomaseki[] = INCBIN_U8("graphics/pokemon/gomaseki/icon.4bpp");
 
+//PUPPETPY
 // Probably the leftover space from the other Gomaseki forms
 static const u8 sEmpty[0x6800] = {0};
 

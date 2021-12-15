@@ -4643,4 +4643,5 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-};
+
+};//PUPPETPY

@@ -388,6 +388,7 @@ gCryTable::
 	cry Cry_Kasen
 	cry Cry_Gomaseki
 	cry Cry_CWakasagi
+//PUPPETPY
 
 	.align 2
 gCryTable_Reverse::
@@ -779,3 +780,4 @@ gCryTable_Reverse::
 	cry_reverse Cry_Kasen
 	cry_reverse Cry_Gomaseki
 	cry_reverse Cry_CWakasagi
+//2PUPPETPY

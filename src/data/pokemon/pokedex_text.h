@@ -1,8 +1,8 @@
 const u8 gDummyPokedexText[] = _(
-    "This is a newly discovered POKéMON.\n"
-    "It is currently under investigation.\n"
-    "No detailed information is available\n"
-    "at this time.");
+    "A never-before seen puppet.\n"
+    "It's just made its way into the world,\n"
+    "so it doesn't look like there's\n"
+    "any info on it right now.");
 
 const u8 gCSanaePokedexText[] = _(
     "CSANAE can be seen napping in bright\n"
@@ -2319,3 +2319,5 @@ const u8 gGomasekiPokedexText[] = _(
     "extraterrestrial virus exposed to a laser\n"
     "beam. Its body is configured for superior\n"
     "agility and speed.");
+
+//PUPPETPY
