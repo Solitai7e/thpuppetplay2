@@ -1089,7 +1089,7 @@ static const union AnimCmd *const sAnims_Whip[] =
     sAnim_Whip_Flipped,
 };
 
-const struct SpriteTemplate gSlamHitSpriteTemplate =
+const struct SpriteTemplate gPowerWhipHitSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SLAM_HIT,
     .paletteTag = ANIM_TAG_SLAM_HIT,

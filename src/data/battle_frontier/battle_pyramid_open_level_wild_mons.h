@@ -16,7 +16,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round1[] =
         .species = SPECIES_CCIRNO,
         .lvl = 13,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_THUNDER_WAVE, MOVE_THUNDERBOLT, MOVE_SLAM, MOVE_NONE}
+        .moves = {MOVE_THUNDER_WAVE, MOVE_THUNDERBOLT, MOVE_POWER_WHIP, MOVE_NONE}
     },
     {
         .species = SPECIES_SHIKIEIKI,
@@ -952,7 +952,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round19[] =
         .species = SPECIES_CIRNO,
         .lvl = 8,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_THUNDER, MOVE_THUNDER_WAVE, MOVE_SLAM, MOVE_NONE}
+        .moves = {MOVE_THUNDER, MOVE_THUNDER_WAVE, MOVE_POWER_WHIP, MOVE_NONE}
     },
     {
         .species = SPECIES_NUE,

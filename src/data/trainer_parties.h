@@ -10632,7 +10632,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson3[] = {
     .lvl = 39,
     .species = SPECIES_CCIRNO,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_THUNDER, MOVE_SLAM, MOVE_RAIN_DANCE, MOVE_SHOCK_WAVE}
+    .moves = {MOVE_THUNDER, MOVE_POWER_WHIP, MOVE_RAIN_DANCE, MOVE_SHOCK_WAVE}
     },
     {
     .iv = 255,
@@ -10670,7 +10670,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson4[] = {
     .lvl = 44,
     .species = SPECIES_CIRNO,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_THUNDER, MOVE_SLAM, MOVE_RAIN_DANCE, MOVE_PROTECT}
+    .moves = {MOVE_THUNDER, MOVE_POWER_WHIP, MOVE_RAIN_DANCE, MOVE_PROTECT}
     },
     {
     .iv = 255,
@@ -10715,7 +10715,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson5[] = {
     .lvl = 51,
     .species = SPECIES_CIRNO,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_THUNDER, MOVE_SLAM, MOVE_RAIN_DANCE, MOVE_PROTECT}
+    .moves = {MOVE_THUNDER, MOVE_POWER_WHIP, MOVE_RAIN_DANCE, MOVE_PROTECT}
     },
     {
     .iv = 255,

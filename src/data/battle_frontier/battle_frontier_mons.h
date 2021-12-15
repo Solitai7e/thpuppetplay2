@@ -1150,7 +1150,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_CRIN_1] = {
         .species = SPECIES_CRIN,
-        .moves = {MOVE_SLAM, MOVE_BRICK_BREAK, MOVE_LICK, MOVE_MUD_SHOT},
+        .moves = {MOVE_POWER_WHIP, MOVE_BRICK_BREAK, MOVE_LICK, MOVE_MUD_SHOT},
         .itemTableId = BATTLE_FRONTIER_ITEM_SITRUS_BERRY,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_QUIRKY
@@ -1395,7 +1395,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_CYUMEMI_1] = {
         .species = SPECIES_CYUMEMI,
-        .moves = {MOVE_SLAM, MOVE_PROTECT, MOVE_HELPING_HAND, MOVE_DISTURBANCE},
+        .moves = {MOVE_POWER_WHIP, MOVE_PROTECT, MOVE_HELPING_HAND, MOVE_DISTURBANCE},
         .itemTableId = BATTLE_FRONTIER_ITEM_LIECHI_BERRY,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE,
         .nature = NATURE_SERIOUS
@@ -1514,7 +1514,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_CSUNNYMILK_1] = {
         .species = SPECIES_CSUNNYMILK,
-        .moves = {MOVE_MEGA_DRAIN, MOVE_SLAM, MOVE_TOXIC, MOVE_BIND},
+        .moves = {MOVE_MEGA_DRAIN, MOVE_POWER_WHIP, MOVE_TOXIC, MOVE_BIND},
         .itemTableId = BATTLE_FRONTIER_ITEM_LAX_INCENSE,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_HP,
         .nature = NATURE_HARDY

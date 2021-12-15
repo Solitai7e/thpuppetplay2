@@ -162,7 +162,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_NIGHT_SLASH},
     },
 
-    [MOVE_SLAM] =
+    [MOVE_POWER_WHIP] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
         .contestCategory = CONTEST_CATEGORY_TOUGH,

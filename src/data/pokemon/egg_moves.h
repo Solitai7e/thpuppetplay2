@@ -61,7 +61,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(CREMILIA,
               MOVE_PURSUIT,
-              MOVE_SLAM,
+              MOVE_POWER_WHIP,
               MOVE_SPITE,
               MOVE_BEAT_UP,
               MOVE_CROSS_POISON),
@@ -270,7 +270,7 @@ const u16 gEggMoves[] = {
               MOVE_PERISH_SONG,
               MOVE_DISABLE,
               MOVE_SCULPTURE,
-              MOVE_SLAM,
+              MOVE_POWER_WHIP,
               MOVE_ENCORE,
               MOVE_FAKE_OUT,
               MOVE_ICE_SHARD),
@@ -320,7 +320,7 @@ const u16 gEggMoves[] = {
               MOVE_HAZE,
               MOVE_AMNESIA,
               MOVE_FLAIL,
-              MOVE_SLAM,
+              MOVE_POWER_WHIP,
               MOVE_BRAVER,
               MOVE_SWORDS_DANCE),
 
@@ -457,7 +457,7 @@ const u16 gEggMoves[] = {
     egg_moves(CMARISA,
               MOVE_BUBBLE_BEAM,
               MOVE_AURORA_BEAM,
-              MOVE_SLAM,
+              MOVE_POWER_WHIP,
               MOVE_JAMMING,
               MOVE_HAZE,
               MOVE_ROCK_WRECKER,
@@ -645,7 +645,7 @@ const u16 gEggMoves[] = {
               MOVE_PURSUIT,
               MOVE_AGILITY,
               MOVE_SPITE,
-              MOVE_SLAM,
+              MOVE_POWER_WHIP,
               MOVE_KNOCK_OFF,
               MOVE_BEAT_UP),
 
@@ -814,7 +814,7 @@ const u16 gEggMoves[] = {
               MOVE_TWISTER,
               MOVE_HYDRO_PUMP,
               MOVE_HAZE,
-              MOVE_SLAM,
+              MOVE_POWER_WHIP,
               MOVE_MUD_SLAP,
               MOVE_ROCK_WRECKER),
 
@@ -1126,7 +1126,7 @@ const u16 gEggMoves[] = {
               MOVE_ENCORE,
               MOVE_SING,
               MOVE_REFRESH,
-              MOVE_SLAM,
+              MOVE_POWER_WHIP,
               MOVE_TICKLE),
 
     egg_moves(ALILYBLACK,
@@ -1197,7 +1197,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(APATCHOULI,
               MOVE_HEADBUTT,
-              MOVE_SLAM,
+              MOVE_POWER_WHIP,
               MOVE_GUST,
               MOVE_LEECH_SEED,
               MOVE_ROCK_BULLET),

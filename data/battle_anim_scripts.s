@@ -37,7 +37,7 @@ gBattleAnims_Moves::
 	.4byte Move_WHIRLWIND
 	.4byte Move_FLY
 	.4byte Move_BIND
-	.4byte Move_SLAM
+	.4byte Move_POWER_WHIP
 	.4byte Move_VINE_WHIP
 	.4byte Move_STOMP
 	.4byte Move_DOUBLE_KICK
@@ -1485,7 +1485,7 @@ SelfDestructExplode:
 	delay 6
 	return
 
-Move_SLAM:
+Move_POWER_WHIP:
 	loadspritegfx ANIM_TAG_SLAM_HIT
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
@@ -1493,7 +1493,7 @@ Move_SLAM:
 	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_ATTACKER
 	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 0, 20, 3, 0, 4
 	delay 1
-	createsprite gSlamHitSpriteTemplate, ANIM_ATTACKER, 2, 0, 0
+	createsprite gPowerWhipHitSpriteTemplate, ANIM_ATTACKER, 2, 0, 0
 	delay 3
 	playsewithpan SE_M_GIGA_IMPACT2, SOUND_PAN_TARGET
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, ANIM_TARGET, 1
@@ -9644,7 +9644,7 @@ Move_SECRET_POWER:
 	jumpargeq 0, BATTLE_TERRAIN_MOUNTAIN,   Move_ROCK_SLIDE
 	jumpargeq 0, BATTLE_TERRAIN_CAVE,       Move_BITE
 	jumpargeq 0, BATTLE_TERRAIN_BUILDING,   Move_STRENGTH
-	goto Move_SLAM
+	goto Move_POWER_WHIP
 
 Move_TWISTER:
 	loadspritegfx ANIM_TAG_LEAF

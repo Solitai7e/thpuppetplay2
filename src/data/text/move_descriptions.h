@@ -81,7 +81,7 @@ static const u8 sBindDescription[] = _(
     "Binds and squeezes the foe\n"
     "for 2 to 5 turns.");
 
-static const u8 sSlamDescription[] = _(
+static const u8 sPowerWhipDescription[] = _(
     "Slams the foe with a long\n"
     "tail, vine, etc.");
 
@@ -1440,7 +1440,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_WHIRLWIND - 1] = sWhirlwindDescription,
     [MOVE_FLY - 1] = sFlyDescription,
     [MOVE_BIND - 1] = sBindDescription,
-    [MOVE_SLAM - 1] = sSlamDescription,
+    [MOVE_POWER_WHIP - 1] = sPowerWhipDescription,
     [MOVE_VINE_WHIP - 1] = sVineWhipDescription,
     [MOVE_STOMP - 1] = sStompDescription,
     [MOVE_DOUBLE_KICK - 1] = sDoubleKickDescription,

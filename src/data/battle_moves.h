@@ -294,7 +294,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 
-    [MOVE_SLAM] =
+    [MOVE_POWER_WHIP] =
     {
         .effect = EFFECT_HIT,
         .split = 0,
