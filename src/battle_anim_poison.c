@@ -5,11 +5,11 @@
 
 static void AnimSludgeProjectile(struct Sprite *);
 static void AnimSludgeProjectile_Step(struct Sprite *);
-static void AnimAcidPoisonBubble(struct Sprite *);
-static void AnimAcidPoisonBubble_Step(struct Sprite *);
+static void AnimPoisonTearsBubble(struct Sprite *);
+static void AnimPoisonTearsBubble_Step(struct Sprite *);
 static void AnimGunkShotHitParticle(struct Sprite *);
 static void AnimGunkShotHitParticle_Step(struct Sprite *);
-static void AnimAcidPoisonDroplet(struct Sprite *);
+static void AnimPoisonTearsDroplet(struct Sprite *);
 static void AnimBubbleEffect(struct Sprite *);
 static void AnimBubbleEffect_Step(struct Sprite *);
 
@@ -44,7 +44,7 @@ static const union AnimCmd sAnim_PoisonProjectile[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_AcidPoisonDroplet[] =
+static const union AnimCmd sAnim_PoisonTearsDroplet[] =
 {
     ANIMCMD_FRAME(4, 1),
     ANIMCMD_END,
@@ -61,9 +61,9 @@ static const union AnimCmd *const sAnims_PoisonProjectile[] =
     sAnim_PoisonProjectile,
 };
 
-static const union AnimCmd *const sAnims_AcidPoisonDroplet[] =
+static const union AnimCmd *const sAnims_PoisonTearsDroplet[] =
 {
-    sAnim_AcidPoisonDroplet,
+    sAnim_PoisonTearsDroplet,
 };
 
 static const union AnimCmd *const sAnims_GunkShotHit[] =
@@ -106,7 +106,7 @@ const struct SpriteTemplate gSludgeProjectileSpriteTemplate =
     .callback = AnimSludgeProjectile,
 };
 
-const struct SpriteTemplate gAcidPoisonBubbleSpriteTemplate =
+const struct SpriteTemplate gPoisonTearsBubbleSpriteTemplate =
 {
     .tileTag = ANIM_TAG_POISON_BUBBLE,
     .paletteTag = ANIM_TAG_POISON_BUBBLE,
@@ -114,7 +114,7 @@ const struct SpriteTemplate gAcidPoisonBubbleSpriteTemplate =
     .anims = sAnims_PoisonProjectile,
     .images = NULL,
     .affineAnims = sAffineAnims_PoisonProjectile,
-    .callback = AnimAcidPoisonBubble,
+    .callback = AnimPoisonTearsBubble,
 };
 
 const struct SpriteTemplate gGunkShotHitParticleSpriteTemplate =
@@ -128,7 +128,7 @@ const struct SpriteTemplate gGunkShotHitParticleSpriteTemplate =
     .callback = AnimGunkShotHitParticle,
 };
 
-static const union AffineAnimCmd sAffineAnim_AcidPoisonDroplet[] =
+static const union AffineAnimCmd sAffineAnim_PoisonTearsDroplet[] =
 {
     AFFINEANIMCMD_FRAME(0xFFF0, 0x10, 0, 6),
     AFFINEANIMCMD_FRAME(0x10, 0xFFF0, 0, 6),
@@ -137,18 +137,18 @@ static const union AffineAnimCmd sAffineAnim_AcidPoisonDroplet[] =
 
 const union AffineAnimCmd *const gAffineAnims_Droplet[] =
 {
-    sAffineAnim_AcidPoisonDroplet,
+    sAffineAnim_PoisonTearsDroplet,
 };
 
-const struct SpriteTemplate gAcidPoisonDropletSpriteTemplate =
+const struct SpriteTemplate gPoisonTearsDropletSpriteTemplate =
 {
     .tileTag = ANIM_TAG_POISON_BUBBLE,
     .paletteTag = ANIM_TAG_POISON_BUBBLE,
     .oam = &gOamData_AffineDouble_ObjNormal_16x16,
-    .anims = sAnims_AcidPoisonDroplet,
+    .anims = sAnims_PoisonTearsDroplet,
     .images = NULL,
     .affineAnims = gAffineAnims_Droplet,
-    .callback = AnimAcidPoisonDroplet,
+    .callback = AnimPoisonTearsDroplet,
 };
 
 static const union AffineAnimCmd sAffineAnim_Bubble[] =
@@ -208,7 +208,7 @@ static void AnimSludgeProjectile_Step(struct Sprite *sprite)
         DestroyAnimSprite(sprite);
 }
 
-static void AnimAcidPoisonBubble(struct Sprite *sprite)
+static void AnimPoisonTearsBubble(struct Sprite *sprite)
 {
     s16 l1, l2;
     if (!gBattleAnimArgs[3])
@@ -227,10 +227,10 @@ static void AnimAcidPoisonBubble(struct Sprite *sprite)
 
     InitAnimArcTranslation(sprite);
 
-    sprite->callback = AnimAcidPoisonBubble_Step;
+    sprite->callback = AnimPoisonTearsBubble_Step;
 }
 
-static void AnimAcidPoisonBubble_Step(struct Sprite *sprite)
+static void AnimPoisonTearsBubble_Step(struct Sprite *sprite)
 {
     if (TranslateAnimHorizontalArc(sprite))
         DestroyAnimSprite(sprite);
@@ -263,7 +263,7 @@ static void AnimGunkShotHitParticle_Step(struct Sprite *sprite)
         DestroyAnimSprite(sprite);
 }
 
-static void AnimAcidPoisonDroplet(struct Sprite *sprite)
+static void AnimPoisonTearsDroplet(struct Sprite *sprite)
 {
     SetAverageBattlerPositions(gBattleAnimTarget, TRUE, &sprite->x, &sprite->y);
 

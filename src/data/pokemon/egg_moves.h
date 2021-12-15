@@ -1113,7 +1113,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(ANUE,
               MOVE_NATURE_SOUND,
-              MOVE_ACID,
+              MOVE_POISON_TEARS,
               MOVE_TEETER_DANCE,
               MOVE_DYNAMIC_PUNCH,
               MOVE_COUNTER),

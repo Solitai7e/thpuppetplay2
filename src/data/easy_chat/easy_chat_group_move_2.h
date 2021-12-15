@@ -1,7 +1,7 @@
 #include "constants/moves.h"
 
 const u16 gEasyChatGroup_Move2[] = {
-    MOVE_ACID,
+    MOVE_POISON_TEARS,
     MOVE_DISPERSE,
     MOVE_BLADE_FLASH,
     MOVE_AMNESIA,

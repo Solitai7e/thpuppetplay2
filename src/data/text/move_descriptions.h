@@ -201,7 +201,7 @@ static const u8 sDisableDescription[] = _(
     "Psychically disables one of\n"
     "the foe's moves.");
 
-static const u8 sAcidDescription[] = _(
+static const u8 sPoisonTearsDescription[] = _(
     "Sprays a hide-melting acid.\n"
     "May lower DEFENSE.");
 
@@ -1470,7 +1470,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_JAMMING - 1] = sJammingDescription,
     [MOVE_SONIC_BOOM - 1] = sSonicBoomDescription,
     [MOVE_DISABLE - 1] = sDisableDescription,
-    [MOVE_ACID - 1] = sAcidDescription,
+    [MOVE_POISON_TEARS - 1] = sPoisonTearsDescription,
     [MOVE_EMBER - 1] = sEmberDescription,
     [MOVE_FLAMETHROWER - 1] = sFlamethrowerDescription,
     [MOVE_MIST - 1] = sMistDescription,
