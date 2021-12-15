@@ -163,7 +163,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_SMARISA] = {
         .species = SPECIES_SMARISA,
-        .moves = {MOVE_UPROAR, MOVE_SWAGGER, MOVE_BODY_SLAM, MOVE_SMELLING_SALT},
+        .moves = {MOVE_PERFORMANCE, MOVE_SWAGGER, MOVE_BODY_SLAM, MOVE_SMELLING_SALT},
         .itemTableId = BATTLE_FRONTIER_ITEM_CHERI_BERRY,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_RELAXED
@@ -639,7 +639,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_CDAIYOUSEI] = {
         .species = SPECIES_CDAIYOUSEI,
-        .moves = {MOVE_MAGIC_KNIFE, MOVE_UPROAR, MOVE_MUD_SHOT, MOVE_FAINT_ATTACK},
+        .moves = {MOVE_MAGIC_KNIFE, MOVE_PERFORMANCE, MOVE_MUD_SHOT, MOVE_FAINT_ATTACK},
         .itemTableId = BATTLE_FRONTIER_ITEM_LIECHI_BERRY,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_HP,
         .nature = NATURE_LONELY
@@ -1549,7 +1549,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_ALILYWHITE_1] = {
         .species = SPECIES_ALILYWHITE,
-        .moves = {MOVE_SLASH, MOVE_COUNTER, MOVE_ENCORE, MOVE_UPROAR},
+        .moves = {MOVE_SLASH, MOVE_COUNTER, MOVE_ENCORE, MOVE_PERFORMANCE},
         .itemTableId = BATTLE_FRONTIER_ITEM_FOCUS_BAND,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_LONELY

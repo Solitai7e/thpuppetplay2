@@ -112,8 +112,8 @@
 #define STATUS2_CONFUSION             (1 << 0 | 1 << 1 | 1 << 2)
 #define STATUS2_CONFUSION_TURN(num)   ((num) << 0)
 #define STATUS2_FLINCHED              (1 << 3)
-#define STATUS2_UPROAR                (1 << 4 | 1 << 5 | 1 << 6)
-#define STATUS2_UPROAR_TURN(num)      ((num) << 4)
+#define STATUS2_PERFORMANCE                (1 << 4 | 1 << 5 | 1 << 6)
+#define STATUS2_PERFORMANCE_TURN(num)      ((num) << 4)
 #define STATUS2_UNUSED                (1 << 7)
 #define STATUS2_GUARD                  (1 << 8 | 1 << 9)
 #define STATUS2_GUARD_TURN(num)        (((num) << 8) & STATUS2_GUARD)
@@ -235,7 +235,7 @@
 #define MOVE_EFFECT_CONFUSION           7
 #define MOVE_EFFECT_FLINCH              8
 #define MOVE_EFFECT_TRI_ATTACK          9
-#define MOVE_EFFECT_UPROAR              10
+#define MOVE_EFFECT_PERFORMANCE              10
 #define MOVE_EFFECT_PAYDAY              11
 #define MOVE_EFFECT_CHARGING            12
 #define MOVE_EFFECT_WRAP                13

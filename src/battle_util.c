@@ -682,7 +682,7 @@ void HandleAction_ActionFinished(void)
 static const u16 sSoundMovesTable[] =
 {
     MOVE_GROWL, MOVE_ROAR, MOVE_SING, MOVE_JAMMING, MOVE_SCREECH, MOVE_SNORE,
-    MOVE_UPROAR, MOVE_BINDING_VOICE, MOVE_NATURE_SOUND, MOVE_HYPER_VOICE, 0xFFFF
+    MOVE_PERFORMANCE, MOVE_BINDING_VOICE, MOVE_NATURE_SOUND, MOVE_HYPER_VOICE, 0xFFFF
 };
 
 u8 GetBattlerForBattleScript(u8 caseId)
@@ -859,7 +859,7 @@ void CancelMultiTurnMoves(u8 battler)
 {
     gBattleMons[battler].status2 &= ~STATUS2_MULTIPLETURNS;
     gBattleMons[battler].status2 &= ~STATUS2_LOCK_CONFUSE;
-    gBattleMons[battler].status2 &= ~STATUS2_UPROAR;
+    gBattleMons[battler].status2 &= ~STATUS2_PERFORMANCE;
     gBattleMons[battler].status2 &= ~STATUS2_GUARD;
 
     gStatuses3[battler] &= ~STATUS3_SEMI_INVULNERABLE;
@@ -1430,7 +1430,7 @@ enum
     ENDTURN_NIGHTMARES,
     ENDTURN_CURSE,
     ENDTURN_WRAP,
-    ENDTURN_UPROAR,
+    ENDTURN_PERFORMANCE,
     ENDTURN_THRASH,
     ENDTURN_DISABLE,
     ENDTURN_ENCORE,
@@ -1603,8 +1603,8 @@ u8 DoBattlerEndTurnEffects(void)
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
-            case ENDTURN_UPROAR:  // uproar
-                if (gBattleMons[gActiveBattler].status2 & STATUS2_UPROAR)
+            case ENDTURN_PERFORMANCE:  // performance
+                if (gBattleMons[gActiveBattler].status2 & STATUS2_PERFORMANCE)
                 {
                     for (gBattlerAttacker = 0; gBattlerAttacker < gBattlersCount; gBattlerAttacker++)
                     {
@@ -1614,7 +1614,7 @@ u8 DoBattlerEndTurnEffects(void)
                             gBattleMons[gBattlerAttacker].status1 &= ~STATUS1_SLEEP;
                             gBattleMons[gBattlerAttacker].status2 &= ~STATUS2_NIGHTMARE;
                             gBattleCommunication[MULTISTRING_CHOOSER] = 1;
-                            BattleScriptExecute(BattleScript_MonWokeUpInUproar);
+                            BattleScriptExecute(BattleScript_MonWokenUpByPerformance);
                             gActiveBattler = gBattlerAttacker;
                             BtlController_EmitSetMonData(BUFFER_A, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
                             MarkBattlerForControllerExec(gActiveBattler);
@@ -1629,23 +1629,23 @@ u8 DoBattlerEndTurnEffects(void)
                     else
                     {
                         gBattlerAttacker = gActiveBattler;
-                        gBattleMons[gActiveBattler].status2 -= STATUS2_UPROAR_TURN(1);
+                        gBattleMons[gActiveBattler].status2 -= STATUS2_PERFORMANCE_TURN(1);
                         if (WasUnableToUseMove(gActiveBattler))
                         {
                             CancelMultiTurnMoves(gActiveBattler);
-                            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_UPROAR_ENDS;
+                            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PERFORMANCE_ENDS;
                         }
-                        else if (gBattleMons[gActiveBattler].status2 & STATUS2_UPROAR)
+                        else if (gBattleMons[gActiveBattler].status2 & STATUS2_PERFORMANCE)
                         {
-                            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_UPROAR_CONTINUES;
+                            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PERFORMANCE_CONTINUES;
                             gBattleMons[gActiveBattler].status2 |= STATUS2_MULTIPLETURNS;
                         }
                         else
                         {
-                            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_UPROAR_ENDS;
+                            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PERFORMANCE_ENDS;
                             CancelMultiTurnMoves(gActiveBattler);
                         }
-                        BattleScriptExecute(BattleScript_PrintUproarOverTurns);
+                        BattleScriptExecute(BattleScript_PrintPerformanceOverTurns);
                         effect = 1;
                     }
                 }
@@ -1737,7 +1737,7 @@ u8 DoBattlerEndTurnEffects(void)
                     gStatuses3[gActiveBattler] -= STATUS3_YAWN_TURN(1);
                     if (!(gStatuses3[gActiveBattler] & STATUS3_YAWN) && !(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)
                      && gBattleMons[gActiveBattler].ability != ABILITY_VITAL_SPIRIT
-                     && gBattleMons[gActiveBattler].ability != ABILITY_INSOMNIA && !UproarWakeUpCheck(gActiveBattler))
+                     && gBattleMons[gActiveBattler].ability != ABILITY_INSOMNIA && !PerformanceWakeUpCheck(gActiveBattler))
                     {
                         CancelMultiTurnMoves(gActiveBattler);
                         gBattleMons[gActiveBattler].status1 |= STATUS1_SLEEP_TURN((Random() & 3) + 2); // 2-5 turns of sleep
@@ -1996,12 +1996,12 @@ u8 AtkCanceller_UnableToUseMove(void)
         case CANCELLER_ASLEEP: // check being asleep
             if (gBattleMons[gBattlerAttacker].status1 & STATUS1_SLEEP)
             {
-                if (UproarWakeUpCheck(gBattlerAttacker))
+                if (PerformanceWakeUpCheck(gBattlerAttacker))
                 {
                     gBattleMons[gBattlerAttacker].status1 &= ~STATUS1_SLEEP;
                     gBattleMons[gBattlerAttacker].status2 &= ~STATUS2_NIGHTMARE;
                     BattleScriptPushCursor();
-                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_WOKE_UP_UPROAR;
+                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_WOKE_UP_PERFORMANCE;
                     gBattlescriptCurrInstr = BattleScript_MoveUsedWokeUp;
                     effect = 2;
                 }
@@ -3950,7 +3950,7 @@ u8 IsMonDisobedient(void)
             int i;
             for (i = 0; i < gBattlersCount; i++)
             {
-                if (gBattleMons[i].status2 & STATUS2_UPROAR)
+                if (gBattleMons[i].status2 & STATUS2_PERFORMANCE)
                     break;
             }
             if (i == gBattlersCount)

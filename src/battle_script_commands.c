@@ -611,7 +611,7 @@ static const u32 sStatusFlagsForMoveEffects[NUM_MOVE_EFFECTS] =
     [MOVE_EFFECT_TOXIC]          = STATUS1_TOXIC_POISON,
     [MOVE_EFFECT_CONFUSION]      = STATUS2_CONFUSION,
     [MOVE_EFFECT_FLINCH]         = STATUS2_FLINCHED,
-    [MOVE_EFFECT_UPROAR]         = STATUS2_UPROAR,
+    [MOVE_EFFECT_PERFORMANCE]         = STATUS2_PERFORMANCE,
     [MOVE_EFFECT_CHARGING]       = STATUS2_MULTIPLETURNS,
     [MOVE_EFFECT_WRAP]           = STATUS2_WRAPPED,
     [MOVE_EFFECT_RECHARGE]       = STATUS2_RECHARGE,
@@ -632,7 +632,7 @@ static const u8* const sMoveEffectBS_Ptrs[] =
     [MOVE_EFFECT_CONFUSION]        = BattleScript_MoveEffectConfusion,
     [MOVE_EFFECT_FLINCH]           = BattleScript_MoveEffectSleep,
     [MOVE_EFFECT_TRI_ATTACK]       = BattleScript_MoveEffectSleep,
-    [MOVE_EFFECT_UPROAR]           = BattleScript_MoveEffectUproar,
+    [MOVE_EFFECT_PERFORMANCE]           = BattleScript_MoveEffectPerformance,
     [MOVE_EFFECT_PAYDAY]           = BattleScript_MoveEffectPayDay,
     [MOVE_EFFECT_CHARGING]         = BattleScript_MoveEffectSleep,
     [MOVE_EFFECT_WRAP]             = BattleScript_MoveEffectWrap,
@@ -2240,11 +2240,11 @@ void SetMoveEffect(bool8 primary, u8 certain)
         switch (sStatusFlagsForMoveEffects[gBattleCommunication[MOVE_EFFECT_BYTE]])
         {
         case STATUS1_SLEEP:
-            // check active uproar
+            // check active performance
             if (gBattleMons[gEffectBattler].ability != ABILITY_SOUNDPROOF)
             {
                 for (gActiveBattler = 0;
-                    gActiveBattler < gBattlersCount && !(gBattleMons[gActiveBattler].status2 & STATUS2_UPROAR);
+                    gActiveBattler < gBattlersCount && !(gBattleMons[gActiveBattler].status2 & STATUS2_PERFORMANCE);
                     gActiveBattler++)
                 {}
             }
@@ -2530,13 +2530,13 @@ void SetMoveEffect(bool8 primary, u8 certain)
                     gBattlescriptCurrInstr++;
                 }
                 break;
-            case MOVE_EFFECT_UPROAR:
-                if (!(gBattleMons[gEffectBattler].status2 & STATUS2_UPROAR))
+            case MOVE_EFFECT_PERFORMANCE:
+                if (!(gBattleMons[gEffectBattler].status2 & STATUS2_PERFORMANCE))
                 {
 
                     gBattleMons[gEffectBattler].status2 |= STATUS2_MULTIPLETURNS;
                     gLockedMoves[gEffectBattler] = gCurrentMove;
-                    gBattleMons[gEffectBattler].status2 |= STATUS2_UPROAR_TURN((Random() & 3) + 2); // 2-5 turns
+                    gBattleMons[gEffectBattler].status2 |= STATUS2_PERFORMANCE_TURN((Random() & 3) + 2); // 2-5 turns
 
                     BattleScriptPush(gBattlescriptCurrInstr + 1);
                     gBattlescriptCurrInstr = sMoveEffectBS_Ptrs[gBattleCommunication[MOVE_EFFECT_BYTE]];
@@ -6746,13 +6746,13 @@ static void Cmd_nop(void)
     gBattlescriptCurrInstr++;
 }
 
-bool8 UproarWakeUpCheck(u8 battlerId)
+bool8 PerformanceWakeUpCheck(u8 battlerId)
 {
     s32 i;
 
     for (i = 0; i < gBattlersCount; i++)
     {
-        if (!(gBattleMons[i].status2 & STATUS2_UPROAR) || gBattleMons[battlerId].ability == ABILITY_SOUNDPROOF)
+        if (!(gBattleMons[i].status2 & STATUS2_PERFORMANCE) || gBattleMons[battlerId].ability == ABILITY_SOUNDPROOF)
             continue;
 
         gBattleScripting.battler = i;
@@ -6760,9 +6760,9 @@ bool8 UproarWakeUpCheck(u8 battlerId)
         if (gBattlerTarget == 0xFF)
             gBattlerTarget = i;
         else if (gBattlerTarget == i)
-            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CANT_SLEEP_UPROAR;
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CANT_SLEEP_PERFORMANCE;
         else
-            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_UPROAR_KEPT_AWAKE;
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PERFORMANCE_KEPT_AWAKE;
 
         break;
     }
@@ -6777,7 +6777,7 @@ static void Cmd_jumpifcantmakeasleep(void)
 {
     const u8 *jumpPtr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
 
-    if (UproarWakeUpCheck(gBattlerTarget))
+    if (PerformanceWakeUpCheck(gBattlerTarget))
     {
         gBattlescriptCurrInstr = jumpPtr;
     }
@@ -8140,7 +8140,7 @@ static void Cmd_trychoosesleeptalkmove(void)
     {
         if (IsInvalidForSleepTalkOrAssist(gBattleMons[gBattlerAttacker].moves[i])
             || gBattleMons[gBattlerAttacker].moves[i] == MOVE_FOCUS_PUNCH
-            || gBattleMons[gBattlerAttacker].moves[i] == MOVE_UPROAR
+            || gBattleMons[gBattlerAttacker].moves[i] == MOVE_PERFORMANCE
             || IsTwoTurnsMove(gBattleMons[gBattlerAttacker].moves[i]))
         {
             unusableMovesBits |= gBitTable[i];

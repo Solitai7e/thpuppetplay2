@@ -176,7 +176,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectDefenseCurl            @ EFFECT_DEFENSE_CURL
 	.4byte BattleScript_EffectSoftboiled             @ EFFECT_SOFTBOILED
 	.4byte BattleScript_EffectFakeOut                @ EFFECT_FAKE_OUT
-	.4byte BattleScript_EffectUproar                 @ EFFECT_UPROAR
+	.4byte BattleScript_EffectPerformance                 @ EFFECT_PERFORMANCE
 	.4byte BattleScript_EffectStockpile              @ EFFECT_STOCKPILE
 	.4byte BattleScript_EffectMirrorShot                 @ EFFECT_MIRROR_SHOT
 	.4byte BattleScript_EffectSwallow                @ EFFECT_SWALLOW
@@ -311,7 +311,7 @@ BattleScript_WasntAffected::
 
 BattleScript_CantMakeAsleep::
 	pause B_WAIT_TIME_SHORT
-	printfromtable gUproarAwakeStringIds
+	printfromtable gPerformanceAwakeStringIds
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
@@ -746,7 +746,7 @@ BattleScript_EffectRest::
 
 BattleScript_RestCantSleep::
 	pause B_WAIT_TIME_LONG
-	printfromtable gUproarAwakeStringIds
+	printfromtable gPerformanceAwakeStringIds
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
@@ -2067,14 +2067,14 @@ BattleScript_NotAffected::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
-BattleScript_EffectUproar::
+BattleScript_EffectPerformance::
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
-	setmoveeffect MOVE_EFFECT_UPROAR | MOVE_EFFECT_AFFECTS_USER
+	setmoveeffect MOVE_EFFECT_PERFORMANCE | MOVE_EFFECT_AFFECTS_USER
 	attackstring
-	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_UproarHit
+	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_PerformanceHit
 	ppreduce
-BattleScript_UproarHit::
+BattleScript_PerformanceHit::
 	nop
 	goto BattleScript_HitFromCritCalc
 
@@ -3724,8 +3724,8 @@ BattleScript_MoveUsedWokeUp::
 	updatestatusicon BS_ATTACKER
 	return
 
-BattleScript_MonWokeUpInUproar::
-	printstring STRINGID_PKMNWOKEUPINUPROAR
+BattleScript_MonWokenUpByPerformance::
+	printstring STRINGID_PKMNWOKENUPBYPERFORMANCE
 	waitmessage B_WAIT_TIME_LONG
 	updatestatusicon BS_ATTACKER
 	end2
@@ -3779,8 +3779,8 @@ BattleScript_MoveUsedFlinched::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
-BattleScript_PrintUproarOverTurns::
-	printfromtable gUproarOverTurnStringIds
+BattleScript_PrintPerformanceOverTurns::
+	printfromtable gPerformanceOverTurnStringIds
 	waitmessage B_WAIT_TIME_LONG
 	end2
 
@@ -3905,8 +3905,8 @@ BattleScript_MoveEffectParalysis::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_UpdateEffectStatusIconRet
 
-BattleScript_MoveEffectUproar::
-	printstring STRINGID_PKMNCAUSEDUPROAR
+BattleScript_MoveEffectPerformance::
+	printstring STRINGID_PKMNBEGANPERFORMANCE
 	waitmessage B_WAIT_TIME_LONG
 	return
 

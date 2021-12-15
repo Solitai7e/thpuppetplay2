@@ -1009,7 +1009,7 @@ static const u8 sFakeOutDescription[] = _(
     "A 1st-turn, 1st-strike move\n"
     "that causes flinching.");
 
-static const u8 sUproarDescription[] = _(
+static const u8 sPerformanceDescription[] = _(
     "Causes an uproar for 2 to 5\n"
     "turns and prevents sleep.");
 
@@ -1672,7 +1672,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_WHIRLPOOL - 1] = sWhirlpoolDescription,
     [MOVE_BEAT_UP - 1] = sBeatUpDescription,
     [MOVE_FAKE_OUT - 1] = sFakeOutDescription,
-    [MOVE_UPROAR - 1] = sUproarDescription,
+    [MOVE_PERFORMANCE - 1] = sPerformanceDescription,
     [MOVE_STOCKPILE - 1] = sStockpileDescription,
     [MOVE_MIRROR_SHOT - 1] = sMirrorShotDescription,
     [MOVE_SWALLOW - 1] = sSwallowDescription,

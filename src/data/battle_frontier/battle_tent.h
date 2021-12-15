@@ -972,7 +972,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_AMARISA] = {
         .species = SPECIES_AMARISA,
-        .moves = {MOVE_ASTONISH, MOVE_SCREECH, MOVE_UPROAR, MOVE_JAMMING},
+        .moves = {MOVE_ASTONISH, MOVE_SCREECH, MOVE_PERFORMANCE, MOVE_JAMMING},
         .itemTableId = BATTLE_FRONTIER_ITEM_NONE,
         .evSpread = F_EV_SPREAD_DEFENSE | F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_ADAMANT
@@ -1783,7 +1783,7 @@ const struct BattleFrontierTrainer gVerdanturfBattleTentTrainers[NUM_BATTLE_TENT
         .trainerName = _("MARQUIS"),
         .speechBefore = {EC_WORD_NONE, EC_WORD_OF, EC_WORD_THIS, EC_WORD_IS, EC_WORD_MAKING, EC_WORD_SENSE},
         .speechWin = {EC_WORD_SEE, EC_WORD_QUES, EC_WORD_THIS, EC_WORD_JUST, EC_WORD_ISN_T, EC_WORD_NORMAL},
-        .speechLose = {EC_WORD_SHOULD, EC_WORD_I, EC_WORD_CAUSE, EC_WORD_AN, EC_MOVE(UPROAR), EC_WORD_QUES},
+        .speechLose = {EC_WORD_SHOULD, EC_WORD_I, EC_WORD_CAUSE, EC_WORD_AN, EC_MOVE(PERFORMANCE), EC_WORD_QUES},
         .monSet = gVerdanturfBattleTentTrainerMons_Marquis
     },
     [VERDANTURF_TENT_TRAINER_FREDDY] = {
@@ -2053,7 +2053,7 @@ const struct FacilityMon gVerdanturfBattleTentMons[NUM_VERDANTURF_TENT_MONS] =
     },
     [VERDANTURF_TENT_MON_AMARISA] = {
         .species = SPECIES_AMARISA,
-        .moves = {MOVE_HOWL, MOVE_UPROAR, MOVE_REST, MOVE_SCREECH},
+        .moves = {MOVE_HOWL, MOVE_PERFORMANCE, MOVE_REST, MOVE_SCREECH},
         .itemTableId = BATTLE_FRONTIER_ITEM_LEFTOVERS,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE | F_EV_SPREAD_HP,
         .nature = NATURE_CALM
@@ -2630,9 +2630,9 @@ const struct BattleFrontierTrainer gFallarborBattleTentTrainers[NUM_BATTLE_TENT_
     [FALLARBOR_TENT_TRAINER_RORY] = {
         .facilityClass = FACILITY_CLASS_NINJA_BOY,
         .trainerName = _("RORY"),
-        .speechBefore = {EC_WORD_DON_T, EC_WORD_CAUSE, EC_WORD_AN, EC_MOVE(UPROAR), EC_WORD_YOU, EC_WORD_EXCL},
-        .speechWin = {EC_WORD_I, EC_WORD_DON_T, EC_WORD_NEED, EC_WORD_AN, EC_MOVE(UPROAR), EC_WORD_EXCL},
-        .speechLose = {EC_WORD_I_AM, EC_WORD_GOING, EC_WORD_TO, EC_WORD_CAUSE, EC_WORD_AN, EC_MOVE(UPROAR)},
+        .speechBefore = {EC_WORD_DON_T, EC_WORD_CAUSE, EC_WORD_AN, EC_MOVE(PERFORMANCE), EC_WORD_YOU, EC_WORD_EXCL},
+        .speechWin = {EC_WORD_I, EC_WORD_DON_T, EC_WORD_NEED, EC_WORD_AN, EC_MOVE(PERFORMANCE), EC_WORD_EXCL},
+        .speechLose = {EC_WORD_I_AM, EC_WORD_GOING, EC_WORD_TO, EC_WORD_CAUSE, EC_WORD_AN, EC_MOVE(PERFORMANCE)},
         .monSet = gFallarborBattleTentTrainerMons_Rory
     },
     [FALLARBOR_TENT_TRAINER_ELEANOR] = {
@@ -2843,7 +2843,7 @@ const struct FacilityMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_AMARISA] = {
         .species = SPECIES_AMARISA,
-        .moves = {MOVE_STOMP, MOVE_REST, MOVE_SCREECH, MOVE_UPROAR},
+        .moves = {MOVE_STOMP, MOVE_REST, MOVE_SCREECH, MOVE_PERFORMANCE},
         .itemTableId = BATTLE_FRONTIER_ITEM_CHESTO_BERRY,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_ADAMANT

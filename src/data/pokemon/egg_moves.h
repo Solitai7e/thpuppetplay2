@@ -47,7 +47,7 @@ const u16 gEggMoves[] = {
               MOVE_BITE,
               MOVE_COUNTER,
               MOVE_REVERSAL,
-              MOVE_UPROAR,
+              MOVE_PERFORMANCE,
               MOVE_SWAGGER),
 
     egg_moves(CTOKIKO,
@@ -142,7 +142,7 @@ const u16 gEggMoves[] = {
               MOVE_ANCIENT_POWER,
               MOVE_PURSUIT,
               MOVE_BEAT_UP,
-              MOVE_UPROAR,
+              MOVE_PERFORMANCE,
               MOVE_ROCK_WRECKER),
 
     egg_moves(CCHEN,
@@ -919,7 +919,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(DREIMU,
               MOVE_REFRESH,
-              MOVE_UPROAR,
+              MOVE_PERFORMANCE,
               MOVE_CURSE,
               MOVE_STOMP,
               MOVE_ICE_BALL,
@@ -1013,7 +1013,7 @@ const u16 gEggMoves[] = {
     egg_moves(ASUNNYMILK,
               MOVE_HELPING_HAND,
               MOVE_PSYCH_UP,
-              MOVE_UPROAR,
+              MOVE_PERFORMANCE,
               MOVE_FAKE_TEARS,
               MOVE_WISH,
               MOVE_BATON_PASS,
@@ -1089,7 +1089,7 @@ const u16 gEggMoves[] = {
     egg_moves(ASHIKIEIKI,
               MOVE_CRUNCH,
               MOVE_HEADBUTT,
-              MOVE_UPROAR,
+              MOVE_PERFORMANCE,
               MOVE_CURSE,
               MOVE_SWIFT),
 

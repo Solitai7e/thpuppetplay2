@@ -3542,9 +3542,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED,
     },
 
-    [MOVE_UPROAR] =
+    [MOVE_PERFORMANCE] =
     {
-        .effect = EFFECT_UPROAR,
+        .effect = EFFECT_PERFORMANCE,
         .split = 0,
         .power = 100,
         .type = TYPE_GHOST,

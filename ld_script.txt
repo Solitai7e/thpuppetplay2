@@ -937,7 +937,7 @@ SECTIONS {
         sound/songs/se_m_soar.o(.rodata);
         sound/songs/se_m_stat_increase.o(.rodata);
         sound/songs/se_m_heat_wave.o(.rodata);
-        sound/songs/se_m_uproar.o(.rodata);
+        sound/songs/se_m_performance.o(.rodata);
         sound/songs/se_m_hail.o(.rodata);
         sound/songs/se_m_draco_meteor.o(.rodata);
         sound/songs/se_m_teeter_dance.o(.rodata);

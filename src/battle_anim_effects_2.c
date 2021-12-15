@@ -51,7 +51,7 @@ static void AnimPencil(struct Sprite *);
 static void AnimPencil_Step(struct Sprite *);
 static void AnimBlendThinRing(struct Sprite *);
 static void AnimHyperVoiceRing(struct Sprite *);
-static void AnimUproarRing(struct Sprite *);
+static void AnimPerformanceRing(struct Sprite *);
 static void AnimSoftBoiledEgg(struct Sprite *);
 static void AnimSoftBoiledEgg_Step1(struct Sprite *);
 static void AnimSoftBoiledEgg_Step2(struct Sprite *);
@@ -106,7 +106,7 @@ static void AnimTask_FakeOut_Step1(u8);
 static void AnimTask_FakeOut_Step2(u8);
 static void AnimTask_HeartsBackground_Step(u8);
 static void AnimTask_ScaryFace_Step(u8);
-static void AnimTask_UproarDistortion_Step(u8);
+static void AnimTask_PerformanceDistortion_Step(u8);
 
 // Unused
 static const struct SpriteTemplate sCirclingFingerSpriteTemplate =
@@ -795,7 +795,7 @@ const struct SpriteTemplate gHyperVoiceRingSpriteTemplate =
     .callback = AnimHyperVoiceRing,
 };
 
-const struct SpriteTemplate gUproarRingSpriteTemplate =
+const struct SpriteTemplate gPerformanceRingSpriteTemplate =
 {
     .tileTag = ANIM_TAG_THIN_RING,
     .paletteTag = ANIM_TAG_THIN_RING,
@@ -803,7 +803,7 @@ const struct SpriteTemplate gUproarRingSpriteTemplate =
     .anims = gDummySpriteAnimTable,
     .images = NULL,
     .affineAnims = gThinRingExpandingAffineAnimTable,
-    .callback = AnimUproarRing,
+    .callback = AnimPerformanceRing,
 };
 
 const union AffineAnimCmd gStretchAttackerAffineAnimCmds[] =
@@ -1166,7 +1166,7 @@ const struct SpriteTemplate gMovementWavesSpriteTemplate =
     .callback = AnimMovementWaves,
 };
 
-static const union AffineAnimCmd sAffineAnims_UproarDistortion[] =
+static const union AffineAnimCmd sAffineAnims_PerformanceDistortion[] =
 {
     AFFINEANIMCMD_FRAME(-12, 8, 0, 4),
     AFFINEANIMCMD_FRAME(20, -20, 0, 4),
@@ -2673,7 +2673,7 @@ static void AnimHyperVoiceRing(struct Sprite *sprite)
     sprite->callback(sprite);
 }
 
-static void AnimUproarRing(struct Sprite *sprite)
+static void AnimPerformanceRing(struct Sprite *sprite)
 {
     u8 index = IndexOfSpritePaletteTag(ANIM_TAG_THIN_RING);
     if (index != 0xFF)
@@ -3659,15 +3659,15 @@ static void AnimMovementWaves_Step(struct Sprite *sprite)
     }
 }
 
-void AnimTask_UproarDistortion(u8 taskId)
+void AnimTask_PerformanceDistortion(u8 taskId)
 {
     u8 spriteId = GetAnimBattlerSpriteId(gBattleAnimArgs[0]);
 
-    PrepareAffineAnimInTaskData(&gTasks[taskId], spriteId, sAffineAnims_UproarDistortion);
-    gTasks[taskId].func = AnimTask_UproarDistortion_Step;
+    PrepareAffineAnimInTaskData(&gTasks[taskId], spriteId, sAffineAnims_PerformanceDistortion);
+    gTasks[taskId].func = AnimTask_PerformanceDistortion_Step;
 }
 
-static void AnimTask_UproarDistortion_Step(u8 taskId)
+static void AnimTask_PerformanceDistortion_Step(u8 taskId)
 {
     if (!RunAffineAnimFromTaskData(&gTasks[taskId]))
         DestroyAnimVisualTask(taskId);

@@ -2212,7 +2212,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_CWAKASAGI,
                                             .heldItem = ITEM_FOCUS_BAND,
-                                            .moves = {MOVE_UPROAR, MOVE_ATTRACT, MOVE_NONE, MOVE_NONE},
+                                            .moves = {MOVE_PERFORMANCE, MOVE_ATTRACT, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 6,
@@ -2234,7 +2234,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_SMARISA,
                                             .heldItem = ITEM_FOCUS_BAND,
-                                            .moves = {MOVE_UPROAR, MOVE_ATTRACT, MOVE_NONE, MOVE_NONE},
+                                            .moves = {MOVE_PERFORMANCE, MOVE_ATTRACT, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 6,
@@ -2256,7 +2256,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_MUGETSU,
                                             .heldItem = ITEM_FOCUS_BAND,
-                                            .moves = {MOVE_UPROAR, MOVE_ATTRACT, MOVE_NONE, MOVE_NONE},
+                                            .moves = {MOVE_PERFORMANCE, MOVE_ATTRACT, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .hpEV = 6,

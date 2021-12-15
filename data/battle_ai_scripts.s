@@ -96,7 +96,7 @@ AI_CheckBadMove_CheckSoundproof:
 	if_move MOVE_JAMMING, Score_Minus10
 	if_move MOVE_SCREECH, Score_Minus10
 	if_move MOVE_SNORE, Score_Minus10
-	if_move MOVE_UPROAR, Score_Minus10
+	if_move MOVE_PERFORMANCE, Score_Minus10
 	if_move MOVE_BINDING_VOICE, Score_Minus10
 	if_move MOVE_NATURE_SOUND, Score_Minus10
 AI_CheckBadMove_CheckEffect:

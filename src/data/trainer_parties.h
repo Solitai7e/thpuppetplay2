@@ -1629,7 +1629,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Olivia[] = {
     .iv = 100,
     .lvl = 39,
     .species = SPECIES_DHINA,
-    .moves = {MOVE_UPROAR, MOVE_FURY_SWIPES, MOVE_FAKE_OUT, MOVE_WATER_PULSE}
+    .moves = {MOVE_PERFORMANCE, MOVE_FURY_SWIPES, MOVE_FAKE_OUT, MOVE_WATER_PULSE}
     }
 };
 

@@ -131,13 +131,13 @@ u32 BattlePalace_TryEscapeStatus(u8 battlerId)
         case 0:
             if (gBattleMons[battlerId].status1 & STATUS1_SLEEP)
             {
-                if (UproarWakeUpCheck(battlerId))
+                if (PerformanceWakeUpCheck(battlerId))
                 {
-                    // Wake up from Uproar
+                    // Wake up from Performance
                     gBattleMons[battlerId].status1 &= ~(STATUS1_SLEEP);
                     gBattleMons[battlerId].status2 &= ~(STATUS2_NIGHTMARE);
                     BattleScriptPushCursor();
-                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_WOKE_UP_UPROAR;
+                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_WOKE_UP_PERFORMANCE;
                     gBattlescriptCurrInstr = BattleScript_MoveUsedWokeUp;
                     effect = 2;
                 }

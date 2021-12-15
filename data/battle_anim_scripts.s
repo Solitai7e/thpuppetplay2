@@ -269,7 +269,7 @@ gBattleAnims_Moves::
 	.4byte Move_WHIRLPOOL
 	.4byte Move_BEAT_UP
 	.4byte Move_FAKE_OUT
-	.4byte Move_UPROAR
+	.4byte Move_PERFORMANCE
 	.4byte Move_STOCKPILE
 	.4byte Move_MIRROR_SHOT
 	.4byte Move_SWALLOW
@@ -3430,25 +3430,25 @@ ExtremeSpeedAgainstPlayer:
 	fadetobg BG_HIGHSPEED_PLAYER
 	goto ExtremeSpeedContinue
 
-Move_UPROAR:
+Move_PERFORMANCE:
 	loadspritegfx ANIM_TAG_JAGGED_MUSIC_NOTE
 	loadspritegfx ANIM_TAG_THIN_RING
 	monbg ANIM_DEF_PARTNER
-	createvisualtask AnimTask_UproarDistortion, 2, 0
-	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
-	playsewithpan SE_M_UPROAR, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_PerformanceDistortion, 2, 0
+	createsprite gPerformanceRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	playsewithpan SE_M_PERFORMANCE, SOUND_PAN_ATTACKER
 	createsprite gJaggedMusicNoteSpriteTemplate, ANIM_ATTACKER, 2, 0, 29, -12, 0
 	createsprite gJaggedMusicNoteSpriteTemplate, ANIM_ATTACKER, 2, 0, -12, -29, 1
 	delay 16
-	createvisualtask AnimTask_UproarDistortion, 2, 0
-	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
-	playsewithpan SE_M_UPROAR, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_PerformanceDistortion, 2, 0
+	createsprite gPerformanceRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	playsewithpan SE_M_PERFORMANCE, SOUND_PAN_ATTACKER
 	createsprite gJaggedMusicNoteSpriteTemplate, ANIM_ATTACKER, 2, 0, 12, -29, 1
 	createsprite gJaggedMusicNoteSpriteTemplate, ANIM_ATTACKER, 2, 0, -29, -12, 0
 	delay 16
-	createvisualtask AnimTask_UproarDistortion, 2, 0
-	createsprite gUproarRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
-	playsewithpan SE_M_UPROAR, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_PerformanceDistortion, 2, 0
+	createsprite gPerformanceRingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0, 31, 8
+	playsewithpan SE_M_PERFORMANCE, SOUND_PAN_ATTACKER
 	createsprite gJaggedMusicNoteSpriteTemplate, ANIM_ATTACKER, 2, 0, 24, -24, 1
 	createsprite gJaggedMusicNoteSpriteTemplate, ANIM_ATTACKER, 2, 0, -24, -24, 0
 	waitforvisualfinish

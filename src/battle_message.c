@@ -161,16 +161,16 @@ static const u8 sText_PkmnEvadedAttack[] = _("{B_DEF_NAME_WITH_PREFIX} evaded\nt
 static const u8 sText_PkmnSappedByLeechSeed[] = _("{B_ATK_NAME_WITH_PREFIX}'s health is\nsapped by LEECH SEED!");
 static const u8 sText_PkmnFastAsleep[] = _("{B_ATK_NAME_WITH_PREFIX} is fast\nasleep.");
 static const u8 sText_PkmnWokeUp[] = _("{B_ATK_NAME_WITH_PREFIX} woke up!");
-static const u8 sText_PkmnUproarKeptAwake[] = _("But {B_SCR_ACTIVE_NAME_WITH_PREFIX}'s UPROAR\nkept it awake!");
-static const u8 sText_PkmnWokeUpInUproar[] = _("{B_ATK_NAME_WITH_PREFIX} woke up\nin the UPROAR!");
-static const u8 sText_PkmnCausedUproar[] = _("{B_ATK_NAME_WITH_PREFIX} caused\nan UPROAR!");
-static const u8 sText_PkmnMakingUproar[] = _("{B_ATK_NAME_WITH_PREFIX} is making\nan UPROAR!");
+static const u8 sText_PkmnPerformanceKeptAwake[] = _("But {B_SCR_ACTIVE_NAME_WITH_PREFIX}'s UPROAR\nkept it awake!");
+static const u8 sText_PkmnWokenUpByPerformance[] = _("{B_ATK_NAME_WITH_PREFIX} woke up\nin the UPROAR!");
+static const u8 sText_PkmnBeganPerformance[] = _("{B_ATK_NAME_WITH_PREFIX} caused\nan UPROAR!");
+static const u8 sText_PkmnInPerformance[] = _("{B_ATK_NAME_WITH_PREFIX} is making\nan UPROAR!");
 static const u8 sText_PkmnCalmedDown[] = _("{B_ATK_NAME_WITH_PREFIX} calmed down.");
-static const u8 sText_PkmnCantSleepInUproar[] = _("But {B_DEF_NAME_WITH_PREFIX} can't\nsleep in an UPROAR!");
+static const u8 sText_PkmnCantSleepDuringPerformance[] = _("But {B_DEF_NAME_WITH_PREFIX} can't\nsleep in an UPROAR!");
 static const u8 sText_PkmnStockpiled[] = _("{B_ATK_NAME_WITH_PREFIX} STOCKPILED\n{B_BUFF1}!");
 static const u8 sText_PkmnCantStockpile[] = _("{B_ATK_NAME_WITH_PREFIX} can't\nSTOCKPILE any more!");
-static const u8 sText_PkmnCantSleepInUproar2[] = _("But {B_DEF_NAME_WITH_PREFIX} can't\nsleep in an UPROAR!");
-static const u8 sText_UproarKeptPkmnAwake[] = _("But the UPROAR kept\n{B_DEF_NAME_WITH_PREFIX} awake!");
+static const u8 sText_PkmnCantSleepDuringPerformance2[] = _("But {B_DEF_NAME_WITH_PREFIX} can't\nsleep in an UPROAR!");
+static const u8 sText_PerformanceKeptPkmnAwake[] = _("But the UPROAR kept\n{B_DEF_NAME_WITH_PREFIX} awake!");
 static const u8 sText_PkmnStayedAwakeUsing[] = _("{B_DEF_NAME_WITH_PREFIX} stayed awake\nusing its {B_DEF_ABILITY}!");
 static const u8 sText_PkmnStoringEnergy[] = _("{B_ATK_NAME_WITH_PREFIX} is storing\nenergy!");
 static const u8 sText_PkmnUnleashedEnergy[] = _("{B_ATK_NAME_WITH_PREFIX} unleashed\nenergy!");
@@ -613,16 +613,16 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNSAPPEDBYLEECHSEED - 12] = sText_PkmnSappedByLeechSeed,
     [STRINGID_PKMNFASTASLEEP - 12] = sText_PkmnFastAsleep,
     [STRINGID_PKMNWOKEUP - 12] = sText_PkmnWokeUp,
-    [STRINGID_PKMNUPROARKEPTAWAKE - 12] = sText_PkmnUproarKeptAwake,
-    [STRINGID_PKMNWOKEUPINUPROAR - 12] = sText_PkmnWokeUpInUproar,
-    [STRINGID_PKMNCAUSEDUPROAR - 12] = sText_PkmnCausedUproar,
-    [STRINGID_PKMNMAKINGUPROAR - 12] = sText_PkmnMakingUproar,
+    [STRINGID_PKMNPERFORMANCEKEPTAWAKE - 12] = sText_PkmnPerformanceKeptAwake,
+    [STRINGID_PKMNWOKENUPBYPERFORMANCE - 12] = sText_PkmnWokenUpByPerformance,
+    [STRINGID_PKMNBEGANPERFORMANCE - 12] = sText_PkmnBeganPerformance,
+    [STRINGID_PKMNINPERFORMANCE - 12] = sText_PkmnInPerformance,
     [STRINGID_PKMNCALMEDDOWN - 12] = sText_PkmnCalmedDown,
-    [STRINGID_PKMNCANTSLEEPINUPROAR - 12] = sText_PkmnCantSleepInUproar,
+    [STRINGID_PKMNCANTSLEEPDURINGPERFORMANCE - 12] = sText_PkmnCantSleepDuringPerformance,
     [STRINGID_PKMNSTOCKPILED - 12] = sText_PkmnStockpiled,
     [STRINGID_PKMNCANTSTOCKPILE - 12] = sText_PkmnCantStockpile,
-    [STRINGID_PKMNCANTSLEEPINUPROAR2 - 12] = sText_PkmnCantSleepInUproar2,
-    [STRINGID_UPROARKEPTPKMNAWAKE - 12] = sText_UproarKeptPkmnAwake,
+    [STRINGID_PKMNCANTSLEEPDURINGPERFORMANCE2 - 12] = sText_PkmnCantSleepDuringPerformance2,
+    [STRINGID_PERFORMANCEKEPTPKMNAWAKE - 12] = sText_PerformanceKeptPkmnAwake,
     [STRINGID_PKMNSTAYEDAWAKEUSING - 12] = sText_PkmnStayedAwakeUsing,
     [STRINGID_PKMNSTORINGENERGY - 12] = sText_PkmnStoringEnergy,
     [STRINGID_PKMNUNLEASHEDENERGY - 12] = sText_PkmnUnleashedEnergy,
@@ -972,10 +972,10 @@ const u16 gRestUsedStringIds[] =
     [B_MSG_REST_STATUSED] = STRINGID_PKMNSLEPTHEALTHY
 };
 
-const u16 gUproarOverTurnStringIds[] =
+const u16 gPerformanceOverTurnStringIds[] =
 {
-    [B_MSG_UPROAR_CONTINUES] = STRINGID_PKMNMAKINGUPROAR,
-    [B_MSG_UPROAR_ENDS]      = STRINGID_PKMNCALMEDDOWN
+    [B_MSG_PERFORMANCE_CONTINUES] = STRINGID_PKMNINPERFORMANCE,
+    [B_MSG_PERFORMANCE_ENDS]      = STRINGID_PKMNCALMEDDOWN
 };
 
 const u16 gStockpileUsedStringIds[] =
@@ -987,7 +987,7 @@ const u16 gStockpileUsedStringIds[] =
 const u16 gWokeUpStringIds[] =
 {
     [B_MSG_WOKE_UP]        = STRINGID_PKMNWOKEUP,
-    [B_MSG_WOKE_UP_UPROAR] = STRINGID_PKMNWOKEUPINUPROAR
+    [B_MSG_WOKE_UP_PERFORMANCE] = STRINGID_PKMNWOKENUPBYPERFORMANCE
 };
 
 const u16 gSwallowFailStringIds[] =
@@ -996,10 +996,10 @@ const u16 gSwallowFailStringIds[] =
     [B_MSG_SWALLOW_FULL_HP] = STRINGID_PKMNHPFULL
 };
 
-const u16 gUproarAwakeStringIds[] =
+const u16 gPerformanceAwakeStringIds[] =
 {
-    [B_MSG_CANT_SLEEP_UPROAR]  = STRINGID_PKMNCANTSLEEPINUPROAR2,
-    [B_MSG_UPROAR_KEPT_AWAKE]  = STRINGID_UPROARKEPTPKMNAWAKE,
+    [B_MSG_CANT_SLEEP_PERFORMANCE]  = STRINGID_PKMNCANTSLEEPDURINGPERFORMANCE2,
+    [B_MSG_PERFORMANCE_KEPT_AWAKE]  = STRINGID_PERFORMANCEKEPTPKMNAWAKE,
     [B_MSG_STAYED_AWAKE_USING] = STRINGID_PKMNSTAYEDAWAKEUSING,
 };
 
@@ -1467,7 +1467,7 @@ static const u16 sGrammarMoveUsedTable[] =
     MOVE_CONSTRICT, MOVE_OMINOUS_WIND, MOVE_BUBBLE,
     MOVE_SLASH, MOVE_SPIDER_WEB, MOVE_NIGHTMARE, MOVE_CURSE,
     MOVE_FORESIGHT, MOVE_SMILE, MOVE_ATTRACT, MOVE_ROCK_SMASH,
-    MOVE_UPROAR, MOVE_MIRROR_SHOT, MOVE_SWALLOW, MOVE_TORMENT,
+    MOVE_PERFORMANCE, MOVE_MIRROR_SHOT, MOVE_SWALLOW, MOVE_TORMENT,
     MOVE_FLATTER, MOVE_RECOLLECTION, MOVE_ENDEAVOR, MOVE_TICKLE,
     MOVE_COVET, 0
 };

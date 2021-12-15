@@ -482,7 +482,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_ASTONISH,
             MOVE_SCREECH,
-            MOVE_UPROAR,
+            MOVE_PERFORMANCE,
             MOVE_HYPER_VOICE
         },
         .cool = 2,
@@ -1099,7 +1099,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_TEETER_DANCE,
             MOVE_PSYCH_UP,
             MOVE_HYPNOSIS,
-            MOVE_UPROAR
+            MOVE_PERFORMANCE
         },
         .cool = 25,
         .beauty = 75,
@@ -1826,7 +1826,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_ATTRACT,
             MOVE_FLASH,
-            MOVE_UPROAR,
+            MOVE_PERFORMANCE,
             MOVE_GROWL
         },
         .cool = 40,
