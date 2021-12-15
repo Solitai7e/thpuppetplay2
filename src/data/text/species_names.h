@@ -411,4 +411,4 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_KASEN] = _("Kasen"),
     [SPECIES_GOMASEKI] = _("Gomaseki"), //better name?
     [SPECIES_CWAKASAGI] = _("{CHIBI}Wakasagi"),
-};
+};//PUPPETPY

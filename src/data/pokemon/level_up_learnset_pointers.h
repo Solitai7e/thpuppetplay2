@@ -412,4 +412,4 @@ const u16 *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_KASEN] = sKasenLevelUpLearnset,
     [SPECIES_GOMASEKI] = sGomasekiLevelUpLearnset,
     [SPECIES_CWAKASAGI] = sCWakasagiLevelUpLearnset,
-};
+};//PUPPETPY

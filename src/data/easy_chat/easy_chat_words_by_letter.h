@@ -14,7 +14,7 @@ const u16 gEasyChatWordsByLetter_Others[] = {
     EC_WORD_1_HIT_KO_EXCL,
     EC_WORD_QUES,
     EC_WORD_QUES_EXCL,
-};
+};//PUPPETPY
 
 const u16 gEasyChatWordsByLetter_A[] = {
     EC_WORD_A,

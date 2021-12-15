@@ -5615,3 +5615,5 @@ static const u16 sCWakasagiLevelUpLearnset[] = {
     LEVEL_UP_MOVE(46, MOVE_MANA_BURST),
     LEVEL_UP_END
 };
+
+//PUPPETPY

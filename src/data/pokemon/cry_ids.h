@@ -135,4 +135,4 @@ const u16 gSpeciesIdToCryId[] =
     [SPECIES_KASEN - 277] = 385,
     [SPECIES_GOMASEKI - 277] = 386,
     [SPECIES_CWAKASAGI - 277] = 387,
-};
+};//PUPPETPY

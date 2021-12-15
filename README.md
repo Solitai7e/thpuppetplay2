@@ -4,7 +4,7 @@
 
 This is a fork of the Pokémon Emerald Decompilation to create a modern, workable base to create Touhou Puppet Play hacks.
 
-Due to the fragmented nature of the scene caused by several unpolished hacks along with a community made obselete by the spiritual successor, Touhou Puppet Dance Performance, much of THPP goes under the radar or is considered kusoge despite effort put into the hack. Recent developments have spiked in recent times, thankfully, and Derxwna Kapsyla's efforts in Essentials is making slow pace, but things are still difficult with projects being completely unrelated from each other along with people losing their drive to work.
+Due to the fragmented nature of the scene caused by several unpolished hacks along with a community made obselete by the spiritual successor, Touhou Puppet Dance Performance, much of THPP goes under the radar or is considered kusoge despite effort put into the hack. Recent developments have spiked in recent times, thankfully, and the efforts of Derxwna Kapsyla in Essentials is making slow pace, but things are still difficult with projects being completely unrelated from each other along with people losing their drive to work.
 
 This self-declared v2.0 of Touhou Puppet Play will attempt to do the following:
 
@@ -22,11 +22,19 @@ This edit, at this point in time, will not
 * Be completed any time soon
   * While all the assets are there, things like sprites will take quite some time to import, along with needing to figure out the structure of the decompilation
 
+#### Team and Credits
+- Fatih (Organizer)
+- Solitai7e (Repo Mastermind)
+
+
+- thpp supersanctuary community
+- tbd
+
 ## Install
 
-There are no releases at this time, and there are no plans to make releases until at least there is a somewhat-playable base, or a kit later on that acts as a tech demo of what's in thpuppetplay2. If you're on a Linux machine, you probably already know what you're doing. If you want to dive in on Windows 10, do the following to set up WSL1 which will let you build and interact with the repo. You don't need to manually download the repo for this, just follow the instructions to clone it instead.
+There are no releases at this time, and there are no plans to make releases until at least there is a somewhat-playable base, or a kit later on that acts as a tech demo of what is in thpuppetplay2. If you are on a Linux machine, you probably already know what you are doing. If you want to dive in on Windows 10, do the following to set up WSL1 which will let you build and interact with the repo. You do not need to manually download the repo for this, just follow the instructions to clone it instead.
 
-1. Open [Windows Powershell **as Administrator**], input the following (or paste by right clicking in the window)
+1. Open Windows Powershell **as Administrator**, input the following (or paste by right clicking in the window)
     ```powershell
     dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
     ```
@@ -34,9 +42,9 @@ Then restart your computer.
 
 2. Open the [Microsoft Store Linux Selection](https://aka.ms/wslstore) to download a Linux distro of your choice, preferably Ubuntu or Debian (we use the latter). Ignore any prompt asking for a Microsoft account, just close it if it appears. You can also install Linux through the Microsoft Store app.
 
-3. Run WSL/your distro and it will set itself up. It will ask for a username and password. Use a super simple pass, for these purposes you don't need security. Do note that the terminal will not show the text you type.
+3. Run WSL/your distro and it will set itself up. It will ask for a username and password. Use a super simple pass, for these purposes you do not need security. Do note that the terminal will not show the text you type.
 
-4. You'll need to update WSL. Input this, it'll take a while (it'll ask for your password after you do so)
+4. You will need to update WSL. Input this, things will take a while (it will ask for your password after you do so)
     ```bash
     sudo apt update && sudo apt upgrade
     ```
@@ -45,7 +53,7 @@ You will also need the tools to work with the repo: (use apt-get instead of apt 
     sudo apt install build-essential binutils-arm-none-eabi git libpng-dev
     ```
 
-5. Pick a place to store thpuppetplay2. For example, C:\Users\\_\<user>_\Desktop\Projects** will work. Don't make a folder for thpuppetplay2, it'll be made for you. ChangeDirectory to your location like so with <user> being your W10 user name.
+5. Pick a place to store thpuppetplay2. For example, `C:\Users\<user>\Desktop\Projects` will work. Do not make a folder for thpuppetplay2, it will be made for you. ChangeDirectory to your location like so with `<user>` being your W10 user name.
     ```bash
     cd "/mnt/c/Users/<user>/Desktop/Projects"
     ```
@@ -62,27 +70,33 @@ Then, get thpuppetplay2 installed.
     ./install.sh ../thpuppetplay2
     ```
 
-7. You are done installation, if the following works. When you want to output a .gba ROM of the project, cd back into thpuppetplay2's folder. You can do the full path whenever you restart the terminal:
+7. You are done installation, if the following works. When you want to output a .gba ROM of the project, cd back into the thpuppetplay2 root folder. You can do the full path whenever you restart the terminal:
     ```bash
     cd /mnt/c/Users/<user>/Desktop/Projects/thpuppetplay2
     ```
 next...
     ```bash
     make```
-and wait patiently for the compilation. You can build slightly faster by doing `nproc` and then doing `make -j#` replacing the pound with the number you see. If you modify most graphics and sound you'll have to delete the processed/compressed files made or do `make clean` to do that for you.
+and wait patiently for the compilation. You can build slightly faster by doing `nproc` and then doing `make -j#` replacing the pound with the number you see. If you modify most graphics and sound you will have to delete the processed/compressed files made or do `make clean` to do that for you.
 
 8. Optionally, get [Github Desktop](https://desktop.github.com/) to faciliate easy pulling of updates and pushing of changes, as well as having a visual aid for changes and un-doing steps.
 
 ## Contributing
 
-You are free to make pull requests, though for major commits such as overhauls, engine changes, more personal ideas, etc., it's highly recommended you join our [Discord server](https://discord.gg/VGH3EWp) in the #cooding channel so we're on the same page, or at least get in touch at Fatih™#4806. If you do join the server, please lurk moar if you decide to help, proper communication and understanding is both free and important.
+You are free to make pull requests, though for major commits such as overhauls, engine changes, more personal ideas, etc., it is highly recommended you join our [Discord server](https://discord.gg/VGH3EWp) in the #cooding channel so we are on the same page, or at least get in touch at Fatih™#4806. If you do join the server, please lurk moar if you decide to help, proper communication and understanding is both free and important.
+
+### puppet.py
+
+There is a tool in the main folder called puppet.py. As you might expect, you need python to run it, and it is to be used while in the root directory and not from elsewhere (aka cd to thpuppetplay2 first).
+The usage is `puppet.py puppet <form>`, with the puppet argument being a name like "reimu" and the form optionally being one of the evolutions, like "c", "ad", so on. It can be omitted if you wish to use the main prefix-less evolution.
+What this does is add all the relevant lines needed to add a puppet into the game, mitigating the amount of manual work you need to do.
 
 ------------
 
-Priority List:
+##Priority List:
 
 | SSS Rank |  A Rank | B Renko  | Low  |
 | :------------: | :------------: | :------------: | :------------: |
 | Puppet data importing | Adding modern/new puppets | QoL things | Breeding Replacement System |
-| Puppet interactions setup (movesets, levels, etc) | Gui/Strings/Sprites overhauled for the Touhou theme | Seal capture system |   |
-|  |  |  | Elegant/Cute/Strong/Wise/Charismatic |
+| Puppet interactions setup (movesets, levels, etc) | Gui/Strings/Sprites overhauled for the Touhou theme | Seal capture system | Elegant/Cute/Strong/Wise/Charismatic |
+|  |  |  |  |

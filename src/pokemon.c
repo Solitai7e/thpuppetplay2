@@ -922,7 +922,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(KASEN),
     SPECIES_TO_NATIONAL(GOMASEKI),
     SPECIES_TO_NATIONAL(CWAKASAGI),
-};
+};//2PUPPETPY
 
  // Assigns all Hoenn Dex Indexes to a National Dex Index
 static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
@@ -1771,7 +1771,7 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_KASEN - 1]     = ANIM_SWING_CONVEX,
     [SPECIES_GOMASEKI - 1]      = ANIM_H_PIVOT,
     [SPECIES_CWAKASAGI - 1]    = ANIM_H_SLIDE_WOBBLE,
-};
+};//PUPPETPY
 
 static const u8 sMonAnimationDelayTable[NUM_SPECIES - 1] =
 {
