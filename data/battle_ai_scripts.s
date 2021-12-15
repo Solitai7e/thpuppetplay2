@@ -885,7 +885,7 @@ AI_CV_FalseSwipe_EncouragedMovesToMirror:
     .2byte MOVE_ATTRACT
     .2byte MOVE_SWAGGER
     .2byte MOVE_TORMENT
-    .2byte MOVE_FLATTER
+    .2byte MOVE_LUCKY_CHANT
     .2byte MOVE_TRICK
     .2byte MOVE_SUPERPOWER
     .2byte MOVE_SKILL_SWAP

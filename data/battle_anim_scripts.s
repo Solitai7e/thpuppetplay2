@@ -276,7 +276,7 @@ gBattleAnims_Moves::
 	.4byte Move_HEAT_WAVE
 	.4byte Move_HAIL
 	.4byte Move_TORMENT
-	.4byte Move_FLATTER
+	.4byte Move_LUCKY_CHANT
 	.4byte Move_WILL_O_WISP
 	.4byte Move_MEMENTO
 	.4byte Move_FACADE
@@ -8402,39 +8402,39 @@ HyperBeamOrbs:
 	delay 1
 	return
 
-Move_FLATTER:
+Move_LUCKY_CHANT:
 	loadspritegfx ANIM_TAG_SPOTLIGHT
 	loadspritegfx ANIM_TAG_CONFETTI
 	createvisualtask SoundTask_PlaySE2WithPanning, 5, SE_M_ENCORE2, SOUND_PAN_TARGET
 	createvisualtask AnimTask_CreateSpotlight, 2
 	createvisualtask AnimTask_HardwarePaletteFade, 2, 248, 3, 0, 10, 0
 	waitforvisualfinish
-	createsprite gFlatterSpotlightSpriteTemplate, ANIM_TARGET, 2, 0, -8, 80
+	createsprite gLuckyChantSpotlightSpriteTemplate, ANIM_TARGET, 2, 0, -8, 80
 	delay 0
 	createsprite gVerticalDipSpriteTemplate, ANIM_ATTACKER, 2, 5, 2, ANIM_TARGET
 	delay 10
 	createsprite gVerticalDipSpriteTemplate, ANIM_ATTACKER, 2, 5, 2, ANIM_TARGET
 	delay 0
 	createvisualtask SoundTask_PlaySE1WithPanning, 5, SE_M_FLATTER, SOUND_PAN_ATTACKER
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
-	call CreateFlatterConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
+	call CreateLuckyChantConfetti
 	delay 5
 	createvisualtask SoundTask_PlaySE1WithPanning, 5, SE_M_FLATTER, SOUND_PAN_TARGET
 	waitforvisualfinish
@@ -8442,9 +8442,9 @@ Move_FLATTER:
 	waitforvisualfinish
 	createvisualtask AnimTask_RemoveSpotlight, 2
 	end
-CreateFlatterConfetti:
-	createsprite gFlatterConfettiSpriteTemplate, ANIM_ATTACKER, 40, ANIM_ATTACKER
-	createsprite gFlatterConfettiSpriteTemplate, ANIM_ATTACKER, 40, ANIM_TARGET
+CreateLuckyChantConfetti:
+	createsprite gLuckyChantConfettiSpriteTemplate, ANIM_ATTACKER, 40, ANIM_ATTACKER
+	createsprite gLuckyChantConfettiSpriteTemplate, ANIM_ATTACKER, 40, ANIM_TARGET
 	return
 
 Move_RECOLLECTION:

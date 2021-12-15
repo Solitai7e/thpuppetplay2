@@ -1303,7 +1303,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_FLANDRE,
                         .heldItem = ITEM_SALAC_BERRY,
-                        .moves = {MOVE_SUPERPOWER, MOVE_BITE, MOVE_SMILE, MOVE_FLATTER},
+                        .moves = {MOVE_SUPERPOWER, MOVE_BITE, MOVE_SMILE, MOVE_LUCKY_CHANT},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 252,

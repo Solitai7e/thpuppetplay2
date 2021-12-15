@@ -532,7 +532,7 @@ const u16 gEasyChatWordsByLetter_F[] = {
     EC_MOVE2(FLASH),
     EC_WORD_FLASH_FIRE,
     EC_WORD_FLATTEN,
-    EC_MOVE(FLATTER),
+    EC_MOVE(LUCKY_CHANT),
     EC_WORD_FLOWERS,
     EC_MOVE(FLY),
     EC_POKEMON(ASANAE),

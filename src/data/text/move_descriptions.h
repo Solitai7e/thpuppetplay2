@@ -1037,7 +1037,7 @@ static const u8 sTormentDescription[] = _(
     "Torments the foe and stops\n"
     "successive use of a move.");
 
-static const u8 sFlatterDescription[] = _(
+static const u8 sLuckyChantDescription[] = _(
     "Confuses the foe, but\n"
     "raises its SP. ATK.");
 
@@ -1679,7 +1679,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_HEAT_WAVE - 1] = sHeatWaveDescription,
     [MOVE_HAIL - 1] = sHailDescription,
     [MOVE_TORMENT - 1] = sTormentDescription,
-    [MOVE_FLATTER - 1] = sFlatterDescription,
+    [MOVE_LUCKY_CHANT - 1] = sLuckyChantDescription,
     [MOVE_WILL_O_WISP - 1] = sWillOWispDescription,
     [MOVE_MEMENTO - 1] = sMementoDescription,
     [MOVE_FACADE - 1] = sFacadeDescription,

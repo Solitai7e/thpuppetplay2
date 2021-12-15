@@ -65,10 +65,10 @@ static void AnimWeakFrustrationAngerMark(struct Sprite *);
 static void AnimNaturePowerPetal(struct Sprite *);
 static void AnimNaturePowerPetal_Step(struct Sprite *);
 static void AnimPainSplitProjectile(struct Sprite *);
-static void AnimFlatterConfetti(struct Sprite *);
-static void AnimFlatterConfetti_Step(struct Sprite *);
-static void AnimFlatterSpotlight(struct Sprite *);
-static void AnimFlatterSpotlight_Step(struct Sprite *);
+static void AnimLuckyChantConfetti(struct Sprite *);
+static void AnimLuckyChantConfetti_Step(struct Sprite *);
+static void AnimLuckyChantSpotlight(struct Sprite *);
+static void AnimLuckyChantSpotlight_Step(struct Sprite *);
 static void AnimReversalOrb(struct Sprite *);
 static void AnimReversalOrb_Step(struct Sprite *);
 static void AnimYawnCloud(struct Sprite *);
@@ -744,7 +744,7 @@ const struct SpriteTemplate gPainSplitProjectileSpriteTemplate =
     .callback = AnimPainSplitProjectile,
 };
 
-const struct SpriteTemplate gFlatterConfettiSpriteTemplate =
+const struct SpriteTemplate gLuckyChantConfettiSpriteTemplate =
 {
     .tileTag = ANIM_TAG_CONFETTI,
     .paletteTag = ANIM_TAG_CONFETTI,
@@ -752,10 +752,10 @@ const struct SpriteTemplate gFlatterConfettiSpriteTemplate =
     .anims = gDummySpriteAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimFlatterConfetti,
+    .callback = AnimLuckyChantConfetti,
 };
 
-const struct SpriteTemplate gFlatterSpotlightSpriteTemplate =
+const struct SpriteTemplate gLuckyChantSpotlightSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SPOTLIGHT,
     .paletteTag = ANIM_TAG_SPOTLIGHT,
@@ -763,7 +763,7 @@ const struct SpriteTemplate gFlatterSpotlightSpriteTemplate =
     .anims = gDummySpriteAnimTable,
     .images = NULL,
     .affineAnims = gSpotlightAffineAnimTable,
-    .callback = AnimFlatterSpotlight,
+    .callback = AnimLuckyChantSpotlight,
 };
 
 const struct SpriteTemplate gReversalOrbSpriteTemplate =
@@ -3025,7 +3025,7 @@ void AnimTask_PainSplitMovement(u8 taskId)
 
 // Move a piece of confetti in a slightly-random speed across the screen.
 // arg 0: which battler the confetti starts from
-static void AnimFlatterConfetti(struct Sprite *sprite)
+static void AnimLuckyChantConfetti(struct Sprite *sprite)
 {
     u8 tileOffset;
     int rand1;
@@ -3053,10 +3053,10 @@ static void AnimFlatterConfetti(struct Sprite *sprite)
         sprite->x = 248;
 
     sprite->y = 104;
-    sprite->callback = AnimFlatterConfetti_Step;
+    sprite->callback = AnimLuckyChantConfetti_Step;
 }
 
-static void AnimFlatterConfetti_Step(struct Sprite *sprite)
+static void AnimLuckyChantConfetti_Step(struct Sprite *sprite)
 {
     if (sprite->data[2] == 0)
     {
@@ -3082,7 +3082,7 @@ static void AnimFlatterConfetti_Step(struct Sprite *sprite)
 // arg 0: initial x pixel offset
 // arg 1: initial y pixel offset
 // arg 2: duration of fully-opened spotlight
-static void AnimFlatterSpotlight(struct Sprite *sprite)
+static void AnimLuckyChantSpotlight(struct Sprite *sprite)
 {
     SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG_ALL | WINOUT_WIN01_OBJ | WINOUT_WIN01_CLR | WINOUT_WINOBJ_BG_ALL | WINOUT_WINOBJ_OBJ);
     SetGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_OBJWIN_ON);
@@ -3095,10 +3095,10 @@ static void AnimFlatterSpotlight(struct Sprite *sprite)
     InitSpritePosToAnimTarget(sprite, FALSE);
     sprite->oam.objMode = ST_OAM_OBJ_WINDOW;
     sprite->invisible = TRUE;
-    sprite->callback = AnimFlatterSpotlight_Step;
+    sprite->callback = AnimLuckyChantSpotlight_Step;
 }
 
-static void AnimFlatterSpotlight_Step(struct Sprite *sprite)
+static void AnimLuckyChantSpotlight_Step(struct Sprite *sprite)
 {
     switch (sprite->data[1])
     {
