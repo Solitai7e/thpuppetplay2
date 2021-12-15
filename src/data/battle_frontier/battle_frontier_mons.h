@@ -1493,7 +1493,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_DREMILIA_1] = {
         .species = SPECIES_DREMILIA,
-        .moves = {MOVE_WATER_PULSE, MOVE_BLADE_FLASH, MOVE_NASTY_PLOT, MOVE_SWALLOW},
+        .moves = {MOVE_WATER_PULSE, MOVE_BLADE_FLASH, MOVE_NASTY_PLOT, MOVE_MYSTIC_WATER},
         .itemTableId = BATTLE_FRONTIER_ITEM_SITRUS_BERRY,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_HP,
         .nature = NATURE_QUIET
@@ -1738,7 +1738,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_ADMEILING_1] = {
         .species = SPECIES_ADMEILING,
-        .moves = {MOVE_NASTY_PLOT, MOVE_SWALLOW, MOVE_MIRROR_SHOT, MOVE_POISON_BOMB},
+        .moves = {MOVE_NASTY_PLOT, MOVE_MYSTIC_WATER, MOVE_MIRROR_SHOT, MOVE_POISON_BOMB},
         .itemTableId = BATTLE_FRONTIER_ITEM_LAX_INCENSE,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE,
         .nature = NATURE_QUIRKY

@@ -2041,7 +2041,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_NASTY_PLOT},
     },
 
-    [MOVE_SWALLOW] =
+    [MOVE_MYSTIC_WATER] =
     {
         .effect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,

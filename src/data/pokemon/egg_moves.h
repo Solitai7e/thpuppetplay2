@@ -671,7 +671,7 @@ const u16 gEggMoves[] = {
               MOVE_CURSE,
               MOVE_MUD_SLAP,
               MOVE_NASTY_PLOT,
-              MOVE_SWALLOW,
+              MOVE_MYSTIC_WATER,
               MOVE_MIRROR_SHOT),
 
     egg_moves(CRIKAKO,
@@ -1104,7 +1104,7 @@ const u16 gEggMoves[] = {
     egg_moves(ASUIKA,
               MOVE_SPLASHING,
               MOVE_NASTY_PLOT,
-              MOVE_SWALLOW,
+              MOVE_MYSTIC_WATER,
               MOVE_MIRROR_SHOT,
               MOVE_YAWN,
               MOVE_ROCK_WRECKER,
@@ -1234,7 +1234,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(TSATORI,
               MOVE_NASTY_PLOT,
-              MOVE_SWALLOW,
+              MOVE_MYSTIC_WATER,
               MOVE_MIRROR_SHOT,
               MOVE_BODY_SLAM),
 

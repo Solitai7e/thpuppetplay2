@@ -56,7 +56,7 @@ static void AnimWishStar(struct Sprite *);
 static void AnimWishStar_Step(struct Sprite *);
 static void AnimMiniTwinklingStar(struct Sprite *);
 static void AnimMiniTwinklingStar_Step(struct Sprite *);
-static void AnimSwallowBlueOrb(struct Sprite *);
+static void AnimMysticWaterBlueOrb(struct Sprite *);
 static void AnimGreenStar(struct Sprite *);
 static void AnimGreenStar_Step1(struct Sprite *);
 static void AnimGreenStar_Step2(struct Sprite *);
@@ -566,7 +566,7 @@ const union AffineAnimCmd gMirrorShotDeformMonAffineAnimCmds[] =
     AFFINEANIMCMD_END,
 };
 
-const struct SpriteTemplate gSwallowBlueOrbSpriteTemplate =
+const struct SpriteTemplate gMysticWaterBlueOrbSpriteTemplate =
 {
     .tileTag = ANIM_TAG_BLUE_ORB,
     .paletteTag = ANIM_TAG_BLUE_ORB,
@@ -574,10 +574,10 @@ const struct SpriteTemplate gSwallowBlueOrbSpriteTemplate =
     .anims = gDummySpriteAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimSwallowBlueOrb,
+    .callback = AnimMysticWaterBlueOrb,
 };
 
-const union AffineAnimCmd gSwallowDeformMonAffineAnimCmds[] =
+const union AffineAnimCmd gMysticWaterwDeformMonAffineAnimCmds[] =
 {
     AFFINEANIMCMD_FRAME(0, 6, 0, 20),
     AFFINEANIMCMD_FRAME(0, 0, 0, 20),
@@ -2215,7 +2215,7 @@ void AnimTask_MirrorShotDeformMon(u8 taskId)
     }
 }
 
-static void AnimSwallowBlueOrb(struct Sprite *sprite)
+static void AnimMysticWaterBlueOrb(struct Sprite *sprite)
 {
     switch (sprite->data[0])
     {
@@ -2234,11 +2234,11 @@ static void AnimSwallowBlueOrb(struct Sprite *sprite)
     }
 }
 
-void AnimTask_SwallowDeformMon(u8 taskId)
+void AnimTask_MysticWaterDeformMon(u8 taskId)
 {
     if (!gTasks[taskId].data[0])
     {
-        PrepareAffineAnimInTaskData(&gTasks[taskId], GetAnimBattlerSpriteId(ANIM_ATTACKER), gSwallowDeformMonAffineAnimCmds);
+        PrepareAffineAnimInTaskData(&gTasks[taskId], GetAnimBattlerSpriteId(ANIM_ATTACKER), gMysticWaterwDeformMonAffineAnimCmds);
         gTasks[taskId].data[0]++;
     }
     else

@@ -1021,7 +1021,7 @@ static const u8 sMirrorShotDescription[] = _(
     "Releases stockpiled power\n"
     "(the more the better).");
 
-static const u8 sSwallowDescription[] = _(
+static const u8 sMysticWaterDescription[] = _(
     "Absorbs stockpiled power\n"
     "and restores HP.");
 
@@ -1675,7 +1675,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_PERFORMANCE - 1] = sPerformanceDescription,
     [MOVE_NASTY_PLOT - 1] = sNastyPlotDescription,
     [MOVE_MIRROR_SHOT - 1] = sMirrorShotDescription,
-    [MOVE_SWALLOW - 1] = sSwallowDescription,
+    [MOVE_MYSTIC_WATER - 1] = sMysticWaterDescription,
     [MOVE_HEAT_WAVE - 1] = sHeatWaveDescription,
     [MOVE_HAIL - 1] = sHailDescription,
     [MOVE_TORMENT - 1] = sTormentDescription,

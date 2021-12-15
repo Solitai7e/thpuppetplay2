@@ -272,7 +272,7 @@ gBattleAnims_Moves::
 	.4byte Move_PERFORMANCE
 	.4byte Move_NASTY_PLOT
 	.4byte Move_MIRROR_SHOT
-	.4byte Move_SWALLOW
+	.4byte Move_MYSTIC_WATER
 	.4byte Move_HEAT_WAVE
 	.4byte Move_HAIL
 	.4byte Move_TORMENT
@@ -8237,41 +8237,41 @@ MirrorShotStrongest:
 	createsprite gMirrorShotOrbSpriteTemplate, ANIM_ATTACKER, 2, 240
 	goto MirrorShotContinue
 
-Move_SWALLOW:
+Move_MYSTIC_WATER:
 	loadspritegfx ANIM_TAG_BLUE_ORB
 	loadspritegfx ANIM_TAG_BLUE_STAR
 	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_SwallowDeformMon, 5
+	createvisualtask AnimTask_MysticWaterDeformMon, 5
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 8, 2
 	delay 38
 	playsewithpan SE_M_MIRROR_SHOT, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 2, 0, 12, 1
-	call SwallowEffect
-	jumpifmoveturn 2, SwallowGood
-	jumpifmoveturn 3, SwallowBest
-SwallowContinue:
+	call MysticWaterEffect
+	jumpifmoveturn 2, MysticWaterGood
+	jumpifmoveturn 3, MysticWaterBest
+MysticWaterContinue:
 	waitforvisualfinish
 	call HealingEffect
 	end
-SwallowEffect:
-	createsprite gSwallowBlueOrbSpriteTemplate, ANIM_ATTACKER, 2, 0, -8
+MysticWaterEffect:
+	createsprite gMysticWaterBlueOrbSpriteTemplate, ANIM_ATTACKER, 2, 0, -8
 	delay 1
-	createsprite gSwallowBlueOrbSpriteTemplate, ANIM_ATTACKER, 2, -24, -8
+	createsprite gMysticWaterBlueOrbSpriteTemplate, ANIM_ATTACKER, 2, -24, -8
 	delay 1
-	createsprite gSwallowBlueOrbSpriteTemplate, ANIM_ATTACKER, 2, 16, -8
+	createsprite gMysticWaterBlueOrbSpriteTemplate, ANIM_ATTACKER, 2, 16, -8
 	delay 1
-	createsprite gSwallowBlueOrbSpriteTemplate, ANIM_ATTACKER, 2, -16, -8
+	createsprite gMysticWaterBlueOrbSpriteTemplate, ANIM_ATTACKER, 2, -16, -8
 	delay 1
-	createsprite gSwallowBlueOrbSpriteTemplate, ANIM_ATTACKER, 2, 24, -8
+	createsprite gMysticWaterBlueOrbSpriteTemplate, ANIM_ATTACKER, 2, 24, -8
 	delay 1
 	return
-SwallowGood:
-	call SwallowEffect
-	goto SwallowContinue
-SwallowBest:
-	call SwallowEffect
-	call SwallowEffect
-	goto SwallowContinue
+MysticWaterGood:
+	call MysticWaterEffect
+	goto MysticWaterContinue
+MysticWaterBest:
+	call MysticWaterEffect
+	call MysticWaterEffect
+	goto MysticWaterContinue
 
 Move_TRANSFORM:
 	monbg ANIM_ATTACKER
