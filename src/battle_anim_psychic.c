@@ -22,7 +22,7 @@ static void AnimQuestionMark_Step2(struct Sprite *);
 static void AnimRedX(struct Sprite *);
 static void AnimSkillSwapOrb(struct Sprite *);
 static void AnimPsychoBoost(struct Sprite *);
-static void AnimTask_MeditateStretchAttacker_Step(u8);
+static void AnimTask_ZenHeadbuttStretchAttacker_Step(u8);
 static void AnimTask_Teleport_Step(u8);
 static void AnimTask_ImprisonOrbs_Step(u8);
 static void AnimTask_SkillSwap_Step(u8);
@@ -268,7 +268,7 @@ const struct SpriteTemplate gQuestionMarkSpriteTemplate =
     .callback = AnimQuestionMark,
 };
 
-static const union AffineAnimCmd sAffineAnim_MeditateStretchAttacker[] =
+static const union AffineAnimCmd sAffineAnim_ZenHeadbuttStretchAttacker[] =
 {
     AFFINEANIMCMD_FRAME(-8, 10, 0, 16),
     AFFINEANIMCMD_FRAME(18, -18, 0, 16),
@@ -689,16 +689,16 @@ static void AnimQuestionMark_Step2(struct Sprite *sprite)
     }
 }
 
-void AnimTask_MeditateStretchAttacker(u8 taskId)
+void AnimTask_ZenHeadbuttStretchAttacker(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
     u8 spriteId = GetAnimBattlerSpriteId(ANIM_ATTACKER);
     task->data[0] = spriteId;
-    PrepareAffineAnimInTaskData(task, spriteId, sAffineAnim_MeditateStretchAttacker);
-    task->func = AnimTask_MeditateStretchAttacker_Step;
+    PrepareAffineAnimInTaskData(task, spriteId, sAffineAnim_ZenHeadbuttStretchAttacker);
+    task->func = AnimTask_ZenHeadbuttStretchAttacker_Step;
 }
 
-static void AnimTask_MeditateStretchAttacker_Step(u8 taskId)
+static void AnimTask_ZenHeadbuttStretchAttacker_Step(u8 taskId)
 {
     if (!RunAffineAnimFromTaskData(&gTasks[taskId]))
         DestroyAnimVisualTask(taskId);

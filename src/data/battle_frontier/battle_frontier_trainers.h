@@ -435,9 +435,9 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
     [FRONTIER_TRAINER_DERRICK] = {
         .facilityClass = FACILITY_CLASS_BUG_MANIAC,
         .trainerName = _("DERRICK"),
-        .speechBefore = {EC_WORD_LET_S, EC_WORD_SEE, EC_WORD_YOU, EC_MOVE2(MEDITATE), EC_WORD_LIKE, EC_WORD_ME},
-        .speechWin = {EC_WORD_HOW, EC_WORD_I, EC_MOVE2(MEDITATE), EC_WORD_IS, EC_WORD_JUST, EC_WORD_BEAUTIFUL},
-        .speechLose = {EC_WORD_I, EC_WORD_WILL, EC_MOVE2(MEDITATE), EC_WORD_FOR, EC_WORD_A, EC_MOVE2(CALM_MIND)},
+        .speechBefore = {EC_WORD_LET_S, EC_WORD_SEE, EC_WORD_YOU, EC_MOVE2(ZEN_HEADBUTT), EC_WORD_LIKE, EC_WORD_ME},
+        .speechWin = {EC_WORD_HOW, EC_WORD_I, EC_MOVE2(ZEN_HEADBUTT), EC_WORD_IS, EC_WORD_JUST, EC_WORD_BEAUTIFUL},
+        .speechLose = {EC_WORD_I, EC_WORD_WILL, EC_MOVE2(ZEN_HEADBUTT), EC_WORD_FOR, EC_WORD_A, EC_MOVE2(CALM_MIND)},
         .monSet = gBattleFrontierTrainerMons_Derrick
     },
     [FRONTIER_TRAINER_BRYSON] = {

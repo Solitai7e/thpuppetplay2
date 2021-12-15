@@ -112,7 +112,7 @@ gBattleAnims_Moves::
 	.4byte Move_PSYSHOT
 	.4byte Move_MANA_BURST
 	.4byte Move_HYPNOSIS
-	.4byte Move_MEDITATE
+	.4byte Move_ZEN_HEADBUTT
 	.4byte Move_AGILITY
 	.4byte Move_QUICK_ATTACK
 	.4byte Move_RAGE
@@ -2696,9 +2696,9 @@ DigThrowDirt:
 	delay 32
 	return
 
-Move_MEDITATE:
+Move_ZEN_HEADBUTT:
 	call SetPsychicBackground
-	createvisualtask AnimTask_MeditateStretchAttacker, 2
+	createvisualtask AnimTask_ZenHeadbuttStretchAttacker, 2
 	playsewithpan SE_M_HEADBUTT, SOUND_PAN_ATTACKER
 	delay 16
 	playsewithpan SE_M_DOUBLE_EDGE, SOUND_PAN_ATTACKER

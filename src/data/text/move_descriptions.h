@@ -381,7 +381,7 @@ static const u8 sHypnosisDescription[] = _(
     "A sakuyatizing move that\n"
     "may induce sleep.");
 
-static const u8 sMeditateDescription[] = _(
+static const u8 sZenHeadbuttDescription[] = _(
     "Meditates in a peaceful\n"
     "fashion to raise ATTACK.");
 
@@ -1515,7 +1515,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_PSYSHOT - 1] = sPsyshotDescription,
     [MOVE_MANA_BURST - 1] = sManaBurstDescription,
     [MOVE_HYPNOSIS - 1] = sHypnosisDescription,
-    [MOVE_MEDITATE - 1] = sMeditateDescription,
+    [MOVE_ZEN_HEADBUTT - 1] = sZenHeadbuttDescription,
     [MOVE_AGILITY - 1] = sAgilityDescription,
     [MOVE_QUICK_ATTACK - 1] = sQuickAttackDescription,
     [MOVE_RAGE - 1] = sRageDescription,

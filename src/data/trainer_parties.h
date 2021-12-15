@@ -4134,7 +4134,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Vicky[] = {
     .iv = 200,
     .lvl = 18,
     .species = SPECIES_AYUUGI,
-    .moves = {MOVE_HI_JUMP_KICK, MOVE_MEDITATE, MOVE_PSYSHOT, MOVE_DETECT}
+    .moves = {MOVE_HI_JUMP_KICK, MOVE_ZEN_HEADBUTT, MOVE_PSYSHOT, MOVE_DETECT}
     }
 };
 
@@ -8654,7 +8654,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Vivian[] = {
     .iv = 100,
     .lvl = 17,
     .species = SPECIES_AYUUGI,
-    .moves = {MOVE_THUNDER_PUNCH, MOVE_DETECT, MOVE_PSYSHOT, MOVE_MEDITATE}
+    .moves = {MOVE_THUNDER_PUNCH, MOVE_DETECT, MOVE_PSYSHOT, MOVE_ZEN_HEADBUTT}
     }
 };
 
