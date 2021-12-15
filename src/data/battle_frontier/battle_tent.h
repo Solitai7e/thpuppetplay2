@@ -1000,7 +1000,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_AFLANDRE] = {
         .species = SPECIES_AFLANDRE,
-        .moves = {MOVE_SAND_ATTACK, MOVE_KNOCK_OFF, MOVE_FORCE_PALM, MOVE_BELLY_DRUM},
+        .moves = {MOVE_SAND_ATTACK, MOVE_BRAVER, MOVE_FORCE_PALM, MOVE_BELLY_DRUM},
         .itemTableId = BATTLE_FRONTIER_ITEM_FOCUS_BAND,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_ADAMANT

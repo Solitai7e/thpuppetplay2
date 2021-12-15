@@ -3948,7 +3948,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGIC_COAT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED,
     },
 
-    [MOVE_KNOCK_OFF] =
+    [MOVE_BRAVER] =
     {
         .effect = EFFECT_DEFENSE_DOWN_HIT,
         .split = 0,

@@ -4098,7 +4098,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Timothy2[] = {
     .iv = 210,
     .lvl = 33,
     .species = SPECIES_ADAIYOUSEI,
-    .moves = {MOVE_FORCE_PALM, MOVE_KNOCK_OFF, MOVE_SAND_ATTACK, MOVE_DIG}
+    .moves = {MOVE_FORCE_PALM, MOVE_BRAVER, MOVE_SAND_ATTACK, MOVE_DIG}
     }
 };
 
@@ -4107,7 +4107,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Timothy3[] = {
     .iv = 220,
     .lvl = 36,
     .species = SPECIES_ADAIYOUSEI,
-    .moves = {MOVE_FORCE_PALM, MOVE_KNOCK_OFF, MOVE_SAND_ATTACK, MOVE_DIG}
+    .moves = {MOVE_FORCE_PALM, MOVE_BRAVER, MOVE_SAND_ATTACK, MOVE_DIG}
     }
 };
 

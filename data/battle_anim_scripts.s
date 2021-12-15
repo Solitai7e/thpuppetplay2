@@ -298,7 +298,7 @@ gBattleAnims_Moves::
 	.4byte Move_REVENGE
 	.4byte Move_BRICK_BREAK
 	.4byte Move_YAWN
-	.4byte Move_KNOCK_OFF
+	.4byte Move_BRAVER
 	.4byte Move_ENDEAVOR
 	.4byte Move_ERUPTION
 	.4byte Move_SKILL_SWAP
@@ -9549,13 +9549,13 @@ Move_PSYCHO_BOOST:
 	call UnsetPsychicBackground
 	end
 
-Move_KNOCK_OFF:
+Move_BRAVER:
 	loadspritegfx ANIM_TAG_SLAM_HIT_2
 	loadspritegfx ANIM_TAG_IMPACT
 	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 6
 	delay 4
 	playsewithpan SE_M_VITAL_THROW, SOUND_PAN_TARGET
-	createsprite gKnockOffStrikeSpriteTemplate, ANIM_TARGET, 2, -16, -16
+	createsprite gBraverStrikeSpriteTemplate, ANIM_TARGET, 2, -16, -16
 	delay 8
 	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 31, 5, 1, RGB_WHITE, 10, 0, 0
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 3, 0, 0, ANIM_TARGET, 2

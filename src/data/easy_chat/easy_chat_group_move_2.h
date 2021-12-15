@@ -90,7 +90,7 @@ const u16 gEasyChatGroup_Move2[] = {
     MOVE_INGRAIN,
     MOVE_IRON_DEFENSE,
     MOVE_JUMP_KICK,
-    MOVE_KNOCK_OFF,
+    MOVE_BRAVER,
     MOVE_LEAF_BLADE,
     MOVE_LEECH_SEED,
     MOVE_LEER,

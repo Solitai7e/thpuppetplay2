@@ -194,7 +194,7 @@ const u16 gEggMoves[] = {
     egg_moves(LETTY,
               MOVE_ENCORE,
               MOVE_BARRIER,
-              MOVE_KNOCK_OFF,
+              MOVE_BRAVER,
               MOVE_FIRE_PUNCH,
               MOVE_THUNDER_PUNCH,
               MOVE_ICE_PUNCH),
@@ -321,7 +321,7 @@ const u16 gEggMoves[] = {
               MOVE_AMNESIA,
               MOVE_FLAIL,
               MOVE_SLAM,
-              MOVE_KNOCK_OFF,
+              MOVE_BRAVER,
               MOVE_SWORDS_DANCE),
 
     egg_moves(CLYRICA,
@@ -469,7 +469,7 @@ const u16 gEggMoves[] = {
               MOVE_RAPID_SPIN,
               MOVE_DIG,
               MOVE_FLAIL,
-              MOVE_KNOCK_OFF,
+              MOVE_BRAVER,
               MOVE_CONFUSE_RAY),
 
     egg_moves(CBYAKUREN,
@@ -1282,7 +1282,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(ADCHEN,
               MOVE_RAPID_SPIN,
-              MOVE_KNOCK_OFF,
+              MOVE_BRAVER,
               MOVE_SWORDS_DANCE,
               MOVE_ROCK_WRECKER),
 

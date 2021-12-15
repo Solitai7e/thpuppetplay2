@@ -1125,7 +1125,7 @@ static const u8 sYawnDescription[] = _(
     "Lulls the foe into yawning,\n"
     "then sleeping next turn.");
 
-static const u8 sKnockOffDescription[] = _(
+static const u8 sBraverDescription[] = _(
     "Knocks down the foe's held\n"
     "item to prevent its use.");
 
@@ -1701,7 +1701,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_REVENGE - 1] = sRevengeDescription,
     [MOVE_BRICK_BREAK - 1] = sBrickBreakDescription,
     [MOVE_YAWN - 1] = sYawnDescription,
-    [MOVE_KNOCK_OFF - 1] = sKnockOffDescription,
+    [MOVE_BRAVER - 1] = sBraverDescription,
     [MOVE_ENDEAVOR - 1] = sEndeavorDescription,
     [MOVE_ERUPTION - 1] = sEruptionDescription,
     [MOVE_SKILL_SWAP - 1] = sSkillSwapDescription,

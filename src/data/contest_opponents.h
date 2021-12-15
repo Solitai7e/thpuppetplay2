@@ -2442,7 +2442,7 @@ const struct ContestPokemon gContestOpponents[] =
         {
             MOVE_CHARMING_LOOK,
             MOVE_FAINT_ATTACK,
-            MOVE_KNOCK_OFF,
+            MOVE_BRAVER,
             MOVE_CONFUSE_RAY
         },
         .cool = 25,

@@ -92,8 +92,8 @@ static void AnimMeteorMashStar_Step(struct Sprite *sprite);
 static void AnimBlockX(struct Sprite *);
 static void AnimBlockX_Step(struct Sprite *);
 static void AnimUnusedItemBagSteal(struct Sprite *);
-static void AnimKnockOffStrike(struct Sprite *);
-static void AnimKnockOffStrike_Step(struct Sprite *sprite);
+static void AnimBraverStrike(struct Sprite *);
+static void AnimBraverStrike_Step(struct Sprite *sprite);
 static void AnimRecycle(struct Sprite *);
 static void AnimRecycle_Step(struct Sprite *);
 static void SetPsychicBackground_Step(u8);
@@ -1104,47 +1104,47 @@ static const struct SpriteTemplate sUnusedItemBagStealSpriteTemplate =
     .callback = AnimUnusedItemBagSteal,
 };
 
-const union AnimCmd gKnockOffStrikeAnimCmds[] =
+const union AnimCmd gBraverStrikeAnimCmds[] =
 {
     ANIMCMD_FRAME(0, 4),
     ANIMCMD_FRAME(64, 4),
     ANIMCMD_END,
 };
 
-const union AnimCmd *const gKnockOffStrikeAnimTable[] =
+const union AnimCmd *const gBraverStrikeAnimTable[] =
 {
-    gKnockOffStrikeAnimCmds,
+    gBraverStrikeAnimCmds,
 };
 
-const union AffineAnimCmd gKnockOffStrikeAffineanimCmds1[] =
+const union AffineAnimCmd gBraverStrikeAffineanimCmds1[] =
 {
     AFFINEANIMCMD_FRAME(0x100, 0x100, 0, 0),
     AFFINEANIMCMD_FRAME(0, 0, -4, 8),
     AFFINEANIMCMD_END,
 };
 
-const union AffineAnimCmd gKnockOffStrikeAffineanimCmds2[] =
+const union AffineAnimCmd gBraverStrikeAffineanimCmds2[] =
 {
     AFFINEANIMCMD_FRAME(-0x100, 0x100, 0, 0),
     AFFINEANIMCMD_FRAME(0, 0, 4, 8),
     AFFINEANIMCMD_END,
 };
 
-const union AffineAnimCmd *const gKnockOffStrikeAffineAnimTable[] =
+const union AffineAnimCmd *const gBraverStrikeAffineAnimTable[] =
 {
-    gKnockOffStrikeAffineanimCmds1,
-    gKnockOffStrikeAffineanimCmds2,
+    gBraverStrikeAffineanimCmds1,
+    gBraverStrikeAffineanimCmds2,
 };
 
-const struct SpriteTemplate gKnockOffStrikeSpriteTemplate =
+const struct SpriteTemplate gBraverStrikeSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SLAM_HIT_2,
     .paletteTag = ANIM_TAG_SLAM_HIT_2,
     .oam = &gOamData_AffineNormal_ObjNormal_64x64,
-    .anims = gKnockOffStrikeAnimTable,
+    .anims = gBraverStrikeAnimTable,
     .images = NULL,
-    .affineAnims = gKnockOffStrikeAffineAnimTable,
-    .callback = AnimKnockOffStrike,
+    .affineAnims = gBraverStrikeAffineAnimTable,
+    .callback = AnimBraverStrike,
 };
 
 const union AffineAnimCmd gRecycleSpriteAffineAnimCmds[] =
@@ -5291,7 +5291,7 @@ static void AnimTask_TeeterDanceMovement_Step(u8 taskId)
     }
 }
 
-static void AnimKnockOffStrike_Step(struct Sprite *sprite)
+static void AnimBraverStrike_Step(struct Sprite *sprite)
 {
     // These two cases are identical.
     if (GetBattlerSide(gBattleAnimTarget) == B_SIDE_PLAYER)
@@ -5316,7 +5316,7 @@ static void AnimKnockOffStrike_Step(struct Sprite *sprite)
 // Animates a strike that swipes downard at the target mon.
 // arg 0: initial x pixel offset
 // arg 1: initial y pixel offset
-static void AnimKnockOffStrike(struct Sprite *sprite)
+static void AnimBraverStrike(struct Sprite *sprite)
 {
     if (GetBattlerSide(gBattleAnimTarget) == B_SIDE_PLAYER)
     {
@@ -5334,7 +5334,7 @@ static void AnimKnockOffStrike(struct Sprite *sprite)
         sprite->y += gBattleAnimArgs[1];
     }
 
-    sprite->callback = AnimKnockOffStrike_Step;
+    sprite->callback = AnimBraverStrike_Step;
 }
 
 // Gradually fades a rotating recyle arrow sprite in and back out.
