@@ -583,19 +583,19 @@ struct StatFractions
 
 static const struct StatFractions sAccuracyStageRatios[] =
 {
-    { 33, 100}, // -6
-    { 36, 100}, // -5
-    { 43, 100}, // -4
-    { 50, 100}, // -3
-    { 60, 100}, // -2
-    { 75, 100}, // -1
-    {  1,   1}, //  0
-    {133, 100}, // +1
-    {166, 100}, // +2
-    {  2,   1}, // +3
-    {233, 100}, // +4
-    {133,  50}, // +5
-    {  3,   1}, // +6
+    {3, 9}, // -6
+    {3, 8}, // -5
+    {3, 7}, // -4
+    {3, 6}, // -3
+    {3, 5}, // -2
+    {3, 4}, // -1
+    {3, 3}, //  0
+    {4, 3}, // +1
+    {5, 3}, // +2
+    {6, 3}, // +3
+    {7, 3}, // +4
+    {8, 3}, // +5
+    {9, 3}, // +6
 };
 
 // The chance is 1/N for each stage.
@@ -611,7 +611,7 @@ static const u32 sStatusFlagsForMoveEffects[NUM_MOVE_EFFECTS] =
     [MOVE_EFFECT_TOXIC]          = STATUS1_TOXIC_POISON,
     [MOVE_EFFECT_CONFUSION]      = STATUS2_CONFUSION,
     [MOVE_EFFECT_FLINCH]         = STATUS2_FLINCHED,
-    [MOVE_EFFECT_PERFORMANCE]         = STATUS2_PERFORMANCE,
+    [MOVE_EFFECT_PERFORMANCE]    = STATUS2_PERFORMANCE,
     [MOVE_EFFECT_CHARGING]       = STATUS2_MULTIPLETURNS,
     [MOVE_EFFECT_WRAP]           = STATUS2_WRAPPED,
     [MOVE_EFFECT_RECHARGE]       = STATUS2_RECHARGE,
@@ -632,7 +632,7 @@ static const u8* const sMoveEffectBS_Ptrs[] =
     [MOVE_EFFECT_CONFUSION]        = BattleScript_MoveEffectConfusion,
     [MOVE_EFFECT_FLINCH]           = BattleScript_MoveEffectSleep,
     [MOVE_EFFECT_TRI_ATTACK]       = BattleScript_MoveEffectSleep,
-    [MOVE_EFFECT_PERFORMANCE]           = BattleScript_MoveEffectPerformance,
+    [MOVE_EFFECT_PERFORMANCE]      = BattleScript_MoveEffectPerformance,
     [MOVE_EFFECT_PAYDAY]           = BattleScript_MoveEffectPayDay,
     [MOVE_EFFECT_CHARGING]         = BattleScript_MoveEffectSleep,
     [MOVE_EFFECT_WRAP]             = BattleScript_MoveEffectWrap,
