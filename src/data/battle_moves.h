@@ -2856,7 +2856,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = 0,
     },
 
-    [MOVE_CHARM] =
+    [MOVE_SMILE] =
     {
         .effect = EFFECT_ATTACK_DOWN_2,
         .split = 0,

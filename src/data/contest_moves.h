@@ -310,7 +310,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_BETTER_IF_LAST,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_CHARM},
+        .comboMoves = {COMBO_STARTER_SMILE},
     },
 
     [MOVE_POISON_STING] =
@@ -358,7 +358,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_BETTER_IF_LAST,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_CHARM},
+        .comboMoves = {COMBO_STARTER_SMILE},
     },
 
     [MOVE_ROAR] =
@@ -1246,7 +1246,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_AVOID_STARTLE_ONCE,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .comboStarterId = COMBO_STARTER_REST,
-        .comboMoves = {COMBO_STARTER_BELLY_DRUM, COMBO_STARTER_CHARM, COMBO_STARTER_YAWN},
+        .comboMoves = {COMBO_STARTER_BELLY_DRUM, COMBO_STARTER_SMILE, COMBO_STARTER_YAWN},
     },
 
     [MOVE_ROCK_WRECKER] =
@@ -1486,7 +1486,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_MAKE_FOLLOWING_MONS_NERVOUS,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_CHARM},
+        .comboMoves = {COMBO_STARTER_SMILE},
     },
 
     [MOVE_BELLY_DRUM] =
@@ -1625,11 +1625,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_CHARM] =
+    [MOVE_SMILE] =
     {
         .effect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
         .contestCategory = CONTEST_CATEGORY_CUTE,
-        .comboStarterId = COMBO_STARTER_CHARM,
+        .comboStarterId = COMBO_STARTER_SMILE,
         .comboMoves = {0},
     },
 
@@ -2078,7 +2078,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_MAKE_FOLLOWING_MONS_NERVOUS,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_CHARM},
+        .comboMoves = {COMBO_STARTER_SMILE},
     },
 
     [MOVE_WILL_O_WISP] =

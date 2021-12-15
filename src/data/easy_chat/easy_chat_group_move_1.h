@@ -15,7 +15,7 @@ const u16 gEasyChatGroup_Move1[] = {
     MOVE_BRICK_BREAK,
     MOVE_BUBBLE,
     MOVE_CHARGE,
-    MOVE_CHARM,
+    MOVE_SMILE,
     MOVE_MANA_SHIELD,
     MOVE_CONFUSE_RAY,
     MOVE_CONSTRICT,

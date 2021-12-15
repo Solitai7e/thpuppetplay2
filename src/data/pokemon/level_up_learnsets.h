@@ -2392,7 +2392,7 @@ static const u16 sSaraLevelUpLearnset[] = {
 
 static const u16 sCLuizeLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_THUNDER_SHOCK),
-    LEVEL_UP_MOVE( 1, MOVE_CHARM),
+    LEVEL_UP_MOVE( 1, MOVE_SMILE),
     LEVEL_UP_MOVE( 6, MOVE_TAIL_WHIP),
     LEVEL_UP_MOVE( 8, MOVE_THUNDER_WAVE),
     LEVEL_UP_MOVE(11, MOVE_SWEET_KISS),
@@ -2401,7 +2401,7 @@ static const u16 sCLuizeLevelUpLearnset[] = {
 
 static const u16 sLuizeLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POUND),
-    LEVEL_UP_MOVE( 1, MOVE_CHARM),
+    LEVEL_UP_MOVE( 1, MOVE_SMILE),
     LEVEL_UP_MOVE( 4, MOVE_ENCORE),
     LEVEL_UP_MOVE( 8, MOVE_SING),
     LEVEL_UP_MOVE(13, MOVE_SWEET_KISS),
@@ -2410,7 +2410,7 @@ static const u16 sLuizeLevelUpLearnset[] = {
 
 static const u16 sCMargatroidLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SING),
-    LEVEL_UP_MOVE( 1, MOVE_CHARM),
+    LEVEL_UP_MOVE( 1, MOVE_SMILE),
     LEVEL_UP_MOVE( 4, MOVE_DEFENSE_CURL),
     LEVEL_UP_MOVE( 9, MOVE_POUND),
     LEVEL_UP_MOVE(14, MOVE_SWEET_KISS),
@@ -2419,7 +2419,7 @@ static const u16 sCMargatroidLevelUpLearnset[] = {
 
 static const u16 sMargatroidLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
-    LEVEL_UP_MOVE( 1, MOVE_CHARM),
+    LEVEL_UP_MOVE( 1, MOVE_SMILE),
     LEVEL_UP_MOVE( 6, MOVE_METRONOME),
     LEVEL_UP_MOVE(11, MOVE_SWEET_KISS),
     LEVEL_UP_MOVE(16, MOVE_YAWN),
@@ -2433,7 +2433,7 @@ static const u16 sMargatroidLevelUpLearnset[] = {
 
 static const u16 sCKanaLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
-    LEVEL_UP_MOVE( 1, MOVE_CHARM),
+    LEVEL_UP_MOVE( 1, MOVE_SMILE),
     LEVEL_UP_MOVE( 6, MOVE_METRONOME),
     LEVEL_UP_MOVE(11, MOVE_SWEET_KISS),
     LEVEL_UP_MOVE(16, MOVE_YAWN),
@@ -2865,7 +2865,7 @@ static const u16 sAMokouLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_SCARY_FACE),
     LEVEL_UP_MOVE( 4, MOVE_TAIL_WHIP),
-    LEVEL_UP_MOVE( 8, MOVE_CHARM),
+    LEVEL_UP_MOVE( 8, MOVE_SMILE),
     LEVEL_UP_MOVE(13, MOVE_BITE),
     LEVEL_UP_MOVE(19, MOVE_LICK),
     LEVEL_UP_MOVE(26, MOVE_ROAR),
@@ -2879,7 +2879,7 @@ static const u16 sDMokouLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_SCARY_FACE),
     LEVEL_UP_MOVE( 4, MOVE_TAIL_WHIP),
-    LEVEL_UP_MOVE( 8, MOVE_CHARM),
+    LEVEL_UP_MOVE( 8, MOVE_SMILE),
     LEVEL_UP_MOVE(13, MOVE_BITE),
     LEVEL_UP_MOVE(19, MOVE_LICK),
     LEVEL_UP_MOVE(28, MOVE_ROAR),
@@ -4131,7 +4131,7 @@ static const u16 sASunnyMilkLevelUpLearnset[] = {
     LEVEL_UP_MOVE(13, MOVE_SING),
     LEVEL_UP_MOVE(15, MOVE_DOUBLE_SLAP),
     LEVEL_UP_MOVE(19, MOVE_ASSIST),
-    LEVEL_UP_MOVE(25, MOVE_CHARM),
+    LEVEL_UP_MOVE(25, MOVE_SMILE),
     LEVEL_UP_MOVE(27, MOVE_FAINT_ATTACK),
     LEVEL_UP_MOVE(31, MOVE_COVET),
     LEVEL_UP_MOVE(37, MOVE_HEAL_BELL),
@@ -4280,7 +4280,7 @@ static const u16 sDHatateLevelUpLearnset[] = {
 
 static const u16 sAkiSistersLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-    LEVEL_UP_MOVE( 4, MOVE_CHARM),
+    LEVEL_UP_MOVE( 4, MOVE_SMILE),
     LEVEL_UP_MOVE(12, MOVE_WATER_GUN),
     LEVEL_UP_MOVE(16, MOVE_AGILITY),
     LEVEL_UP_MOVE(24, MOVE_DOUBLE_EDGE),
@@ -4671,7 +4671,7 @@ static const u16 sSYorihimeLevelUpLearnset[] = {
 
 static const u16 sCShinGyokuLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SPLASH),
-    LEVEL_UP_MOVE( 3, MOVE_CHARM),
+    LEVEL_UP_MOVE( 3, MOVE_SMILE),
     LEVEL_UP_MOVE( 6, MOVE_TAIL_WHIP),
     LEVEL_UP_MOVE(10, MOVE_BUBBLE),
     LEVEL_UP_MOVE(15, MOVE_SLAM),
@@ -4734,7 +4734,7 @@ static const u16 sHNazrinLevelUpLearnset[] = {
     LEVEL_UP_MOVE(13, MOVE_HELPING_HAND),
     LEVEL_UP_MOVE(19, MOVE_SPARK),
     LEVEL_UP_MOVE(22, MOVE_ENCORE),
-    LEVEL_UP_MOVE(28, MOVE_CHARM),
+    LEVEL_UP_MOVE(28, MOVE_SMILE),
     LEVEL_UP_MOVE(31, MOVE_CHARGE),
     LEVEL_UP_MOVE(37, MOVE_THUNDER),
     LEVEL_UP_MOVE(40, MOVE_BATON_PASS),
@@ -4830,7 +4830,7 @@ static const u16 sTIkuLevelUpLearnset[] = {
 
 static const u16 sAMinorikoLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SPLASH),
-    LEVEL_UP_MOVE( 1, MOVE_CHARM),
+    LEVEL_UP_MOVE( 1, MOVE_SMILE),
     LEVEL_UP_MOVE( 1, MOVE_ENCORE),
     LEVEL_UP_MOVE(15, MOVE_COUNTER),
     LEVEL_UP_MOVE(15, MOVE_MIRROR_COAT),
@@ -5242,7 +5242,7 @@ static const u16 sYukiLevelUpLearnset[] = {
 static const u16 sAdMokouLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 5, MOVE_NATURE_POWER),
-    LEVEL_UP_MOVE( 9, MOVE_CHARM),
+    LEVEL_UP_MOVE( 9, MOVE_SMILE),
     LEVEL_UP_MOVE(13, MOVE_LUNATIC),
     LEVEL_UP_MOVE(17, MOVE_QUICK_ATTACK),
     LEVEL_UP_MOVE(21, MOVE_WISH),
@@ -5549,7 +5549,7 @@ static const u16 sMamizouLevelUpLearnset[] = {
     LEVEL_UP_MOVE(35, MOVE_MIST_BALL),
     LEVEL_UP_MOVE(40, MOVE_PSYCHIC),
     LEVEL_UP_MOVE(45, MOVE_RECOVER),
-    LEVEL_UP_MOVE(50, MOVE_CHARM),
+    LEVEL_UP_MOVE(50, MOVE_SMILE),
     LEVEL_UP_END
 };
 

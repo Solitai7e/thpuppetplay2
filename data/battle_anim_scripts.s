@@ -220,7 +220,7 @@ gBattleAnims_Moves::
 	.4byte Move_SANDSTORM
 	.4byte Move_GIGA_DRAIN
 	.4byte Move_ENDURE
-	.4byte Move_CHARM
+	.4byte Move_SMILE
 	.4byte Move_TREMORS
 	.4byte Move_DRAWN_LINE
 	.4byte Move_SWAGGER
@@ -3217,7 +3217,7 @@ EndureEffect:
 	createsprite gEndureEnergySpriteTemplate, ANIM_ATTACKER, 2, 0, -12, 0, 1
 	return
 
-Move_CHARM:
+Move_SMILE:
 	loadspritegfx ANIM_TAG_MAGENTA_HEART
 	createvisualtask AnimTask_RockMonBackAndForth, 5, ANIM_ATTACKER, 2, 0
 	createsprite gMagentaHeartSpriteTemplate, ANIM_ATTACKER, 3, 0, 20

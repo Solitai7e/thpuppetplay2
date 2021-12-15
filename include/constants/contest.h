@@ -188,7 +188,7 @@
 #define COMBO_STARTER_WIRE_WEB   32
 #define COMBO_STARTER_LEER          33
 #define COMBO_STARTER_TAUNT         34
-#define COMBO_STARTER_CHARM         35
+#define COMBO_STARTER_SMILE         35
 #define COMBO_STARTER_HARDEN        36
 #define COMBO_STARTER_SING          37
 #define COMBO_STARTER_EARTHQUAKE    38

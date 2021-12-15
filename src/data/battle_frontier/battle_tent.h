@@ -755,7 +755,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
 {
     [SLATEPORT_TENT_MON_HLUNASA_1] = {
         .species = SPECIES_HLUNASA,
-        .moves = {MOVE_TACKLE, MOVE_CHARM, MOVE_DOUBLE_TEAM, MOVE_PIN_MISSILE},
+        .moves = {MOVE_TACKLE, MOVE_SMILE, MOVE_DOUBLE_TEAM, MOVE_PIN_MISSILE},
         .itemTableId = BATTLE_FRONTIER_ITEM_CHOICE_BAND,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK,
         .nature = NATURE_JOLLY
@@ -1126,7 +1126,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_ASUNNYMILK] = {
         .species = SPECIES_ASUNNYMILK,
-        .moves = {MOVE_ASSIST, MOVE_ATTRACT, MOVE_SING, MOVE_CHARM},
+        .moves = {MOVE_ASSIST, MOVE_ATTRACT, MOVE_SING, MOVE_SMILE},
         .itemTableId = BATTLE_FRONTIER_ITEM_PETAYA_BERRY,
         .evSpread = F_EV_SPREAD_DEFENSE | F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_CAREFUL
@@ -1175,7 +1175,7 @@ const struct FacilityMon gSlateportBattleTentMons[NUM_SLATEPORT_TENT_MONS] =
     },
     [SLATEPORT_TENT_MON_ADMOKOU] = {
         .species = SPECIES_ADMOKOU,
-        .moves = {MOVE_CHARM, MOVE_TACKLE, MOVE_ENCORE, MOVE_LUNATIC},
+        .moves = {MOVE_SMILE, MOVE_TACKLE, MOVE_ENCORE, MOVE_LUNATIC},
         .itemTableId = BATTLE_FRONTIER_ITEM_CHERI_BERRY,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
         .nature = NATURE_ADAMANT
@@ -2696,7 +2696,7 @@ const struct FacilityMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_HMERLIN_1] = {
         .species = SPECIES_HMERLIN,
-        .moves = {MOVE_DOUBLE_TEAM, MOVE_COVET, MOVE_ROCK_SMASH, MOVE_CHARM},
+        .moves = {MOVE_DOUBLE_TEAM, MOVE_COVET, MOVE_ROCK_SMASH, MOVE_SMILE},
         .itemTableId = BATTLE_FRONTIER_ITEM_SILK_SCARF,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE,
         .nature = NATURE_SASSY

@@ -938,7 +938,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_HNAZRIN,
                         .heldItem = ITEM_FOCUS_BAND,
-                        .moves = {MOVE_THUNDER_WAVE, MOVE_CHARM, MOVE_ENCORE, MOVE_SPARK},
+                        .moves = {MOVE_THUNDER_WAVE, MOVE_SMILE, MOVE_ENCORE, MOVE_SPARK},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 252,
@@ -1303,7 +1303,7 @@ static const struct TrHillFloor sDataTagNormal_Floors[] =
                     {
                         .species = SPECIES_FLANDRE,
                         .heldItem = ITEM_SALAC_BERRY,
-                        .moves = {MOVE_SUPERPOWER, MOVE_BITE, MOVE_CHARM, MOVE_FLATTER},
+                        .moves = {MOVE_SUPERPOWER, MOVE_BITE, MOVE_SMILE, MOVE_FLATTER},
                         .level = 0,
                         .ppBonuses = 0,
                         .hpEV = 252,
@@ -1844,7 +1844,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         {
                                             .species = SPECIES_CKANA,
                                             .heldItem = ITEM_SITRUS_BERRY,
-                                            .moves = {MOVE_PRANK, MOVE_CHARM, MOVE_SWEET_KISS, MOVE_WISH},
+                                            .moves = {MOVE_PRANK, MOVE_SMILE, MOVE_SWEET_KISS, MOVE_WISH},
                                             .level = 0,
                                             .ppBonuses = 0,
                                             .attackEV = 255,

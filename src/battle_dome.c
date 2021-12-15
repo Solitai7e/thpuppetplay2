@@ -345,7 +345,7 @@ static const u8 sBattleStyleMovePoints[MOVES_COUNT][NUM_MOVE_POINT_TYPES] =
     [MOVE_SANDSTORM]     = {0},
     [MOVE_GIGA_DRAIN]    = {[MOVE_POINTS_DMG] = 1, [MOVE_POINTS_ACCURATE] = 1, [MOVE_POINTS_LOW_PP] = 1},
     [MOVE_ENDURE]        = {[MOVE_POINTS_DEF] = 1},
-    [MOVE_CHARM]         = {[MOVE_POINTS_ACCURATE] = 1},
+    [MOVE_SMILE]         = {[MOVE_POINTS_ACCURATE] = 1},
     [MOVE_TREMORS]       = {[MOVE_POINTS_DMG] = 1},
     [MOVE_DRAWN_LINE]   = {[MOVE_POINTS_DMG] = 1, [MOVE_POINTS_ACCURATE] = 1},
     [MOVE_SWAGGER]       = {[MOVE_POINTS_EFFECT] = 1},

@@ -813,7 +813,7 @@ static const u8 sEndureDescription[] = _(
     "Endures any attack for\n"
     "1 turn, leaving at least 1HP.");
 
-static const u8 sCharmDescription[] = _(
+static const u8 sSmileDescription[] = _(
     "Charms the foe and sharply\n"
     "reduces its ATTACK.");
 
@@ -1623,7 +1623,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SANDSTORM - 1] = sSandstormDescription,
     [MOVE_GIGA_DRAIN - 1] = sGigaDrainDescription,
     [MOVE_ENDURE - 1] = sEndureDescription,
-    [MOVE_CHARM - 1] = sCharmDescription,
+    [MOVE_SMILE - 1] = sSmileDescription,
     [MOVE_TREMORS - 1] = sTremorsDescription,
     [MOVE_DRAWN_LINE - 1] = sDrawnLineDescription,
     [MOVE_SWAGGER - 1] = sSwaggerDescription,

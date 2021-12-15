@@ -7,7 +7,7 @@ const u16 gEggMoves[] = {
               MOVE_LIGHT_SCREEN,
               MOVE_SKULL_BASH,
               MOVE_SAFEGUARD,
-              MOVE_CHARM,
+              MOVE_SMILE,
               MOVE_BATTLE_CHANT,
               MOVE_MAGICAL_LEAF,
               MOVE_NATURE_SOUND,
@@ -81,7 +81,7 @@ const u16 gEggMoves[] = {
               MOVE_DISABLE,
               MOVE_DOUBLE_EDGE,
               MOVE_FOCUS_ENERGY,
-              MOVE_CHARM,
+              MOVE_SMILE,
               MOVE_COUNTER,
               MOVE_BEAT_UP),
 
@@ -117,7 +117,7 @@ const u16 gEggMoves[] = {
               MOVE_RAZOR_LEAF,
               MOVE_FLAIL,
               MOVE_SYNTHESIS,
-              MOVE_CHARM,
+              MOVE_SMILE,
               MOVE_INGRAIN),
 
     egg_moves(CIKU,
@@ -147,7 +147,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(CCHEN,
               MOVE_SPITE,
-              MOVE_CHARM,
+              MOVE_SMILE,
               MOVE_HYPNOSIS,
               MOVE_AMNESIA,
               MOVE_PSYCH_UP,
@@ -235,7 +235,7 @@ const u16 gEggMoves[] = {
               MOVE_THRASH,
               MOVE_DOUBLE_KICK,
               MOVE_HYPNOSIS,
-              MOVE_CHARM,
+              MOVE_SMILE,
               MOVE_HEAD_SMASH),
 
     egg_moves(SATORI,
@@ -447,7 +447,7 @@ const u16 gEggMoves[] = {
               MOVE_SCULPTURE),
 
     egg_moves(CNUE,
-              MOVE_CHARM,
+              MOVE_SMILE,
               MOVE_FLAIL,
               MOVE_ENDURE,
               MOVE_CURSE,
@@ -482,7 +482,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(BYAKUREN,
               MOVE_LICK,
-              MOVE_CHARM,
+              MOVE_SMILE,
               MOVE_HEAD_SMASH,
               MOVE_CURSE,
               MOVE_FISSURE,
@@ -933,7 +933,7 @@ const u16 gEggMoves[] = {
               MOVE_YAWN),
 
     egg_moves(HLUNASA,
-              MOVE_CHARM,
+              MOVE_SMILE,
               MOVE_PURSUIT,
               MOVE_SUBSTITUTE,
               MOVE_TICKLE,
@@ -972,7 +972,7 @@ const u16 gEggMoves[] = {
     egg_moves(DSUWAKO,
               MOVE_FAKE_TEARS,
               MOVE_SWAGGER,
-              MOVE_CHARM,
+              MOVE_SMILE,
               MOVE_DRAWN_LINE,
               MOVE_HELPING_HAND),
 

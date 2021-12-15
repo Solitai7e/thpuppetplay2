@@ -3896,42 +3896,42 @@ static const struct TrainerMonItemCustomMoves sParty_Colton[] = {
     .lvl = 22,
     .species = SPECIES_ASUNNYMILK,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
+    .moves = {MOVE_ASSIST, MOVE_SMILE, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
     },
     {
     .iv = 0,
     .lvl = 36,
     .species = SPECIES_ASUNNYMILK,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
+    .moves = {MOVE_ASSIST, MOVE_SMILE, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
     },
     {
     .iv = 0,
     .lvl = 40,
     .species = SPECIES_ASUNNYMILK,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
+    .moves = {MOVE_ASSIST, MOVE_SMILE, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
     },
     {
     .iv = 0,
     .lvl = 12,
     .species = SPECIES_ASUNNYMILK,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
+    .moves = {MOVE_ASSIST, MOVE_SMILE, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
     },
     {
     .iv = 0,
     .lvl = 30,
     .species = SPECIES_ASUNNYMILK,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
+    .moves = {MOVE_ASSIST, MOVE_SMILE, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
     },
     {
     .iv = 0,
     .lvl = 42,
     .species = SPECIES_ALUNACHILD,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
+    .moves = {MOVE_ASSIST, MOVE_SMILE, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
     }
 };
 
@@ -6344,7 +6344,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_AmyAndLiv5[] = {
     .iv = 30,
     .lvl = 33,
     .species = SPECIES_HNAZRIN,
-    .moves = {MOVE_SPARK, MOVE_CHARGE, MOVE_CHARM, MOVE_HELPING_HAND}
+    .moves = {MOVE_SPARK, MOVE_CHARGE, MOVE_SMILE, MOVE_HELPING_HAND}
     }
 };
 
@@ -6359,7 +6359,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_AmyAndLiv6[] = {
     .iv = 40,
     .lvl = 36,
     .species = SPECIES_HNAZRIN,
-    .moves = {MOVE_THUNDER, MOVE_CHARGE, MOVE_CHARM, MOVE_HELPING_HAND}
+    .moves = {MOVE_THUNDER, MOVE_CHARGE, MOVE_SMILE, MOVE_HELPING_HAND}
     }
 };
 
@@ -6759,7 +6759,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_WallyVR1[] = {
     .iv = 150,
     .lvl = 43,
     .species = SPECIES_ALUNACHILD,
-    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK}
+    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_SMILE, MOVE_FAINT_ATTACK}
     },
     {
     .iv = 150,
@@ -8762,7 +8762,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_WallyVR2[] = {
     .iv = 150,
     .lvl = 46,
     .species = SPECIES_ALUNACHILD,
-    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK}
+    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_SMILE, MOVE_FAINT_ATTACK}
     },
     {
     .iv = 150,
@@ -8795,7 +8795,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_WallyVR3[] = {
     .iv = 150,
     .lvl = 49,
     .species = SPECIES_ALUNACHILD,
-    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK}
+    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_SMILE, MOVE_FAINT_ATTACK}
     },
     {
     .iv = 150,
@@ -8828,7 +8828,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_WallyVR4[] = {
     .iv = 150,
     .lvl = 52,
     .species = SPECIES_ALUNACHILD,
-    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK}
+    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_SMILE, MOVE_FAINT_ATTACK}
     },
     {
     .iv = 150,
@@ -8861,7 +8861,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_WallyVR5[] = {
     .iv = 150,
     .lvl = 55,
     .species = SPECIES_ALUNACHILD,
-    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK}
+    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_SMILE, MOVE_FAINT_ATTACK}
     },
     {
     .iv = 150,
@@ -11576,7 +11576,7 @@ static const struct TrainerMonItemCustomMoves sParty_Angelo[] = {
     .lvl = 17,
     .species = SPECIES_ADMOKOU,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SHOCK_WAVE, MOVE_QUICK_ATTACK, MOVE_CHARM, MOVE_NONE}
+    .moves = {MOVE_SHOCK_WAVE, MOVE_QUICK_ATTACK, MOVE_SMILE, MOVE_NONE}
     },
     {
     .iv = 100,

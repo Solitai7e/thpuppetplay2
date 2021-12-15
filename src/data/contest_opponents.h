@@ -2527,7 +2527,7 @@ const struct ContestPokemon gContestOpponents[] =
             MOVE_SWEET_KISS,
             MOVE_ATTRACT,
             MOVE_DOUBLE_EDGE,
-            MOVE_CHARM
+            MOVE_SMILE
         },
         .cool = 50,
         .beauty = 100,
