@@ -1161,7 +1161,7 @@ static const u8 sSecretPowerDescription[] = _(
     "An attack with effects\n"
     "that vary by location.");
 
-static const u8 sDiveDescription[] = _(
+static const u8 sShadowDiveDescription[] = _(
     "Dives underwater the first\n"
     "turn and strikes next turn.");
 
@@ -1710,7 +1710,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SHADOW_DANCE - 1] = sShadowDanceDescription,
     [MOVE_SNATCH - 1] = sSnatchDescription,
     [MOVE_SECRET_POWER - 1] = sSecretPowerDescription,
-    [MOVE_DIVE - 1] = sDiveDescription,
+    [MOVE_SHADOW_DIVE - 1] = sShadowDiveDescription,
     [MOVE_FORCE_PALM - 1] = sForcePalmDescription,
     [MOVE_CAMOUFLAGE - 1] = sCamouflageDescription,
     [MOVE_MANA_CHARGE - 1] = sManaChargeDescription,

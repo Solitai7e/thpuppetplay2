@@ -8894,7 +8894,7 @@ static void Cmd_setsemiinvulnerablebit(void)
     case MOVE_DIG:
         gStatuses3[gBattlerAttacker] |= STATUS3_UNDERGROUND;
         break;
-    case MOVE_DIVE:
+    case MOVE_SHADOW_DIVE:
         gStatuses3[gBattlerAttacker] |= STATUS3_UNDERWATER;
         break;
     }
@@ -8913,7 +8913,7 @@ static void Cmd_clearsemiinvulnerablebit(void)
     case MOVE_DIG:
         gStatuses3[gBattlerAttacker] &= ~STATUS3_UNDERGROUND;
         break;
-    case MOVE_DIVE:
+    case MOVE_SHADOW_DIVE:
         gStatuses3[gBattlerAttacker] &= ~STATUS3_UNDERWATER;
         break;
     }

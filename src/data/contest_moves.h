@@ -454,7 +454,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .comboStarterId = COMBO_STARTER_SURF,
-        .comboMoves = {COMBO_STARTER_RAIN_DANCE, COMBO_STARTER_DIVE},
+        .comboMoves = {COMBO_STARTER_RAIN_DANCE, COMBO_STARTER_SHADOW_DIVE},
     },
 
     [MOVE_ICE_BEAM] =
@@ -2321,11 +2321,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_DIVE] =
+    [MOVE_SHADOW_DIVE] =
     {
         .effect = CONTEST_EFFECT_AVOID_STARTLE_ONCE,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
-        .comboStarterId = COMBO_STARTER_DIVE,
+        .comboStarterId = COMBO_STARTER_SHADOW_DIVE,
         .comboMoves = {COMBO_STARTER_RAIN_DANCE, COMBO_STARTER_SURF},
     },
 

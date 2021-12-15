@@ -1972,7 +1972,7 @@ BattleScript_EffectSemiInvulnerable::
 	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_SecondTurnSemiInvulnerable
 	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_SecondTurnSemiInvulnerable
 	jumpifmove MOVE_FLY, BattleScript_FirstTurnFly
-	jumpifmove MOVE_DIVE, BattleScript_FirstTurnDive
+	jumpifmove MOVE_SHADOW_DIVE, BattleScript_FirstTurnShadowDive
 	jumpifmove MOVE_BOUNCE, BattleScript_FirstTurnBounce
 	setbyte sTWOTURN_STRINGID, B_MSG_TURN1_DIG
 	goto BattleScript_FirstTurnSemiInvulnerable
@@ -1981,8 +1981,8 @@ BattleScript_FirstTurnBounce::
 	setbyte sTWOTURN_STRINGID, B_MSG_TURN1_BOUNCE
 	goto BattleScript_FirstTurnSemiInvulnerable
 
-BattleScript_FirstTurnDive::
-	setbyte sTWOTURN_STRINGID, B_MSG_TURN1_DIVE
+BattleScript_FirstTurnShadowDive::
+	setbyte sTWOTURN_STRINGID, B_MSG_TURN1_SHADOW_DIVE
 	goto BattleScript_FirstTurnSemiInvulnerable
 
 BattleScript_FirstTurnFly::

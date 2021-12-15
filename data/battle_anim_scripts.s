@@ -307,7 +307,7 @@ gBattleAnims_Moves::
 	.4byte Move_SHADOW_DANCE
 	.4byte Move_SNATCH
 	.4byte Move_SECRET_POWER
-	.4byte Move_DIVE
+	.4byte Move_SHADOW_DIVE
 	.4byte Move_FORCE_PALM
 	.4byte Move_CAMOUFLAGE
 	.4byte Move_MANA_CHARGE
@@ -9215,39 +9215,39 @@ Move_SNATCH:
 	createvisualtask AnimTask_WindUpLunge, 5, ANIM_ATTACKER, -12, 4, 10, 10, 12, 6
 	end
 
-Move_DIVE:
+Move_SHADOW_DIVE:
 	loadspritegfx ANIM_TAG_SPLASH
 	loadspritegfx ANIM_TAG_SWEAT_BEAD
-	choosetwoturnanim DiveSetUp, DiveAttack
-DiveSetUp:
+	choosetwoturnanim ShadowDiveSetUp, ShadowDiveAttack
+ShadowDiveSetUp:
 	loadspritegfx ANIM_TAG_ROUND_SHADOW
 	playsewithpan SE_M_HEADBUTT, SOUND_PAN_ATTACKER
-	createsprite gDiveBallSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 13, 336
+	createsprite gShadowDiveBallSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 13, 336
 	waitforvisualfinish
 	playsewithpan SE_M_DIVE, SOUND_PAN_ATTACKER
-	createsprite gDiveWaterSplashSpriteTemplate, ANIM_ATTACKER, 3, 0
-	call DiveSetUpWaterDroplets
-	call DiveSetUpWaterDroplets
-	call DiveSetUpWaterDroplets
-	call DiveSetUpWaterDroplets
-	call DiveSetUpWaterDroplets
+	createsprite gShadowDiveWaterSplashSpriteTemplate, ANIM_ATTACKER, 3, 0
+	call ShadowDiveSetUpWaterDroplets
+	call ShadowDiveSetUpWaterDroplets
+	call ShadowDiveSetUpWaterDroplets
+	call ShadowDiveSetUpWaterDroplets
+	call ShadowDiveSetUpWaterDroplets
 	end
-DiveSetUpWaterDroplets:
+ShadowDiveSetUpWaterDroplets:
 	createsprite gSprayWaterDropletSpriteTemplate, ANIM_ATTACKER, 5, 0, 0
 	createsprite gSprayWaterDropletSpriteTemplate, ANIM_ATTACKER, 5, 1, 0
 	return
-DiveAttack:
+ShadowDiveAttack:
 	loadspritegfx ANIM_TAG_WATER_IMPACT
 	loadspritegfx ANIM_TAG_SMALL_BUBBLES
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
 	playsewithpan SE_M_EXPLOSION, SOUND_PAN_TARGET
-	createsprite gDiveWaterSplashSpriteTemplate, ANIM_TARGET, 3, 1
-	call DiveAttackWaterDroplets
-	call DiveAttackWaterDroplets
-	call DiveAttackWaterDroplets
-	call DiveAttackWaterDroplets
-	call DiveAttackWaterDroplets
+	createsprite gShadowDiveWaterSplashSpriteTemplate, ANIM_TARGET, 3, 1
+	call ShadowDiveAttackWaterDroplets
+	call ShadowDiveAttackWaterDroplets
+	call ShadowDiveAttackWaterDroplets
+	call ShadowDiveAttackWaterDroplets
+	call ShadowDiveAttackWaterDroplets
 	delay 12
 	call RisingWaterHitEffect
 	waitforvisualfinish
@@ -9255,7 +9255,7 @@ DiveAttack:
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
 	end
-DiveAttackWaterDroplets:
+ShadowDiveAttackWaterDroplets:
 	createsprite gSprayWaterDropletSpriteTemplate, ANIM_TARGET, 5, 0, 1
 	createsprite gSprayWaterDropletSpriteTemplate, ANIM_TARGET, 5, 1, 1
 	return

@@ -772,8 +772,8 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
         .facilityClass = FACILITY_CLASS_SWIMMING_TRIATHLETE_F,
         .trainerName = _("ALONDRA"),
         .speechBefore = {EC_WORD_EVERY, EC_WORD_DAY, EC_WORD_IS, EC_WORD_A, EC_WORD_GREAT, EC_WORD_DAY},
-        .speechWin = {EC_WORD_MY, EC_MOVE2(DIVE), EC_WORD_WILL, EC_WORD_BE, EC_WORD_A, EC_WORD_LEGEND},
-        .speechLose = {EC_WORD_MY, EC_MOVE2(DIVE), EC_WORD_LEFT, EC_WORD_ME, EC_WORD_COLD, EC_WORD_ELLIPSIS},
+        .speechWin = {EC_WORD_MY, EC_MOVE2(SHADOW_DIVE), EC_WORD_WILL, EC_WORD_BE, EC_WORD_A, EC_WORD_LEGEND},
+        .speechLose = {EC_WORD_MY, EC_MOVE2(SHADOW_DIVE), EC_WORD_LEFT, EC_WORD_ME, EC_WORD_COLD, EC_WORD_ELLIPSIS},
         .monSet = gBattleFrontierTrainerMons_Alondra
     },
     [FRONTIER_TRAINER_ADRIANA] = {
@@ -1084,8 +1084,8 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
         .facilityClass = FACILITY_CLASS_RUIN_MANIAC,
         .trainerName = _("ZACKARY"),
         .speechBefore = {EC_WORD_CAN, EC_WORD_YOU, EC_MOVE(DIG), EC_WORD_IT, EC_WORD_YO, EC_WORD_QUES},
-        .speechWin = {EC_MOVE2(DOUBLE_EDGE), EC_WORD_TAKE, EC_WORD_A, EC_MOVE2(DIVE), EC_WORD_YO, EC_WORD_YO},
-        .speechLose = {EC_WORD_BREAK, EC_WORD_DOWN, EC_MOVE2(DIVE), EC_WORD_TIME, EC_WORD_FOR, EC_WORD_ME},
+        .speechWin = {EC_MOVE2(DOUBLE_EDGE), EC_WORD_TAKE, EC_WORD_A, EC_MOVE2(SHADOW_DIVE), EC_WORD_YO, EC_WORD_YO},
+        .speechLose = {EC_WORD_BREAK, EC_WORD_DOWN, EC_MOVE2(SHADOW_DIVE), EC_WORD_TIME, EC_WORD_FOR, EC_WORD_ME},
         .monSet = gBattleFrontierTrainerMons_Zackary
     },
     [FRONTIER_TRAINER_GABRIEL] = {
@@ -2155,8 +2155,8 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
     [FRONTIER_TRAINER_SAMIR] = {
         .facilityClass = FACILITY_CLASS_SWIMMING_TRIATHLETE_M,
         .trainerName = _("SAMIR"),
-        .speechBefore = {EC_WORD_I, EC_MOVE2(DIVE), EC_WORD_BELOW, EC_WORD_THE, EC_MOVE2(SURF), EC_WORD_EXCL},
-        .speechWin = {EC_WORD_YAHOO, EC_WORD_TAKE, EC_WORD_A, EC_MOVE2(DIVE), EC_WORD_YOU, EC_WORD_EXCL},
+        .speechBefore = {EC_WORD_I, EC_MOVE2(SHADOW_DIVE), EC_WORD_BELOW, EC_WORD_THE, EC_MOVE2(SURF), EC_WORD_EXCL},
+        .speechWin = {EC_WORD_YAHOO, EC_WORD_TAKE, EC_WORD_A, EC_MOVE2(SHADOW_DIVE), EC_WORD_YOU, EC_WORD_EXCL},
         .speechLose = {EC_WORD_I_AM, EC_WORD_GOING, EC_WORD_TO, EC_WORD_SINK, EC_WORD_ELLIPSIS, EC_EMPTY_WORD},
         .monSet = gBattleFrontierTrainerMons_Samir
     },

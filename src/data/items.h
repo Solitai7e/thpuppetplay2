@@ -4147,10 +4147,10 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_HM08_DIVE] =
+    [ITEM_HM08_SHADOW_DIVE] =
     {
         .name = _("HM08"),
-        .itemId = ITEM_HM08_DIVE,
+        .itemId = ITEM_HM08_SHADOW_DIVE,
         .price = 0,
         .description = sHM08Desc,
         .importance = 1,

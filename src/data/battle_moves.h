@@ -4074,7 +4074,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED,
     },
 
-    [MOVE_DIVE] =
+    [MOVE_SHADOW_DIVE] =
     {
         .effect = EFFECT_SEMI_INVULNERABLE,
         .split = 0,
