@@ -9,7 +9,7 @@ static const u8 sKarateChopDescription[] = _(
     "A chopping attack with a\n"
     "high critical-hit ratio.");
 
-static const u8 sDoubleSlapDescription[] = _(
+static const u8 sKnockOffDescription[] = _(
     "Repeatedly slaps the foe\n"
     "2 to 5 times.");
 
@@ -1422,7 +1422,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 {
     [MOVE_POUND - 1] = sPoundDescription,
     [MOVE_KARATE_CHOP - 1] = sKarateChopDescription,
-    [MOVE_DOUBLE_SLAP - 1] = sDoubleSlapDescription,
+    [MOVE_KNOCK_OFF - 1] = sKnockOffDescription,
     [MOVE_COMET_PUNCH - 1] = sCometPunchDescription,
     [MOVE_DRAIN_PUNCH - 1] = sDrainPunchDescription,
     [MOVE_PAY_DAY - 1] = sPayDayDescription,

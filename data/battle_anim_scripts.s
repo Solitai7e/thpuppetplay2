@@ -19,7 +19,7 @@ gBattleAnims_Moves::
 	.4byte Move_NONE
 	.4byte Move_POUND
 	.4byte Move_KARATE_CHOP
-	.4byte Move_DOUBLE_SLAP
+	.4byte Move_KNOCK_OFF
 	.4byte Move_COMET_PUNCH
 	.4byte Move_DRAIN_PUNCH
 	.4byte Move_PAY_DAY
@@ -434,24 +434,24 @@ Move_POUND:
 	blendoff
 	end
 
-Move_DOUBLE_SLAP:
+Move_KNOCK_OFF:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
 	setalpha 12, 8
-	choosetwoturnanim DoubleSlapLeft, DoubleSlapRight
-DoubleSlapContinue:
+	choosetwoturnanim KnockOffLeft, KnockOffRight
+KnockOffContinue:
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
 	playsewithpan SE_M_DOUBLE_SLAP, SOUND_PAN_TARGET
 	waitforvisualfinish
 	clearmonbg ANIM_TARGET
 	blendoff
 	end
-DoubleSlapLeft:
+KnockOffLeft:
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, -8, 0, ANIM_TARGET, 2
-	goto DoubleSlapContinue
-DoubleSlapRight:
+	goto KnockOffContinue
+KnockOffRight:
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 8, 0, ANIM_TARGET, 2
-	goto DoubleSlapContinue
+	goto KnockOffContinue
 
 Move_POISON_POWDER:
 	loadspritegfx ANIM_TAG_POISON_POWDER

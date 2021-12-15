@@ -30,7 +30,7 @@ const struct BardSound gBardSounds_Moves[MOVES_COUNT][6] = {
         NULL_BARD_SOUND,
         NULL_BARD_SOUND
     },
-    [MOVE_DOUBLE_SLAP] = {
+    [MOVE_KNOCK_OFF] = {
         { 0x2a, 0x0, 0x0, 0x0, 0x0},
         { 0xa, 0x0, 0x0, 0x0, 0x0},
         { 0x2, 0x0, 0x0, 0x0, 0x0},

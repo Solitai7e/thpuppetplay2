@@ -568,7 +568,7 @@ const u16 gEggMoves[] = {
               MOVE_GUARD,
               MOVE_PRANK,
               MOVE_ENCORE,
-              MOVE_DOUBLE_SLAP,
+              MOVE_KNOCK_OFF,
               MOVE_WISH,
               MOVE_CHARGE),
 
@@ -646,7 +646,7 @@ const u16 gEggMoves[] = {
               MOVE_AGILITY,
               MOVE_SPITE,
               MOVE_SLAM,
-              MOVE_DOUBLE_SLAP,
+              MOVE_KNOCK_OFF,
               MOVE_BEAT_UP),
 
     egg_moves(RIKA,

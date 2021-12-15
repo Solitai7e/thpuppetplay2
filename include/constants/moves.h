@@ -4,7 +4,7 @@
 #define MOVE_NONE 0
 #define MOVE_POUND 1
 #define MOVE_KARATE_CHOP 2
-#define MOVE_DOUBLE_SLAP 3
+#define MOVE_KNOCK_OFF 3
 #define MOVE_COMET_PUNCH 4
 #define MOVE_DRAIN_PUNCH 5
 #define MOVE_PAY_DAY 6
