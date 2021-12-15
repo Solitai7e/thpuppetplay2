@@ -1013,7 +1013,7 @@ static const u8 sPerformanceDescription[] = _(
     "Causes an uproar for 2 to 5\n"
     "turns and prevents sleep.");
 
-static const u8 sStockpileDescription[] = _(
+static const u8 sNastyPlotDescription[] = _(
     "Charges up power for up to\n"
     "3 turns.");
 
@@ -1673,7 +1673,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_BEAT_UP - 1] = sBeatUpDescription,
     [MOVE_FAKE_OUT - 1] = sFakeOutDescription,
     [MOVE_PERFORMANCE - 1] = sPerformanceDescription,
-    [MOVE_STOCKPILE - 1] = sStockpileDescription,
+    [MOVE_NASTY_PLOT - 1] = sNastyPlotDescription,
     [MOVE_MIRROR_SHOT - 1] = sMirrorShotDescription,
     [MOVE_SWALLOW - 1] = sSwallowDescription,
     [MOVE_HEAT_WAVE - 1] = sHeatWaveDescription,

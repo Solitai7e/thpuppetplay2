@@ -670,7 +670,7 @@ const u16 gEggMoves[] = {
               MOVE_SAFEGUARD,
               MOVE_CURSE,
               MOVE_MUD_SLAP,
-              MOVE_STOCKPILE,
+              MOVE_NASTY_PLOT,
               MOVE_SWALLOW,
               MOVE_MIRROR_SHOT),
 
@@ -1103,7 +1103,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(ASUIKA,
               MOVE_SPLASHING,
-              MOVE_STOCKPILE,
+              MOVE_NASTY_PLOT,
               MOVE_SWALLOW,
               MOVE_MIRROR_SHOT,
               MOVE_YAWN,
@@ -1233,7 +1233,7 @@ const u16 gEggMoves[] = {
               MOVE_IMPRISON),
 
     egg_moves(TSATORI,
-              MOVE_STOCKPILE,
+              MOVE_NASTY_PLOT,
               MOVE_SWALLOW,
               MOVE_MIRROR_SHOT,
               MOVE_BODY_SLAM),

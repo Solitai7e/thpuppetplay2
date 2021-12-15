@@ -2025,11 +2025,11 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {0},
     },
 
-    [MOVE_STOCKPILE] =
+    [MOVE_NASTY_PLOT] =
     {
         .effect = CONTEST_EFFECT_AVOID_STARTLE_ONCE,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
-        .comboStarterId = COMBO_STARTER_STOCKPILE,
+        .comboStarterId = COMBO_STARTER_NASTY_PLOT,
         .comboMoves = {0},
     },
 
@@ -2038,7 +2038,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_STOCKPILE},
+        .comboMoves = {COMBO_STARTER_NASTY_PLOT},
     },
 
     [MOVE_SWALLOW] =
@@ -2046,7 +2046,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .effect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .comboStarterId = 0,
-        .comboMoves = {COMBO_STARTER_STOCKPILE},
+        .comboMoves = {COMBO_STARTER_NASTY_PLOT},
     },
 
     [MOVE_HEAT_WAVE] =

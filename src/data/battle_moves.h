@@ -3556,7 +3556,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_FALSE_SWIPE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 
-    [MOVE_STOCKPILE] =
+    [MOVE_NASTY_PLOT] =
     {
         .effect = EFFECT_SPECIAL_ATTACK_UP_2,
         .split = 0,

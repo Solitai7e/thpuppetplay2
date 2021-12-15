@@ -270,7 +270,7 @@ gBattleAnims_Moves::
 	.4byte Move_BEAT_UP
 	.4byte Move_FAKE_OUT
 	.4byte Move_PERFORMANCE
-	.4byte Move_STOCKPILE
+	.4byte Move_NASTY_PLOT
 	.4byte Move_MIRROR_SHOT
 	.4byte Move_SWALLOW
 	.4byte Move_HEAT_WAVE
@@ -8161,7 +8161,7 @@ Move_WISH:
 	waitforvisualfinish
 	end
 
-Move_STOCKPILE:
+Move_NASTY_PLOT:
 	loadspritegfx ANIM_TAG_GRAY_ORB
 	playsewithpan SE_M_GIGA_IMPACT, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_BlendColorCycle, 2, 2, 8, 1, 0, 12, RGB_WHITE
