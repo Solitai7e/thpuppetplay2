@@ -4032,7 +4032,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_SNATCH_AFFECTED,
     },
 
-    [MOVE_GRUDGE] =
+    [MOVE_SHADOW_DANCE] =
     {
         .effect = EFFECT_RAMPAGE,
         .split = 0,

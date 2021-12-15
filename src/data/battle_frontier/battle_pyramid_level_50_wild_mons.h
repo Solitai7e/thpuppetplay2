@@ -166,19 +166,19 @@ static const struct PyramidWildMon sLevel50WildMons_Round4[] =
         .species = SPECIES_TYAMAME,
         .lvl = 41,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_GRUDGE, MOVE_WILL_O_WISP, MOVE_NIGHT_SHADE, MOVE_NONE}
+        .moves = {MOVE_SHADOW_DANCE, MOVE_WILL_O_WISP, MOVE_NIGHT_SHADE, MOVE_NONE}
     },
     {
         .species = SPECIES_CYUKI,
         .lvl = 42,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_GRUDGE, MOVE_SPITE, MOVE_SHADOW_BALL, MOVE_NONE}
+        .moves = {MOVE_SHADOW_DANCE, MOVE_SPITE, MOVE_SHADOW_BALL, MOVE_NONE}
     },
     {
         .species = SPECIES_SUIKA,
         .lvl = 42,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_GRUDGE, MOVE_WILL_O_WISP, MOVE_FLARE_BLITZ, MOVE_NONE}
+        .moves = {MOVE_SHADOW_DANCE, MOVE_WILL_O_WISP, MOVE_FLARE_BLITZ, MOVE_NONE}
     },
     {
         .species = SPECIES_SMEDICINE,
@@ -196,13 +196,13 @@ static const struct PyramidWildMon sLevel50WildMons_Round4[] =
         .species = SPECIES_ASHOU,
         .lvl = 45,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_GRUDGE, MOVE_TOXIC, MOVE_SPITE, MOVE_NONE}
+        .moves = {MOVE_SHADOW_DANCE, MOVE_TOXIC, MOVE_SPITE, MOVE_NONE}
     },
     {
         .species = SPECIES_CMEILING,
         .lvl = 45,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_GRUDGE, MOVE_SPITE, MOVE_NIGHT_SHADE, MOVE_NONE}
+        .moves = {MOVE_SHADOW_DANCE, MOVE_SPITE, MOVE_NIGHT_SHADE, MOVE_NONE}
     }
 };
 
@@ -670,7 +670,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round13[] =
         .species = SPECIES_ASHOU,
         .lvl = 50,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_SHADOW_BALL, MOVE_TOXIC, MOVE_SPITE, MOVE_GRUDGE}
+        .moves = {MOVE_SHADOW_BALL, MOVE_TOXIC, MOVE_SPITE, MOVE_SHADOW_DANCE}
     }
 };
 
@@ -820,7 +820,7 @@ static const struct PyramidWildMon sLevel50WildMons_Round16[] =
         .species = SPECIES_ASHOU,
         .lvl = 50,
         .abilityNum = ABILITY_RANDOM,
-        .moves = {MOVE_SHADOW_BALL, MOVE_SPITE, MOVE_GRUDGE, MOVE_PROTECT}
+        .moves = {MOVE_SHADOW_BALL, MOVE_SPITE, MOVE_SHADOW_DANCE, MOVE_PROTECT}
     },
     {
         .species = SPECIES_CMEILING,

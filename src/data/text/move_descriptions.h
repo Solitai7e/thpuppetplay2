@@ -1149,7 +1149,7 @@ static const u8 sRefreshDescription[] = _(
     "Heals poisoning, paralysis,\n"
     "or a burn.");
 
-static const u8 sGrudgeDescription[] = _(
+static const u8 sShadowDanceDescription[] = _(
     "If the user faints, deletes\n"
     "all PP of foe's last move.");
 
@@ -1707,7 +1707,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SKILL_SWAP - 1] = sSkillSwapDescription,
     [MOVE_IMPRISON - 1] = sImprisonDescription,
     [MOVE_REFRESH - 1] = sRefreshDescription,
-    [MOVE_GRUDGE - 1] = sGrudgeDescription,
+    [MOVE_SHADOW_DANCE - 1] = sShadowDanceDescription,
     [MOVE_SNATCH - 1] = sSnatchDescription,
     [MOVE_SECRET_POWER - 1] = sSecretPowerDescription,
     [MOVE_DIVE - 1] = sDiveDescription,

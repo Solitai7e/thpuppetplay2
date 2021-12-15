@@ -50,7 +50,7 @@ const u16 gEasyChatGroup_Move1[] = {
     MOVE_GIGA_DRAIN,
     MOVE_NATURE_SOUND,
     MOVE_GROWTH,
-    MOVE_GRUDGE,
+    MOVE_SHADOW_DANCE,
     MOVE_RAZOR_WIND,
     MOVE_HAIL,
     MOVE_HARDEN,

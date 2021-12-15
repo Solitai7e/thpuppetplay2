@@ -304,7 +304,7 @@ gBattleAnims_Moves::
 	.4byte Move_SKILL_SWAP
 	.4byte Move_IMPRISON
 	.4byte Move_REFRESH
-	.4byte Move_GRUDGE
+	.4byte Move_SHADOW_DANCE
 	.4byte Move_SNATCH
 	.4byte Move_SECRET_POWER
 	.4byte Move_DIVE
@@ -3850,14 +3850,14 @@ Move_IMPRISON:
 	call UnsetPsychicBackground
 	end
 
-Move_GRUDGE:
+Move_SHADOW_DANCE:
 	loadspritegfx ANIM_TAG_PURPLE_FLAME
 	monbg ANIM_ATTACKER
 	splitbgprio_all
 	fadetobg BG_GHOST
 	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
 	waitbgfadein
-	createvisualtask AnimTask_GrudgeFlames, 3
+	createvisualtask AnimTask_ShadowDanceFlames, 3
 	loopsewithpan SE_M_EMBER, SOUND_PAN_ATTACKER, 16, 4
 	delay 10
 	delay 80

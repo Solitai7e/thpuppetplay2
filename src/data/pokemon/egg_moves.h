@@ -298,7 +298,7 @@ const u16 gEggMoves[] = {
               MOVE_HAZE,
               MOVE_ASTONISH,
               MOVE_WILL_O_WISP,
-              MOVE_GRUDGE,
+              MOVE_SHADOW_DANCE,
               MOVE_EXPLOSION),
 
     egg_moves(MEILING,
@@ -1170,7 +1170,7 @@ const u16 gEggMoves[] = {
               MOVE_IMPRISON,
               MOVE_DESTINY_BOND,
               MOVE_PAIN_SPLIT,
-              MOVE_GRUDGE,
+              MOVE_SHADOW_DANCE,
               MOVE_MEMENTO,
               MOVE_FAINT_ATTACK),
 

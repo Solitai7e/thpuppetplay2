@@ -2297,7 +2297,7 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboMoves = {COMBO_STARTER_SPLASHING, COMBO_STARTER_SING},
     },
 
-    [MOVE_GRUDGE] =
+    [MOVE_SHADOW_DANCE] =
     {
         .effect = CONTEST_EFFECT_BETTER_WHEN_LATER,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
