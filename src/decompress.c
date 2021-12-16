@@ -81,25 +81,7 @@ void HandleLoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *des
 
 void LoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality, bool8 isFrontPic)
 {
-    if (species == SPECIES_UNOWN)
-    {
-        u16 i = GET_UNOWN_LETTER(personality);
-
-        // The other Unowns are separate from Unown A.
-        if (i == 0)
-            i = SPECIES_UNOWN;
-        else
-            i += SPECIES_UNOWN_B - 1;
-
-        if (!isFrontPic)
-            LZ77UnCompWram(gMonBackPicTable[i].data, dest);
-        else
-            LZ77UnCompWram(gMonFrontPicTable[i].data, dest);
-    }
-    else if (species > NUM_SPECIES) // is species unknown? draw the ? icon
-        LZ77UnCompWram(gMonFrontPicTable[0].data, dest);
-    else
-        LZ77UnCompWram(src->data, dest);
+    LZ77UnCompWram(src->data, dest);
 }
 
 void Unused_LZDecompressWramIndirect(const void **src, void *dest)
@@ -287,47 +269,4 @@ bool8 LoadCompressedSpritePaletteUsingHeap(const struct CompressedSpritePalette 
     LoadSpritePalette(&dest);
     Free(buffer);
     return FALSE;
-}
-
-void DecompressPicFromTable_2(const struct CompressedSpriteSheet *src, void* buffer, s32 species) // a copy of DecompressPicFromTable
-{
-    if (species > NUM_SPECIES)
-        LZ77UnCompWram(gMonFrontPicTable[0].data, buffer);
-    else
-        LZ77UnCompWram(src->data, buffer);
-}
-
-void LoadSpecialPokePic_2(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality, bool8 isFrontPic) // a copy of LoadSpecialPokePic
-{
-    if (species == SPECIES_UNOWN)
-    {
-        u16 i = GET_UNOWN_LETTER(personality);
-
-        // The other Unowns are separate from Unown A.
-        if (i == 0)
-            i = SPECIES_UNOWN;
-        else
-            i += SPECIES_UNOWN_B - 1;
-
-        if (!isFrontPic)
-            LZ77UnCompWram(gMonBackPicTable[i].data, dest);
-        else
-            LZ77UnCompWram(gMonFrontPicTable[i].data, dest);
-    }
-    else if (species > NUM_SPECIES) // is species unknown? draw the ? icon
-        LZ77UnCompWram(gMonFrontPicTable[0].data, dest);
-    else
-        LZ77UnCompWram(src->data, dest);
-}
-
-void HandleLoadSpecialPokePic_2(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality) // a copy of HandleLoadSpecialPokePic
-{
-    bool8 isFrontPic;
-
-    if (src == &gMonFrontPicTable[species])
-        isFrontPic = TRUE; // frontPic
-    else
-        isFrontPic = FALSE; // backPic
-
-    LoadSpecialPokePic_2(src, dest, species, personality, isFrontPic);
 }

@@ -7,8 +7,6 @@
 #include "international_string_util.h"
 #include "constants/easy_chat.h"
 
-#define UNOWN_OFFSET 30000
-
 void ClearAllMail(void)
 {
     u8 i;
@@ -83,29 +81,13 @@ u8 GiveMailToMonByItemId(struct Pokemon *mon, u16 itemId)
 
 u16 SpeciesToMailSpecies(u16 species, u32 personality)
 {
-    if (species == SPECIES_UNOWN)
-    {
-        u32 species = GetUnownLetterByPersonality(personality) + UNOWN_OFFSET;
-        return species;
-    }
-
     return species;
 }
 
 u16 MailSpeciesToSpecies(u16 mailSpecies, u16 *buffer)
 {
     u16 result;
-
-    if (mailSpecies >= UNOWN_OFFSET && mailSpecies < UNOWN_OFFSET + NUM_UNOWN_FORMS)
-    {
-        result = SPECIES_UNOWN;
-        *buffer = mailSpecies - UNOWN_OFFSET;
-    }
-    else
-    {
-        result = mailSpecies;
-    }
-
+    result = mailSpecies;
     return result;
 }
 

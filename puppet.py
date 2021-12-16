@@ -438,20 +438,6 @@ def kill(puppet,form = ""):
 
   print("You will need to add /sound/direct_sound_samples/cries/" + gl + ".aif by yourself!")
 
-  with open("src/data/pokemon/cry_ids.h", "r+") as f:
-    a = [x.rstrip() for x in f]
-    index = 0
-    for item in a:
-        if item.startswith("};//PUPPETPY"):
-            a.insert(index, "    [SPECIES_" + gc + " - 277] = XXX,//REPLACEME")
-            print("src/data/pokemon/cry_ids.h: You'll have to manually increment the value! (until we figure things out)")
-            break
-        index += 1
-    f.seek(0)
-    f.truncate()
-    for line in a:
-        f.write(line + "\n")
-
   with open("include/constants/species.h", "r+") as f:
     a = [x.rstrip() for x in f]
     index = 0
@@ -486,7 +472,7 @@ def kill(puppet,form = ""):
     for item in a:
         if item.startswith("//3PPY"):
             a.insert(index, "#define HOENN_DEX_" + gc + "        XXX")
-            print("include/constants/species.h: You'll have to manually increment the value along with changing HOENN_DEX_OLD_UNOWN_B's [value + 1]! (until we kill hoenn)")
+            print("include/constants/species.h: You'll have to manually increment the value (until we kill hoenn)")
             break
         index += 1
     f.seek(0)

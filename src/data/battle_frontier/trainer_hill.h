@@ -2708,7 +2708,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                 {
                                     [0] =
                                         {
-                                            .species = SPECIES_UNOWN,
+                                            .species = SPECIES_CSANAE,
                                             .heldItem = ITEM_MIRACLE_SEED,
                                             .moves = {MOVE_CHARGE_BEAM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
@@ -2724,12 +2724,12 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                             .spDefenseIV = MAX_PER_STAT_IVS,
                                             .abilityNum = 0,
                                             .personality = 0x202,
-                                            .nickname = _("UNOWN"),
+                                            .nickname = _("Placehold"),
                                             .friendship = 255,
                                         },
                                     [1] =
                                         {
-                                            .species = SPECIES_UNOWN,
+                                            .species = SPECIES_CSANAE,
                                             .heldItem = ITEM_MYSTIC_WATER,
                                             .moves = {MOVE_CHARGE_BEAM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
@@ -2745,12 +2745,12 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                             .spDefenseIV = MAX_PER_STAT_IVS,
                                             .abilityNum = 0,
                                             .personality = 0x10001,
-                                            .nickname = _("UNOWN"),
+                                            .nickname = _("Placehold"),
                                             .friendship = 255,
                                         },
                                     [2] =
                                         {
-                                            .species = SPECIES_UNOWN,
+                                            .species = SPECIES_CSANAE,
                                             .heldItem = ITEM_BLACK_BELT,
                                             .moves = {MOVE_CHARGE_BEAM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
@@ -2766,7 +2766,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                             .spDefenseIV = 30,
                                             .abilityNum = 0,
                                             .personality = 0x102,
-                                            .nickname = _("UNOWN"),
+                                            .nickname = _("Placehold"),
                                             .friendship = 255,
                                         },
                                     [3] =
@@ -2912,7 +2912,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                         },
                                     [3] =
                                         {
-                                            .species = SPECIES_UNOWN,
+                                            .species = SPECIES_CSANAE,
                                             .heldItem = ITEM_CHARCOAL,
                                             .moves = {MOVE_CHARGE_BEAM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
@@ -2928,12 +2928,12 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                             .spDefenseIV = MAX_PER_STAT_IVS,
                                             .abilityNum = 0,
                                             .personality = 0x302,
-                                            .nickname = _("UNOWN"),
+                                            .nickname = _("Placehold"),
                                             .friendship = 255,
                                         },
                                     [4] =
                                         {
-                                            .species = SPECIES_UNOWN,
+                                            .species = SPECIES_CSANAE,
                                             .heldItem = ITEM_SOFT_SAND,
                                             .moves = {MOVE_CHARGE_BEAM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
@@ -2949,12 +2949,12 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                             .spDefenseIV = 30,
                                             .abilityNum = 0,
                                             .personality = 0x203,
-                                            .nickname = _("UNOWN"),
+                                            .nickname = _("Placehold"),
                                             .friendship = 255,
                                         },
                                     [5] =
                                         {
-                                            .species = SPECIES_UNOWN,
+                                            .species = SPECIES_CSANAE,
                                             .heldItem = ITEM_TWISTED_SPOON,
                                             .moves = {MOVE_CHARGE_BEAM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
                                             .level = 0,
@@ -2970,7 +2970,7 @@ static const struct TrHillFloor sDataTagVariety_Floors[] = {
                                             .spDefenseIV = MAX_PER_STAT_IVS,
                                             .abilityNum = 0,
                                             .personality = 0x301,
-                                            .nickname = _("UNOWN"),
+                                            .nickname = _("Placehold"),
                                             .friendship = 255,
                                         },
                                 },
