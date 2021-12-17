@@ -907,6 +907,7 @@ static bool8 HandleMainMenuInput(u8 taskId)
             gTasks[tScrollArrowTaskId].tArrowTaskIsScrolled = tIsScrolled = FALSE;
         }
         tCurrItem--;
+	    PlaySE(SE_SELECT);
         sCurrItemAndOptionMenuCheck = tCurrItem;
         return TRUE;
     }
@@ -918,6 +919,7 @@ static bool8 HandleMainMenuInput(u8 taskId)
             ChangeBgY(1, 0x2000, BG_COORD_ADD);
             gTasks[tScrollArrowTaskId].tArrowTaskIsScrolled = tIsScrolled = TRUE;
         }
+	    PlaySE(SE_SELECT);
         tCurrItem++;
         sCurrItemAndOptionMenuCheck = tCurrItem;
         return TRUE;
