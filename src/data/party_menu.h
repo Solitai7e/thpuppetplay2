@@ -691,6 +691,7 @@ enum
     MENU_CANCEL2,
     MENU_SHIFT,
     MENU_SEND_OUT,
+	MENU_NICKNAME
     MENU_ENTER,
     MENU_NO_ENTRY,
     MENU_STORE,
@@ -740,6 +741,7 @@ struct
     [MENU_CANCEL2] = {gText_Cancel2, CursorCb_Cancel2},
     [MENU_SHIFT] = {gText_Shift, CursorCb_SendMon},
     [MENU_SEND_OUT] = {gText_SendOut, CursorCb_SendMon},
+	[MENU_NICKNAME] = {gText_Nickname, CursorCb_Nickname},
     [MENU_ENTER] = {gText_Enter, CursorCb_Enter},
     [MENU_NO_ENTRY] = {gText_NoEntry, CursorCb_NoEntry},
     [MENU_STORE] = {gText_Store, CursorCb_Store},

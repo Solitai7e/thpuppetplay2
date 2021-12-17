@@ -398,6 +398,7 @@ const u8 gText_Shift[] = _("Shift");
 const u8 gText_SendOut[] = _("Send Out");
 const u8 gText_Switch2[] = _("Switch");
 const u8 gText_Summary5[] = _("Summary");
+const u8 gText_Nickname[] = _("Rename");
 const u8 gText_Moves[] = _("MOVES"); // Unused
 const u8 gText_Enter[] = _("Enter");
 const u8 gText_NoEntry[] = _("No Entry");
