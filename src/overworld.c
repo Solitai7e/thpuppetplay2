@@ -3219,3 +3219,22 @@ static void SpriteCB_LinkPlayer(struct Sprite *sprite)
         sprite->data[7]++;
     }
 }
+
+
+
+
+void CB2_NewGame_Debug(void)
+{
+    FieldClearVBlankHBlankCallbacks();
+    StopMapMusic();
+    ResetSafariZoneFlag_();
+
+    NewGameInitData_Debug();
+    ResetInitialPlayerAvatarState();
+
+    PlayTimeCounter_Start();
+    ScriptContext1_Init();
+    ScriptContext2_Disable();
+
+    SetMainCallback2(CB2_LoadMap);
+}
