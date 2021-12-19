@@ -212,3 +212,75 @@ static void ResetMiniGamesRecords(void)
     ResetPokemonJumpRecords();
     CpuFill16(0, &gSaveBlock2Ptr->berryPick, sizeof(struct BerryPickingResults));
 }
+
+
+
+
+#include "string_util.h"
+
+static void FillBoxes(void)
+{
+    u8 boxId, boxPosition;
+    u16 species = 1;
+
+    for (boxId = 0; boxId < TOTAL_BOXES_COUNT; boxId++)
+        for (boxPosition = 0; boxPosition < IN_BOX_COUNT; boxPosition++) {
+            CreateBoxMonAt(
+                boxId, boxPosition,
+                species++, 20, USE_RANDOM_IVS,
+                0, 0,
+                OT_ID_RANDOM_NO_SHINY, 0
+            );
+
+            if (species >= NUM_SPECIES) return;
+        }
+}
+
+static void CompletePokedex(void)
+{
+    u16 i;
+
+    for (i = 1; i < NATIONAL_DEX_COUNT; i++) {
+        GetSetPokedexFlag(i, FLAG_SET_SEEN);
+        GetSetPokedexFlag(i, FLAG_SET_CAUGHT);
+    }
+
+    FlagSet(FLAG_SYS_POKEDEX_GET);
+    FlagSet(FLAG_SYS_NATIONAL_DEX);
+
+    EnableNationalPokedex();
+}
+
+static void WarpToMauvillePkmnCntr(void)
+{
+    SetWarpDestination(
+        MAP_GROUP(MAUVILLE_CITY_POKEMON_CENTER_1F),
+        MAP_NUM(MAUVILLE_CITY_POKEMON_CENTER_1F),
+        WARP_ID_NONE, 10, 2
+    );
+
+    WarpIntoMap();
+}
+
+static void SetPlayerNameAndGender(void)
+{
+    static const u8 ugh[] = _("Renko");
+    StringCopy(gSaveBlock2Ptr->playerName, ugh);
+
+    gSaveBlock2Ptr->playerGender = FEMALE;
+}
+
+void NewGameInitData_Debug(void)
+{
+    SetPlayerNameAndGender();
+    NewGameInitData();
+
+    CompletePokedex();
+    FillBoxes();
+
+    FlagSet(FLAG_SYS_POKEMON_GET);
+    FlagSet(FLAG_SYS_POKENAV_GET);
+    FlagSet(FLAG_SYS_B_DASH);
+
+    WarpToMauvillePkmnCntr();
+}
