@@ -14,3 +14,4 @@ CTojiko
 Tojiko
 CWakasagi
 Gomaseki
+Kedama

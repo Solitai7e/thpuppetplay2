@@ -282,6 +282,14 @@ void NewGameInitData_Debug(void)
     FlagSet(FLAG_SYS_POKEMON_GET);
     FlagSet(FLAG_SYS_POKENAV_GET);
     FlagSet(FLAG_SYS_B_DASH);
+	FlagSet(FLAG_BADGE01_GET);
+	FlagSet(FLAG_BADGE02_GET);
+	FlagSet(FLAG_BADGE03_GET);
+	FlagSet(FLAG_BADGE04_GET);
+	FlagSet(FLAG_BADGE05_GET);
+	FlagSet(FLAG_BADGE06_GET);
+	FlagSet(FLAG_BADGE07_GET);
+	FlagSet(FLAG_BADGE08_GET);
 
     WarpToMauvillePkmnCntr();
 }
