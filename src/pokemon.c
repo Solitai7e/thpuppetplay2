@@ -5385,7 +5385,7 @@ u16 HoennToNationalOrder(u16 hoennNum)
 
 u16 SpeciesToCryId(u16 species)
 {
-	return species;
+    return species;
 }
 
 void EvolutionRenameMon(struct Pokemon *mon, u16 oldSpecies, u16 newSpecies)

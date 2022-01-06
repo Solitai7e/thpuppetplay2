@@ -3134,8 +3134,14 @@ static u8 CreateContestantSprite(u16 species, u32 otId, u32 personality, u32 ind
     gSprites[spriteId].data[0] = gSprites[spriteId].oam.paletteNum;
     gSprites[spriteId].data[2] = species;
     gSprites[spriteId].affineAnims = gAffineAnims_BattleSpriteContest;
+    StartSpriteAffineAnim(&gSprites[spriteId], BATTLER_AFFINE_NORMAL);
 
     return spriteId;
+}
+
+bool8 IsPuppet(u16 species)
+{
+    return TRUE;
 }
 
 // The contestant info windows and general-purpose text box are drawn on one half, while

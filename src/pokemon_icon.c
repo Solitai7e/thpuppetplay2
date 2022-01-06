@@ -967,9 +967,9 @@ u8 CreateMonIconNoPersonality(u16 species, void (*callback)(struct Sprite *), s1
 u16 GetIconSpecies(u16 species, u32 personality)
 {
     u16 result;
-	if (species > NUM_SPECIES)
-	    result = INVALID_ICON_SPECIES;
-	else
+    if (species > NUM_SPECIES)
+        result = INVALID_ICON_SPECIES;
+    else
         result = species;
     return result;
 }
@@ -977,8 +977,8 @@ u16 GetIconSpecies(u16 species, u32 personality)
 u16 GetIconSpeciesNoPersonality(u16 species)
 {
     u16 value;
-	if (species > NUM_SPECIES)
-	    species = INVALID_ICON_SPECIES;
+    if (species > NUM_SPECIES)
+        species = INVALID_ICON_SPECIES;
     return GetIconSpecies(species, 0);
 }
 
@@ -999,6 +999,17 @@ void LoadMonIconPalettes(void)
         LoadSpritePalette(&gMonIconPaletteTable[i]);
 }
 
+// unused
+void SafeLoadMonIconPalette(u16 species)
+{
+    u8 palIndex;
+    if (species > NUM_SPECIES)
+        species = INVALID_ICON_SPECIES;
+    palIndex = gMonIconPaletteIndices[species];
+    if (IndexOfSpritePaletteTag(gMonIconPaletteTable[palIndex].tag) == 0xFF)
+        LoadSpritePalette(&gMonIconPaletteTable[palIndex]);
+}
+
 void LoadMonIconPalette(u16 species)
 {
     u8 palIndex = gMonIconPaletteIndices[species];
@@ -1011,6 +1022,16 @@ void FreeMonIconPalettes(void)
     u8 i;
     for (i = 0; i < ARRAY_COUNT(gMonIconPaletteTable); i++)
         FreeSpritePaletteByTag(gMonIconPaletteTable[i].tag);
+}
+
+// unused
+void SafeFreeMonIconPalette(u16 species)
+{
+    u8 palIndex;
+    if (species > NUM_SPECIES)
+        species = INVALID_ICON_SPECIES;
+    palIndex = gMonIconPaletteIndices[species];
+    FreeSpritePaletteByTag(gMonIconPaletteTable[palIndex].tag);
 }
 
 void FreeMonIconPalette(u16 species)
@@ -1050,8 +1071,8 @@ void TryLoadAllMonIconPalettesAtOffset(u16 offset)
 
 u8 GetValidMonIconPalIndex(u16 species)
 {
-	if (species > NUM_SPECIES)
-		species = INVALID_ICON_SPECIES;
+    if (species > NUM_SPECIES)
+        species = INVALID_ICON_SPECIES;
     return gMonIconPaletteIndices[species];
 }
 
@@ -1062,8 +1083,8 @@ u8 GetMonIconPaletteIndexFromSpecies(u16 species)
 
 const u16* GetValidMonIconPalettePtr(u16 species)
 {
-	if (species > NUM_SPECIES)
-	    species = INVALID_ICON_SPECIES;
+    if (species > NUM_SPECIES)
+        species = INVALID_ICON_SPECIES;
     return gMonIconPaletteTable[gMonIconPaletteIndices[species]].data;
 }
 

@@ -30,6 +30,7 @@ static void AnimTask_BlendPalInAndOutSetup(struct Task *task);
 static void AnimTask_AlphaFadeIn_Step(u8 taskId);
 static void AnimTask_AttackerPunchWithTrace_Step(u8 taskId);
 static void AnimTask_BlendMonInAndOut_Step(u8 taskId);
+static bool8 ShouldRotScaleSpeciesBeFlipped(void);
 static void CreateBattlerTrace(struct Task *task, u8 taskId);
 
 EWRAM_DATA static union AffineAnimCmd *sAnimTaskAffineAnim = NULL;
@@ -1189,15 +1190,29 @@ void SetSpriteRotScale(u8 spriteId, s16 xScale, s16 yScale, u16 rotation)
     struct ObjAffineSrcData src;
     struct OamMatrix matrix;
 
-    src.xScale = -src.xScale;
+    src.xScale = xScale;
     src.yScale = yScale;
     src.rotation = rotation;
+    if (ShouldRotScaleSpeciesBeFlipped())
+        src.xScale = -src.xScale;
     i = gSprites[spriteId].oam.matrixNum;
     ObjAffineSet(&src, &matrix, 1, 2);
     gOamMatrices[i].a = matrix.a;
     gOamMatrices[i].b = matrix.b;
     gOamMatrices[i].c = matrix.c;
     gOamMatrices[i].d = matrix.d;
+}
+
+static bool8 ShouldRotScaleSpeciesBeFlipped(void)
+{
+    if (IsContest())
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
 }
 
 void PrepareBattlerSpriteForRotScale(u8 spriteId, u8 objMode)
@@ -1247,9 +1262,11 @@ void TrySetSpriteRotScale(struct Sprite *sprite, bool8 recalcCenterVector, s16 x
         sprite->affineAnimPaused = TRUE;
         if (recalcCenterVector)
             CalcCenterToCornerVec(sprite, sprite->oam.shape, sprite->oam.size, sprite->oam.affineMode);
-        src.xScale = -src.xScale;
+        src.xScale = xScale;
         src.yScale = yScale;
         src.rotation = rotation;
+        if (ShouldRotScaleSpeciesBeFlipped())
+            src.xScale = -src.xScale;
         i = sprite->oam.matrixNum;
         ObjAffineSet(&src, &matrix, 1, 2);
         gOamMatrices[i].a = matrix.a;
@@ -2057,7 +2074,7 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
             species = gContestResources->moveAnim->species;
             personality = gContestResources->moveAnim->personality;
         }
-		if (species <= SPECIES_EGG)
+        if (species <= SPECIES_EGG)
         {
             coords = &gMonBackPicCoords[species];
         }

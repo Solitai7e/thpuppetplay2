@@ -339,6 +339,7 @@ void SetContestants(u8 contestType, u8 rank);
 void SetLinkAIContestants(u8 contestType, u8 rank, bool32 isPostgame);
 u8 GetContestEntryEligibility(struct Pokemon *pkmn);
 void CalculateRound1Points(u8 contestCategory);
+bool8 IsPuppet(u16 species);
 bool8 Contest_IsMonsTurnDisabled(u8 a);
 void SaveLinkContestResults(void);
 void SortContestants(bool8 a);

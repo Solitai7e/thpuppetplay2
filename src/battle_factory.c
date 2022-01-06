@@ -331,7 +331,7 @@ static void GenerateOpponentMons(void)
     while (i != FRONTIER_PARTY_SIZE)
     {
         u16 monId = GetFactoryMonId(lvlMode, challengeNum, FALSE);
-        
+
         for (j = 0; j < 6; j++)
         {
             if (gFacilityTrainerMons[monId].species == gFacilityTrainerMons[gSaveBlock2Ptr->frontier.rentalMons[j].monId].species)
