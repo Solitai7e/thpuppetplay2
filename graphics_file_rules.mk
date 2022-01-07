@@ -17,6 +17,7 @@ WALLPAPERGFXDIR := graphics/pokemon_storage/wallpapers
 OBJEVENTGFXDIR := graphics/object_events
 MISCGFXDIR := graphics/misc
 JPCONTESTGFXDIR := graphics/contest/japanese
+POKEDEXGFXDIR := graphics/pokedex
 
 types := illusion dream flying miasma earth beast heart ghost blade mystery fire water nature wind reason ice faith dark
 contest_types := cool beauty cute smart tough
@@ -663,10 +664,10 @@ $(PKNAVGFXDIR)/device_outline.4bpp: %.4bpp: %.png
 $(PKNAVGFXDIR)/match_call/ui.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 13
 
-$(INTERFACEGFXDIR)/region_map.8bpp: %.8bpp: %.png
+$(POKEDEXGFXDIR)/region_map.8bpp: %.8bpp: %.png
 	$(GFX) $< $@ -num_tiles 232
 
-$(INTERFACEGFXDIR)/region_map_affine.8bpp: %.8bpp: %.png
+$(POKEDEXGFXDIR)/region_map_affine.8bpp: %.8bpp: %.png
 	$(GFX) $< $@ -num_tiles 233
 
 $(MISCGFXDIR)/birch_help.4bpp: $(MISCGFXDIR)/birch_bag.4bpp $(MISCGFXDIR)/birch_grass.4bpp
