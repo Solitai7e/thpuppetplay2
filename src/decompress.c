@@ -270,28 +270,3 @@ bool8 LoadCompressedSpritePaletteUsingHeap(const struct CompressedSpritePalette 
     Free(buffer);
     return FALSE;
 }
-
-void DecompressPicFromTable_2(const struct CompressedSpriteSheet *src, void* buffer, s32 species) // a copy of DecompressPicFromTable
-{
-    if (species > NUM_SPECIES)
-        LZ77UnCompWram(gMonFrontPicTable[0].data, buffer);
-    else
-        LZ77UnCompWram(src->data, buffer);
-}
-
-void LoadSpecialPokePic_2(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality, bool8 isFrontPic) // a copy of LoadSpecialPokePic
-{
-        LZ77UnCompWram(src->data, dest);
-}
-
-void HandleLoadSpecialPokePic_2(const struct CompressedSpriteSheet *src, void *dest, s32 species, u32 personality) // a copy of HandleLoadSpecialPokePic
-{
-    bool8 isFrontPic;
-
-    if (src == &gMonFrontPicTable[species])
-        isFrontPic = TRUE; // frontPic
-    else
-        isFrontPic = FALSE; // backPic
-
-    LoadSpecialPokePic_2(src, dest, species, personality, isFrontPic);
-}

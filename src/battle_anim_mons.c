@@ -421,7 +421,7 @@ static void TranslateSpriteInWavePattern(struct Sprite *sprite)
         sprite->y2 = Cos(sprite->sCirclePosY, sprite->sAmplitude);
         sprite->sCirclePosX += sprite->sCircleSpeedX;
         sprite->sCirclePosY += sprite->sCircleSpeedY;
-        
+
         if (sprite->sCirclePosX >= 0x100)
             sprite->sCirclePosX -= 0x100;
         else if (sprite->sCirclePosX < 0)
@@ -1205,14 +1205,7 @@ void SetSpriteRotScale(u8 spriteId, s16 xScale, s16 yScale, u16 rotation)
 
 static bool8 ShouldRotScaleSpeciesBeFlipped(void)
 {
-    if (IsContest())
-    {
-        return TRUE;
-    }
-    else
-    {
-        return FALSE;
-    }
+    return IsContest();
 }
 
 void PrepareBattlerSpriteForRotScale(u8 spriteId, u8 objMode)
@@ -2289,7 +2282,7 @@ void AnimTask_AttackerPunchWithTrace(u8 taskId)
 
     dest = (task->tPaletteNum + 16) * 16;
     src = (gSprites[task->tBattlerSpriteId].oam.paletteNum + 0x10) * 0x10;
-    
+
     // Set trace's priority based on battler's subpriority
     task->tPriority = GetBattlerSpriteSubpriority(gBattleAnimAttacker);
     if (task->tPriority == 20 || task->tPriority == 40)
