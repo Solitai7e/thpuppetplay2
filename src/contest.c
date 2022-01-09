@@ -3139,11 +3139,6 @@ static u8 CreateContestantSprite(u16 species, u32 otId, u32 personality, u32 ind
     return spriteId;
 }
 
-bool8 IsPuppet(u16 species)
-{
-    return TRUE;
-}
-
 // The contestant info windows and general-purpose text box are drawn on one half, while
 // the moves and move description windows are drawn on another screen. Only the first 32 * 20
 // tiles are actually drawn on screen.
