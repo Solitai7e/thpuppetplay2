@@ -6797,7 +6797,7 @@ static const u16 sGomasekiLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const u16 sCWakasagiLevelUpLearnset = {
+static const u16 sCWakasagiLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_MOVE( 5, MOVE_TAIL_WHIP),
     LEVEL_UP_MOVE( 8, MOVE_BUBBLE),
