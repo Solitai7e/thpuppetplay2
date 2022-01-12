@@ -888,9 +888,9 @@ static const u8 sMoveTypeToOamPaletteNum[NUMBER_OF_MON_TYPES + CONTEST_CATEGORIE
     [TYPE_DREAM] = 14,
     [TYPE_FLYING] = 14,
     [TYPE_MIASMA] = 14,
-    [TYPE_EARTH] = 13,
+    [TYPE_EARTH] = 16,
     [TYPE_BEAST] = 13,
-    [TYPE_HEART] = 15,
+    [TYPE_HEART] = 16,
     [TYPE_GHOST] = 14,
     [TYPE_BLADE] = 13,
     [TYPE_MYSTERY] = 15,
@@ -901,7 +901,7 @@ static const u8 sMoveTypeToOamPaletteNum[NUMBER_OF_MON_TYPES + CONTEST_CATEGORIE
     [TYPE_REASON] = 14,
     [TYPE_ICE] = 14,
     [TYPE_FAITH] = 15,
-    [TYPE_DARK] = 13,
+    [TYPE_DARK] = 16,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_COOL] = 13,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_BEAUTY] = 14,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_CUTE] = 14,
@@ -1354,7 +1354,7 @@ static bool8 DecompressGraphics(void)
         sMonSummaryScreen->switchCounter++;
         break;
     case 12:
-        LoadCompressedPalette(gMoveTypes_Pal, 0x1D0, 0x60);
+        LoadCompressedPalette(gMoveTypes_Pal, 0x1D0, 0x80); //Does this increase range?
         sMonSummaryScreen->switchCounter = 0;
         return TRUE;
     }
