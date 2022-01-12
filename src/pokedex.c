@@ -989,27 +989,19 @@ static const u8 sText_TenDashes2[] = _("----------");
 #include "data/pokemon_graphics/footprint_table.h"
 
 // First character in range followed by number of characters in range for upper and lowercase
-static const u8 sLetterSearchRanges[][4] =
+static const u8 sLetterSearchRanges[][9] =
 {
-    {}, // Name not specified, shouldn't be reached
-    [NAME_ABC] = {CHAR_A, 3, CHAR_a, 3},
-    [NAME_DEF] = {CHAR_D, 3, CHAR_d, 3},
-    [NAME_GHI] = {CHAR_G, 3, CHAR_g, 3},
-    [NAME_JKL] = {CHAR_J, 3, CHAR_j, 3},
-    [NAME_MNO] = {CHAR_M, 3, CHAR_m, 3},
-    [NAME_PQR] = {CHAR_P, 3, CHAR_p, 3},
-    [NAME_STU] = {CHAR_S, 3, CHAR_s, 3},
-    [NAME_VWX] = {CHAR_V, 3, CHAR_v, 3},
-    [NAME_YZ]  = {CHAR_Y, 2, CHAR_y, 2},
+//    {}, // Name not specified, shouldn't be reached
+    [NAME_ABC] = {CHAR_A, CHAR_B, CHAR_C, CHAR_a, CHAR_b, CHAR_c, CHAR_CHIBI, CHAR_ATTACK, CHAR_ADVENT},
+    [NAME_DEF] = {CHAR_D, CHAR_E, CHAR_F, CHAR_d, CHAR_e, CHAR_f, CHAR_DEFENSE},
+    [NAME_GHI] = {CHAR_G, CHAR_H, CHAR_I, CHAR_g, CHAR_h, CHAR_i, CHAR_HELPER},
+    [NAME_JKL] = {CHAR_J, CHAR_K, CHAR_L, CHAR_j, CHAR_k, CHAR_l},
+    [NAME_MNO] = {CHAR_M, CHAR_N, CHAR_O, CHAR_m, CHAR_n, CHAR_o},
+    [NAME_PQR] = {CHAR_P, CHAR_Q, CHAR_R, CHAR_p, CHAR_q, CHAR_r},
+    [NAME_STU] = {CHAR_S, CHAR_T, CHAR_U, CHAR_s, CHAR_t, CHAR_u, CHAR_SPEED},
+    [NAME_VWX] = {CHAR_V, CHAR_W, CHAR_X, CHAR_v, CHAR_w, CHAR_x},
+    [NAME_YZ]  = {CHAR_Y, CHAR_Z, CHAR_y, CHAR_z},
 };
-
-#define LETTER_IN_RANGE_UPPER(letter, range) \
-    ((letter) >= sLetterSearchRanges[range][0]                                  \
-  && (letter) < sLetterSearchRanges[range][0] + sLetterSearchRanges[range][1])  \
-
-#define LETTER_IN_RANGE_LOWER(letter, range) \
-    ((letter) >= sLetterSearchRanges[range][2]                                  \
-  && (letter) < sLetterSearchRanges[range][2] + sLetterSearchRanges[range][3])  \
 
 static const struct SearchMenuTopBarItem sSearchMenuTopBarItems[SEARCH_TOPBAR_COUNT] =
 {
@@ -4681,7 +4673,17 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 sourceGame, u8 
 
             species = NationalPokedexNumToSpecies(sPokedexView->pokedexList[i].dexNum);
             firstLetter = gSpeciesNames[species][0];
-            if (LETTER_IN_RANGE_UPPER(firstLetter, abcGroup) || LETTER_IN_RANGE_LOWER(firstLetter, abcGroup))
+            if (
+			(firstLetter == sLetterSearchRanges[abcGroup][0]) |
+			(firstLetter == sLetterSearchRanges[abcGroup][1]) |
+			(firstLetter == sLetterSearchRanges[abcGroup][2]) |
+			(firstLetter == sLetterSearchRanges[abcGroup][3]) |
+			(firstLetter == sLetterSearchRanges[abcGroup][4]) |
+			(firstLetter == sLetterSearchRanges[abcGroup][5]) |
+			(firstLetter == sLetterSearchRanges[abcGroup][6]) |
+			(firstLetter == sLetterSearchRanges[abcGroup][7]) |
+			(firstLetter == sLetterSearchRanges[abcGroup][8]) |
+			(firstLetter == sLetterSearchRanges[abcGroup][9]) )
             {
                 sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
                 resultsCount++;

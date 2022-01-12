@@ -67,6 +67,14 @@
 #define CHAR_LEFT_PAREN        0x5C
 #define CHAR_RIGHT_PAREN       0x5D
 //
+#define CHAR_CHIBI             0x60
+#define CHAR_ATTACK            0x61
+#define CHAR_DEFENSE           0x62
+#define CHAR_SPEED             0x63
+#define CHAR_TECHNICAL         0x64
+#define CHAR_HELPER            0x65
+#define CHAR_ADVENT            0x66
+//
 #define CHAR_a_CIRCUMFLEX      0x68
 //
 #define CHAR_i_ACUTE           0x6F
