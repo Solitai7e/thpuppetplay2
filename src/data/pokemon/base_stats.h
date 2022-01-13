@@ -10114,7 +10114,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_MARVEL_SCALE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .sourceGame = SOURCE_EOSD,
+        .sourceGame = SOURCE_PCB,
         .noFlip = FALSE,
     },
 
@@ -10850,7 +10850,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_MARVEL_SCALE, ABILITY_NONE},
         .safariZoneFleeRate = 0,
-        .sourceGame = SOURCE_EOSD,
+        .sourceGame = SOURCE_PCB,
         .noFlip = FALSE,
     },
 

@@ -99,4 +99,4 @@ What this does is add all the relevant lines needed to add a puppet into the gam
 | :------------: | :------------: | :------------: | :------------: |
 | Puppet data importing | Adding modern/new puppets | QoL things | Breeding Replacement System |
 | Puppet interactions setup (movesets, levels, etc) | Gui/Strings/Sprites overhauled for the Touhou theme | Seal capture system | Elegant/Cute/Strong/Wise/Charismatic |
-|  |  |  |  |
+|  |  |  | Forms filter in dex to sort alphabetically |
