@@ -452,34 +452,20 @@ def kill(puppet,form = ""):
     for line in a:
         f.write(line + "\n")
         
-  with open("include/constants/species.h", "r+") as f:
+  with open("include/constants/pokedex.h", "r+") as f:
     a = [x.rstrip() for x in f]
     index = 0
     for item in a:
         if item.startswith("//2PPY"):
-            a.insert(index, "#define NATIONAL_DEX_" + gc + "         XXX")
-            print("include/constants/species.h: You'll have to manually increment the value along with changing NATIONAL_DEX_COUNT! (until we figure things out)")
+            a.insert(index, "#define NATIONAL_DEX_" + gc)
             break
         index += 1
     f.seek(0)
     f.truncate()
     for line in a:
         f.write(line + "\n")
-        
-  with open("include/constants/species.h", "r+") as f:
-    a = [x.rstrip() for x in f]
-    index = 0
-    for item in a:
-        if item.startswith("//3PPY"):
-            a.insert(index, "#define HOENN_DEX_" + gc + "        XXX")
-            print("include/constants/species.h: You'll have to manually increment the value (until we kill hoenn)")
-            break
-        index += 1
-    f.seek(0)
-    f.truncate()
-    for line in a:
-        f.write(line + "\n")
-  
+
+  print("include/constants/pokedex.h: Do this manually until we kill hoenn")
   print("Added new puppet " + gh + ". Copy this output for reference, be sure to grep for //REPLACEME and fix any file issues.")
 
 kill(*sys.argv[1:])

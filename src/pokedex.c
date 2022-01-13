@@ -998,7 +998,7 @@ static const u8 sLetterSearchRanges[][9] =
     [NAME_JKL] = {CHAR_J, CHAR_K, CHAR_L, CHAR_j, CHAR_k, CHAR_l},
     [NAME_MNO] = {CHAR_M, CHAR_N, CHAR_O, CHAR_m, CHAR_n, CHAR_o},
     [NAME_PQR] = {CHAR_P, CHAR_Q, CHAR_R, CHAR_p, CHAR_q, CHAR_r},
-    [NAME_STU] = {CHAR_S, CHAR_T, CHAR_U, CHAR_s, CHAR_t, CHAR_u, CHAR_SPEED},
+    [NAME_STU] = {CHAR_S, CHAR_T, CHAR_U, CHAR_s, CHAR_t, CHAR_u, CHAR_SPEED, CHAR_TECHNICAL},
     [NAME_VWX] = {CHAR_V, CHAR_W, CHAR_X, CHAR_v, CHAR_w, CHAR_x},
     [NAME_YZ]  = {CHAR_Y, CHAR_Z, CHAR_y, CHAR_z},
 };
