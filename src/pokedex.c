@@ -991,7 +991,7 @@ static const u8 sText_TenDashes2[] = _("----------");
 // First character in range followed by number of characters in range for upper and lowercase
 static const u8 sLetterSearchRanges[][9] =
 {
-//    {}, // Name not specified, shouldn't be reached
+    {}, // Name not specified, shouldn't be reached
     [NAME_ABC] = {CHAR_A, CHAR_B, CHAR_C, CHAR_a, CHAR_b, CHAR_c, CHAR_CHIBI, CHAR_ATTACK, CHAR_ADVENT},
     [NAME_DEF] = {CHAR_D, CHAR_E, CHAR_F, CHAR_d, CHAR_e, CHAR_f, CHAR_DEFENSE},
     [NAME_GHI] = {CHAR_G, CHAR_H, CHAR_I, CHAR_g, CHAR_h, CHAR_i, CHAR_HELPER},
