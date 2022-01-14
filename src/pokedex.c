@@ -4670,24 +4670,18 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 sourceGame, u8 
         for (i = 0, resultsCount = 0; i < sPokedexView->pokemonListCount; i++)
         {
             u8 firstLetter;
+            u8 j;
 
             species = NationalPokedexNumToSpecies(sPokedexView->pokedexList[i].dexNum);
             firstLetter = gSpeciesNames[species][0];
-            if (
-			(firstLetter == sLetterSearchRanges[abcGroup][0]) |
-			(firstLetter == sLetterSearchRanges[abcGroup][1]) |
-			(firstLetter == sLetterSearchRanges[abcGroup][2]) |
-			(firstLetter == sLetterSearchRanges[abcGroup][3]) |
-			(firstLetter == sLetterSearchRanges[abcGroup][4]) |
-			(firstLetter == sLetterSearchRanges[abcGroup][5]) |
-			(firstLetter == sLetterSearchRanges[abcGroup][6]) |
-			(firstLetter == sLetterSearchRanges[abcGroup][7]) |
-			(firstLetter == sLetterSearchRanges[abcGroup][8]) |
-			(firstLetter == sLetterSearchRanges[abcGroup][9]) )
-            {
-                sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
-                resultsCount++;
-            }
+
+            for (j = 0; j < 10; j++)
+                if (firstLetter == sLetterSearchRanges[abcGroup][j]) {
+                    sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
+                    resultsCount++;
+
+                    break;
+                }
         }
         sPokedexView->pokemonListCount = resultsCount;
     }
