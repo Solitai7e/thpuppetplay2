@@ -665,3 +665,11 @@ MauvilleCity_Text_ExplainTV:
 
 MauvilleCity_Text_BeenCheckingOutTV:
 	.string "Hi, have you been checking out TVs?$"
+	
+MauvilleCity_EventScript_StarterDebug::
+	lock
+    fadescreen FADE_TO_BLACK
+	special ChooseStarter
+	waitstate
+	release
+	end

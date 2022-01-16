@@ -5119,7 +5119,7 @@ static u16 TryLoadMonIconTiles(u16 species)
     sStorage->iconSpeciesList[i] = species;
     sStorage->numIconsPerSpecies[i]++;
     offset = 16 * i;
-    CpuCopy32(GetMonIconTiles(species), (void*)(OBJ_VRAM0) + offset * TILE_SIZE_4BPP, 0x200);
+    CpuCopy32(GetMonIconTiles(species), (void*)(OBJ_VRAM0) + offset * TILE_SIZE_4BPP, 0x200); // GetMonIconTiles should not include TRUE from upstream.
 
     return offset;
 }
