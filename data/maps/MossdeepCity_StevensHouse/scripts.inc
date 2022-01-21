@@ -86,9 +86,9 @@ MossdeepCity_StevensHouse_EventScript_LeaveCSeiga::
 
 MossdeepCity_StevensHouse_EventScript_GiveCSeiga::
 	setvar VAR_TEMP_1, SPECIES_CSEIGA
-	givemon SPECIES_CSEIGA, 5, ITEM_NONE
-	goto_if_eq VAR_RESULT, 0, MossdeepCity_StevensHouse_EventScript_SendCSeigaParty
-	goto_if_eq VAR_RESULT, 1, MossdeepCity_StevensHouse_EventScript_SendCSeigaPC
+	givemon SPECIES_CSEIGA, 5
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, MossdeepCity_StevensHouse_EventScript_SendCSeigaParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, MossdeepCity_StevensHouse_EventScript_SendCSeigaPC
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 

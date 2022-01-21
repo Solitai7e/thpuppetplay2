@@ -57,10 +57,7 @@ NavelRock_Top_EventScript_AKomachi::
 	applymovement LOCALID_AKOMACHI, NavelRock_Top_Movement_AKomachiApproach
 	waitmovement 0
 	special RemoveCameraObject
-	setvar VAR_0x8004, SPECIES_AKOMACHI
-	setvar VAR_0x8005, 70 @ level
-	setvar VAR_0x8006, ITEM_NONE
-	special CreateEventLegalEnemyMon
+	seteventmon SPECIES_AKOMACHI, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate

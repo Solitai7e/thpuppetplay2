@@ -18,6 +18,7 @@ OBJEVENTGFXDIR := graphics/object_events
 MISCGFXDIR := graphics/misc
 JPCONTESTGFXDIR := graphics/contest/japanese
 POKEDEXGFXDIR := graphics/pokedex
+STARTERGFXDIR := graphics/starter_choose
 
 types := illusion dream flying miasma earth beast heart ghost blade mystery fire water nature wind reason ice faith dark
 contest_types := cool beauty cute smart tough
@@ -334,9 +335,9 @@ $(UNUSEDGFXDIR)/obi2.4bpp: $(UNUSEDGFXDIR)/old_csanae2.4bpp \
                            $(UNUSEDGFXDIR)/old_battle_interface_3.4bpp
 	@cat $^ >$@
 
-$(INTERFACEGFXDIR)/battle_bar.4bpp: $(INTERFACEGFXDIR)/hpbar_anim.4bpp \
-                                    $(INTERFACEGFXDIR)/numbers1.4bpp \
-                                    $(INTERFACEGFXDIR)/numbers2.4bpp
+$(BATINTGFXDIR)/battle_bar.4bpp: $(BATINTGFXDIR)/hpbar_anim_unused.4bpp \
+                                 $(BATINTGFXDIR)/numbers1.4bpp \
+                                 $(BATINTGFXDIR)/numbers2.4bpp
 	@cat $^ >$@
 
 $(UNUSEDGFXDIR)/redyellowgreen_frame.bin: $(UNUSEDGFXDIR)/red_frame.bin \
@@ -392,7 +393,7 @@ $(MASKSGFXDIR)/unused_level_up.4bpp: %.4bpp: %.png
 $(BATTRANSGFXDIR)/vs_frame.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 16
 
-$(INTERFACEGFXDIR)/party_menu_bg.4bpp: %.4bpp: %.png
+graphics/party_menu/bg.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 62
 
 $(TYPESGFXDIR)/move_types.4bpp: $(types:%=$(TYPESGFXDIR)/%.4bpp) $(contest_types:%=$(TYPESGFXDIR)/contest_%.4bpp)
@@ -404,7 +405,7 @@ $(TYPESGFXDIR)/move_types.gbapal: $(TYPESGFXDIR)/move_types_1.gbapal \
                                   $(TYPESGFXDIR)/move_types_4.gbapal
 	@cat $^ >$@
 
-$(INTERFACEGFXDIR)/bag_screen.4bpp: %.4bpp: %.png
+graphics/bag/menu.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 53
 
 $(CMAMIZOUGFXDIR)/scene_2/cmamizou.8bpp: %.8bpp: %.png
@@ -465,7 +466,7 @@ $(SLOTMACHINEGFXDIR)/reel_time_gfx.4bpp: $(SLOTMACHINEGFXDIR)/reel_time_ccirno.4
                                          $(SLOTMACHINEGFXDIR)/reel_time_machine.4bpp
 	@cat $^ >$@
 
-$(UNUSEDGFXDIR)/intro_birch_beauty.4bpp: %.4bpp: %.png
+graphics/birch_speech/unused_beauty.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 822
 
 
@@ -671,5 +672,5 @@ $(POKEDEXGFXDIR)/region_map.8bpp: %.8bpp: %.png
 $(POKEDEXGFXDIR)/region_map_affine.8bpp: %.8bpp: %.png
 	$(GFX) $< $@ -num_tiles 233
 
-$(MISCGFXDIR)/birch_help.4bpp: $(MISCGFXDIR)/birch_bag.4bpp $(MISCGFXDIR)/birch_grass.4bpp
+$(STARTERGFXDIR)/birch_help.4bpp: $(STARTERGFXDIR)/birch_bag.4bpp $(STARTERGFXDIR)/birch_grass.4bpp
 	@cat $^ >$@

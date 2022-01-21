@@ -94,7 +94,7 @@ IslandCave_EventScript_CFuto::
 	playmoncry SPECIES_CFUTO, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_CFUTO, 40, ITEM_NONE
+	setwildbattle SPECIES_CFUTO, 40
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special StartRegiBattle
 	waitstate

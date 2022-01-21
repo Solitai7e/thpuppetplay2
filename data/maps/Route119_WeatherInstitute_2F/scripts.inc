@@ -90,8 +90,8 @@ Route119_WeatherInstitute_2F_EventScript_ReceiveTSanae::
 	msgbox Route119_WeatherInstitute_2F_Text_ThanksPleaseTakePokemon, MSGBOX_DEFAULT
 	setvar VAR_TEMP_1, SPECIES_TSANAE
 	givemon SPECIES_TSANAE, 25, ITEM_MYSTIC_WATER
-	goto_if_eq VAR_RESULT, 0, Route119_WeatherInstitute_2F_EventScript_ReceiveTSanaeParty
-	goto_if_eq VAR_RESULT, 1, Route119_WeatherInstitute_2F_EventScript_ReceiveTSanaePC
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, Route119_WeatherInstitute_2F_EventScript_ReceiveTSanaeParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, Route119_WeatherInstitute_2F_EventScript_ReceiveTSanaePC
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 

@@ -48,7 +48,7 @@ SkyPillar_Top_EventScript_CMamizou::
 	playmoncry SPECIES_CMAMIZOU, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_CMAMIZOU, 70, ITEM_NONE
+	setwildbattle SPECIES_CMAMIZOU, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate

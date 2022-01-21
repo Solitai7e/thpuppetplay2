@@ -145,9 +145,9 @@ RustboroCity_DevonCorp_2F_EventScript_AdChenReady::
 
 RustboroCity_DevonCorp_2F_EventScript_ReceiveAdYukari::
 	setvar VAR_TEMP_1, SPECIES_ADYUKARI
-	givemon SPECIES_ADYUKARI, 20, ITEM_NONE
-	goto_if_eq VAR_RESULT, 0, RustboroCity_DevonCorp_2F_EventScript_ReceiveAdYukariParty
-	goto_if_eq VAR_RESULT, 1, RustboroCity_DevonCorp_2F_EventScript_ReceiveAdYukariPC
+	givemon SPECIES_ADYUKARI, 20
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, RustboroCity_DevonCorp_2F_EventScript_ReceiveAdYukariParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, RustboroCity_DevonCorp_2F_EventScript_ReceiveAdYukariPC
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
@@ -190,9 +190,9 @@ RustboroCity_DevonCorp_2F_EventScript_FinishReceivingAdYukari::
 
 RustboroCity_DevonCorp_2F_EventScript_ReceiveAdChen::
 	setvar VAR_TEMP_1, SPECIES_ADCHEN
-	givemon SPECIES_ADCHEN, 20, ITEM_NONE
-	goto_if_eq VAR_RESULT, 0, RustboroCity_DevonCorp_2F_EventScript_ReceiveAdChenParty
-	goto_if_eq VAR_RESULT, 1, RustboroCity_DevonCorp_2F_EventScript_ReceiveAdChenPC
+	givemon SPECIES_ADCHEN, 20
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, RustboroCity_DevonCorp_2F_EventScript_ReceiveAdChenParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, RustboroCity_DevonCorp_2F_EventScript_ReceiveAdChenPC
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 

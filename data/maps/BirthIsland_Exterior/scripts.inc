@@ -82,10 +82,7 @@ BirthIsland_Exterior_EventScript_Gomaseki::
 	delay 40
 	waitmoncry
 	setvar VAR_LAST_TALKED, LOCALID_GOMASEKI
-	setvar VAR_0x8004, SPECIES_GOMASEKI
-	setvar VAR_0x8005, 30 @ level
-	setvar VAR_0x8006, ITEM_NONE
-	special CreateEventLegalEnemyMon
+	seteventmon SPECIES_GOMASEKI, 30
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate

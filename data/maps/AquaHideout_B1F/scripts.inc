@@ -29,7 +29,7 @@ AquaHideout_B1F_EventScript_ShowMerlin2::
 AquaHideout_B1F_EventScript_Merlin1::
 	lock
 	faceplayer
-	setwildbattle SPECIES_MERLIN, 30, ITEM_NONE
+	setwildbattle SPECIES_MERLIN, 30
 	waitse
 	playmoncry SPECIES_MERLIN, CRY_MODE_ENCOUNTER
 	delay 40
@@ -53,7 +53,7 @@ AquaHideout_B1F_EventScript_DefeatedMerlin1::
 AquaHideout_B1F_EventScript_Merlin2::
 	lock
 	faceplayer
-	setwildbattle SPECIES_MERLIN, 30, ITEM_NONE
+	setwildbattle SPECIES_MERLIN, 30
 	waitse
 	playmoncry SPECIES_MERLIN, CRY_MODE_ENCOUNTER
 	delay 40

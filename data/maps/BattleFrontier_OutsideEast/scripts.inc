@@ -129,7 +129,7 @@ BattleFrontier_OutsideEast_EventScript_WaterYumeko::
 	delay 40
 	waitmoncry
 	setvar VAR_LAST_TALKED, LOCALID_YUMEKO
-	setwildbattle SPECIES_YUMEKO, 40, ITEM_NONE
+	setwildbattle SPECIES_YUMEKO, 40
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE

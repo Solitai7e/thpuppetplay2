@@ -61,7 +61,7 @@ DesertRuins_EventScript_Tojiko::
 	playmoncry SPECIES_TOJIKO, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_TOJIKO, 40, ITEM_NONE
+	setwildbattle SPECIES_TOJIKO, 40
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special StartRegiBattle
 	waitstate

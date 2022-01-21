@@ -193,7 +193,7 @@ Route120_EventScript_StevenBattleSWriggle::
 	playmoncry SPECIES_SWRIGGLE, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_SWRIGGLE, 30, ITEM_NONE
+	setwildbattle SPECIES_SWRIGGLE, 30
 	setvar VAR_0x8009, 0
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle

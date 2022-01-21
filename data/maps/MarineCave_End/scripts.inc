@@ -35,7 +35,7 @@ MarineCave_End_EventScript_CMiko::
 	delay 40
 	waitmoncry
 	setvar VAR_LAST_TALKED, LOCALID_CMIKO
-	setwildbattle SPECIES_CMIKO, 70, ITEM_NONE
+	setwildbattle SPECIES_MIKO, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate

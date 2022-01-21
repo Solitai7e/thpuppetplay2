@@ -3194,17 +3194,17 @@ void DoGomasekiRockInteraction(void)
 }
 
 static const u16 sGomasekiRockPalettes[][16] = {
-    INCBIN_U16("graphics/misc/gomaseki1.gbapal"),
-    INCBIN_U16("graphics/misc/gomaseki2.gbapal"),
-    INCBIN_U16("graphics/misc/gomaseki3.gbapal"),
-    INCBIN_U16("graphics/misc/gomaseki4.gbapal"),
-    INCBIN_U16("graphics/misc/gomaseki5.gbapal"),
-    INCBIN_U16("graphics/misc/gomaseki6.gbapal"),
-    INCBIN_U16("graphics/misc/gomaseki7.gbapal"),
-    INCBIN_U16("graphics/misc/gomaseki8.gbapal"),
-    INCBIN_U16("graphics/misc/gomaseki9.gbapal"),
-    INCBIN_U16("graphics/misc/gomaseki10.gbapal"),
-    INCBIN_U16("graphics/misc/gomaseki11.gbapal"),
+    INCBIN_U16("graphics/field_effects/palettes/gomaseki_rock_1.gbapal"),
+    INCBIN_U16("graphics/field_effects/palettes/gomaseki_rock_2.gbapal"),
+    INCBIN_U16("graphics/field_effects/palettes/gomaseki_rock_3.gbapal"),
+    INCBIN_U16("graphics/field_effects/palettes/gomaseki_rock_4.gbapal"),
+    INCBIN_U16("graphics/field_effects/palettes/gomaseki_rock_5.gbapal"),
+    INCBIN_U16("graphics/field_effects/palettes/gomaseki_rock_6.gbapal"),
+    INCBIN_U16("graphics/field_effects/palettes/gomaseki_rock_7.gbapal"),
+    INCBIN_U16("graphics/field_effects/palettes/gomaseki_rock_8.gbapal"),
+    INCBIN_U16("graphics/field_effects/palettes/gomaseki_rock_9.gbapal"),
+    INCBIN_U16("graphics/field_effects/palettes/gomaseki_rock_10.gbapal"),
+    INCBIN_U16("graphics/field_effects/palettes/gomaseki_rock_11.gbapal"),
 };
 
 static const u8 sGomasekiRockCoords[][2] = {

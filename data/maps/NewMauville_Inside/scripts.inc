@@ -176,7 +176,7 @@ NewMauville_Inside_EventScript_GeneratorOff::
 NewMauville_Inside_EventScript_CMerlin1::
 	lock
 	faceplayer
-	setwildbattle SPECIES_CMERLIN, 25, ITEM_NONE
+	setwildbattle SPECIES_CMERLIN, 25
 	waitse
 	playmoncry SPECIES_CMERLIN, CRY_MODE_ENCOUNTER
 	delay 40
@@ -200,7 +200,7 @@ NewMauville_Inside_EventScript_DefeatedCMerlin1::
 NewMauville_Inside_EventScript_CMerlin2::
 	lock
 	faceplayer
-	setwildbattle SPECIES_CMERLIN, 25, ITEM_NONE
+	setwildbattle SPECIES_CMERLIN, 25
 	waitse
 	playmoncry SPECIES_CMERLIN, CRY_MODE_ENCOUNTER
 	delay 40
@@ -224,7 +224,7 @@ NewMauville_Inside_EventScript_DefeatedCMerlin2::
 NewMauville_Inside_EventScript_CMerlin3::
 	lock
 	faceplayer
-	setwildbattle SPECIES_CMERLIN, 25, ITEM_NONE
+	setwildbattle SPECIES_CMERLIN, 25
 	waitse
 	playmoncry SPECIES_CMERLIN, CRY_MODE_ENCOUNTER
 	delay 40

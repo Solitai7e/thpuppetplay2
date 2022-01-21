@@ -70,7 +70,7 @@ EventScript_BattleSWriggle::
 	playmoncry SPECIES_SWRIGGLE, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_SWRIGGLE, 30, ITEM_NONE
+	setwildbattle SPECIES_SWRIGGLE, 30
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE

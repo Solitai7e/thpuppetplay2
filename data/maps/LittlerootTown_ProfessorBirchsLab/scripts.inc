@@ -340,9 +340,9 @@ LittlerootTown_ProfessorBirchsLab_EventScript_TakeYourTime::
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveCElly::
 	bufferspeciesname STR_VAR_1, SPECIES_CELLY
 	setvar VAR_TEMP_1, SPECIES_CELLY
-	givemon SPECIES_CELLY, 5, ITEM_NONE
-	goto_if_eq VAR_RESULT, 0, LittlerootTown_ProfessorBirchsLab_EventScript_SendCEllyToParty
-	goto_if_eq VAR_RESULT, 1, LittlerootTown_ProfessorBirchsLab_EventScript_SendCEllyToPC
+	givemon SPECIES_CELLY, 5
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_SendCEllyToParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_SendCEllyToPC
 	hidemonpic
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
@@ -381,9 +381,9 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedCElly::
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveOrange::
 	bufferspeciesname STR_VAR_1, SPECIES_ORANGE
 	setvar VAR_TEMP_1, SPECIES_ORANGE
-	givemon SPECIES_ORANGE, 5, ITEM_NONE
-	goto_if_eq VAR_RESULT, 0, LittlerootTown_ProfessorBirchsLab_EventScript_SendOrangeToParty
-	goto_if_eq VAR_RESULT, 1, LittlerootTown_ProfessorBirchsLab_EventScript_SendOrangeToPC
+	givemon SPECIES_ORANGE, 5
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_SendOrangeToParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_SendOrangeToPC
 	hidemonpic
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
@@ -422,9 +422,9 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedOrange::
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveGenjii::
 	bufferspeciesname STR_VAR_1, SPECIES_GENJII
 	setvar VAR_TEMP_1, SPECIES_GENJII
-	givemon SPECIES_GENJII, 5, ITEM_NONE
-	goto_if_eq VAR_RESULT, 0, LittlerootTown_ProfessorBirchsLab_EventScript_SendGenjiiToParty
-	goto_if_eq VAR_RESULT, 1, LittlerootTown_ProfessorBirchsLab_EventScript_SendGenjiiToPC
+	givemon SPECIES_GENJII, 5
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_SendGenjiiToParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_SendGenjiiToPC
 	hidemonpic
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
