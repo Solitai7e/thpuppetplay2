@@ -31,7 +31,7 @@ static bool8 ShouldSwitchIfPerishSong(void)
     }
 }
 
-static bool8 ShouldSwitchIfWonderGuard(void)
+static bool8 ShouldSwitchIfPlayGhost(void)
 {
     u8 opposingPosition;
     u8 opposingBattler;
@@ -47,7 +47,7 @@ static bool8 ShouldSwitchIfWonderGuard(void)
 
     opposingPosition = BATTLE_OPPOSITE(GetBattlerPosition(gActiveBattler));
 
-    if (gBattleMons[GetBattlerAtPosition(opposingPosition)].ability != ABILITY_WONDER_GUARD)
+    if (gBattleMons[GetBattlerAtPosition(opposingPosition)].ability != ABILITY_PLAY_GHOST)
         return FALSE;
 
     // Check if Pokemon has a super effective move.
@@ -112,7 +112,7 @@ static bool8 ShouldSwitchIfWonderGuard(void)
         }
     }
 
-    return FALSE; // There is not a single Pokemon in the party that has a super effective move against a mon with Wonder Guard.
+    return FALSE; // There is not a single Pokemon in the party that has a super effective move against a mon with Play Ghost.
 }
 
 static bool8 FindMonThatAbsorbsOpponentsMove(void)
@@ -436,9 +436,9 @@ static bool8 ShouldSwitch(void)
         return FALSE;
     if (gStatuses3[gActiveBattler] & STATUS3_ROOTED)
         return FALSE;
-    if (ABILITY_ON_OPPOSING_FIELD(gActiveBattler, ABILITY_SHADOW_TAG))
+    if (ABILITY_ON_OPPOSING_FIELD(gActiveBattler, ABILITY_DARK_TAG))
         return FALSE;
-    if (ABILITY_ON_OPPOSING_FIELD(gActiveBattler, ABILITY_ARENA_TRAP)) // Misses the flying type and Levitate check.
+    if (ABILITY_ON_OPPOSING_FIELD(gActiveBattler, ABILITY_SHADOW_TAG)) // Misses the flying type and Levitate check.
         return FALSE;
     if (ABILITY_ON_FIELD2(ABILITY_MAGNET_PULL))
     {
@@ -506,7 +506,7 @@ static bool8 ShouldSwitch(void)
         return FALSE;
     if (ShouldSwitchIfPerishSong())
         return TRUE;
-    if (ShouldSwitchIfWonderGuard())
+    if (ShouldSwitchIfPlayGhost())
         return TRUE;
     if (FindMonThatAbsorbsOpponentsMove())
         return TRUE;

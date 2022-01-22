@@ -89,8 +89,8 @@ struct DisableStruct
     u8 battlerWithSureHit;
     u8 isFirstTurn;
     u8 filler_17; // Unused field.
-    u8 truantCounter:1;
-    u8 truantSwitchInHack:1;
+    u8 fretfulCounter:1;
+    u8 fretfulSwitchInHack:1;
     u8 filler_18_2:2; // Unused field.
     u8 mimickedMoves:4;
     u8 rechargeTimer;

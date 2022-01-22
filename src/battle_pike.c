@@ -815,7 +815,7 @@ static bool8 DoesAbilityPreventStatus(struct Pokemon *mon, u32 status)
     switch (status)
     {
     case STATUS1_FREEZE:
-        if (ability == ABILITY_MAGMA_ARMOR)
+        if (ability == ABILITY_FIRE_VEIL)
             ret = TRUE;
         break;
     case STATUS1_BURN:

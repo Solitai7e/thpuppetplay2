@@ -1370,9 +1370,9 @@ static void Cmd_get_ability(void)
         }
 
         // abilities that prevent fleeing.
-        if (gBattleMons[battlerId].ability == ABILITY_SHADOW_TAG
+        if (gBattleMons[battlerId].ability == ABILITY_DARK_TAG
         || gBattleMons[battlerId].ability == ABILITY_MAGNET_PULL
-        || gBattleMons[battlerId].ability == ABILITY_ARENA_TRAP)
+        || gBattleMons[battlerId].ability == ABILITY_SHADOW_TAG)
         {
             AI_THINKING_STRUCT->funcResult = gBattleMons[battlerId].ability;
             gAIScriptPtr += 2;
@@ -1421,9 +1421,9 @@ static void Cmd_check_ability(void)
             AI_THINKING_STRUCT->funcResult = ability;
         }
         // Abilities that prevent fleeing.
-        else if (gBattleMons[battlerId].ability == ABILITY_SHADOW_TAG
+        else if (gBattleMons[battlerId].ability == ABILITY_DARK_TAG
         || gBattleMons[battlerId].ability == ABILITY_MAGNET_PULL
-        || gBattleMons[battlerId].ability == ABILITY_ARENA_TRAP)
+        || gBattleMons[battlerId].ability == ABILITY_SHADOW_TAG)
         {
             ability = gBattleMons[battlerId].ability;
         }

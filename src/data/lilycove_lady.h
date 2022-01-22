@@ -92,7 +92,7 @@ static const u16 sQuizLadyQuestion6[QUIZ_QUESTION_LEN] =
     EC_MOVE2(PSYSHOT),
     EC_WORD_QUES,
     EC_EMPTY_WORD,
-    EC_WORD_ILLUMINATE,
+    EC_WORD_DIVA,
     EC_WORD_OWN_TEMPO,
     EC_WORD_SWIFT_SWIM
 };
@@ -119,8 +119,8 @@ static const u16 sQuizLadyQuestion8[QUIZ_QUESTION_LEN] =
     EC_WORD_QUES,
     EC_EMPTY_WORD,
     EC_WORD_RUN_AWAY,
-    EC_WORD_SHADOW_TAG,
-    EC_WORD_WONDER_GUARD
+    EC_WORD_DARK_TAG,
+    EC_WORD_PLAY_GHOST
 };
 
 static const u16 sQuizLadyQuestion9[QUIZ_QUESTION_LEN] =
@@ -133,7 +133,7 @@ static const u16 sQuizLadyQuestion9[QUIZ_QUESTION_LEN] =
     EC_EMPTY_WORD,
     EC_WORD_GUTS,
     EC_WORD_IMMUNITY,
-    EC_WORD_SHED_SKIN
+    EC_WORD_MAINTENANCE
 };
 
 static const u16 sQuizLadyQuestion10[QUIZ_QUESTION_LEN] =
@@ -256,7 +256,7 @@ static const u16 sQuizLadyQuizAnswers[] =
     EC_WORD_EGG,
     EC_WORD_OWN_TEMPO,
     EC_WORD_ROCK,
-    EC_WORD_SHADOW_TAG,
+    EC_WORD_DARK_TAG,
     EC_WORD_IMMUNITY,
     EC_WORD_POKEMON,
     EC_WORD_PC,

@@ -1,9 +1,9 @@
 const u8 gEasyChatWord_Dark[] = _("DARK");
-const u8 gEasyChatWord_Stench[] = _("STENCH");
-const u8 gEasyChatWord_ThickFat[] = _("THICK FAT");
+const u8 gEasyChatWord_Jealousy[] = _("JEALOUSY");
+const u8 gEasyChatWord_IceWall[] = _("ICE WALL");
 const u8 gEasyChatWord_RainDish[] = _("RAIN DISH");
 const u8 gEasyChatWord_Drizzle[] = _("DRIZZLE");
-const u8 gEasyChatWord_ArenaTrap[] = _("ARENA TRAP");
+const u8 gEasyChatWord_ShadowTag[] = _("SHADOW TAG");
 const u8 gEasyChatWord_Intimidate[] = _("INTIMIDATE");
 const u8 gEasyChatWord_RockHead[] = _("ROCK HEAD");
 const u8 gEasyChatWord_Color[] = _("COLOR");
@@ -11,35 +11,35 @@ const u8 gEasyChatWord_AltColor[] = _("ALT. COLOR");
 const u8 gEasyChatWord_Rock[] = _("ROCK");
 const u8 gEasyChatWord_Beautiful[] = _("BEAUTIFUL");
 const u8 gEasyChatWord_Beauty[] = _("BEAUTY");
-const u8 gEasyChatWord_AirLock[] = _("AIR LOCK");
+const u8 gEasyChatWord_Hisouten[] = _("HISOUTEN");
 const u8 gEasyChatWord_Psychic[] = _("PSYCHIC");
-const u8 gEasyChatWord_HyperCutter[] = _("HYPER CUTTER");
+const u8 gEasyChatWord_UnnaturalStrength[] = _("HI STRENGTH");
 const u8 gEasyChatWord_Fighting[] = _("FIGHTING");
-const u8 gEasyChatWord_ShadowTag[] = _("SHADOW TAG");
+const u8 gEasyChatWord_DarkTag[] = _("DARK TAG");
 const u8 gEasyChatWord_Smart[] = _("SMART");
 const u8 gEasyChatWord_Smartness[] = _("SMARTNESS");
 const u8 gEasyChatWord_SpeedBoost[] = _("SPEED BOOST");
 const u8 gEasyChatWord_Cool[] = _("COOL");
 const u8 gEasyChatWord_Coolness[] = _("COOLNESS");
-const u8 gEasyChatWord_BattleArmor[] = _("BATTLE ARMOR");
+const u8 gEasyChatWord_GuardArmor[] = _("GUARD ARMOR");
 const u8 gEasyChatWord_Cute[] = _("CUTE");
 const u8 gEasyChatWord_Cuteness[] = _("CUTENESS");
 const u8 gEasyChatWord_Sturdy[] = _("STURDY");
-const u8 gEasyChatWord_SuctionCups[] = _("SUCTION CUPS");
+const u8 gEasyChatWord_GateKeeper[] = _("GATE KEEPER");
 const u8 gEasyChatWord_Grass[] = _("GRASS");
-const u8 gEasyChatWord_ClearBody[] = _("CLEAR BODY");
+const u8 gEasyChatWord_HakureiMiko[] = _("HAKUREI MIKO");
 const u8 gEasyChatWord_Torrent[] = _("TORRENT");
 const u8 gEasyChatWord_Ghost[] = _("GHOST");
 const u8 gEasyChatWord_Ice[] = _("ICE");
 const u8 gEasyChatWord_Guts[] = _("GUTS");
-const u8 gEasyChatWord_RoughSkin[] = _("ROUGH SKIN");
+const u8 gEasyChatWord_DollWall[] = _("DOLL WALL");
 const u8 gEasyChatWord_ShellArmor[] = _("SHELL ARMOR");
 const u8 gEasyChatWord_NaturalCure[] = _("NATURAL CURE");
 const u8 gEasyChatWord_Damp[] = _("DAMP");
 const u8 gEasyChatWord_Ground[] = _("GROUND");
 const u8 gEasyChatWord_Limber[] = _("LIMBER");
 const u8 gEasyChatWord_MagnetPull[] = _("MAGNET PULL");
-const u8 gEasyChatWord_WhiteSmoke[] = _("WHITE SMOKE");
+const u8 gEasyChatWord_Barrier[] = _("BARRIER");
 const u8 gEasyChatWord_Synchronize[] = _("SYNCHRONIZE");
 const u8 gEasyChatWord_Overgrow[] = _("OVERGROW");
 const u8 gEasyChatWord_SwiftSwim[] = _("SWIFT SWIM");
@@ -51,52 +51,52 @@ const u8 gEasyChatWord_Static[] = _("STATIC");
 const u8 gEasyChatWord_Type[] = _("TYPE");
 const u8 gEasyChatWord_Tough[] = _("TOUGH");
 const u8 gEasyChatWord_Toughness[] = _("TOUGHNESS");
-const u8 gEasyChatWord_ShedSkin[] = _("SHED SKIN");
-const u8 gEasyChatWord_HugePower[] = _("HUGE POWER");
+const u8 gEasyChatWord_Maintenance[] = _("MAINTENANCE");
+const u8 gEasyChatWord_Unzan[] = _("UNZAN");
 const u8 gEasyChatWord_VoltAbsorb[] = _("VOLT ABSORB");
 const u8 gEasyChatWord_WaterAbsorb[] = _("WATER ABSORB");
 const u8 gEasyChatWord_Electric[] = _("ELECTRIC");
 const u8 gEasyChatWord_Forecast[] = _("FORECAST");
 const u8 gEasyChatWord_SereneGrace[] = _("SERENE GRACE");
 const u8 gEasyChatWord_Poison[] = _("POISON");
-const u8 gEasyChatWord_PoisonPoint[] = _("POISON POINT");
+const u8 gEasyChatWord_PoisonBody[] = _("POISON BODY");
 const u8 gEasyChatWord_Dragon[] = _("DRAGON");
 const u8 gEasyChatWord_Trace[] = _("TRACE");
 const u8 gEasyChatWord_Oblivious[] = _("OBLIVIOUS");
-const u8 gEasyChatWord_Truant[] = _("TRUANT");
+const u8 gEasyChatWord_Fretful[] = _("FRETFUL");
 const u8 gEasyChatWord_RunAway[] = _("RUN AWAY");
-const u8 gEasyChatWord_StickyHold[] = _("STICKY HOLD");
-const u8 gEasyChatWord_CloudNine[] = _("CLOUD NINE");
+const u8 gEasyChatWord_Collector[] = _("COLLECTOR");
+const u8 gEasyChatWord_Unconscious[] = _("UNCONSCIOUS");
 const u8 gEasyChatWord_Normal[] = _("NORMAL");
 const u8 gEasyChatWord_Steel[] = _("STEEL");
-const u8 gEasyChatWord_Illuminate[] = _("ILLUMINATE");
+const u8 gEasyChatWord_Diva[] = _("DIVA");
 const u8 gEasyChatWord_EarlyBird[] = _("EARLY BIRD");
 const u8 gEasyChatWord_Hustle[] = _("HUSTLE");
 const u8 gEasyChatWord_Shine[] = _("SHINE");
 const u8 gEasyChatWord_Flying[] = _("FLYING");
 const u8 gEasyChatWord_Drought[] = _("DROUGHT");
 const u8 gEasyChatWord_Lightningrod[] = _("LIGHTNINGROD");
-const u8 gEasyChatWord_Compoundeyes[] = _("COMPOUNDEYES");
-const u8 gEasyChatWord_MarvelScale[] = _("MARVEL SCALE");
-const u8 gEasyChatWord_WonderGuard[] = _("WONDER GUARD");
+const u8 gEasyChatWord_Compoundeyes[] = _("FOCUS");
+const u8 gEasyChatWord_SpringCharm[] = _("SPRING CHARM");
+const u8 gEasyChatWord_PlayGhost[] = _("PLAY GHOST");
 const u8 gEasyChatWord_Insomnia[] = _("INSOMNIA");
 const u8 gEasyChatWord_Levitate[] = _("LEVITATE");
 const u8 gEasyChatWord_Plus[] = _("PLUS");
 const u8 gEasyChatWord_Pressure[] = _("PRESSURE");
-const u8 gEasyChatWord_LiquidOoze[] = _("LIQUID OOZE");
-const u8 gEasyChatWord_ColorChange[] = _("COLOR CHANGE");
+const u8 gEasyChatWord_StrangeMist[] = _("STRANGE MIST");
+const u8 gEasyChatWord_Mysterious[] = _("Mysterious");
 const u8 gEasyChatWord_Soundproof[] = _("SOUNDPROOF");
-const u8 gEasyChatWord_EffectSpore[] = _("EFFECT SPORE");
+const u8 gEasyChatWord_Infectious[] = _("INFECTIOUS");
 const u8 gEasyChatWord_Pkrs[] = _("{PK}RS");
 const u8 gEasyChatWord_Fire[] = _("FIRE");
 const u8 gEasyChatWord_FlameBody[] = _("FLAME BODY");
 const u8 gEasyChatWord_Minus[] = _("MINUS");
 const u8 gEasyChatWord_OwnTempo[] = _("OWN TEMPO");
-const u8 gEasyChatWord_MagmaArmor[] = _("MAGMA ARMOR");
+const u8 gEasyChatWord_FireVeil[] = _("FIRE VEIL");
 const u8 gEasyChatWord_Water[] = _("WATER");
 const u8 gEasyChatWord_WaterVeil[] = _("WATER VEIL");
 const u8 gEasyChatWord_Bug[] = _("BUG");
-const u8 gEasyChatWord_Swarm[] = _("SWARM");
+const u8 gEasyChatWord_InnerPower[] = _("INNER POWER");
 const u8 gEasyChatWord_CuteCharm[] = _("CUTE CHARM");
 const u8 gEasyChatWord_Immunity[] = _("IMMUNITY");
 const u8 gEasyChatWord_Blaze[] = _("BLAZE");
@@ -106,7 +106,7 @@ const u8 gEasyChatWord_FlashFire[] = _("FLASH FIRE");
 const u8 gEasyChatWord_VitalSpirit[] = _("VITAL SPIRIT");
 const u8 gEasyChatWord_Chlorophyll[] = _("CHLOROPHYLL");
 const u8 gEasyChatWord_PurePower[] = _("PURE POWER");
-const u8 gEasyChatWord_ShieldDust[] = _("SHIELD DUST");
+const u8 gEasyChatWord_Advent[] = _("ADVENT");
 
 const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     {
@@ -115,12 +115,12 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_Stench,
+        .text = gEasyChatWord_Jealousy,
         .alphabeticalOrder = 9,
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_ThickFat,
+        .text = gEasyChatWord_IceWall,
         .alphabeticalOrder = 5,
         .enabled = TRUE,
     },
@@ -135,7 +135,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_ArenaTrap,
+        .text = gEasyChatWord_ShadowTag,
         .alphabeticalOrder = 12,
         .enabled = TRUE,
     },
@@ -175,7 +175,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_AirLock,
+        .text = gEasyChatWord_Hisouten,
         .alphabeticalOrder = 78,
         .enabled = TRUE,
     },
@@ -185,7 +185,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_HyperCutter,
+        .text = gEasyChatWord_UnnaturalStrength,
         .alphabeticalOrder = 22,
         .enabled = TRUE,
     },
@@ -195,7 +195,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_ShadowTag,
+        .text = gEasyChatWord_DarkTag,
         .alphabeticalOrder = 99,
         .enabled = TRUE,
     },
@@ -225,7 +225,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_BattleArmor,
+        .text = gEasyChatWord_GuardArmor,
         .alphabeticalOrder = 76,
         .enabled = TRUE,
     },
@@ -245,7 +245,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_SuctionCups,
+        .text = gEasyChatWord_GateKeeper,
         .alphabeticalOrder = 16,
         .enabled = TRUE,
     },
@@ -255,7 +255,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_ClearBody,
+        .text = gEasyChatWord_HakureiMiko,
         .alphabeticalOrder = 91,
         .enabled = TRUE,
     },
@@ -280,7 +280,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_RoughSkin,
+        .text = gEasyChatWord_DollWall,
         .alphabeticalOrder = 28,
         .enabled = TRUE,
     },
@@ -315,7 +315,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_WhiteSmoke,
+        .text = gEasyChatWord_Barrier,
         .alphabeticalOrder = 71,
         .enabled = TRUE,
     },
@@ -375,12 +375,12 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_ShedSkin,
+        .text = gEasyChatWord_Maintenance,
         .alphabeticalOrder = 79,
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_HugePower,
+        .text = gEasyChatWord_Unzan,
         .alphabeticalOrder = 92,
         .enabled = TRUE,
     },
@@ -415,7 +415,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_PoisonPoint,
+        .text = gEasyChatWord_PoisonBody,
         .alphabeticalOrder = 102,
         .enabled = TRUE,
     },
@@ -435,7 +435,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_Truant,
+        .text = gEasyChatWord_Fretful,
         .alphabeticalOrder = 61,
         .enabled = TRUE,
     },
@@ -445,12 +445,12 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_StickyHold,
+        .text = gEasyChatWord_Collector,
         .alphabeticalOrder = 14,
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_CloudNine,
+        .text = gEasyChatWord_Unconscious,
         .alphabeticalOrder = 107,
         .enabled = TRUE,
     },
@@ -465,7 +465,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_Illuminate,
+        .text = gEasyChatWord_Diva,
         .alphabeticalOrder = 7,
         .enabled = TRUE,
     },
@@ -505,12 +505,12 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_MarvelScale,
+        .text = gEasyChatWord_SpringCharm,
         .alphabeticalOrder = 35,
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_WonderGuard,
+        .text = gEasyChatWord_PlayGhost,
         .alphabeticalOrder = 108,
         .enabled = TRUE,
     },
@@ -535,12 +535,12 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_LiquidOoze,
+        .text = gEasyChatWord_StrangeMist,
         .alphabeticalOrder = 20,
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_ColorChange,
+        .text = gEasyChatWord_Mysterious,
         .alphabeticalOrder = 49,
         .enabled = TRUE,
     },
@@ -550,7 +550,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_EffectSpore,
+        .text = gEasyChatWord_Infectious,
         .alphabeticalOrder = 1,
         .enabled = TRUE,
     },
@@ -580,7 +580,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_MagmaArmor,
+        .text = gEasyChatWord_FireVeil,
         .alphabeticalOrder = 42,
         .enabled = TRUE,
     },
@@ -600,7 +600,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_Swarm,
+        .text = gEasyChatWord_InnerPower,
         .alphabeticalOrder = 52,
         .enabled = TRUE,
     },
@@ -650,7 +650,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
         .enabled = TRUE,
     },
     {
-        .text = gEasyChatWord_ShieldDust,
+        .text = gEasyChatWord_Advent,
         .alphabeticalOrder = 80,
         .enabled = TRUE,
     },

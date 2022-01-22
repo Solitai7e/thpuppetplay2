@@ -581,7 +581,7 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
         .trainerName = _("JILLIAN"),
         .speechBefore = {EC_WORD_WHAT, EC_WORD_IS, EC_WORD_THAT, EC_WORD_I, EC_WORD_SMELL, EC_WORD_QUES},
         .speechWin = {EC_WORD_IT_S, EC_WORD_THE, EC_MOVE(NATURE_POWER), EC_WORD_OF, EC_WORD_TASTY, EC_WORD_WATER},
-        .speechLose = {EC_WORD_IT_S, EC_WORD_YOUR, EC_WORD_OFFENSIVE, EC_WORD_STENCH, EC_WORD_THAT_S, EC_WORD_WHAT},
+        .speechLose = {EC_WORD_IT_S, EC_WORD_YOUR, EC_WORD_OFFENSIVE, EC_WORD_JEALOUSY, EC_WORD_THAT_S, EC_WORD_WHAT},
         .monSet = gBattleFrontierTrainerMons_Jillian
     },
     [FRONTIER_TRAINER_ABBIE] = {
@@ -627,9 +627,9 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
     [FRONTIER_TRAINER_BRAYDEN] = {
         .facilityClass = FACILITY_CLASS_BIRD_KEEPER,
         .trainerName = _("BRAYDEN"),
-        .speechBefore = {EC_WORD_COLOR_CHANGE, EC_WORD_VERSION, EC_WORD_TOYS, EC_WORD_ARE, EC_WORD_USELESS, EC_WORD_EXCL},
+        .speechBefore = {EC_WORD_MYSTERIOUS, EC_WORD_VERSION, EC_WORD_TOYS, EC_WORD_ARE, EC_WORD_USELESS, EC_WORD_EXCL},
         .speechWin = {EC_WORD_I, EC_WORD_ONLY, EC_WORD_COLLECT, EC_WORD_NORMAL, EC_WORD_VERSION, EC_WORD_TOYS},
-        .speechLose = {EC_WORD_I, EC_MOVE2(ATTRACT), EC_WORD_COLOR_CHANGE, EC_WORD_VERSION, EC_WORD_TOYS, EC_WORD_ELLIPSIS},
+        .speechLose = {EC_WORD_I, EC_MOVE2(ATTRACT), EC_WORD_MYSTERIOUS, EC_WORD_VERSION, EC_WORD_TOYS, EC_WORD_ELLIPSIS},
         .monSet = gBattleFrontierTrainerMons_Brayden
     },
     [FRONTIER_TRAINER_CORSON] = {
@@ -917,7 +917,7 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
         .trainerName = _("EVAN"),
         .speechBefore = {EC_WORD_EVERY, EC_WORD_BATTLE, EC_WORD_HAS, EC_WORD_A, EC_WORD_SMELL, EC_EMPTY_WORD},
         .speechWin = {EC_WORD_OH, EC_WORD_EXCL, EC_WORD_THE, EC_MOVE(NATURE_POWER), EC_WORD_OF, EC_WORD_VICTORY},
-        .speechLose = {EC_WORD_THE, EC_WORD_AWFUL, EC_WORD_STENCH, EC_WORD_OF, EC_WORD_A, EC_WORD_LOSS},
+        .speechLose = {EC_WORD_THE, EC_WORD_AWFUL, EC_WORD_JEALOUSY, EC_WORD_OF, EC_WORD_A, EC_WORD_LOSS},
         .monSet = gBattleFrontierTrainerMons_Evan
     },
     [FRONTIER_TRAINER_JORDAN] = {
@@ -1045,7 +1045,7 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
         .trainerName = _("GRIFFEN"),
         .speechBefore = {EC_WORD_I, EC_MOVE2(MYSTIC_WATER), EC_MOVE2(POISON_BOMB), EC_WORD_TO, EC_MOVE2(TRANSFORM), EC_WORD_MYSELF},
         .speechWin = {EC_WORD_I, EC_WORD_HAVE, EC_WORD_A, EC_MOVE(GROWTH), EC_WORD_OF, EC_MOVE2(DISPERSE)},
-        .speechLose = {EC_WORD_I, EC_WORD_HAVE, EC_WORD_A, EC_MOVE(GROWTH), EC_WORD_OF, EC_WORD_SUCTION_CUPS},
+        .speechLose = {EC_WORD_I, EC_WORD_HAVE, EC_WORD_A, EC_MOVE(GROWTH), EC_WORD_OF, EC_WORD_GATE_KEEPER},
         .monSet = gBattleFrontierTrainerMons_Griffen
     },
     [FRONTIER_TRAINER_XANDER] = {
@@ -1091,7 +1091,7 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
     [FRONTIER_TRAINER_GABRIEL] = {
         .facilityClass = FACILITY_CLASS_COLLECTOR,
         .trainerName = _("GABRIEL"),
-        .speechBefore = {EC_MOVE2(POUND), EC_WORD_THE, EC_WORD_THICK_FAT, EC_WORD_ON, EC_WORD_MY, EC_MOVE2(BELLY_DRUM)},
+        .speechBefore = {EC_MOVE2(POUND), EC_WORD_THE, EC_WORD_ICE_WALL, EC_WORD_ON, EC_WORD_MY, EC_MOVE2(BELLY_DRUM)},
         .speechWin = {EC_MOVE2(POUND), EC_WORD_MY, EC_MOVE2(BELLY_DRUM), EC_MOVE2(POUND), EC_WORD_MY, EC_MOVE2(BELLY_DRUM)},
         .speechLose = {EC_WORD_MY, EC_MOVE2(BELLY_DRUM), EC_WORD_WAS, EC_WORD_TOO_WEAK, EC_WORD_ELLIPSIS, EC_EMPTY_WORD},
         .monSet = gBattleFrontierTrainerMons_Gabriel
@@ -1340,7 +1340,7 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
         .facilityClass = FACILITY_CLASS_SCHOOL_KID_F,
         .trainerName = _("MEGAN"),
         .speechBefore = {EC_WORD_I, EC_WORD_BELIEVE, EC_WORD_IN, EC_WORD_AN, EC_MOVE(AROMATHERAPY), EC_WORD_BATH},
-        .speechWin = {EC_WORD_I, EC_WORD_WANT, EC_WORD_A, EC_WORD_HEALTHY, EC_WORD_CLEAR_BODY, EC_EMPTY_WORD},
+        .speechWin = {EC_WORD_I, EC_WORD_WANT, EC_WORD_A, EC_WORD_HEALTHY, EC_WORD_HAKUREI_MIKO, EC_EMPTY_WORD},
         .speechLose = {EC_WORD_IF, EC_WORD_ONLY, EC_MOVE(AROMATHERAPY), EC_WORD_WERE, EC_WORD_LESS, EC_WORD_EXPENSIVE},
         .monSet = gBattleFrontierTrainerMons_Megan
     },
@@ -2171,9 +2171,9 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
     [FRONTIER_TRAINER_GLORIA] = {
         .facilityClass = FACILITY_CLASS_SWIMMING_TRIATHLETE_F,
         .trainerName = _("GLORIA"),
-        .speechBefore = {EC_WORD_I, EC_WORD_LIKE, EC_WORD_TO, EC_WORD_ATTACK, EC_WORD_WITH, EC_WORD_SUCTION_CUPS},
+        .speechBefore = {EC_WORD_I, EC_WORD_LIKE, EC_WORD_TO, EC_WORD_ATTACK, EC_WORD_WITH, EC_WORD_GATE_KEEPER},
         .speechWin = {EC_WORD_GIGGLE, EC_WORD_ELLIPSIS, EC_WORD_IT_S, EC_WORD_OVER, EC_WORD_FOR, EC_WORD_YOU},
-        .speechLose = {EC_WORD_I, EC_WORD_DON_T, EC_WORD_GET, EC_WORD_HOW, EC_WORD_SUCTION_CUPS, EC_WORD_WORK},
+        .speechLose = {EC_WORD_I, EC_WORD_DON_T, EC_WORD_GET, EC_WORD_HOW, EC_WORD_GATE_KEEPER, EC_WORD_WORK},
         .monSet = gBattleFrontierTrainerMons_Gloria
     },
     [FRONTIER_TRAINER_NICO] = {
@@ -2389,7 +2389,7 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
         .trainerName = _("ABBY"),
         .speechBefore = {EC_WORD_I, EC_WORD_LIKE, EC_WORD_A, EC_WORD_TRAINER, EC_WORD_THAT_S, EC_WORD_REFRESHING},
         .speechWin = {EC_WORD_VICTORY, EC_WORD_HAS, EC_WORD_A, EC_MOVE(NATURE_POWER), EC_WORD_EXCL, EC_EMPTY_WORD},
-        .speechLose = {EC_WORD_WHAT, EC_WORD_AN, EC_WORD_AWFUL, EC_WORD_STENCH, EC_WORD_EXCL, EC_EMPTY_WORD},
+        .speechLose = {EC_WORD_WHAT, EC_WORD_AN, EC_WORD_AWFUL, EC_WORD_JEALOUSY, EC_WORD_EXCL, EC_EMPTY_WORD},
         .monSet = gBattleFrontierTrainerMons_Abby
     },
     [FRONTIER_TRAINER_GRETEL] = {

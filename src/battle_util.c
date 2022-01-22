@@ -1543,7 +1543,7 @@ u8 DoBattlerEndTurnEffects(void)
                 if ((gBattleMons[gActiveBattler].status2 & STATUS2_NIGHTMARE) && gBattleMons[gActiveBattler].hp != 0)
                 {
                     // R/S does not perform this sleep check, which causes the nightmare effect to
-                    // persist even after the affected Pokemon has been awakened by Shed Skin.
+                    // persist even after the affected Pokemon has been awakened by Maintenance.
                     if (gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP)
                     {
                         gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 4;
@@ -1966,7 +1966,7 @@ enum
     CANCELLER_FLAGS,
     CANCELLER_ASLEEP,
     CANCELLER_FROZEN,
-    CANCELLER_TRUANT,
+    CANCELLER_FRETFUL,
     CANCELLER_RECHARGE,
     CANCELLER_FLINCH,
     CANCELLER_DISABLED,
@@ -2064,8 +2064,8 @@ u8 AtkCanceller_UnableToUseMove(void)
             }
             gBattleStruct->atkCancellerTracker++;
             break;
-        case CANCELLER_TRUANT: // truant
-            if (gBattleMons[gBattlerAttacker].ability == ABILITY_TRUANT && gDisableStructs[gBattlerAttacker].truantCounter)
+        case CANCELLER_FRETFUL: // fretful
+            if (gBattleMons[gBattlerAttacker].ability == ABILITY_FRETFUL && gDisableStructs[gBattlerAttacker].fretfulCounter)
             {
                 CancelMultiTurnMoves(gBattlerAttacker);
                 gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;
@@ -2526,8 +2526,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     gSpecialStatuses[battler].traced = 1;
                 }
                 break;
-            case ABILITY_CLOUD_NINE:
-            case ABILITY_AIR_LOCK:
+            case ABILITY_UNCONSCIOUS:
+            case ABILITY_HISOUTEN:
                 {
                     // that's a weird choice for a variable, why not use i or battler?
                     for (target1 = 0; target1 < gBattlersCount; target1++)
@@ -2561,7 +2561,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         effect++;
                     }
                     break;
-                case ABILITY_SHED_SKIN:
+                case ABILITY_MAINTENANCE:
                     if ((gBattleMons[battler].status1 & STATUS1_ANY) && (Random() % 3) == 0)
                     {
                         if (gBattleMons[battler].status1 & (STATUS1_POISON | STATUS1_TOXIC_POISON))
@@ -2577,7 +2577,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         gBattleMons[battler].status1 = 0;
                         gBattleMons[battler].status2 &= ~STATUS2_NIGHTMARE;  // fix nightmare glitch
                         gBattleScripting.battler = gActiveBattler = battler;
-                        BattleScriptPushCursorAndCallback(BattleScript_ShedSkinActivates);
+                        BattleScriptPushCursorAndCallback(BattleScript_MaintenanceActivates);
                         BtlController_EmitSetMonData(BUFFER_A, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[battler].status1);
                         MarkBattlerForControllerExec(gActiveBattler);
                         effect++;
@@ -2594,8 +2594,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         effect++;
                     }
                     break;
-                case ABILITY_TRUANT:
-                    gDisableStructs[gBattlerAttacker].truantCounter ^= 1;
+                case ABILITY_FRETFUL:
+                    gDisableStructs[gBattlerAttacker].fretfulCounter ^= 1;
                     break;
                 }
             }
@@ -2690,10 +2690,10 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 }
             }
             break;
-        case ABILITYEFFECT_ON_DAMAGE: // Contact abilities and Color Change
+        case ABILITYEFFECT_ON_DAMAGE: // Contact abilities and Mysterious
             switch (gLastUsedAbility)
             {
-            case ABILITY_COLOR_CHANGE:
+            case ABILITY_MYSTERIOUS:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && move != MOVE_STRUGGLE
                  && gBattleMoves[move].power != 0
@@ -2704,11 +2704,11 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     SET_BATTLER_TYPE(battler, moveType);
                     PREPARE_TYPE_BUFFER(gBattleTextBuff1, moveType);
                     BattleScriptPushCursor();
-                    gBattlescriptCurrInstr = BattleScript_ColorChangeActivates;
+                    gBattlescriptCurrInstr = BattleScript_MysteriousActivates;
                     effect++;
                 }
                 break;
-            case ABILITY_ROUGH_SKIN:
+            case ABILITY_DOLL_WALL:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
@@ -2719,11 +2719,11 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     BattleScriptPushCursor();
-                    gBattlescriptCurrInstr = BattleScript_RoughSkinActivates;
+                    gBattlescriptCurrInstr = BattleScript_DollWallActivates;
                     effect++;
                 }
                 break;
-            case ABILITY_EFFECT_SPORE:
+            case ABILITY_INFECTIOUS:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
@@ -2746,7 +2746,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                 }
                 break;
-            case ABILITY_POISON_POINT:
+            case ABILITY_POISON_BODY:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
@@ -2855,7 +2855,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         effect = 1;
                     }
                     break;
-                case ABILITY_MAGMA_ARMOR:
+                case ABILITY_FIRE_VEIL:
                     if (gBattleMons[battler].status1 & STATUS1_FREEZE)
                     {
                         StringCopy(gBattleTextBuff1, gStatusConditionString_IceJpn);

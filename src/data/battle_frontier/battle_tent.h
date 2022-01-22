@@ -633,7 +633,7 @@ const struct BattleFrontierTrainer gSlateportBattleTentTrainers[NUM_BATTLE_TENT_
         .facilityClass = FACILITY_CLASS_COOLTRAINER_F,
         .trainerName = _("REBECCA"),
         .speechBefore = {EC_WORD_THAT, EC_WORD_EGG, EC_WORD_HAS, EC_WORD_A, EC_WORD_TASTY, EC_WORD_SHINE},
-        .speechWin = {EC_WORD_I, EC_WORD_CAN_T, EC_WORD_EXCL, EC_WORD_SMELL, EC_WORD_THAT, EC_WORD_STENCH},
+        .speechWin = {EC_WORD_I, EC_WORD_CAN_T, EC_WORD_EXCL, EC_WORD_SMELL, EC_WORD_THAT, EC_WORD_JEALOUSY},
         .speechLose = {EC_WORD_YOU, EC_WORD_CAN_T, EC_WORD_MAKE, EC_WORD_ME, EC_WORD_STOP, EC_WORD_ELLIPSIS},
         .monSet = gSlateportBattleTentTrainerMons_Rebecca
     },
@@ -2520,7 +2520,7 @@ const struct BattleFrontierTrainer gFallarborBattleTentTrainers[NUM_BATTLE_TENT_
         .trainerName = _("JAMESON"),
         .speechBefore = {EC_WORD_MY, EC_WORD_POKEMON, EC_WORD_ARE, EC_WORD_SILKY, EC_WORD_SMOOTH, EC_WORD_EXCL},
         .speechWin = {EC_WORD_MY, EC_WORD_SILKY, EC_WORD_SMOOTH, EC_WORD_POKEMON, EC_WORD_RULE, EC_WORD_EXCL},
-        .speechLose = {EC_WORD_MY, EC_WORD_POKEMON, EC_MOVE2(STRUGGLE), EC_WORD_IN, EC_WORD_YOUR, EC_WORD_STICKY_HOLD},
+        .speechLose = {EC_WORD_MY, EC_WORD_POKEMON, EC_MOVE2(STRUGGLE), EC_WORD_IN, EC_WORD_YOUR, EC_WORD_COLLECTOR},
         .monSet = gFallarborBattleTentTrainerMons_Jameson
     },
     [FALLARBOR_TENT_TRAINER_ALANZO] = {

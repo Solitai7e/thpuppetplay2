@@ -39,7 +39,7 @@ extern const u16 gFieldEffectPal_CutGrass[];
 
 #define CUT_SPRITE_ARRAY_COUNT 8
 
-struct HyperCutterUnk
+struct UnnaturalStrengthUnk
 {
     s8 x;
     s8 y;
@@ -68,7 +68,7 @@ static bool8 sHyperCutTiles[CUT_HYPER_AREA];
 static EWRAM_DATA u8 *sCutGrassSpriteArrayPtr = NULL;
 
 // const rom data
-static const struct HyperCutterUnk sHyperCutStruct[] =
+static const struct UnnaturalStrengthUnk sHyperCutStruct[] =
 {
     {-2, -2, {1}},
     {-1, -2, {1}},
@@ -155,7 +155,7 @@ bool8 SetUpFieldMove_Cut(void)
     {
         PlayerGetDestCoords(&gPlayerFacingPosition.x, &gPlayerFacingPosition.y);
         userAbility = GetMonAbility(&gPlayerParty[GetCursorSelectionMonId()]);
-        if (userAbility == ABILITY_HYPER_CUTTER)
+        if (userAbility == ABILITY_UNNATURAL_STRENGTH)
         {
             sCutSquareSide = CUT_HYPER_SIDE;
             sTileCountFromPlayer_X = 2;
@@ -209,7 +209,7 @@ bool8 SetUpFieldMove_Cut(void)
             }
         }
 
-        if (userAbility != ABILITY_HYPER_CUTTER)
+        if (userAbility != ABILITY_UNNATURAL_STRENGTH)
         {
             if (ret == TRUE)
             {

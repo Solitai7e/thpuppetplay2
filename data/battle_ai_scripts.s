@@ -58,7 +58,7 @@ AI_CBM_CheckIfNegatesType:
 	if_equal ABILITY_VOLT_ABSORB, CheckIfVoltAbsorbCancelsElectric
 	if_equal ABILITY_WATER_ABSORB, CheckIfWaterAbsorbCancelsWater
 	if_equal ABILITY_FLASH_FIRE, CheckIfFlashFireCancelsFire
-	if_equal ABILITY_WONDER_GUARD, CheckIfWonderGuardCancelsMove
+	if_equal ABILITY_PLAY_GHOST, CheckIfPlayGhostCancelsMove
 	if_equal ABILITY_LEVITATE, CheckIfLevitateCancelsGroundMove
 	goto AI_CheckBadMove_CheckSoundproof_
 
@@ -77,7 +77,7 @@ CheckIfFlashFireCancelsFire:
 	if_equal_ TYPE_FIRE, Score_Minus12
 	goto AI_CheckBadMove_CheckSoundproof_
 
-CheckIfWonderGuardCancelsMove:
+CheckIfPlayGhostCancelsMove:
 	if_type_effectiveness AI_EFFECTIVENESS_x2, AI_CheckBadMove_CheckSoundproof_
 	goto Score_Minus10
 
@@ -275,7 +275,7 @@ AI_CBM_EvasionUp:
 AI_CBM_AttackDown:
 	if_stat_level_equal AI_TARGET, STAT_ATK, MIN_STAT_STAGE, Score_Minus10
 	get_ability AI_TARGET
-	if_equal ABILITY_HYPER_CUTTER, Score_Minus10
+	if_equal ABILITY_UNNATURAL_STRENGTH, Score_Minus10
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_DefenseDown:
@@ -305,8 +305,8 @@ AI_CBM_EvasionDown:
 	if_stat_level_equal AI_TARGET, STAT_EVASION, MIN_STAT_STAGE, Score_Minus10
 CheckIfAbilityBlocksStatChange:
 	get_ability AI_TARGET
-	if_equal ABILITY_CLEAR_BODY, Score_Minus10
-	if_equal ABILITY_WHITE_SMOKE, Score_Minus10
+	if_equal ABILITY_HAKUREI_MIKO, Score_Minus10
+	if_equal ABILITY_BARRIER, Score_Minus10
 	end
 
 AI_CBM_Haze:
@@ -333,7 +333,7 @@ AI_CBM_Roar:
 	count_usable_party_mons AI_TARGET
 	if_equal 0, Score_Minus10
 	get_ability AI_TARGET
-	if_equal ABILITY_SUCTION_CUPS, Score_Minus10
+	if_equal ABILITY_GATE_KEEPER, Score_Minus10
 	end
 
 AI_CBM_Toxic:
@@ -366,7 +366,7 @@ AI_CBM_Magnitude:
 AI_CBM_HighRiskForDamage:
 	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
 	get_ability AI_TARGET
-	if_not_equal ABILITY_WONDER_GUARD, AI_CBM_HighRiskForDamage_End
+	if_not_equal ABILITY_PLAY_GHOST, AI_CBM_HighRiskForDamage_End
 	if_type_effectiveness AI_EFFECTIVENESS_x2, AI_CBM_HighRiskForDamage_End
 	goto Score_Minus10
 
@@ -542,7 +542,7 @@ AI_CBM_HelpingHand:
 
 AI_CBM_TrickAndKnockOff:
 	get_ability AI_TARGET
-	if_equal ABILITY_STICKY_HOLD, Score_Minus10
+	if_equal ABILITY_COLLECTOR, Score_Minus10
 	end
 
 AI_CBM_Ingrain:
@@ -2345,21 +2345,21 @@ AI_CV_ChangeSelfAbility_End:
 
 AI_CV_ChangeSelfAbility_AbilitiesToEncourage:
     .byte ABILITY_SPEED_BOOST
-    .byte ABILITY_BATTLE_ARMOR
+    .byte ABILITY_GUARD_ARMOR
     .byte ABILITY_SAND_VEIL
     .byte ABILITY_STATIC
     .byte ABILITY_FLASH_FIRE
-    .byte ABILITY_WONDER_GUARD
-    .byte ABILITY_EFFECT_SPORE
+    .byte ABILITY_PLAY_GHOST
+    .byte ABILITY_INFECTIOUS
     .byte ABILITY_SWIFT_SWIM
-    .byte ABILITY_HUGE_POWER
+    .byte ABILITY_UNZAN
     .byte ABILITY_RAIN_DISH
     .byte ABILITY_CUTE_CHARM
-    .byte ABILITY_SHED_SKIN
-    .byte ABILITY_MARVEL_SCALE
+    .byte ABILITY_MAINTENANCE
+    .byte ABILITY_SPRING_CHARM
     .byte ABILITY_PURE_POWER
     .byte ABILITY_CHLOROPHYLL
-    .byte ABILITY_SHIELD_DUST
+    .byte ABILITY_ADVENT
     .byte -1
 
 AI_CV_Superpower:
@@ -2806,9 +2806,9 @@ AI_DoubleBattleAllHittingGroundMove:
 
 AI_DoubleBattleSkillSwap:
 	get_ability AI_USER
-	if_equal ABILITY_TRUANT, Score_Plus5
+	if_equal ABILITY_FRETFUL, Score_Plus5
 	get_ability AI_TARGET
-	if_equal ABILITY_SHADOW_TAG, Score_Plus2
+	if_equal ABILITY_DARK_TAG, Score_Plus2
 	if_equal ABILITY_PURE_POWER, Score_Plus2
 	end
 
@@ -2853,7 +2853,7 @@ AI_TryStatusMoveOnAlly:
 
 AI_TrySkillSwapOnAlly:
 	get_ability AI_TARGET
-	if_equal ABILITY_TRUANT, Score_Plus10
+	if_equal ABILITY_FRETFUL, Score_Plus10
 	get_ability AI_USER
 	if_not_equal ABILITY_LEVITATE, AI_TrySkillSwapOnAlly2
 	get_ability AI_TARGET
@@ -2867,7 +2867,7 @@ AI_TrySkillSwapOnAlly:
 	end
 
 AI_TrySkillSwapOnAlly2:
-	if_not_equal ABILITY_COMPOUND_EYES, Score_Minus30_
+	if_not_equal ABILITY_FOCUS, Score_Minus30_
 	if_has_move AI_USER_PARTNER, MOVE_FIRE_BLAST, AI_TrySkillSwapOnAllyPlus3
 	if_has_move AI_USER_PARTNER, MOVE_THUNDER, AI_TrySkillSwapOnAllyPlus3
 	if_has_move AI_USER_PARTNER, MOVE_CROSS_CHOP, AI_TrySkillSwapOnAllyPlus3
@@ -3185,11 +3185,11 @@ AI_Roaming:
 	if_status2 AI_USER, STATUS2_WRAPPED, AI_Roaming_End
 	if_status2 AI_USER, STATUS2_ESCAPE_PREVENTION, AI_Roaming_End
 	get_ability AI_TARGET
-	if_equal ABILITY_SHADOW_TAG, AI_Roaming_End
+	if_equal ABILITY_DARK_TAG, AI_Roaming_End
 	get_ability AI_USER
 	if_equal ABILITY_LEVITATE, AI_Roaming_Flee
 	get_ability AI_TARGET
-	if_equal ABILITY_ARENA_TRAP, AI_Roaming_End
+	if_equal ABILITY_SHADOW_TAG, AI_Roaming_End
 AI_Roaming_Flee:
 	flee
 

@@ -499,15 +499,15 @@ static bool8 DoWildEncounterRateTest(u32 encounterRate, bool8 ignoreAbility)
     {
         u32 ability = GetMonAbility(&gPlayerParty[0]);
 
-        if (ability == ABILITY_STENCH && gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
+        if (ability == ABILITY_JEALOUSY && gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
             encounterRate = encounterRate * 3 / 4;
-        else if (ability == ABILITY_STENCH)
+        else if (ability == ABILITY_JEALOUSY)
             encounterRate /= 2;
-        else if (ability == ABILITY_ILLUMINATE)
+        else if (ability == ABILITY_DIVA)
             encounterRate *= 2;
-        else if (ability == ABILITY_WHITE_SMOKE)
+        else if (ability == ABILITY_BARRIER)
             encounterRate /= 2;
-        else if (ability == ABILITY_ARENA_TRAP)
+        else if (ability == ABILITY_SHADOW_TAG)
             encounterRate *= 2;
         else if (ability == ABILITY_SAND_VEIL && gSaveBlock1Ptr->weather == WEATHER_SANDSTORM)
             encounterRate /= 2;
