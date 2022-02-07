@@ -476,7 +476,23 @@
 #define ITEM_MAGMA_EMBLEM 375
 #define ITEM_OLD_SEA_MAP 376
 
-#define ITEMS_COUNT 377
+// Reincarnation
+#define ITEM_RED_MARK 377
+#define ITEM_BLUE_MARK 378
+#define ITEM_BLACK_MARK 379
+#define ITEM_WHITE_MARK 380
+#define ITEM_GREEN_MARK 381
+
+#define ITEM_OMEGA_STONE 382
+#define ITEM_GOLD_STONE 383
+#define ITEM_RED_STONE 384
+#define ITEM_BLUE_STONE 385
+#define ITEM_BLACK_STONE 386
+#define ITEM_WHITE_STONE 387
+#define ITEM_GREEN_STONE 388
+#define ITEM_RAINBOW_STONE 389
+
+#define ITEMS_COUNT 390
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // Range of berries given out by various NPCS
