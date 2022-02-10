@@ -265,7 +265,7 @@ static void WarpToMauvillePkmnCntr(void)
 
 static void SetPlayerNameAndGender(void)
 {
-    static const u8 ugh[] = _("Renko");
+    static const u8 ugh[] = _("Merry");
     StringCopy(gSaveBlock2Ptr->playerName, ugh);
 
     gSaveBlock2Ptr->playerGender = FEMALE;
