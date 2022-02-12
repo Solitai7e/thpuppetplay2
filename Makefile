@@ -1,10 +1,6 @@
 TOOLCHAIN := $(DEVKITARM)
 COMPARE ?= 0
 
-ifeq (compare,$(MAKECMDGOALS))
-  COMPARE := 1
-endif
-
 # don't use dkP's base_tools anymore
 # because the redefinition of $(CC) conflicts
 # with when we want to use $(CC) to preprocess files
@@ -42,9 +38,7 @@ MAKER_CODE  := 01
 REVISION    := 0
 MODERN      ?= 0
 
-ifeq (modern,$(MAKECMDGOALS))
-  MODERN := 1
-endif
+MODERN := 1
 
 # use arm-none-eabi-cpp for macOS
 # as macOS's default compiler is clang
@@ -68,7 +62,7 @@ ELF_NAME := $(ROM_NAME:.gba=.elf)
 MAP_NAME := $(ROM_NAME:.gba=.map)
 OBJ_DIR_NAME := build/emerald
 
-MODERN_ROM_NAME := thpuppetplay2_modern.gba
+MODERN_ROM_NAME := thpuppetplay2.gba
 MODERN_ELF_NAME := $(MODERN_ROM_NAME:.gba=.elf)
 MODERN_MAP_NAME := $(MODERN_ROM_NAME:.gba=.map)
 MODERN_OBJ_DIR_NAME := build/modern
