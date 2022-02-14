@@ -24,7 +24,8 @@ MauvilleCity_PokemonCenter_1F_EventScript_Nurse::
 	end
 
 MauvilleCity_PokemonCenter_1F_EventScript_Woman1::
-	msgbox MauvilleCity_PokemonCenter_1F_Text_ManOverThereSaysWeirdThings, MSGBOX_NPC
+	special EnterReincarnationScreen
+	waitstate
 	end
 
 MauvilleCity_PokemonCenter_1F_EventScript_Woman2::
