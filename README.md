@@ -1,7 +1,9 @@
 
 # Touhou Puppet Play v2.0
 
-![](https://repository-images.githubusercontent.com/430729681/04bd2d85-e736-42c2-bb00-c1c80e7df4c0) ![GitHub Repo stars](https://img.shields.io/github/stars/fatih120/thpuppetplay2?color=yellow&style=plastic) ![issues](https://img.shields.io/github/issues/fatih120/thpuppetplay2?color=red&style=plastic) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/fatih120/thpuppetplay2?style=plastic) ![enter image description here](https://img.shields.io/github/last-commit/fatih120/thpuppetplay2?style=plastic) 
+![](https://repository-images.githubusercontent.com/430729681/04bd2d85-e736-42c2-bb00-c1c80e7df4c0)
+
+![GitHub Repo stars](https://img.shields.io/github/stars/fatih120/thpuppetplay2?color=yellow&style=plastic) ![issues](https://img.shields.io/github/issues/fatih120/thpuppetplay2?color=red&style=plastic) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/fatih120/thpuppetplay2?style=plastic) ![enter image description here](https://img.shields.io/github/last-commit/fatih120/thpuppetplay2?style=plastic) 
 
 This is a fork of the Pokémon Emerald Decompilation to create a modern, workable base to create Touhou Puppet Play hacks.
 
