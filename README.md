@@ -1,99 +1,63 @@
+
 # Touhou Puppet Play v2.0
 
-![](https://repository-images.githubusercontent.com/430729681/04bd2d85-e736-42c2-bb00-c1c80e7df4c0)
+![](https://repository-images.githubusercontent.com/430729681/04bd2d85-e736-42c2-bb00-c1c80e7df4c0) ![GitHub Repo stars](https://img.shields.io/github/stars/fatih120/thpuppetplay2?color=yellow&style=plastic) ![issues](https://img.shields.io/github/issues/fatih120/thpuppetplay2?color=red&style=plastic) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/fatih120/thpuppetplay2?style=plastic) ![enter image description here](https://img.shields.io/github/last-commit/fatih120/thpuppetplay2?style=plastic) 
 
 This is a fork of the Pokémon Emerald Decompilation to create a modern, workable base to create Touhou Puppet Play hacks.
 
-Due to the fragmented nature of the scene caused by several unpolished hacks along with a community made obselete by the spiritual successor, Touhou Puppet Dance Performance, much of THPP goes under the radar or is considered kusoge despite effort put into the hack. Recent developments have spiked in recent times, thankfully, and the efforts of Derxwna Kapsyla in Essentials is making slow pace, but things are still difficult with projects being completely unrelated from each other along with people losing their drive to work.
+### Background
+
+Due to the fragmented nature of the scene caused by many hacks of wildly varying quality ever since its conception, later made obsolete by the spiritual successor, [Touhou Puppet Dance Performance](http://tpdpwiki.net/wiki/Main_Page), much of THPP goes under the radar or is considered kusoge despite efforts put into hacks and fangames over the years. Recent developments have spiked in recent times (such as [Derxwna Kapsyla's Essentials edits](https://chaoticinfinitydev.tumblr.com/)), but nothing to consolidate a proper foundation to supersede the messy and nebulous task that is Pokémon binary ROM hacking.
+
+## Enter thpuppetplay2
 
 This self-declared v2.0 of Touhou Puppet Play will attempt to do the following:
 
 * Retain all data in 1.812 as accurately as possible and import said data into the repository
-* Trace any new and modernized sprites by Hemoglobin and others and attempt to expand the dex for new, diverse puppets
-  * In the same vein, attempt to locate fan-made sprites for newer games and create new puppets
-* Recreate new music files to reach a certain margin of polish that most hacks using said music seem to lack
-* Assimilate quality of life changes that are considered beneficial
-  * Including buffs and nerfs to puppets that will "unban" some and make others more easily usable (though this is something that would be deemed a community effort at low priority) 
+* Expand the roster of puppets, whether via new forms or welcoming modern characters
+  * Spritework which will be sourced from Hemoglobin, reimufate and others, and modified as see fit to narrow stylistic differences
+ * Create a new BGM selection that aims for player enjoyment, not as a Pokémon mashup attempt
+   * New samples and a centralized way to arrange music a milestone
+* Assimilate quality-of-life changes, bug fixes, and major mechanic overhauls
+  * Buffs and nerfs to puppets that will "unban" some and give weaker ones incentive
+  * Modifications to give the player more customization and control, and give less need for a "speed-up" button
+  * Touhou-ize UIs, implement few TPDP mechanics
+ * And much more for end-users or those interested in demonstrations, whether they know how to edit C or not
 
-This edit, at this point in time, will not
-
-* Keep both Pokémon and Puppets as co-existing battlers
-  * This may be an additional add-on in the future once all puppets, moves, abilities, and the movesets are in place for those taking inspiration from Faith and Prayer.
-* Be completed any time soon
-  * While all the assets are there, things like sprites will take quite some time to import, along with needing to figure out the structure of the decompilation
-
-#### Team and Credits
-- Fatih (Organizer)
-- Solitai7e (Repo Mastermind)
-
-
-- thpp supersanctuary community
-- tbd
+thpuppetplay2 will have its official first release as a demonstration with a custom scenario, once this milestone is reached. Before then, this repository is considered a **heavy work-in-progress** that is not yet *intended* to be used by those who want to make a THPP hack, let alone expecting anything to be playable. Despite that, it is still able to be forked and used for any purposes (this is not a license).
 
 ## Install
 
-There are no releases at this time, and there are no plans to make releases until at least there is a somewhat-playable base, or a kit later on that acts as a tech demo of what is in thpuppetplay2. If you are on a Linux machine, you probably already know what you are doing. If you want to dive in on Windows 10, do the following to set up WSL1 which will let you build and interact with the repo. You do not need to manually download the repo for this, just follow the instructions to clone it instead.
-
-1. Open Windows Powershell **as Administrator**, input the following (or paste by right clicking in the window)
-    ```powershell
-    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-    ```
-Then restart your computer.
-
-2. Open the [Microsoft Store Linux Selection](https://aka.ms/wslstore) to download a Linux distro of your choice, preferably Ubuntu or Debian (we use the latter). Ignore any prompt asking for a Microsoft account, just close it if it appears. You can also install Linux through the Microsoft Store app.
-
-3. Run WSL/your distro and it will set itself up. It will ask for a username and password. Use a super simple pass, for these purposes you do not need security. Do note that the terminal will not show the text you type.
-
-4. You will need to update WSL. Input this, things will take a while (it will ask for your password after you do so)
-    ```bash
-    sudo apt update && sudo apt upgrade
-    ```
-You will also need the tools to work with the repo: (use apt-get instead of apt if it fails)
-    ```bash
-    sudo apt install build-essential binutils-arm-none-eabi git libpng-dev
-    ```
-
-5. Pick a place to store thpuppetplay2. For example, `C:\Users\<user>\Desktop\Projects` will work. Do not make a folder for thpuppetplay2, it will be made for you. ChangeDirectory to your location like so with `<user>` being your W10 user name.
-    ```bash
-    cd "/mnt/c/Users/<user>/Desktop/Projects"
-    ```
-Then, get thpuppetplay2 installed.
-    ```bash
-    git clone https://github.com/Fatih120/thpuppetplay2
-    ```
-
-6. thpuppetplay2 is now in its own folder. Now run the following one at a time; these are for getting a set of required tools into your workspace.
-    ```bash
-    git clone https://github.com/pret/agbcc
-    cd agbcc
-    ./build.sh
-    ./install.sh ../thpuppetplay2
-    ```
-
-7. You are done installation, if the following works. When you want to output a .gba ROM of the project, cd back into the thpuppetplay2 root folder. You can do the full path whenever you restart the terminal:
-    ```bash
-    cd /mnt/c/Users/<user>/Desktop/Projects/thpuppetplay2
-    ```
-next...
-    ```bash
-    make```
-and wait patiently for the compilation. You can build slightly faster by doing `nproc` and then doing `make -j#` replacing the pound with the number you see. If you modify most graphics and sound you will have to delete the processed/compressed files made or do `make clean` to do that for you.
-
-8. Optionally, get [Github Desktop](https://desktop.github.com/) to faciliate easy pulling of updates and pushing of changes, as well as having a visual aid for changes and un-doing steps.
+Please refer to [INSTALL.md](INSTALL.md) to install a workspace and build thpuppetplay2.
 
 ## Contributing
 
-You are free to make pull requests, though for major commits such as overhauls, engine changes, more personal ideas, etc., it is highly recommended you join our [Discord server](https://discord.gg/VGH3EWp) in the #cooding channel so we are on the same page, or at least get in touch at Fatih™#4806. If you do join the server, please lurk moar if you decide to help, proper communication and understanding is both free and important.
+You are welcome to make pull requests, though for major ideas with overhauls, engine changes, etc., it is highly recommended you discuss this in a casual sphere so that we are on the same page.
 
-### puppet.py
+Discord is unfortunately the main method of communication at the time of writing. You can join this server and introduce yourself in `#cooding`, or contact `Fatih™#4806`.  [![Discord](https://img.shields.io/discord/163762628106256384?color=7289DA&label=discord&style=plastic)](https://discord.gg/VGH3EWp)
+* [Guilded](https://www.guilded.gg/i/k8bwWLPE) is an alternative if required. Expect IRC-tier delays.
+* A matrix solution is being considered.
 
-There is a tool in the main folder called puppet.py. As you might expect, you need python to run it, and it is to be used while in the root directory and not from elsewhere (aka cd to thpuppetplay2 first).
-The usage is `puppet.py puppet <form>`, with the puppet argument being a name like "reimu" and the form optionally being one of the evolutions, like "c", "ad", so on. It can be omitted if you wish to use the main prefix-less evolution.
-What this does is add all the relevant lines needed to add a puppet into the game, mitigating the amount of manual work you need to do.
+Please lurk moar if you decide to help, proper communication and understanding is both free and important.
+
+#### puppet.py
+
+This is a script in the root directory (where it should also be used as the working directory). The usage is `puppet.py puppet <form>`, where `puppet` is a character's name (`reimu`) and `form` optionally being one of the evolutions, like `c`, `ad`, so on. Omit it for the main prefix-less evolution.
+The script will add many lines and placeholders needed to add a new puppet into the game, saving some time. There is still manual work to be done after, which will all be printed afterwards.
+
+### Credits
+
+As the project is not considered ready for release, there is no cause for adhering to credits this early when much of the materials are not done by us.
+
+* Fatih (Maintainer)
+* Akko (Co-Maintainer)
+* へもぐろびんＡ１Ｃ (Dot, original work)
+* all pret/pokeemerald contributors
+* Touhou Puppet Play Community
 
 ------------
 
-##Priority List:
+### Priority List:
 
 | SSS Rank |  A Rank | B Renko  | Low  |
 | :------------: | :------------: | :------------: | :------------: |
