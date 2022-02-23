@@ -35,12 +35,12 @@ Then restart your computer.
     ```
 
 6. Go to [this link](https://github.com/devkitPro/pacman/releases) and download devkitpro-pacman.**amd64**.deb. Move the file to your Projects (or equivalent) directory and run these one by one:
-	```bash
-	sudo gdebi devkitpro-pacman.amd64.deb
-    sudo dkp-pacman -Sy
+    ```bash
     sudo ln -s /proc/self/mounts /etc/mtab
+    sudo gdebi devkitpro-pacman.amd64.deb
+    sudo dkp-pacman -Sy
     sudo dkp-pacman -S gba-dev
-	```
+    ```
 	Finally, close and restart WSL (or run `source /etc/profile.d/devkit-env.sh` if native). You can now delete the .deb file.
 
 7. If everything went fine, you are done preparations. When you want to export a .gba ROM of the current state of your project directory, `cd` back into the thpuppetplay2 root folder.
