@@ -23,7 +23,7 @@ Then restart your computer.
     ```
     It will ask for your password - input it. This command will then take a while. Next, you will need to obtain some important things to work with the repo:
     ```bash
-    sudo apt-get install build-essential binutils-arm-none-eabi git libpng-dev
+    sudo apt-get install build-essential binutils-arm-none-eabi gdebi-core git libpng-d ev
     ```
 5. Pick a place to store thpuppetplay2. For example, `C:\Users\<user>\Desktop\Projects` will work. Do not make a folder for thpuppetplay2 - one will be made for you. `c`hange`d`irectory to your folder like so with `<user>` being your W10 username - if it's going somewhere else, just replace `C:/` with `/mnt/c/`.
     ```bash
@@ -34,15 +34,16 @@ Then restart your computer.
     git clone https://github.com/Fatih120/thpuppetplay2
     ```
 
-6. thpuppetplay2 is now in its own folder. Now run the following one at a time; this installs some stupid thing everyone hates. Please do not question it.
-    ```bash
-    git clone https://github.com/pret/agbcc
-    cd agbcc
-    ./build.sh
-    ./install.sh ../thpuppetplay2
-    ```
+6. Go to [this link](https://github.com/devkitPro/pacman/releases) and download devkitpro-pacman.**amd64**.deb. Move the file to your Projects (or equivalent) directory and run these one by one:
+	```bash
+	sudo gdebi devkitpro-pacman.amd64.deb
+    sudo dkp-pacman -Sy
+    sudo ln -s /proc/self/mounts /etc/mtab
+    sudo dkp-pacman -S gba-dev
+	```
+	Finally, close and restart WSL (or run `source /etc/profile.d/devkit-env.sh` if native). You can now delete the .deb file.
 
-7. If everything went fine, you are finally done installation. When you want to export a .gba ROM of the current state of your project directory, `cd` back into the thpuppetplay2 root folder.
+7. If everything went fine, you are done preparations. When you want to export a .gba ROM of the current state of your project directory, `cd` back into the thpuppetplay2 root folder.
     ```bash
     cd /mnt/c/Users/<user>/Desktop/Projects/thpuppetplay2
     ```
@@ -52,4 +53,4 @@ Then restart your computer.
     ```
 	and wait patiently for the compilation. This will take quite some time on a clean build. You can build slightly faster by doing `make -j$(nproc)` but YMMV. If you modify any graphics or sound you will have to delete the processed/compressed files manually or do `make clean` to do that for you.
 
-8. Optionally, get [Github Desktop](https://desktop.github.com/) to faciliate easy pulling of updates and pushing of changes, as well as having a visual aid for changes and un-doing steps.
+P.S. Optionally, get [Github Desktop](https://desktop.github.com/) to faciliate easy pulling of updates and pushing of changes, as well as having a visual aid for changes and un-doing steps.
