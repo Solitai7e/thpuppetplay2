@@ -1,3 +1,0 @@
-sPlayerToAkyuuDeltaX
-sPlayerToAkyuuDeltaY
-sAkyuuDirectionCandidates
