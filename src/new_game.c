@@ -221,11 +221,10 @@ static void ResetMiniGamesRecords(void)
 
 static void FillBoxes(void)
 {
-    u8 boxId, boxPosition;
     u16 species = 1;
 
-    for (boxId = 0; boxId < TOTAL_BOXES_COUNT; boxId++)
-        for (boxPosition = 0; boxPosition < IN_BOX_COUNT; boxPosition++) {
+    for (u16 boxId = 0; boxId < TOTAL_BOXES_COUNT; boxId++)
+        for (u16 boxPosition = 0; boxPosition < IN_BOX_COUNT; boxPosition++) {
             CreateBoxMonAt(
                 boxId, boxPosition,
                 species++, 20, USE_RANDOM_IVS,
@@ -239,9 +238,7 @@ static void FillBoxes(void)
 
 static void CompletePokedex(void)
 {
-    u16 i;
-
-    for (i = 1; i < NATIONAL_DEX_COUNT; i++) {
+    for (u16 i = 1; i < NATIONAL_DEX_COUNT; i++) {
         GetSetPokedexFlag(i, FLAG_SET_SEEN);
         GetSetPokedexFlag(i, FLAG_SET_CAUGHT);
     }
@@ -265,9 +262,7 @@ static void WarpToMauvillePkmnCntr(void)
 
 static void SetPlayerNameAndGender(void)
 {
-    static const u8 ugh[] = _("Merry");
-    StringCopy(gSaveBlock2Ptr->playerName, ugh);
-
+    StringCopy(gSaveBlock2Ptr->playerName, (const u8 []) _("Merry"));
     gSaveBlock2Ptr->playerGender = FEMALE;
 }
 
