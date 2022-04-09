@@ -23,7 +23,7 @@ This self-declared v2.0 of Touhou Puppet Play will attempt to do the following:
 * Assimilate quality-of-life changes, bug fixes, and major mechanic overhauls
   * Buffs and nerfs to puppets that will "unban" some and give weaker ones incentive
   * Modifications to give the player more customization and control, and give less need for a "speed-up" button
-  * Touhou-ize UIs, implement few TPDP mechanics
+  * Touhou-ify UIs, implement few TPDP mechanics
  * And much more for end-users or those interested in demonstrations, whether they know how to edit C or not
 
 thpuppetplay2 will have its official first release as a demonstration with a custom scenario, once this milestone is reached. Before then, this repository is considered a **heavy work-in-progress** that is not yet *intended* to be used by those who want to make a THPP hack, let alone expecting anything to be playable. Despite that, it is still able to be forked and used for any purposes (this is not a license).
@@ -36,11 +36,10 @@ Please refer to [INSTALL.md](INSTALL.md) to install a workspace and build thpupp
 
 You are welcome to make pull requests, though for major ideas with overhauls, engine changes, etc., it is highly recommended you discuss this in a casual sphere so that we are on the same page.
 
-Discord is unfortunately the main method of communication at the time of writing. You can join this server and introduce yourself in `#cooding`, or contact `Fatih™#4806`.  [![Discord](https://img.shields.io/discord/163762628106256384?color=7289DA&label=discord&style=plastic)](https://discord.gg/VGH3EWp)
-* [Guilded](https://www.guilded.gg/i/k8bwWLPE) is an alternative if required. Expect IRC-tier delays.
-* A matrix solution is being considered.
+We are using Guilded as our main hub of organization. If you are interested in the project, we recommend you [join us here](https://guilded.gg/MoF) via "The Mines" group.
+* [Discord](https://discord.gg/VGH3EWp) is available given its monopoly, but may be phased out eventually. You may discuss the project in the `#cooding` channel.
 
-Please lurk moar if you decide to help, proper communication and understanding is both free and important.
+Please lurk moar if you decide to help out and provide changes or suggestions; proper communication and understanding is both free and important.
 
 #### puppet.py
 
