@@ -38,6 +38,7 @@ You are welcome to make pull requests, though for major ideas with overhauls, en
 
 We are using Guilded as our main hub of organization. If you are interested in the project, we recommend you [join us here](https://guilded.gg/MoF) via "The Mines" group.
 * [Discord](https://discord.gg/VGH3EWp) is available given its monopoly, but may be phased out eventually. You may discuss the project in the `#cooding` channel.
+* We (myself not included) may also be reached on IRC at [irc://irc.rizon.net/#mof](https://qchat.rizon.net/?channels=mof)
 
 Please lurk moar if you decide to help out and provide changes or suggestions; proper communication and understanding is both free and important.
 
