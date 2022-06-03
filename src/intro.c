@@ -1848,7 +1848,7 @@ static void Task_Scene3_StartMiko(u8 taskId)
 {
     gTasks[taskId].tState = 0;
     gTasks[taskId].func = Task_Scene3_Miko;
-    ScanlineEffect_InitWave(0, 160, 4, 4, 1, SCANLINE_EFFECT_REG_BG1HOFS, 0);
+    ScanlineEffect_InitWave(0, 160, 4, 4, 1, SCANLINE_EFFECT_REG_BG1HOFS, FALSE);
 }
 
 #define tScreenX data[1]
@@ -2058,7 +2058,7 @@ static void Task_Scene3_LoadCMiko(u8 taskId)
     gTasks[taskId].tDelay = 16;
     gTasks[taskId].tZoom = 256;
     PanFadeAndZoomScreen(gTasks[taskId].tScreenX, gTasks[taskId].tScreenY, gTasks[taskId].tZoom, 0);
-    ScanlineEffect_InitWave(0, 0xA0, 4, 4, 1, SCANLINE_EFFECT_REG_BG1VOFS, 0);
+    ScanlineEffect_InitWave(0, 0xA0, 4, 4, 1, SCANLINE_EFFECT_REG_BG1VOFS, FALSE);
 }
 
 static void Task_Scene3_CMiko(u8 taskId)

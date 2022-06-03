@@ -15,7 +15,7 @@ static void AnimFlareBlitzFlame_Step(struct Sprite *);
 static void AnimTask_TailwindWaver_Step(u8);
 static void UpdateTailwindScanlineEffect(struct Task *);
 
-EWRAM_DATA static u16 gUnusedFlareBlitzData[7] = {0};
+EWRAM_DATA static u16 sUnusedFlareBlitzData[7] = {0};
 
 static const union AnimCmd sAnim_OutrageFlareBlitzFire_0[] =
 {
@@ -426,7 +426,7 @@ static void AnimFlareBlitzFlame(struct Sprite *sprite)
     sprite->data[3] = gBattleAnimArgs[3];
     sprite->callback = AnimFlareBlitzFlame_Step;
     for (i = 0; i < 7; i++)
-        gUnusedFlareBlitzData[i] = sprite->data[i];
+        sUnusedFlareBlitzData[i] = sprite->data[i];
 }
 
 static void AnimFlareBlitzFlame_Step(struct Sprite *sprite)
